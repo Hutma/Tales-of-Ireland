@@ -1,0 +1,352 @@
+﻿toi_cruithin_group = { 
+	graphical_cultures = {
+		western_coa_gfx
+		western_building_gfx
+		western_clothing_gfx
+		western_unit_gfx
+	}
+	
+	dal_naraide = {
+		graphical_cultures = {
+			scottish_coa_gfx
+		}
+		ethnicities = { 	
+			5 = caucasian_blond
+			30 = caucasian_ginger
+			35 = caucasian_brown_hair
+			30 = caucasian_dark_hair
+		}
+		
+		color = rgb { 100 40 220 }
+		
+		cadet_dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		male_names = {
+			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog Broichan
+			Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut Deocillimon Deoord
+			Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest Gigurum Girom Idual
+			Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton Ninian Pedric Pedur
+			Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
+			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
+		}
+		female_names = {
+			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine
+			Elen Eua Madru Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara
+			Siunod Uen Uluen Uuena Uunis Uusbail
+		}
+		
+		patronym_prefix_male = "dynnpat_pre_uab"
+		patronym_prefix_female = "dynnpat_pre_ach"
+		always_use_patronym = yes	
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+
+		mercenary_names = {
+			{ name = "mercenary_company_woad_raiders" coat_of_arms = "mc_woad_raiders" }
+		}
+	}
+	
+	ui_eachach_coba = {
+		graphical_cultures = {
+			scottish_coa_gfx
+		}
+		ethnicities = { 	
+			5 = caucasian_blond
+			30 = caucasian_ginger
+			35 = caucasian_brown_hair
+			30 = caucasian_dark_hair
+		}
+		
+		color = rgb { 120 50 220 }
+		
+		cadet_dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		male_names = {
+			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog Broichan
+			Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut Deocillimon Deoord
+			Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest Gigurum Girom Idual
+			Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton Ninian Pedric Pedur
+			Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
+			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
+		}
+		female_names = {
+			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine
+			Elen Eua Madru Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara
+			Siunod Uen Uluen Uuena Uunis Uusbail
+		}
+		
+		patronym_prefix_male = "dynnpat_pre_uab"
+		patronym_prefix_female = "dynnpat_pre_ach"
+		always_use_patronym = yes	
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+
+		mercenary_names = {
+			{ name = "mercenary_company_woad_raiders" coat_of_arms = "mc_woad_raiders" }
+		}
+	}
+	
+	loigis = {
+		graphical_cultures = {
+			scottish_coa_gfx
+		}
+		ethnicities = { 	
+			5 = caucasian_blond
+			30 = caucasian_ginger
+			35 = caucasian_brown_hair
+			30 = caucasian_dark_hair
+		}
+		
+		color = rgb { 120 50 240 }
+		
+		cadet_dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		male_names = {
+			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog Broichan
+			Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut Deocillimon Deoord
+			Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest Gigurum Girom Idual
+			Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton Ninian Pedric Pedur
+			Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
+			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
+		}
+		female_names = {
+			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine
+			Elen Eua Madru Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara
+			Siunod Uen Uluen Uuena Uunis Uusbail
+		}
+		
+		patronym_prefix_male = "dynnpat_pre_uab"
+		patronym_prefix_female = "dynnpat_pre_ach"
+		always_use_patronym = yes	
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+
+		mercenary_names = {
+			{ name = "mercenary_company_woad_raiders" coat_of_arms = "mc_woad_raiders" }
+		}
+	}
+	
+	sogain = {
+		graphical_cultures = {
+			scottish_coa_gfx
+		}
+		ethnicities = { 	
+			5 = caucasian_blond
+			30 = caucasian_ginger
+			35 = caucasian_brown_hair
+			30 = caucasian_dark_hair
+		}
+		
+		color = rgb { 150 80 250 }
+		
+		cadet_dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		dynasty_names = {
+			"dynn_Todd"
+			"dynn_Mac_Uerb"
+			"dynn_Hen"
+			"dynn_Bili"
+			"dynn_Circinn"
+			"dynn_Ce"
+			"dynn_Fotla"
+			"dynn_Fib"
+			"dynn_Fidach"
+			"dynn_Miathi"
+			"dynn_Des"
+			"dynn_Fergusa"
+			"dynn_Dun_Nechtain"
+			"dynn_Mac_Beli"
+			"dynn_Mac_Boanta"
+			"dynn_Mac_Oengusa"
+			"dynn_Cait"
+			"dynn_Fortriu"
+		}
+
+		male_names = {
+			Achiuir Aethon Aenbecan Allan Allcallorred Allisander Aniel Ardle Auust Bili Bran Breth Bridei Briog Broichan
+			Brude Caltram Canu Canuall Canan Caradaig Caruorst Castant Castantin Ciniod Crup Dabuut Deocillimon Deoord
+			Domelch Drest Drosten Eddarrnonn Elpin Enuidaig Erpin Galam Ganant Garalt Gede Gest Gigurum Girom Idual
+			Iduallon Iestan Iuan Irb Lutrin Mael Maelchon Manath Mordeleg Morleo Murtolic Naiton Ninian Pedric Pedur
+			Paul Pidarnoin Ru Ruatirch Rubert Rudri Telurg Telurgan Taran Tarla Uipoig Uist Uuochu
+			Uoret Unen Unuist Urguist Usuullt Uthoil Uudrost Uuen Uuid Uuirp Uuredach Uuroid
+		}
+		female_names = {
+			Addiena Abrella Allust Arnemetia Brethoc Bride Bronuen Caitrion Cristin Durilia Elaine
+			Elen Eua Madru Maelmurie Mairi Margrud Maud Mor Morag Morien Muriel Neulina Sara
+			Siunod Uen Uluen Uuena Uunis Uusbail
+		}
+		
+		patronym_prefix_male = "dynnpat_pre_uab"
+		patronym_prefix_female = "dynnpat_pre_ach"
+		always_use_patronym = yes	
+
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+
+		mercenary_names = {
+			{ name = "mercenary_company_woad_raiders" coat_of_arms = "mc_woad_raiders" }
+		}
+	}
+}

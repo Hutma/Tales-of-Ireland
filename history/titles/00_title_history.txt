@@ -1,0 +1,8511 @@
+#Bere
+d_bere = {
+              4799.1.1 = {
+                            holder = 100000
+              }
+}
+
+#Bere
+c_bere = {
+              1.1.1 = { change_development_level = 37 }
+              4799.1.1 = {
+                            holder = 100000
+              }
+}
+
+#Allihies
+c_allihies = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 100000
+              }
+}
+
+#Castletownbere
+c_castletownbere = {
+              1.1.1 = { change_development_level = 39 }
+              4799.1.1 = {
+                            holder = 100000
+              }
+}
+
+#Adrigole
+c_adrigole = {
+              1.1.1 = { change_development_level = 47 }
+              4799.1.1 = {
+                            holder = 100000
+              }
+}
+
+#Bantry_bay
+d_bantry_bay = {
+              4799.1.1 = {
+                            holder = 100003
+              }
+}
+
+#Ballylickey
+c_ballylickey = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 100003
+              }
+}
+
+#Kealkill
+c_kealkill = {
+              1.1.1 = { change_development_level = 42 }
+              4799.1.1 = {
+                            holder = 100003
+              }
+}
+
+#Bantry
+c_bantry = {
+              1.1.1 = { change_development_level = 39 }
+              4799.1.1 = {
+                            holder = 100003
+              }
+}
+
+#Ahakista
+c_ahakista = {
+              1.1.1 = { change_development_level = 31 }
+              4799.1.1 = {
+                            holder = 100001
+              }
+}
+
+#Ballydehob
+c_ballydehob = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 100002
+              }
+}
+
+#Schull
+c_schull = {
+              1.1.1 = { change_development_level = 49 }
+              4799.1.1 = {
+                            holder = 100005
+              }
+}
+
+#Goleen
+c_goleen = {
+              1.1.1 = { change_development_level = 32 }
+              4799.1.1 = {
+                            holder = 100005
+              }
+}
+
+#Baltimore
+d_baltimore = {
+              4799.1.1 = {
+                            holder = 100004
+              }
+}
+
+#Baltimore
+c_baltimore = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 100004
+              }
+}
+
+#Skibereen
+c_skibereen = {
+              1.1.1 = { change_development_level = 35 }
+              4799.1.1 = {
+                            holder = 100006
+              }
+}
+
+#Leap
+c_leap = {
+              1.1.1 = { change_development_level = 42 }
+              4799.1.1 = {
+                            holder = 100004
+              }
+}
+
+#Drimoleague
+c_drimoleague = {
+              1.1.1 = { change_development_level = 37 }
+              4799.1.1 = {
+                            holder = 100004
+              }
+}
+
+#Glandore
+c_glandore = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosscarbery
+c_rosscarbery = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drinagh
+c_drinagh = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunmanway
+c_dunmanway = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Enniskean
+c_enniskean = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinascarty
+c_ballinascarty = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonakilty
+c_clonakilty = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilbrittain
+c_kilbrittain = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinspittle
+c_ballinspittle = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bandon
+c_bandon = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlefreke
+c_castlefreke = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Butlerstown
+c_butlerstown = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lispatrick
+c_lispatrick = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinsale
+c_kinsale = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Snugmore
+c_snugmore = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Inishannon
+c_inishannon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunderrow
+c_dunderrow = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belgooly
+c_belgooly = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tracton
+c_tracton = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Farranalough
+c_farranalough = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilpatrick
+c_kilpatrick = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballingeary
+c_ballingeary = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Macroom
+c_macroom = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynagree
+c_ballynagree = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Millstreet
+c_millstreet = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coachford
+c_coachford = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rylane
+c_rylane = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Berrings
+c_berrings = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinhassig
+c_ballinhassig = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrigaline
+c_carrigaline = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Passage
+c_passage = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cork
+c_cork = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rockgrove
+c_rockgrove = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knocknahorgan
+c_knocknahorgan = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Whitechurch
+c_whitechurch = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrignavar
+c_carrignavar = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Banteer
+c_banteer = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kanturck
+c_kanturck = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromahane
+c_dromahane = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardnageeha
+c_ardnageeha = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilbrin
+c_kilbrin = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Youghal
+c_youghal = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycotton
+c_ballycotton = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlemartyr
+c_castlemartyr = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymacoda
+c_ballymacoda = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cobh
+c_cobh = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrigtohill
+c_carrigtohill = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Watergrasshill
+c_watergrasshill = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisgoold
+c_lisgoold = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynoe
+c_ballynoe = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Conna
+c_conna = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clondulane
+c_clondulane = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kildorrery
+c_kildorrery = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mitchelstown
+c_mitchelstown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Annesgrove
+c_annesgrove = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fermoy
+c_fermoy = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mallow
+c_mallow = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyhooly
+c_ballyhooly = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doneraile
+c_doneraile = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Liscarroll
+c_liscarroll = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Milford
+c_milford = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newtown
+c_newtown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monatrim
+c_monatrim = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tallow
+c_tallow = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinsalebeg
+c_kinsalebeg = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ringville
+c_ringville = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aglish
+c_aglish = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dungarvan
+c_dungarvan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunmahon
+c_bunmahon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Munster_stradbally
+c_munster_stradbally = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lemybrien
+c_lemybrien = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Sleady
+c_sleady = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynamult
+c_ballynamult = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Nire
+c_nire = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gleanncaoil
+c_gleanncaoil = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballygambon
+c_ballygambon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilganey
+c_kilganey = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolmore
+c_coolmore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Retagh
+c_retagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Millvale
+c_millvale = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Annestown
+c_annestown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portlaw
+c_portlaw = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fenor
+c_fenor = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Waterford
+c_waterford = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tramore
+c_tramore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lauragh
+c_lauragh = {
+              1.1.1 = { change_development_level = 47 }
+              4799.1.1 = {
+                            holder = 100008
+              }
+}
+
+#Dirreencallaugh
+c_dirreencallaugh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 100008
+              }
+}
+
+#Kenmare
+c_kenmare = {
+              1.1.1 = { change_development_level = 38 }
+              4799.1.1 = {
+                            holder = 100007
+              }
+}
+
+#Kilgarvan
+c_kilgarvan = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 100007
+              }
+}
+
+#Dunkerron
+d_dunkerron = {
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Sneem
+c_sneem = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Templenoe
+c_templenoe = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Dinish
+c_dinish = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            liege = d_dunkerron
+                            holder = 200004
+              }
+}
+
+#Westcove
+c_westcove = {
+              1.1.1 = { change_development_level = 27 }
+              4799.1.1 = {
+                            liege = d_dunkerron
+                            holder = 200004
+              }
+}
+
+#Derrynane
+c_derrynane = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            liege = d_dunkerron
+                            holder = 200004
+              }
+}
+
+#Iveragh
+d_iveragh = {
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Cahersiveen
+c_cahersiveen = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Rossbeigh
+c_rossbeigh = {
+              1.1.1 = { change_development_level = 30 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Glencar
+c_glencar = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Clounbrane
+c_clounbrane = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Waterville
+c_waterville = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 200000
+              }
+}
+
+#Killarney
+d_killarney = {
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Killarney
+c_killarney = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Beaufort
+c_beaufort = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Kilgobnet
+c_kilgobnet = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Faha
+c_faha = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Magunihy
+d_magunihy = {
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Scartaglen
+c_scartaglen = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Mountfalvey
+c_mountfalvey = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            liege = d_magunihy
+                            holder = 200003
+              }
+}
+
+#Rathmore
+c_rathmore = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            liege = d_magunihy
+                            holder = 200003
+              }
+}
+
+#Calfmount
+c_calfmount = {
+              1.1.1 = { change_development_level = 28 }
+              4799.1.1 = {
+                            liege = d_magunihy
+                            holder = 200003
+              }
+}
+
+#Milleen
+c_milleen = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Currow
+c_currow = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 200001
+              }
+}
+
+#Dingle
+c_dingle = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Brandon
+c_brandon = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Annascaul
+c_annascaul = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coumeenoole
+c_coumeenoole = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tralee
+c_tralee = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlemaine
+c_castlemaine = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fenit
+c_fenit = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Listellick
+c_listellick = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Edenburn
+c_edenburn = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kielbawn
+c_kielbawn = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castleisland
+c_castleisland = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lixnaw
+c_lixnaw = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Banna
+c_banna = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyheigue
+c_ballyheigue = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lyracrumpane
+c_lyracrumpane = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockadireen
+c_knockadireen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Listowel
+c_listowel = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybunion
+c_ballybunion = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tarbert
+c_tarbert = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Muher
+c_muher = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glin
+c_glin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loghill
+c_loghill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clounlehard
+c_clounlehard = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Foynes
+c_foynes = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Shanagoldenoynes
+c_shanagoldenoynes = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyhahill
+c_ballyhahill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newcastlewest
+c_newcastlewest = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Templeglantine
+c_templeglantine = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyallinan
+c_ballyallinan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmeedy
+c_kilmeedy = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyculhane
+c_ballyculhane = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Askeaton
+c_askeaton = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmallock
+c_kilmallock = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Orourkes
+c_orourkes = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Amigan
+c_amigan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bruree
+c_bruree = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Croagh
+c_croagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilfinny
+c_kilfinny = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Granagh
+c_granagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Galtymore
+c_galtymore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Galbally
+c_galbally = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballylanders
+c_ballylanders = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monine
+c_monine = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockainey
+c_knockainey = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bruff
+c_bruff = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmaculla
+c_kilmaculla = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Pallaskenry
+c_pallaskenry = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Pilgrimhill
+c_pilgrimhill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Limerick
+c_limerick = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castleconnell
+c_castleconnell = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clarina
+c_clarina = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caherconlish
+c_caherconlish = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drombanna
+c_drombanna = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cappamore
+c_cappamore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cappanahana
+c_cappanahana = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doon
+c_doon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lacknagooney
+c_lacknagooney = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Croughmakeen
+c_croughmakeen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tulla
+c_tulla = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caher
+c_caher = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Feakle
+c_feakle = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tuamgraney
+c_tuamgraney = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clontra
+c_clontra = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballygreen
+c_ballygreen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunratty
+c_bunratty = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Urlanmore
+c_urlanmore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Spancilhill
+c_spancilhill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crusheen
+c_crusheen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ennis
+c_ennis = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymongaun
+c_ballymongaun = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Slaveen
+c_slaveen = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corofin
+c_corofin = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derula
+c_derula = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkeedy
+c_kilkeedy = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bealaclugga
+c_bealaclugga = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyvaughan
+c_ballyvaughan = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fanore
+c_fanore = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmoon
+c_kilmoon = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilrush
+c_kilrush = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Percyfrench
+c_percyfrench = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrigaholt
+c_carrigaholt = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cooraclare
+c_cooraclare = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Labasheeda
+c_labasheeda = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynacally
+c_ballynacally = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knock
+c_knock = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Frure
+c_frure = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Quilty
+c_quilty = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Miltownmalbay
+c_miltownmalbay = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Shyan
+c_shyan = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doonbeg
+c_doonbeg = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doolin
+c_doolin = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caherkinalla
+c_caherkinalla = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cliffsofmoher
+c_cliffsofmoher = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portroe
+c_portroe = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Southill
+c_southill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Congress
+c_congress = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcommon
+c_kilcommon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rossmore
+c_rossmore = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hollyford
+c_hollyford = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Upperchurch
+c_upperchurch = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Illeigh
+c_illeigh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cashel
+c_cashel = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donohill
+c_donohill = {
+              1.1.1 = { change_development_level = 30 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tipperary
+c_tipperary = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Emly
+c_emly = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cahir
+c_cahir = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolgurt
+c_coolgurt = {
+              1.1.1 = { change_development_level = 31 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybacon
+c_ballybacon = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyporeen
+c_ballyporeen = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonmel
+c_clonmel = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballypatrick
+c_ballypatrick = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickonsuir
+c_carrickonsuir = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fethard
+c_fethard = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloneen
+c_cloneen = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosegreen
+c_rosegreen = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dualla
+c_dualla = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Copper
+c_copper = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullinahone
+c_mullinahone = {
+              1.1.1 = { change_development_level = 31 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinure
+c_ballinure = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gortnahoe
+c_gortnahoe = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Thurles
+c_thurles = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moyne
+c_moyne = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bouladuff
+c_bouladuff = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Nenagh
+c_nenagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathcabbin
+c_rathcabbin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinderry
+c_ballinderry = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymackey
+c_ballymackey = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromineer
+c_dromineer = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Borrisokane
+c_borrisokane = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloughjordan
+c_cloughjordan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Roscrea
+c_roscrea = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stuick
+c_stuick = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Templetouhy
+c_templetouhy = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinvarra
+c_kinvarra = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gort
+c_gort = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballaba
+c_ballaba = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Oranmore
+c_oranmore = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clarinbridge
+c_clarinbridge = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Craughwell
+c_craughwell = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinderreen
+c_ballinderreen = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Galway
+c_galway = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moycullen
+c_moycullen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bealadangan
+c_bealadangan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cartoor
+c_cartoor = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bailena
+c_bailena = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Maamcross
+c_maamcross = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Spiddal
+c_spiddal = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Headford
+c_headford = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Biggera
+c_biggera = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corrofin
+c_corrofin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corrandulla
+c_corrandulla = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caherlistrane
+c_caherlistrane = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilconly
+c_kilconly = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tuam
+c_tuam = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knocknagur
+c_knocknagur = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Milltown
+c_milltown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunmore
+c_dunmore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyglass
+c_ballyglass = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Peterswell
+c_peterswell = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gortnahown
+c_gortnahown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosaglanna
+c_rosaglanna = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bushypark
+c_bushypark = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fearglass
+c_fearglass = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Barnaculla
+c_barnaculla = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Eyrecourt
+c_eyrecourt = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonfert
+c_clonfert = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killimor
+c_killimor = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portumna
+c_portumna = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Athenry
+c_athenry = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kiltullagh
+c_kiltullagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aran
+c_aran = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Laurencetown
+c_laurencetown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughagreagh
+c_aughagreagh = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Atticoffey
+c_atticoffey = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rookhill
+c_rookhill = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballygar
+c_ballygar = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ruane
+c_ruane = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tiquin
+c_tiquin = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Colmanstown
+c_colmanstown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monivea
+c_monivea = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymannion
+c_ballymannion = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carnacregg
+c_carnacregg = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coiscuain
+c_coiscuain = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenamaddy
+c_glenamaddy = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tample
+c_tample = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crumlin
+c_crumlin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tavanagh
+c_tavanagh = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilconnell
+c_kilconnell = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisavahane
+c_lisavahane = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dowras
+c_dowras = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballylouge
+c_ballylouge = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Maum
+c_maum = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killateeaun
+c_killateeaun = {
+              1.1.1 = { change_development_level = 1 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cornamona
+c_cornamona = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glassillaun
+c_glassillaun = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Inver
+c_inver = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ard
+c_ard = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Recess
+c_recess = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Claddaghduff
+c_claddaghduff = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Letterfrack
+c_letterfrack = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyconneely
+c_ballyconneely = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coogla
+c_coogla = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Inishbofin
+c_inishbofin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Inishturk
+c_inishturk = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Louisburgh
+c_louisburgh = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killadoon
+c_killadoon = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilsallagh
+c_kilsallagh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Murrisk
+c_murrisk = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Erriff
+c_erriff = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leacta
+c_leacta = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Westport
+c_westport = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Comploon
+c_comploon = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrowbeg
+c_carrowbeg = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockranny
+c_knockranny = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knappagh
+c_knappagh = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlebar
+c_castlebar = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carnacon
+c_carnacon = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Manulla
+c_manulla = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenisland
+c_glenisland = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Pontoon
+c_pontoon = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Partry
+c_partry = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisloughrey
+c_lisloughrey = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Theneale
+c_theneale = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloonkeary
+c_cloonkeary = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hollymount
+c_hollymount = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Brodella
+c_brodella = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Claremorris
+c_claremorris = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballindine
+c_ballindine = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Brickens
+c_brickens = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyhaunis
+c_ballyhaunis = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballaghaderreen
+c_ballaghaderreen = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Garrynagran
+c_garrynagran = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloongoonagh
+c_cloongoonagh = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kiltimagh
+c_kiltimagh = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Currower
+c_currower = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bonniconlon
+c_bonniconlon = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corballa
+c_corballa = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killasser
+c_killasser = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenhest
+c_glenhest = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Massbrook
+c_massbrook = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dooleeg
+c_dooleeg = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Templenagalliaghdoo
+c_templenagalliaghdoo = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crossmolina
+c_crossmolina = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Keenagh
+c_keenagh = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Muingreevagh
+c_muingreevagh = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killala
+c_killala = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carbed
+c_carbed = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corroy
+c_corroy = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moygownagh
+c_moygownagh = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Barnatra
+c_barnatra = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Shralaghy
+c_shralaghy = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrowteige
+c_carrowteige = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Graughill
+c_graughill = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belderrig
+c_belderrig = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Largan
+c_largan = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bellacorick
+c_bellacorick = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doohoma
+c_doohoma = {
+              1.1.1 = { change_development_level = 1 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dooriel
+c_dooriel = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Srahnamanragh
+c_srahnamanragh = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrowniskey
+c_carrowniskey = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bullaunmore
+c_bullaunmore = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunacurry
+c_bunacurry = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dooagh
+c_dooagh = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Corraun
+c_corraun = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belmullet
+c_belmullet = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunnahowen
+c_bunnahowen = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gweesalia
+c_gweesalia = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tirraun
+c_tirraun = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Easky
+c_easky = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Enniscrone
+c_enniscrone = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portavade
+c_portavade = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Meenashammer
+c_meenashammer = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Doonalton
+c_doonalton = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rinbaun
+c_rinbaun = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisduff
+c_lisduff = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knocknaganny
+c_knocknaganny = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Toorlestraun
+c_toorlestraun = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloonacool
+c_cloonacool = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Keash
+c_keash = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunnanadden
+c_bunnanadden = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymote
+c_ballymote = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monasteraden
+c_monasteraden = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aghalateeve
+c_aghalateeve = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmactranny
+c_kilmactranny = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Riverstown
+c_riverstown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballintogher
+c_ballintogher = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hollybrook
+c_hollybrook = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Sligo
+c_sligo = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumcliff
+c_drumcliff = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullaghmore
+c_mullaghmore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Creggconnell
+c_creggconnell = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kidlawn
+c_kidlawn = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Raherbeg
+c_raherbeg = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Athlone
+c_athlone = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockcroghery
+c_knockcroghery = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballydangan
+c_ballydangan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Purts
+c_purts = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cornapallis
+c_cornapallis = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Taghmaconnell
+c_taghmaconnell = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carranure
+c_carranure = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloontimullan
+c_cloontimullan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Slatta
+c_slatta = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clooncolry
+c_clooncolry = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilbarry
+c_kilbarry = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycummin
+c_ballycummin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rabradagh
+c_rabradagh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Toberkeagh
+c_toberkeagh = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Smaghraan
+c_smaghraan = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Roscommon
+c_roscommon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Strokestown
+c_strokestown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Creta
+c_creta = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hillstreet
+c_hillstreet = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlerea
+c_castlerea = {
+              1.1.1 = { change_development_level = 1 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonalis
+c_clonalis = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Garranlahan
+c_garranlahan = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlecole
+c_castlecole = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrowbehy
+c_carrowbehy = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moyner
+c_moyner = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinameen
+c_ballinameen = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Frenchpark
+c_frenchpark = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumharlow
+c_drumharlow = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardkeenagh
+c_ardkeenagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockvicar
+c_knockvicar = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Arigna
+c_arigna = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinlough
+c_kinlough = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Manorhamilton
+c_manorhamilton = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumdillure
+c_drumdillure = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumkeeran
+c_drumkeeran = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromahair
+c_dromahair = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinode
+c_ballinode = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killargue
+c_killargue = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenfarne
+c_glenfarne = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinagleragh
+c_ballinagleragh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrigallen
+c_carrigallen = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinamore
+c_ballinamore = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughnasheelin
+c_aughnasheelin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leitrim
+c_leitrim = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisnagea
+c_lisnagea = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickonshannon
+c_carrickonshannon = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumod
+c_drumod = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Camber
+c_camber = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tooma
+c_tooma = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donegal
+c_donegal = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunkineely
+c_dunkineely = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killybegs
+c_killybegs = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrick
+c_carrick = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Malinbeg
+c_malinbeg = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Meentashask
+c_meentashask = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drimcoe
+c_drimcoe = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bundoran
+c_bundoran = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rossnowlagh
+c_rossnowlagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Magherabeg
+c_magherabeg = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cashelard
+c_cashelard = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Murvagh
+c_murvagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullaghduff
+c_mullaghduff = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kincasslagh
+c_kincasslagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leabgarrow
+c_leabgarrow = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lettermacaward
+c_lettermacaward = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derryleconnell
+c_derryleconnell = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crolly
+c_crolly = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mulnamina
+c_mulnamina = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilclooney
+c_kilclooney = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunfanaghy
+c_dunfanaghy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickart
+c_carrickart = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tullaghobegly
+c_tullaghobegly = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Meenlaragh
+c_meenlaragh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gweedore
+c_gweedore = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Creeslough
+c_creeslough = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Letterkenny
+c_letterkenny = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ramelton
+c_ramelton = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathmullan
+c_rathmullan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portsalon
+c_portsalon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybofey
+c_ballybofey = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Convoy
+c_convoy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cormakilly
+c_cormakilly = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Meenawalla
+c_meenawalla = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kildarragh
+c_kildarragh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloughroe
+c_cloughroe = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cullion
+c_cullion = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Raphoe
+c_raphoe = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Templemoyle
+c_templemoyle = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Manorcunningham
+c_manorcunningham = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Keelogs
+c_keelogs = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybegley
+c_ballybegley = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fahan
+c_fahan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Iskaheen
+c_iskaheen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Buncrana
+c_buncrana = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Porthaw
+c_porthaw = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moville
+c_moville = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bogstown
+c_bogstown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caratra
+c_caratra = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolcross
+c_coolcross = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Claggan
+c_claggan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crega
+c_crega = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyconnell
+c_ballyconnell = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Blacklion
+c_blacklion = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockacullion
+c_knockacullion = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glangevlin
+c_glangevlin = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killashandra
+c_killashandra = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lochgowna
+c_lochgowna = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cavan
+c_cavan = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belturbet
+c_belturbet = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Banaho
+c_banaho = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickaboy
+c_carrickaboy = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcogy
+c_kilcogy = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinagh
+c_ballinagh = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymachugh
+c_ballymachugh = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Virginia
+c_virginia = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyjamesduff
+c_ballyjamesduff = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballydurrow
+c_ballydurrow = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullaghland
+c_mullaghland = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kingscourt
+c_kingscourt = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bailieborough
+c_bailieborough = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rebawn
+c_rebawn = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Maudabawn
+c_maudabawn = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cootehill
+c_cootehill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Billis
+c_billis = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyhaise
+c_ballyhaise = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glaslough
+c_glaslough = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killybrone
+c_killybrone = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickroe
+c_carrickroe = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monaghan
+c_monaghan = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Braddox
+c_braddox = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tullycorbet
+c_tullycorbet = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leiter
+c_leiter = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clones
+c_clones = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rockcorry
+c_rockcorry = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newbliss
+c_newbliss = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castleblayney
+c_castleblayney = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clontibret
+c_clontibret = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybay
+c_ballybay = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Barraghy
+c_barraghy = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Latton
+c_latton = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickmacross
+c_carrickmacross = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killark
+c_killark = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donaghmoyne
+c_donaghmoyne = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monagirr
+c_monagirr = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisnaskea
+c_lisnaskea = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Magheraveely
+c_magheraveely = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosslea
+c_rosslea = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newtownbutler
+c_newtownbutler = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumlone
+c_drumlone = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Brookeborough
+c_brookeborough = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballindarragh
+c_ballindarragh = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ashbrooke
+c_ashbrooke = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardmoney
+c_ardmoney = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fivemiletown
+c_fivemiletown = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tempo
+c_tempo = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tamlaght
+c_tamlaght = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gortmullan
+c_gortmullan = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derrylin
+c_derrylin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Letterbreen
+c_letterbreen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Boho
+c_boho = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Correen
+c_correen = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinglass
+c_kinglass = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Enniskillen
+c_enniskillen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derrygonnelly
+c_derrygonnelly = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Farrancassidy
+c_farrancassidy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tully
+c_tully = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kesh
+c_kesh = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Trory
+c_trory = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumbrick
+c_drumbrick = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gulladoo
+c_gulladoo = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Letterkeen
+c_letterkeen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leggs
+c_leggs = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clogher
+c_clogher = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fintona
+c_fintona = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballygawley
+c_ballygawley = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Augher
+c_augher = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Keerogue
+c_keerogue = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughnacloy
+c_aughnacloy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kileenhill
+c_kileenhill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caledon
+c_caledon = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dungannon
+c_dungannon = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coalisland
+c_coalisland = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stewartstown
+c_stewartstown = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Pomeroy
+c_pomeroy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Galballydun
+c_galballydun = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cookstown
+c_cookstown = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lissan
+c_lissan = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coagh
+c_coagh = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kildress
+c_kildress = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Omagh
+c_omagh = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickmore
+c_carrickmore = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilskeery
+c_kilskeery = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Beragh
+c_beragh = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Creggan
+c_creggan = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromoren
+c_dromoren = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Trillick
+c_trillick = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlederg
+c_castlederg = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killeter
+c_killeter = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumlegagh
+c_drumlegagh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumquin
+c_drumquin = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gortin
+c_gortin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cranagh
+c_cranagh = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mountjoy
+c_mountjoy = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenhull
+c_glenhull = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killyclogher
+c_killyclogher = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stabane
+c_stabane = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newtownstewart
+c_newtownstewart = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardstraw
+c_ardstraw = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Artigarvan
+c_artigarvan = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bready
+c_bready = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donemana
+c_donemana = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tynan
+c_tynan = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Middletown
+c_middletown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Armagh
+c_armagh = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Keady
+c_keady = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crossmaglen
+c_crossmaglen = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Markethill
+c_markethill = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newtownhamilton
+c_newtownhamilton = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tandragee
+c_tandragee = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Poyntzpass
+c_poyntzpass = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bessbrook
+c_bessbrook = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lurganare
+c_lurganare = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portadown
+c_portadown = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Richhill
+c_richhill = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tartaraghan
+c_tartaraghan = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Maghera
+c_maghera = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Magherafelt
+c_magherafelt = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Draperstown
+c_draperstown = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilrea
+c_kilrea = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Swatragh
+c_swatragh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Inishrush
+c_inishrush = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Desertmartin
+c_desertmartin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymaguigan
+c_ballymaguigan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coleraine
+c_coleraine = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlerock
+c_castlerock = {
+              1.1.1 = { change_development_level = 1 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Garvagh
+c_garvagh = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caheny
+c_caheny = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Boleran
+c_boleran = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Limavady
+c_limavady = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dungiven
+c_dungiven = {
+              1.1.1 = { change_development_level = 1 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aghanloo
+c_aghanloo = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bovevagh
+c_bovevagh = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gortnahey
+c_gortnahey = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derry
+c_derry = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Campsey
+c_campsey = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killaloo
+c_killaloo = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Straidarran
+c_straidarran = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moira
+c_moira = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromara
+c_dromara = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromorre
+c_dromorre = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Waringstown
+c_waringstown = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hillsborough
+c_hillsborough = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newcastle
+c_newcastle = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlewellan
+c_castlewellan = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkinamurry
+c_kilkinamurry = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathfriland
+c_rathfriland = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Banbridge
+c_banbridge = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cabra
+c_cabra = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hilltown
+c_hilltown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newry
+c_newry = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynaskeagh
+c_ballynaskeagh = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkeel
+c_kilkeel = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Attical
+c_attical = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Annalong
+c_annalong = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynahinch
+c_ballynahinch = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dundrum
+c_dundrum = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmore
+c_kilmore = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Downpatrick
+c_downpatrick = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyhornan
+c_ballyhornan = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killough
+c_killough = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killyleagh
+c_killyleagh = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Whiterock
+c_whiterock = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bangor
+c_bangor = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portaferry
+c_portaferry = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballywalter
+c_ballywalter = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Saintfield
+c_saintfield = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlereagh
+c_castlereagh = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newtownbreda
+c_newtownbreda = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Holywood
+c_holywood = {
+              1.1.1 = { change_development_level = 30 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Comber
+c_comber = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ravernet
+c_ravernet = {
+              1.1.1 = { change_development_level = 27 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lisburn
+c_lisburn = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aghalee
+c_aghalee = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crumllin
+c_crumllin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenavy
+c_glenavy = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cairnhill
+c_cairnhill = {
+              1.1.1 = { change_development_level = 28 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belfast
+c_belfast = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunmurry
+c_dunmurry = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dundrod
+c_dundrod = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loanends
+c_loanends = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mallusk
+c_mallusk = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Magheramorne
+c_magheramorne = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Whitehead
+c_whitehead = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carrickfergus
+c_carrickfergus = {
+              1.1.1 = { change_development_level = 30 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Whiteabbey
+c_whiteabbey = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Antrim
+c_antrim = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyclare
+c_ballyclare = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moorfields
+c_moorfields = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Northernkells
+c_northernkells = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenwherry
+c_glenwherry = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Broughshane
+c_broughshane = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Toome
+c_toome = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Randalstown
+c_randalstown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portglenone
+c_portglenone = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymena
+c_ballymena = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ahoghill
+c_ahoghill = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenarm
+c_glenarm = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Larne
+c_larne = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilwaughter
+c_kilwaughter = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Waterfoot
+c_waterfoot = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cushendall
+c_cushendall = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tievebulliagh
+c_tievebulliagh = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rasharkin
+c_rasharkin = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloughmills
+c_cloughmills = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Finvoy
+c_finvoy = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glarryford
+c_glarryford = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunloy
+c_dunloy = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymoney
+c_ballymoney = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunluce
+c_dunluce = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunaghy
+c_dunaghy = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derrykeighan
+c_derrykeighan = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loughguile
+c_loughguile = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycastle
+c_ballycastle = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunseverick
+c_dunseverick = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Armoy
+c_armoy = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyvoy
+c_ballyvoy = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Torr
+c_torr = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dundalk
+c_dundalk = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hackballscross
+c_hackballscross = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carlingford
+c_carlingford = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromad
+c_dromad = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Louth
+c_louth = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dromiskin
+c_dromiskin = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardee
+c_ardee = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tallanstown
+c_tallanstown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlebellingham
+c_castlebellingham = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drogheda
+c_drogheda = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clogherhead
+c_clogherhead = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tenure
+c_tenure = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Longford
+c_longford = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinalee
+c_ballinalee = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumlishhill
+c_drumlishhill = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinamuck
+c_ballinamuck = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Granard
+c_granard = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonfin
+c_clonfin = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gelsha
+c_gelsha = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughnacliffe
+c_aughnacliffe = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ardagh
+c_ardagh = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Sraid
+c_sraid = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Edgeworthstown
+c_edgeworthstown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Abbeyshrule
+c_abbeyshrule = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Feagh
+c_feagh = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moydow
+c_moydow = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Abbeyderg
+c_abbeyderg = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymahon
+c_ballymahon = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lettergunnell
+c_lettergunnell = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lanesborough
+c_lanesborough = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Wexford
+c_wexford = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosslare
+c_rosslare = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Faree
+c_faree = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lambstown
+c_lambstown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlebridge
+c_castlebridge = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Duncormick
+c_duncormick = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Wellingtonbridge
+c_wellingtonbridge = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmorre
+c_kilmorre = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Wexfethard
+c_wexfethard = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycullane
+c_ballycullane = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Campile
+c_campile = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newross
+c_newross = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinvegga
+c_ballinvegga = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Adamstown
+c_adamstown = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathnageeragh
+c_rathnageeragh = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castleboro
+c_castleboro = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Enniscorthy
+c_enniscorthy = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmuckridge
+c_kilmuckridge = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Oulart
+c_oulart = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tarahill
+c_tarahill = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tincurra
+c_tincurra = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ferns
+c_ferns = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Askamore
+c_askamore = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bunclody
+c_bunclody = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kiltealy
+c_kiltealy = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Templeshanbo
+c_templeshanbo = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycarney
+c_ballycarney = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gorey
+c_gorey = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmichael
+c_kilmichael = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loggan
+c_loggan = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballycanew
+c_ballycanew = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mooncoin
+c_mooncoin = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fiddown
+c_fiddown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Arderra
+c_arderra = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Piltown
+c_piltown = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Slieverue
+c_slieverue = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlewarren
+c_castlewarren = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clodiagh
+c_clodiagh = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knocktopher
+c_knocktopher = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rockhall
+c_rockhall = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullinavat
+c_mullinavat = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Callan
+c_callan = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkells
+c_kilkells = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmoganny
+c_kilmoganny = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bennettsbridge
+c_bennettsbridge = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymack
+c_ballymack = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkenny
+c_kilkenny = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Freshford
+c_freshford = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tullaroan
+c_tullaroan = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Galmoy
+c_galmoy = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gathabawn
+c_gathabawn = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockmannon
+c_knockmannon = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlecomer
+c_castlecomer = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monteen
+c_monteen = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyragget
+c_ballyragget = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Jenkinstown
+c_jenkinstown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Gowran
+c_gowran = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Thomastown
+c_thomastown = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Graiguenamanagh
+c_graiguenamanagh = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leggettsrath
+c_leggettsrath = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyvoole
+c_ballyvoole = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stmullins
+c_stmullins = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tincurry
+c_tincurry = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonegall
+c_clonegall = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Borris
+c_borris = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leighlinbridge
+c_leighlinbridge = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Muinebheag
+c_muinebheag = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Oldleighlin
+c_oldleighlin = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bilboa
+c_bilboa = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballon
+c_ballon = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Myshall
+c_myshall = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilbrannish
+c_kilbrannish = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carlow
+c_carlow = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killerrig
+c_killerrig = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathvilly
+c_rathvilly = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tullow
+c_tullow = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Hacketstown
+c_hacketstown = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Shillelagh
+c_shillelagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carnew
+c_carnew = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolkenna
+c_coolkenna = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Baltinglass
+c_baltinglass = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stratford
+c_stratford = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockanarrigan
+c_knockanarrigan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathdangan
+c_rathdangan = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Blessington
+c_blessington = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunlavin
+c_dunlavin = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donard
+c_donard = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Granabeg
+c_granabeg = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kippure
+c_kippure = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathdrum
+c_rathdrum = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tochar
+c_tochar = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glendalough
+c_glendalough = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glenmalure
+c_glenmalure = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughrim
+c_aughrim = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Aughavannagh
+c_aughavannagh = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tinahely
+c_tinahely = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Knockananna
+c_knockananna = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Arklow
+c_arklow = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunbur
+c_dunbur = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Brittas
+c_brittas = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Wicklow
+c_wicklow = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Leinsnewcastle
+c_leinsnewcastle = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmurray
+c_kilmurray = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Arles
+c_arles = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crettyard
+c_crettyard = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killeshin
+c_killeshin = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballylinan
+c_ballylinan = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballintubbert
+c_ballintubbert = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stradbally
+c_stradbally = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Luggacurren
+c_luggacurren = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Abbeyleix
+c_abbeyleix = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinakill
+c_ballinakill = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Timahoe
+c_timahoe = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portlaoise
+c_portlaoise = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mountrath
+c_mountrath = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballyfin
+c_ballyfin = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Caddlestown
+c_caddlestown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Portarlington
+c_portarlington = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybrittas
+c_ballybrittas = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Foxburrow
+c_foxburrow = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonaslee
+c_clonaslee = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloghann
+c_cloghann = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rosenallis
+c_rosenallis = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballybeg
+c_ballybeg = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolrain
+c_coolrain = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lissenhall
+c_lissenhall = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloncannon
+c_cloncannon = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Donaghmore
+c_donaghmore = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathdowney
+c_rathdowney = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Errill
+c_errill = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Durrow
+c_durrow = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cullohill
+c_cullohill = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballacolla
+c_ballacolla = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunkerrin
+c_dunkerrin = {
+              1.1.1 = { change_development_level = 22 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Birr
+c_birr = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moneygall
+c_moneygall = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinnitty
+c_kinnitty = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clareen
+c_clareen = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Roaun
+c_roaun = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fivealley
+c_fivealley = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rath
+c_rath = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcormac
+c_kilcormac = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Erry
+c_erry = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Banagher
+c_banagher = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ferbane
+c_ferbane = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonmacnoise
+c_clonmacnoise = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Pullough
+c_pullough = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Boher
+c_boher = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lackagh
+c_lackagh = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tullamore
+c_tullamore = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rahan
+c_rahan = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Cloirtheach
+c_cloirtheach = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Geashill
+c_geashill = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killeigh
+c_killeigh = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Daingean
+c_daingean = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Croghann
+c_croghann = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonygowan
+c_clonygowan = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Treascon
+c_treascon = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Edenderry
+c_edenderry = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bracknagh
+c_bracknagh = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bogtown
+c_bogtown = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rhode
+c_rhode = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathconnell
+c_rathconnell = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moate
+c_moate = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Boyanna
+c_boyanna = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynahown
+c_ballynahown = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Athlonemeath
+c_athlonemeath = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tang
+c_tang = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glasson
+c_glasson = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moycashel
+c_moycashel = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynagore
+c_ballynagore = {
+              1.1.1 = { change_development_level = 21 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derrylusk
+c_derrylusk = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymore
+c_ballymore = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loughnavalley
+c_loughnavalley = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moyvore
+c_moyvore = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballynacarrigy
+c_ballynacarrigy = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathowen
+c_rathowen = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinalack
+c_ballinalack = {
+              1.1.1 = { change_development_level = 5 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Multyfarnham
+c_multyfarnham = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crookedwood
+c_crookedwood = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castlepollard
+c_castlepollard = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Finnea
+c_finnea = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Coolure
+c_coolure = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Fore
+c_fore = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Delvin
+c_delvin = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonmellon
+c_clonmellon = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Archerstown
+c_archerstown = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kinnegad
+c_kinnegad = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Raharney
+c_raharney = {
+              1.1.1 = { change_development_level = 23 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killucan
+c_killucan = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullingar
+c_mullingar = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinea
+c_ballinea = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Seapoint
+c_seapoint = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tyrrellspass
+c_tyrrellspass = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Milltownpass
+c_milltownpass = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Baskin
+c_baskin = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Oldcastle
+c_oldcastle = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Loughcrew
+c_loughcrew = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Killallon
+c_killallon = {
+              1.1.1 = { change_development_level = 27 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kells
+c_kells = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moynalty
+c_moynalty = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carnaville
+c_carnaville = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballygreany
+c_ballygreany = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Sydenrath
+c_sydenrath = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Wilkinstown
+c_wilkinstown = {
+              1.1.1 = { change_development_level = 31 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Nobber
+c_nobber = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Moydarragh
+c_moydarragh = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Slane
+c_slane = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Drumconrath
+c_drumconrath = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Syddan
+c_syddan = {
+              1.1.1 = { change_development_level = 26 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Duleek
+c_duleek = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Stamullen
+c_stamullen = {
+              1.1.1 = { change_development_level = 24 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonalvy
+c_clonalvy = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kentstown
+c_kentstown = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Beauparc
+c_beauparc = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tara
+c_tara = {
+              1.1.1 = { change_development_level = 42 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathfeigh
+c_rathfeigh = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Alexanderaide
+c_alexanderaide = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Navan
+c_navan = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Trim
+c_trim = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bohermeen
+c_bohermeen = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Athboy
+c_athboy = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballivor
+c_ballivor = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kildalkey
+c_kildalkey = {
+              1.1.1 = { change_development_level = 28 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Summerhill
+c_summerhill = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballinabrackey
+c_ballinabrackey = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clonard
+c_clonard = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Enfield
+c_enfield = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Longwood
+c_longwood = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmessan
+c_kilmessan = {
+              1.1.1 = { change_development_level = 25 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Crerogue
+c_crerogue = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ferrans
+c_ferrans = {
+              1.1.1 = { change_development_level = 29 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcloon
+c_kilcloon = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathoath
+c_rathoath = {
+              1.1.1 = { change_development_level = 31 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Batterstown
+c_batterstown = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dunboyne
+c_dunboyne = {
+              1.1.1 = { change_development_level = 28 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Belgree
+c_belgree = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Carbury
+c_carbury = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Derrinturn
+c_derrinturn = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilshanroe
+c_kilshanroe = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clane
+c_clane = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcock
+c_kilcock = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Staplestown
+c_staplestown = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Maynooth
+c_maynooth = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kill
+c_kill = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Straffan
+c_straffan = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Naas
+c_naas = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Mullacash
+c_mullacash = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Longhouse
+c_longhouse = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Newbridge
+c_newbridge = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Borahard
+c_borahard = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmeage
+c_kilmeage = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kildare
+c_kildare = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathangan
+c_rathangan = {
+              1.1.1 = { change_development_level = 19 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Nurnney
+c_nurnney = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Monasterevin
+c_monasterevin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Athy
+c_athy = {
+              1.1.1 = { change_development_level = 17 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballitore
+c_ballitore = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilmead
+c_kilmead = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castledermot
+c_castledermot = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilkea
+c_kilkea = {
+              1.1.1 = { change_development_level = 7 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Timolin
+c_timolin = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilcullen
+c_kilcullen = {
+              1.1.1 = { change_development_level = 28 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rush
+c_rush = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Balbriggan
+c_balbriggan = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Naul
+c_naul = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Garristown
+c_garristown = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Swords
+c_swords = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Kilsallaghan
+c_kilsallaghan = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dublin
+c_dublin = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Malahide
+c_malahide = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Ballymun
+c_ballymun = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Castleknock
+c_castleknock = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Lucan
+c_lucan = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Rathcoole
+c_rathcoole = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Westbury
+c_westbury = {
+              1.1.1 = { change_development_level = 6 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Bray
+c_bray = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Glencree
+c_glencree = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Dalkey
+c_dalkey = {
+              1.1.1 = { change_development_level = 16 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Terenure
+c_terenure = {
+              1.1.1 = { change_development_level = 11 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Tallaght
+c_tallaght = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Clondalkin
+c_clondalkin = {
+              1.1.1 = { change_development_level = 2 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+
+#Sandyford
+c_sandyford = {
+              1.1.1 = { change_development_level = 8 }
+              4799.1.1 = {
+                            holder = 0
+              }
+}
+

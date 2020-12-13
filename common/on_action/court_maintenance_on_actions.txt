@@ -1,0 +1,189 @@
+﻿
+# Fires when a character joins a court. Not fired for just generated characters
+# Root is the character
+# scope:new_employer is their new employer
+# scope:old_employer is their old employer (if they had one; otherwise unset)
+on_join_court = {
+	events = {
+		court_maintenance.0005 # Add 'Order member' trait to courtiers who join holy order court
+	}
+#### TALES OF IRELAND ####
+	effect = {
+#No race = employer race
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = fomorian
+				}
+			}
+			add_trait = fomorian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = cessarian
+				}
+			}
+			add_trait = cessarian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = partholonian
+				}
+			}
+			add_trait = partholonian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = nemedian
+				}
+			}
+			add_trait = nemedian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = fir_bolg
+				}
+			}
+			add_trait = fir_bolg
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = tuatha_de_danann
+				}
+			}
+			add_trait = tuatha_de_danann
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = milesian
+				}
+			}
+			add_trait = milesian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = celtic_human
+				}
+			}
+			add_trait = celtic_human
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					has_trait = megalith_human
+				}
+			}
+			add_trait = megalith_human
+		}
+#No race + no employer race = liege race
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = fomorian
+					}
+				}
+			}
+			add_trait = fomorian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = cessarian
+					}
+				}
+			}
+			add_trait = cessarian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = partholonian
+					}
+				}
+			}
+			add_trait = partholonian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = nemedian
+					}
+				}
+			}
+			add_trait = nemedian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = fir_bolg
+					}
+				}
+			}
+			add_trait = fir_bolg
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = tuatha_de_danann
+					}
+				}
+			}
+			add_trait = tuatha_de_danann
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = milesian
+					}
+				}
+			}
+			add_trait = milesian
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = celtic_human
+					}
+				}
+			}
+			add_trait = celtic_human
+		}
+		if 	= {
+			limit = {
+				scope:new_employer = {
+					lige = {
+						has_trait = megalith_human
+					}
+				}
+			}
+			add_trait = megalith_human
+		}
+	}
+#### TALES OF IRELAND ####
+}
+
+# Fires when a character leaves a court. Not fired when leaving due to death or similar
+# Will still fire even if on_join_court is firing (fires just before it)
+# Root is the character
+# scope:old_employer is their old employer
+on_leave_court = {
+	events = {
+		stewardship_duty.1064 # Cancels the employment contract between this character and their former employer.
+		health.3011 		  # Invalidating court physician
+	}
+}

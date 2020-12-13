@@ -1,0 +1,209 @@
+200000 = {
+    name = 'Orba'
+    dynasty =  7 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = milesian
+
+    father=  201000 
+
+    disallow_random_traits =  3 
+    4779.1.1 = {
+        birth = yes
+        add_pressed_claim = d_killarney
+        add_pressed_claim = d_magunihy
+    }
+}
+200001 = {
+    name = 'Fergna'
+    dynasty =  7 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = milesian
+
+    father=  201000 
+
+    disallow_random_traits =  10 
+    4764.1.1 = {
+        birth = yes
+        add_pressed_claim = d_dunkerron
+        add_pressed_claim = d_iveragh
+    }
+}
+201000 = {
+    name = 'Eber'
+    dynasty =  7 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    disallow_random_traits =  5 
+    4743.1.1 = {
+        birth = yes
+    }
+    4795.1.1 = {
+        death = yes
+    }
+}
+200003 = {
+    name = 'Conmael'
+    dynasty =  8 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = milesian
+
+    disallow_random_traits =  10 
+    4757.1.1 = {
+        birth = yes
+    }
+}
+200004 = {
+    name = 'Er'
+    dynasty =  9 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = milesian
+
+    disallow_random_traits =  7 
+    4763.1.1 = {
+        birth = yes
+    }
+}
+205000 = {
+    name = 'Petair'
+    dynasty =  7 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = milesian
+
+    father=  200001 
+
+    disallow_random_traits =  1 
+    4782.1.1 = {
+        birth = yes
+    }
+}
+205001 = {
+    name = 'Conn'
+    dynasty =  7 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    father=  200001 
+
+    disallow_random_traits =  1 
+    4783.1.1 = {
+        birth = yes
+    }
+}
+205002 = {
+    name = 'Iarlaithe'
+    dynasty =  8 
+    religion = milesian_paganism
+    culture = lughaid_milesians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = milesian
+
+    father=  200003 
+
+    disallow_random_traits =  3 
+    4783.1.1 = {
+        birth = yes
+    }
+}

@@ -1,0 +1,48 @@
+﻿
+#CESSARIANS#
+
+1 = {
+	name = "Mac Bóchra"
+	culture = "cessair_descendants"
+}
+
+2 = {
+	name = "Mac Gréine"
+	culture = "cessair_descendants"
+}
+
+3 = {
+	name = "Mac Cecht"
+	culture = "cessair_descendants"
+}
+
+4 = {
+	name = "Noah"
+	culture = "cessair_descendants"
+}
+
+5 = {
+	name = "Traige"
+	culture = "cessair_descendants"
+}
+
+6 = {
+	name = "Cuill"
+	culture = "cessair_descendants"
+}
+
+#LUGHAID MILESIANS#
+7 = {
+	name = "Finn"
+	culture = "lughaid_milesians"
+}
+
+8 = {
+	name = "Mac Clonmael"
+	culture = "lughaid_milesians"
+}
+
+9 = {
+	name = "Mac Er"
+	culture = "lughaid_milesians"
+}

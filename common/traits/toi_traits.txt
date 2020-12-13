@@ -1,0 +1,1210 @@
+﻿#racial traits
+
+fomorian = {
+	index = 1000
+	icon = fomorian.dds
+	
+	opposites = {
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_fomorian
+		three_quarter_fomorian
+	}
+	
+	physical = yes
+	prowess = 4
+	health = 1.2
+	intrigue = 2
+	stress_gain_mult = -0.2
+	tax_mult = 0.1
+	development_growth_factor = -0.2
+	different_faith_county_opinion_mult = 0.25
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_fomorian = {
+	index = 1001
+	icon = half_fomorian.dds
+	
+	opposites = {
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_fomorian
+		fomorian
+	}
+	
+	physical = yes
+	prowess = 2
+	health = 0.6
+	intrigue = 1
+	stress_gain_mult = -0.1
+	tax_mult = 0.05
+	development_growth_factor = -0.1
+	different_faith_county_opinion_mult = 0.15
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_fomorian = {
+	index = 1002
+	icon = three_quarter_fomorian.dds
+	
+	opposites = {
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_fomorian
+		fomorian
+	}
+	
+	physical = yes
+	prowess = 2
+	health = 0.6
+	intrigue = 1
+	stress_gain_mult = -0.1
+	tax_mult = 0.05
+	development_growth_factor = -0.1
+	different_faith_county_opinion_mult = 0.15
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+cessarian = {
+	index = 1003
+	icon = cessarian.dds
+	
+	opposites = {
+		fomorian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_cessarian
+		three_quarter_cessarian
+	}
+	
+	physical = yes
+	prowess = -2
+	health = 2.2
+	negate_health_penalty_add = 0.25
+	diplomacy = 2
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_cessarian = {
+	index = 1004
+	icon = half_cessarian.dds
+	
+	opposites = {
+		half_fomorian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_cessarian
+		cessarian
+	}
+	
+	physical = yes
+	prowess = -1
+	health = 1.1
+	negate_health_penalty_add = 0.1
+	diplomacy = 1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_cessarian = {
+	index = 1005
+	icon = three_quarter_cessarian.dds
+	
+	opposites = {
+		half_fomorian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_cessarian
+		cessarian
+	}
+	
+	physical = yes
+	prowess = -1
+	health = 1.1
+	negate_health_penalty_add = 0.1
+	diplomacy = 1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+partholonian = {
+	index = 1006
+	icon = partholonain.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_partholonian
+		three_quarter_partholonian
+	}
+	
+	physical = yes
+	negate_health_penalty_add = -0.25
+	stewardship = 2
+	development_growth_factor = 0.1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_partholonian = {
+	index = 1007
+	icon = half_partholonian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_partholonian
+		partholonain
+	}
+	
+	physical = yes
+	negate_health_penalty_add = -0.15
+	stewardship = 1
+	development_growth_factor = 0.05
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_partholonian = {
+	index = 1008
+	icon = three_quarter_partholonian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_partholonian
+		partholonain
+	}
+	
+	physical = yes
+	negate_health_penalty_add = -0.15
+	stewardship = 1
+	development_growth_factor = 0.05
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+nemedian = {
+	index = 1009
+	icon = nemedian.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_nemedian
+		three_quarter_nemedian
+	}
+	
+	physical = yes
+	fertility = 0.15
+	controlled_province_advantage = 5
+	monthly_county_control_change_factor = 1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_nemedian = {
+	index = 1010
+	icon = half_nemedian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_nemedian
+		nemedian
+	}
+	
+	physical = yes
+	fertility = 0.05
+	controlled_province_advantage = 2
+	monthly_county_control_change_factor = 0.5
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_nemedian = {
+	index = 1011
+	icon = three_quarter_nemedian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_nemedian
+		nemedian
+	}
+	
+	physical = yes
+	fertility = 0.05
+	controlled_province_advantage = 2
+	monthly_county_control_change_factor = 0.5
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+fir_bolg = {
+	index = 1012
+	icon = fir_bolg.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		tuatha_de_danann
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_fir_bolg
+		three_quarter_fir_bolg
+	}
+	
+	physical = yes
+	prowess = 4
+	martial = 2
+	monthly_prestige = 1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_fir_bolg = {
+	index = 1013
+	icon = half_fir_bolg.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_fir_bolg
+		fir_bolg
+	}
+	
+	physical = yes
+	prowess = 2
+	martial = 1
+	monthly_prestige = 0.5
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_fir_bolg = {
+	index = 1014
+	icon = three_quarter_fir_bolg.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_fir_bolg
+		fir_bolg
+	}
+	
+	physical = yes
+	prowess = 2
+	martial = 1
+	monthly_prestige = 0.5
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+tuatha_de_danann = {
+	index = 1015
+	icon = tuatha_de_danann.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		milesian
+		celtic_human
+		megalith_human
+		
+		half_tuatha_de_danann
+		three_quarter_tuatha_de_danann
+	}
+	
+	physical = yes
+	prowess = -2
+	stewardship = -3
+	learning = 4
+	fertility = -0.25
+	health = 11.2
+	levy_reinforcement_rate = 0.1
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_tuatha_de_danann = {
+	index = 1016
+	icon = half_tuatha_de_danann.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_tuatha_de_danann
+		tuatha_de_danann
+	}
+	
+	physical = yes
+	prowess = -1
+	stewardship = -2
+	learning = 2
+	fertility = -0.12
+	health = 5
+	levy_reinforcement_rate = 0.05
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_tuatha_de_danann = {
+	index = 1017
+	icon = three_quarter_tuatha_de_danann.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_milesian
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_milesian
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_tuatha_de_danann
+		tuatha_de_danann
+	}
+	
+	physical = yes
+	prowess = -1
+	stewardship = -2
+	learning = 2
+	fertility = -0.12
+	health = 5
+	levy_reinforcement_rate = 0.05
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+milesian = {
+	index = 1018
+	icon = milesian.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		celtic_human
+		megalith_human
+		
+		half_milesian
+		three_quarter_milesian
+	}
+	
+	physical = yes
+	prowess = 2
+	monthly_dynasty_prestige_mult = 0.05
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_milesian = {
+	index = 1019
+	icon = half_milesian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		three_quarter_milesian
+		milesian
+	}
+	
+	physical = yes
+	prowess = 1
+	monthly_dynasty_prestige_mult = 0.025
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_milesian = {
+	index = 1020
+	icon = three_quarter_milesian.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_celtic_human
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_celtic_human
+		three_quarter_megalith_human
+		
+		half_milesian
+		milesian
+	}
+	
+	physical = yes
+	prowess = 1
+	monthly_dynasty_prestige_mult = 0.025
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+celtic_human = {
+	index = 1021
+	icon = human.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		megalith_human
+		
+		half_celtic_human
+		three_quarter_celtic_human
+	}
+	
+	physical = yes
+	monthly_piety_gain_mult = 0.1
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_celtic_human = {
+	index = 1022
+	icon = half_human.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_megalith_human
+		
+		three_quarter_celtic_human
+		celtic_human
+	}
+	
+	physical = yes
+	monthly_piety_gain_mult = 0.05
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_celtic_human = {
+	index = 1023
+	icon = three_quarter_human.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_megalith_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_megalith_human
+		
+		half_celtic_human
+		celtic_human
+	}
+	
+	physical = yes
+	monthly_piety_gain_mult = 0.05
+	
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+megalith_human = {
+	index = 1024
+	icon = megalithic.dds
+	
+	opposites = {
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian
+		celtic_human
+		
+		half_megalith_human
+		three_quarter_megalith_human
+	}
+	
+	physical = yes
+	negate_health_penalty_add = 0.25
+	stress_gain_mult = 0.1
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+half_megalith_human = {
+	index = 1025
+	icon = half_megalithic.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		
+		three_quarter_megalith_human
+		megalith_human
+	}
+	
+	physical = yes
+	negate_health_penalty_add = 0.1
+	stress_gain_mult = 0.05
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+three_quarter_megalith_human = {
+	index = 1026
+	icon = three_quarter_megalithic.dds
+	
+	opposites = {
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		
+		half_megalith_human
+		megalith_human
+	}
+	
+	physical = yes
+	negate_health_penalty_add = 0.1
+	stress_gain_mult = 0.05
+	
+	ruler_designer_cost = 5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_blooded_desc
+			}
+			desc = trait_pure_blooded_character_desc
+		}
+	}
+}

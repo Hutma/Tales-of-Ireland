@@ -1,0 +1,10 @@
+﻿object={
+	name="tree_leaf_high_generator_1_0"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=yes
+	layer="tree_high_layer"
+	pdxmesh="tree_leaf_01_a_mesh"
+	count=1
+	transform="4832.718750 0.000000 1739.657227 0.000000 0.115216 0.000000 -0.993340 1.006371 1.006371 1.006371
+"}

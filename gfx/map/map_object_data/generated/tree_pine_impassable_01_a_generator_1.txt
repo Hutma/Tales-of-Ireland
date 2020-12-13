@@ -1,0 +1,10 @@
+﻿object={
+	name="tree_pine_impassable_01_a_generator_1_0"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=yes
+	layer="tree_high_layer"
+	pdxmesh="tree_pine_impassable_01_a_mesh"
+	count=1
+	transform="3169.406250 0.000000 2900.208740 0.000000 0.026934 0.000000 -0.999637 0.400000 0.400000 0.400000
+"}

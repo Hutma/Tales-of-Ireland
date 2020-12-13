@@ -1,0 +1,311 @@
+100000 = {
+    name = 'Fintac'
+    dynasty =  1 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  10 
+    martial =  1 
+    stewardship =  10 
+    intrigue =  10 
+    learning =  9 
+    prowess =  1 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = cessarian
+
+    disallow_random_traits =  9 
+    4763.1.1 = {
+        birth = yes
+    }
+}
+100001 = {
+    name = 'Bith'
+    dynasty =  2 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = cessarian
+
+    disallow_random_traits =  3 
+    4788.1.1 = {
+        birth = yes
+    }
+}
+100002 = {
+    name = 'Ladra'
+    dynasty =  3 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = cessarian
+
+    disallow_random_traits =  10 
+    4747.1.1 = {
+        birth = yes
+    }
+}
+100003 = {
+    name = 'Cessair'
+    dynasty =  4 
+    religion = first_men
+    culture = cessair_descendants
+    female = yes
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = cessarian
+
+    disallow_random_traits =  5 
+    4776.1.1 = {
+        birth = yes
+    }
+}
+100004 = {
+    name = 'Finnsnechtae'
+    dynasty =  5 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = cessarian
+
+    disallow_random_traits =  10 
+    4757.1.1 = {
+        birth = yes
+    }
+}
+100005 = {
+    name = 'Congal'
+    dynasty =  6 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = cessarian
+
+    father=  101001 
+
+    disallow_random_traits =  7 
+    4763.1.1 = {
+        birth = yes
+    }
+}
+100006 = {
+    name = 'Tressach'
+    dynasty =  6 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = cessarian
+
+    father=  101001 
+
+    disallow_random_traits =  1 
+    4761.1.1 = {
+        birth = yes
+    }
+}
+100007 = {
+    name = 'Uargal'
+    dynasty =  6 
+    religion = cult_of_life
+    culture = cessair_descendants
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = cessarian
+
+    father=  101002 
+
+    disallow_random_traits =  5 
+    4779.1.1 = {
+        birth = yes
+    }
+}
+100008 = {
+    name = 'Guthela'
+    dynasty =  6 
+    religion = cult_of_life
+    culture = cessair_descendants
+    female = yes
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = cessarian
+
+    father=  101002 
+
+    disallow_random_traits =  2 
+    4768.1.1 = {
+        birth = yes
+    }
+}
+101001 = {
+    name = 'Fintac'
+    dynasty =  6 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = cessarian
+
+    father=  102001 
+
+    disallow_random_traits =  9 
+    4741.1.1 = {
+        birth = yes
+    }
+    4789.1.1 = {
+        death = yes
+    }
+}
+101002 = {
+    name = 'Feradach'
+    dynasty =  6 
+    religion = cult_of_life
+    culture = cessair_descendants
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = cessarian
+
+    father=  102001 
+
+    disallow_random_traits =  3 
+    4749.1.1 = {
+        birth = yes
+    }
+    4796.1.1 = {
+        death = yes
+    }
+}
+102001 = {
+    name = 'Drust'
+    dynasty =  6 
+    religion = first_men
+    culture = cessair_descendants
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = cessarian
+
+    disallow_random_traits =  4 
+    4720.1.1 = {
+        birth = yes
+    }
+    4740.1.1 = {
+        death = yes
+    }
+}
