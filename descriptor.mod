@@ -3,4 +3,4 @@ tags={
 	"Alternative History"
 }
 name="Tales of Ireland"
-supported_version="1.2.1"
+supported_version="1.2.2"
