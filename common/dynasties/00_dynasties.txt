@@ -46,3 +46,29 @@
 	name = "Mac Er"
 	culture = "lughaid_milesians"
 }
+
+#PARTHOLONIAN #
+10 = {
+	name = "Bartholomaeus"
+	culture = "first_landers"
+}
+
+11 = {
+	name = "Cerbnad"
+	culture = "first_landers"
+}
+
+12 = {
+	name = "Mac Slanga"
+	culture = "first_landers"
+}
+
+13 = {
+	name = "Mac Laiglinne"
+	culture = "first_landers"
+}
+
+14 = {
+	name = "Mac Rudraige"
+	culture = "first_landers"
+}
