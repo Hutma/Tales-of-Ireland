@@ -17,7 +17,7 @@
     trait = lazy
     trait = cessarian
 
-    disallow_random_traits =  9 
+    disallow_random_traits =  yes
     4763.1.1 = {
         birth = yes
     }
@@ -41,7 +41,7 @@
     trait = diligent
     trait = cessarian
 
-    disallow_random_traits =  3 
+    disallow_random_traits =  yes 
     4788.1.1 = {
         birth = yes
     }
@@ -65,7 +65,7 @@
     trait = wrathful
     trait = cessarian
 
-    disallow_random_traits =  10 
+    disallow_random_traits =  yes 
     4747.1.1 = {
         birth = yes
     }
@@ -90,7 +90,7 @@
     trait = compassionate
     trait = cessarian
 
-    disallow_random_traits =  5 
+    disallow_random_traits =  yes 
     4776.1.1 = {
         birth = yes
     }
@@ -114,7 +114,7 @@
     trait = ambitious
     trait = cessarian
 
-    disallow_random_traits =  10 
+    disallow_random_traits =  yes 
     4757.1.1 = {
         birth = yes
     }
@@ -140,7 +140,7 @@
 
     father=  101001 
 
-    disallow_random_traits =  7 
+    disallow_random_traits =  yes 
     4763.1.1 = {
         birth = yes
     }
@@ -166,7 +166,7 @@
 
     father=  101001 
 
-    disallow_random_traits =  1 
+    disallow_random_traits =  yes 
     4761.1.1 = {
         birth = yes
     }
@@ -192,7 +192,7 @@
 
     father=  101002 
 
-    disallow_random_traits =  5 
+    disallow_random_traits =  yes 
     4779.1.1 = {
         birth = yes
     }
@@ -245,7 +245,7 @@
 
     father=  102001 
 
-    disallow_random_traits =  9 
+    disallow_random_traits = yes
     4741.1.1 = {
         birth = yes
     }
@@ -274,7 +274,7 @@
 
     father=  102001 
 
-    disallow_random_traits =  3 
+    disallow_random_traits =  yes
     4749.1.1 = {
         birth = yes
     }
@@ -301,7 +301,7 @@
     trait = paranoid
     trait = cessarian
 
-    disallow_random_traits =  4 
+    disallow_random_traits = yes
     4720.1.1 = {
         birth = yes
     }

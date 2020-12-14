@@ -1,0 +1,334 @@
+300000 = {
+    name = "Delgnat"
+    dynasty =  10 
+    religion = sons_of_the_ocean
+    culture = first_landers
+    female = yes
+
+    diplomacy =  8 
+    martial =  8 
+    stewardship =  11 
+    intrigue =  5 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_stewardship_2
+    trait = paranoid
+    trait = shy
+    trait = just
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+300001 = {
+    name = "Sera"
+    dynasty =  11 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  8 
+    martial =  8 
+    stewardship =  7 
+    intrigue =  1 
+    learning =  9 
+    prowess =  4 
+    trait = forgiving
+    trait = greedy
+    trait = fickle
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+300002 = {
+    name = "Dauid"
+    dynasty =  12 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  7 
+    intrigue =  7 
+    learning =  12 
+    prowess =  10 
+
+    trait = education_martial_1 
+    trait = lazy
+    trait = forgiving
+    trait = forgiving
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4755.1.1 = {
+        birth = yes
+    }
+}
+300003 = {
+    name = "Partholón "
+    dynasty =  13 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  3 
+    intrigue =  8 
+    learning =  9 
+    prowess =  2 
+
+    trait = education_stewardship_2
+    trait = gluttonous
+    trait = arrogant
+    trait = vengeful
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4773.1.1 = {
+        birth = yes
+    }
+}
+300004 = {
+    name = "Sru"
+    dynasty =  14 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  1 
+    martial =  5 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  4 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = impatient
+    trait = calm
+    trait = generous
+    trait = partholonian
+
+    father=  301000 
+
+    disallow_random_traits = yes
+    4771.1.1 = {
+        birth = yes
+    }
+}
+300005 = {
+    name = "Gurceneu"
+    dynasty =  14 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  12 
+    martial =  4 
+    stewardship =  3 
+    intrigue =  7 
+    learning =  5 
+    prowess =  6 
+
+    trait = education_stewardship_2
+    trait = lazy
+    trait = generous
+    trait = calm
+    trait = partholonian
+
+    father=  301000 
+
+    disallow_random_traits = yes
+    4762.1.1 = {
+        birth = yes
+    }
+}
+300006 = {
+    name = "Iocilin"
+    dynasty =  14 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  11 
+    martial =  6 
+    stewardship =  8 
+    intrigue =  5 
+    learning =  1 
+    prowess =  2 
+
+    trait = education_martial_4
+    trait = diligent
+    trait = calm
+    trait = arrogant
+    trait = partholonian
+
+    father=  301001 
+
+    disallow_random_traits = yes
+    4746.1.1 = {
+        birth = yes
+    }
+}
+301000 = {
+    name = "Piran"
+    dynasty =  14 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  12 
+    prowess =  6 
+
+    trait = education_diplomacy_3
+    trait = chaste
+    trait = impatient
+    trait = diligent
+    trait = partholonian
+
+    father=  301001 
+
+    disallow_random_traits = yes
+    4739.1.1 = {
+        birth = yes
+    }
+    4784.1.1 = {
+        death = yes
+    }
+}
+301001 = {
+    name = "Urbcen"
+    dynasty =  14 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  5 
+    martial =  3 
+    stewardship =  11 
+    intrigue =  2 
+    learning =  5 
+    prowess =  7 
+
+    trait = education_intrigue_2
+    trait = arrogant
+    trait = stubborn
+    trait = lazy
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4720.1.1 = {
+        birth = yes
+    }
+    4737.1.1 = {
+        death = yes
+    }
+}
+305000 = {
+    name = "Partholón "
+    dynasty =  10 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  12 
+    martial =  6 
+    stewardship =  1 
+    intrigue =  11 
+    learning =  2 
+    prowess =  3 
+
+    trait = education_intrigue_2
+    trait = gluttonous
+    trait = callous
+    trait = diligent
+    trait = partholonian
+
+    mother=  300000 
+
+    disallow_random_traits = yes
+    4772.1.1 = {
+        birth = yes
+    }
+}
+305001 = {
+    name = "Guoedatoe"
+    dynasty =  10 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  10 
+    martial =  5 
+    stewardship =  10 
+    intrigue =  7 
+    learning =  6 
+    prowess =  1 
+
+    trait = education_stewardship_3
+    trait = forgiving
+    trait = shy
+    trait = cynical
+    trait = partholonian
+
+    mother=  300000 
+
+    disallow_random_traits = yes
+    4787.1.1 = {
+        birth = yes
+    }
+}
+305002 = {
+    name = "Maelcon"
+    dynasty =  12 
+    religion = sons_of_the_ocean
+    culture = first_landers
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  4 
+    intrigue =  1 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_diplomacy_4
+    trait = forgiving
+    trait = generous
+    trait = arrogant
+    trait = partholonian
+
+    mother=  300002 
+
+    disallow_random_traits = yes
+    4781.1.1 = {
+        birth = yes
+    }
+}
+305003 = {
+    name = "Artaca"
+    dynasty =  12 
+    religion = sons_of_the_ocean
+    culture = first_landers
+    female = yes
+
+    diplomacy =  11 
+    martial =  12 
+    stewardship =  7 
+    intrigue =  11 
+    learning =  7 
+    prowess =  5 
+
+    trait = education_martial_2
+    trait = temperate
+    trait = paranoid
+    trait = callous
+    trait = partholonian
+
+    mother=  300002 
+
+    disallow_random_traits = yes
+    4773.1.1 = {
+        birth = yes
+    }
+}

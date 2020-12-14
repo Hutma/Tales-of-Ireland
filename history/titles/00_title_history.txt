@@ -427,11 +427,18 @@ c_carrignavar = {
               }
 }
 
+#Duhallow
+d_duhallow = {
+              4799.1.1 = {
+                            holder = 300002
+              }
+}
+
 #Banteer
 c_banteer = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300002
               }
 }
 
@@ -439,7 +446,7 @@ c_banteer = {
 c_kanturck = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300002
               }
 }
 
@@ -447,7 +454,8 @@ c_kanturck = {
 c_dromahane = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_duhallow
+                            holder = 300003
               }
 }
 
@@ -455,7 +463,8 @@ c_dromahane = {
 c_ardnageeha = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_duhallow
+                            holder = 300003
               }
 }
 
@@ -463,7 +472,8 @@ c_ardnageeha = {
 c_kilbrin = {
               1.1.1 = { change_development_level = 16 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_duhallow
+                            holder = 300003
               }
 }
 
@@ -1045,11 +1055,18 @@ c_currow = {
               }
 }
 
+#Corkaguiny
+d_corkaguiny = {
+              4799.1.1 = {
+                            holder = 300000
+              }
+}
+
 #Dingle
 c_dingle = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300000
               }
 }
 
@@ -1057,7 +1074,7 @@ c_dingle = {
 c_brandon = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300000
               }
 }
 
@@ -1065,7 +1082,7 @@ c_brandon = {
 c_annascaul = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300000
               }
 }
 
@@ -1073,7 +1090,8 @@ c_annascaul = {
 c_coumeenoole = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_corkaguiny
+                            holder = 300001
               }
 }
 
@@ -1081,7 +1099,7 @@ c_coumeenoole = {
 c_tralee = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300006
               }
 }
 
@@ -1089,7 +1107,8 @@ c_tralee = {
 c_castlemaine = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_corkaguiny
+                            holder = 300001
               }
 }
 
@@ -1113,7 +1132,7 @@ c_listellick = {
 c_edenburn = {
               1.1.1 = { change_development_level = 16 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300006
               }
 }
 
@@ -1129,7 +1148,7 @@ c_kielbawn = {
 c_castleisland = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300006
               }
 }
 
@@ -1257,7 +1276,7 @@ c_ballyhahill = {
 c_newcastlewest = {
               1.1.1 = { change_development_level = 18 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300004
               }
 }
 
@@ -1265,7 +1284,7 @@ c_newcastlewest = {
 c_templeglantine = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300004
               }
 }
 
@@ -1273,7 +1292,7 @@ c_templeglantine = {
 c_ballyallinan = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300005
               }
 }
 
@@ -1281,7 +1300,7 @@ c_ballyallinan = {
 c_kilmeedy = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 300005
               }
 }
 

@@ -19,7 +19,7 @@
 
     father=  201000 
 
-    disallow_random_traits =  3 
+    disallow_random_traits = yes
     4779.1.1 = {
         birth = yes
         add_pressed_claim = d_killarney
@@ -47,7 +47,7 @@
 
     father=  201000 
 
-    disallow_random_traits =  10 
+    disallow_random_traits =  yes 
     4764.1.1 = {
         birth = yes
         add_pressed_claim = d_dunkerron
@@ -73,7 +73,7 @@
     trait = compassionate
     trait = milesian
 
-    disallow_random_traits =  5 
+    disallow_random_traits =  yes 
     4743.1.1 = {
         birth = yes
     }
@@ -100,7 +100,7 @@
     trait = ambitious
     trait = milesian
 
-    disallow_random_traits =  10 
+    disallow_random_traits =  yes 
     4757.1.1 = {
         birth = yes
     }
@@ -124,7 +124,7 @@
     trait = generous
     trait = milesian
 
-    disallow_random_traits =  7 
+    disallow_random_traits = yes 
     4763.1.1 = {
         birth = yes
     }
@@ -150,7 +150,7 @@
 
     father=  200001 
 
-    disallow_random_traits =  1 
+    disallow_random_traits = yes
     4782.1.1 = {
         birth = yes
     }
@@ -176,7 +176,7 @@
 
     father=  200001 
 
-    disallow_random_traits =  1 
+    disallow_random_traits = yes
     4783.1.1 = {
         birth = yes
     }
@@ -202,7 +202,7 @@
 
     father=  200003 
 
-    disallow_random_traits =  3 
+    disallow_random_traits = yes
     4783.1.1 = {
         birth = yes
     }
