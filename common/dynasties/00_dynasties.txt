@@ -72,3 +72,29 @@
 	name = "Mac Rudraige"
 	culture = "first_landers"
 }
+
+#SEA FOMORIANS#
+15 = {
+	name = "Mac Deled"
+	culture = "sea_fomorians"
+}
+
+16 = {
+	name = "Mac Febair"
+	culture = "sea_fomorians"
+}
+
+17 = {
+	name = "Gricenchos"
+	culture = "sea_fomorians"
+}
+
+18 = {
+	name = "Mac Inshted"
+	culture = "sea_fomorians"
+}
+
+19 = {
+	name = "Béimnech"
+	culture = "sea_fomorians"
+}
