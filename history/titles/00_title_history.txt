@@ -1192,11 +1192,18 @@ c_knockadireen = {
               }
 }
 
+#Iraghticonnor
+d_iraghticonnor = {
+              4799.1.1 = {
+                            holder = 500001
+              }
+}
+
 #Listowel
 c_listowel = {
               1.1.1 = { change_development_level = 3 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500001
               }
 }
 
@@ -1204,7 +1211,7 @@ c_listowel = {
 c_ballybunion = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500001
               }
 }
 
@@ -1212,7 +1219,7 @@ c_ballybunion = {
 c_tarbert = {
               1.1.1 = { change_development_level = 24 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500001
               }
 }
 
@@ -1220,7 +1227,7 @@ c_tarbert = {
 c_muher = {
               1.1.1 = { change_development_level = 4 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500001
               }
 }
 
@@ -1551,6 +1558,13 @@ c_croughmakeen = {
               }
 }
 
+#Clare
+k_clare = {
+              4799.1.1 = {
+                            holder = 500000
+              }
+}
+
 #Tulla
 c_tulla = {
               1.1.1 = { change_development_level = 5 }
@@ -1638,11 +1652,19 @@ c_crusheen = {
               }
 }
 
+#Islands
+d_islands = {
+              4799.1.1 = {
+                            liege = k_clare
+                            holder = 500003
+              }
+}
+
 #Ennis
 c_ennis = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500003
               }
 }
 
@@ -1650,7 +1672,7 @@ c_ennis = {
 c_ballymongaun = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500003
               }
 }
 
@@ -1658,7 +1680,15 @@ c_ballymongaun = {
 c_slaveen = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500003
+              }
+}
+
+#Inchiquin
+d_inchiquin = {
+              4799.1.1 = {
+                            liege = k_clare
+                            holder = 500002
               }
 }
 
@@ -1666,7 +1696,7 @@ c_slaveen = {
 c_corofin = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500002
               }
 }
 
@@ -1674,7 +1704,7 @@ c_corofin = {
 c_derula = {
               1.1.1 = { change_development_level = 16 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500002
               }
 }
 
@@ -1682,7 +1712,7 @@ c_derula = {
 c_kilkeedy = {
               1.1.1 = { change_development_level = 23 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500002
               }
 }
 
@@ -1718,11 +1748,18 @@ c_kilmoon = {
               }
 }
 
+#Moyarta
+d_moyarta = {
+              4799.1.1 = {
+                            holder = 500000
+              }
+}
+
 #Kilrush
 c_kilrush = {
               1.1.1 = { change_development_level = 23 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1730,7 +1767,7 @@ c_kilrush = {
 c_percyfrench = {
               1.1.1 = { change_development_level = 22 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1738,7 +1775,7 @@ c_percyfrench = {
 c_carrigaholt = {
               1.1.1 = { change_development_level = 24 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1746,7 +1783,15 @@ c_carrigaholt = {
 c_cooraclare = {
               1.1.1 = { change_development_level = 16 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
+              }
+}
+
+#Clonderalaw
+d_clonderalaw = {
+              4799.1.1 = {
+                            liege = k_clare
+                            holder = 500004
               }
 }
 
@@ -1754,7 +1799,7 @@ c_cooraclare = {
 c_labasheeda = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500004
               }
 }
 
@@ -1762,7 +1807,7 @@ c_labasheeda = {
 c_ballynacally = {
               1.1.1 = { change_development_level = 2 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500004
               }
 }
 
@@ -1770,7 +1815,7 @@ c_ballynacally = {
 c_knock = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500004
               }
 }
 
@@ -1778,7 +1823,14 @@ c_knock = {
 c_frure = {
               1.1.1 = { change_development_level = 18 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500004
+              }
+}
+
+#Ibrickan
+d_ibrickan = {
+              4799.1.1 = {
+                            holder = 500000
               }
 }
 
@@ -1786,7 +1838,7 @@ c_frure = {
 c_quilty = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1794,7 +1846,7 @@ c_quilty = {
 c_miltownmalbay = {
               1.1.1 = { change_development_level = 18 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1802,7 +1854,7 @@ c_miltownmalbay = {
 c_shyan = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 
@@ -1810,7 +1862,7 @@ c_shyan = {
 c_doonbeg = {
               1.1.1 = { change_development_level = 18 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 500000
               }
 }
 

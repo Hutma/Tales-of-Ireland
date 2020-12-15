@@ -98,3 +98,29 @@
 	name = "Béimnech"
 	culture = "sea_fomorians"
 }
+
+#FIR DOMNANN#
+20 = {
+	name = "Mac Nikolaos"
+	culture = "fir_domnann"
+}
+
+21 = {
+	name = "Sons of Clare"
+	culture = "fir_domnann"
+}
+
+22 = {
+	name = "Mac Ruaric"
+	culture = "fir_domnann"
+}
+
+23 = {
+	name = "Mac Flannac"
+	culture = "fir_domnann"
+}
+
+24 = {
+	name = "Dalach"
+	culture = "fir_domnann"
+}
