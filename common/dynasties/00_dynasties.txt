@@ -122,5 +122,61 @@
 
 24 = {
 	name = "Dalach"
-	culture = "fir_domnann"
+	culture = "corca_loigde"
+}
+
+#HUMANS OF CORK#
+25 = {
+	name = "Mac Cárthaigh"
+	culture = "corca_loigde"
+}
+
+26 = {
+	name = "Mac Airt"
+	culture = "corca_loigde"
+}
+
+27 = {
+	name = "O'Donovan"
+	culture = "sogain"
+}
+
+28 = {
+	name = "O'Riordan"
+	culture = "corca_loigde"
+}
+
+29 = {
+	name = "Cóem"
+	culture = "corca_loigde"
+}
+
+30 = {
+	name = "Mór"
+	culture = "corca_loigde"
+}
+
+31 = {
+	name = "Mac Con"
+	culture = "sogain"
+}
+
+32 = {
+	name = "Dubdétach"
+	culture = "corca_loigde"
+}
+
+33 = {
+	name = "Gonnat"
+	culture = "corca_loigde"
+}
+
+34 = {
+	name = "Lifechair"
+	culture = "corca_loigde"
+}
+
+35 = {
+	name = "Sroiptine"
+	culture = "corca_loigde"
 }
