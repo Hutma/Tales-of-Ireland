@@ -99,6 +99,16 @@
 	culture = "sea_fomorians"
 }
 
+41 = {
+	name = "Azegid"
+	culture = "sea_fomorians"
+}
+
+42 = {
+	name = "Moshegid"
+	culture = "sea_fomorians"
+}
+
 #FIR DOMNANN#
 20 = {
 	name = "Mac Nikolaos"
@@ -179,4 +189,66 @@
 35 = {
 	name = "Sroiptine"
 	culture = "corca_loigde"
+}
+
+#UNDERGROUND FOMORIANS#
+36 = {
+	name = "Breathnach"
+	culture = "underground_fomorians"
+}
+
+37 = {
+	name = "Mac Tomáis"
+	culture = "underground_fomorians"
+}
+
+38 = {
+	name = "Ó Mordha"
+	culture = "underground_fomorians"
+}
+
+39 = {
+	name = "Syktyvkar"
+	culture = "underground_fomorians"
+}
+
+40 = {
+	name = "Mac an Bhaird"
+	culture = "underground_fomorians"
+}
+
+#EBER MILESIANS#
+43 = {
+	name = "Eber Finn"
+	culture = "eber_milesians"
+}
+
+44 = {
+	name = "Féne"
+	culture = "eber_milesians"
+}
+
+45 = {
+	name = "Farsaidh"
+	culture = "eber_milesians"
+}
+
+46 = {
+	name = "Mac Scotia"
+	culture = "eber_milesians"
+}
+
+47 = {
+	name = "Chruiteir"
+	culture = "eber_milesians"
+}
+
+48 = {
+	name = " Ó Laighin"
+	culture = "eber_milesians"
+}
+
+49 = {
+	name = "Mac Cionaoith"
+	culture = "eber_milesians"
 }
