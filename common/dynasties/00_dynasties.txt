@@ -73,6 +73,16 @@
 	culture = "first_landers"
 }
 
+58 = {
+	name = "Partholon Heirs"
+	culture = "the_plagued"
+}
+
+59 = {
+	name = "Dynan"
+	culture = "the_plagued"
+}
+
 #SEA FOMORIANS#
 15 = {
 	name = "Mac Deled"
@@ -106,6 +116,46 @@
 
 42 = {
 	name = "Moshegid"
+	culture = "sea_fomorians"
+}
+
+50 = {
+	name = "Moshegid"
+	culture = "sea_fomorians"
+}
+
+51 = {
+	name = "Ó Dubhuir"
+	culture = "sea_fomorians"
+}
+
+52 = {
+	name = "Ó Buachalla"
+	culture = "sea_fomorians"
+}
+
+53 = {
+	name = "Mac Árdghail"
+	culture = "sea_fomorians"
+}
+
+54 = {
+	name = "Mac Bradaigh"
+	culture = "sea_fomorians"
+}
+
+55 = {
+	name = "Mac Cába"
+	culture = "sea_fomorians"
+}
+
+56 = {
+	name = "Ó Cathaláin"
+	culture = "sea_fomorians"
+}
+
+57 = {
+	name = "Mac Cathmhaoil"
 	culture = "sea_fomorians"
 }
 
