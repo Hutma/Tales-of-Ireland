@@ -1,0 +1,825 @@
+260000 = {
+    name = "Lóegaire "
+    dynasty =  70 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  5 
+    martial =  10 
+    stewardship =  3 
+    intrigue =  6 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = milesian
+
+    father=  261000 
+
+    disallow_random_traits = yes
+    4751.1.1 = {
+        birth = yes
+    }
+}
+260001 = {
+    name = "Cobthach "
+    dynasty =  71 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  12 
+    learning =  5 
+    prowess =  4 
+
+    trait = education_intrigue_3
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    father=  261000 
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+260002 = {
+    name = "Ailill "
+    dynasty =  70 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  2 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_diplomacy_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = milesian
+
+    father=  260000 
+
+    disallow_random_traits = yes
+    4767.1.1 = {
+        birth = yes
+    }
+}
+260003 = {
+    name = "Labraid"
+    dynasty =  70 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  6 
+    martial =  8 
+    stewardship =  8 
+    intrigue =  8 
+    learning =  10 
+    prowess =  9 
+
+    trait = education_martial_3
+    trait = diligent
+    trait = patient
+    trait = vengeful
+    trait = milesian
+
+    father=  260002 
+
+    disallow_random_traits = yes
+    4783.1.1 = {
+        birth = yes
+    }
+}
+260004 = {
+    name = "Mug "
+    dynasty =  60 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+260005 = {
+    name = "Cobthach "
+    dynasty =  61 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = milesian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+260006 = {
+    name = "Irereo"
+    dynasty =  62 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = milesian
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+260007 = {
+    name = "Óengus"
+    dynasty =  63 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = milesian
+
+    disallow_random_traits = yes
+    4761.1.1 = {
+        birth = yes
+    }
+}
+260008 = {
+    name = "Fer "
+    dynasty =  63 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = milesian
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+260009 = {
+    name = "Connla "
+    dynasty =  64 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = milesian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+260010 = {
+    name = "Ailill "
+    dynasty =  64 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = milesian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+260011 = {
+    name = "Adamair"
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = milesian
+
+    father=  261001 
+
+    disallow_random_traits = yes
+    4759.1.1 = {
+        birth = yes
+    }
+}
+260012 = {
+    name = "Eochaid "
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = milesian
+
+    father=  261001 
+
+    disallow_random_traits = yes
+    4758.1.1 = {
+        birth = yes
+    }
+}
+261000 = {
+    name = "Fergus "
+    dynasty =  70 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = milesian
+
+    disallow_random_traits = yes
+    4731.1.1 = {
+        birth = yes
+    }
+    4791.1.1 = {
+        death = yes
+    }
+}
+261001 = {
+    name = "Nia "
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+
+    trait = education_intrigue_4
+    trait = calm
+    trait = arrogant
+    trait = vengeful
+    trait = milesian
+
+    disallow_random_traits = yes
+    4740.1.1 = {
+        birth = yes
+    }
+    4795.1.1 = {
+        death = yes
+    }
+}
+265000 = {
+    name = "Meilge "
+    dynasty =  59 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  7 
+    martial =  5 
+    stewardship =  11 
+    intrigue =  10 
+    learning =  12 
+    prowess =  8 
+
+    trait = education_intrigue_3
+    trait = chaste
+    trait = brave
+    trait = stubborn
+    trait = milesian
+
+    father=  260001 
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+265001 = {
+    name = "Énna "
+    dynasty =  61 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  6 
+    martial =  7 
+    stewardship =  10 
+    intrigue =  7 
+    learning =  6 
+    prowess =  6 
+
+    trait = education_intrigue_2
+    trait = stubborn
+    trait = gregarious
+    trait = generous
+    trait = milesian
+
+    father=  260005 
+
+    disallow_random_traits = yes
+    4783.1.1 = {
+        birth = yes
+    }
+}
+265002 = {
+    name = "Crimthann"
+    dynasty =  62 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  4 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  7 
+    learning =  3 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = arrogant
+    trait = gregarious
+    trait = arbitrary
+    trait = milesian
+
+    father=  260006 
+
+    disallow_random_traits = yes
+    4783.1.1 = {
+        birth = yes
+    }
+}
+265003 = {
+    name = "Rudraige "
+    dynasty =  63 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  8 
+    martial =  10 
+    stewardship =  2 
+    intrigue =  10 
+    learning =  3 
+    prowess =  10 
+    trait = paranoid
+    trait = milesian
+
+    father=  260008 
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+265004 = {
+    name = "Tomaltach"
+    dynasty =  64 
+    religion = milesian_paganism
+    culture = eremon_milesians
+    female = yes
+
+    diplomacy =  2 
+    martial =  3 
+    stewardship =  1 
+    intrigue =  9 
+    learning =  7 
+    prowess =  6 
+
+    trait = education_stewardship_2
+    trait = calm
+    trait = temperate
+    trait = forgiving
+    trait = milesian
+
+    father=  260009 
+
+    disallow_random_traits = yes
+    4784.1.1 = {
+        birth = yes
+    }
+}
+265005 = {
+    name = "Finnat "
+    dynasty =  64 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  2 
+    martial =  8 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  6 
+    prowess =  5 
+    trait = greedy
+    trait = milesian
+
+    father=  260010 
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+265006 = {
+    name = "Bresal "
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  6 
+    intrigue =  12 
+    learning =  2 
+    prowess =  7 
+
+    trait = education_stewardship_1 
+    trait = callous
+    trait = gluttonous
+    trait = arbitrary
+    trait = milesian
+
+    father=  260011 
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+    }
+}
+265007 = {
+    name = "Lugaid "
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  6 
+    martial =  12 
+    stewardship =  3 
+    intrigue =  5 
+    learning =  5 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = wrathful
+    trait = content
+    trait = generous
+    trait = milesian
+
+    father=  260011 
+
+    disallow_random_traits = yes
+    4780.1.1 = {
+        birth = yes
+    }
+}
+265008 = {
+    name = "Congal "
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy =  8 
+    martial =  6 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  10 
+    prowess =  8 
+    trait = chaste
+    trait = shy
+    trait = milesian
+
+    father=  260012 
+
+    disallow_random_traits = yes
+    4785.1.1 = {
+        birth = yes
+    }
+}
+265009 = {
+    name = "Trenchad"
+    dynasty =  65 
+    religion = milesian_paganism
+    culture = eremon_milesians
+    female = yes
+
+    diplomacy =  7 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  4 
+    learning =  12 
+    prowess =  9 
+    trait = lustful
+    trait = milesian
+
+    father=  260012 
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+280000 = {
+    name = "Conall "
+    dynasty =  66 
+    religion = milesian_paganism
+    culture = ir_milesians
+
+    diplomacy =  9 
+    martial =  5 
+    stewardship =  1 
+    intrigue =  3 
+    learning =  2 
+    prowess =  6 
+
+    trait = education_learning_4
+    trait = zealous
+    trait = chaste
+    trait = generous
+    trait = milesian
+
+    disallow_random_traits = yes
+    4762.1.1 = {
+        birth = yes
+    }
+}
+280001 = {
+    name = "Eochu "
+    dynasty =  67 
+    religion = milesian_paganism
+    culture = ir_milesians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  5 
+    intrigue =  4 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_1
+    trait = wrathful
+    trait = lazy
+    trait = arrogant
+    trait = milesian
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+280002 = {
+    name = "Nuadu "
+    dynasty =  68 
+    religion = milesian_paganism
+    culture = ir_milesians
+
+    diplomacy =  11 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  7 
+    learning =  4 
+    prowess =  9 
+
+    trait = education_martial_4
+    trait = diligent
+    trait = paranoid
+    trait = humble
+    trait = milesian
+
+    disallow_random_traits = yes
+    4756.1.1 = {
+        birth = yes
+    }
+}
+280003 = {
+    name = "Conaire "
+    dynasty =  69 
+    religion = milesian_paganism
+    culture = ir_milesians
+
+    diplomacy =  11 
+    martial =  4 
+    stewardship =  9 
+    intrigue =  5 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_diplomacy_1
+    trait = diligent
+    trait = content
+    trait = stubborn
+    trait = milesian
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+280004 = {
+    name = "Conchobar "
+    dynasty =  66 
+    religion = milesian_paganism
+    culture = ir_milesians
+
+    diplomacy =  10 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  12 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_intrigue_3
+    trait = calm
+    trait = vengeful
+    trait = stubborn
+    trait = milesian
+
+    disallow_random_traits = yes
+    4750.1.1 = {
+        birth = yes
+    }
+}
+280005 = {
+    name = "Cairbre "
+    dynasty =  69 
+    religion = celtic_de_danann_worship
+    culture = ir_milesians
+
+    diplomacy =  11 
+    martial =  1 
+    stewardship =  6 
+    intrigue =  10 
+    learning =  3 
+    prowess =  4 
+
+    trait = education_stewardship_4
+    trait = callous
+    trait = arrogant
+    trait = zealous
+    trait = milesian
+
+    father=  281000 
+
+    disallow_random_traits = yes
+    4770.1.1 = {
+        birth = yes
+    }
+}
+280006 = {
+    name = "Leodegundis"
+    dynasty =  69 
+    religion = celtic_de_danann_worship
+    culture = ir_milesians
+    female = yes
+
+    diplomacy =  11 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  11 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_martial_1 
+    trait = shy
+    trait = lazy
+    trait = deceitful
+    trait = milesian
+
+    father=  281000 
+
+    disallow_random_traits = yes
+    4772.1.1 = {
+        birth = yes
+    }
+}
+281000 = {
+    name = "Mug "
+    dynasty =  69 
+    religion = celtic_de_danann_worship
+    culture = ir_milesians
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  2 
+    prowess =  3 
+
+    trait = education_martial_4
+    trait = greedy
+    trait = trusting
+    trait = temperate
+    trait = milesian
+
+    disallow_random_traits = yes
+    4751.1.1 = {
+        birth = yes
+    }
+    4789.1.1 = {
+        death = yes
+    }
+}

@@ -267,7 +267,7 @@
 	culture = "underground_fomorians"
 }
 
-#EBER MILESIANS#
+#MILESIANS#
 43 = {
 	name = "Eber Finn"
 	culture = "eber_milesians"
@@ -301,4 +301,64 @@
 49 = {
 	name = "Mac Cionaoith"
 	culture = "eber_milesians"
+}
+
+70 = {
+	name = "Lorc"
+	culture = "eremon_milesians"
+}
+
+71 = {
+	name = "Cóel Breg"
+	culture = "eremon_milesians"
+}
+
+60 = {
+	name = "Ollom"
+	culture = "eremon_milesians"
+}
+
+61 = {
+	name = "Cruaidchelgach "
+	culture = "eremon_milesians"
+}
+
+62 = {
+	name = "Caisfiaclach"
+	culture = "eremon_milesians"
+}
+
+63 = {
+	name = "Ailtlethan"
+	culture = "eremon_milesians"
+}
+
+64 = {
+	name = "Fortamail"
+	culture = "eremon_milesians"
+}
+
+65 = {
+	name = "Tuirmech"
+	culture = "eremon_milesians"
+}
+
+66 = {
+	name = "Dedad"
+	culture = "ir_milesians"
+}
+
+67 = {
+	name = "Fáthach"
+	culture = "ir_milesians"
+}
+
+68 = {
+	name = "Feidlech"
+	culture = "ir_milesians"
+}
+
+69 = {
+	name = "Airem"
+	culture = "ir_milesians"
 }
