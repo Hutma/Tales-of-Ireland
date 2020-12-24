@@ -1,0 +1,381 @@
+250000 = {
+    name = "Ér"
+    dynasty =  43 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  10 
+    martial =  12 
+    stewardship =  10 
+    intrigue =  10 
+    learning =  10 
+    prowess =  10 
+
+    trait = education_martial_3
+    trait = just
+    trait = honest
+    trait = diligent
+    trait = milesian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+250001 = {
+    name = "Fergna"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+    female = yes
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    father=  251000 
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+250002 = {
+    name = "Ferón "
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = milesian
+
+    father=  251000 
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+250003 = {
+    name = "Fénius "
+    dynasty =  45 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = milesian
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+250004 = {
+    name = "Nél"
+    dynasty =  46 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = milesian
+
+    father=  251001 
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+250005 = {
+    name = "Bérla "
+    dynasty =  47 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = milesian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+250006 = {
+    name = "Columb"
+    dynasty =  46 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  9 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = milesian
+
+    father=  251001 
+
+    disallow_random_traits = yes
+    4770.1.1 = {
+        birth = yes
+    }
+}
+250007 = {
+    name = "Fubthad"
+    dynasty =  48 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = milesian
+
+    disallow_random_traits = yes
+    4761.1.1 = {
+        birth = yes
+    }
+}
+250008 = {
+    name = "Eithne"
+    dynasty =  49 
+    religion = milesian_paganism
+    culture = eber_milesians
+    female = yes
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = milesian
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+251000 = {
+    name = "Eochaid"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = milesian
+
+    disallow_random_traits = yes
+    4739.1.1 = {
+        birth = yes
+    }
+    4792.1.1 = {
+        death = yes
+    }
+}
+251001 = {
+    name = "Snedgus"
+    dynasty =  46 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  9 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = milesian
+
+    disallow_random_traits = yes
+    4738.1.1 = {
+        birth = yes
+    }
+    4780.1.1 = {
+        death = yes
+    }
+}
+255000 = {
+    name = "Rechtabra"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = milesian
+
+    father=  250001 
+
+    disallow_random_traits = yes
+    4780.1.1 = {
+        birth = yes
+    }
+}
+255001 = {
+    name = "Glaschu"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = milesian
+
+    father=  250001 
+
+    disallow_random_traits = yes
+    4784.1.1 = {
+        birth = yes
+    }
+}
+255002 = {
+    name = "Fearchar"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = milesian
+
+    father=  250002 
+
+    disallow_random_traits = yes
+    4783.1.1 = {
+        birth = yes
+    }
+}
+255003 = {
+    name = "Aaron"
+    dynasty =  44 
+    religion = milesian_paganism
+    culture = eber_milesians
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+    trait = calm
+    trait = arrogant
+    trait = milesian
+
+    father=  250002 
+
+    disallow_random_traits = yes
+    4786.1.1 = {
+        birth = yes
+    }
+}

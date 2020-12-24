@@ -332,3 +332,99 @@
         birth = yes
     }
 }
+350000 = {
+    name = "Partholón "
+    dynasty =  58 
+    religion = sons_of_the_ocean
+    culture = the_plagued
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+350001 = {
+    name = "Petroc"
+    dynasty =  58 
+    religion = sons_of_the_ocean
+    culture = the_plagued
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+350002 = {
+    name = "Maelcon"
+    dynasty =  58 
+    religion = sons_of_the_ocean
+    culture = the_plagued
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_3
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+    }
+}
+350003 = {
+    name = "Sulmonoc"
+    dynasty =  59 
+    religion = sons_of_the_ocean
+    culture = the_plagued
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4778.1.1 = {
+        birth = yes
+    }
+}

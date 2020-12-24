@@ -1,0 +1,476 @@
+450000 = {
+    name = "Cethlenn"
+    dynasty =  36 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fomorian
+
+    father=  451001 
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+450001 = {
+    name = "Avya"
+    dynasty =  36 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = fomorian
+
+    father=  451001 
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+    }
+}
+450002 = {
+    name = "Loscenn"
+    dynasty =  36 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+    trait = fickle
+    trait = arrogant
+    trait = fomorian
+
+    father=  451001 
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+450003 = {
+    name = "Goll"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = fomorian
+
+    father=  451002 
+
+    disallow_random_traits = yes
+    4752.1.1 = {
+        birth = yes
+    }
+}
+450004 = {
+    name = "Kichay"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = fomorian
+
+    father=  451002 
+
+    disallow_random_traits = yes
+    4759.1.1 = {
+        birth = yes
+    }
+}
+450005 = {
+    name = "Kezhevat"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = fomorian
+
+    father=  451003 
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+450006 = {
+    name = "Tyutyuk"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = fomorian
+
+    father=  451003 
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+450007 = {
+    name = "Irter"
+    dynasty =  38 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = fomorian
+
+    father=  451005 
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+450008 = {
+    name = "Irgoll"
+    dynasty =  38 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = fomorian
+
+    father=  451005 
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+450009 = {
+    name = "Omna "
+    dynasty =  39 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+450010 = {
+    name = "Bagna"
+    dynasty =  40 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = fomorian
+
+    father=  451006 
+
+    disallow_random_traits = yes
+    4745.1.1 = {
+        birth = yes
+    }
+}
+450011 = {
+    name = "Arnaz"
+    dynasty =  40 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = fomorian
+
+    father=  451006 
+
+    disallow_random_traits = yes
+    4749.1.1 = {
+        birth = yes
+    }
+}
+451001 = {
+    name = "Lysko"
+    dynasty =  36 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+    4792.1.1 = {
+        death = yes
+    }
+}
+451002 = {
+    name = "Turush"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = fomorian
+
+    father=  451004 
+
+    disallow_random_traits = yes
+    4735.1.1 = {
+        birth = yes
+    }
+    4785.1.1 = {
+        death = yes
+    }
+}
+451003 = {
+    name = "Pokshayka"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+
+    trait = education_intrigue_2
+    trait = calm
+    trait = arrogant
+    trait = vengeful
+    trait = fomorian
+
+    father=  451004 
+
+    disallow_random_traits = yes
+    4738.1.1 = {
+        birth = yes
+    }
+    4770.1.1 = {
+        death = yes
+    }
+}
+451004 = {
+    name = "Vokan"
+    dynasty =  37 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  7 
+    martial =  5 
+    stewardship =  11 
+    intrigue =  10 
+    learning =  9 
+    prowess =  8 
+
+    trait = education_diplomacy_1
+    trait = chaste
+    trait = brave
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4712.1.1 = {
+        birth = yes
+    }
+    4768.1.1 = {
+        death = yes
+    }
+}
+451005 = {
+    name = "Vokan"
+    dynasty =  38 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  6 
+    martial =  7 
+    stewardship =  10 
+    intrigue =  7 
+    learning =  6 
+    prowess =  6 
+
+    trait = education_intrigue_2
+    trait = stubborn
+    trait = gregarious
+    trait = generous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4742.1.1 = {
+        birth = yes
+    }
+    4795.1.1 = {
+        death = yes
+    }
+}
+451006 = {
+    name = "Varaka"
+    dynasty =  40 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  7 
+    learning =  3 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = arrogant
+    trait = gregarious
+    trait = arbitrary
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4720.1.1 = {
+        birth = yes
+    }
+    4781.1.1 = {
+        death = yes
+    }
+}

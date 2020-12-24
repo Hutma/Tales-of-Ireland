@@ -1,0 +1,377 @@
+500000 = {
+    name = "Cellach"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fir_bolg
+
+    father=  501000 
+
+    disallow_random_traits = yes
+    4740.1.1 = {
+        birth = yes
+    }
+}
+500001 = {
+    name = "Sogan"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = fir_bolg
+
+    father=  501000 
+
+    disallow_random_traits = yes
+    4755.1.1 = {
+        birth = yes
+        add_pressed_claim = k_clare
+    }
+}
+500002 = {
+    name = "Dubhghall"
+    dynasty =  21 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+    trait = fickle
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+500003 = {
+    name = "Derborgaill"
+    dynasty =  22 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+    female = yes
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+500004 = {
+    name = "Flann"
+    dynasty =  23 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+500005 = {
+    name = "Trenchad"
+    dynasty =  24 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+505000 = {
+    name = "Nikolaos"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = fir_bolg
+
+    father=  500000 
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+505001 = {
+    name = "Fursu"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = fir_bolg
+
+    father=  500000 
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+505002 = {
+    name = "Pilib"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  2 
+    martial =  15 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  8 
+
+    trait = education_martial_3
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = fir_bolg
+
+    father=  500000 
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+    }
+}
+505003 = {
+    name = "Anastasios"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = fir_bolg
+
+    father=  500001 
+
+    disallow_random_traits = yes
+    4773.1.1 = {
+        birth = yes
+    }
+}
+501000 = {
+    name = "Theodotos"
+    dynasty =  20 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4724.1.1 = {
+        birth = yes
+    }
+    4769.1.1 = {
+        death = yes
+    }
+}
+505004 = {
+    name = "Constans"
+    dynasty =  22 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = fir_bolg
+
+    mother=  500003 
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+505005 = {
+    name = "Thekla"
+    dynasty =  22 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+    female = yes
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+
+    trait = education_diplomacy_2
+    trait = calm
+    trait = arrogant
+    trait = vengeful
+    trait = fir_bolg
+
+    mother=  500003 
+
+    disallow_random_traits = yes
+    4769.1.1 = {
+        birth = yes
+    }
+}
+505006 = {
+    name = "Lachtnae"
+    dynasty =  23 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+
+    diplomacy =  7 
+    martial =  5 
+    stewardship =  11 
+    intrigue =  10 
+    learning =  9 
+    prowess =  8 
+    trait = chaste
+    trait = fir_bolg
+
+    father=  500004 
+    4792.1.1 = {
+        birth = yes
+    }
+}
+505007 = {
+    name = "Markia"
+    dynasty =  24 
+    religion = ancient_greek_slave
+    culture = fir_domnann
+    female = yes
+
+    diplomacy =  6 
+    martial =  7 
+    stewardship =  10 
+    intrigue =  7 
+    learning =  6 
+    prowess =  6 
+
+    trait = education_intrigue_2
+    trait = stubborn
+    trait = gregarious
+    trait = generous
+    trait = fir_bolg
+
+    father=  500005 
+
+    disallow_random_traits = yes
+    4777.1.1 = {
+        birth = yes
+    }
+}

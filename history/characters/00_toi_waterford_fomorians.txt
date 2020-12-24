@@ -1,0 +1,144 @@
+450012 = {
+    name = "Cethlenn"
+    dynasty =  39 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+450013 = {
+    name = "Virdyan"
+    dynasty =  40 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+400008 = {
+    name = "Odeg"
+    dynasty =  41 
+    religion = dark_gods
+    culture = sea_fomorians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_learning_2
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+400009 = {
+    name = "Morc"
+    dynasty =  17 
+    religion = dark_gods
+    culture = sea_fomorians
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+400010 = {
+    name = "Uchva"
+    dynasty =  19 
+    religion = dark_gods
+    culture = sea_fomorians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+400011 = {
+    name = "Velmayka"
+    dynasty =  42 
+    religion = dark_gods
+    culture = sea_fomorians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
