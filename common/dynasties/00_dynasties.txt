@@ -159,7 +159,7 @@
 	culture = "sea_fomorians"
 }
 
-#FIR DOMNANN#
+#FIR BOLGS#
 20 = {
 	name = "Mac Nikolaos"
 	culture = "fir_domnann"
@@ -182,9 +182,59 @@
 
 24 = {
 	name = "Dalach"
-	culture = "corca_loigde"
+	culture = "fir_domnann"
 }
 
+
+72 = {
+	name = "Mac Dela"
+	culture = "fir_bolg"
+}
+
+73 = {
+	name = "Mac Starn"
+	culture = "fir_bolg"
+}
+
+74 = {
+	name = "Mac Genann"
+	culture = "fir_bolg"
+}
+
+75 = {
+	name = "Mac Sengann"
+	culture = "fir_bolg"
+}
+
+76 = {
+	name = "Mac Eirc"
+	culture = "fir_bolg"
+}
+
+77 = {
+	name = "Mac Umor"
+	culture = "fir_bolg"
+}
+
+78 = {
+	name = "Cennfinnán"
+	culture = "fir_bolg"
+}
+
+79 = {
+	name = "Menn"
+	culture = "fir_bolg"
+}
+
+80 = {
+	name = "Fáelad"
+	culture = "fir_bolg"
+}
+
+81 = {
+	name = "Cennmagair"
+	culture = "fir_bolg"
+}
 #HUMANS OF CORK#
 25 = {
 	name = "Mac Cárthaigh"
