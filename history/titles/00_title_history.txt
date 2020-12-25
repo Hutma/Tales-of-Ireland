@@ -1983,11 +1983,18 @@ c_kilkeedy = {
               }
 }
 
+#Bureen
+d_bureen = {
+              4799.1.1 = {
+                            holder = 800004
+              }
+}
+
 #Bealaclugga
 c_bealaclugga = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800004
               }
 }
 
@@ -1995,7 +2002,7 @@ c_bealaclugga = {
 c_ballyvaughan = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800004
               }
 }
 
@@ -2003,7 +2010,7 @@ c_ballyvaughan = {
 c_fanore = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800004
               }
 }
 
@@ -2011,7 +2018,8 @@ c_fanore = {
 c_kilmoon = {
               1.1.1 = { change_development_level = 4 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_bureen
+                            holder = 800005
               }
 }
 
@@ -2133,11 +2141,19 @@ c_doonbeg = {
               }
 }
 
+#Corcomroe
+d_corcomroe = {
+              4799.1.1 = {
+                            holder = 800004
+              }
+}
+
 #Doolin
 c_doolin = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_bureen
+                            holder = 800005
               }
 }
 
@@ -2145,7 +2161,7 @@ c_doolin = {
 c_caherkinalla = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800004
               }
 }
 
@@ -2153,7 +2169,7 @@ c_caherkinalla = {
 c_cliffsofmoher = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800004
               }
 }
 
@@ -2574,11 +2590,18 @@ c_templetouhy = {
               }
 }
 
+#Kiltartan
+d_kiltartan = {
+              4799.1.1 = {
+                            holder = 800006
+              }
+}
+
 #Kinvarra
 c_kinvarra = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800006
               }
 }
 
@@ -2586,7 +2609,7 @@ c_kinvarra = {
 c_gort = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800006
               }
 }
 
@@ -2594,7 +2617,15 @@ c_gort = {
 c_ballaba = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_kiltartan
+                            holder = 800007
+              }
+}
+
+#Dunkelin
+d_dunkelin = {
+              4799.1.1 = {
+                            holder = 800000
               }
 }
 
@@ -2602,7 +2633,7 @@ c_ballaba = {
 c_oranmore = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800000
               }
 }
 
@@ -2610,7 +2641,7 @@ c_oranmore = {
 c_clarinbridge = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800000
               }
 }
 
@@ -2618,7 +2649,8 @@ c_clarinbridge = {
 c_craughwell = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_dunkelin
+                            holder = 800001
               }
 }
 
@@ -2626,7 +2658,8 @@ c_craughwell = {
 c_ballinderreen = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_dunkelin
+                            holder = 800001
               }
 }
 
@@ -2776,11 +2809,18 @@ c_dunmore = {
               }
 }
 
+#Loughrea
+d_loughrea = {
+              4799.1.1 = {
+                            holder = 800008
+              }
+}
+
 #Ballyglass
 c_ballyglass = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800008
               }
 }
 
@@ -2788,7 +2828,7 @@ c_ballyglass = {
 c_peterswell = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800008
               }
 }
 
@@ -2796,7 +2836,15 @@ c_peterswell = {
 c_gortnahown = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_loughrea
+                            holder = 800009
+              }
+}
+
+#Letrim
+d_letrim = {
+              4799.1.1 = {
+                            holder = 800010
               }
 }
 
@@ -2804,7 +2852,7 @@ c_gortnahown = {
 c_rosaglanna = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800010
               }
 }
 
@@ -2812,7 +2860,7 @@ c_rosaglanna = {
 c_bushypark = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800010
               }
 }
 
@@ -2820,7 +2868,7 @@ c_bushypark = {
 c_fearglass = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800010
               }
 }
 
@@ -2828,7 +2876,15 @@ c_fearglass = {
 c_barnaculla = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_letrim
+                            holder = 800011
+              }
+}
+
+#Gallongford
+d_gallongford = {
+              4799.1.1 = {
+                            holder = 800012
               }
 }
 
@@ -2836,7 +2892,7 @@ c_barnaculla = {
 c_eyrecourt = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800012
               }
 }
 
@@ -2844,7 +2900,7 @@ c_eyrecourt = {
 c_clonfert = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800012
               }
 }
 
@@ -2852,7 +2908,8 @@ c_clonfert = {
 c_killimor = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_gallongford
+                            holder = 800013
               }
 }
 
@@ -2860,7 +2917,15 @@ c_killimor = {
 c_portumna = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_gallongford
+                            holder = 800013
+              }
+}
+
+#Athenry
+d_athenry = {
+              4799.1.1 = {
+                            holder = 800002
               }
 }
 
@@ -2868,7 +2933,7 @@ c_portumna = {
 c_athenry = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800002
               }
 }
 
@@ -2876,7 +2941,8 @@ c_athenry = {
 c_kiltullagh = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_athenry
+                            holder = 800003
               }
 }
 
@@ -2895,11 +2961,19 @@ c_aran = {
               }
 }
 
+#Clonmacnowen
+d_clonmacnowen = {
+              4799.1.1 = {
+                            holder = 800014
+              }
+}
+
 #Laurencetown
 c_laurencetown = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_kilconnell
+                            holder = 800015
               }
 }
 
@@ -2907,7 +2981,8 @@ c_laurencetown = {
 c_aughagreagh = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_kilconnell
+                            holder = 800015
               }
 }
 
@@ -2915,7 +2990,8 @@ c_aughagreagh = {
 c_atticoffey = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_kilconnell
+                            holder = 800015
               }
 }
 
@@ -3024,10 +3100,17 @@ c_tavanagh = {
 }
 
 #Kilconnell
+d_kilconnell = {
+              4799.1.1 = {
+                            holder = 800014
+              }
+}
+
+#Kilconnell
 c_kilconnell = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800014
               }
 }
 
@@ -3035,7 +3118,7 @@ c_kilconnell = {
 c_lisavahane = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800014
               }
 }
 
@@ -3043,7 +3126,7 @@ c_lisavahane = {
 c_dowras = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800014
               }
 }
 
@@ -3051,7 +3134,7 @@ c_dowras = {
 c_ballylouge = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 800014
               }
 }
 
@@ -5425,11 +5508,18 @@ c_tully = {
               }
 }
 
+#Lurg
+d_lurg = {
+              4799.1.1 = {
+                            holder = 850000
+              }
+}
+
 #Kesh
 c_kesh = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850000
               }
 }
 
@@ -5437,7 +5527,7 @@ c_kesh = {
 c_trory = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850000
               }
 }
 
@@ -5445,7 +5535,8 @@ c_trory = {
 c_drumbrick = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_lurg
+                            holder = 850001
               }
 }
 
@@ -5453,7 +5544,8 @@ c_drumbrick = {
 c_gulladoo = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_lurg
+                            holder = 850001
               }
 }
 
@@ -5461,7 +5553,7 @@ c_gulladoo = {
 c_letterkeen = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850000
               }
 }
 
@@ -5469,7 +5561,21 @@ c_letterkeen = {
 c_leggs = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850000
+              }
+}
+
+#Tyrone
+k_tyrone = {
+              4799.1.1 = {
+                            holder = 850008
+              }
+}
+
+#Clogher
+d_clogher = {
+              4799.1.1 = {
+                            holder = 850006
               }
 }
 
@@ -5477,7 +5583,7 @@ c_leggs = {
 c_clogher = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850006
               }
 }
 
@@ -5485,7 +5591,7 @@ c_clogher = {
 c_fintona = {
               1.1.1 = { change_development_level = 4 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850006
               }
 }
 
@@ -5493,7 +5599,7 @@ c_fintona = {
 c_ballygawley = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850006
               }
 }
 
@@ -5501,7 +5607,8 @@ c_ballygawley = {
 c_augher = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_clogher
+                            holder = 850007
               }
 }
 
@@ -5509,7 +5616,8 @@ c_augher = {
 c_keerogue = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_clogher
+                            holder = 850007
               }
 }
 
@@ -5585,10 +5693,17 @@ c_galballydun = {
 }
 
 #Cookstown
+d_cookstown = {
+              4799.1.1 = {
+                            holder = 850008
+              }
+}
+
+#Cookstown
 c_cookstown = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850008
               }
 }
 
@@ -5596,7 +5711,7 @@ c_cookstown = {
 c_lissan = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850008
               }
 }
 
@@ -5604,7 +5719,8 @@ c_lissan = {
 c_coagh = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850009
               }
 }
 
@@ -5612,7 +5728,15 @@ c_coagh = {
 c_kildress = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850009
+              }
+}
+
+#Omagh
+d_omagh = {
+              4799.1.1 = {
+                            holder = 850004
               }
 }
 
@@ -5620,7 +5744,7 @@ c_kildress = {
 c_omagh = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850004
               }
 }
 
@@ -5628,7 +5752,7 @@ c_omagh = {
 c_carrickmore = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850004
               }
 }
 
@@ -5636,7 +5760,7 @@ c_carrickmore = {
 c_kilskeery = {
               1.1.1 = { change_development_level = 12 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850004
               }
 }
 
@@ -5644,7 +5768,8 @@ c_kilskeery = {
 c_beragh = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_omagh
+                            holder = 850005
               }
 }
 
@@ -5652,7 +5777,8 @@ c_beragh = {
 c_creggan = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_omagh
+                            holder = 850005
               }
 }
 
@@ -5660,7 +5786,8 @@ c_creggan = {
 c_dromoren = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_omagh
+                            holder = 850005
               }
 }
 
@@ -5668,7 +5795,14 @@ c_dromoren = {
 c_trillick = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850004
+              }
+}
+
+#Castlederg
+d_castlederg = {
+              4799.1.1 = {
+                            holder = 850002
               }
 }
 
@@ -5676,7 +5810,7 @@ c_trillick = {
 c_castlederg = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850002
               }
 }
 
@@ -5684,7 +5818,7 @@ c_castlederg = {
 c_killeter = {
               1.1.1 = { change_development_level = 7 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850002
               }
 }
 
@@ -5692,7 +5826,7 @@ c_killeter = {
 c_drumlegagh = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850002
               }
 }
 
@@ -5700,7 +5834,15 @@ c_drumlegagh = {
 c_drumquin = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            liege = d_castlederg
+                            holder = 850003
+              }
+}
+
+#Gortin
+d_gortin = {
+              4799.1.1 = {
+                            holder = 850008
               }
 }
 
@@ -5708,7 +5850,7 @@ c_drumquin = {
 c_gortin = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850008
               }
 }
 
@@ -5716,7 +5858,7 @@ c_gortin = {
 c_cranagh = {
               1.1.1 = { change_development_level = 6 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850008
               }
 }
 
@@ -5724,7 +5866,8 @@ c_cranagh = {
 c_mountjoy = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850010
               }
 }
 
@@ -5732,7 +5875,8 @@ c_mountjoy = {
 c_glenhull = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850010
               }
 }
 
@@ -5740,7 +5884,16 @@ c_glenhull = {
 c_killyclogher = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850010
+              }
+}
+
+#Strabane
+d_strabane = {
+              4799.1.1 = {
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5748,7 +5901,8 @@ c_killyclogher = {
 c_stabane = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5756,7 +5910,8 @@ c_stabane = {
 c_newtownstewart = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5764,7 +5919,8 @@ c_newtownstewart = {
 c_ardstraw = {
               1.1.1 = { change_development_level = 10 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5772,7 +5928,8 @@ c_ardstraw = {
 c_artigarvan = {
               1.1.1 = { change_development_level = 9 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5780,7 +5937,8 @@ c_artigarvan = {
 c_bready = {
               1.1.1 = { change_development_level = 4 }
               4799.1.1 = {
-                            holder = 0
+                            liege = k_tyrone
+                            holder = 850011
               }
 }
 
@@ -5788,7 +5946,7 @@ c_bready = {
 c_donemana = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 0
+                            holder = 850008
               }
 }
 

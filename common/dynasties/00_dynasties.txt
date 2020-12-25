@@ -431,45 +431,96 @@
 #NEMEDIANS#
 85 = {
 	name = "Munremar"
-	culture = "ir_milesians"
+	culture = "neagh_nemedians"
 }
 
 86 = {
 	name = "O'Kain"
-	culture = "ir_milesians"
+	culture = "neagh_nemedians"
 }
 
 87 = {
 	name = "O'Breen"
-	culture = "ir_milesians"
+	culture = "neagh_nemedians"
 }
 
 88 = {
 	name = "O'Turrain"
-	culture = "ir_milesians"
+	culture = "ramor_nemedians"
 }
 
 89 = {
 	name = "O'Mulfaver"
-	culture = "ir_milesians"
+	culture = "ramor_nemedians"
 }
 
 90 = {
 	name = "O'Rourke"
-	culture = "ir_milesians"
+	culture = "ramor_nemedians"
 }
 
 91 = {
 	name = "Nemed Children"
-	culture = "ir_milesians"
+	culture = "ennell_nemedians"
 }
 
 92 = {
 	name = "Nemid"
-	culture = "ir_milesians"
+	culture = "ennell_nemedians"
 }
 
 93 = {
 	name = "Mac Nemetes"
-	culture = "ir_milesians"
+	culture = "ennell_nemedians"
+}
+
+#MEGALITHICS#
+94 = {
+	name = "Mac Beith"
+	culture = "newgrange_builders"
+}
+
+95 = {
+	name = "Mac Onn"
+	culture = "newgrange_builders"
+}
+
+96 = {
+	name = "Mac Ceirt"
+	culture = "newgrange_builders"
+}
+
+97 = {
+	name = "Mac Idad"
+	culture = "newgrange_builders"
+}
+
+98 = {
+	name = "Mac Edad"
+	culture = "newgrange_builders"
+}
+
+99 = {
+	name = "Mac Ailm"
+	culture = "bell_beakers"
+}
+
+100 = {
+	name = "Mac Ur"
+	culture = "bell_beakers"
+}
+
+101 = {
+	name = "Mac Luis"
+	culture = "bell_beakers"
+}
+
+102 = {
+	name = "Mac Fearn"
+	culture = "bell_beakers"
+}
+
+103 = {
+	name = "Mac Nuin"
+	culture = "bell_beakers"
 }
