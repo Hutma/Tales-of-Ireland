@@ -332,6 +332,61 @@
 	culture = "underground_fomorians"
 }
 
+104 = {
+	name = "Decair"
+	culture = "underground_fomorians"
+}
+
+105 = {
+	name = " Ó Ceallaigh"
+	culture = "underground_fomorians"
+}
+
+106 = {
+	name = " Ó Broin"
+	culture = "underground_fomorians"
+}
+
+107 = {
+	name = "Ó Duinn"
+	culture = "underground_fomorians"
+}
+
+108 = {
+	name = " Ó Floinn"
+	culture = "underground_fomorians"
+}
+
+109 = {
+	name = "Mac Gearailt"
+	culture = "underground_fomorians"
+}
+
+110 = {
+	name = "Ó Mathúna"
+	culture = "underground_fomorians"
+}
+
+111 = {
+	name = "Ó Baoill"
+	culture = "underground_fomorians"
+}
+
+112 = {
+	name = "Ó Séaghdha"
+	culture = "underground_fomorians"
+}
+
+113 = {
+	name = "Ó hAodha"
+	culture = "underground_fomorians"
+}
+
+114 = {
+	name = "de Paor"
+	culture = "underground_fomorians"
+}
+
 #MILESIANS#
 43 = {
 	name = "Eber Finn"

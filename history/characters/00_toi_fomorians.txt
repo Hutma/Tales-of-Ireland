@@ -1,0 +1,795 @@
+450100 = {
+    name = "Balor"
+    dynasty =  104 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+450101 = {
+    name = "Bres"
+    dynasty =  105 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+450102 = {
+    name = "Tethra"
+    dynasty =  106 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+450103 = {
+    name = "Ethniu"
+    dynasty =  107 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+450104 = {
+    name = "Bres"
+    dynasty =  108 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+450105 = {
+    name = "Kezhedey"
+    dynasty =  109 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+450106 = {
+    name = "Ozhmeg"
+    dynasty =  110 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4761.1.1 = {
+        birth = yes
+    }
+}
+450107 = {
+    name = "Balor"
+    dynasty =  111 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+450108 = {
+    name = "Elatha"
+    dynasty =  112 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+450109 = {
+    name = "Bagna"
+    dynasty =  105 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+450110 = {
+    name = "Igoll"
+    dynasty =  108 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4749.1.1 = {
+        birth = yes
+    }
+}
+450111 = {
+    name = "Regan"
+    dynasty =  109 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4758.1.1 = {
+        birth = yes
+    }
+}
+450112 = {
+    name = "Arti"
+    dynasty =  110 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+450113 = {
+    name = "Chechama"
+    dynasty =  107 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+    trait = calm
+    trait = arrogant
+    trait = vengeful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+450114 = {
+    name = "Vechkas"
+    dynasty =  109 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  7 
+    martial =  5 
+    stewardship =  11 
+    intrigue =  10 
+    learning =  9 
+    prowess =  8 
+
+    trait = education_diplomacy_1
+    trait = chaste
+    trait = brave
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+450115 = {
+    name = "Pokshayka"
+    dynasty =  105 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  7 
+    learning =  3 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = arrogant
+    trait = gregarious
+    trait = arbitrary
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+450116 = {
+    name = "Velmayka"
+    dynasty =  110 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  8 
+    martial =  10 
+    stewardship =  2 
+    intrigue =  10 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_intrigue_2
+    trait = paranoid
+    trait = gregarious
+    trait = content
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+450117 = {
+    name = "Mazava"
+    dynasty =  111 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  2 
+    martial =  3 
+    stewardship =  1 
+    intrigue =  9 
+    learning =  7 
+    prowess =  6 
+
+    trait = education_stewardship_2
+    trait = calm
+    trait = temperate
+    trait = forgiving
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4754.1.1 = {
+        birth = yes
+    }
+}
+450118 = {
+    name = "Vokan"
+    dynasty =  112 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  2 
+    martial =  8 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  6 
+    prowess =  5 
+
+    trait = education_learning_3
+    trait = greedy
+    trait = impatient
+    trait = vengeful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+450119 = {
+    name = "Mosheg"
+    dynasty =  114 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  6 
+    intrigue =  12 
+    learning =  2 
+    prowess =  7 
+
+    trait = education_stewardship_1 
+    trait = callous
+    trait = gluttonous
+    trait = arbitrary
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+450120 = {
+    name = "Dergun"
+    dynasty =  109 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  6 
+    martial =  12 
+    stewardship =  3 
+    intrigue =  5 
+    learning =  5 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = wrathful
+    trait = content
+    trait = generous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4767.1.1 = {
+        birth = yes
+    }
+}
+450121 = {
+    name = "Deryab"
+    dynasty =  112 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  8 
+    martial =  6 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_stewardship_4
+    trait = chaste
+    trait = shy
+    trait = compassionate
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4766.1.1 = {
+        birth = yes
+    }
+}
+450122 = {
+    name = "Sochava"
+    dynasty =  106 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  7 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  4 
+    learning =  12 
+    prowess =  9 
+
+    trait = education_intrigue_4
+    trait = lustful
+    trait = ambitious
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4774.1.1 = {
+        birth = yes
+    }
+}
+450123 = {
+    name = "Dobrinya"
+    dynasty =  113 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  9 
+    martial =  5 
+    stewardship =  1 
+    intrigue =  3 
+    learning =  2 
+    prowess =  6 
+
+    trait = education_learning_4
+    trait = zealous
+    trait = chaste
+    trait = generous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4762.1.1 = {
+        birth = yes
+    }
+}
+450124 = {
+    name = "Inzhay"
+    dynasty =  104 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  5 
+    intrigue =  4 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_1
+    trait = wrathful
+    trait = lazy
+    trait = arrogant
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+450125 = {
+    name = "Irter"
+    dynasty =  114 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  11 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  7 
+    learning =  4 
+    prowess =  9 
+
+    trait = education_martial_4
+    trait = diligent
+    trait = paranoid
+    trait = humble
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4756.1.1 = {
+        birth = yes
+    }
+}
+450126 = {
+    name = "Lyneg"
+    dynasty =  105 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  11 
+    martial =  4 
+    stewardship =  9 
+    intrigue =  5 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_diplomacy_1
+    trait = diligent
+    trait = content
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+450127 = {
+    name = "Oshypel"
+    dynasty =  110 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  10 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  12 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_intrigue_3
+    trait = calm
+    trait = vengeful
+    trait = stubborn
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4750.1.1 = {
+        birth = yes
+    }
+}
+450128 = {
+    name = "Oshmar"
+    dynasty =  114 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  11 
+    martial =  1 
+    stewardship =  6 
+    intrigue =  10 
+    learning =  3 
+    prowess =  4 
+
+    trait = education_stewardship_4
+    trait = callous
+    trait = arrogant
+    trait = zealous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4762.1.1 = {
+        birth = yes
+    }
+}
+450129 = {
+    name = "Yalgava"
+    dynasty =  108 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  11 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  11 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_martial_1 
+    trait = shy
+    trait = lazy
+    trait = deceitful
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+450130 = {
+    name = "Tuhan"
+    dynasty =  107 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  2 
+    prowess =  3 
+
+    trait = education_martial_4
+    trait = greedy
+    trait = trusting
+    trait = temperate
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+    }
+}
+450131 = {
+    name = "Syryava"
+    dynasty =  110 
+    religion = dark_gods
+    culture = underground_fomorians
+    female = yes
+
+    diplomacy =  6 
+    martial =  4 
+    stewardship =  10 
+    intrigue =  11 
+    learning =  10 
+    prowess =  2 
+
+    trait = education_stewardship_2
+    trait = shy
+    trait = content
+    trait = callous
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4749.1.1 = {
+        birth = yes
+    }
+}
+450132 = {
+    name = "Tyueykezhut"
+    dynasty =  115 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  11 
+    martial =  7 
+    stewardship =  9 
+    intrigue =  2 
+    learning =  4 
+    prowess =  1 
+
+    trait = education_diplomacy_4
+    trait = brave
+    trait = lustful
+    trait = forgiving
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4781.1.1 = {
+        birth = yes
+    }
+}
