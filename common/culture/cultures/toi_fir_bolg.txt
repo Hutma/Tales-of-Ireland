@@ -11,10 +11,8 @@
 			irish_coa_gfx
 		}
 		ethnicities = { 	
-			5 = caucasian_blond
-			50 = caucasian_ginger
-			25 = caucasian_brown_hair
-			20 = caucasian_dark_hair
+			25 = caucasian_blond
+			75 = caucasian_ginger
 		}
 		
 		color = rgb { 200 20 20 }
@@ -253,10 +251,8 @@
 			irish_coa_gfx
 		}
 		ethnicities = { 	
-			5 = caucasian_blond
-			50 = caucasian_ginger
-			25 = caucasian_brown_hair
-			20 = caucasian_dark_hair
+			25 = caucasian_blond
+			75 = caucasian_ginger
 		}
 		
 		color = rgb { 200 70 50 }
@@ -495,10 +491,8 @@
 			irish_coa_gfx
 		}
 		ethnicities = { 	
-			5 = caucasian_blond
-			50 = caucasian_ginger
-			25 = caucasian_brown_hair
-			20 = caucasian_dark_hair
+			25 = caucasian_blond
+			75 = caucasian_ginger
 		}
 		
 		color = rgb { 200 50 70 }

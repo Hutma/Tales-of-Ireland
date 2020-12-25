@@ -235,6 +235,21 @@
 	name = "Cennmagair"
 	culture = "fir_bolg"
 }
+
+82 = {
+	name = "Mac Írgalaig"
+	culture = "fir_gailioin"
+}
+
+83 = {
+	name = "Mac Óengusso"
+	culture = "fir_gailioin"
+}
+
+84 = {
+	name = "Allán"
+	culture = "fir_gailioin"
+}
 #HUMANS OF CORK#
 25 = {
 	name = "Mac Cárthaigh"
@@ -410,5 +425,51 @@
 
 69 = {
 	name = "Airem"
+	culture = "ir_milesians"
+}
+
+#NEMEDIANS#
+85 = {
+	name = "Munremar"
+	culture = "ir_milesians"
+}
+
+86 = {
+	name = "O'Kain"
+	culture = "ir_milesians"
+}
+
+87 = {
+	name = "O'Breen"
+	culture = "ir_milesians"
+}
+
+88 = {
+	name = "O'Turrain"
+	culture = "ir_milesians"
+}
+
+89 = {
+	name = "O'Mulfaver"
+	culture = "ir_milesians"
+}
+
+90 = {
+	name = "O'Rourke"
+	culture = "ir_milesians"
+}
+
+91 = {
+	name = "Nemed Children"
+	culture = "ir_milesians"
+}
+
+92 = {
+	name = "Nemid"
+	culture = "ir_milesians"
+}
+
+93 = {
+	name = "Mac Nemetes"
 	culture = "ir_milesians"
 }
