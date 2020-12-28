@@ -235,6 +235,21 @@
 	name = "Cennmagair"
 	culture = "fir_bolg"
 }
+
+82 = {
+	name = "Mac Írgalaig"
+	culture = "fir_gailioin"
+}
+
+83 = {
+	name = "Mac Óengusso"
+	culture = "fir_gailioin"
+}
+
+84 = {
+	name = "Allán"
+	culture = "fir_gailioin"
+}
 #HUMANS OF CORK#
 25 = {
 	name = "Mac Cárthaigh"
@@ -314,6 +329,61 @@
 
 40 = {
 	name = "Mac an Bhaird"
+	culture = "underground_fomorians"
+}
+
+104 = {
+	name = "Decair"
+	culture = "underground_fomorians"
+}
+
+105 = {
+	name = " Ó Ceallaigh"
+	culture = "underground_fomorians"
+}
+
+106 = {
+	name = " Ó Broin"
+	culture = "underground_fomorians"
+}
+
+107 = {
+	name = "Ó Duinn"
+	culture = "underground_fomorians"
+}
+
+108 = {
+	name = " Ó Floinn"
+	culture = "underground_fomorians"
+}
+
+109 = {
+	name = "Mac Gearailt"
+	culture = "underground_fomorians"
+}
+
+110 = {
+	name = "Ó Mathúna"
+	culture = "underground_fomorians"
+}
+
+111 = {
+	name = "Ó Baoill"
+	culture = "underground_fomorians"
+}
+
+112 = {
+	name = "Ó Séaghdha"
+	culture = "underground_fomorians"
+}
+
+113 = {
+	name = "Ó hAodha"
+	culture = "underground_fomorians"
+}
+
+114 = {
+	name = "de Paor"
 	culture = "underground_fomorians"
 }
 
@@ -411,4 +481,101 @@
 69 = {
 	name = "Airem"
 	culture = "ir_milesians"
+}
+
+#NEMEDIANS#
+85 = {
+	name = "Munremar"
+	culture = "neagh_nemedians"
+}
+
+86 = {
+	name = "O'Kain"
+	culture = "neagh_nemedians"
+}
+
+87 = {
+	name = "O'Breen"
+	culture = "neagh_nemedians"
+}
+
+88 = {
+	name = "O'Turrain"
+	culture = "ramor_nemedians"
+}
+
+89 = {
+	name = "O'Mulfaver"
+	culture = "ramor_nemedians"
+}
+
+90 = {
+	name = "O'Rourke"
+	culture = "ramor_nemedians"
+}
+
+91 = {
+	name = "Nemed Children"
+	culture = "ennell_nemedians"
+}
+
+92 = {
+	name = "Nemid"
+	culture = "ennell_nemedians"
+}
+
+93 = {
+	name = "Mac Nemetes"
+	culture = "ennell_nemedians"
+}
+
+#MEGALITHICS#
+94 = {
+	name = "Mac Beith"
+	culture = "newgrange_builders"
+}
+
+95 = {
+	name = "Mac Onn"
+	culture = "newgrange_builders"
+}
+
+96 = {
+	name = "Mac Ceirt"
+	culture = "newgrange_builders"
+}
+
+97 = {
+	name = "Mac Idad"
+	culture = "newgrange_builders"
+}
+
+98 = {
+	name = "Mac Edad"
+	culture = "newgrange_builders"
+}
+
+99 = {
+	name = "Mac Ailm"
+	culture = "bell_beakers"
+}
+
+100 = {
+	name = "Mac Ur"
+	culture = "bell_beakers"
+}
+
+101 = {
+	name = "Mac Luis"
+	culture = "bell_beakers"
+}
+
+102 = {
+	name = "Mac Fearn"
+	culture = "bell_beakers"
+}
+
+103 = {
+	name = "Mac Nuin"
+	culture = "bell_beakers"
 }
