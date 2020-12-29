@@ -1,0 +1,1441 @@
+610000 = {
+    name = "Muirchertach"
+    dynasty =  116 
+    religion = sea_dwellers
+    culture = dal_riata
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+610001 = {
+    name = "Inne"
+    dynasty =  117 
+    religion = celtic_de_danann_worship
+    culture = dal_riata
+    female = yes
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+610002 = {
+    name = "Finnsnechtae"
+    dynasty =  118 
+    religion = celtic_de_danann_worship
+    culture = dal_riata
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+        add_pressed_claim = k_antrim
+    }
+}
+610003 = {
+    name = "Imchad"
+    dynasty =  116 
+    religion = celtic_de_danann_worship
+    culture = dal_riata
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+610004 = {
+    name = "Drust"
+    dynasty =  119 
+    religion = celtic_de_danann_worship
+    culture = dal_riata
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+620000 = {
+    name = "Coirpre"
+    dynasty =  120 
+    religion = sea_dwellers
+    culture = dal_naraide
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+620001 = {
+    name = "Artbran"
+    dynasty =  120 
+    religion = sea_dwellers
+    culture = dal_naraide
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+620002 = {
+    name = "Brandub"
+    dynasty =  121 
+    religion = sea_dwellers
+    culture = dal_naraide
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4761.1.1 = {
+        birth = yes
+    }
+}
+620003 = {
+    name = "Columb"
+    dynasty =  121 
+    religion = sea_dwellers
+    culture = dal_naraide
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+620004 = {
+    name = "Emer"
+    dynasty =  122 
+    religion = celtic_de_danann_worship
+    culture = dal_naraide
+    female = yes
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+620005 = {
+    name = "Sogan"
+    dynasty =  123 
+    religion = celtic_de_danann_worship
+    culture = dal_naraide
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+630000 = {
+    name = "Morleo"
+    dynasty =  124 
+    religion = the_old_gods
+    culture = ui_eachach_coba
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_stewardship_2
+    trait = wrathful
+    trait = impatient
+    trait = vengeful
+    trait = celtic_human
+
+    father=  631000 
+
+    disallow_random_traits = yes
+    4759.1.1 = {
+        birth = yes
+    }
+}
+630001 = {
+    name = "Murtolic"
+    dynasty =  125 
+    religion = the_old_gods
+    culture = ui_eachach_coba
+
+    diplomacy =  9 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  1 
+    learning =  4 
+    prowess =  8 
+
+    trait = education_intrigue_4
+    trait = greedy
+    trait = lazy
+    trait = paranoid
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4758.1.1 = {
+        birth = yes
+    }
+}
+630002 = {
+    name = "Crup"
+    dynasty =  126 
+    religion = the_old_gods
+    culture = ui_eachach_coba
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  8 
+    intrigue =  10 
+    learning =  12 
+    prowess =  4 
+
+    trait = education_diplomacy_1
+    trait = ambitious
+    trait = gregarious
+    trait = stubborn
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}
+630003 = {
+    name = "Durilia"
+    dynasty =  127 
+    religion = the_old_gods
+    culture = ui_eachach_coba
+    female = yes
+
+    diplomacy =  12 
+    martial =  8 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  6 
+    prowess =  3 
+
+    trait = education_intrigue_4
+    trait = calm
+    trait = arrogant
+    trait = vengeful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+630004 = {
+    name = "Uuredach"
+    dynasty =  128 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  7 
+    martial =  5 
+    stewardship =  11 
+    intrigue =  10 
+    learning =  9 
+    prowess =  8 
+    trait = chaste
+    trait = brave
+    trait = stubborn
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4788.1.1 = {
+        birth = yes
+    }
+}
+630005 = {
+    name = "Tarla"
+    dynasty =  124 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  6 
+    martial =  7 
+    stewardship =  10 
+    intrigue =  7 
+    learning =  6 
+    prowess =  6 
+
+    trait = education_intrigue_2
+    trait = stubborn
+    trait = gregarious
+    trait = generous
+    trait = celtic_human
+
+    father=  631000 
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+        add_pressed_claim = d_iveagh
+    }
+}
+630006 = {
+    name = "Garalt"
+    dynasty =  127 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  4 
+    martial =  4 
+    stewardship =  2 
+    intrigue =  7 
+    learning =  3 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = arrogant
+    trait = gregarious
+    trait = arbitrary
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+630007 = {
+    name = "Ciniod"
+    dynasty =  129 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  8 
+    martial =  10 
+    stewardship =  2 
+    intrigue =  10 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_intrigue_2
+    trait = paranoid
+    trait = gregarious
+    trait = content
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4747.1.1 = {
+        birth = yes
+    }
+}
+630008 = {
+    name = "Elaine"
+    dynasty =  124 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+    female = yes
+
+    diplomacy =  2 
+    martial =  3 
+    stewardship =  1 
+    intrigue =  9 
+    learning =  7 
+    prowess =  6 
+
+    trait = education_stewardship_2
+    trait = calm
+    trait = temperate
+    trait = forgiving
+    trait = celtic_human
+
+    father=  631000 
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+        add_pressed_claim = d_iveagh
+    }
+}
+630009 = {
+    name = "Bili"
+    dynasty =  130 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  2 
+    martial =  8 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  6 
+    prowess =  5 
+
+    trait = education_learning_3
+    trait = greedy
+    trait = impatient
+    trait = vengeful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+631000 = {
+    name = "Bran"
+    dynasty =  124 
+    religion = sea_dwellers
+    culture = ui_eachach_coba
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  6 
+    intrigue =  12 
+    learning =  2 
+    prowess =  7 
+
+    trait = education_stewardship_1 
+    trait = callous
+    trait = gluttonous
+    trait = arbitrary
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4739.1.1 = {
+        birth = yes
+    }
+    4782.1.1 = {
+        death = yes
+    }
+}
+640000 = {
+    name = "Assiucc"
+    dynasty =  131 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  6 
+    martial =  12 
+    stewardship =  3 
+    intrigue =  5 
+    learning =  5 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = wrathful
+    trait = content
+    trait = generous
+    trait = celtic_human
+
+    father=  641000 
+
+    disallow_random_traits = yes
+    4773.1.1 = {
+        birth = yes
+        add_pressed_claim = d_newry
+    }
+}
+640001 = {
+    name = "Aaron"
+    dynasty =  131 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  8 
+    martial =  6 
+    stewardship =  9 
+    intrigue =  1 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_stewardship_4
+    trait = chaste
+    trait = shy
+    trait = compassionate
+    trait = celtic_human
+
+    father=  641000 
+
+    disallow_random_traits = yes
+    4774.1.1 = {
+        birth = yes
+        add_pressed_claim = d_fews
+        add_pressed_claim = d_orior
+    }
+}
+640002 = {
+    name = "Aibill"
+    dynasty =  131 
+    religion = the_old_gods
+    culture = dal_fiatach
+    female = yes
+
+    diplomacy =  7 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  4 
+    learning =  12 
+    prowess =  9 
+
+    trait = education_intrigue_4
+    trait = lustful
+    trait = ambitious
+    trait = stubborn
+    trait = celtic_human
+
+    father=  641000 
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+        add_pressed_claim = d_newry
+        add_pressed_claim = d_fews
+        add_pressed_claim = d_orior
+    }
+}
+640003 = {
+    name = "Robartach"
+    dynasty =  131 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  9 
+    martial =  5 
+    stewardship =  1 
+    intrigue =  3 
+    learning =  2 
+    prowess =  6 
+
+    trait = education_learning_4
+    trait = zealous
+    trait = chaste
+    trait = generous
+    trait = celtic_human
+
+    father=  641000 
+
+    disallow_random_traits = yes
+    4777.1.1 = {
+        birth = yes
+        add_pressed_claim = d_newry
+        add_pressed_claim = d_fews
+        add_pressed_claim = d_orior
+    }
+}
+640004 = {
+    name = "Gormgus"
+    dynasty =  132 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  3 
+    martial =  11 
+    stewardship =  5 
+    intrigue =  4 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_1
+    trait = wrathful
+    trait = lazy
+    trait = arrogant
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+640005 = {
+    name = "Rogellach"
+    dynasty =  133 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  11 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  7 
+    learning =  4 
+    prowess =  9 
+
+    trait = education_martial_4
+    trait = diligent
+    trait = paranoid
+    trait = humble
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4756.1.1 = {
+        birth = yes
+    }
+}
+640006 = {
+    name = "Lugaid"
+    dynasty =  134 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  11 
+    martial =  4 
+    stewardship =  9 
+    intrigue =  5 
+    learning =  10 
+    prowess =  8 
+
+    trait = education_diplomacy_1
+    trait = diligent
+    trait = content
+    trait = stubborn
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4764.1.1 = {
+        birth = yes
+    }
+}
+640007 = {
+    name = "Finnsnechtae"
+    dynasty =  134 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  10 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  12 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_intrigue_3
+    trait = calm
+    trait = vengeful
+    trait = stubborn
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4750.1.1 = {
+        birth = yes
+    }
+}
+641000 = {
+    name = "Conn"
+    dynasty =  131 
+    religion = the_old_gods
+    culture = dal_fiatach
+
+    diplomacy =  11 
+    martial =  1 
+    stewardship =  6 
+    intrigue =  10 
+    learning =  3 
+    prowess =  4 
+
+    trait = education_stewardship_4
+    trait = callous
+    trait = arrogant
+    trait = zealous
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4755.1.1 = {
+        birth = yes
+    }
+    4796.1.1 = {
+        death = yes
+    }
+}
+650000 = {
+    name = "Allan"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  11 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  11 
+    learning =  3 
+    prowess =  10 
+
+    health =  2 
+
+    trait = education_martial_1 
+    trait = shy
+    trait = lazy
+    trait = deceitful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4741.1.1 = {
+        birth = yes
+    }
+}
+655000 = {
+    name = "Allcallorred"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  4 
+    martial =  5 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  2 
+    prowess =  3 
+
+    trait = education_martial_4
+    trait = greedy
+    trait = trusting
+    trait = temperate
+    trait = celtic_human
+
+    father=  650000 
+
+    disallow_random_traits = yes
+    4771.1.1 = {
+        birth = yes
+    }
+}
+655001 = {
+    name = "Caradaig"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  6 
+    martial =  4 
+    stewardship =  10 
+    intrigue =  11 
+    learning =  10 
+    prowess =  2 
+
+    trait = education_stewardship_2
+    trait = shy
+    trait = content
+    trait = callous
+    trait = celtic_human
+
+    father=  650000 
+
+    disallow_random_traits = yes
+    4772.1.1 = {
+        birth = yes
+    }
+}
+655002 = {
+    name = "Elpin"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  11 
+    martial =  7 
+    stewardship =  9 
+    intrigue =  2 
+    learning =  4 
+    prowess =  1 
+
+    trait = education_diplomacy_4
+    trait = brave
+    trait = lustful
+    trait = forgiving
+    trait = celtic_human
+
+    father=  650000 
+
+    disallow_random_traits = yes
+    4778.1.1 = {
+        birth = yes
+    }
+}
+655003 = {
+    name = "Mael"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  7 
+    martial =  3 
+    stewardship =  3 
+    intrigue =  5 
+    learning =  7 
+    prowess =  4 
+
+    trait = education_stewardship_4
+    trait = temperate
+    trait = greedy
+    trait = stubborn
+    trait = celtic_human
+
+    father=  650000 
+
+    disallow_random_traits = yes
+    4780.1.1 = {
+        birth = yes
+    }
+}
+655004 = {
+    name = "Rudri"
+    dynasty =  135 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  12 
+    martial =  12 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  5 
+    prowess =  9 
+
+    trait = education_diplomacy_4
+    trait = generous
+    trait = deceitful
+    trait = craven
+    trait = celtic_human
+
+    father=  650000 
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+650001 = {
+    name = "Uthoil"
+    dynasty =  136 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  9 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  5 
+    prowess =  6 
+
+    trait = education_diplomacy_1
+    trait = diligent
+    trait = lustful
+    trait = arbitrary
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4758.1.1 = {
+        birth = yes
+    }
+}
+650002 = {
+    name = "Uudrost"
+    dynasty =  137 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  5 
+    martial =  9 
+    stewardship =  8 
+    intrigue =  5 
+    learning =  12 
+    prowess =  7 
+
+    trait = education_stewardship_1 
+    trait = fickle
+    trait = gluttonous
+    trait = forgiving
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4767.1.1 = {
+        birth = yes
+    }
+}
+650003 = {
+    name = "Manath"
+    dynasty =  136 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  4 
+    martial =  9 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  5 
+    prowess =  1 
+
+    trait = education_stewardship_2
+    trait = ambitious
+    trait = deceitful
+    trait = impatient
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+650004 = {
+    name = "Castant"
+    dynasty =  138 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  7 
+    martial =  10 
+    stewardship =  11 
+    intrigue =  2 
+    learning =  7 
+    prowess =  5 
+
+    trait = education_intrigue_1
+    trait = callous
+    trait = impatient
+    trait = deceitful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4748.1.1 = {
+        birth = yes
+    }
+}
+650005 = {
+    name = "Aniel"
+    dynasty =  137 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  8 
+    martial =  7 
+    stewardship =  8 
+    intrigue =  2 
+    learning =  3 
+    prowess =  3 
+
+    trait = education_learning_3
+    trait = greedy
+    trait = arbitrary
+    trait = vengeful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4745.1.1 = {
+        birth = yes
+    }
+}
+650006 = {
+    name = "Ardle"
+    dynasty =  139 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  1 
+    martial =  5 
+    stewardship =  1 
+    intrigue =  4 
+    learning =  8 
+    prowess =  6 
+
+    trait = education_stewardship_4
+    trait = lustful
+    trait = generous
+    trait = honest
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4771.1.1 = {
+        birth = yes
+    }
+}
+650007 = {
+    name = "Manath"
+    dynasty =  139 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  9 
+    martial =  2 
+    stewardship =  1 
+    intrigue =  3 
+    learning =  10 
+    prowess =  10 
+
+    trait = education_stewardship_4
+    trait = stubborn
+    trait = zealous
+    trait = temperate
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+650008 = {
+    name = "Iestan"
+    dynasty =  140 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  3 
+    martial =  8 
+    stewardship =  11 
+    intrigue =  12 
+    learning =  8 
+    prowess =  1 
+
+    trait = education_intrigue_4
+    trait = arbitrary
+    trait = temperate
+    trait = craven
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4774.1.1 = {
+        birth = yes
+    }
+}
+650009 = {
+    name = "Paul"
+    dynasty =  136 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  10 
+    martial =  1 
+    stewardship =  1 
+    intrigue =  7 
+    learning =  4 
+    prowess =  5 
+
+    trait = education_martial_2
+    trait = compassionate
+    trait = brave
+    trait = calm
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4767.1.1 = {
+        birth = yes
+    }
+}
+650010 = {
+    name = "Domelch"
+    dynasty =  137 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  7 
+    martial =  10 
+    stewardship =  7 
+    intrigue =  8 
+    learning =  10 
+    prowess =  5 
+
+    trait = education_diplomacy_2
+    trait = patient
+    trait = greedy
+    trait = fickle
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4780.1.1 = {
+        birth = yes
+    }
+}
+650011 = {
+    name = "Brude"
+    dynasty =  140 
+    religion = great_barrows
+    culture = sogain 
+
+    diplomacy =  12 
+    martial =  10 
+    stewardship =  3 
+    intrigue =  3 
+    learning =  3 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = patient
+    trait = content
+    trait = temperate
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4756.1.1 = {
+        birth = yes
+    }
+}
+650012 = {
+    name = "Godwyn"
+    dynasty =  135 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  4 
+    martial =  10 
+    stewardship =  9 
+    intrigue =  11 
+    learning =  3 
+    prowess =  4 
+
+    trait = education_intrigue_4
+    trait = diligent
+    trait = patient
+    trait = just
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4769.1.1 = {
+        birth = yes
+    }
+}
+650013 = {
+    name = "Alys"
+    dynasty =  141 
+    religion = sea_dwellers
+    culture = luighne 
+    female = yes
+
+    diplomacy =  1 
+    martial =  8 
+    stewardship =  11 
+    intrigue =  8 
+    learning =  6 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = forgiving
+    trait = content
+    trait = deceitful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4766.1.1 = {
+        birth = yes
+    }
+}
+650014 = {
+    name = "Cynddelw"
+    dynasty =  142 
+    religion = sea_dwellers
+    culture = luighne 
+
+    diplomacy =  9 
+    martial =  1 
+    stewardship =  8 
+    intrigue =  11 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_stewardship_2
+    trait = callous
+    trait = temperate
+    trait = forgiving
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+650015 = {
+    name = "Briog"
+    dynasty =  143 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  9 
+    martial =  7 
+    stewardship =  3 
+    intrigue =  4 
+    learning =  2 
+    prowess =  10 
+
+    trait = education_intrigue_3
+    trait = temperate
+    trait = forgiving
+    trait = generous
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+650016 = {
+    name = "Cydifor"
+    dynasty =  144 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  3 
+    martial =  4 
+    stewardship =  1 
+    intrigue =  6 
+    learning =  6 
+    prowess =  6 
+
+    trait = education_martial_3
+    trait = arrogant
+    trait = fickle
+    trait = trusting
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4746.1.1 = {
+        birth = yes
+    }
+}
+650017 = {
+    name = "Elidyr"
+    dynasty =  145 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  10 
+    martial =  7 
+    stewardship =  8 
+    intrigue =  3 
+    learning =  11 
+    prowess =  4 
+
+    trait = education_intrigue_1
+    trait = fickle
+    trait = chaste
+    trait = impatient
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4771.1.1 = {
+        birth = yes
+        add_pressed_claim = k_fermanagh
+    }
+}
+650018 = {
+    name = "Meirchion"
+    dynasty =  146 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  4 
+    martial =  7 
+    stewardship =  7 
+    intrigue =  7 
+    learning =  4 
+    prowess =  5 
+
+    trait = education_intrigue_2
+    trait = humble
+    trait = temperate
+    trait = patient
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+650019 = {
+    name = "Mabyn"
+    dynasty =  147 
+    religion = the_old_gods
+    culture = luighne 
+    female = yes
+
+    diplomacy =  5 
+    martial =  2 
+    stewardship =  8 
+    intrigue =  2 
+    learning =  3 
+    prowess =  4 
+
+    trait = education_stewardship_2
+    trait = callous
+    trait = shy
+    trait = deceitful
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4749.1.1 = {
+        birth = yes
+        add_pressed_claim = k_fermanagh
+    }
+}
+650020 = {
+    name = "Pasgen"
+    dynasty =  148 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  9 
+    martial =  3 
+    stewardship =  1 
+    intrigue =  11 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_stewardship_1 
+    trait = humble
+    trait = arbitrary
+    trait = generous
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4777.1.1 = {
+        birth = yes
+    }
+}
+650021 = {
+    name = "Richwin"
+    dynasty =  148 
+    religion = the_old_gods
+    culture = luighne 
+
+    diplomacy =  10 
+    martial =  5 
+    stewardship =  6 
+    intrigue =  5 
+    learning =  3 
+    prowess =  9 
+
+    trait = education_stewardship_2
+    trait = impatient
+    trait = gluttonous
+    trait = ambitious
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4768.1.1 = {
+        birth = yes
+    }
+}

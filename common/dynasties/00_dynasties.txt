@@ -387,6 +387,11 @@
 	culture = "underground_fomorians"
 }
 
+115 = {
+	name = "Mac Sergil"
+	culture = "underground_fomorians"
+}
+
 #MILESIANS#
 43 = {
 	name = "Eber Finn"
@@ -578,4 +583,170 @@
 103 = {
 	name = "Mac Nuin"
 	culture = "bell_beakers"
+}
+
+#HUMANS#
+116 = {
+	name = "Uais"
+	culture = "dal_riata"
+}
+
+117 = {
+	name = "Tirech"
+	culture = "dal_riata"
+}
+
+118 = {
+	name = "Mugmedon"
+	culture = "dal_riata"
+}
+
+119 = {
+	name = "Mac Fiadig"
+	culture = "dal_riata"
+}
+
+120 = {
+	name = "Mac Neill"
+	culture = "dal_naraide"
+}
+
+121 = {
+	name = "Molt"
+	culture = "dal_naraide"
+}
+
+122 = {
+	name = "Mac Lóegairi"
+	culture = "dal_naraide"
+}
+
+123 = {
+	name = "Mac Ercae"
+	culture = "dal_naraide"
+}
+
+124 = {
+	name = "Máelgarb"
+	culture = "ui_eachach_coba"
+}
+
+125 = {
+	name = "Mac Cerbaill"
+	culture = "ui_eachach_coba"
+}
+
+126 = {
+	name = "Mac Sétnai"
+	culture = "ui_eachach_coba"
+}
+
+127 = {
+	name = "Mac Ninneda"
+	culture = "ui_eachach_coba"
+}
+
+128 = {
+	name = "Mac Ainmuirech"
+	culture = "ui_eachach_coba"
+}
+
+129 = {
+	name = "Rímid"
+	culture = "ui_eachach_coba"
+}
+
+130 = {
+	name = "Uaridnach"
+	culture = "ui_eachach_coba"
+}
+
+131 = {
+	name = "Menn"
+	culture = "dal_fiatach"
+}
+
+132 = {
+	name = "Fledach"
+	culture = "dal_fiatach"
+}
+
+133 = {
+	name = "Mac Írgalaig"
+	culture = "dal_fiatach"
+}
+
+134 = {
+	name = "Mac Loingsig"
+	culture = "dal_fiatach"
+}
+
+135 = {
+	name = "Midi"
+	culture = "sogain "
+}
+
+136 = {
+	name = "Frossach"
+	culture = "sogain "
+}
+
+137 = {
+	name = "Oirdnide"
+	culture = "sogain "
+}
+
+138 = {
+	name = "Mac Donnchada"
+	culture = "sogain "
+}
+
+139 = {
+	name = "Mac Crimthainn"
+	culture = "sogain "
+}
+
+140 = {
+	name = "Sinna"
+	culture = "sogain "
+}
+
+141 = {
+	name = "Glúndub"
+	culture = "luighne "
+}
+
+142 = {
+	name = "Cnogba"
+	culture = "luighne "
+}
+
+143 = {
+	name = "Boru"
+	culture = "luighne "
+}
+
+144 = {
+	name = "Mac Briain"
+	culture = "luighne "
+}
+
+145 = {
+	name = "Ua Lochlainn"
+	culture = "luighne "
+}
+
+146 = {
+	name = "Ua Conchobair"
+	culture = "luighne "
+}
+
+147 = {
+	name = "Mac Léti"
+	culture = "luighne "
+}
+
+148 = {
+	name = "Ruad"
+	culture = "luighne "
 }
