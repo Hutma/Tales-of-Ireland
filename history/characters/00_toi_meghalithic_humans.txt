@@ -1,5 +1,5 @@
-800000 = {
-    name = "Beith "
+ï»¿800000 = {
+    name = "BeithÂ "
     dynasty =  94 
     religion = fomorian_worship
     culture = newgrange_builders
@@ -481,7 +481,7 @@
     }
 }
 850004 = {
-    name = "Ebad "
+    name = "EbadÂ "
     dynasty =  98 
     religion = newgrange_faith
     culture = bell_beakers
@@ -517,7 +517,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -602,7 +602,7 @@
     }
 }
 850009 = {
-    name = "Ifín"
+    name = "IfÃ­n"
     dynasty =  94 
     religion = megalithic_de_danann_worship
     culture = bell_beakers
@@ -626,7 +626,7 @@
     }
 }
 850010 = {
-    name = "Straiph "
+    name = "StraiphÂ "
     dynasty =  96 
     religion = megalithic_de_danann_worship
     culture = bell_beakers
@@ -650,7 +650,7 @@
     }
 }
 850011 = {
-    name = "Gort "
+    name = "GortÂ "
     dynasty =  99 
     religion = newgrange_faith
     culture = bell_beakers

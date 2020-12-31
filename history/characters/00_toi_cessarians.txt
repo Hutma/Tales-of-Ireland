@@ -1,5 +1,5 @@
-100000 = {
-    name = 'Fintac'
+﻿100000 = {
+    name = "Fintac"
     dynasty =  1 
     religion = first_men
     culture = cessair_descendants
@@ -23,7 +23,7 @@
     }
 }
 100001 = {
-    name = 'Bith'
+    name = "Bith"
     dynasty =  2 
     religion = first_men
     culture = cessair_descendants
@@ -47,7 +47,7 @@
     }
 }
 100002 = {
-    name = 'Ladra'
+    name = "Ladra"
     dynasty =  3 
     religion = first_men
     culture = cessair_descendants
@@ -71,7 +71,7 @@
     }
 }
 100003 = {
-    name = 'Cessair'
+    name = "Cessair"
     dynasty =  4 
     religion = first_men
     culture = cessair_descendants
@@ -96,7 +96,7 @@
     }
 }
 100004 = {
-    name = 'Finnsnechtae'
+    name = "Finnsnechtae"
     dynasty =  5 
     religion = first_men
     culture = cessair_descendants
@@ -120,7 +120,7 @@
     }
 }
 100005 = {
-    name = 'Congal'
+    name = "Congal"
     dynasty =  6 
     religion = first_men
     culture = cessair_descendants
@@ -146,7 +146,7 @@
     }
 }
 100006 = {
-    name = 'Tressach'
+    name = "Tressach"
     dynasty =  6 
     religion = first_men
     culture = cessair_descendants
@@ -172,7 +172,7 @@
     }
 }
 100007 = {
-    name = 'Uargal'
+    name = "Uargal"
     dynasty =  6 
     religion = cult_of_life
     culture = cessair_descendants
@@ -198,7 +198,7 @@
     }
 }
 100008 = {
-    name = 'Guthela'
+    name = "Guthela"
     dynasty =  6 
     religion = cult_of_life
     culture = cessair_descendants
@@ -225,7 +225,7 @@
     }
 }
 101001 = {
-    name = 'Fintac'
+    name = "Fintac"
     dynasty =  6 
     religion = first_men
     culture = cessair_descendants
@@ -254,7 +254,7 @@
     }
 }
 101002 = {
-    name = 'Feradach'
+    name = "Feradach"
     dynasty =  6 
     religion = cult_of_life
     culture = cessair_descendants
@@ -283,7 +283,7 @@
     }
 }
 102001 = {
-    name = 'Drust'
+    name = "Drust"
     dynasty =  6 
     religion = first_men
     culture = cessair_descendants

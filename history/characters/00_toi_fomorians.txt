@@ -1,4 +1,4 @@
-450100 = {
+ï»¿450100 = {
     name = "Balor"
     dynasty =  104 
     religion = dark_gods
@@ -467,7 +467,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -709,7 +709,7 @@
     learning =  3 
     prowess =  10 
 
-    trait = education_martial_1 
+    trait = education_martial_1Â 
     trait = shy
     trait = lazy
     trait = deceitful

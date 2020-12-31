@@ -1,4 +1,4 @@
-610000 = {
+ï»¿610000 = {
     name = "Muirchertach"
     dynasty =  116 
     religion = sea_dwellers
@@ -524,7 +524,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -790,7 +790,7 @@
 
     health =  2 
 
-    trait = education_martial_1 
+    trait = education_martial_1Â 
     trait = shy
     trait = lazy
     trait = deceitful
@@ -968,7 +968,7 @@
     learning =  12 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = fickle
     trait = gluttonous
     trait = forgiving
@@ -1404,7 +1404,7 @@
     learning =  1 
     prowess =  5 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = humble
     trait = arbitrary
     trait = generous

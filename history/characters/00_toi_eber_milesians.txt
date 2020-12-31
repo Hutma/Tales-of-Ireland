@@ -1,5 +1,5 @@
-250000 = {
-    name = "Ér"
+ï»¿250000 = {
+    name = "Ã‰r"
     dynasty =  43 
     religion = milesian_paganism
     culture = eber_milesians
@@ -50,7 +50,7 @@
     }
 }
 250002 = {
-    name = "Ferón "
+    name = "FerÃ³nÂ "
     dynasty =  44 
     religion = milesian_paganism
     culture = eber_milesians
@@ -76,7 +76,7 @@
     }
 }
 250003 = {
-    name = "Fénius "
+    name = "FÃ©niusÂ "
     dynasty =  45 
     religion = milesian_paganism
     culture = eber_milesians
@@ -100,7 +100,7 @@
     }
 }
 250004 = {
-    name = "Nél"
+    name = "NÃ©l"
     dynasty =  46 
     religion = milesian_paganism
     culture = eber_milesians
@@ -126,7 +126,7 @@
     }
 }
 250005 = {
-    name = "Bérla "
+    name = "BÃ©rlaÂ "
     dynasty =  47 
     religion = milesian_paganism
     culture = eber_milesians

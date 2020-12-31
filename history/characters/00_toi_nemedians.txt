@@ -1,4 +1,4 @@
-700000 = {
+﻿700000 = {
     name = "Nemed"
     dynasty =  85 
     religion = scythian_heritage
@@ -272,7 +272,7 @@
     }
 }
 780002 = {
-    name = "Fergus�"
+    name = "Fergus "
     dynasty =  92 
     religion = scythian_heritage
     culture = ennell_nemedians

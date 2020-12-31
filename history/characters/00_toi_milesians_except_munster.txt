@@ -1,5 +1,5 @@
-260000 = {
-    name = "Lóegaire "
+ï»¿260000 = {
+    name = "LÃ³egaire"
     dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -25,7 +25,7 @@
     }
 }
 260001 = {
-    name = "Cobthach "
+    name = "Cobthach"
     dynasty =  71 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -51,7 +51,7 @@
     }
 }
 260002 = {
-    name = "Ailill "
+    name = "Ailill"
     dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -103,7 +103,7 @@
     }
 }
 260004 = {
-    name = "Mug "
+    name = "Mug"
     dynasty =  60 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -127,7 +127,7 @@
     }
 }
 260005 = {
-    name = "Cobthach "
+    name = "Cobthach"
     dynasty =  61 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -175,7 +175,7 @@
     }
 }
 260007 = {
-    name = "Óengus"
+    name = "Ã“engus"
     dynasty =  63 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -199,7 +199,7 @@
     }
 }
 260008 = {
-    name = "Fer "
+    name = "Fer"
     dynasty =  63 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -223,7 +223,7 @@
     }
 }
 260009 = {
-    name = "Connla "
+    name = "Connla"
     dynasty =  64 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -247,7 +247,7 @@
     }
 }
 260010 = {
-    name = "Ailill "
+    name = "Ailill"
     dynasty =  64 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -297,7 +297,7 @@
     }
 }
 260012 = {
-    name = "Eochaid "
+    name = "Eochaid"
     dynasty =  65 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -323,7 +323,7 @@
     }
 }
 261000 = {
-    name = "Fergus "
+    name = "Fergus"
     dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -350,7 +350,7 @@
     }
 }
 261001 = {
-    name = "Nia "
+    name = "Nia"
     dynasty =  65 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -377,7 +377,7 @@
     }
 }
 265000 = {
-    name = "Meilge "
+    name = "Meilge"
     dynasty =  59 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -403,7 +403,7 @@
     }
 }
 265001 = {
-    name = "Énna "
+    name = "Ã‰nna"
     dynasty =  61 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -455,7 +455,7 @@
     }
 }
 265003 = {
-    name = "Rudraige "
+    name = "Rudraige"
     dynasty =  63 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -504,7 +504,7 @@
     }
 }
 265005 = {
-    name = "Finnat "
+    name = "Finnat"
     dynasty =  64 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -526,7 +526,7 @@
     }
 }
 265006 = {
-    name = "Bresal "
+    name = "Bresal"
     dynasty =  65 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -538,7 +538,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1Â 
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -552,7 +552,7 @@
     }
 }
 265007 = {
-    name = "Lugaid "
+    name = "Lugaid"
     dynasty =  65 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -578,7 +578,7 @@
     }
 }
 265008 = {
-    name = "Congal "
+    name = "Congal"
     dynasty =  65 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -624,7 +624,7 @@
     }
 }
 280000 = {
-    name = "Conall "
+    name = "Conall"
     dynasty =  66 
     religion = milesian_paganism
     culture = ir_milesians
@@ -648,7 +648,7 @@
     }
 }
 280001 = {
-    name = "Eochu "
+    name = "Eochu"
     dynasty =  67 
     religion = milesian_paganism
     culture = ir_milesians
@@ -672,7 +672,7 @@
     }
 }
 280002 = {
-    name = "Nuadu "
+    name = "Nuadu"
     dynasty =  68 
     religion = milesian_paganism
     culture = ir_milesians
@@ -696,7 +696,7 @@
     }
 }
 280003 = {
-    name = "Conaire "
+    name = "Conaire"
     dynasty =  69 
     religion = milesian_paganism
     culture = ir_milesians
@@ -720,7 +720,7 @@
     }
 }
 280004 = {
-    name = "Conchobar "
+    name = "Conchobar"
     dynasty =  66 
     religion = milesian_paganism
     culture = ir_milesians
@@ -744,7 +744,7 @@
     }
 }
 280005 = {
-    name = "Cairbre "
+    name = "Cairbre"
     dynasty =  69 
     religion = celtic_de_danann_worship
     culture = ir_milesians
@@ -783,7 +783,7 @@
     learning =  3 
     prowess =  10 
 
-    trait = education_martial_1 
+    trait = education_martial_1Â 
     trait = shy
     trait = lazy
     trait = deceitful
@@ -797,7 +797,7 @@
     }
 }
 281000 = {
-    name = "Mug "
+    name = "Mug"
     dynasty =  69 
     religion = celtic_de_danann_worship
     culture = ir_milesians

@@ -1,5 +1,5 @@
-400000 = {
-    name = "Cíocal"
+ï»¿400000 = {
+    name = "CÃ­ocal"
     dynasty =  15 
     religion = dark_gods
     culture = sea_fomorians
@@ -74,7 +74,7 @@
     }
 }
 400003 = {
-    name = "Conand "
+    name = "ConandÂ "
     dynasty =  16 
     religion = dark_gods
     culture = sea_fomorians
@@ -636,7 +636,7 @@
     }
 }
 400017 = {
-    name = "Conand "
+    name = "ConandÂ "
     dynasty =  18 
     religion = dark_gods
     culture = sea_fomorians

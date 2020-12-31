@@ -1,4 +1,4 @@
-300000 = {
+ï»¿300000 = {
     name = "Delgnat"
     dynasty =  10 
     religion = sons_of_the_ocean
@@ -58,7 +58,7 @@
     learning =  12 
     prowess =  10 
 
-    trait = education_martial_1 
+    trait = education_martial_1Â 
     trait = lazy
     trait = forgiving
     trait = forgiving
@@ -70,7 +70,7 @@
     }
 }
 300003 = {
-    name = "Partholón "
+    name = "PartholÃ³nÂ "
     dynasty =  13 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -228,7 +228,7 @@
     }
 }
 305000 = {
-    name = "Partholón "
+    name = "PartholÃ³nÂ "
     dynasty =  10 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -333,7 +333,7 @@
     }
 }
 350000 = {
-    name = "Partholón "
+    name = "PartholÃ³nÂ "
     dynasty =  58 
     religion = sons_of_the_ocean
     culture = the_plagued

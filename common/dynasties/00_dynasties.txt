@@ -750,3 +750,294 @@
 	name = "Ruad"
 	culture = "luighne "
 }
+
+149 = {
+	name = "Cláiringnech"
+	culture = "conmaicne"
+}
+
+150 = {
+	name = "Sálbuide"
+	culture = "conmaicne"
+}
+
+151 = {
+	name = "Mac Róich"
+	culture = "conmaicne"
+}
+
+152 = {
+	name = "Mac Nessa"
+	culture = "conmaicne"
+}
+
+153 = {
+	name = "Mac Conchobar"
+	culture = "ui_maine"
+}
+
+154 = {
+	name = "Finn"
+	culture = "ui_maine"
+}
+
+155 = {
+	name = "Mac Conrach"
+	culture = "ui_maine"
+}
+
+156 = {
+	name = "Mac Rochride"
+	culture = "ui_maine"
+}
+
+157 = {
+	name = "Tireach"
+	culture = "ui_maine"
+}
+
+158 = {
+	name = "Mac Fedlimid"
+	culture = "ui_maine"
+}
+
+159 = {
+	name = "Mac Imchad"
+	culture = "gaileanga"
+}
+
+160 = {
+	name = "Mac Dallan"
+	culture = "gaileanga"
+}
+
+161 = {
+	name = "Muinderg "
+	culture = "gaileanga"
+}
+
+162 = {
+	name = "Mac Muiredaig"
+	culture = "gaileanga"
+}
+
+163 = {
+	name = "Mac Caolbad"
+	culture = "gaileanga"
+}
+
+164 = {
+	name = "Mac Oengusso"
+	culture = "ui_enachglaiss"
+}
+
+165 = {
+	name = "Ibdaig"
+	culture = "ui_bairrche"
+}
+
+166 = {
+	name = "Mac Cairell"
+	culture = "ui_bairrche"
+}
+
+167 = {
+	name = "Mac Cairill"
+	culture = "ui_bairrche"
+}
+
+168 = {
+	name = "Mac Suibni"
+	culture = "ui_bairrche"
+}
+
+169 = {
+	name = "Mac Báetáin"
+	culture = "ui_bairrche"
+}
+
+170 = {
+	name = "Mac Demmáin"
+	culture = "ui_bairrche"
+}
+
+171 = {
+	name = "Mac Sgánnail"
+	culture = "ui_bairrche"
+}
+
+172 = {
+	name = "Mac Fiachnai"
+	culture = "ui_bairrche"
+}
+
+173 = {
+	name = "Mac Máele"
+	culture = "ui_bairrche"
+}
+
+174 = {
+	name = "Mac Dúnchada"
+	culture = "ui_failge"
+}
+
+175 = {
+	name = "Mac Blathmaic"
+	culture = "ui_failge"
+}
+
+176 = {
+	name = "Mac Dúngail Eilni"
+	culture = "ui_failge"
+}
+
+177 = {
+	name = "Mac Bécce"
+	culture = "ui_failge"
+}
+
+178 = {
+	name = "Mac Indrechtaig"
+	culture = "ui_failge"
+}
+
+179 = {
+	name = "Mac Fiachnai"
+	culture = "ui_failge"
+}
+
+180 = {
+	name = "Mac Eochada"
+	culture = "ui_failge"
+}
+
+181 = {
+	name = "Mac Muiredaig"
+	culture = "ui_failge"
+}
+
+182 = {
+	name = "Mac Loingsig"
+	culture = "ui_failge"
+}
+
+183 = {
+	name = "Mac Ainbítha"
+	culture = "ui_failge"
+}
+
+184 = {
+	name = "Mac Lethlobair"
+	culture = "loigis"
+}
+
+185 = {
+	name = "Mac Eochocáin"
+	culture = "loigis"
+}
+
+186 = {
+	name = "Mac Cinn Etig"
+	culture = "loigis"
+}
+
+187 = {
+	name = "Mac Ardgail"
+	culture = "loigis"
+}
+
+188 = {
+	name = "Ua Máel Ruanaid"
+	culture = "loigis"
+}
+
+189 = {
+	name = "Ua Mathgamna"
+	culture = "loigis"
+}
+
+190 = {
+	name = "Mac Duinn Sléibe"
+	culture = "loigis"
+}
+
+191 = {
+	name = "Aulom"
+	culture = "osraighe"
+}
+
+192 = {
+	name = "Mac Con"
+	culture = "osraighe"
+}
+
+193 = {
+	name = "Mór"
+	culture = "osraighe"
+}
+
+194 = {
+	name = "Muillethan"
+	culture = "osraighe"
+}
+
+195 = {
+	name = "Flann Bec"
+	culture = "osraighe"
+}
+
+196 = {
+	name = "Mac Fidaig"
+	culture = "osraighe"
+}
+
+197 = {
+	name = "Mac Ailello Thassaig"
+	culture = "osraighe"
+}
+
+198 = {
+	name = "Mac Cuirc"
+	culture = "osraighe"
+}
+
+199 = {
+	name = "Mac Nad Froích"
+	culture = "osraighe"
+}
+
+200 = {
+	name = "Mac Óengusa"
+	culture = "osraighe"
+}
+
+#TUATHA DE DANANN
+201 = {
+	name = "Ollathair"
+	culture = "de_danann"
+}
+
+202 = {
+	name = "Airgetlám"
+	culture = "de_danann"
+}
+
+203 = {
+	name = "Lámfada"
+	culture = "de_danann"
+}
+
+204 = {
+	name = "Tuireann"
+	culture = "de_danann"
+}
+
+205 = {
+	name = "Dunany"
+	culture = "de_danann"
+}
+
+206 = {
+	name = "Gobae"
+	culture = "de_danann"
+}

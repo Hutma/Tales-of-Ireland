@@ -1,4 +1,4 @@
-450000 = {
+﻿450000 = {
     name = "Cethlenn"
     dynasty =  36 
     religion = dark_gods
@@ -231,7 +231,7 @@
     }
 }
 450009 = {
-    name = "Omna�"
+    name = "Omna "
     dynasty =  39 
     religion = dark_gods
     culture = underground_fomorians
