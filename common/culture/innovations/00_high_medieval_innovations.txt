@@ -41,17 +41,6 @@ innovation_hoardings = {
 	flag = high_medieval_era_regular
 }
 
-innovation_trebuchet = {
-	group = culture_group_military
-	culture_era = culture_era_high_medieval
-	icon = @siege_weapons
-
-	unlock_maa = trebuchet
-
-	flag = global_regular
-	flag = high_medieval_era_regular
-}
-
 innovation_castle_baileys = {
 	group = culture_group_military
 	culture_era = culture_era_high_medieval
@@ -100,7 +89,6 @@ innovation_advanced_bowmaking = {
 	culture_era = culture_era_high_medieval
 	icon = @weapons_and_armor_01
 
-	unlock_maa = crossbowmen
 	maa_upgrade = {
 		type = archers
 		damage = 3

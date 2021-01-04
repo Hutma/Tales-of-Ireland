@@ -42,17 +42,6 @@ innovation_motte = {
 	flag = tribal_era_regular
 }
 
-innovation_catapult = {
-	group = culture_group_military
-	culture_era = culture_era_tribal
-	icon = @siege_weapons
-
-	unlock_maa = onager
-
-	flag = global_regular
-	flag = tribal_era_regular
-}
-
 innovation_barracks = {
 	group = culture_group_military
 	culture_era = culture_era_tribal
@@ -86,17 +75,6 @@ innovation_bannus = {
 	modifier = {
 		levy_reinforcement_rate = 0.15
 	}
-
-	flag = global_regular
-	flag = tribal_era_regular
-}
-
-innovation_quilted_armor = {
-	group = culture_group_military
-	culture_era = culture_era_tribal
-	icon = @weapons_and_armor_02
-
-	unlock_maa = armored_footmen
 
 	flag = global_regular
 	flag = tribal_era_regular
