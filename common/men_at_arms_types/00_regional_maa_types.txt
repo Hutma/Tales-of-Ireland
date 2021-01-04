@@ -63,6 +63,7 @@ bowmen_leinster = {
 	
 	stack = 25
 	ai_quality = { value = culture_ai_weight_archers }
+	icon = bowmen
 }
 
 light_horsemen_leinster = {
@@ -249,6 +250,7 @@ bowmen_connacht = {
 	
 	stack = 25
 	ai_quality = { value = culture_ai_weight_archers }
+	icon = bowmen
 }
 
 light_horsemen_connacht = {
@@ -434,6 +436,7 @@ bowmen_munster = {
 	
 	stack = 25
 	ai_quality = { value = culture_ai_weight_archers }
+	icon = bowmen
 }
 
 light_horsemen_munster = {
@@ -617,6 +620,7 @@ bowmen_ulster = {
 	
 	stack = 25
 	ai_quality = { value = culture_ai_weight_archers }
+	icon = bowmen
 }
 
 light_horsemen_ulster = {

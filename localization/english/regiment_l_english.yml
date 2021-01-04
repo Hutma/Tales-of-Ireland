@@ -52,10 +52,6 @@
 
  #Siege MaA
  siege_weapon:2 "[siege_weapons|E]"
- onager:0 "Onagers"
- mangonel:0 "Mangonels"
- trebuchet:0 "Trebuchets"
- bombard:0 "Bombards"
  
  #Regional MaA
  light_footmen_leinster:0 "Leinster Light Footmen"
@@ -100,4 +96,3 @@
  armored_footmen_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
  pikemen_unit_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
  armored_horsemen_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
- crossbowmen_flavor:0 "#F Though slow to reload, crossbows are easy to use and fire bolts which can pierce through most armor at a good range.#!"
