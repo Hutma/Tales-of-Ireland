@@ -16,6 +16,7 @@ seasons = "seasons.txt"
 #############
 # SEA ZONES
 #############
+sea_zones = RANGE { 4337 4412 }
 
 ###############
 # MAJOR RIVERS
@@ -28,6 +29,7 @@ river_provinces = LIST { 2546 }
 ########
 # LAKES
 ########
+#lakes = RANGE {}
 
 #####################
 # IMPASSABLE TERRAIN
