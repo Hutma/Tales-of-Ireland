@@ -28,3 +28,72 @@
 @elephant = "gfx/interface/icons/culture_innovations/innovation_elephant.dds"
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
+
+#REGIONAL MAA
+innovation_maa_leinster = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_leinster
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_leinster
+	unlock_maa = bowmen_leinster
+	unlock_maa = light_horsemen_leinster
+	unlock_maa = pikemen_unit_leinster
+	unlock_maa = armored_footmen_leinster
+	unlock_maa = armored_horsemen_leinster
+	
+	flag = global_maa
+}
+
+innovation_maa_connacht = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_connacht
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_connacht
+	unlock_maa = bowmen_connacht
+	unlock_maa = light_horsemen_connacht
+	unlock_maa = pikemen_unit_connacht
+	unlock_maa = armored_footmen_connacht
+	unlock_maa = armored_horsemen_connacht
+	
+	flag = global_maa
+}
+
+innovation_maa_munster = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_munster
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_munster
+	unlock_maa = bowmen_munster
+	unlock_maa = light_horsemen_munster
+	unlock_maa = pikemen_unit_munster
+	unlock_maa = armored_footmen_munster
+	unlock_maa = armored_horsemen_munster
+	
+	flag = global_maa
+}
+
+innovation_maa_ulster = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_ulster
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_ulster
+	unlock_maa = bowmen_ulster
+	unlock_maa = light_horsemen_ulster
+	unlock_maa = pikemen_unit_ulster
+	unlock_maa = armored_footmen_ulster
+	unlock_maa = armored_horsemen_ulster
+	
+	flag = global_maa
+}

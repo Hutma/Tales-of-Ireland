@@ -793,3 +793,52 @@
         birth = yes
     }
 }
+
+450133 = {
+    name = "Oshypel"
+    dynasty =  115 
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+450134 = {
+    name = "Tyueykezhut"
+    dynasty =  107
+    religion = dark_gods
+    culture = underground_fomorians
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fomorian
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
