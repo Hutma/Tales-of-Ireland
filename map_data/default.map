@@ -16,7 +16,7 @@ seasons = "seasons.txt"
 #############
 # SEA ZONES
 #############
-sea_zones = RANGE { 4337 4412 }
+sea_zones = RANGE { 4337 4414 }
 
 ###############
 # MAJOR RIVERS
