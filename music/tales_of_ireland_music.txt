@@ -1,0 +1,107 @@
+####Music TALES OF IRELAND####
+track1 = {
+	music = "file:/music/Vindsvept/Castle_in_the_Sky.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track2 = {
+	music = "file:/music/Vindsvept/Dryad_s_Dream.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track3 = {
+	music = "file:/music/Vindsvept/From_Afar.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track4 = {
+	music = "file:/music/Vindsvept/Into_Silence_two.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track5 = {
+	music = "file:/music/Vindsvept/Into_the_Unknown.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track6 = {
+	music = "file:/music/Vindsvept/Keeper_of_the_Forest.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track7= {
+	music = "file:/music/Vindsvept/Leaving_the_Dream.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track8 = {
+	music = "file:/music/Vindsvept/Night_of_the_Fae.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track9= {
+	music = "file:/music/Vindsvept/Nightfall.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track10 = {
+	music = "file:/music/Vindsvept/Riversong.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track11 = {
+	music = "file:/music/Vindsvept/Spirit_Bond.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track12 = {
+	music = "file:/music/Vindsvept/The_Story_So_Far.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+track13 = {
+	music = "file:/music/Vindsvept/Windsong_Cavern.mp3"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes 
+	volume = 0.4
+}
+
+
+###end TALES OF IRELAND mod ###
