@@ -99,7 +99,10 @@
  warriors_of_tara_flavor:0 "They go to battle with the certainty of victory, they consider themself as the only rightgeous warriors of Ireland.#!"
  newgrange_guardians:0 "Newgrange guardians"
  newgrange_guardians_flavor:0 "These fighters will defend their holy megaliths and their homes with an unmatched ferocity.#!"
- 
+ kern_warriors:0 "Kern warriors"
+ kern_warriors_flavor:0 "The Kerns are the emblematic warriors of Ireland and they deserve it.#!"
+ kern_cavalry:0 "Kern nobles"
+ kern_cavalry_flavor:0 "The nobility also coounts Kerns in his rank, they can afford to use a horse and smash through enmy lines.#!"
  #Special MaA
  house_guard:0 "House Guard"
  house_guard_flavor:0 "#F This elite regiment is in the service of a specific Dynasty. The warriors are hand-picked from the most loyal subjects.#!"

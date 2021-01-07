@@ -210,3 +210,21 @@ innovation_maa_meghalithic = {
 	unlock_maa = newgrange_guardians
 	
 }
+
+innovation_maa_human = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_cruithin_group
+		this.culture_group = culture_group:toi_erainn_group
+		this.culture_group = culture_group:toi_laigin_group
+	}
+
+	unlock_maa = kern_warriors
+	unlock_maa = kern_cavalry
+	
+}
+
