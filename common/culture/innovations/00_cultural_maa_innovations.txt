@@ -29,8 +29,8 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#REGIONAL MAA
-innovation_maa_leinster = {
+#Regional MaA
+innovation_maa_leinster_fix = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
 	region = region_leinster
@@ -47,7 +47,7 @@ innovation_maa_leinster = {
 	flag = global_maa
 }
 
-innovation_maa_connacht = {
+innovation_maa_connacht_fix = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
 	region = region_connacht
@@ -64,7 +64,24 @@ innovation_maa_connacht = {
 	flag = global_maa
 }
 
-innovation_maa_munster = {
+innovation_maa_ulster_fix = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_ulster
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_ulster
+	unlock_maa = bowmen_ulster
+	unlock_maa = light_horsemen_ulster
+	unlock_maa = pikemen_unit_ulster
+	unlock_maa = armored_footmen_ulster
+	unlock_maa = armored_horsemen_ulster
+	
+	flag = global_maa
+}
+
+innovation_maa_munster_fix = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
 	region = region_munster
@@ -81,19 +98,115 @@ innovation_maa_munster = {
 	flag = global_maa
 }
 
-innovation_maa_ulster = {
+#Culture MaA
+innovation_maa_fomorian = {
 	group = culture_group_regional
-	culture_era = culture_era_tribal
-	region = region_ulster
-	icon = @maa_01
-
-
-	unlock_maa = light_footmen_ulster
-	unlock_maa = bowmen_ulster
-	unlock_maa = light_horsemen_ulster
-	unlock_maa = pikemen_unit_ulster
-	unlock_maa = armored_footmen_ulster
-	unlock_maa = armored_horsemen_ulster
+	culture_era = culture_era_early_medieval
 	
-	flag = global_maa
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_fomorian_group
+	}
+
+	unlock_maa = bloody_warriors
+	
+}
+
+innovation_maa_cessarian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_cessarian_group
+	}
+
+	unlock_maa = land_guardians
+	
+}
+
+innovation_maa_partholonian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_partholonian_group
+	}
+
+	unlock_maa = travelers
+	
+}
+
+innovation_maa_nemedian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_nemedian_group
+	}
+
+	unlock_maa = nemedian_famer
+	
+}
+
+innovation_maa_fir_bolog = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_fir_bolg_group
+	}
+
+	unlock_maa = the_brave_ones
+	
+}
+
+innovation_maa_de_danann = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_de_danann_group
+	}
+
+	unlock_maa = ancient_heroes
+	
+}
+
+innovation_maa_milesian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_milesian_group
+	}
+
+	unlock_maa = warriors_of_tara
+	
+}
+
+innovation_maa_meghalithic = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_meghalithic_group
+	}
+
+	unlock_maa = the_brave_ones
+	
 }

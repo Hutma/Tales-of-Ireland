@@ -1,17 +1,47 @@
 ﻿l_english:
 
  #Military
- innovation_maa_leinster:0 "Warriors of Leinster"
- innovation_maa_leinster_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."
+ innovation_maa_leinster_fix:0 "Warriors of Leinster"
+ innovation_maa_leinster_fix_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."
  
- innovation_maa_connacht:0 "Warriors of Connacht"
- innovation_maa_connacht_desc:0 "For decades we have been fighting in the bogs of Connacht, we know how to use this swampy terrain to our advantage."
+ innovation_maa_connacht_fix:0 "Warriors of Connacht"
+ innovation_maa_connacht_fix_desc:0 "For decades we have been fighting in the bogs of Connacht, we know how to use this swampy terrain to our advantage."
  
- innovation_maa_munster:0 "Warriors of Munster"
- innovation_maa_munster_desc:0 "For decades we have been fighting in the hills of Munster, we know how to use this unregular terrain to our advantage."
+ innovation_maa_munster_fix:0 "Warriors of Munster"
+ innovation_maa_munster_fix_desc:0 "For decades we have been fighting in the hills of Munster, we know how to use this unregular terrain to our advantage."
  
- innovation_maa_ulster:0 "Warriors of Ulster"
- innovation_maa_ulster_desc:0 "For decades we have been fighting in the forests of Ulster, we know how to use the woods to our advantage."
+ innovation_maa_ulster_fix:0 "Warriors of Ulster"
+ innovation_maa_ulster_fix_desc:0 "For decades we have been fighting in the forests of Ulster, we know how to use the woods to our advantage."
 
  innovation_men_at_arms:0 "Men-at-Arms"
  innovation_men_at_arms_desc:0 "Training and equipping standing armies that remain under the direct disposal of our rulers will be a stepping stone on the road to centralize our power."
+ 
+ innovation_maa_fomorian:0 "Bloody warriors"
+ innovation_maa_fomorian_desc:0 "Pour some blood on your warriors"
+
+ innovation_maa_cessarian: "Land guardians"
+ innovation_maa_cessarian_desc:0 "Give some land to guard"
+ 
+ innovation_maa_partholonian:0 "Travelers"
+ innovation_maa_partholonian_desc:0 "Wanna go somewhere?"
+ 
+ innovation_maa_nemedian:0 "Nemedian famer"
+ innovation_maa_nemedian_desc:0 "Work work"
+ 
+ innovation_maa_fir_bolog:0 "The Brave Ones"
+ innovation_maa_fir_bolog_desc:0 "Thou shall feel no fear"
+ 
+ innovation_maa_de_danann:0 "Ancient Heroes"
+ innovation_maa_de_danann_desc:0 "It takes quite a time to get your hero ancient, take care of them"
+ 
+ innovation_maa_milesian:0 "Warriors of Tara"
+ innovation_maa_milesian_desc:0 "Medics of Netto"
+ 
+ innovation_maa_meghalithic:0 "Newgrange guardians"
+ innovation_maa_meghalithic_desc:0 "I'm out of ideas"
+>>>>>>> 74332d3... Added localisation and innovations
+=======
+ 
+ innovation_maa_fomorian:0 "Bloody warriors"
+ innovation_maa_fomorian_desc:0 "Pour some blood on your warriors"
+>>>>>>> aa15867... to be squashed
