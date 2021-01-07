@@ -4,7 +4,7 @@ track1 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track4 = {
@@ -12,7 +12,7 @@ track4 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track5 = {
@@ -20,7 +20,7 @@ track5 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track6 = {
@@ -28,7 +28,7 @@ track6 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track7= {
@@ -36,7 +36,7 @@ track7= {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track8 = {
@@ -44,7 +44,7 @@ track8 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track9= {
@@ -52,7 +52,7 @@ track9= {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track10 = {
@@ -60,7 +60,7 @@ track10 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track11 = {
@@ -68,7 +68,7 @@ track11 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track12 = {
@@ -76,7 +76,7 @@ track12 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 track13 = {
@@ -84,7 +84,7 @@ track13 = {
 	weight = 20
 	mood = yes
 	can_be_interrupted = yes 
-	volume = 0.4
+	
 }
 
 
