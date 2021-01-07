@@ -1,1 +1,219 @@
-﻿
+﻿#copied from base game file
+@cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+
+#Bloody warriors
+bloody_warriors = {
+	type = heavy_infantry
+	
+	damage = 45
+	toughness = 26
+	pursuit = 16
+	screen = 0
+	
+	terrain_bonus = {
+		forest = { toughness = 4 pursuit = 4 }
+	}
+
+	counters = {
+		pikemen = 1
+	}
+
+	buy_cost = { gold = 100 }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = heavy_infantry
+}
+
+#Land guardians
+land_guardians = {
+	type = archers
+	
+	damage = 25
+	toughness = 10
+	pursuit = 0
+	screen = 25
+	
+	terrain_bonus = {
+		plains = { toughness = 10 screen = 5 }
+		forest = { toughness = 10 screen = 5 }
+	}
+
+	counters = {
+		skirmishers = 1
+		light_cavalry = 1
+	}
+
+	buy_cost = { gold = 50 }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = bowmen
+}
+
+#Travelers
+travelers = {
+	type = light_cavalry
+	
+	damage = 22
+	toughness = 15
+	pursuit = 60
+	screen = 20
+	
+	terrain_bonus = {
+		plains = { damage = 10 }
+	}
+
+	counters = {
+		skirmishers = 1
+		archers = 1
+	}
+
+	buy_cost = { gold = 85 }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = light_cavalry
+}
+
+#Nemedian famer
+nemedian_famer = {
+	type = skirmishers
+	
+	damage = 20
+	toughness = 20
+	pursuit = 20
+	screen = 16
+	
+	terrain_bonus = {
+		farmlands = { damage = 10 toughness = 10 pursuit = 10 screen = 10 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+	}
+
+	buy_cost = { gold = 50 }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = skirmishers
+}
+
+#The Brave Ones
+the_brave_ones = {
+	type = heavy_infantry
+	
+	damage = 50
+	toughness = 25
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		hills = { damage = 5 toughness = 5 }
+	}
+
+	counters = {
+		pikemen = 1
+	}
+
+	buy_cost = { gold = 100 }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = heavy_infantry
+}
+
+#Ancient Heroes
+ancient_heroes = {
+	type = heavy_infantry
+	
+	damage = 40
+	toughness = 38
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		plains = { toughness = 5 }
+	}
+
+	counters = {
+		pikemen = 1
+	}
+
+	buy_cost = { gold = 110 }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = heavy_infantry
+}
+
+#Warriors of Tara
+warriors_of_tara = {
+	type = pikemen
+	
+	damage = 24
+	toughness = 26
+	pursuit = 2
+	screen = 2
+	
+	terrain_bonus = {
+		plains = { damage = 5 toughness = 5 }
+		hills = { damage = 5 toughness = 5 }
+		forest = { damage = 5 toughness = 5 }
+		wetlands = { damage = 5 toughness = 5 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 1
+	}
+
+	buy_cost = { gold = 80 }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = pikemen
+}
+
+#Newgrange guardians
+newgrange_guardians = {
+	type = skirmishers
+	
+	damage = 10
+	toughness = 20
+	pursuit = 10
+	screen = 16
+	
+	terrain_bonus = {
+		hills = { damage = 10 toughness = 10 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+	}
+
+	buy_cost = { gold = 35 }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	
+	stack = 25
+	ai_quality = { value = cultural_maa_extra_ai_score }
+	icon = skirmishers
+}

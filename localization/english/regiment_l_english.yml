@@ -83,7 +83,22 @@
  armored_horsemen_ulster:0 "Ulster Chariots"
 
  #Cultural MaA
-
+ bloody_warriors:0 "Bloody warriors"
+ bloody_warriors_flavor:0 "Warriors of the Dark Gods, their brutality is unmatched.#!"
+ land_guardians:0 "Land guardians"
+ land_guardians_flavor:0 "The best archers there is. They know how to use every inch of the terrain to their advantage.#!"
+ travelers:0 "Travelers"
+ travelers_flavor:0 "Looking for eternal glory, they live to fight, explore and raid.#!"
+ nemedian_famer: "Nemedian famer"
+ nemedian_famer_flavor: "They know the earth and will never stand down before an opponent.#!"
+ the_brave_ones:0 "The Brave Ones"
+ the_brave_ones_flavor:0 "The elite of the Fir Bolgs, great champions among heroes.#!"
+ ancient_heroes:0 "Ancient Heroes"
+ ancient_heroes_flavor:0 "They have more experience in combat than anyone and are unbreakable, no spear or sword can reach them.#!"
+ warriors_of_tara:0 "Warriors of Tara"
+ warriors_of_tara_flavor:0 "They go to battle with the certainty of victory, they consider themself as the only rightgeous warriors of Ireland.#!"
+ newgrange_guardians:0 "Newgrange guardians"
+ newgrange_guardians_flavor:0 "These fighters will defend their holy megaliths and their homes with an unmatched ferocity.#!"
  
  #Special MaA
  house_guard:0 "House Guard"

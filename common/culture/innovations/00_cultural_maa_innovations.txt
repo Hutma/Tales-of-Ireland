@@ -97,3 +97,116 @@ innovation_maa_ulster = {
 	
 	flag = global_maa
 }
+
+#CULTURAL MAA
+innovation_maa_fomorian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_fomorian_group
+	}
+
+	unlock_maa = bloody_warriors
+	
+}
+
+innovation_maa_cessarian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_cessarian_group
+	}
+
+	unlock_maa = land_guardians
+	
+}
+
+innovation_maa_partholonian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_partholonian_group
+	}
+
+	unlock_maa = travelers
+	
+}
+
+innovation_maa_nemedian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_nemedian_group
+	}
+
+	unlock_maa = nemedian_famer
+	
+}
+
+innovation_maa_fir_bolog = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_fir_bolg_group
+	}
+
+	unlock_maa = the_brave_ones
+	
+}
+
+innovation_maa_de_danann = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_de_danann_group
+	}
+
+	unlock_maa = ancient_heroes
+	
+}
+
+innovation_maa_milesian = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_milesian_group
+	}
+
+	unlock_maa = warriors_of_tara
+	
+}
+
+innovation_maa_meghalithic = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_meghalithic_group
+	}
+
+	unlock_maa = newgrange_guardians
+	
+}
