@@ -6686,7 +6686,7 @@ d_tirkeeran = {
 
 #Derry
 c_derry = {
-              1.1.1 = { change_development_level = 12 }
+              1.1.1 = { change_development_level = 32 }
               4799.1.1 = {
                             holder = 1000000
               }
