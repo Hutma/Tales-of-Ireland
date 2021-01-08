@@ -477,8 +477,8 @@ NCombat = {
 	BASE_TOUGHNESS_TO_PURSUIT = 0.05				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
 	MINIMUM_PURSUIT_DAMAGE = 0.01					# High screen can't bring casualties below 1% in the pursuit phase
 	DISEMBARK_PENALTY_DAYS = 30						# How long does an army have a penalty after disembarking?
-	KNIGHT_DAMAGE_PER_PROWESS = 100					# How much "Damage" stat does a knight get per prowess?
-	KNIGHT_TOUGHNESS_PER_PROWESS = 10				# How much "Toughness" stat does a knight get per prowess?
+	KNIGHT_DAMAGE_PER_PROWESS = 30					# How much "Damage" stat does a knight get per prowess?
+	KNIGHT_TOUGHNESS_PER_PROWESS = 3				# How much "Toughness" stat does a knight get per prowess?
 	COMBAT_RESULT_MONTHS_TO_TIMEOUT = 12			# Combat results timeout after this many months
 }
 
@@ -544,8 +544,8 @@ NFleet = {
 }
 
 NRetreat = {
-	SHATTERED_RETREAT_PREFERRED_PROVINCES = 7
-	SHATTERED_RETREAT_MAX_PREFERRED_OFFSET_PENALTY = 7
+	SHATTERED_RETREAT_PREFERRED_PROVINCES = 5
+	SHATTERED_RETREAT_MAX_PREFERRED_OFFSET_PENALTY = 6
 	SHATTERED_RETREAT_OWN_REALM = 340
 	SHATTERED_RETREAT_OWN_SUBREALM = 60
 	SHATTERED_RETREAT_OWN_CAPITAL = 100
@@ -803,7 +803,7 @@ NCounty = {
 }
 
 NProvince = {
-	BASE_SUPPLY_LIMIT = 2000					# The unmodified base supply limit of a province
+	BASE_SUPPLY_LIMIT = 300					# The unmodified base supply limit of a province
 	BARONY_BUILDING_SLOTS = 4
 	COUNTY_BUILDING_SLOTS = 5
 	SUPPLY_PER_DEVELOPMENT = 20				# Each development adds this much sto the supply limit
@@ -867,8 +867,8 @@ NDomain = {
 	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 5	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
 	LEVIES_AT_ZERO_COUNTY_CONTROL = 0.5			# How many % levies do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
-	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 0.5		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
-	TAX_AT_MAX_COUNTY_DEVELOPMENT = 0.5			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 1.5		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	TAX_AT_MAX_COUNTY_DEVELOPMENT = 1.5			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
 }
 
 NFaction =
@@ -920,18 +920,18 @@ NCulture = {
 NMercenary = {
 	LEVELS = { 0 7 14 }						# Defines how many different sizes of mercenary companies are there and how many are spawned for a given culture
 											# The numbers correspond to numbers of counties of the culture. No company exists if the number is lower than the first value specified here.
-	HIRE_RANGE = 500						# The maximum distance of mercenaries that can be hired (capital to mercenary location)
-	LEVIES = { 400 800 1200 }				# The base numbers of levies for levels of mercenary bands
+	HIRE_RANGE = 1000						# The maximum distance of mercenaries that can be hired (capital to mercenary location)
+	LEVIES = { 50 100 300 }				# The base numbers of levies for levels of mercenary bands
 	MAA_REGIMENTS = { 1 2 3 }				# The number of MAA regiments for levels of mercenary bands
 	NUM_KNIGHTS = { 2 3 4 }					# The number of knights for levels of mercenary bands
-	MAA_REGIMENT_SIZES = { 300 300 300 }	# The base sizes of MAA regiments for levels of mercenary bands
+	MAA_REGIMENT_SIZES = { 38 38 38 }	# The base sizes of MAA regiments for levels of mercenary bands
 	
 	SIZE_INNOVATIONS_RATIO = 1.0			# How much are mercenary companies growing with the ratio of discovered to all cultural innovations of the culture. 1.0 means +100%
 											# if SIZE_INNOVATIONS_RATIO = 2, the mercenaries will be 3x their original size if all innovations are discovered
 	
 	HIRE_MONTHS = 36						# The length of the period mercenaries are hired for in months
 	
-	LEVY_COST_PER_100_SOLDIERS = 12.0		# The cost of the levy regiment part of mercenary companies, per 100 soldiers for better precision
+	LEVY_COST_PER_100_SOLDIERS = 84.0		# The cost of the levy regiment part of mercenary companies, per 100 soldiers for better precision
 	MAA_COST_RATIO = 0.5					# The cost of the MAA regiments of mercenary companies as a fraction of what those regiments cost when buying them
 	
 	ALLOWED_DEBT_MONTHS = 24				# How many months of monthly income in dept are characters allowed to have before being blocked from hiring mercenaries
@@ -944,21 +944,21 @@ NMercenary = {
 NHolyOrder = {
 	# In addition to the holding levies, a holy order has levies according to this formula:
 	# NUM_LEVIES_BASE + <num holdings> * NUM_LEVIES_PER_HOLDING
-	NUM_LEVIES_BASE = 500
-	NUM_LEVIES_PER_HOLDING = 200
+	NUM_LEVIES_BASE = 62
+	NUM_LEVIES_PER_HOLDING = 25
 
 	# The holy order starts out with NUM_MAA_BASE Men-At-Arms. These will always try to use the holy_order_maa defined in the religion, if any are available.
-	NUM_MAA_BASE = 200
+	NUM_MAA_BASE = 25
 
 	# The holy order also gets NUM_MAA_PER_HOLDING additional Men-At-Arms for each holding leased to it.
-	NUM_MAA_PER_HOLDING = 100
+	NUM_MAA_PER_HOLDING = 12
 	# The regiment type of these additional Men-At-Arms has a chance of RELIGION_MAA_RATIO % (multiplied by 100) to use a religious type, like NUM_MAA_BASE.
 	# Otherwise it will use a random type with the holy_order_fallback = yes flag.
 	RELIGION_MAA_RATIO = 0.7
 
 	PATRON_MIN_TIER = 4						# minimum tier for a ruler to be a patron of a holy order
 
-	LEVY_COST_PER_100_SOLDIERS = 5.0		# The piety cost of the levy regiment part of holy orders, per 100 soldiers for better precision
+	LEVY_COST_PER_100_SOLDIERS = 40.0		# The piety cost of the levy regiment part of holy orders, per 100 soldiers for better precision
 	MAA_COST_RATIO = 0.2					# The piety cost of the MAA regiments of holy orders as a fraction of what those regiments cost when buying them
 	PATRON_HIRE_COST_MULT = 0				# The patron pays only a fraction for hiring a holy order. Set to 0 to make it free.
 
