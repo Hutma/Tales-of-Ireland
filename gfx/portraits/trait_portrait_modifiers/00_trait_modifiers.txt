@@ -1058,6 +1058,24 @@ drunkard = {
 }
 
 #TALES OF IRELAND MOD
+fomorian = {
+	fomorian = {
+		traits = { fomorian }
+		dna_modifiers = {
+			color = {
+				gene = skin_color
+				mode = modify
+				y = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.1
+			}
+		}
+	}
+}
+
 tuatha_de_danann = {
 	tuatha_de_danann = {
 		traits = { tuatha_de_danann }
@@ -1065,9 +1083,8 @@ tuatha_de_danann = {
 			color = {
 				gene = skin_color
 				mode = modify
-				
-				x = -0.9
-				y = -0.9
+				x = -1.0
+				y = -1.0
 			}
 			morph = {
 				gene = age
@@ -1075,20 +1092,19 @@ tuatha_de_danann = {
 				template = no_aging
 				value = 1.0				
 			}
-		}
-	}
-}
-
-fomorian = {
-	traits = {
-		fomorian
-	}
-	dna_modifiers = {
-		morph = {
-			mode = replace
-			gene = complexion
-			template = complexion_ugly_1
-			value = 1.0
+			color = {
+				gene = eye_color
+				mode = modify
+					
+				x = 1.0
+				y = 1.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_eye_shut
+				value = 0.2
+				template = eye_shut_neg
+			}
 		}
 	}
 }

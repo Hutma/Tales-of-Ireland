@@ -16,21 +16,20 @@
 #######
 
 # Base
-@poor_tax_base = 0.125
-@normal_tax_base = 0.175
-@good_tax_base = 0.25
-@excellent_tax_base = 0.35
+@poor_tax_base = 0.1
+@normal_tax_base = 0.15
+@good_tax_base = 0.2
+@excellent_tax_base = 0.3
 
 @copper_mine_tax_base = 2
 @silver_mine_tax_base = 3
 @special_mine_tax_base = 5
 
 # We have four 'tax classes', each one has a better scale than the others.
-@poor_tax_scale_addition_per_tier = 0.1
-@normal_tax_scale_addition_per_tier = 0.13
-@good_tax_scale_addition_per_tier = 0.2
-@excellent_tax_scale_addition_per_tier = 0.3
-
+@poor_tax_scale_addition_per_tier = 0.08
+@normal_tax_scale_addition_per_tier = 0.1
+@good_tax_scale_addition_per_tier = 0.15
+@excellent_tax_scale_addition_per_tier = 0.23
 @copper_mine_tax_scale_addition_per_tier = 1.5
 @silver_mine_tax_scale_addition_per_tier = 2
 @special_mine_tax_scale_addition_per_tier = 3

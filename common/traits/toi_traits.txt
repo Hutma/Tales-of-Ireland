@@ -1,4 +1,4 @@
-﻿#racial traits
+﻿###RACE TRAITS###
 
 fomorian = {
 	index = 1000
@@ -1205,6 +1205,77 @@ three_quarter_megalith_human = {
 				desc = trait_pure_blooded_desc
 			}
 			desc = trait_pure_blooded_character_desc
+		}
+	}
+}
+
+
+###DUEL TRAITS###
+aggresive_fighter = {
+	index = 1030
+	
+	shown_in_ruler_designer = no
+	
+	opposites = {
+		defensive_fighter
+		cunning_fighter
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_aggressive_attacker_desc
+			}
+			desc = trait_aggressive_attacker_character_desc
+		}
+	}
+}
+
+defensive_fighter = {
+	index = 1031
+	
+	opposites = {
+		aggresive_fighter
+		cunning_fighter
+	}
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_unyielding_defender_desc
+			}
+			desc = trait_unyielding_defender_character_desc
+		}
+	}
+}
+
+cunning_fighter = {
+	index = 1032
+	
+	opposites = {
+		aggresive_fighter
+		defensive_fighter
+	}
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_flexible_leader_desc
+			}
+			desc = trait_flexible_leader_character_desc
 		}
 	}
 }
