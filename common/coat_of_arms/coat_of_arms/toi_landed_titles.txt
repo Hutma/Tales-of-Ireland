@@ -37,3 +37,251 @@ k_cork = {
 		texture = "k_cork_coa.dds"
 	}
 }
+
+k_waterford = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_waterford_coa.dds"
+	}
+}
+
+k_kerry = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kerry_coa.dds"
+	}
+}
+
+k_limerick = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	textured_emblem = {
+		texture = "k_limerick_coa.dds"
+	}
+}
+
+k_clare = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_clare_coa.dds"
+	}
+}
+
+k_tipperary = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_tipperary_coa.dds"
+	}
+}
+
+k_galway = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_galway_coa.dds"
+	}
+}
+
+k_sligo = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_sligo_coa.dds"
+	}
+}
+
+k_roscommon = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_roscommon_coa.dds"
+	}
+}
+
+k_leitrim = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_leitrim_coa.dds"
+	}
+}
+
+k_cavan = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_cavan_coa.dds"
+	}
+}
+
+k_monaghan = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_monaghan_coa.dds"
+	}
+}
+
+k_fermanagh = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_fermanagh_coa.dds"
+	}
+}
+
+k_tyrone = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_tyrone_coa.dds"
+	}
+}
+
+k_armagh = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_armagh_coa.dds"
+	}
+}
+
+k_down = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_down_coa.dds"
+	}
+}
+
+k_antrim = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_antrim_coa.dds"
+	}
+}
+
+k_louth = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_louth_coa.dds"
+	}
+}
+
+k_longford = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_longford_coa.dds"
+	}
+}
+
+k_wexford = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_wexford_coa.dds"
+	}
+}
+
+k_kilkenny = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kilkenny_coa.dds"
+	}
+}
+
+k_carlow = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_carlow_coa.dds"
+	}
+}
+
+k_wicklow = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_wicklow_coa.dds"
+	}
+}
+
+k_laois = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_laois_coa.dds"
+	}
+}
+
+k_offaly = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_offaly_coa.dds"
+	}
+}
+
+k_westmeath = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_westmeath_coa.dds"
+	}
+}
+
+k_kildare = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kildare_coa.dds"
+	}
+}
+
+k_dublin = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_dublin_coa.dds"
+	}
+}
+
+e_munster = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_munster_coa.dds"
+	}
+}
+
+e_connacht = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_connacht_coa.dds"
+	}
+}
+
+e_ulster = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_ulster_coa.dds"
+	}
+}
+
+e_leinster = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_leinster_coa.dds"
+	}
+}
