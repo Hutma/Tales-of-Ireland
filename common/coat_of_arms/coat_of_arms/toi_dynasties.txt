@@ -1,0 +1,39 @@
+70 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_meath_coa.dds"
+	}
+}
+
+104 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_donegal_coa.dds"
+	}
+}
+
+202 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_londonderry_coa.dds"
+	}
+}
+
+72 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_mayo_coa.dds"
+	}
+}
+
+25 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_cork_coa.dds"
+	}
+}

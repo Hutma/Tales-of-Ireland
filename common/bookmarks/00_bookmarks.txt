@@ -1,21 +1,89 @@
-﻿bm_2000_test = {
+﻿bm_fall_of_milesians = {
 	start_date = 4800.1.1
 	is_playable = yes
 
 	character = {
-		name = "bookmark_test_character"
-		dynasty = 5000000
+		name = "bookmark_fall_of_milesians_loegaire"
+		dynasty = 70
 		dynasty_splendor_level = 1
 		type = male
-		birth = 4770.1.1
-		title = k_test
+		history_id = 260000
+		birth = 4751.1.1
+		title = k_meath
 		government = feudal_government
-		culture = test_culture
-		religion = test_faith
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 6000000
-		position = { 765 590 }
+		culture = eremon_milesians
+		religion = milesian_paganism
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1000 650 }
 
-		animation = disapproval
+		animation = worry
+	}
+	
+	character = {
+		name = "bookmark_fall_of_milesians_oscar"
+		dynasty = 25
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 600000
+		birth = 4782.1.1
+		title = k_cork
+		government = feudal_government
+		culture = corca_loigde
+		religion = sea_dwellers
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 850 850 }
+
+		animation = happiness
+	}
+	
+	character = {
+		name = "bookmark_fall_of_milesians_rudraige"
+		dynasty = 72
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 540000
+		birth = 4782.1.1
+		title = k_mayo
+		government = feudal_government
+		culture = fir_bolg
+		religion = ancient_greek_slave
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		position = { 450 400 }
+
+		animation = paranoia
+	}
+	
+	character = {
+		name = "bookmark_fall_of_milesians_nuada"
+		dynasty = 202
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 1000000
+		birth = 4782.1.1
+		title = k_londonderry
+		government = feudal_government
+		culture = de_danann
+		religion = sidhe_beliefs
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1200 150 }
+
+		animation = personality_bold
+	}
+	
+	character = {
+		name = "bookmark_fall_of_milesians_inzhay"
+		dynasty = 104
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 450124
+		birth = 4764.1.1
+		title = k_donegal
+		government = feudal_government
+		culture = underground_fomorians
+		religion = dark_gods
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		position = { 850 150 }
+
+		animation = personality_bold
 	}
 }

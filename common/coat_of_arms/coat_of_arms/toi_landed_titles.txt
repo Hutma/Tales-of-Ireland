@@ -1,0 +1,39 @@
+k_meath = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_meath_coa.dds"
+	}
+}
+
+k_donegal = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_donegal_coa.dds"
+	}
+}
+
+k_londonderry = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_londonderry_coa.dds"
+	}
+}
+
+k_mayo = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_mayo_coa.dds"
+	}
+}
+
+k_cork = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_cork_coa.dds"
+	}
+}
