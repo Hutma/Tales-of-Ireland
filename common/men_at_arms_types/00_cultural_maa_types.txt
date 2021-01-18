@@ -30,7 +30,7 @@ kern_warriors = {
 	holy_order_fallback = yes
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 }
 
@@ -63,7 +63,7 @@ kern_cavalry = {
 	holy_order_fallback = yes
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = light_cavalry
 }
 
@@ -89,7 +89,7 @@ bloody_warriors = {
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = heavy_infantry
 }
 
@@ -117,7 +117,7 @@ land_guardians = {
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = bowmen
 }
 
@@ -144,7 +144,7 @@ travelers = {
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = light_cavalry
 }
 
@@ -170,7 +170,7 @@ nemedian_famer = {
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 }
 
@@ -196,7 +196,7 @@ the_brave_ones = {
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = heavy_infantry
 }
 
@@ -222,7 +222,7 @@ ancient_heroes = {
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = heavy_infantry
 }
 
@@ -252,7 +252,7 @@ warriors_of_tara = {
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = pikemen
 }
 
@@ -279,6 +279,6 @@ newgrange_guardians = {
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
 	stack = 25
-	ai_quality = { value = cultural_maa_extra_ai_score }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 }
