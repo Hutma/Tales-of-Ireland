@@ -193,9 +193,10 @@ NCharacter = {
 	FOCUS_ADULT_COOLDOWN_MONTHS = 60
 	
 	SKILL_SCALE_AGE = 16
-	MAX_HEIR_TO_SHOWN = 4
-	MAX_PARENT_STEPS_FOR_HEIR = 3
-	MIN_HEIR_TO_FIND = 4
+	MAX_HEIR_TO_SHOWN = 4								# How many "Heir To" titles should we show?
+	MAX_PARENT_STEPS_FOR_HEIR = 6						# If we can't find enough descendants, how many steps upwards can we try to search?
+	MIN_HEIR_TO_FIND = 20								# How many heirs should we find before we stop finding more? Note that a higher number here can worsen performance
+	MAX_HEIRS_IN_LINE_OF_SUCCESSION_TOOLTIP = 5			# How many heirs should we show in [LandedTitle.GetLineOfSuccessionDesc]
 
 	MAX_POTENTIAL_SPOUSES = 100000 #Number of entries shown in the marry off-interaction
 	MONTHS_OF_INCOME_AT_START = 12 # Rulers will start with this many months worth of income
@@ -226,6 +227,11 @@ NCharacter = {
 	# How many concubines does a ruler of a given tier desire if their faith allows concubines
 	DESIRED_CONCUBINES_PER_TIER = { 0 0 1 2 2 3 }
 	PRESTIGE_LOSS_PER_MISSING_CONCUBINE = 0.1 # Monthly prestige loss per missing (fertile) concubine
+
+	DEBT_MODIFIER_THRESHOLDS = { # When do the debt modifiers kick in, by months of income of debt
+		# Match to the modifier debt_level_i and combat_debt_level_i. Starts with 0
+		0 12 24 36 48 60 120
+	}
 }
 
 NOldAge = {
@@ -488,7 +494,7 @@ NArmy = {
 	MOVEMENT_SPEED_BONUS_FRIENDLY_AREA = 0.2		# In friendly areas you get a 20% speed bonus
 	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.03			# Monthly reinforcement percentage of unraised chunks [0-1]
 	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.1		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
-	GOLD_COST_PER_SOLDIER = 0.0033					# Gold maintenance cost per soldier
+	GOLD_COST_PER_SOLDIER = 0.003					# Gold maintenance cost per soldier
 	RAID_ARMY_COST_MULT = 0.5						# Maintenance of raid armies is multiplied by this
 	MOVEMENT_LOCKED = 0.5							# Percentage after which movement is locked
 	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.05
@@ -583,6 +589,7 @@ NWar = {
 	OCCUPATION_SCORE_PER_BARONY_SCALE = 0.04		# Extra occupation score (before scaling) from each individual barony. 0.01 is equivalent to 1% per barony. So 10 baronies occupied out of 20 total, would mean 50% + 10% = 60% occupation score (before scaling)
 	MINIMUM_CONTRIBUTION_FOR_REWARD = 100			# You need at least this amount of contribution points in order to get a reward
 	WAR_RESULT_MONTHS_TO_TIMEOUT = 12				# War results time out after this many months
+	AI_USE_VASSAL_OF_VASSAL_CLAIMS = no 			# If this is set to "no", the AI will never push the claims of vassals of vassals
 }
 
 NScheme = {
@@ -652,6 +659,7 @@ NReligion = {
 		"FAITH_HOSTILITY_EVIL"
 	}
 	PIETY_LOSS_PER_MISSING_SPOUSE = 0.25 # If you have fewer spouses than expected in a polygamous faith, you'll lose this much piety for each spouse you fall short. The expected # is your tier or max # of spouses; whichever is lowest
+	DESIRED_SPOUSES_PER_TIER = { 1 1 1 2 3 4 }  # Number of spouses you are expected to have per tier, starging with unlanded, then baron and ending with emperor
 	FAITH_CONVERSION_PIETY_MINIMUM = 250 # The minimum amount of piety converting faith costs
 	FAITH_CREATION_FERVOR_DISCOUNT_PER_MISSING_FERVOR = 1 # How much cheaper does creating a faith get per fervor below 100%? 1 means 1% per point
 	FAITH_CREATION_FERVOR_DISCOUNT_MAX = 50 # What percentage does the discount cap out at? With these numbers, 0-50 fervor means a 50% discount. Above 50 means between 0% and 50% discount
@@ -869,6 +877,7 @@ NDomain = {
 	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 1.5		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
 	TAX_AT_MAX_COUNTY_DEVELOPMENT = 1.5			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	HOLDING_MIN_GARRISON_COUNT = 1				# The minimal amount of garrisons a holding should have if it should have garrisons
 }
 
 NFaction =
@@ -883,6 +892,8 @@ NFaction =
 	DISCONTENT_THRESHOLD = 100				# The discontent threshold at which the faction can send demands.
 	DEFAULT_POWER_THRESHOLD = 80					# The default power threshold if there no one defined.
 	MAX_DEMAND_DELAY_DAYS = 90						# The faction is guaranteed to send demands on the next update after this number of days has passed since it started being able to send demands.
+
+	POTENTIAL_FORCE_JOIN_HOOK_TYPE = "strong" # The type of hook that means the UI will show a member as potentially joining
 }
 
 NPathFinding = {
@@ -951,7 +962,9 @@ NHolyOrder = {
 	NUM_MAA_BASE = 25
 
 	# The holy order also gets NUM_MAA_PER_HOLDING additional Men-At-Arms for each holding leased to it.
-	NUM_MAA_PER_HOLDING = 12
+	NUM_MAA_PER_HOLDING = 1
+	# The MaA from this many holdings will all go into the same regiment
+	NUM_HOLDINGS_PER_MAA_REGIMENT = 3
 	# The regiment type of these additional Men-At-Arms has a chance of RELIGION_MAA_RATIO % (multiplied by 100) to use a religious type, like NUM_MAA_BASE.
 	# Otherwise it will use a random type with the holy_order_fallback = yes flag.
 	RELIGION_MAA_RATIO = 0.7
@@ -1038,6 +1051,8 @@ NGUI = {
 	BATTLE_SUMMARY_MINOR_BATTLE = 1000  # max soldiers for a battle to be skirmish
 	BATTLE_SUMMARY_BIG_LOSSES = 0.6  # ration of survivors when a battle is a slaughter
 	DEFAULT_FRONT_END_BACKGROUND = "main_menu/frontend_west.dds" # relative to the illustrations folder
+	DYNASTY_TREE_MAX_SIZE = 200  # Limit initial number of character in single dynasty tree
+	PRISONER_MASS_ACTION_REASONS = 5 # maximum number of reasons why a mass prisoner action cannot be done that we want to show in tooltips
 }
 
 NSuggestions = {
@@ -1090,6 +1105,7 @@ NPortrait = {
 	SAVE_GAME_ANIMATION_GROUP_SECONDARY = "frontend_left_idle"		# Which animation group to use for the main menu secondary character taken from saves
 	BOOKMARK_ANIMATION_GROUP = "idle"		# Which animation group to use for the bookmark character
 	WEIGHT_UPDATE_YEAR_INTERVAL = 3 # Years in between portrait updating their current weight towards their target weight
+	WEIGHT_UPDATE_PLAYER_LERP_SCALAR = 0.30 # Scalar for the liner interoplation of the weight update to trend current weight towards target weight, for the player
 	WEIGHT_UPDATE_LERP_SCALAR = 0.35 # Scalar for the liner interoplation of the weight update to trend current weight towards target weight
 	DEFAULT_BASE_WEIGHT_MIN = -35 # Min for starting random base weight inclusive
 	DEFAULT_BASE_WEIGHT_MAX = 35 # Max for starting random base weight inclusive
@@ -1136,4 +1152,16 @@ NGraphics = {
 	QUALITY_SETTING_DEFAULT_IF_VRAM_UNKNOWN_DISCRETE = "medium" # If we can't find how much VRAM is available, use this setting if the GPU is from AMD or nVIDIA
 	QUALITY_SETTING_DEFAULT_IF_VRAM_UNKNOWN_INTEGRATED = "low" # If we can't find how much VRAM is available, use this setting if the GPU *isn't* from AMD or nVIDIA
 	ADVANCED_SHADERS_DEFAULT_ON_IF_VRAM_UNKNOWN_INTEGRATED = no # If we can't find how much VRAM is available, set the use of advanced shaders to this if the GPU *isn't* from AMD or nVIDIA
+}
+
+NRulerDesigner = {
+	IRONMAN_POINT_MAX = 400 # Above this value achievements are not allowed
+	AGE_LEVELS = { 10 16 18 20 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 60 70 } # Index into below if <= age
+	AGE_LEVEL_MULTIPLIERS = { 2 2.25 2.5 2.7 2.9 3 2.9 2.8 2.7 2.6 2.5 2.4 2.3 2.2 2.1 2 1.9 1.8 1.7 1.6 1.5 1.4 1.3 1.2 1.1 1 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1 0 } # Multiplier on age for points used
+	DEFAULT_SKILL_VALUE = 5
+	GENERATED_SONS_MULTIPLIER = 10
+	GENERATED_DAUGHTERS_MULTIPLIER = 10
+	GENERATED_SPOUSE = 0
+	DEFAULT_EDUCATION_TRAIT = "education_intrigue_1"
+	BASE_HEALTH = 5.0
 }
