@@ -1,0 +1,80 @@
+﻿call_royal_army_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = call_royal_army_decision_desc
+
+	is_shown = {
+		has_title = title:k_high_kingship
+		NOT = { has_character_flag = have_called_royal_army }
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
+		has_title = title:k_high_kingship
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		gold = 100
+		prestige = 100
+		piety = 100
+	}
+
+	effect = {
+		call_royal_army_decision_effect = yes
+		add_character_flag = {
+			flag = have_called_royal_army
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+high_king_tax_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	major = yes
+	ai_check_interval = 60
+	cooldown = { days = 7200 }
+	desc = high_king_tax_decision_desc
+
+	is_shown = {
+		has_title = title:k_high_kingship
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
+		has_title = title:k_high_kingship
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	effect = {
+		high_king_tax_decision_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -1,0 +1,28 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+#save_var_scope_effect - To check for a variable saved scope and save it as a scope
+
+#####################################################################
+# EFFECTS
+#####################################################################
+
+
+call_royal_army_decision_effect = {
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = call_royal_army_decision_troops
+		levies = {
+			value = 400
+		}
+		men_at_arms = {
+			type = warriors_of_tara
+			stacks = 4
+		}
+		location = capital_province
+	}
+}
