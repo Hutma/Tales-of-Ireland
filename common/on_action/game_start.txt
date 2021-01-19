@@ -3,6 +3,24 @@
 on_game_start = {
 	effect = {
 #### TALES OF IRELAND ####
+		#High kingship
+		every_living_character = {
+			if 	= {
+				limit = {
+					AND = {
+						is_independent_ruler = yes
+						OR = {
+							highest_held_title_tier = 3
+							highest_held_title_tier = 4
+							highest_held_title_tier = 5
+						}
+					}
+				}
+			add_pressed_claim = title:k_high_kingship
+			}
+		}
+		#high kingship end
+		
 		every_living_character = {
 			if = {
 			limit = {has_culture_group = culture_group:toi_fomorian_group}

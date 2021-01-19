@@ -1,6 +1,10 @@
 #High Kingship
 k_high_kingship = {
               4799.1.1 = {
-                            holder = 260000
+                           holder = 260000
+						   succession_laws = {
+								high_king_elective_succession_law
+								male_only_law
+							}
               }
 }

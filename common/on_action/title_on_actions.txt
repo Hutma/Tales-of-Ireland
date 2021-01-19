@@ -42,6 +42,22 @@ on_title_gain = {
 			}
 		}
 ###TALES OF IRELAND###
+		#High King claim
+		if 	= {
+			limit = {
+				root = {
+					AND = {
+						is_independent_ruler = yes
+						OR = {
+							highest_held_title_tier = 3
+							highest_held_title_tier = 4
+							highest_held_title_tier = 5
+						}
+					}
+				}
+			}
+			add_pressed_claim = title:k_high_kingship
+		}
 		if 	= {
 			limit = {
 				scope:liege = {

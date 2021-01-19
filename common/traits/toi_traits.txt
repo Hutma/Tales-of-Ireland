@@ -35,9 +35,9 @@ fomorian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_fomorian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_fomorian_character_desc
 		}
 	}
 }
@@ -86,9 +86,9 @@ half_fomorian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_fomorian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_fomorian_character_desc
 		}
 	}
 }
@@ -137,9 +137,9 @@ three_quarter_fomorian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_fomorian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_fomorian_character_desc
 		}
 	}
 }
@@ -176,9 +176,9 @@ cessarian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_cessarian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_cessarian_character_desc
 		}
 	}
 }
@@ -224,9 +224,9 @@ half_cessarian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_cessarian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_cessarian_character_desc
 		}
 	}
 }
@@ -272,9 +272,9 @@ three_quarter_cessarian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_cessarian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_cessarian_character_desc
 		}
 	}
 }
@@ -310,9 +310,9 @@ partholonian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_partholonian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_partholonian_character_desc
 		}
 	}
 }
@@ -357,9 +357,9 @@ half_partholonian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_partholonian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_partholonian_character_desc
 		}
 	}
 }
@@ -404,9 +404,9 @@ three_quarter_partholonian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_partholonian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_partholonian_character_desc
 		}
 	}
 }
@@ -433,6 +433,7 @@ nemedian = {
 	fertility = 0.15
 	controlled_province_advantage = 5
 	monthly_county_control_change_factor = 1
+	controlled_province_advantage = 5
 	
 	ruler_designer_cost = 5
 
@@ -442,9 +443,9 @@ nemedian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_nemedian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_nemedian_character_desc
 		}
 	}
 }
@@ -480,6 +481,7 @@ half_nemedian = {
 	fertility = 0.05
 	controlled_province_advantage = 2
 	monthly_county_control_change_factor = 0.5
+	controlled_province_advantage = 2
 	
 	ruler_designer_cost = 5
 
@@ -489,9 +491,9 @@ half_nemedian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_nemedian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_nemedian_character_desc
 		}
 	}
 }
@@ -527,6 +529,7 @@ three_quarter_nemedian = {
 	fertility = 0.05
 	controlled_province_advantage = 2
 	monthly_county_control_change_factor = 0.5
+	controlled_province_advantage = 2
 	
 	ruler_designer_cost = 5
 
@@ -536,9 +539,9 @@ three_quarter_nemedian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_nemedian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_nemedian_character_desc
 		}
 	}
 }
@@ -574,9 +577,9 @@ fir_bolg = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_fir_bolg_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_fir_bolg_character_desc
 		}
 	}
 }
@@ -621,9 +624,9 @@ half_fir_bolg = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_fir_bolg_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_fir_bolg_character_desc
 		}
 	}
 }
@@ -668,9 +671,9 @@ three_quarter_fir_bolg = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_fir_bolg_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_fir_bolg_character_desc
 		}
 	}
 }
@@ -710,9 +713,9 @@ tuatha_de_danann = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_tuatha_de_danann_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_tuatha_de_danann_character_desc
 		}
 	}
 }
@@ -761,9 +764,9 @@ half_tuatha_de_danann = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_tuatha_de_danann_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_tuatha_de_danann_character_desc
 		}
 	}
 }
@@ -812,9 +815,9 @@ three_quarter_tuatha_de_danann = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_tuatha_de_danann_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_tuatha_de_danann_character_desc
 		}
 	}
 }
@@ -840,6 +843,7 @@ milesian = {
 	physical = yes
 	prowess = 2
 	monthly_dynasty_prestige_mult = 0.05
+	stress_gain_mult = 0.1
 	
 	
 	ruler_designer_cost = 5
@@ -850,9 +854,9 @@ milesian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_milesian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_milesian_character_desc
 		}
 	}
 }
@@ -887,6 +891,7 @@ half_milesian = {
 	physical = yes
 	prowess = 1
 	monthly_dynasty_prestige_mult = 0.025
+	stress_gain_mult = 0.05
 	
 	
 	ruler_designer_cost = 5
@@ -897,9 +902,9 @@ half_milesian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_milesian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_milesian_character_desc
 		}
 	}
 }
@@ -934,6 +939,7 @@ three_quarter_milesian = {
 	physical = yes
 	prowess = 1
 	monthly_dynasty_prestige_mult = 0.025
+	stress_gain_mult = 0.05
 	
 	
 	ruler_designer_cost = 5
@@ -944,9 +950,9 @@ three_quarter_milesian = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_milesian_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_milesian_character_desc
 		}
 	}
 }
@@ -981,9 +987,9 @@ celtic_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_celtic_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_celtic_human_character_desc
 		}
 	}
 }
@@ -1027,9 +1033,9 @@ half_celtic_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_celtic_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_celtic_human_character_desc
 		}
 	}
 }
@@ -1073,9 +1079,9 @@ three_quarter_celtic_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_celtic_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_celtic_human_character_desc
 		}
 	}
 }
@@ -1110,9 +1116,9 @@ megalith_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_megalith_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_megalith_human_character_desc
 		}
 	}
 }
@@ -1156,9 +1162,9 @@ half_megalith_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_half_megalith_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_half_megalith_human_character_desc
 		}
 	}
 }
@@ -1202,9 +1208,9 @@ three_quarter_megalith_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_pure_blooded_desc
+				desc = trait_three_quarter_megalith_human_desc
 			}
-			desc = trait_pure_blooded_character_desc
+			desc = trait_three_quarter_megalith_human_character_desc
 		}
 	}
 }
@@ -1213,6 +1219,7 @@ three_quarter_megalith_human = {
 ###DUEL TRAITS###
 aggresive_fighter = {
 	index = 1030
+	icon = aggressive_attacker.dds
 	
 	shown_in_ruler_designer = no
 	
@@ -1227,15 +1234,16 @@ aggresive_fighter = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_aggressive_attacker_desc
+				desc = trait_aggresive_fighter_desc
 			}
-			desc = trait_aggressive_attacker_character_desc
+			desc = trait_aggresive_fighter_character_desc
 		}
 	}
 }
 
 defensive_fighter = {
 	index = 1031
+	icon = unyielding_defender.dds
 	
 	opposites = {
 		aggresive_fighter
@@ -1250,15 +1258,16 @@ defensive_fighter = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_unyielding_defender_desc
+				desc = trait_defensive_fighter_desc
 			}
-			desc = trait_unyielding_defender_character_desc
+			desc = trait_defensive_fighter_character_desc
 		}
 	}
 }
 
 cunning_fighter = {
 	index = 1032
+	icon = flexible_leader.dds
 	
 	opposites = {
 		aggresive_fighter
@@ -1273,9 +1282,9 @@ cunning_fighter = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_flexible_leader_desc
+				desc = trait_cunning_fighter_desc
 			}
-			desc = trait_flexible_leader_character_desc
+			desc = trait_cunning_fighter_character_desc
 		}
 	}
 }

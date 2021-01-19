@@ -2,6 +2,22 @@
 @better_than_the_alternatives_score = 50
 @always_primary_score = 1000
 
+k_high_kingship = {
+	color = { 110 180 170 }
+	color2 = { 255 255 255 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+	
+	capital = c_tara
+	
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+	
+	de_jure_drift_disabled = yes
+}
+
 e_munster = {
 	color =  { 150 10 10 }
 	color2 = { 255 255 255 }

@@ -26,7 +26,7 @@
 }
 260001 = {
     name = "Cobthach"
-    dynasty =  71 
+    dynasty =  70
     religion = milesian_paganism
     culture = eremon_milesians
 
@@ -378,7 +378,7 @@
 }
 265000 = {
     name = "Meilge"
-    dynasty =  59 
+    dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
 

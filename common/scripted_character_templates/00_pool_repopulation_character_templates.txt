@@ -65,7 +65,7 @@ pool_repopulate_prowess = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -73,7 +73,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -81,7 +81,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -89,7 +89,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -97,7 +97,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -105,7 +105,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -113,7 +113,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -121,7 +121,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -129,7 +129,7 @@ pool_repopulate_prowess = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -221,7 +221,7 @@ pool_repopulate_diplomacy = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -229,7 +229,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -237,7 +237,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -245,7 +245,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -253,7 +253,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -261,7 +261,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -269,7 +269,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -277,7 +277,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -285,7 +285,7 @@ pool_repopulate_diplomacy = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -370,7 +370,7 @@ pool_repopulate_martial = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -378,7 +378,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -386,7 +386,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -394,7 +394,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -402,7 +402,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -410,7 +410,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -418,7 +418,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -426,7 +426,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -434,7 +434,7 @@ pool_repopulate_martial = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -522,7 +522,7 @@ pool_repopulate_stewardship = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -530,7 +530,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -538,7 +538,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -546,7 +546,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -554,7 +554,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -562,7 +562,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -570,7 +570,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -578,7 +578,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -586,7 +586,7 @@ pool_repopulate_stewardship = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -678,7 +678,7 @@ pool_repopulate_intrigue = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -686,7 +686,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -694,7 +694,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -702,7 +702,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -710,7 +710,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -718,7 +718,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -726,7 +726,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -734,7 +734,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -742,7 +742,7 @@ pool_repopulate_intrigue = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -852,7 +852,7 @@ pool_repopulate_learning = {
 ###TALES OF IRELAND###		
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -860,7 +860,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -868,7 +868,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -876,7 +876,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -884,7 +884,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -892,7 +892,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -900,7 +900,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -908,7 +908,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -916,7 +916,7 @@ pool_repopulate_learning = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -1076,7 +1076,7 @@ pool_repopulate_spouse = {
 	after_creation = {
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -1084,7 +1084,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -1092,7 +1092,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -1100,7 +1100,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -1108,7 +1108,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -1116,7 +1116,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -1124,7 +1124,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -1132,7 +1132,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -1140,7 +1140,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}
@@ -1311,7 +1311,7 @@ pool_repopulate_local_flavor = {
 ### TALES OF IRELAND ###
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fomorian
 				}
 			}
@@ -1319,7 +1319,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = cessarian
 				}
 			}
@@ -1327,7 +1327,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = partholonian
 				}
 			}
@@ -1335,7 +1335,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = nemedian
 				}
 			}
@@ -1343,7 +1343,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = fir_bolg
 				}
 			}
@@ -1351,7 +1351,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -1359,7 +1359,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = milesian
 				}
 			}
@@ -1367,7 +1367,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = celtic_human
 				}
 			}
@@ -1375,7 +1375,7 @@ pool_repopulate_local_flavor = {
 		}
 		if 	= {
 			limit = {
-				scope:liege_or_court_owner = {
+				root.liege_or_court_owner = {
 					has_trait = megalith_human
 				}
 			}

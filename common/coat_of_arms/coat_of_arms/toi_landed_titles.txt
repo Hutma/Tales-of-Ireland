@@ -285,3 +285,11 @@ e_leinster = {
 		texture = "e_leinster_coa.dds"
 	}
 }
+
+k_high_kingship = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_high_kingship_coa.dds"
+	}
+}
