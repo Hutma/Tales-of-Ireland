@@ -60,7 +60,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = fomorian
 				}
 			}
@@ -68,7 +68,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = cessarian
 				}
 			}
@@ -76,7 +76,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = partholonian
 				}
 			}
@@ -84,7 +84,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = nemedian
 				}
 			}
@@ -92,7 +92,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = fir_bolg
 				}
 			}
@@ -100,7 +100,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -108,7 +108,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = milesian
 				}
 			}
@@ -116,7 +116,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = celtic_human
 				}
 			}
@@ -124,7 +124,7 @@ on_title_gain = {
 		}
 		if 	= {
 			limit = {
-				scope:liege = {
+				root.liege = {
 					has_trait = megalith_human
 				}
 			}
@@ -191,12 +191,24 @@ on_title_gain = {
 # root = the new holder
 # scope:title = the title that changes hands
 # scope:previous_holder = previous holder. Should be dead
+###TALES OF IRELAND ANCIENT PARTITION
 on_title_gain_inheritance = {
 	events = {
 	}
 	effect = {
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+		}
+		root = {
+			change_liege_or_become_independent = {
+				CHANGE = scope:change
+				VASSAL = this
+			}
+		}
 	}
 }
+###TALES OF IRELAND ANCIENT PARTITION END
 
 # A title is usurped by a character
 # root = the new holder
