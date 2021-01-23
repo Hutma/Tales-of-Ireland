@@ -29,6 +29,9 @@
 
 ###HERESY TRIGGERS###
 
+###RELIGIOUS INTERACTIONS###
+# can_take_religious_vows_trigger
+
 
 # CHECK A NUMBER OF RELIGION-RELATED CONDITIONS TO DETERMINE HOW STRONG OF A BELIEVER THEY SEEM TO BE
 has_strong_religious_conviction_trigger = {
@@ -342,7 +345,9 @@ trait_is_criminal_in_faith_trigger = {
 		#CANNIBAL
 		AND = {
 			scope:criminal_trait_check = flag:cannibal
-			NOT = { $FAITH$ = { has_doctrine = tenet_ritual_cannibalism } }
+			NOT = {
+				$FAITH$ = { has_doctrine_parameter = cannibalism_legal }
+			}
 		}
 		#SODOMITE
 		AND = {
@@ -526,6 +531,10 @@ faiths_are_in_eastern_christianity_group = {
 	always = no
 }
 
+faiths_are_shia_zandaqa_sub_group = {
+	always = no
+}
+
 faiths_are_in_sunni_islam_group = {
 	always = no
 }
@@ -539,7 +548,6 @@ faiths_are_in_muhakkima_islam_group = {
 }
 
 refusing_conversion_is_crime_trigger = {
-	faith.religion = $CHARACTER$.faith.religion
 	faith = {
 		always = no
 		NOT = {
@@ -776,17 +784,6 @@ can_create_spiritual_head_of_faith_title_trigger = {
 # this = Person trying to create the title
 can_afford_create_head_of_faith_title_cost_trigger = {
 	trigger_if = {
-		limit = {
-			faith = {
-				has_doctrine_parameter = temporal_head_of_faith
-			}		
-		}
-		trigger_if = {
-			limit = { NOT = { has_trait = sayyid } }
-			piety >= massive_piety_value
-		}
-	}
-	trigger_else_if = {
 		limit = {
 			faith = {
 				has_doctrine_parameter = temporal_head_of_faith

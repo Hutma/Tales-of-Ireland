@@ -24,9 +24,10 @@
 #Can only be triggered through the decision "tribal_challenge_ruler_decision"
 
 scripted_effect tribal_1001_transfer_liege_title_effect = {
-	create_title_and_vassal_change = change
-	scope:change = {
-		set_title_and_vassal_change_type = returned
+	create_title_and_vassal_change = {
+		type = usurped
+		save_scope_as = change
+		add_claim_on_loss = no
 	}
 	scope:title_being_fought_over = {
 		change_title_holder = {
@@ -123,6 +124,15 @@ scripted_effect tribal_1001_challenger_backed_out_effect = {
 	}
 }
 
+scripted_trigger tribal_1001_champion_check_trigger = {
+	NOT = { this = scope:challenger }
+	can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+	is_available = yes
+	is_adult = yes
+	is_ai = yes
+	NOT = { has_relation_rival = root }
+}
+
 tribal.1001 = {
 	type = character_event
 	title = tribal.1001.t
@@ -161,27 +171,111 @@ tribal.1001 = {
 		animation = personality_bold
 	}
 
-	weight_multiplier = {
-		base = 1
-
-		modifier = {
-			add = 1
-			any_vassal = {
-				NOR = {
-					has_relation_friend = root
-					has_relation_lover = root
-				}
-				has_trait = ambitious
-			}
-		}
-	}
-
 	immediate = {
 		play_music_cue = mx_cue_combat_2
 		scope:challenger = {
 			add_character_flag = { #To block the event and block the decision
 				flag = recently_took_the_tribal_challenge_ruler_decision
 				years = 10
+			}
+		}
+		#If you cannot fight yourself then find a champion
+		if = {
+			limit = {
+				NOT = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root } }
+			}
+			if = {
+				limit = {
+					any_relation = {
+						type = friend
+						tribal_1001_champion_check_trigger = yes
+					}
+				}
+				every_relation = {
+					type = friend
+					limit = { tribal_1001_champion_check_trigger = yes }
+					add_to_list = champion_candidates
+				}
+			}
+			if = {
+				limit = {
+					exists = cp:councillor_marshal
+					cp:councillor_marshal = { tribal_1001_champion_check_trigger = yes }
+				}
+				cp:councillor_marshal = { add_to_list = champion_candidates }
+			}
+			if = {
+				limit = {
+					any_knight = {
+						tribal_1001_champion_check_trigger = yes
+					}
+				}
+				every_knight = {
+					limit = { tribal_1001_champion_check_trigger = yes }
+					add_to_list = champion_candidates
+				}
+			}
+			#Still empty list?
+			if = {
+				limit = {
+					any_in_list = {
+						list = champion_candidates
+						count < 1
+					}
+				}
+				if = {
+					limit = {
+						any_vassal = {
+							tribal_1001_champion_check_trigger = yes
+						}
+					}
+					every_vassal = {
+						limit = { tribal_1001_champion_check_trigger = yes }
+						add_to_list = champion_candidates
+					}
+				}
+				if = {
+					limit = {
+						any_courtier = {
+							tribal_1001_champion_check_trigger = yes
+						}
+					}
+					every_courtier = {
+						limit = { tribal_1001_champion_check_trigger = yes }
+						add_to_list = champion_candidates
+					}
+				}
+			}
+
+			#Save champion
+			if = {
+				limit = {
+					any_in_list = {
+						list = champion_candidates
+						count >= 1
+					}
+				}
+				random_in_list = {
+					list = champion_candidates
+					limit = {
+						prowess > high_skill_rating
+					}
+					alternative_limit = {
+						always = yes
+					}
+					weight = {
+						base = 1
+						compare_modifier = {
+							value = prowess
+							multiplier = 10
+						}
+						opinion_modifier = {
+							opinion_target = root
+							multiplier = 1
+						}
+					}
+					save_scope_as = liege_champion
+				}
 			}
 		}
 	}
@@ -195,30 +289,71 @@ tribal.1001 = {
 			trigger = { age <= scope:challenger.age }
 			text = tribal.1001.a
 		}
-		show_as_tooltip = {
-			duel = {
-				skill = prowess
-				target = scope:challenger
-				10 = {
-					desc = tribal.1001.a_success
-					compare_modifier = {
-						value = scope:duel_value
-						multiplier = 2
+		trigger = {
+			OR = {
+				can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+				exists = scope:liege_champion
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:liege_champion
+			}
+			custom_tooltip = tribal.1001.a_champion
+			show_as_tooltip = {
+				scope:liege_champion = {
+					duel = {
+						skill = prowess
+						target = scope:challenger
+						10 = {
+							desc = tribal.1001.a_champion_success
+							compare_modifier = {
+								value = scope:duel_value
+								multiplier = 2
+							}
+							scope:challenger = {
+								tribal_1001_challenger_lost_effect = yes
+								increase_wounds_effect = { REASON = fight }
+							}
+						}
+						10 = {
+							desc = tribal.1001.a_champion_failure
+							scope:challenger = {
+								tribal_1001_transfer_liege_title_effect = yes
+							}
+							increase_wounds_effect = { REASON = fight }
+						}
 					}
-					scope:challenger = {
-						tribal_1001_challenger_lost_effect = yes
-						increase_wounds_effect = { REASON = fight }
-					}
-				}
-				10 = {
-					desc = tribal.1001.a_failure
-					scope:challenger = {
-						tribal_1001_transfer_liege_title_effect = yes
-					}
-					increase_wounds_effect = { REASON = fight }
 				}
 			}
 		}
+		else = {
+			show_as_tooltip = {
+				duel = {
+					skill = prowess
+					target = scope:challenger
+					10 = {
+						desc = tribal.1001.a_success
+						compare_modifier = {
+							value = scope:duel_value
+							multiplier = 2
+						}
+						scope:challenger = {
+							tribal_1001_challenger_lost_effect = yes
+							increase_wounds_effect = { REASON = fight }
+						}
+					}
+					10 = {
+						desc = tribal.1001.a_failure
+						scope:challenger = {
+							tribal_1001_transfer_liege_title_effect = yes
+						}
+						increase_wounds_effect = { REASON = fight }
+					}
+				}
+			}
+		}
+		
 		scope:challenger = {
 			trigger_event = tribal.1003
 		}
@@ -226,8 +361,14 @@ tribal.1001 = {
 		ai_chance = {
 			base = 50
 			modifier = {
+				trigger = { NOT = { exists = scope:liege_champion } }
 				add = 30
 				prowess > scope:challenger.prowess
+			}
+			modifier = {
+				trigger = { exists = scope:liege_champion }
+				add = 30
+				scope:liege_champion.prowess > scope:challenger.prowess
 			}
 			ai_value_modifier = {
 				ai_boldness = 0.75
@@ -304,7 +445,15 @@ tribal.1003 = {
 				}
 				desc = tribal.1003.desc_young
 			}
-			desc = tribal.1003.desc
+			first_valid = {
+				triggered_desc = {
+				    trigger = {
+						exists = scope:liege_champion
+				    }
+				    desc = tribal.1003.desc_liege_champion
+				}
+				desc = tribal.1003.desc
+			}
 		}
 	}
 	theme = realm
@@ -312,49 +461,109 @@ tribal.1003 = {
 		character = scope:liege_to_challenge
 		animation = anger
 	}
+	right_portrait = {
+		trigger = {
+			exists = scope:liege_champion
+		}
+		character = scope:liege_champion
+		animation = anger
+	}
 
 	immediate = {
 		set_signature_weapon_effect = yes
-		scope:liege_to_challenge = {
-			set_signature_weapon_effect = yes
+		if = {
+			limit = {
+				exists = scope:liege_champion
+			}
+			scope:liege_champion = {
+				set_signature_weapon_effect = yes
+			}
+		}
+		else = {
+			scope:liege_to_challenge = {
+				set_signature_weapon_effect = yes
+			}
 		}
 	}
 
 	option = { #I will fight!
 		name = tribal.1003.a
-		duel = {
-			skill = prowess
-			target = scope:liege_to_challenge
-			10 = {
-				desc = tribal.1001.a_success
-				send_interface_toast = {
-					title = tribal.1001.a_success
-					left_icon = scope:liege_to_challenge
-					show_as_tooltip = {
-						tribal_1001_transfer_liege_title_effect = yes
-						scope:liege_to_challenge = {
-							increase_wounds_effect = { REASON = fight }
+		if = {
+			limit = {
+				exists = scope:liege_champion
+			}
+			duel = {
+				skill = prowess
+				target = scope:liege_champion
+				10 = {
+					desc = tribal.1001.a_success
+					send_interface_toast = {
+						title = tribal.1001.a_success
+						left_icon = scope:liege_to_challenge
+						show_as_tooltip = {
+							tribal_1001_transfer_liege_title_effect = yes
+							scope:liege_champion = {
+								increase_wounds_effect = { REASON = fight }
+							}
 						}
 					}
+					scope:liege_to_challenge = {
+						trigger_event = tribal.1014
+					}
 				}
-				scope:liege_to_challenge = {
-					trigger_event = tribal.1004
+				10 = {
+					desc = tribal.1001.a_failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+					}
+					send_interface_toast = {
+						title = tribal.1001.a_failure
+						left_icon = scope:liege_to_challenge
+						tribal_1001_challenger_lost_effect = yes
+						increase_wounds_effect = { REASON = fight }
+					}
+					scope:liege_to_challenge = {
+						trigger_event = tribal.1015
+					}
 				}
 			}
-			10 = {
-				desc = tribal.1001.a_failure
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = -2
+		}
+		else = {
+			duel = {
+				skill = prowess
+				target = scope:liege_to_challenge
+				10 = {
+					desc = tribal.1001.a_success
+					send_interface_toast = {
+						title = tribal.1001.a_success
+						left_icon = scope:liege_to_challenge
+						show_as_tooltip = {
+							tribal_1001_transfer_liege_title_effect = yes
+							scope:liege_to_challenge = {
+								increase_wounds_effect = { REASON = fight }
+							}
+						}
+					}
+					scope:liege_to_challenge = {
+						trigger_event = tribal.1004
+					}
 				}
-				send_interface_toast = {
-					title = tribal.1001.a_failure
-					left_icon = scope:liege_to_challenge
-					tribal_1001_challenger_lost_effect = yes
-					increase_wounds_effect = { REASON = fight }
-				}
-				scope:liege_to_challenge = {
-					trigger_event = tribal.1005
+				10 = {
+					desc = tribal.1001.a_failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+					}
+					send_interface_toast = {
+						title = tribal.1001.a_failure
+						left_icon = scope:liege_to_challenge
+						tribal_1001_challenger_lost_effect = yes
+						increase_wounds_effect = { REASON = fight }
+					}
+					scope:liege_to_challenge = {
+						trigger_event = tribal.1005
+					}
 				}
 			}
 		}
@@ -384,14 +593,14 @@ tribal.1004 = {
 	}
 
 	immediate = {
-		scope:challenger = {
-			tribal_1001_transfer_liege_title_effect = yes
-		}
 		increase_wounds_effect = { REASON = fight }
 	}
 
 	option = {
 		name = tribal.1004.a
+		scope:challenger = {
+			tribal_1001_transfer_liege_title_effect = yes
+		}
 	}
 }
 
@@ -409,16 +618,80 @@ tribal.1005 = {
 		animation = sadness
 	}
 
-	immediate = {
+	option = {
+		name = tribal.1005.a
 		show_as_tooltip = {
 			scope:challenger = {
 				tribal_1001_challenger_lost_effect = yes
 			}
 		}
 	}
+}
+
+#Using champion - Challenger won!
+tribal.1014 = {
+	type = character_event
+	title = tribal.1001.t
+	desc = {
+		desc = tribal.1014.desc_opening
+		desc = tribal.1014.desc
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:challenger
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:liege_champion
+		animation = sadness
+	}
+
+	immediate = {
+		scope:liege_champion = {
+			increase_wounds_effect = { REASON = fight }
+		}
+	}
 
 	option = {
-		name = tribal.1005.a
+		name = tribal.1014.a
+		scope:challenger = {
+			tribal_1001_transfer_liege_title_effect = yes
+		}
+	}
+}
+
+#Using champion - Challenger lost
+tribal.1015 = {
+	type = character_event
+	title = tribal.1001.t
+	desc = {
+		desc = tribal.1014.desc_opening
+		desc = tribal.1015.desc
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:challenger
+		animation = sadness
+	}
+	right_portrait = {
+		character = scope:liege_champion
+		animation = war_over_win
+	}
+
+	option = {
+		name = tribal.1015.a
+		show_as_tooltip = {
+			scope:challenger = {
+				tribal_1001_challenger_lost_effect = yes
+			}
+		}
+		scope:liege_champion = {
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 20
+			}
+		}
 	}
 }
 
@@ -487,7 +760,6 @@ tribal.1006 = {
 				}
 			}
 		}
-		desc = tribal.1006.desc_ending
 	}
 	theme = realm
 	left_portrait = {

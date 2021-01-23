@@ -20,11 +20,11 @@ faith_creation.0001 = {
 			name = REL_HEAD_TITLE_NAME
 		}
 
-		create_title_and_vassal_change = change
-		scope:change = {
-			set_title_and_vassal_change_type = created
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
 		}
-
 		scope:new_title = {
 			set_destroy_if_invalid_heir = yes
 			set_no_automatic_claims = yes
@@ -39,8 +39,11 @@ faith_creation.0001 = {
 		faith = {
 			set_religious_head_title = scope:new_title
 		}
-		scope:new_title = { generate_coa = religious_title }
 		add_realm_law_skip_effects = same_faith_succession_law
+		scope:new_title = { 
+			generate_coa = religious_title
+			add_title_law = temporal_head_of_faith_succession_law
+		}
 	}
 }
 
@@ -65,9 +68,10 @@ faith_creation.0002 = {
 			name = REL_HEAD_TITLE_NAME
 		}
 
-		create_title_and_vassal_change = change
-		scope:change = {
-			set_title_and_vassal_change_type = created
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
 		}
 		
 		if = {
@@ -174,9 +178,10 @@ faith_creation.0011 = {
 			}
 		}
 
-		create_title_and_vassal_change = change
-		scope:change = {
-			set_title_and_vassal_change_type = created
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
 		}
 		scope:my_hof_title = {
 			change_title_holder = {
@@ -237,9 +242,10 @@ faith_creation.0012 = {
 			}
 		}
 
-		create_title_and_vassal_change = change
-		scope:change = {
-			set_title_and_vassal_change_type = created
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
 		}
 		scope:my_hof_title = {
 			change_title_holder = {

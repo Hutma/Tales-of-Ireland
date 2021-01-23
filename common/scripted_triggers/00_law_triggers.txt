@@ -61,11 +61,7 @@ realm_law_use_crown_authority = {
 }
 
 can_have_confederate_partition_succession_law_trigger = {
-	OR = {
-		has_government = feudal_government
-		has_government = tribal_government
-		has_government = clan_government
-	}
+	has_government = tribal_government
 }
 
 can_keep_partition_succession_law_trigger = {
@@ -82,13 +78,12 @@ can_keep_partition_succession_law_trigger = {
 }
 
 can_have_partition_succession_law_trigger = {
-	culture = {
-		has_innovation = innovation_hereditary_rule
-	}
+	#Not in use atm
 	custom_description = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {
 			has_government = feudal_government
+			has_government = tributary_government
 			has_government = clan_government
 		}
 	}
@@ -105,15 +100,11 @@ can_keep_high_partition_succession_law_trigger = {
 }
 
 can_have_high_partition_succession_law_trigger = {
-	trigger_if = {
-		culture = { has_innovation = innovation_heraldry }
-	}
-	custom_description = {
-		text = succession_laws_must_have_organised_government_tooltip
-		OR = {
-			has_government = feudal_government
-			has_government = clan_government
-		}
+	OR = {
+		culture = { has_innovation = innovation_kingship }
+		has_government = feudal_government
+		has_government = tributary_government
+		has_government = clan_government
 	}
 }
 
@@ -123,24 +114,21 @@ can_keep_single_heir_succession_law_trigger = {
 		limit = {
 			has_realm_law = single_heir_succession_law
 		}
-		OR = {
-			can_have_single_heir_succession_law_trigger = yes
-			# Byzantine Empire
-			historical_succession_access_single_heir_succession_law_trigger = yes
-		}
+		can_have_single_heir_succession_law_trigger = yes
 	}
 }
 
 can_have_single_heir_succession_law_trigger = {
-	culture = {
-		has_innovation = innovation_primogeniture
-	}
 	# Non-tribals only
+	culture = {
+		has_innovation = innovation_kingship
+	}
 	custom_description = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {
 			has_government = feudal_government
 			has_government = clan_government
+			has_government = tributary_government
 		}
 	}
 }
@@ -152,7 +140,6 @@ can_keep_single_heir_youngest_succession_law_trigger = {
 			has_realm_law = single_heir_succession_law_youngest
 		}
 		can_have_single_heir_youngest_succession_law_trigger = yes
-		historical_succession_access_single_heir_succession_law_youngest_trigger = yes
 	}
 }
 
@@ -186,15 +173,8 @@ can_keep_single_heir_dynasty_house_trigger = {
 
 can_have_single_heir_dynasty_house_trigger = {
 	exists = house
-	trigger_if = {
-		culture = {
-			has_innovation = innovation_table_of_princes
-		}
-	}
-	trigger_else = {
-		culture = {
-			has_innovation = innovation_heraldry
-		}
+	culture = {
+		has_innovation = innovation_empowered_aristocracy
 	}
 	custom_description = {
 		text = succession_laws_must_have_organised_government_tooltip

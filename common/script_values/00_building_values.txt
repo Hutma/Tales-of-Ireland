@@ -16,20 +16,21 @@
 #######
 
 # Base
-@poor_tax_base = 0.1
-@normal_tax_base = 0.15
-@good_tax_base = 0.2
-@excellent_tax_base = 0.3
+@poor_tax_base = 0.25
+@normal_tax_base = 0.35
+@good_tax_base = 0.5
+@excellent_tax_base = 0.7
 
 @copper_mine_tax_base = 2
 @silver_mine_tax_base = 3
 @special_mine_tax_base = 5
 
 # We have four 'tax classes', each one has a better scale than the others.
-@poor_tax_scale_addition_per_tier = 0.08
-@normal_tax_scale_addition_per_tier = 0.1
-@good_tax_scale_addition_per_tier = 0.15
-@excellent_tax_scale_addition_per_tier = 0.23
+@poor_tax_scale_addition_per_tier = 0.15
+@normal_tax_scale_addition_per_tier = 0.2
+@good_tax_scale_addition_per_tier = 0.3
+@excellent_tax_scale_addition_per_tier = 0.45
+
 @copper_mine_tax_scale_addition_per_tier = 1.5
 @silver_mine_tax_scale_addition_per_tier = 2
 @special_mine_tax_scale_addition_per_tier = 3
@@ -39,30 +40,30 @@
 ########
 
 # Base
-@poor_levy_base = 6
-@small_levy_base = 10
-@normal_levy_base = 14
-@good_levy_base = 16
-@excellent_levy_base = 20
+@poor_levy_base = 50
+@small_levy_base = 75
+@normal_levy_base = 100
+@good_levy_base = 125
+@excellent_levy_base = 150
 
 # Scaling Increase
-@poor_levy_scale_addition_per_tier = 3
-@small_levy_scale_addition_per_tier = 7
-@normal_levy_scale_addition_per_tier = 9
-@good_levy_scale_addition_per_tier = 13
-@excellent_levy_scale_addition_per_tier = 15
+@poor_levy_scale_addition_per_tier = 25
+@small_levy_scale_addition_per_tier = 50
+@normal_levy_scale_addition_per_tier = 75
+@good_levy_scale_addition_per_tier = 100
+@excellent_levy_scale_addition_per_tier = 125
 
 ############
 # Garrison #
 ############
 
 # Base
-@normal_garrison_base = 18
-@good_garrison_base = 31
+@normal_garrison_base = 150
+@good_garrison_base = 250
 
 # Scaling Increase
-@normal_garrison_scale_addition_per_tier = 19
-@good_garrison_scale_addition_per_tier = 31
+@normal_garrison_scale_addition_per_tier = 150
+@good_garrison_scale_addition_per_tier = 250
 
 ###############
 # Fort Levels #

@@ -37,6 +37,7 @@ scripted_trigger is_valid_heresiarch = {
 	exists = capital_county
 	NOT = { has_trait = heresiarch }
 	no_heretical_hof_faith_trigger = yes
+	recently_converted_faith_trigger = no # As amusing as it may be, rulers shouldn't 'flip-flop' between Faiths, so we need to enforce a cooldown on heresy conversions.
 }
 
 heresy.0001 = {
@@ -421,6 +422,13 @@ heresy.0010 = {
 					is_available_ai = yes
 				}
 				set_character_faith = scope:heretic_faith
+
+				hidden_effect = {
+					add_character_flag = {
+						flag = converted_by_heresy_0010_event
+						years = 15
+					}
+				}
 			}
 		}
 
@@ -451,7 +459,7 @@ heresy.0010 = {
 			send_interface_message = {
 				type = event_heresy_outbreak_neutral
 				title = heresy.0010.notification.title
-				desc = heresy.0010.notification
+				custom_tooltip = heresy.0010.notification
 				
 				left_icon = scope:heretic_ruler
 				goto = scope:heretic_ruler
@@ -463,7 +471,7 @@ heresy.0010 = {
 			change_fervor = 100
 		}
 		scope:origin_faith = {
-			change_fervor = 10
+			change_fervor = heretical_defector_fervor_gain
 		}
 	}
 
@@ -570,6 +578,7 @@ heresy.0011 = {
 				exists = capital_county
 				is_capable_adult_ai = yes
 				no_heretical_hof_faith_0011_trigger = yes
+				recently_converted_faith_trigger = no # As amusing as it may be, rulers shouldn't 'flip-flop' between Faiths, so we need to enforce a cooldown on heresy conversions.
 			}
 
 			weight = {
@@ -633,6 +642,12 @@ heresy.0011 = {
 		if = {
 			limit = {
 				exists = scope:convert_ruler
+			}
+			hidden_effect = {
+				add_character_flag = {
+					flag = converted_by_heresy_0011_event
+					years = 15
+				}
 			}
 
 			#Consume heresy power to fuel this conversion.
@@ -784,10 +799,9 @@ heresy.0011 = {
 				}
 			}
 
-
 			#Fervor adjustments to prevent multiple heresy flip-flopping.
 			scope:origin_faith = {
-				change_fervor = 10
+				change_fervor = heretical_defector_fervor_gain
 			}
 		}
 	}

@@ -12,13 +12,38 @@ coa.1 = {
 	}
 }
 
+scripted_trigger can_event_change_coa_trigger = {
+	holder = root
+	has_user_set_coa = no
+}
+
 coa.10 = {
 	type = character_event
 	hidden = yes
+
 	trigger = {
 		always = no
 	}
+
 	immediate = {
+	}
+}
+
+scripted_effect coa_11_set_coa_effect = {
+	title:$TITLE$ = { 
+		if = {
+			limit = { can_event_change_coa_trigger = yes }
+			set_coa = $TITLE$
+		}
+	}
+}
+
+scripted_effect coa_11_set_coa_suffix_effect = {
+	title:$TITLE$ = { 
+		if = {
+			limit = { can_event_change_coa_trigger = yes }
+			set_coa = $TITLE$_$SUFFIX$
+		}
 	}
 }
 

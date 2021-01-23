@@ -214,6 +214,7 @@ councillor_court_chaplain = {
 				}
 				desc = actual_bishop_title
 			}
+
 			desc = councillor_court_chaplain
 		}
 	}

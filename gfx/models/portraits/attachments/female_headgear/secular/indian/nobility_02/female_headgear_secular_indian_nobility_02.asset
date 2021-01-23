@@ -1,0 +1,63 @@
+pdxmesh = {
+	name = "female_headgear_secular_indian_nobility_02_mesh"
+	file = "female_headgear_secular_indian_nobility_02.mesh"
+
+	blend_shape = { id = "female_headgear_secular_indian_nobility_02_bs_fat"		type = "female_headgear_secular_indian_nobility_02_bs_fat.mesh" }
+
+	meshsettings = {
+		name = "female_headgear_secular_indian_nobility_02Shape"
+		index = 0
+		texture_diffuse = "female_headgear_secular_indian_nobility_02_diffuse.dds"
+		texture_normal = "female_headgear_secular_indian_nobility_02_normal.dds"
+		texture_specular = "female_headgear_secular_indian_nobility_02_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_secular_indian_nobility_02_entity"
+	pdxmesh = "female_headgear_secular_indian_nobility_02_mesh"
+
+
+	attribute = { name = "bs_fat_1"								blend_shape = "female_headgear_secular_indian_nobility_02_bs_fat" }
+
+	game_data = {
+		portrait_accessory = {
+			pattern_mask = "gfx/models/portraits/attachments/female_headgear/secular/indian/nobility_02/female_headgear_secular_indian_nobility_02_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+			variation = "western_nobility_low_01"	#A "variation" object in gfx/portraits/accessory_variations/
+		} 
+	}
+}
+
+pdxmesh = {
+	name = "female_headgear_secular_indian_nobility_02_bald_mesh"
+	file = "female_headgear_secular_indian_nobility_02_bald.mesh"
+
+	blend_shape = { id = "female_headgear_secular_indian_nobility_02_bald_bs_fat"		type = "female_headgear_secular_indian_nobility_02_bald_bs_fat.mesh" }
+
+	meshsettings = {
+		name = "female_headgear_secular_indian_nobility_02_baldShape"
+		index = 0
+		texture_diffuse = "female_headgear_secular_indian_nobility_02_diffuse.dds"
+		texture_normal = "female_headgear_secular_indian_nobility_02_normal.dds"
+		texture_specular = "female_headgear_secular_indian_nobility_02_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_secular_indian_nobility_02_bald_entity"
+	pdxmesh = "female_headgear_secular_indian_nobility_02_bald_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "female_headgear_secular_indian_nobility_02_bald_bs_fat" }
+
+	game_data = {
+		portrait_accessory = {
+			pattern_mask = "gfx/models/portraits/attachments/female_headgear/secular/indian/nobility_02/female_headgear_secular_indian_nobility_02_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+			variation = "western_nobility_low_01"	#A "variation" object in gfx/portraits/accessory_variations/
+		} 
+	}
+}
+

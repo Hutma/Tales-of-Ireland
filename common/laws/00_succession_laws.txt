@@ -1,5 +1,6 @@
 ﻿succession_order_laws = {
 	flag = succession_order_laws
+	#TALES OF IRELAND
 	ancient_partition_succession_law = {
 		can_keep = {
 			always = yes
@@ -243,10 +244,6 @@ succession_gender_laws = {
 			can_change_succession_law_trigger = yes
 		}
 		should_start_with = {
-			faith = {
-				has_doctrine = doctrine_gender_male_dominated
-				religion_tag = islam_religion
-			}
 		}
 		succession = {
 			gender_law = male_only
@@ -284,9 +281,6 @@ succession_gender_laws = {
 		should_start_with = {
 			OR = {
 				faith = {
-					NOT = {
-						religion_tag = islam_religion
-					}
 					has_doctrine = doctrine_gender_male_dominated
 				}
 				has_realm_law = male_only_law # For when male_only_law ceases to be a legal option
@@ -316,28 +310,9 @@ succession_gender_laws = {
 		}
 		can_keep = {
 			trigger_if = {
-				limit = {
-					OR = {
-						culture = culture:occitan
-						culture = culture:basque
-						culture = culture:aragonese
-						culture = culture:catalan
-					}
-					NOT = {
-						faith = { has_doctrine = doctrine_gender_equal }
-					}
-				}
 				culture = { has_innovation = innovation_visigothic_codes }
 			}
 			trigger_else = {
-				limit = {
-					NOT = {
-						OR = {
-							culture = culture:hausa
-							culture = culture:sumpa
-						}
-					}
-				}
 				faith = {
 					has_doctrine = doctrine_gender_equal
 				}
@@ -368,13 +343,7 @@ succession_gender_laws = {
 		}
 
 		ai_will_do = {
-			if = {
-				limit = {
-					primary_title.tier > tier_county
-					has_culture = culture:basque
-				}
-				value = 2
-			}
+
 		}
 	}
 	

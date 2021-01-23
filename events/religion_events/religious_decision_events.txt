@@ -874,7 +874,9 @@ religious_decision.0201 = {
 
 		ai_chance = {
 			base = 0
-		}		
+		}
+
+		remove_decision_cooldown = meditate_in_seclusion_decision
 	}
 
 	after = {

@@ -163,6 +163,7 @@ duchy_feudal = {
 	governments = { feudal_government }
 	priority = 27
 }
+# Independent dukes of certain culture groups are known as Petty Kings instead of Dukes
 king_feudal_male = {
 	type = character
 	gender = male
