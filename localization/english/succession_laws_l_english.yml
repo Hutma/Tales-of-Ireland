@@ -99,5 +99,5 @@
  number_of_election_votes:0 "Number of election votes"
  
  ancient_partition_succession_law:1 "Ancient Partition"
- ancient_partition_succession_law_subname:0 "All Children Inherit Equally Non Dejure Vassals And Heirs Freed"
- ancient_partition_succession_law_effects:2 "\n#V Under $ancient_partition_succession_law$, your [titles] will be divided equally between your children. New [titles] may be created for younger [realm_heirs].#!\n\n#weak $partition_base_desc$\nYounger children will have Titles created for them, if enough land is held.\n\n#!#X The non dejure vassals and all heirs will gain independence over succession.#!\n"
+ ancient_partition_succession_law_subname:0 "All Children Inherit Equally And Heirs Are Freed"
+ ancient_partition_succession_law_effects:2 "\n#V Under $ancient_partition_succession_law$, your [titles] will be divided equally between your children. New [titles] may be created for younger [realm_heirs].#!\n\n#weak $partition_base_desc$\nYounger children will have Titles created for them, if enough land is held.\n\n#!#X All heirs will gain independence over succession if you are independent.#!\n"

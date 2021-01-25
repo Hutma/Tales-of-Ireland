@@ -1,5 +1,5 @@
 ﻿call_royal_army_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
 	ai_check_interval = 60
 	desc = call_royal_army_decision_desc
@@ -42,13 +42,14 @@
 }
 
 high_king_tax_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
 	ai_check_interval = 60
 	cooldown = { days = 7200 }
 	desc = high_king_tax_decision_desc
 
 	is_shown = {
+		always = no
 		has_title = title:k_high_kingship
 	}
 
@@ -68,6 +69,110 @@ high_king_tax_decision = {
 
 	effect = {
 		high_king_tax_decision_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+high_king_reclaim_tara_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = high_king_reclaim_tara_decision_desc
+
+	is_shown = {
+		has_title = title:k_high_kingship
+		NOT = { has_character_flag = have_reclaimed_tara }
+		NOT = {
+			AND = {
+				has_title = title:c_tara
+				has_title = title:d_skreen
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 1
+		is_independent_ruler = yes
+		has_title = title:k_high_kingship
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 250
+	}
+
+	effect = {
+		add_pressed_claim = c_tara
+		add_pressed_claim = d_skreen
+		add_character_flag = {
+			flag = have_reclaimed_tara
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 70
+	}
+}
+
+reform_high_kingship_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	major = yes
+	ai_check_interval = 120
+	desc = reform_high_kingship_decision_desc
+
+	is_shown = {
+		has_title = title:c_tara
+		NOT = {
+			is_owned = title:k_high_kingship
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
+		OR = {
+			highest_held_title_tier = 4
+			highest_held_title_tier = 5
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 200
+		gold = 100
+	}
+
+	effect = {
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		title:k_high_kingship = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+			save_scope_as = title_k_high_kingship
+		}
+		resolve_title_and_vassal_change = scope:title_change
 	}
 
 	ai_potential = {

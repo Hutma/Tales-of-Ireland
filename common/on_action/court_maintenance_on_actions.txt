@@ -12,7 +12,7 @@ on_join_court = {
 #No race = employer race
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = fomorian
 				}
 			}
@@ -20,7 +20,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = cessarian
 				}
 			}
@@ -28,7 +28,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = partholonian
 				}
 			}
@@ -36,7 +36,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = nemedian
 				}
 			}
@@ -44,7 +44,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = fir_bolg
 				}
 			}
@@ -52,7 +52,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = tuatha_de_danann
 				}
 			}
@@ -60,7 +60,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = milesian
 				}
 			}
@@ -68,7 +68,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = celtic_human
 				}
 			}
@@ -76,7 +76,7 @@ on_join_court = {
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
+				scope:new_employer = {
 					has_trait = megalith_human
 				}
 			}
@@ -85,90 +85,73 @@ on_join_court = {
 #No race + no employer race = liege race
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = fomorian
-					}
 				}
 			}
 			add_trait = fomorian
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = cessarian
-					}
 				}
 			}
 			add_trait = cessarian
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = partholonian
-					}
 				}
 			}
 			add_trait = partholonian
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = nemedian
-					}
 				}
 			}
 			add_trait = nemedian
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = fir_bolg
-					}
 				}
 			}
 			add_trait = fir_bolg
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = tuatha_de_danann
-					}
+
 				}
 			}
 			add_trait = tuatha_de_danann
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = milesian
-					}
 				}
 			}
 			add_trait = milesian
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = celtic_human
-					}
 				}
 			}
 			add_trait = celtic_human
 		}
 		if 	= {
 			limit = {
-				root.new_employer = {
-					lige = {
+				scope:new_employer = {
 						has_trait = megalith_human
-					}
 				}
 			}
 			add_trait = megalith_human

@@ -7,7 +7,6 @@ k_high_kingship = {
 	color2 = { 255 255 255 }
 	definite_form = yes
 	ruler_uses_title_name = no
-	landless = yes
 	
 	capital = c_tara
 	

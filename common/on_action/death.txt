@@ -4,6 +4,27 @@
 
 on_death = {
 	effect = {
+##TALES OF IRELAND
+		if = {
+			limit = {
+				is_independent_ruler = yes
+			}
+			every_heir = {
+				add_character_flag = {
+					flag = independent_when_died
+					days = 25
+				}
+			}
+		}
+		else = {
+			every_heir = {
+				add_character_flag = {
+					flag = not_independent_when_died
+					days = 25
+				}
+			}
+		}
+###TALES OF IRELAND END
 		play_music_cue = "mx_cue_death"
 		every_parent = {
 			sound_foundations_random_removal_effect = yes
