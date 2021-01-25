@@ -4,8 +4,8 @@
     religion = milesian_paganism
     culture = eremon_milesians
 
-    diplomacy =  5 
-    martial =  10 
+    diplomacy =  15 
+    martial =  5
     stewardship =  3 
     intrigue =  6 
     learning =  1 

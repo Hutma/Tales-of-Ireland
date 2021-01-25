@@ -1,0 +1,84 @@
+﻿wonder_hill_of_tara_01 = {
+	type_icon = "icon_structure_walls_of_benin.dds"
+	asset = {
+		illustration = "gfx/interface/illustrations/county_view/county_view_hill_of_tara.dds"
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	levy = normal_building_levy_tier_2
+
+	character_modifier = {
+		prowess = 1
+		knight_effectiveness_mult = 0.05
+		monthly_prestige = 0.25
+	}
+	province_modifier = {
+		fort_level = 1
+	}
+	county_modifier = {
+		monthly_county_control_change_add = 0.1
+		development_growth = 0.1
+		development_growth_factor = 0.1
+	}
+	
+	next_building = wonder_hill_of_tara_02
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+wonder_hill_of_tara_02 = {
+	type_icon = "icon_structure_walls_of_benin.dds"
+	asset = {
+		illustration = "gfx/interface/illustrations/county_view/county_view_hill_of_tara.dds"
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = expensive_building_tier_2_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_house_soldiers
+			has_innovation = innovation_development_01
+		}
+	}
+	
+	levy = normal_building_levy_tier_3
+
+	character_modifier = {
+		prowess = 1
+		knight_effectiveness_mult = 0.1
+		monthly_prestige = 0.25
+	}
+	province_modifier = {
+		fort_level = 1
+	}
+	county_modifier = {
+		monthly_county_control_change_add = 0.25
+		development_growth = 0.1
+		development_growth_factor = 0.1
+	}
+	
+	next_building = wonder_edoras_03_barrowfield
+	type = special
+	ai_value = {
+		base = 100
+	}
+}

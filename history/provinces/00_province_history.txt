@@ -26266,6 +26266,11 @@
               culture = eremon_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  
+			2500.1.1 = {
+				special_building_slot = wonder_hill_of_tara_01
+				special_building = wonder_hill_of_tara_01
+			}
 }
 
 4055 = {      #Belper (b_belper)

@@ -1,0 +1,16 @@
+﻿l_english:
+
+ reform_high_kingship_decision:0 "Restore the High Kingship"
+ reform_high_kingship_decision_desc:0 "As the laws of the Irish were once ruled by a single king and shall once again!"
+ reform_high_kingship_decision_tooltip:0 "Reform the High Kingship of Ireland"
+ reform_high_kingship_decision_confirm:0 "Restore the High Kingship"
+ 
+ call_royal_army_decision:0 "Call the Royal Army"
+ call_royal_army_decision_desc:0 "The High King has the right to muster an army of men from all across Ireland."
+ call_royal_army_decision_tooltip:0 "Rally the Royal Army"
+ call_royal_army_decision_confirm:0 "Call the Army!"
+ 
+ high_king_reclaim_tara_decision:0 "Reclaim Tara"
+ high_king_reclaim_tara_decision_desc:0 "Tara is the traditional center of the High King power, the High King should be the one ruling over it."
+ high_king_reclaim_tara_decision_tooltip:0 "Gain claim on Tara"
+ high_king_reclaim_tara_decision_confirm:0 "Tara should be mine!"

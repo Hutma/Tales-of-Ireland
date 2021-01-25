@@ -98,7 +98,7 @@ high_king_reclaim_tara_decision = {
 	}
 
 	is_valid = {
-		prestige_level >= 1
+		prestige_level >= 2
 		is_independent_ruler = yes
 		has_title = title:k_high_kingship
 	}
@@ -137,7 +137,7 @@ reform_high_kingship_decision = {
 	is_shown = {
 		has_title = title:c_tara
 		NOT = {
-			is_owned = title:k_high_kingship
+			exists = title:k_high_kingship.holder
 		}
 	}
 

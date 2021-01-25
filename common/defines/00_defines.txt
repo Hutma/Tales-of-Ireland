@@ -484,11 +484,11 @@ NCombat = {
 	MINIMUM_COMBAT_WIDTH = 100						# Combat width cannot be smaller than this
 	BASE_RATIO_CASUALTIES_CONVERSION_PURSUIT = 1	# How many of the hard casualties inflicted on the retreating side should be converted to hard casualties during retreat. Interacts with BASE_TOUGHNESS_TO_PURSUIT and such
 	PURSUIT_STAT_TO_PURSUIT_DAMAGE = 0.5			# The pursuit stat is multiplied by this before being turned into actual damage
-	BASE_TOUGHNESS_TO_PURSUIT = 0.05				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
+	BASE_TOUGHNESS_TO_PURSUIT = 0.10				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
 	MINIMUM_PURSUIT_DAMAGE = 0.01					# High screen can't bring casualties below 1% in the pursuit phase
 	DISEMBARK_PENALTY_DAYS = 30						# How long does an army have a penalty after disembarking?
-	KNIGHT_DAMAGE_PER_PROWESS = 100					# How much "Damage" stat does a knight get per prowess?
-	KNIGHT_TOUGHNESS_PER_PROWESS = 10				# How much "Toughness" stat does a knight get per prowess?
+	KNIGHT_DAMAGE_PER_PROWESS = 40					# How much "Damage" stat does a knight get per prowess?
+	KNIGHT_TOUGHNESS_PER_PROWESS = 5				# How much "Toughness" stat does a knight get per prowess?
 	COMBAT_RESULT_MONTHS_TO_TIMEOUT = 12			# Combat results timeout after this many months
 }
 
@@ -734,8 +734,8 @@ NSiege = {
 	DEFENDER_MORALE_PER_FORT_LEVEL = 75					# Defender morale added to the base per for level
 	BASE_DAILY_MORALE_LOSS = 1							# How much morale is lost every day of the siege
 	MIN_DAILY_MORALE_LOSS = 0.5							# Minimum daily morale loss for the defenders
-	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.05	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
-	RELATIVE_ATTACKER_MEN_STACK_SIZE = 50			# Extra stack size of men to start getting daily morale loss
+	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.04	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
+	RELATIVE_ATTACKER_MEN_STACK_SIZE = 50				# Extra stack size of men to start getting daily morale loss
 	MONTHLY_ATTRITION = 0.01							# Monthly attrition during siege
 	BASE_SIEGE_PHASE_LENGTH = 20						# Base length of a siege phase (time between picking new actions) in days
 	BREACH_PHASE_TIMER_LEVELS = {						# How many levels of breach are there and how much (as percentage) is the phase timer reduced by these levels.
@@ -815,10 +815,10 @@ NCounty = {
 }
 
 NProvince = {
-	BASE_SUPPLY_LIMIT = 300					# The unmodified base supply limit of a province
+	BASE_SUPPLY_LIMIT = 300						# The unmodified base supply limit of a province
 	BARONY_BUILDING_SLOTS = 4
 	COUNTY_BUILDING_SLOTS = 5
-	SUPPLY_PER_DEVELOPMENT = 20			# Each development adds this much sto the supply limit
+	SUPPLY_PER_DEVELOPMENT = 20					# Each development adds this much sto the supply limit
 	ACROSS_WATER_PROVINCE_MAX_DISTANCE = 2		# Maximum number of (traversable) water provinces between provinces to be considered "connected across water"
 }
 
@@ -937,7 +937,7 @@ NMercenary = {
 	LEVELS = { 0 7 14 }						# Defines how many different sizes of mercenary companies are there and how many are spawned for a given culture
 											# The numbers correspond to numbers of counties of the culture. No company exists if the number is lower than the first value specified here.
 	HIRE_RANGE = 500						# The maximum distance of mercenaries that can be hired (capital to mercenary location)
-	LEVIES = { 50 100 300 }				# The base numbers of levies for levels of mercenary bands
+	LEVIES = { 50 100 300 }					# The base numbers of levies for levels of mercenary bands
 	MAA_REGIMENTS = { 1 2 3 }				# The number of MAA regiments for levels of mercenary bands
 	NUM_KNIGHTS = { 2 3 4 }					# The number of knights for levels of mercenary bands
 	MAA_REGIMENT_SIZES = { 3 3 3 }	# The base sizes of MAA regiments for levels of mercenary bands, in number of sub-regiments
