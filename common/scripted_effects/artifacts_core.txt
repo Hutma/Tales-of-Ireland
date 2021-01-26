@@ -1,0 +1,250 @@
+﻿# THIS FILE IS MOSTLY DEPRECATED, BUT MAY BE USED BY MODDERS IF DESIRED.
+# -By Tobbzn, from The Way of Kings CK3 mod.
+
+
+
+
+for_all_artifact_types_core = { #USAGE {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = string}
+## Artifact slot types 
+# DOES NOT DEFINE A SLOT IN FULL GENERALITY ON ITS OWN.
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = handheld }
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = armor }
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = headgear }
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = jewelry }
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = mount }
+# Non-slot types
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = shard }
+    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = fabrial }
+#    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = rarity_1 }
+#    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = rarity_2 }
+#    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = rarity_3 }
+#    for_all_artifacts_core_of_type = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = rarity_4 }
+}
+for_all_artifacts_core_of_type = { #USAGE {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$ TYPE = string}
+    for_$TYPE$_artifacts_core = {PREFIX = $PREFIX$ APPLY = $APPLY$ SUFFIX = $SUFFIX$}
+}
+
+## Artifacts by slots
+for_handheld_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_4$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_5$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_6$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_7$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_16$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_17$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_18$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_19$SUFFIX$ 
+    $APPLY$ = $PREFIX$artifact_20$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_21$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_22$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_23$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_24$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_25$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_26$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_27$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_oathbringer$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_sunraiser$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_mayalaran$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_shardblade$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_nightblood$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_jezrien_honorblade$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_type_four_biochromatic_entity$SUFFIX$
+}
+for_armor_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_28$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_29$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_30$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_31$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_shardplate$SUFFIX$
+}
+for_headgear_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_1$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_2$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_3$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_8$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_9$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_10$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_11$SUFFIX$
+}
+for_jewelry_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_12$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_13$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_14$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_15$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_soulcaster$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_spanreed$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_painrial$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_alerter$SUFFIX$
+}
+for_mount_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_ryshadium$SUFFIX$
+}
+
+## Artifact types unrelated to equipment slots:
+for_shard_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+#Shardblades
+    $APPLY$ = $PREFIX$artifact_oathbringer$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_sunraiser$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_mayalaran$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_shardblade$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_nightblood$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_jezrien_honorblade$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_type_four_biochromatic_entity$SUFFIX$
+#Shardplates
+    $APPLY$ = $PREFIX$artifact_shardplate$SUFFIX$
+}
+#Fabrial
+for_fabrial_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    $APPLY$ = $PREFIX$artifact_soulcaster$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_spanreed$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_painrial$SUFFIX$
+    $APPLY$ = $PREFIX$artifact_alerter$SUFFIX$
+}
+
+## START OF MANDATORY COMMAND FOR NEW SLOTS
+# None of the arguments may be empty:
+for_all_artifacts_core = { #USAGE {PREFIX = X APPLY = Y SUFFIX = Z}
+    for_handheld_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = $SUFFIX$
+    }
+    for_armor_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = $SUFFIX$
+    }
+    for_headgear_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = $SUFFIX$
+    }
+    for_jewelry_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = $SUFFIX$
+    }
+    for_mount_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = $SUFFIX$
+    }
+}
+## START OF NON-MANDATORY BUT USEFUL SIMPLIFYING COMMANDS FOR TYPES
+# I lack a suffix:
+for_handheld_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_handheld_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = ""
+    }
+}
+for_armor_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_armor_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = ""
+    }
+}
+for_headgear_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_headgear_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = ""
+    }
+}
+for_jewelry_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_jewelry_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = ""
+    }
+}
+for_mount_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_mount_artifacts_core = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+        SUFFIX = ""
+    }
+}
+for_all_artifacts_core_prefix = { #USAGE {PREFIX = X APPLY = Y}
+    for_handheld_artifacts_core_prefix = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+    }
+    for_armor_artifacts_core_prefix = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+    }
+    for_headgear_artifacts_core_prefix = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+    }
+    for_jewelry_artifacts_core_prefix = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+    }
+    for_mount_artifacts_core_prefix = {
+        APPLY = $APPLY$
+        PREFIX = $PREFIX$
+    }
+}
+
+# I lack a prefix:
+for_handheld_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_handheld_artifacts_core = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+        PREFIX = ""
+    }
+}
+for_armor_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_armor_artifacts_core = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+        PREFIX = ""
+    }
+}
+for_headgear_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_headgear_artifacts_core = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+        PREFIX = ""
+    }
+}
+for_jewelry_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_jewelry_artifacts_core = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+        PREFIX = ""
+    }
+}
+for_mount_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_mount_artifacts_core = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+        PREFIX = ""
+    }
+}
+for_all_artifacts_core_suffix = { #USAGE {SUFFIX = X APPLY = Y}
+    for_handheld_artifacts_core_suffix = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+    }
+    for_armor_artifacts_core_suffix = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+    }
+    for_headgear_artifacts_core_suffix = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+    }
+    for_jewelry_artifacts_core_suffix = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+    }
+    for_mount_artifacts_core_suffix = {
+        APPLY = $APPLY$
+        SUFFIX = $SUFFIX$
+    }
+}

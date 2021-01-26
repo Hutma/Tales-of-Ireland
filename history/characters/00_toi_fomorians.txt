@@ -596,6 +596,9 @@
 
     disallow_random_traits = yes
     4764.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_balor_eye }
+		}
         birth = yes
     }
 }

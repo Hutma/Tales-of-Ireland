@@ -1,0 +1,318 @@
+﻿namespace = artifact_siege
+
+# The chance, out of 100, that any 1 artifact is gained after a siege
+@artifact_gain_chance = 1
+
+artifact_siege.0001 = {
+	hidden = yes
+	
+	### Copied from vanilla
+	
+	trigger = {
+		scope:county.holder = scope:previous_controller
+		OR = {
+			any_war_enemy = { this = scope:previous_controller }
+			any_war_enemy = { any_vassal_or_below = { this = scope:previous_controller } }
+		}
+	}
+
+	immediate = {
+		save_scope_as = occupant
+		scope:barony.holder = { save_scope_as = artifact_holder }
+		scope:barony = { save_scope_as = artifact_barony }
+
+		# Depending on if the occupier is an attacker or defender in this war, get the primary attacker/defender of the siege.
+		scope:war = {
+			if = {
+				limit = {
+					is_attacker = scope:occupant
+				}
+				# If occupier is an attacker, the war's primary attacker is also the primary attacker in this siege (the attackers have occupied one of the defender's provinces).
+				primary_attacker = {
+					save_scope_as = primary_siege_attacker
+				}
+				primary_defender = {
+					save_scope_as = primary_siege_defender
+				}
+			}
+			else = {
+				# Otherwise the occupier is a defender, so the primary defender in the war is the primary attacker in the siege (the defenders have occupied one of the attacker's provinces).
+				primary_defender = {
+					save_scope_as = primary_siege_attacker
+				}
+				primary_attacker = {
+					save_scope_as = primary_siege_defender
+				}
+			}
+		}
+		
+	###
+
+		#this is not a very efficient solution, but if you come up with a better one let me know
+		#call the above effect on every artifact
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_1
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_2
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_3
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_4
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_5
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_6
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_7
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_8
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_9
+		}
+		artifact_changing_hands_calculator = {
+			OCCUPIED = scope:previous_controller
+			OCCUPIER = scope:primary_siege_attacker
+			CHANCE = @artifact_gain_chance
+			ARTIFACT = artifact_10
+		}
+	}
+}
+
+artifact_siege.0002 = {
+	title = artifact_siege.0002.t
+	desc = artifact_siege.0002.desc
+	theme = battle
+	left_portrait = { 
+		character = root
+		animation = happiness
+	}
+	
+	option = {
+		name = artifact_siege.0002.a
+	}
+}
+
+artifact_siege.0003 = {
+	title = artifact_siege.0003.t
+	desc = artifact_siege.0003.desc
+	theme = battle
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	
+	option = {
+		name = artifact_siege.0003.a
+	}
+}
+
+namespace = artifact_hunt
+
+artifact_hunt.0001 = { #start of the hunt
+	title = artifact_hunt.0001.t
+	theme = martial
+	desc = artifact_hunt.0001.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0001.a
+		random = {
+			chance = 100
+			random_list = {
+				20 = {
+					trigger_event = artifact_hunt.0002 #diplomacy
+				}
+				20 = {
+					trigger_event = artifact_hunt.0003 #martial
+				}
+				20 = {
+					trigger_event = artifact_hunt.0004 #intrigue
+				}
+				20 = {
+					trigger_event = artifact_hunt.0005 #learning
+				}
+				20 = {
+					trigger_event = artifact_hunt.0006 #stewardship
+				}
+			}
+		}
+	}
+	option = { #no thanks
+		name = artifact_hunt.0001.b
+	}
+}
+artifact_hunt.0002 = {
+	title = artifact_hunt.0002.t
+	theme = diplomacy
+	desc = artifact_hunt.0002.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0002.a
+		duel = {
+			skill = diplomacy
+			value = 10
+			20 = {#success
+				trigger_event = artifact_hunt.0007
+			}
+			10 = {#failure
+				trigger_event = artifact_hunt.0008
+			}
+		}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0003.b
+	} 
+}
+artifact_hunt.0003 = {
+	title = artifact_hunt.0003.t
+	theme = martial
+	desc = artifact_hunt.0003.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0003.a
+		duel = {
+			skill = martial
+			value = 10
+			20 = {#success
+				trigger_event = artifact_hunt.0007
+			}
+			10 = {#failure
+				trigger_event = artifact_hunt.0008
+			}
+		}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0003.b
+	} 
+}
+artifact_hunt.0004 = {
+	title = artifact_hunt.0004.t
+	theme = intrigue
+	desc = artifact_hunt.0004.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0004.a
+		duel = {
+			skill = intrigue
+			value = 10
+			20 = {#success
+				trigger_event = artifact_hunt.0007
+			}
+			10 = {#failure
+				trigger_event = artifact_hunt.0008
+			}
+		}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0004.b
+	} 
+}
+artifact_hunt.0005 = {
+	title = artifact_hunt.0005.t
+	theme = learning
+	desc = artifact_hunt.0005.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0005.a
+		duel = {
+			skill = learning
+			value = 10
+			20 = {#success
+				trigger_event = artifact_hunt.0007
+			}
+			10 = {#failure
+				trigger_event = artifact_hunt.0008
+			}
+		}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0005.b
+	} 
+}
+artifact_hunt.0006 = {
+	title = artifact_hunt.0006.t
+	theme = stewardship
+	desc = artifact_hunt.0006.desc
+	type = character_event
+	
+	option = {
+		name = artifact_hunt.0006.a
+		duel = {
+			skill = stewardship
+			value = 10
+			20 = {#success
+				trigger_event = artifact_hunt.0007
+			}
+			10 = {#failure
+				trigger_event = artifact_hunt.0008
+			}
+		}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0006.b
+	} 
+}
+artifact_hunt.0007 = {
+	title = artifact_hunt.0007.t
+	theme = learning
+	desc = artifact_hunt.0007.desc
+	type = character_event
+	
+	#will change when a list of valid random artifacts is created
+	option = {
+		name = artifact_hunt.0007.a
+		add_artifact = {ARTIFACT = artifact_2}
+	}
+	option = { #nothanks
+		name = artifact_hunt.0007.b
+	} 
+}
+artifact_hunt.0008 = {
+	title = artifact_hunt.0008.t
+	theme = learning
+	desc = artifact_hunt.0008.desc
+	type = character_event
+	
+	option = { #you fail
+		name = artifact_hunt.0008.a
+	} 
+}

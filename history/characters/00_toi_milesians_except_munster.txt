@@ -21,6 +21,9 @@
 
     disallow_random_traits = yes
     4751.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_mil_armor }
+		}
         birth = yes
     }
 }

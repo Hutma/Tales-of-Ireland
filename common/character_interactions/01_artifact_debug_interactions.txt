@@ -1,0 +1,17 @@
+﻿#Steal all target artifacts
+steal_all_artifacts = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		NOT = { scope:recipient = scope:actor }
+	}
+	
+	on_accept = {
+		transfer_all_artifacts = { A = scope:recipient B = scope:actor }
+	}
+	
+	auto_accept = yes
+}
+

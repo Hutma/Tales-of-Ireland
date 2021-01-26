@@ -1,0 +1,373 @@
+﻿l_english:
+
+ ARTIFACTS_BUTTON:0 "#T Artifacts #!"
+ ARTIFACTS_VIEW_TITLE:0 "Artifacts"
+ ARTIFACTS_VIEW_TITLES:0 "Our Artifacts"
+ ARTIFACTS_VIEW_NONE:0 "No Artifacts"
+ ARTIFACTS:0 "Artifacts"
+ artifacts:0 "Artifacts"
+ gift_artifact:0 "Gift Artifacts"
+ 
+ destroy_artifact_tt:0 "Destroy Artifact"
+ equip_artifact_tt:0 "Equip Artifact"
+ equipped_artifact:0 "#P Equipped#!"
+ unequip_artifact_tt:0 "Unequip Artifact"
+ unequipped_artifact:0 "#N Unequipped#!"
+ send_artifacts:0 "Send Artifacts"
+
+ gift_artifacts_interaction:0 "Gift Artifacts"
+ gift_artifacts_interaction_desc:0 "Gift this person an artifact"
+ gift_artifacts_interaction_notification:0 "Gifted Artifact"
+
+ steal_all_artifacts:0 "Steal All Artifacts"
+ steal_all_artifacts_desc:0 "Steal this person's artifacts"
+ steal_all_artifacts_notification:0 "Artifacts Stolen"
+
+ artifact_debug_decision:0 "Get All Artifacts"
+ artifact_debug_decision_tooltip:2 "(Debug Interaction)"
+ artifact_debug_decision_desc:0 "You will gain all artifacts in the game. "
+ artifact_debug_decision_effect_tooltip:2 "You will gain all artifacts in the game"
+ artifact_debug_decision_confirm:0 "Ultimate Power!!!!"
+
+# Mouseover tooltip emulates the modifier by default - if your mod uses Passive Modifiers for unequipped items, you can add the passive tooltip here as well.
+ artifact_tooltip:0 "#T [GetModifier(Concatenate(Scope.GetFlagName,'_modifier')).GetName]#! \n[GetModifier(Concatenate(Scope.GetFlagName,'_modifier')).GetDesc]"
+
+ ADD_ARTIFACT_EFFECT:0 "Gets the artifact [ARTIFACT.GetFlagName|V].1"
+ ADD_ARTIFACT_EFFECT_FIRST:1 "You get the artifact [CHARACTER.MakeScope.Var('most_recent_artifact').GetFlagName], also $MODIFIER|V0$ and the value is $VALUE|V0$.2"
+ ADD_ARTIFACT_EFFECT_FIRST_PAST:1 "You got the artifact [ARTIFACT.GetFlagName|V].3"
+ ADD_ARTIFACT_EFFECT_THIRD:0 "[CHARACTER.GetShortUIName|U] gets the artifact $VALUE|V0$.4"
+ ADD_ARTIFACT_EFFECT_THIRD_PAST:0 "[CHARACTER.GetShortUIName|U] got the artifact [ARTIFACT.GetFlagName|V].5"
+
+ GET_ARTIFACT_NAME:0 "[Concatenate(Scope.GetFlagName,'_name')]"
+ GET_ARTIFACT_TYPE:0 "[Concatenate(Scope.GetFlagName,'_type')]"
+ GET_ARTIFACT_MODIFIER:0 "[Concatenate(Scope.GetFlagName,'_modifier')]"
+ GET_ARTIFACT_EQUIPPED:0 "[Concatenate(Scope.GetFlagName,'_equipped')]"
+ GET_ARTIFACT_SELECTED:0 "[Concatenate(Scope.GetFlagName,'_selected')]"
+ GET_ARTIFACT_NAME_LOC:0 "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+ GET_ARTIFACT_TYPE_LOC:0 "[Localize(Concatenate(Scope.GetFlagName,'_type'))]"
+ GET_ARTIFACT_MODIFIER_LOC:0 "[Localize(Concatenate(Scope.GetFlagName,'_modifier'))]"
+ GET_ARTIFACT_EQUIPPED_LOC:0 "[Localize(Concatenate(Scope.GetFlagName,'_equipped'))]"
+ GET_ARTIFACT_SELECTED_LOC:0 "[Localize(Concatenate(Scope.GetFlagName,'_selected'))]"
+
+ #For some reason we need one loc to call custom loc and then call back to loc in order to get dynamically updating text.
+ selected_artifact:0 "[ROOT.Var('artifact_selection').GetFlagName]"
+ selected_artifact_title:0 "[GetPlayer.Custom('GetSelectedArtifactTitle')]"
+ artifact_title:0 "[Localize(Concatenate(ROOT.Var('artifact_selection').GetFlagName,'_name'))]" 
+ selected_artifact_desc:0 "[GetPlayer.Custom('GetSelectedArtifactDesc')]"
+ artifact_desc:0 "[Localize(Concatenate(ROOT.Var('artifact_selection').GetFlagName,'_desc'))]" 
+ selected_artifact_equipped:0 "[GetPlayer.Custom('GetSelectedArtifactEquipped')]"
+
+ artifact_name_fallback:0 ""
+ artifact_desc_fallback:0 "When you select an artifact, its name and description will appear here."
+ artifact_equip_fallback:0 ""
+
+ selected_artifact_type:0 "[GetPlayer.Custom('GetArtifactType')]"
+ artifact_type_handheld:0 "@skill_prowess_icon!# #Z Handheld#!"
+ artifact_type_armor:0 "@dread_icon!# #Z  Armor#!"
+ artifact_type_headgear:0 "@knight_icon!# #Z Headgear#!"
+ artifact_type_jewelry:0 "@arrange_marriage_icon!# #Z Jewelry#!"
+ artifact_type_mount:0 "@icon_horse!# #Z Mount#!"
+ artifact_type_fabrial:0 "[magic_i]#Z Fabrial#!"
+ artifact_type_fallback:0 "#Z Untyped#!"
+
+ selected_artifact_indestructible:0 "[GetPlayer.Custom('GetSelectedArtifactIndestructible')]"
+ indestructible_artifact:0 "#P Indestructible#!"
+ destructible_artifact:0 "#N Destructible#!"
+ #"[Localize(Concatenate(ROOT.Var('artifact_selection').GetFlagName,'_name'))]"
+
+ selected_artifact_rarity:0 "[GetPlayer.Custom('GetSelectedArtifactRarity')]"
+ artifact_rarity_1:0 "@army_quality_icon_1!Rarity - 1"
+ artifact_rarity_2:0 "@army_quality_icon_2!#Z Rarity - 2#!"
+ artifact_rarity_3:0 "@army_quality_icon_3!#P Rarity - 3#!"
+ artifact_rarity_4:0 "@army_quality_icon_4!#N Rarity - 4#!"
+ artifact_rarity_fallback:0 "@army_quality_icon_5!#D Unique#!"
+
+ #add_artifact_tt:0 "Gain artifact ." 
+ # [GetModifier('$ARTIFACT$_modifier').GetNameWithTooltip]"
+ gave_artifacts_opinion:0 "Gave Artifacts"
+
+ ### Events
+ artifact_gift.1.t:0 "Gift Artifact"
+  artifact_gift.1.desc:0 "Any one [GetPlayer.Custom('WomanManGirlBoy')] can only make use of so many artifacts at a time, so it's in the interest of my dynasty to ensure that our artifacts are put to good use. \n\nTo that end, I have decided to gift [recipient.GetTitledFirstName] an artifact."
+ artifact_gift.1.a:0 "I will gift them..."
+ artifact_gift.1.tt:0 "(Use the GUI)"
+
+ artifact_siege.0002.t:0 "Artifact Seized!"
+ artifact_siege.0002.desc:0 "During the siege of [artifact_barony.GetName], my men have brought forth a most curious item before me. It seems the foolish [artifact_holder.GetName] left one of his priceless artifacts in his own treasury, free for the taking by my men! I have gladly added it to my own repertoire."
+ artifact_siege.0002.a:0 "Finders keepers!"
+ 
+ artifact_siege.0003.t:0 "Artifact Lost!"
+ artifact_siege.0003.desc:0 "Our enemies have looted one of our priceless artifacts from the treasury at [artifact_barony.GetName]! They have quickly run off with their spoils, and our artifact is likely already in the hands of our enemy."
+ artifact_siege.0003.a:0 "Damn them!"
+ 
+ artifact_create.0008.t:0 "Making a Masterpiece"
+ artifact_create.0008.desc:0 "I've called for a suitable blacksmith to be summoned before me for the task, but first I need to decide how far I am willing to go, and what exactly I want. Some new armor might help present me as the splitting image of rulership I am, while a new weapon would no doubt be of use in battle and possibly outside of it. Then again, I could always use some new fineries..."
+ artifact_create.0008.a:0 "A weapon!"
+ artifact_create.0008.b:0 "Armor!"
+ artifact_create.0008.c:0 "Something else!"
+ 
+ artifact_create.0001.t:0 "Making a Masterpiece"
+ artifact_create.0001.desc_weapon:0 "A weapon would do me well! Whether in battle or to show off, nothing else would be quite worth the money. Now the only question is how much exactly I spend. I could do something truly grand, but obviously I ultimately have to worry about the finances, and there's no promise that if I spend the treasury that what I receive will be entirely worth the investment..."
+ artifact_create.0001.desc_crown:0 "Armor! Beautiful armor! Or at least functional, now the only question is how much exactly I spend. I could do something truly grand, but obviously I ultimately have to worry about the finances, and there's no promise that if I spend the treasury that what I receive will be entirely worth the investment..."
+ artifact_create.0001.desc_jewelry:0 "Some fineries, a staff, crown and jewelry, to show everyone my regalia. Nothing to skimp out on, but such things can be surprisingly expensive. Getting something grand will no doubt impress the court, but bankruptcy is probably not in fashion at the moment..."
+ artifact_create.0001.a:0 "Just something functional is all I need."
+ artifact_create.0001.a.tt:0 "This will result in a Rarity 1 artifact."
+ artifact_create.0001.b:0 "Something fine, but nothing too much..."
+ artifact_create.0001.b.tt:0 "This will result in a Rarity 2 artifact."
+ artifact_create.0001.c:0 "I only want the best!"
+ artifact_create.0001.c.tt:0 "This will result in a Rarity 3 artifact."
+ artifact_create.0001.d:0 "On second though, maybe not."
+ 
+ artifact_create.degrade.tt:0 "The quality of the artifact will decrease."
+ artifact_create.degrade.t:0 "Loss in Quality"
+ artifact_create.degrade.desc:0 "The quality of the artifact has decreased."
+ artifact_create.improvement.tt:0 "The quality of the artifact will increase."
+ artifact_create.improvement.t:0 "Increase in Quality"
+ artifact_create.improvement.desc:0 "The quality of the artifact has increased."
+ 
+ artifact_create.0002.t:0 "Exciting Possibility"
+ artifact_create.0002.desc:0 "I am pulled aside by my craftsmen, who hold great excitement in their eyes. "My liege!" The lead craftsman says, barely hiding his mirth. "We have completed our work. What’s more, we may be able to improve the item, with your support. With your approval, we are prepared to begin further work immediately." As I listened to the craftsman’s words, I considered my options carefully."
+ artifact_create.0002.a:0 "Well..."
+ artifact_create.0002.a.success:0 "The item's quality is improved"
+ artifact_create.0002.a.failure:0 "The item's quality does not improve"
+ artifact_create.0002.a.greatsuccess:0 "The item's quality is significantly improved"
+ artifact_create.0002.b:0 "No, we can’t waste any more resources on this"
+ 
+ artifact_create.0003.t:0 "Successful Craft"
+ artifact_create.0003.desc:0 "As I enter the workshop of the craftsmen, the leader of those working on the artifact sees me and bows his head. "My liege," He begins. "I’m proud to say the work was a success and we have crafted as you wished. I believe we can improve it further, given more time and resources.""
+ artifact_create.0003.a:0 "Well..."
+ artifact_create.0003.a.success:0 "The item's quality is improved"
+ artifact_create.0003.a.failure:0 "The item's quality does not improve"
+ artifact_create.0003.a.greatsuccess:0 "The item's quality is significantly improved!"
+ artifact_create.0003.b:0 "No, we can't waste any more resources on this"
+ 
+ artifact_create.0004.t:0 "A Disappointment"
+ artifact_create.0004.desc:0 "A representative from my smiths is hurried before me and, against my initial hopes, he brings poor news.\n\n"M'lord..." he starts. "I... well my assistant, no good lad, Meldrick, the little simpleton... well... well we were going to..." what comes next is a long tirade of complaints and excuses which simply informs me that the item my smiths had been commissioned to create has come out of far poorer quality than intially hoped, and I have the sneaking feeling that Meldrick is simply a fallman for a greater bout of incompetence. I could let them simply continue on, or I could fire the lot of them and spend the coin to get someone hopefully more competent."
+ artifact_create.0004.a:0 "What can we salvage here?"
+ artifact_create.0004.a.success:0 "The smiths manage to undo the damage"
+ artifact_create.0004.a.failure:0 "The item's quality is degraded"
+ artifact_create.0004.b:0 "I'm not going to salvage this."
+ 
+ artifact_create.0005.t:0 "Shoddy Work"
+ artifact_create.0005.desc:0 "Upon entering the workshop of the craftsmen, I immediately realize that something has gone wrong. The craftsmen stand around my commission looking dejected and despairing, and when I get closer I can see that their work has done more harm than good.\n\n "My sincerest apologies, my liege." The lead craftsman croaks out. "With your mercy and some extra time, I can attempt to repair the damage...""
+ artifact_create.0005.a:0 "What can we do here?"
+ artifact_create.0005.a.success:0 "The smiths manage to undo the damage."
+ artifact_create.0005.a.failure:0 "The item's quality is degraded."
+ artifact_create.0005.b:0 "I'm not going to salvage this."
+ 
+ artifact_create.0006.t:0 "State of my Work"
+ artifact_create.0006.improve.desc:0 "While the initial designs were adequate, adequacy is not the place for one of my stature! I have put my smiths to work on some potential upgrades that I have been informed of, with the hopes that the final result can be further improved from initial designs at a minimum cost... and, well...\n\nThe result has left me giddy beyond measure! The item is apparently far beyond even my wildest expectations, and it should come out even better than I initially hoped!"
+ artifact_create.0006.degrade.desc:0 "While the initial designs were adequate, but adequacy is not the place for one of my stature! I have put my smiths to work on some potential upgrades that I have been informed of, with the hopes that the final result can be further improved from initial designs at a minimum cost... and, well...\n\n The result has been disappointing, with the reports from my smiths indicating that the attempted improvements have actually degraded the quality of the work. It seems the winds of fate have not been kind to me."
+ artifact_create.0006.fallback.desc:0 "While the initial designs were adequate, but adequacy is not the place for one of my stature! I have put my smiths to work on some potential upgrades that I have been informed of, with the hopes that the final result can be further improved from initial designs at a minimum cost... and, well...\n\nThe result has been adequate, with the initial reports indicating improvements in several key areas."
+ artifact_create.0006.a:0 "An acceptable outcome. Let us complete the design…"
+ artifact_create.0006.b:0 "Rats! Let us complete the design..."
+ 
+ artifact_create.0007.t:0 "An even better creation?"
+ artifact_create.0007.desc:0 "As I have eagerly awaited news from my smiths, I have begun to wonder, is great enough? Would it not be possible to put in some extra effort, and create an item truly worthy of the ages? Perhaps it won't be that great, but something truly inspiring. If I just... demanded some effort, put in more funding, put in more time, perhaps we could reach some dizzying new heights of craftsmanship. There's always the risk, however, that the finished product may be worse off. Any modifications made through the smithing process carries this risk, and asking for blacksmiths to give me the sun and stars may end up having the opposite effect. The decision, as always, is mine and mine alone."
+ artifact_create.0007.a:0 "We can go further..."
+ artifact_create.0007.a.tt:0 "I will try and produce a Rarity 4 artifact."
+ artifact_create.0007.b:0 "I should stop here. What I had commissioned was perfectly acceptable."
+ 
+ artifact_create.0008.t:0 "What to make, what to make..."
+ artifact_create.0008.desc:0 "Now I need to decide what type of artifact I want exactly. Perhaps a sword to show the nobility of my rank... or perhaps a suit of armor, that may be more useful in certain other situations. I could even commission a set a beautiful crown jewels to impress everyone in my court."
+ artifact_create.0008.a:0 "A deadly weapon!"
+ artifact_create.0008.a.tt:0 "The finished artifact will be a weapon."
+ artifact_create.0008.b:0 "A suit of armor!"
+ artifact_create.0008.b.tt:0 "The finished artifact will be armor."
+ artifact_create.0008.c:0 "Beautiful jewelry!"
+ artifact_create.0008.c.tt:0 "The finished artifact will be a set of crown jewels."
+ artifact_create.0008.d:0 "On second thought, maybe not."
+
+ artifact_create.0009.t:0 "The Work Completed"
+ artifact_create.0009.desc:0 "As my smiths approach, flanked by guardsmen, they carry with them the sealed case carrying the item I commissioned what seems so long ago. My throat tightens, has all of the efforts been for naught? Will I carry with me the first of a true artifact that shall be passed, rightfully cherished, down my family line for generations to come? The thoughts race through my mind as with shaking hands I unclasp the seals and find..."
+ artifact_create.0009.a:0 "A stunning success! A true artifact!"
+ artifact_create.0009.a.tt:0 "A perfect adequate, just as I wished for!"
+ artifact_create.0009.b:0 "A dismal failure! Damn it all!"
+ artifact_create.0009.c:0 "Nothing. Useless junk."
+
+ artifact_hunt.0001.t:0 "The Hunt Begins"
+ artifact_hunt.0001.desc:0 "Through my recent exploits I have come across evidence of a possible item that has lain hidden to historians for some time. Of course, it could all be just a fanciful rumor, old wives' tales, or possibly even outright fabrications. Still, on the chance chat these whispers are true, I would be foolish to pass up the opportunity. Artifacts of historical note can be of massive value to those with an eye for it, and any ruler possessing one would no doubt be the talk of the land for much time to come. My mind fills with images of magnificent helms, gleaming and gilded swords, and breastplates beaten by only the most skilled hands of history. I feel as if I am holding them all even now..."
+ artifact_hunt.0001.a:0 "Time to go hunting!"
+ artifact_hunt.0001.b:0 "Maybe some other time."
+ 
+ artifact_hunt.0002.t:0 "Hired Help"
+ artifact_hunt.0002.desc:0 "Why should I bother chasing down leads on what very well turn out to be a wild goose chase? I have so much more important, patently real issues to handle at court. I simply can't spare any time to personally look into rumors. That doesn't mean I have to ignore them however, because to do so could prove quite foolish indeed. Instead of heading out myself I have decided to hire some locals to do the searching for me. Hunters, trappers, veterans of past wars, people who ought to know the lay of the land. They'll be good and trustworthy as long as I pay them a fair amount in exchange for finding the artifact."
+ artifact_hunt.0002.a:0 "Good luck!"
+ artifact_hunt.0002.b:0 "Perhaps I should save my gold for a more certain endeavor."
+ 
+ artifact_hunt.0003.t:0 "The Ranging"
+ artifact_hunt.0003.desc:0 "Any good leader must be willing to get his hands dirty in the pursuit of glory and power, or so the storytellers have told us. Today, I will lead a ranging of my personal retinue to search for the supposedly nearby artifact. The party will be broken up into pairs and sent to canvass as wide an area as is possible. Hopefully the excursion will prove to be a swift one, and without any interference from man, beast, or darker entity. The hunt has not been outfitted for heavy combat, and our main advantage will be out speed. With any luck I shall return home by tomorrow at the latest, my new artifact by my side."
+ artifact_hunt.0003.a:0 "We ride!"
+ artifact_hunt.0003.b:0 "I have other battles to win."
+ 
+ artifact_hunt.0004.t:0 "Cutting A Deal"
+ artifact_hunt.0004.desc:0 "Apparently the artifact I've been looking for has actually found its way into the hands of a minor neighboring noble. They might not be so willing to just part with it, even for a good sum of coin. Of course, seeing as how I am the dominant lord in this region, I could exert my power as well as my own personal charm in order to get them to budge. Should that prove not enough, I could go a step further and resort to threats and cajoling. I just hope they'll listen to reason before it comes to anything so brutish."
+ artifact_hunt.0004.a:0 "Time to dash off an invitation."
+ artifact_hunt.0004.b:0 "Perhaps I should save my gold for a more certain endeavor."
+ 
+ artifact_hunt.0005.t:0 "Hitting The Scrolls"
+ artifact_hunt.0005.desc:0 "Searching around aimlessly might be well and good for the common folk, but I am above such wastes of time! I've found bits and pieces of information regarding the artifact rumored to be nearby. By analyzing the clues left behind in these ancient tomes and scrolls, I can significantly narrow down the possible resting place of my target, making the most difficult part of this task all the simpler. Once I have decoded the location, I can simply dispatch some scholars with skills in archeology to secure my new prize."
+ artifact_hunt.0005.a:0 "Now which scroll was it?"
+ artifact_hunt.0005.b:0 "On second thought, this will likely be a pointless endeavor."
+ 
+ artifact_hunt.0006.t:0 "A Bureaucratic Break"
+ artifact_hunt.0006.desc:0 "My steward has brought me word of a most fortunate development in my search for the artifact! It seems that local records may hold the key to retrieving my target. Of course, many of these documents are quite dense and will require careful reading and cross-referencing if I am to secure an understanding of them. My steward has pledged to help me discern some of the possible ciphers and codes he believes were hidden away in these records. Still, given how hard someone has worked to keep this treasure hidden, I cannot be certain we will be able to find success."
+ artifact_hunt.0006.a:0 "Get me an abacus."
+ artifact_hunt.0006.b:0 "Maybe a shall wait for a rainy day to crack this mystery."
+ 
+ artifact_hunt.0007.t:0 "Benevolent Compulsion"
+ artifact_hunt.0007.desc:0 "As I finish my hunt, the success of it bringing me great joy, a certain strange feeling overtakes me. It is not an unpleasant feeling, rather being like a warm compulsion, pulling me towards something unknown. I turn from my path and walk towards the mysterious and unfamiliar force drawing me somewhere else. Inevitably, I reach the place it was trying to bring me, finding a certain object where the pull is strongest, at which point the feeling vanishes."
+ artifact_hunt.0007.a:0 "Perhaps this was fate..."
+ artifact_hunt.0007.b:0 "Maybe some things are best left alone..."
+ 
+ artifact_hunt.0008.t:0 "No Luck"
+ artifact_hunt.0008.desc:0 "Despite my best efforts, the search for what could have been a legendary artifact has turned up naught. Whether it was from my own failings or the others I enlisted, the trail has gone cold."
+ artifact_hunt.0008.a:0 "What a shame."
+ 
+ make_new_artifact:0 "Crafting an Item"
+ make_new_artifact_confirm:0 "Let us begin."
+ make_new_artifact.tt:0 "Begin creation of a new artifact."
+ make_new_artifact.desc:0 "Weaponry, armor, and the regalia of a ruler. It is time I commission something to show myself off as a true cut above my peers. The only question is what I want, and how much I'm willing to spend..."
+ make_new_artifact.effect.tt:0 "I will be able to choose what type of artifact I wish to have forged and what quality of item I desire, though the final result may change..."
+ 
+ ### Artifacts
+ 
+ artifact_4_name:0 "Longsword"
+ artifact_4_desc:0 "Although the sword is one of the most common weapons in the world, this one is a bit uncommon. It is a bit shinier, a bit flashier, a bit more durable than those around it, on account of its better forging by a talented smith. But whether this makes the wielder a bit better at killing foes depends entirely on who's wielding it."
+ artifact_4_modifier:0 "Longsword"
+ 
+ artifact_5_name:0 "Fine Longsword"
+ artifact_5_desc:0 "Anyone with a sharp eye who looks at this sword can tell it is of good make, and it bears the mark of a locally renowned blacksmith at the base of the blade. Although it lacks the ornamentation of some ceremonial weapons, its materials are high-quality and it is a boon to any skilled fighter who wields it."
+ artifact_5_modifier:0 "Fine Longsword"
+ 
+ artifact_6_name:0 "Sword of Heroes"
+ artifact_6_desc:0 "This sword has a regal air about it, combining a well-sharpened and polished blade with a gilded hilt and a decorated scabbard. Whether wielded by a seasoned swordsman, a renowned knight, or a stately lord, this weapon seems suited for the hands of a truly skilled individual."
+ artifact_6_modifier:0 "Sword of Heroes"
+ 
+ artifact_7_name:0 "Sword of Legends"
+ artifact_7_desc:0 "This sword seems to exude a sense of #EMP greatness!#! Just seeing it causes the imagination to conjure up images of valiant knights slaying dragons, noble kings charging into battle, and legendary duelists slicing opponents to ribbons. Even if it may not have been forged by a god or wielded by a saint, it certainly looks the part."
+ artifact_7_modifier:0 "Sword of Legends"
+ 
+ artifact_8_name:0 "Silver Crown"
+ artifact_8_desc:0 "A simple but elegant silver crown, this simple but aesthetically pleasing headpiece is a symbol of an individual's wealth and prestige. Only those with status and renown would wear this in public."
+ artifact_8_modifier:0 "Silver Crown"
+ 
+ artifact_9_name:0 "Ruby Crown"
+ artifact_9_desc:0 "Inlaid with silver and rubies, this ancient artifact was crafted by talented artisans from the lands of Rira. This crown is worth a small fortune, and one can be sure that whoever's head this diadem rests on is both extremely wealthy and powerful."
+ artifact_9_modifier:0 "Ruby Crown"
+ 
+ artifact_10_name:0 "Golden Crown"
+ artifact_10_desc:0 "This fine crown is wrought from a dark red gold, with the finest ivory, as well as a multitude of expensive stones and gems. The quality is impeccable; only those of great status and power are worthy of wearing such a prestigious artifact."
+ artifact_10_modifier:0 "Golden Crown"
+ 
+ artifact_11_name:0 "Crown of Legends"
+ artifact_11_desc:0 "Crafted from the hands of a master smith, platinum and gold are interweaved flawlessly into this visually stunning crown. Gems and diamonds glitter are inlined around the whole of this priceless artifact. A one of a kind artifact, this crown is worthy for only the most wealthy and powerful of rulers."
+ artifact_11_modifier:0 "Crown of Legends"
+ 
+ artifact_12_name:0 "Crown Jewels"
+ artifact_12_desc:0 "These crown jewels are shining and certainly valuable, but were crafted without too much skill. Nevertheless, they effectively contribute to the awe inspired by their owner."
+ artifact_12_modifier:0 "Crown Jewels"
+ 
+ artifact_13_name:0 "Fine Crown Jewels"
+ artifact_13_desc:0 "This set of crown jewels was skillfully crafted and are somewhat remarkable to look upon. This shows the power held by their owner in an effective yet subdued manner."
+ artifact_13_modifier:0 "Fine Crown Jewels"
+ 
+ artifact_14_name:0 "Remarkable Crown Jewels"
+ artifact_14_desc:0 "This jewelry was created masterfully and essentially without flaw, they are truly incredible to behold. This shows the power they represent such that none can deny it."
+ artifact_14_modifier:0 "Remarkable Crown Jewels"
+ 
+ artifact_15_name:0 "Regal Crown Jewels"
+ artifact_15_desc:0 "These gems are breathtakingly beautiful and legendary beyond what words can express, they shine so bright their owner may as well possess the sky itself."
+ artifact_15_modifier:0 "Regal Crown Jewels"
+ 
+ artifact_16_name:0 "Sharpened Axe"
+ artifact_16_desc:0 "Since the dawn of metallurgy, axes' basic designs have changed little throughout human history: a sharpened metal head affixed to a wooden handle. And this axe is no different. It may not look much fancier than the average forester's tool, but it can cut through bone as easily as it cuts wood."
+ artifact_16_modifier:0 "Sharpened Axe"
+ 
+ artifact_17_name:0 "Ornate Axe"
+ artifact_17_desc:0 "Forged from good castle steel and with a sturdy wooden handle, this axe is a cut above the rest. It is perfectly capable of serving as a skilled fighter's weapon on the battlefield, and it certainly has the nicks and scars to prove it."
+ artifact_17_modifier:0 "Ornate Axe"
+ 
+ artifact_18_name:0 "Gilded Axe"
+ artifact_18_desc:0 "This axe strikes a fine balance between utility and ceremony; its head is engraved with elaborate motifs, and its polished wood handle shines in the sunlight. However, that makes it no less capable of killing a foe. A fine weapon for a ruler who values both beauty and brutality."
+ artifact_18_modifier:0 "Gilded Axe"
+ 
+ artifact_19_name:0 "Masterwork Axe"
+ artifact_19_desc:0 "This axe is a marvel to behold, with a head decorated by gold filigree, a silver-plated handle, and a grip lined with precious stones. Many who see it pause for a moment and pity that such beautiful handiwork would be brought to such an ugly place as a battlefield—right until its owner buries it in their skulls."
+ artifact_19_modifier:0 "Masterwork Axe"
+ 
+ artifact_20_name:0 "Fine Lance"
+ artifact_20_desc:0 "This lance is of fine quality, it is not overly special in any particular way, serving simply as a good, solid weapon fit for nobility. One would be quite satisfied to ride into battle wielding this, though it would most likely not be the flashiest item on display in battle."
+ artifact_20_modifier:0 "Fine Lance"
+ 
+ artifact_21_name:0 "Honed Lance"
+ artifact_21_desc:0 "Forged for the waging of a conflict by a blacksmith of some skill, this lance is special for how sturdy and strong it is, making it harder to find than your average lance. Prestigious rulers would no doubt be quite satisfied to carry it into battle!"
+ artifact_21_modifier:0 "Honed Lance"
+ 
+ artifact_22_name:0 "Blood-Thirsty Lance"
+ artifact_22_desc:0 "Crafted no doubt by a renowned blacksmith of incredible skill and talent, this lance inspires awe and fear whenever it is seen on the battlefield, making it treasured and difficult to acquire. Some say when its tip catches the sun, the blood of all the men it has slain can be seen sliding from the edge."
+ artifact_22_modifier:0 "Blood-Thirsty Lance"
+ 
+ artifact_23_name:0 "Legendary Lance"
+ artifact_23_desc:0 "A lance of made with nearly peerless skill, it was forged to end any war it found itself in and pierce any shield in its path. Armies will no doubt break and flee at the mere sight of it, and mountains of corpses are left in its wake. One must wonder if this lance is more effective as a weapon of war or propaganda."
+ artifact_23_modifier:0 "Legendary Lance"
+ 
+ artifact_24_name:0 "Royal Scepter"
+ artifact_24_desc:0 "A scepter made to rule men in all their virtues and vices. It is sturdy but made without particular skill. That said, it is pretty to look at and certainly fit for nobility, standing out from its more ordinary kin."
+ artifact_24_modifier:0 "Royal Scepter"
+ 
+ artifact_25_name:0 "Ruby Scepter"
+ artifact_25_desc:0 "It is clear to all who see this scepter that it is far from a common one. It is made skillfully, though not perfectly, and is sure to catch some eyes in court. Because of this, it is sure to impress most of those likely to see it."
+ artifact_25_modifier:0 "Ruby Scepter"
+ 
+ artifact_26_name:0 "Emerald Scepter"
+ artifact_26_desc:0 "This scepter stands tall above the lives of mortal creatures. A masterpiece of craftsmanship, all who gaze upon it let their eyes linger. Certain to inspire awe in almost everyone, it conveys almost unsurpassed authority."
+ artifact_26_modifier:0 "Emerald Scepter"
+ 
+ artifact_27_name:0 "Diamond Scepter"
+ artifact_27_desc:0 "A scepter of truly legendary beauty, those who look upon it have been known to occasionally go mad with envy. It will bring about obedience in the court without question, representing the very peak of mortal authority."
+ artifact_27_modifier:0 "Diamond Scepter"
+ 
+ artifact_28_name:0 "Chain Mail"
+ artifact_28_desc:0 "A full suit of armor requires a good deal of metal, a cost that is unaffordable for nearly everyone of low birth. To own and maintain one, even without any decorations or ornamentation, is still a display of great wealth."
+ artifact_28_modifier:0 "Chain Mail"
+ 
+ artifact_29_name:0 "Splint Mail"
+ artifact_29_desc:0 "This suit of armor shows that its wearer is a step above the average knight-errant. The metal is free of rusts, dents, and scratches, and stays brightly polished due under the care of dutiful squires. There is even some paintwork on it, in the owner's house colors."
+ artifact_29_modifier:0 "Splint Mail"
+ 
+ artifact_30_name:0 "Masterwork Armor"
+ artifact_30_desc:0 "This armor was designed to house someone of great station, as evidenced by the level of craftsmanship and detail put into it. Not only are the armor pieces themselves of fine steel, but the components connecting and accentuating them are also from fine materials. Everything, from the top of the helmet to the bottom of the boots, showcases high quality."
+ artifact_30_modifier:0 "Masterwork Armor"
+ 
+ artifact_31_name:0 "Gilded Plate Armor"
+ artifact_31_desc:0 "One can tell from a single glance at this armor that its wearer is as rich as Croesus. Nearly every piece has some kind of gold or silver inlay, accentuated by golden rivets, and clothed by a richly dyed doublet and a silk-lined cape. A suit of armor fit and fitted for a king."
+ artifact_31_modifier:0 "Gilded Plate Armor"
+ 
+ artifact_lugh_spear_name:0 "Lugh's Spear"
+ artifact_lugh_spear_desc:0 "This Spear is said to be impossible to overcome, it is enchanted and once cast it always hit its mark and then return to his owner. This spear is made of iron and gold and is richly decorated."
+ artifact_lugh_spear_modifier:0 "Lugh's Spear"
+ 
+ artifact_sword_of_light_name:0 "Claíomh Solais, sword of light"
+ artifact_sword_of_light_desc:0 "Claíomh Solais is a magnificent and magical sword. It is said that it can thrust through anything as long as the wielder trusts in his sword and his destiny. This sword is among the treasures that the Tuatha Dé Danann brought to Ireland."
+ artifact_sword_of_light_modifier:0 "Claíomh Solais, sword of light"
+ 
+ artifact_sreng_mace_name:0 "Sreng's Mace"
+ artifact_sreng_mace_desc:0 "Sreng was the Fir Bolg champion during their war against the Tuatha Dé Danann. It's with this mace that Sreng cut off Nuada's arm during a duel. Because of this achievement many think that this mace is blessed by the gods."
+ artifact_sreng_mace_modifier:0 "Sreng's Mace"
+ 
+ artifact_mil_armor_name:0 "Míl Espáine's Armor"
+ artifact_mil_armor_desc:0 "Míl Espáine was the leader of Milesians. This great man fought many wars in many places, from Scythia to Egypt, from Greece to Spain and then from Spain to Ireland. This armor followed him unitl his death."
+ artifact_mil_armor_modifier:0 "Míl Espáine's Armor"
+ 
+ artifact_balor_eye_name:0 "Balor's Eye"
+ artifact_balor_eye_desc:0 "Balor was the Fomorian king that put the Tuatha Dé Danann under a heavy tribute. But he his also the king who lost the war against the Tuatha Dé Danann decades later. Balor was a giant Fomorian who's eyes could bring fire and destruction on the ones he looked at. This eye is the seat of a great and dark power."
+ artifact_balor_eye_modifier:0 "Balor's Eye"
+ 
+ artifact_nuada_silverarm_name:0 "Nuada's Silverarm"
+ artifact_nuada_silverarm_desc:0 "This is the Silverarm of Nuada, the one he used before Miach replaced it with a new arm of flesh and blood. This silverarm is now considered as a treasure and a legacy."
+ artifact_nuada_silverarm_modifier:0 "Nuada's Silverarm"
+ 
+ artifact_dagda_cauldron_name:0 "Dagda's Cauldron"
+ artifact_dagda_cauldron_desc:0 "This Cauldron can never be emptied and prevent famine. It's one of the treasures brought to Ireland by the Tuatha Dé Danann."
+ artifact_dagda_cauldron_modifier:0 "Dagda's Cauldron"

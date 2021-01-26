@@ -28,6 +28,10 @@
         add_spouse = 1000001
     }
 	3330.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_nuada_silverarm }
+			add_artifact = {ARTIFACT = artifact_sword_of_light }
+		}
 		give_nickname = "Silver Arm"
     }
 }
@@ -90,6 +94,9 @@
         add_spouse = 1000003
     }
 	3350.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_lugh_spear }
+		}
 		give_nickname = "Of The Long Arm"
     }
 }
@@ -155,6 +162,9 @@
         add_spouse = 1000005
     }
 	3380.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_dagda_cauldron }
+		}
         give_nickname = "The Father"
     }
 }

@@ -1,0 +1,55 @@
+gift_artifacts_interaction = {
+	category = interaction_category_friendly
+	common_interaction = yes
+	interface_priority = 60
+	desc = gift_artifacts_interaction_desc
+	
+	ai_targets = {
+		ai_recipients = liege
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 10
+	}
+	ai_targets = {
+		ai_recipients = vassals
+		max = 10
+	}
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	auto_accept = yes
+	ai_will_do = no
+	ai_frequency = 60
+	
+	is_shown = {
+		NOT = {
+			scope:recipient = scope:actor
+		}
+	}
+	
+	can_send = {
+		NOT = {
+			scope:recipient = scope:actor
+		}
+	}
+	
+	
+	
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			NOT = { has_trait = incapable }
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			trigger_event = artifact_gift.1
+			set_variable = {
+				name = artifact_recipient
+				value = scope:recipient
+			}
+		}
+	}
+}

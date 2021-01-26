@@ -1,0 +1,239 @@
+﻿GetSelectedArtifactTitle = {
+	type = character
+	first_valid = yes
+	text = {
+		localization_key = artifact_title
+		trigger = {
+			has_variable = artifact_selection
+		}
+	}
+	text = {localization_key = artifact_name_fallback}
+}
+
+GetSelectedArtifactDesc = {
+	type = character
+	text = {
+		localization_key = artifact_desc
+		trigger = {
+			has_variable = artifact_selection
+		}
+	}
+	text = {
+		localization_key = artifact_desc_fallback
+	}
+}
+
+GetSelectedArtifactEquipped = {
+	type = character
+	# Equipped Artifacts
+	text = {
+		localization_key = equipped_artifact
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_equipped = yes
+		}
+	}
+	
+	# Unquipped Artifacts
+	text = {
+		localization_key = unequipped_artifact
+		trigger = {
+			exists = var:artifact_selection
+			is_selection_equipped = no
+		}
+	}
+	text = {localization_key = artifact_equip_fallback}
+}
+GetSelectedArtifactIndestructible = {
+	type = character
+	# Indestructible Artifacts
+	text = {
+		localization_key = indestructible_artifact
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_indestructible = yes
+		}
+	}
+	
+	# Destructible Artifacts
+	text = {
+		localization_key = destructible_artifact
+		trigger = {
+			exists = var:artifact_selection
+			is_selection_indestructible = no
+		}
+	}
+}
+GetSelectedArtifactRarity = {
+	type = character
+	text = {
+		localization_key = artifact_rarity_1
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_of_rarity = {RARITY = 1}
+		}
+	}
+	text = {
+		localization_key = artifact_rarity_2
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_of_rarity = {RARITY = 2}
+		}
+	}
+	text = {
+		localization_key = artifact_rarity_3
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_of_rarity = {RARITY = 3}
+		}
+	}
+	text = {
+		localization_key = artifact_rarity_4
+		trigger = {
+			has_variable = artifact_selection
+			is_selection_of_rarity = {RARITY = 4}
+		}
+	}
+	text = {
+		localization_key = artifact_rarity_fallback
+		trigger = {
+			has_variable = artifact_selection
+		}
+	}
+}
+
+GetArtifactType = {
+	type = character
+	text = {
+		localization_key = artifact_type_handheld
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_handheld
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_armor
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_armor
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_headgear
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_headgear
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_jewelry
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_jewelry
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_mount
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_mount
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_fabrial
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_fabrial
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_fallback
+		trigger = {		
+			has_variable = artifact_selection
+		}
+	}
+}
+GetArtifactTypeIcon = {
+	type = character
+	text = {
+		localization_key = artifact_type_handheld
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_handheld
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_armor
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_armor
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_headgear
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_headgear
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_jewelry
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_jewelry
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_mount
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_mount
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_fabrial
+		trigger = {
+			has_variable = artifact_selection
+			is_target_in_global_variable_list = {
+				name = global_artifact_list_fabrial
+				target = var:artifact_selection
+			}
+		}
+	}
+	text = {
+		localization_key = artifact_type_fallback
+	}
+}

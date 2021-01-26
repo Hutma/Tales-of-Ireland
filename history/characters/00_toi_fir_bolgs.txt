@@ -19,6 +19,9 @@
 
     disallow_random_traits = yes
     4782.1.1 = {
+		effect = {
+			add_artifact = {ARTIFACT = artifact_sreng_mace }
+		}
         birth = yes
     }
 }

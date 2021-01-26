@@ -21,7 +21,7 @@
 		}
 
 		is_shown = {
-			has_doctrine = abrahamic_hostility_doctrine
+
 		}
 
 		can_pick = {
@@ -152,15 +152,8 @@
 	tenet_communion = {
 		icon = core_tenet_chalice
 		piety_cost = {
-			if = {
-				limit = {
-					has_doctrine = pagan_hostility_doctrine
-				}
-				value = faith_tenet_cost_high
-			}
-			else = {
-				value = faith_tenet_cost_mid
-			}
+
+			value = faith_tenet_cost_mid
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -631,7 +624,7 @@
 		}
 
 		is_shown = {
-			has_doctrine = abrahamic_hostility_doctrine
+
 		}
 
 		traits = {
@@ -935,9 +928,7 @@
 		}
 
 		is_shown = {
-			NOT = {
-				has_doctrine = abrahamic_hostility_doctrine
-			}
+
 		}
 
 		name = {
@@ -1014,7 +1005,7 @@
 		}
 
 		is_shown = {
-			has_doctrine = pagan_hostility_doctrine
+
 		}
 
 		parameters = {
@@ -1097,15 +1088,8 @@
 	tenet_human_sacrifice = {
 		icon = core_tenet_flagellant
 		piety_cost = {
-			if = {
-				limit = {
-					has_doctrine = pagan_hostility_doctrine
-				}
-				value = faith_tenet_cost_mid
-			}
-			else = {
-				value = faith_tenet_cost_massive
-			}
+
+			value = faith_tenet_cost_massive
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1228,23 +1212,8 @@
 		icon = core_tenet_holytree
 
 		piety_cost = {
-			if = {
-				limit = {
-					OR = {
-						has_doctrine = pagan_hostility_doctrine
-					}
-				}
-				value = faith_tenet_cost_low
-			}
-			else_if = {
-				limit = {
-					has_doctrine = abrahamic_hostility_doctrine
-				}
-				value = faith_tenet_cost_massive
-			}
-			else = {
-				value = faith_tenet_cost_mid
-			}
+
+			value = faith_tenet_cost_mid
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1279,10 +1248,7 @@
 		}
 
 		is_shown = {
-			OR = {
-				has_doctrine = pagan_hostility_doctrine
-				has_doctrine = eastern_hostility_doctrine
-			}
+
 		}
 
 		parameters = {
@@ -1384,10 +1350,7 @@
 		}
 
 		is_shown = {
-			OR = {
-				has_doctrine = abrahamic_hostility_doctrine
-				has_doctrine = pagan_hostility_doctrine
-			}
+
 		}
 		can_pick = {
 			custom_description = {
@@ -1439,7 +1402,6 @@
 
 
 		is_shown = {
-			NOT = { has_doctrine = pagan_hostility_doctrine }
 		}
 		can_pick = {
 			custom_description = {
@@ -1741,17 +1703,8 @@
 		icon = core_tenet_shadyfigure
 
 		piety_cost = {
-			if = {
-				limit = {
-					OR = {
-						has_doctrine = pagan_hostility_doctrine
-					}
-				}
-				value = faith_tenet_cost_mid
-			}
-			else = {
-				value = faith_tenet_cost_massive
-			}
+
+			value = faith_tenet_cost_massive
 
 			# Multiplier for keeping same tenet
 			if = {

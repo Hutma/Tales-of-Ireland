@@ -1,0 +1,146 @@
+﻿artifacts_gui_toggle = {
+	scope = character
+	is_shown = {
+		has_variable = artifacts_gui_toggle
+	}
+	effect = {
+		if = {
+			limit = {has_variable = artifacts_gui_toggle}
+			remove_variable = artifacts_gui_toggle
+		}
+		else = {
+			set_variable = artifacts_gui_toggle
+		}
+	}
+}
+artifacts_gui_close = {
+	scope = character
+	is_shown = {always = yes}
+	effect = {remove_variable = artifacts_gui_toggle}
+}
+artifacts_save_scope = {
+	scope = character
+	is_shown = {always = yes}
+	effect = {save_scope_as = artifact_person}
+}
+artifacts_has_no_artifacts = {# Shows text
+	scope = character
+	is_shown = {NOT = {has_any_artifact = yes}}
+}
+artifacts_clicked = {# Fires when any artifact is clicked in the window
+	scope = character
+	is_shown = {}
+	effect = {}
+}
+artifacts_tooltip = { #Not currently hooked up to anything
+	is_shown = {always = no}
+	effect = {}
+}
+artifacts_equipped = { #Shows "Equipped" in green when selected artifact is equipped
+	scope = character
+	is_shown = {
+		is_artifact_equipped = {ARTIFACT = Scope:SELECTION}
+	}
+}
+artifacts_destroy_artifact = { #Button which destroys selection
+	scope = character
+	is_shown = {
+		has_variable = artifact_selection
+		NOT = {is_selection_indestructible = yes}}
+	effect = {
+		for_all_artifacts_no_arguments = {APPLY = destroy_artifact_if_selected}
+	}
+}
+artifacts_equip_artifact = {# Triggers when the "Equip" button is clicked
+	scope = character
+	is_shown = {
+		has_variable = artifact_selection
+		NOT = {
+			is_selection_equipped = yes
+		}
+	}
+	effect = {
+		for_all_slots = {APPLY = unequip_selected_type_artifacts}
+		for_all_artifacts_no_arguments = {APPLY = equip_selected_artifact}
+
+		if = {
+			# This one gets to be special
+			limit = {
+				has_variable = artifact_1_selected
+				faith = faith:catholic
+				highest_held_title_tier >= tier_empire
+			}
+			unequip_headgear_artifacts = yes
+			add_equipped_artifact = {ARTIFACT = artifact_1}
+			add_character_modifier = {
+				modifier = artifact_1_modifier
+			}
+			remove_character_modifier = artifact_1_passive
+			#add_character_flag = artifact_1_equipped
+		}
+		else_if = {#In case the previous didn't fire and you shouldn't be allowed to wear the crown.
+			limit = {has_variable = artifact_1_selected}
+			remove_equipped_artifact = {ARTIFACT = artifact_1}
+		}
+		else_if = {
+			limit = {
+				has_variable = artifact_nightblood_selected
+			}
+			trigger_event = nightblood.1
+		}
+		else_if = {
+			limit = {
+				has_variable = artifact_type_four_biochromatic_entity_selected
+			}
+			trigger_event = awakening.6
+		}
+	}
+}
+artifacts_unequip_artifact = {# Triggers when the Unequip button is clicked
+	scope = character
+	is_shown = {
+		has_variable = artifact_selection
+		is_selection_equipped = yes
+	}
+	effect = {
+		for_all_artifacts_no_arguments = {APPLY = unequip_selected_artifact }
+	}
+}
+
+artifacts_gift_confirm = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	effect = {
+		transfer_selected_gift_artifacts = { FROM = root TO = var:artifact_recipient }
+		var:artifact_recipient = {
+			add_opinion = {
+				target = root
+				modifier = gave_artifacts_opinion
+			}
+		}
+	}
+}
+
+artifacts_cant_artifact = {
+	scope = character
+	is_shown = {
+		has_variable = artifact_selection
+		is_selection_indestructible = yes
+	}
+}
+
+artifacts_save_character = {
+	scope = character
+	effect = {
+		if = {
+			limit = { has_variable = artifact_person }
+			remove_variable = artifact_person
+			save_scope_as = artifact_person
+		}
+		else = {
+			set_variable = artifact_person
+		}
+	}
+}

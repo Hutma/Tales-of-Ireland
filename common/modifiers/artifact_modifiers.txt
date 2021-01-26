@@ -1,0 +1,238 @@
+﻿artifact_4_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 1
+}
+
+artifact_5_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 2
+}
+
+artifact_6_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 3
+}
+
+artifact_7_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 4
+}
+
+artifact_8_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	dread_baseline_add = 5
+}
+
+artifact_9_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	dread_baseline_add = 10
+}
+
+artifact_10_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	dread_baseline_add = 10
+	dread_gain_mult = 0.10
+}
+
+artifact_11_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	dread_baseline_add = 15
+	dread_gain_mult = 0.20
+	dread_decay_mult = -0.20
+}
+
+artifact_12_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	monthly_piety = 1
+	direct_vassal_opinion = 5
+}
+
+artifact_13_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	monthly_piety = 1
+	direct_vassal_opinion = 10
+	courtier_and_guest_opinion = 10
+}
+
+artifact_14_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	monthly_piety = 1
+	direct_vassal_opinion = 15
+	courtier_and_guest_opinion = 15
+}
+
+artifact_15_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	monthly_piety = 2
+	vassal_opinion = 20
+	courtier_and_guest_opinion = 20
+}
+
+artifact_16_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 1
+}
+
+artifact_17_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 2
+}
+
+artifact_18_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 3
+}
+
+artifact_19_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 4
+}
+
+artifact_20_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 1
+}
+
+artifact_21_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 2
+}
+
+artifact_22_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 3
+}
+
+artifact_23_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 4
+}
+
+artifact_24_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	dread_baseline_add = 5
+}
+
+artifact_25_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	dread_baseline_add = 10
+}
+
+artifact_26_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	dread_baseline_add = 10
+	dread_gain_mult = 0.10
+}
+
+artifact_27_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	dread_baseline_add = 15
+	dread_gain_mult = 0.20
+	dread_decay_mult = -0.20
+}
+
+artifact_28_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 1
+}
+
+artifact_29_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 1
+	martial = 1
+}
+
+artifact_30_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 2
+	martial = 1
+}
+
+artifact_31_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 2
+	prowess = 2
+	martial = 2
+	dread_baseline_add = 10
+}
+
+###TALES OF IRELAND ARTIFACTS
+artifact_lugh_spear_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 3
+	martial = 1
+	health = 1
+}
+
+artifact_sword_of_light_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 3
+	hard_casualty_modifier = -0.15
+}
+
+artifact_sreng_mace_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 3
+	enemy_hard_casualty_modifier = 0.15
+}
+
+artifact_mil_armor_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	prowess = 2
+	enemy_terrain_advantage = -0.25
+}
+
+artifact_balor_eye_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	martial = 2
+	dread_gain_mult = 0.25
+	health = -0.15
+	monthly_martial_lifestyle_xp_gain_mult = 0.5
+}
+
+artifact_nuada_silverarm_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+	monthly_piety = 1
+	learning = 1
+}
+
+artifact_dagda_cauldron_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1.5
+	county_opinion_add = 5
+	development_growth_factor = 0.25
+	health = 0.25
+}

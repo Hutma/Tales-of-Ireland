@@ -1,0 +1,198 @@
+######################################################
+#################### GIFT ARTIFACT ####################
+######################################################
+window = {
+	name = "interaction_gift_artifact"
+	parentanchor = top|right
+	position = { -15 90 }
+	size = { 550 960 }
+	movable = no
+	layer = windows_layer
+
+	using = Window_Background
+	using = Window_Decoration_Spike
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		on_start = "[GetVariableSystem.Set( 'interaction_gift_artifact_open', 'true' )]"
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		on_start = "[GetVariableSystem.Clear( 'interaction_gift_artifact_open' )]"
+	}
+
+	vbox = {
+		using = Window_Margins
+
+		header_pattern_interaction = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text"
+			{
+				text = "gift_artifact"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets interaction_gift_artifact')]"
+			}
+
+			icon_character_interaction = {}
+		}
+
+		### artifact list
+		scrollbox = {
+			name = "artifact_list"
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			blockoverride "scrollbox_empty"
+			{
+				text_single = {
+					datacontext = "[GetScriptedGui('artifacts_has_no_artifacts')]"
+					visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					text = "ARTIFACTS_VIEW_NONE"
+					default_format = "#low;italic"
+				}
+			}
+
+			blockoverride "scrollbox_content"
+			{
+				vbox = {
+					name = "artifact_all"
+					datamodel = "[GetPlayer.MakeScope.GetList('artifact_list')]"
+					#layoutpolicy_horizontal = expanding
+					visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					item = {
+						button_standard = {
+							layoutpolicy_horizontal = expanding
+							size = { 400 100 }
+							maximumsize = { 400 100 }
+							onclick = "[ExecuteConsoleCommand(Concatenate(Concatenate('effect select_artifact_to_give = { ARTIFACT =', Scope.GetFlagName),' }'))]"
+
+							block "artifact_entry"
+							{}
+							hbox = {
+								background = {
+									texture = "gfx/artifacts/tile_selected_gold.dds"
+									spriteType = Corneredtiled
+									spriteborder = { 6 6 }
+									shaderfile = "gfx/FX/pdxgui_default.shader"
+									block "artifact_entry_border"
+									{}
+								}
+					
+								button = {
+									size = { 100 100 }
+									alwaystransparent = yes
+									background = {
+										#text = "test"
+										texture = "gfx/artifacts/tile_selected_gold.dds"
+										spriteType = Corneredtiled
+										spriteborder = { 6 6 }
+										shaderfile = "gfx/FX/pdxgui_default.shader"
+										block "artifact_entry_border"
+										{}
+									}
+									text_single = {
+										text = "[Localize(Concatenate(Concatenate('@icon_',Scope.GetFlagName), '!'))]" 
+
+										#"gfx/artifacts/artifact_oathbringer.dds"
+										size = { 100 100 }
+										parentanchor = center
+									}
+									icon = {
+										texture = "gfx/artifacts/artifacts_gift_entry_bg.dds"
+										position = { 100 2 }
+										alwaystransparent = yes
+										layer = bottom
+									}
+								}
+								artifact_spacer_horizontal = {}
+							
+								vbox = {
+									artifact_spacer_vertical = {}
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										textbox = {
+											font = StandardGameFont
+											fontcolor = { 1 1 1 1 }
+											fontsize = 16
+											text = GET_ARTIFACT_NAME_LOC
+											#"[Localize(Scope.GetFlagName)]"
+											#"[Localize(Concatenate( Scope.GetFlagName,'_name'))]"
+											autoresize = no
+											layoutpolicy_horizontal = expanding
+											elide = right
+											minimumsize = { -1 16 }
+											align = left
+											block "artifact_name"
+											{}
+										}
+										#text_single = {
+											#text = "[Localize(Concatenate(Scope.GetFlagName,'_icon'))]"
+											#tooltip = "[GetPlayer.MakeScope.GetList('artifact_list')]"
+											#"[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'targetar', GetPlayer.MakeScope ).End)]"
+
+										  #}
+										artifact_spacer_horizontal = {}
+										icon = {
+											#on_start = ""
+											texture = "gfx/artifacts/icon_check.dds"
+											size = { 22 16 }
+											visible = "[EqualTo_string(GetPlayer.MakeScope.Var(Concatenate(Scope.GetFlagName,'_selected_give')).GetFlagName,Scope.GetFlagName)]"
+										}
+										artifact_spacer_horizontal = {}
+									}
+									artifact_spacer_vertical = {}
+									textbox = {
+										font = StandardGameFont
+										fontcolor = { 0.8 0.8 0.8 1 }
+										fontsize = 12
+										text = "[GetModifier(Concatenate(Scope.GetFlagName,'_modifier')).GetDesc]"
+										#"[Localize(Concatenate(Scope.GetFlagName,'_stats'))]"
+										autoresize = no
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										elide = right
+										multiline = yes
+										align = top|left
+										block "artifact_description"
+										{}
+									}
+								artifact_spacer_vertical = {}
+								}
+							}
+						}
+					}
+				}
+			}
+			expand = {}
+		}
+
+		### Other Effects
+		vbox = {
+			name = "other_effects_list"
+			layoutpolicy_horizontal = expanding
+			margin_bottom = 15
+			spacing = 10
+
+			### SEND OFFER BUTTON
+			button_primary = {
+				name = "send_artifacts_button"
+				size = { 400 42 }
+				text = "send_artifacts"
+				datacontext = "[GetScriptedGui('artifacts_gift_confirm')]"
+				onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets interaction_gift_artifact')]"
+			}
+		}
+	}
+}

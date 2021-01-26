@@ -1,0 +1,30 @@
+﻿namespace = artifact_gift
+
+artifact_gift.1 = {
+	title = artifact_gift.1.t
+	desc = artifact_gift.1.desc
+	theme = stewardship
+	override_background = {
+		event_background = armory
+	}
+	left_portrait = {
+		character = scope:actor
+		animation = council_steward
+	}
+	right_portrait = {
+		character = scope:recipient
+		animation = content
+	}
+	widgets = {
+		widget = {
+			gui = "open_grant_artifacts_widget"
+			container = "custom_widgets_container"
+			controller = default
+			setup_scope = { }
+		}
+	}
+	option = {
+		name = artifact_gift.1.a
+		custom_tooltip = artifact_gift.1.tt
+	}
+}

@@ -992,9 +992,7 @@ call_dynasty_member_to_war_interaction = {
 			scope:target.casus_belli.primary_defender.faith = scope:recipient.faith
 			scope:target.casus_belli.war = {
 				OR = {
-					using_cb = minor_religious_war
-					using_cb = religious_war
-					using_cb = major_religious_war
+					always = no
 				}
 			}
 			desc = WONT_ATTACK_RELIGIOUS_BRETHREN_REASON
