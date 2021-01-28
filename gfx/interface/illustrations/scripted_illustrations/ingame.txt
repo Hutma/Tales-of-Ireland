@@ -724,17 +724,7 @@ character_location_exterior = {
 		reference = "holding_types/tribe_arid.dds"
 
 		trigger = {
-			has_government = tribal_government
-			exists = capital_province
-			capital_province = {
-				OR = {
-					geographical_region = world_levant
-					geographical_region = world_africa
-					geographical_region = world_mesopotamia
-					geographical_region = world_elam
-				}
-				NOT = { geographical_region = world_nubia }
-			}
+			always = no
 		}
 	}
 
@@ -754,13 +744,7 @@ character_location_exterior = {
 		reference = "event_scenes/desert.dds"
 
 		trigger = {
-			has_government = tribal_government
-			exists = capital_province
-			capital_province = {
-				OR = {
-					geographical_region = world_nubia
-				}
-			}
+			always = no
 		}
 	}
 

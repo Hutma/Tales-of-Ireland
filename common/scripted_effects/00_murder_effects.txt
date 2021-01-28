@@ -326,9 +326,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
-					location = { geographical_region = world_elam }
-				}
 			}
 		}
 		1000 = {
@@ -338,12 +335,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				location = {
-					OR = {
-						geographical_region = world_greekaegean
-						geographical_region = world_anatolia
-					}
-				}
 			}
 		}
 		500 = {
@@ -353,12 +344,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				location = {
-					OR = {
-						geographical_region = world_greekaegean
-						geographical_region = world_anatolia
-					}
-				}
 			}
 		}
 		1000 = {
@@ -368,12 +353,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				location = {
-					NOR = {
-						geographical_region = world_greekaegean
-						geographical_region = world_anatolia
-					}
-				}
 			}
 		}
 		500 = {
@@ -383,9 +362,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
-					location = { geographical_region = world_nubia }
-				}
 			}
 		}
 		250 = {
@@ -395,9 +371,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
-					location = { geographical_region = world_nubia }
-				}
 			}
 		}
 		250 = {
@@ -407,11 +380,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				location = {
-					NOR = {
-						geographical_region = world_elam
-					}
-				}
 			}
 		}
 		1000 = {
@@ -421,9 +389,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
-					location = { geographical_region = world_elam }
-				}
 			}
 		}
 		500 = {
@@ -433,12 +398,6 @@ set_local_venomous_creature_effect = {
 			}
 			modifier = {
 				factor = 0
-				location = {
-					OR = {
-						geographical_region = world_greekaegean
-						geographical_region = world_anatolia
-					}
-				}
 			}
 		}
 		1 = {

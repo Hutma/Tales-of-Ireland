@@ -341,7 +341,7 @@ half_partholonian = {
 		three_quarter_megalith_human
 		
 		three_quarter_partholonian
-		partholonain
+		partholonian
 	}
 	
 	physical = yes
@@ -388,7 +388,7 @@ three_quarter_partholonian = {
 		three_quarter_megalith_human
 		
 		half_partholonian
-		partholonain
+		partholonian
 	}
 	
 	physical = yes

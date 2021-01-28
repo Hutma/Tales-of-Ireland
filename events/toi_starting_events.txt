@@ -1,0 +1,392 @@
+﻿namespace = introduction_event
+
+introduction_event.001 =  {
+	title = introduction_event.001.t
+	desc = introduction_event.001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.a
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_fomorian_group
+			}
+			trigger_event = {
+				id = introduction_event.010
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_cessarian_group
+			}
+			trigger_event = {
+				id = introduction_event.002
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_partholonian_group
+			}
+			trigger_event = {
+				id = introduction_event.003
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_nemedian_group
+			}
+			trigger_event = {
+				id = introduction_event.004
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_fir_bolg_group
+			}
+			trigger_event = {
+				id = introduction_event.005
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_de_danann_group
+			}
+			trigger_event = {
+				id = introduction_event.006
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_milesian_group
+			}
+			trigger_event = {
+				id = introduction_event.007
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_culture_group = culture_group:toi_cruithin_group
+					has_culture_group = culture_group:toi_erainn_group
+					has_culture_group = culture_group:toi_laigin_group
+				}
+			}
+			trigger_event = {
+				id = introduction_event.007
+			}
+		}
+		if = {
+			limit = {
+				has_culture_group = culture_group:toi_meghalithic_group
+			}
+			trigger_event = {
+				id = introduction_event.009
+			}
+		}		
+	}
+	option = {
+		name = introduction_event.001.b
+		trigger_event = {
+				id = introduction_event.011   #Dev system
+		}		
+	}
+	option = {
+		name = introduction_event.001.c
+		trigger_event = {
+				id = introduction_event.012		#High king
+		}
+	}
+	option = {
+		name = introduction_event.001.d
+		trigger_event = {
+				id = introduction_event.013   #War
+		}		
+	}
+	option = {
+		name = introduction_event.001.e
+		trigger_event = {
+				id = introduction_event.014   #New lifestyle
+		}		
+	}
+	option = {
+		name = introduction_event.001.f
+		trigger_event = {
+				id = introduction_event.015   #Magic
+		}
+	}
+	option = {
+		name = introduction_event.001.g #No Thanks
+	}	
+}
+
+introduction_event.010 =  {
+	title = introduction_event.010.t
+	desc = introduction_event.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.002 =  {
+	title = introduction_event.002.t
+	desc = introduction_event.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.003 =  {
+	title = introduction_event.003.t
+	desc = introduction_event.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.004 =  {
+	title = introduction_event.004.t
+	desc = introduction_event.004.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.005 =  {
+	title = introduction_event.005.t
+	desc = introduction_event.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.006 =  {
+	title = introduction_event.006.t
+	desc = introduction_event.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.007 =  {
+	title = introduction_event.007.t
+	desc = introduction_event.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.008 =  {
+	title = introduction_event.008.t
+	desc = introduction_event.008.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.009 =  {
+	title = introduction_event.009.t
+	desc = introduction_event.009.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.011 =  {
+	title = introduction_event.011.t
+	desc = introduction_event.011.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.012 =  {
+	title = introduction_event.012.t
+	desc = introduction_event.012.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.013 =  {
+	title = introduction_event.013.t
+	desc = introduction_event.013.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.014 =  {
+	title = introduction_event.014.t
+	desc = introduction_event.014.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}
+
+introduction_event.015 =  {
+	title = introduction_event.015.t
+	desc = introduction_event.015.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = introduction_event.001.back
+		trigger_event = {
+			id = introduction_event.001
+		}
+	}
+}

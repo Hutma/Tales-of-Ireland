@@ -1,5 +1,15 @@
 ﻿# Called from code after history generation
 # Empty scope
+on_opening_events = {
+    effect = {
+		every_player = {
+			trigger_event = {
+				id = introduction_event.001
+			}
+		}
+	}
+}
+
 on_game_start = {
 	effect = {
 #### TALES OF IRELAND ####
@@ -129,5 +139,9 @@ on_game_start_after_lobby = {
 
 	events = {
 		game_rule.1000	#Autopopulate families.
+	}
+	
+	on_actions = {
+		on_opening_events
 	}
 }

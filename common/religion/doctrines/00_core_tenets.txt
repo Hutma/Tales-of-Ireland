@@ -9,6 +9,12 @@
 	tenet_aniconism = {
 		icon = core_tenet_altar
 		piety_cost = {
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
 			else = {
 				value = faith_tenet_cost_mid
 			}
@@ -49,7 +55,7 @@
 		}
 
 		is_shown = {
-		
+			always = no
 		}
 
 		can_pick = {
@@ -67,8 +73,13 @@
 	tenet_armed_pilgrimages = {
 		icon = core_tenet_sword
 		piety_cost = {
-			value = faith_tenet_cost_mid
-		
+			if = {
+				limit = { always = no }
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -78,6 +89,9 @@
 		}
 
 		is_shown = {
+			OR = {
+				always = no
+			}
 		}
 
 		can_pick = {
@@ -102,7 +116,29 @@
 	tenet_carnal_exaltation = {
 		icon = core_tenet_festivities
 		piety_cost = {
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					OR = {
+						always = no
+					}
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_massive
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -124,7 +160,15 @@
 	tenet_communal_identity = {
 		icon = core_tenet_followers
 		piety_cost = {
-			value = faith_tenet_cost_low
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else = {
+				value = faith_tenet_cost_low
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -152,8 +196,21 @@
 	tenet_communion = {
 		icon = core_tenet_chalice
 		piety_cost = {
-
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -197,8 +254,15 @@
 		}
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -207,8 +271,8 @@
 			}
 		}
 
-		is_shown = {
-
+		is_shown = {	
+			has_doctrine = pagan_hostility_doctrine
 		}
 
 		parameters = {
@@ -223,8 +287,15 @@
 	tenet_divine_marriage = {
 		icon = core_tenet_marriage
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -250,8 +321,21 @@
 	tenet_gnosticism = {
 		icon = core_tenet_gnostic
 		piety_cost = {
-				
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
 				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -288,8 +372,21 @@
 	tenet_mendicant_preachers = {
 		icon = core_tenet_missionary
 		piety_cost = {
-		
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -318,8 +415,21 @@
 	tenet_monasticism = {
 		icon = core_tenet_meditation
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -347,8 +457,21 @@
 	tenet_pacifism = {
 		icon = core_tenet_pacifism
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -358,7 +481,6 @@
 		}
 
 		is_shown = {
-
 		}
 
 		can_pick = {
@@ -406,8 +528,15 @@
 		}
 
 		piety_cost = {
-
-			value = faith_tenet_cost_high
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else = {
+				value = faith_tenet_cost_high
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -432,9 +561,22 @@
 	tenet_unrelenting_faith = {
 		icon = core_tenet_sword
 		piety_cost = {
-		
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_unrelenting_faith }
@@ -455,8 +597,21 @@
 	tenet_vows_of_poverty = {
 		icon = core_tenet_meditation
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -483,6 +638,7 @@
 		icon = core_tenet_holytree
 
 		is_shown = {
+			
 		}
 		can_pick = {
 			custom_description = {
@@ -526,8 +682,21 @@
 	tenet_adaptive = {
 		icon = core_tenet_cabal
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -561,8 +730,21 @@
 	tenet_esotericism = {
 		icon = core_tenet_bhakti
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -586,8 +768,21 @@
 	tenet_legalism = {
 		icon = core_tenet_bigbook
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -613,8 +808,15 @@
 	tenet_literalism = {
 		icon = core_tenet_altar
 			piety_cost = {
-		
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -643,9 +845,22 @@
 	tenet_reincarnation = {
 		icon = core_tenet_adorcism
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_reincarnation }
@@ -654,7 +869,7 @@
 		}
 
 		is_shown = {
-			
+
 		}
 
 		parameters = {
@@ -666,8 +881,21 @@
 	tenet_religious_legal_pronouncements = {
 		icon = core_tenet_judged
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -703,9 +931,16 @@
 	tenet_struggle_submission = {
 		icon = core_tenet_scimitars
 		piety_cost = {
-			
-			value = faith_tenet_cost_high
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_high
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_struggle_submission }
@@ -714,7 +949,7 @@
 		}
 
 		is_shown = {
-			
+
 		}
 
 		parameters = {
@@ -740,9 +975,22 @@
 		}
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_false_conversion_sanction }
@@ -762,8 +1010,21 @@
 	tenet_tax_nonbelievers = {
 		icon = core_tenet_handcoin
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -798,8 +1059,21 @@
 	tenet_asceticism = {
 		icon = core_tenet_meditation
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -843,12 +1117,18 @@
 	tenet_dharmic_pacifism = { #Mix of reincarnation and pacifism rites
 		icon = core_tenet_dharmawheel
 		is_shown = {
-			has_doctrine = eastern_hostility_doctrine
 		}
 
 		piety_cost = {
-		
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -891,7 +1171,7 @@
 		icon = core_tenet_meditation
 
 		is_shown = {
-			has_doctrine = eastern_hostility_doctrine
+
 		}
 
 		piety_cost = {
@@ -917,8 +1197,15 @@
 	tenet_ritual_hospitality = {
 		icon = core_tenet_cabal
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1005,7 +1292,7 @@
 		}
 
 		is_shown = {
-
+			has_doctrine = pagan_hostility_doctrine
 		}
 
 		parameters = {
@@ -1024,8 +1311,21 @@
 		icon = core_tenet_bigbook
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1046,9 +1346,28 @@
 	tenet_hedonistic = {
 		icon = core_tenet_foodsacrifice
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_massive
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_hedonistic }
@@ -1057,7 +1376,7 @@
 		}
 
 		is_shown = {
-
+	
 		}
 
 		can_pick = {
@@ -1088,8 +1407,21 @@
 	tenet_human_sacrifice = {
 		icon = core_tenet_flagellant
 		piety_cost = {
-
-			value = faith_tenet_cost_massive
+			if = {
+				limit = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1149,9 +1481,16 @@
 		icon = core_tenet_festivities
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_ritual_celebrations }
@@ -1212,8 +1551,29 @@
 		icon = core_tenet_holytree
 
 		piety_cost = {
-
-			value = faith_tenet_cost_mid
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_doctrine = pagan_hostility_doctrine
+					}
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_massive
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1274,7 +1634,7 @@
 		}
 
 		is_shown = {
-			
+	
 		}
 
 		parameters = {
@@ -1293,9 +1653,16 @@
 	tenet_warmonger = {
 		icon = core_tenet_sword
 		piety_cost = {
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_massive
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
 
-			value = faith_tenet_cost_mid
-			
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_warmonger }
@@ -1304,7 +1671,7 @@
 		}
 
 		is_shown = {
-
+			
 		}
 
 		can_pick = {
@@ -1339,9 +1706,22 @@
 	tenet_eastern_syncretism = {
 		icon = core_tenet_dharmawheel
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_eastern_syncretism }
@@ -1402,6 +1782,7 @@
 
 
 		is_shown = {
+
 		}
 		can_pick = {
 			custom_description = {
@@ -1430,9 +1811,16 @@
 		icon = core_tenet_chalice
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_christian_syncretism }
@@ -1441,7 +1829,7 @@
 		}
 
 		is_shown = {
-			
+
 		}
 		can_pick = {
 			custom_description = {
@@ -1473,9 +1861,16 @@
 		icon = core_tenet_bigbook
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_islamic_syncretism }
@@ -1484,7 +1879,7 @@
 		}
 
 		is_shown = {
-	
+
 		}
 		can_pick = {
 			custom_description = {
@@ -1514,9 +1909,16 @@
 		icon = core_tenet_followers
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_mid
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_jewish_syncretism }
@@ -1563,9 +1965,22 @@
 		}
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_massive
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_exaltation_of_pain }
@@ -1610,9 +2025,22 @@
 		}
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_massive
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_natural_primitivism }
@@ -1636,9 +2064,22 @@
 		icon = core_tenet_judged
 
 		piety_cost = {
-			
-			value = faith_tenet_cost_massive
-			
+			if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_pursuit_of_power }
@@ -1677,6 +2118,18 @@
 				}
 				value = faith_tenet_cost_low
 			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
 			else = {
 				value = faith_tenet_cost_massive
 			}
@@ -1703,8 +2156,23 @@
 		icon = core_tenet_shadyfigure
 
 		piety_cost = {
-
-			value = faith_tenet_cost_massive
+			if = {
+				limit = {
+					OR = {
+						has_doctrine = pagan_hostility_doctrine
+					}
+				}
+				value = faith_tenet_cost_mid
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
 
 			# Multiplier for keeping same tenet
 			if = {
@@ -1732,9 +2200,21 @@
 		icon = core_tenet_followers
 		piety_cost = {
 			if = {
-			
-			value = faith_tenet_cost_mid
-			
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					always = no
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_polyamory }

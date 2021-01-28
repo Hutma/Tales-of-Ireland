@@ -3246,14 +3246,7 @@ adultery.4001 = { #by Mathilda Bjarnehed
 							}
 							triggered_desc = {
 								trigger = {
-									capital_province = {
-										OR = {
-											geographical_region = world_africa
-											geographical_region = world_elam
-											geographical_region = world_levant
-											geographical_region = world_mesopotamia
-										}
-									}
+									always = no
 								}
 								desc = adultery.4001.elephant.desc
 							}
