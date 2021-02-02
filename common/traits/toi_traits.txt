@@ -16,6 +16,8 @@ fomorian = {
 		
 		half_fomorian
 		three_quarter_fomorian
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -67,6 +69,7 @@ half_fomorian = {
 		
 		three_quarter_fomorian
 		fomorian
+		
 	}
 	
 	physical = yes
@@ -160,6 +163,8 @@ cessarian = {
 		
 		half_cessarian
 		three_quarter_cessarian
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -295,6 +300,8 @@ partholonian = {
 		
 		half_partholonian
 		three_quarter_partholonian
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -427,6 +434,8 @@ nemedian = {
 		
 		half_nemedian
 		three_quarter_nemedian
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -562,6 +571,8 @@ fir_bolg = {
 		
 		half_fir_bolg
 		three_quarter_fir_bolg
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -694,6 +705,8 @@ tuatha_de_danann = {
 		
 		half_tuatha_de_danann
 		three_quarter_tuatha_de_danann
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -838,6 +851,8 @@ milesian = {
 		
 		half_milesian
 		three_quarter_milesian
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -973,6 +988,8 @@ celtic_human = {
 		
 		half_celtic_human
 		three_quarter_celtic_human
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -1102,6 +1119,8 @@ megalith_human = {
 		
 		half_megalith_human
 		three_quarter_megalith_human
+		
+		gaelic_giant
 	}
 	
 	physical = yes
@@ -1215,6 +1234,68 @@ three_quarter_megalith_human = {
 	}
 }
 
+gaelic_giant = {
+	index = 1027
+	icon = gaelic_giant.dds
+	
+	shown_in_ruler_designer = no
+	
+	opposites = {
+		celtic_human
+		fomorian
+		cessarian
+		partholonian
+		nemedian
+		fir_bolg
+		tuatha_de_danann
+		milesian		
+		
+		half_fomorian
+		half_cessarian
+		half_partholonian
+		half_nemedian
+		half_fir_bolg
+		half_tuatha_de_danann
+		half_milesian
+		half_celtic_human
+		
+		three_quarter_fomorian
+		three_quarter_cessarian
+		three_quarter_partholonian
+		three_quarter_nemedian
+		three_quarter_fir_bolg
+		three_quarter_tuatha_de_danann
+		three_quarter_milesian
+		three_quarter_celtic_human
+		
+		half_megalith_human
+		megalith_human
+		three_quarter_megalith_human
+	}
+	
+	health = 2
+	prowess = 10
+	general_opinion = 10
+	
+	flag = can_not_marry
+	can_inherit = no
+	blocks_from_claim_inheritance = yes
+	can_have_children = no
+	
+	physical = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_gaelic_giant_desc
+			}
+			desc = trait_gaelic_giant_character_desc
+		}
+	}
+}
 
 ###DUEL TRAITS###
 aggresive_fighter = {

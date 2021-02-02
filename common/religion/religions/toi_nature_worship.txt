@@ -188,7 +188,7 @@
 	faiths = {
 		newgrange_faith = {
 			color = { 120 120 100 }
-			icon = pagan
+			icon = zunist_custom
 
 			doctrine = tenet_sun_worship
 			doctrine = tenet_aniconism
@@ -196,7 +196,7 @@
 		}
 		first_men = {
 			color = { 100 200 100 }
-			icon = pagan
+			icon = waaqism
 
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_pacifism
@@ -204,7 +204,7 @@
 		}
 		cult_of_life = {
 			color = { 80 200 120 }
-			icon = pagan
+			icon = cult_of_life
 
 			doctrine = tenet_sacred_childbirth
 			doctrine = tenet_pacifism

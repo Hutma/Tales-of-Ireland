@@ -1,4 +1,4 @@
-﻿eastern_legacy__religion = {
+﻿eastern_legacy_religion = {
 	family = rf_travelers
 
 	doctrine = travelers_hostility_doctrine
@@ -188,7 +188,7 @@
 	faiths = {
 		scythian_heritage = {
 			color = { 220 220 100 }
-			icon = pagan
+			icon = zoroastrian_custom
 
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_sky_burials
@@ -196,7 +196,7 @@
 		}
 		ancient_greek_slave = {
 			color = { 220 100 100 }
-			icon = pagan
+			icon = hellenic_custom
 
 			doctrine = tenet_unrelenting_faith
 			doctrine = tenet_communal_identity

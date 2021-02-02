@@ -188,7 +188,7 @@
 	faiths = {
 		sons_of_the_ocean = {
 			color = { 1 11 111 }
-			icon = pagan
+			icon = germanic_custom
 
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_adaptive

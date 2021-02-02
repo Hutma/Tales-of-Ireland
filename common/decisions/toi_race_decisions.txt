@@ -1,0 +1,59 @@
+﻿the_first_cessarian_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	
+	desc = the_first_cessarian_kingdom_decision_desc
+	
+	major = yes
+	ai_check_interval = 80
+
+	is_shown = {
+		has_trait = cessarian
+	}
+
+	is_valid = {
+		AND = {
+			is_independent_ruler = yes
+			custom_description = {
+				text = found_kingdom_decision_three_duchies_held
+				any_held_title = {
+					count > 2
+					tier = tier_duchy
+				}	
+			}
+			capital_county = {
+				developement >= 35
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 50
+	}
+
+	effect = {
+		create_custom_kingdom_effect = yes
+		add_realm_law = confederate_partition_succession_law
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = cessarian_first_king
+			}
+		}
+			add_to_global_variable_list = {
+		name = unavailable_unique_decisions
+		target = flag:the_first_cessarian_kingdom_decision
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

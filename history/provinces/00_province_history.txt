@@ -2736,7 +2736,11 @@
 414 = {       #Kerrycliffs (b_kerrycliffs)
               culture = lughaid_milesians
               religion = milesian_paganism
-              holding = none
+              holding = castle_holding
+			   2500.1.1 = {
+				special_building_slot = wonder_skellig_island_01
+				special_building = wonder_skellig_island_01
+			}
 }
 
 415 = {       #Kilpeacan (b_kilpeacan)
@@ -7384,6 +7388,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_dun_duchathair_01
+				special_building = wonder_dun_duchathair_01
+			}
 }
 
 1131 = {      #Shrawn (b_shrawn)
@@ -19884,7 +19892,11 @@
 3080 = {      #Giantscauseway (b_giantscauseway)
               culture = dal_riata
               religion = sea_dwellers
-              holding = church_holding
+              holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_giant_causeway_01
+				special_building = wonder_giant_causeway_01
+			}
 }
 
 3081 = {      #Lisnagunogue (b_lisnagunogue)
@@ -26038,6 +26050,10 @@
               culture = eremon_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_newgrange_01
+				special_building = wonder_newgrange_01
+			}
 }
 
 4020 = {      #Rathkenny (b_rathkenny)

@@ -1,0 +1,22 @@
+﻿l_english:
+ toi_decisions.001.t:0 "Ceremony to coax a Giant"
+ toi_decisions.001.desc:0 "I'm standing on the causeway, next to the druid who is going on with the religious ceremony. He sings in the language of the gods to attract one of the Giants that live in the Otherworld. The chants continues until the earth starts trembling and shaking. We have been here for wearly two hours and the druid is exhausted. \nHe then stares at me and ask : "Are you sure you want to do that [ROOT.Char.GetFirstNameNoTooltip]?" "
+ toi_decisions.001.a:0 "Yes, finish the ceremony"
+ toi_decisions.001.b:0 "No, you're right, it's too big a risk"
+ 
+ toi_decisions.002.t:0 "Friendly Giant"
+ toi_decisions.002.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nHe sits on the Causeway and looks at the sea. I wait, for hours, standing there, standing still, waiting for him to start talking. He finally turns back, faces me and says : \n"You have summoned me, why have you called me?"\nI explain that I need him to fight alongside me on the battlefield, I promise him glory and fame. He listens carefully and accepts to serve me if I make a sacrifice to his brothers in the Otherworld."
+ toi_decisions.002.a:0 "Of course, you will have your sacrifice, come and join me"
+ toi_decisions.002.b:0 "Sorry, I can't accept those terms"
+ 
+ toi_decisions.003.t:0 "Proud Giant"
+ toi_decisions.003.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nHe listened to my terms, asking him to join me and fight alongside my soldiers, he responds : "I will help you, but only if you bow before me, before my power and strenght.""
+ toi_decisions.003.a:0 "Of course, you are the most powerful"
+ toi_decisions.003.b:0 "I will never bow before you, I don't need you"
+ 
+ toi_decisions.004.t:0 "Angry Giant"
+ toi_decisions.004.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nAs soon as he is out he start screaming and running toward us in rage!"
+ toi_decisions.004.a:0 "I will kill you, beast!"
+ toi_decisions.004.a.success:0 "Giant slained"
+ toi_decisions.004.a.failure:0 "Injured by the Giant"
+ toi_decisions.004.b:0 "Run! Run! Run for your life!"

@@ -27,23 +27,7 @@ on_monthly_artifacts = {
 on_artifact_initialization = { # Can be called by the scripted effect "initialize_artifacts" 
 	effect = { # Add any artifact-specific setup that you don't want to put in your on_game_start.
 	# For example, in vanilla:
-		listify_all_typed_artifacts_as_flags = yes
-		character:1316 = { #HRE 1066 ARTIFACTS
-			add_artifact = {ARTIFACT = artifact_1}
-			add_artifact = {ARTIFACT = artifact_3}
-		}
 
-		character:1732 = { #BYZANTINE 1066 ARTIFACTS
-			add_artifact = {ARTIFACT = artifact_2}
-		}
-
-		character:1700 = { #BYZANTINE 867 ARTIFACTS
-			add_artifact = {ARTIFACT = artifact_2}
-		}
-
-		character:30228 = { #LOMBARD 867 ARTIFACTS
-			add_artifact = {ARTIFACT = artifact_3}
-		}
 	}
 }
 

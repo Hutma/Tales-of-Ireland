@@ -188,7 +188,7 @@
 	faiths = {
 		celtic_de_danann_worship = {
 			color = { 220 200 250 }
-			icon = pagan
+			icon = celtic_de_danann_worship
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
@@ -196,7 +196,7 @@
 		}
 		megalithic_de_danann_worship = {
 			color = { 220 220 250 }
-			icon = pagan
+			icon = megalithic_de_danann_worship
 
 			doctrine = tenet_newgrange_splendor
 			doctrine = tenet_aniconism

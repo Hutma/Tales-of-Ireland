@@ -196,7 +196,7 @@
 		}
 		great_barrows = {
 			color = { 100 100 50 }
-			icon = pagan
+			icon = great_barrows
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
@@ -204,7 +204,7 @@
 		}
 		sea_dwellers = {
 			color = { 80 120 200 }
-			icon = pagan
+			icon = sea_dwellers
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
@@ -212,7 +212,7 @@
 		}
 		milesian_paganism = {
 			color = { 50 50 200 }
-			icon = pagan
+			icon = milesian_paganism
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_legalism

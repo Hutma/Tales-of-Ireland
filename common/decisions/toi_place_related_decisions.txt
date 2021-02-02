@@ -1,0 +1,58 @@
+﻿coax_giant_causeway_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_causeway.dds"
+
+	ai_check_interval = 120
+	cooldown = { years = 30 }
+	
+	desc = coax_giant_causeway_decision_desc
+
+	is_shown = {
+		OR = {
+			has_title = title:c_dunseverick
+			has_title = title:d_cary
+			has_title = title:k_antrim
+		}
+	}
+
+	is_valid = {
+		AND = {
+			has_title = title:c_dunseverick
+			NOT = {
+				c_dunseverick = {
+					has_title_flag = {
+						flag = giant_called
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 250
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_decisions.001
+			days = 120
+		}
+		c_dunseverick = {
+			set_title_flag = {
+				flag = giant_called
+				years = 30
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

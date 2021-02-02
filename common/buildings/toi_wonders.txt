@@ -1,4 +1,5 @@
-﻿wonder_hill_of_tara_01 = {
+﻿#Tara
+wonder_hill_of_tara_01 = {
 	type_icon = "icon_structure_walls_of_benin.dds"
 	asset = {
 		illustration = "gfx/interface/illustrations/county_view/county_view_hill_of_tara.dds"
@@ -29,6 +30,7 @@
 		fort_level = 1
 	}
 	county_modifier = {
+		defender_advantage = 5
 		monthly_county_control_change_add = 0.1
 		development_growth = 0.1
 		development_growth_factor = 0.1
@@ -71,12 +73,216 @@ wonder_hill_of_tara_02 = {
 		fort_level = 1
 	}
 	county_modifier = {
+		defender_advantage = 5
 		monthly_county_control_change_add = 0.25
 		development_growth = 0.1
 		development_growth_factor = 0.1
 	}
 	
-	next_building = wonder_edoras_03_barrowfield
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+
+#Skellig Island
+wonder_skellig_island_01 = {
+	type_icon = "icon_structure_skellig_island.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	levy = small_building_levy_tier_1
+
+	character_modifier = {
+		learning = 2
+		monthly_prestige = 0.5
+		monthly_piety = 0.5
+		embarkation_cost_mult = -0.2
+	}
+
+	county_modifier = {
+		church_holding_build_gold_cost = -0.75
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Giant Causeway
+wonder_giant_causeway_01 = {
+	type_icon = "icon_structure_giant_causeway.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+
+	character_modifier = {
+		learning = 1
+		stewardship = 1
+		monthly_prestige = 0.75
+		monthly_piety = 0.25
+		hills_advantage = 5		
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Newgrange
+wonder_newgrange_01 = {
+	type_icon = "icon_structure_newgrange.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	levy = 25
+	garrison = 25
+	
+	character_modifier = {
+		diplomacy = 1
+		stewardship = 1
+		monthly_prestige = 0.5
+		monthly_piety = 1
+		
+	}
+
+	county_modifier = {
+		tax_mult = 0.25
+		levy_size = 0.15
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Dún Dúchathair
+wonder_dun_duchathair_01 = {
+	type_icon = "icon_structure_visby_ringmur.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	garrison = 25
+	
+	character_modifier = {
+		embarkation_cost_mult = -0.5
+		martial = 1
+		monthly_prestige = 0.5
+		archers_damage_mult = 0.04
+	}
+	province_modifier = {
+		fort_level = 1
+	}
+	county_modifier = {
+		defender_advantage = 5
+		levy_size = 0.1
+	}
+	
+	next_building = wonder_dun_duchathair_02
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+wonder_dun_duchathair_02 = {
+	type_icon = "icon_structure_visby_ringmur.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = expensive_building_tier_2_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_house_soldiers
+			has_innovation = innovation_development_01
+		}
+	}
+	
+	garrison = 50
+
+	character_modifier = {
+		embarkation_cost_mult = -0.5
+		martial = 1
+		monthly_prestige = 0.75
+		archers_damage_mult = 0.08
+	}
+	province_modifier = {
+		fort_level = 2
+	}
+	county_modifier = {
+		defender_advantage = 10
+		levy_size = 0.2
+	}
+	
 	type = special
 	ai_value = {
 		base = 100

@@ -669,6 +669,10 @@ found_kingdom_decision = {
 
 	ai_will_do = {
 		base = 100
+		modifier = {
+			has_trait = cessarian
+			add = -30
+		}
 	}
 }
 

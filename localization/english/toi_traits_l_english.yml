@@ -90,6 +90,11 @@
  trait_three_quarter_megalith_human_desc:0 "This character is nearly more Ancient Human than anything else."
  trait_three_quarter_megalith_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is nearly more Ancient Human than anything else."
  
+ 
+ trait_gaelic_giant:0 "Gaelic Giant"
+ trait_gaelic_giant_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendent of Fionn Mac Cumhaill that have left the Otherworld to come back to the surface. He is very powerful and can defeat hundreds of opponents all by himself."
+ trait_gaelic_giant_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendent of Fionn Mac Cumhaill that have left the Otherworld to come back to the surface. He is very powerful and can defeat hundreds of opponents all by himself."
+ 
  #Duel traits
  trait_aggresive_fighter:0 "Aggresive Figther"
  trait_aggresive_fighter_desc:0 "Attack is both the best offense and defense. The one who delivers the strongest blows always wins the fight."

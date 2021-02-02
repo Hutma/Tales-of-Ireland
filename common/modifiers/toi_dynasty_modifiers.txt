@@ -1,0 +1,5 @@
+﻿cessarian_first_king = {
+	icon = prestige_positive
+	direct_vassal_opinion = 10
+	levy_size = 0.1
+}

@@ -9,152 +9,170 @@ on_join_court = {
 	}
 #### TALES OF IRELAND ####
 	effect = {
-#No race = employer race
-		if 	= {
+		if = {
 			limit = {
-				scope:new_employer = {
-					has_trait = fomorian
-				}
-			}
-			add_trait = fomorian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = cessarian
-				}
-			}
-			add_trait = cessarian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = partholonian
-				}
-			}
-			add_trait = partholonian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = nemedian
-				}
-			}
-			add_trait = nemedian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = fir_bolg
-				}
-			}
-			add_trait = fir_bolg
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = tuatha_de_danann
-				}
-			}
-			add_trait = tuatha_de_danann
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = milesian
-				}
-			}
-			add_trait = milesian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = celtic_human
-				}
-			}
-			add_trait = celtic_human
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
-					has_trait = megalith_human
-				}
-			}
-			add_trait = megalith_human
-		}
-#No race + no employer race = liege race
-		if 	= {
-			limit = {
-				scope:new_employer = {
+				NOT = {
+					OR = {
 						has_trait = fomorian
-				}
-			}
-			add_trait = fomorian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = cessarian
-				}
-			}
-			add_trait = cessarian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = partholonian
-				}
-			}
-			add_trait = partholonian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = nemedian
-				}
-			}
-			add_trait = nemedian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = fir_bolg
-				}
-			}
-			add_trait = fir_bolg
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = tuatha_de_danann
-
-				}
-			}
-			add_trait = tuatha_de_danann
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = milesian
-				}
-			}
-			add_trait = milesian
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = celtic_human
-				}
-			}
-			add_trait = celtic_human
-		}
-		if 	= {
-			limit = {
-				scope:new_employer = {
 						has_trait = megalith_human
+						has_trait = gaelic_giant
+					}
 				}
 			}
-			add_trait = megalith_human
+#No race = employer race
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = fomorian
+					}
+				}
+				add_trait = fomorian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = cessarian
+					}
+				}
+				add_trait = cessarian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = partholonian
+					}
+				}
+				add_trait = partholonian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = nemedian
+					}
+				}
+				add_trait = nemedian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = fir_bolg
+					}
+				}
+				add_trait = fir_bolg
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = tuatha_de_danann
+					}
+				}
+				add_trait = tuatha_de_danann
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = milesian
+					}
+				}
+				add_trait = milesian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = celtic_human
+					}
+				}
+				add_trait = celtic_human
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+						has_trait = megalith_human
+					}
+				}
+				add_trait = megalith_human
+			}
+	#No race + no employer race = liege race
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = fomorian
+					}
+				}
+				add_trait = fomorian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = cessarian
+					}
+				}
+				add_trait = cessarian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = partholonian
+					}
+				}
+				add_trait = partholonian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = nemedian
+					}
+				}
+				add_trait = nemedian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = fir_bolg
+					}
+				}
+				add_trait = fir_bolg
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = tuatha_de_danann
+
+					}
+				}
+				add_trait = tuatha_de_danann
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = milesian
+					}
+				}
+				add_trait = milesian
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = celtic_human
+					}
+				}
+				add_trait = celtic_human
+			}
+			if 	= {
+				limit = {
+					scope:new_employer = {
+							has_trait = megalith_human
+					}
+				}
+				add_trait = megalith_human
+			}
 		}
 	}
 #### TALES OF IRELAND ####

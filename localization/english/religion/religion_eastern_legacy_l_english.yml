@@ -1,10 +1,10 @@
 ﻿l_english:
 
  #Common eastern_legacy Localization
- eastern_legacy_religion:0 "Celt paganism"
- eastern_legacy_religion_adj:0 "eastern_legacy"
+ eastern_legacy_religion:0 "Eastern Legacy Religions"
+ eastern_legacy_religion_adj:0 "Eastern Legacy"
  eastern_legacy_religion_adjerent:0 "Celt"
- eastern_legacy_religion_adherent_plural:0 "Celts"
+ eastern_legacy_religion_adherent_plural:0 "Eastern"
  eastern_legacy_religion_desc:0 "The gods are spirits and powerful being that see everyone of our actions and judge them. We shall keep them satisfy by living an examplary life."
  eastern_legacy_high_god_name:0 "The Gods"
  eastern_legacy_high_god_name_possessive:0 "The God's"

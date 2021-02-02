@@ -1,8 +1,8 @@
 ﻿l_english:
 
  #Common real_gods Localization
- real_gods_religion:0 "Celt paganism"
- real_gods_religion_adj:0 "real_gods"
+ real_gods_religion:0 "Worship alive Gods"
+ real_gods_religion_adj:0 "Real Gods"
  real_gods_religion_adjerent:0 "Celt"
  real_gods_religion_adherent_plural:0 "Celts"
  real_gods_religion_desc:0 "This religion worships the Tuatha Dé Danann, their human form that came back to Ireland."

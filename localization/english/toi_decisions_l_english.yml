@@ -1,5 +1,11 @@
 ﻿l_english:
+ #Race realated decisions
+ the_first_cessarian_kingdom_decision:0 "Proclaim First Cessarian Kingdom"
+ the_first_cessarian_kingdom_decision_desc:0 "For the first time the Cessarian will be united and lead by a king, may this day be the first of many glourious days."
+ the_first_cessarian_kingdom_decision_tooltip:0 "Become the first Cessarian king"
+ the_first_cessarian_kingdom_decision_confirm:0 "Bring me my corwn"
 
+ #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
  reform_high_kingship_decision_desc:0 "As the laws of the Irish were once ruled by a single king and shall once again!"
  reform_high_kingship_decision_tooltip:0 "Reform the High Kingship of Ireland"
@@ -14,3 +20,9 @@
  high_king_reclaim_tara_decision_desc:0 "Tara is the traditional center of the High King power, the High King should be the one ruling over it."
  high_king_reclaim_tara_decision_tooltip:0 "Gain claim on Tara"
  high_king_reclaim_tara_decision_confirm:0 "Tara should be mine!"
+ 
+ #Places decisions
+ coax_giant_causeway_decision:0 "Coax a Giant at the Giant's Causeway"
+ coax_giant_causeway_decision_desc:0 "The Giant's Causeway is known as a path to the Otherworld, a mystical place where strange creatures live. The Causeway has been built by the Giant Fionn Mac Cumhaill and his descendent could be contacted using this special site."
+ coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
+ coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"

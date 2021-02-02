@@ -1,4 +1,4 @@
-﻿mystical_knowledge_legacy__religion = {
+﻿mystical_knowledge_legacy_religion = {
 	family = rf_overworld
 
 	doctrine = overworld_hostility_doctrine
@@ -188,7 +188,7 @@
 	faiths = {
 		sidhe_beliefs = {
 			color = { 100 10 100 }
-			icon = pagan
+			icon = sidhe_beliefs
 
 			doctrine = tenet_gnosticism
 			doctrine = tenet_esotericism

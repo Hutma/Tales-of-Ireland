@@ -22,6 +22,26 @@ disinherit_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
+#TALES OF IRELAND
+		scope:recipient = { 
+			OR = {
+				has_trait = craven
+				has_trait = lunatic
+				has_trait = possessed
+				has_trait = clubfooted
+				has_trait = hunchbacked
+				has_trait = lisping
+				has_trait = stuttering
+				has_trait = inbred
+				has_trait = weak
+				has_trait = impotent
+				has_trait = spindly
+				has_trait = scaly
+				has_trait = albino
+				has_trait = bleeder
+				has_trait = infertile
+			}
+		}
 		scope:actor.dynasty = {
 			dynasty_prestige >= medium_dynasty_prestige_value
 		}
