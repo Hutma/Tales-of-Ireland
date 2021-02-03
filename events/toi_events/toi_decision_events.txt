@@ -1,5 +1,6 @@
 ﻿namespace = toi_decisions
 
+#Coax giant events
 toi_decisions.001 =  {
 	title = toi_decisions.001.t
 	desc = toi_decisions.001.desc
@@ -293,6 +294,130 @@ toi_decisions.004 =  { #Angry giant
 			modifier = {
 				has_trait = ambitious
 				add = -20
+			}
+		}
+	}
+}
+
+#Sacrifice to Sidhe events
+toi_decisions.010 =  {
+	title = toi_decisions.010.t
+	desc = toi_decisions.010.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.010.a #We'll make the biggest sacrifice!
+		hidden_effect = {
+			random_list = {
+				45 = {
+					trigger_event = {
+						id = toi_decisions.002 #Nice Giant
+						days = 30
+					}
+				}
+				45 = {
+					trigger_event = {
+						id = toi_decisions.003 #Demanding Giant
+						days = 30
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = toi_decisions.004 #Angry Giant
+						days = 30
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = craven
+				add = -30
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.010.a #We'll make an importnat sacrifice!
+		hidden_effect = {
+			random_list = {
+				45 = {
+					trigger_event = {
+						id = toi_decisions.002 #Nice Giant
+						days = 30
+					}
+				}
+				45 = {
+					trigger_event = {
+						id = toi_decisions.003 #Demanding Giant
+						days = 30
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = toi_decisions.004 #Angry Giant
+						days = 30
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = craven
+				add = -30
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.010.a #We'll make a sandard sacrifice!
+		hidden_effect = {
+			random_list = {
+				45 = {
+					trigger_event = {
+						id = toi_decisions.002 #Nice Giant
+						days = 30
+					}
+				}
+				45 = {
+					trigger_event = {
+						id = toi_decisions.003 #Demanding Giant
+						days = 30
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = toi_decisions.004 #Angry Giant
+						days = 30
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = craven
+				add = -30
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.001.b #Small sacrifice
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_trait = craven
+				add = 30
 			}
 		}
 	}

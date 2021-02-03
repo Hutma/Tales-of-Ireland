@@ -914,5 +914,14 @@ giant_causeway  = {
 	}
 }
 
+religious_passage_tomb = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/religious_passage_tomb_background.dds"
+		environment = "environment_event_church"
+		ambience = "event:/SFX/Events/Backgrounds/temple_generic"
+	}
+}
+
+
 
 

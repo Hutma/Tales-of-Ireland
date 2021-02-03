@@ -1,0 +1,39 @@
+﻿sacrifice_to_sidhe_decision = {
+	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	
+	desc = sacrifice_to_sidhe_decision_desc
+
+	ai_check_interval = 80
+
+	is_shown = {
+		sacrifice_to_sidhe_decision_active = yes		
+	}
+
+	is_valid = {
+		piety_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = now
+	}
+
+	cost = {
+		piety = 150
+	}
+
+	effect = {
+		trigger_event = {
+			id = 
+			days = 7 
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

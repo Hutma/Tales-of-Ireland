@@ -1687,7 +1687,6 @@
 
 		parameters = {
 			warmonger = yes
-			conquest_cb_enabled = yes
 			invasion_cb_enabled = yes
 			great_holy_wars_active_if_reformed = yes
 			clergy_can_fight = yes
@@ -2088,7 +2087,6 @@
 		}
 
 		parameters = {
-			conquest_cb_enabled = yes
 			invasion_cb_enabled = yes
 		}
 
@@ -2354,7 +2352,7 @@
 		}
 
 		parameters = {
-			go_on_new_land_cb_enabled = yes
+			to_new_land_cb_enable = yes
 		}
 
 		character_modifier = {

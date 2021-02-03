@@ -1,0 +1,4 @@
+﻿l_english:
+ TO_NEW_LAND_CB_NAME:0 "Conquer and settle in [TITLE.GetBaseName]"
+ TO_NEW_LAND_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquer and settle in [TITLE.GetBaseName]"
+ TO_NEW_LAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

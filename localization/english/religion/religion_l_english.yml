@@ -461,7 +461,7 @@
  holy_site_mogadishu_name:0 "Mogadishu"
  holy_site_mogadishu_effect_name:0 "From [holy_site|E] #weak ($holy_site_mogadishu_name$)#!"
 
- rf_otherworld:0 "Otherworld"
+ rf_overworld:0 "Otherworld"
  rf_pagan:0 "Pagan"
  rf_travelers:0 "Traverlers"
 

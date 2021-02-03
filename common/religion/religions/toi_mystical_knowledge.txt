@@ -47,134 +47,134 @@
 	holy_order_maa = {  }
 
 	localization = {
-		HighGodName = paganism_high_god_name
-		HighGodNamePossessive = paganism_high_god_name_possessive
+		HighGodName = mystical_knowledge_legacy_high_god_name
+		HighGodNamePossessive = mystical_knowledge_legacy_high_god_name_possessive
 		HighGodNameSheHe = CHARACTER_SHEHE_SHE
 		HighGodHerselfHimself = CHARACTER_HERSELF
 		HighGodHerHis = CHARACTER_HERHIS_HER
-		HighGodNameAlternate = paganism_high_god_name_alternate
-		HighGodNameAlternatePossessive = paganism_high_god_name_alternate_possessive
+		HighGodNameAlternate = mystical_knowledge_legacy_high_god_name_alternate
+		HighGodNameAlternatePossessive = mystical_knowledge_legacy_high_god_name_alternate_possessive
 
 		#Creator
-		CreatorName = paganism_creator_god_name
-		CreatorNamePossessive = paganism_creator_god_name_possessive
+		CreatorName = mystical_knowledge_legacy_creator_god_name
+		CreatorNamePossessive = mystical_knowledge_legacy_creator_god_name_possessive
 		CreatorSheHe = CHARACTER_SHEHE_SHE
 		CreatorHerHis = CHARACTER_HERHIS_HER
 		CreatorHerHim = CHARACTER_HERHIM_HER
 
 		#HealthGod
-		HealthGodName = paganism_health_god_name
-		HealthGodNamePossessive = paganism_health_god_name_possessive
+		HealthGodName = mystical_knowledge_legacy_health_god_name
+		HealthGodNamePossessive = mystical_knowledge_legacy_health_god_name_possessive
 		HealthGodSheHe = CHARACTER_SHEHE_SHE
 		HealthGodHerHis = CHARACTER_HERHIS_HER
 		HealthGodHerHim = CHARACTER_HERHIM_HER
 		
 		#FertilityGod
-		FertilityGodName = paganism_fertility_god_name
-		FertilityGodNamePossessive = paganism_fertility_god_name_possessive
+		FertilityGodName = mystical_knowledge_legacy_fertility_god_name
+		FertilityGodNamePossessive = mystical_knowledge_legacy_fertility_god_name_possessive
 		FertilityGodSheHe = CHARACTER_SHEHE_SHE
 		FertilityGodHerHis = CHARACTER_HERHIS_HER
 		FertilityGodHerHim = CHARACTER_HERHIM_HER
 
 		#WealthGod
-		WealthGodName = paganism_wealth_god_name
-		WealthGodNamePossessive = paganism_wealth_god_name_possessive
+		WealthGodName = mystical_knowledge_legacy_wealth_god_name
+		WealthGodNamePossessive = mystical_knowledge_legacy_wealth_god_name_possessive
 		WealthGodSheHe = CHARACTER_SHEHE_SHE
 		WealthGodHerHis = CHARACTER_HERHIS_HER
 		WealthGodHerHim = CHARACTER_HERHIM_HER
 
 		#HouseholdGod
-		HouseholdGodName = paganism_household_god_name
-		HouseholdGodNamePossessive = paganism_household_god_name_possessive
+		HouseholdGodName = mystical_knowledge_legacy_household_god_name
+		HouseholdGodNamePossessive = mystical_knowledge_legacy_household_god_name_possessive
 		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
 		HouseholdGodHerHis = CHARACTER_HERHIS_HER
 		HouseholdGodHerHim = CHARACTER_HERHIM_HER
 
 		#FateGod
-		FateGodName = paganism_fate_god_name
-		FateGodNamePossessive = paganism_fate_god_name_possessive
+		FateGodName = mystical_knowledge_legacy_fate_god_name
+		FateGodNamePossessive = mystical_knowledge_legacy_fate_god_name_possessive
 		FateGodSheHe = CHARACTER_SHEHE_IT
 		FateGodHerHis = CHARACTER_HERHIS_ITS
 		FateGodHerHim = CHARACTER_HERHIM_IT
 
 		#KnowledgeGod
-		KnowledgeGodName = paganism_knowledge_god_name
-		KnowledgeGodNamePossessive = paganism_knowledge_god_name_possessive
+		KnowledgeGodName = mystical_knowledge_legacy_knowledge_god_name
+		KnowledgeGodNamePossessive = mystical_knowledge_legacy_knowledge_god_name_possessive
 		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
 		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
 		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
 
 		#WarGod
-		WarGodName = paganism_war_god_name
-		WarGodNamePossessive = paganism_war_god_name_possessive
+		WarGodName = mystical_knowledge_legacy_war_god_name
+		WarGodNamePossessive = mystical_knowledge_legacy_war_god_name_possessive
 		WarGodSheHe = CHARACTER_SHEHE_SHE
 		WarGodHerHis = CHARACTER_HERHIS_HER
 		WarGodHerHim = CHARACTER_HERHIM_HER
 
 		#TricksterGod
-		TricksterGodName = paganism_trickster_god_name
-		TricksterGodNamePossessive = paganism_trickster_god_name_possessive
+		TricksterGodName = mystical_knowledge_legacy_trickster_god_name
+		TricksterGodNamePossessive = mystical_knowledge_legacy_trickster_god_name_possessive
 		TricksterGodSheHe = CHARACTER_SHEHE_HE
 		TricksterGodHerHis = CHARACTER_HERHIS_HIS
 		TricksterGodHerHim = CHARACTER_HERHIM_HIM
 
 		#NightGod
-		NightGodName = paganism_night_god_name
-		NightGodNamePossessive = paganism_night_god_name_possessive
+		NightGodName = mystical_knowledge_legacy_night_god_name
+		NightGodNamePossessive = mystical_knowledge_legacy_night_god_name_possessive
 		NightGodSheHe = CHARACTER_SHEHE_HE
 		NightGodHerHis = CHARACTER_HERHIS_HIS
 		NightGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WaterGod
-		WaterGodName = paganism_water_god_name
-		WaterGodNamePossessive = paganism_water_god_name_possessive
+		WaterGodName = mystical_knowledge_legacy_water_god_name
+		WaterGodNamePossessive = mystical_knowledge_legacy_water_god_name_possessive
 		WaterGodSheHe = CHARACTER_SHEHE_SHE
 		WaterGodHerHis = CHARACTER_HERHIS_HER
 		WaterGodHerHim = CHARACTER_HERHIM_HER
 
 
-		PantheonTerm = paganism_mother_earth_father_sky
+		PantheonTerm = mystical_knowledge_legacy_mother_earth_father_sky
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { paganism_high_god_name paganism_good_god_father_sky paganism_good_god_ancestors }
-		DevilName = paganism_devil_name
-		DevilNamePossessive = paganism_devil_name_possessive
+		GoodGodNames = { mystical_knowledge_legacy_high_god_name mystical_knowledge_legacy_good_god_father_sky mystical_knowledge_legacy_good_god_ancestors }
+		DevilName = mystical_knowledge_legacy_devil_name
+		DevilNamePossessive = mystical_knowledge_legacy_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
 		DevilHerHis = CHARACTER_HERHIS_ITS
-		DevilHerselfHimself = paganism_devil_herselfhimself
-		EvilGodNames = { paganism_devil_name paganism_evil_god_decay }
-		HouseOfWorship = paganism_house_of_worship
-		HouseOfWorshipPlural = paganism_house_of_worship_plural
-		ReligiousSymbol = paganism_religious_symbol
-		ReligiousText = paganism_religious_text
-		ReligiousHeadName = paganism_religious_head_title
-		ReligiousHeadTitleName = paganism_religious_head_title_name
-		DevoteeMale = paganism_devotee
-		DevoteeMalePlural = paganism_devoteeplural
-		DevoteeFemale = paganism_devotee
-		DevoteeFemalePlural = paganism_devoteeplural
-		DevoteeNeuter = paganism_devotee
-		DevoteeNeuterPlural = paganism_devoteeplural
-		PriestMale = paganism_priest
-		PriestMalePlural = paganism_priest_plural
-		PriestFemale = paganism_priest
-		PriestFemalePlural = paganism_priest_plural
-		PriestNeuter = paganism_priest
-		PriestNeuterPlural = paganism_priest_plural
-		AltPriestTermPlural = paganism_priest_alternate_plural
-		BishopMale = paganism_priest
-		BishopMalePlural = paganism_priest_plural
-		BishopFemale = paganism_priest
-		BishopFemalePlural = paganism_priest_plural
-		BishopNeuter = paganism_priest
-		BishopNeuterPlural = paganism_priest_plural
-		DivineRealm = paganism_divine_realm
-		PositiveAfterLife = paganism_divine_realm
-		NegativeAfterLife = paganism_afterlife
-		DeathDeityName = paganism_death_deity_name
-		DeathDeityNamePossessive = paganism_death_deity_name_possessive
-		DeathDeitySheHe = paganism_devil_shehe
-		DeathDeityHerHis = paganism_death_deity_herhis
-		WitchGodName = witchgodname_paganism_the_shadow
+		DevilHerselfHimself = mystical_knowledge_legacy_devil_herselfhimself
+		EvilGodNames = { mystical_knowledge_legacy_devil_name mystical_knowledge_legacy_evil_god_decay }
+		HouseOfWorship = mystical_knowledge_legacy_house_of_worship
+		HouseOfWorshipPlural = mystical_knowledge_legacy_house_of_worship_plural
+		ReligiousSymbol = mystical_knowledge_legacy_religious_symbol
+		ReligiousText = mystical_knowledge_legacy_religious_text
+		ReligiousHeadName = mystical_knowledge_legacy_religious_head_title
+		ReligiousHeadTitleName = mystical_knowledge_legacy_religious_head_title_name
+		DevoteeMale = mystical_knowledge_legacy_devotee
+		DevoteeMalePlural = mystical_knowledge_legacy_devoteeplural
+		DevoteeFemale = mystical_knowledge_legacy_devotee
+		DevoteeFemalePlural = mystical_knowledge_legacy_devoteeplural
+		DevoteeNeuter = mystical_knowledge_legacy_devotee
+		DevoteeNeuterPlural = mystical_knowledge_legacy_devoteeplural
+		PriestMale = mystical_knowledge_legacy_priest
+		PriestMalePlural = mystical_knowledge_legacy_priest_plural
+		PriestFemale = mystical_knowledge_legacy_priest
+		PriestFemalePlural = mystical_knowledge_legacy_priest_plural
+		PriestNeuter = mystical_knowledge_legacy_priest
+		PriestNeuterPlural = mystical_knowledge_legacy_priest_plural
+		AltPriestTermPlural = mystical_knowledge_legacy_priest_alternate_plural
+		BishopMale = mystical_knowledge_legacy_priest
+		BishopMalePlural = mystical_knowledge_legacy_priest_plural
+		BishopFemale = mystical_knowledge_legacy_priest
+		BishopFemalePlural = mystical_knowledge_legacy_priest_plural
+		BishopNeuter = mystical_knowledge_legacy_priest
+		BishopNeuterPlural = mystical_knowledge_legacy_priest_plural
+		DivineRealm = mystical_knowledge_legacy_divine_realm
+		PositiveAfterLife = mystical_knowledge_legacy_divine_realm
+		NegativeAfterLife = mystical_knowledge_legacy_afterlife
+		DeathDeityName = mystical_knowledge_legacy_death_deity_name
+		DeathDeityNamePossessive = mystical_knowledge_legacy_death_deity_name_possessive
+		DeathDeitySheHe = mystical_knowledge_legacy_devil_shehe
+		DeathDeityHerHis = mystical_knowledge_legacy_death_deity_herhis
+		WitchGodName = witchgodname_mystical_knowledge_legacy_the_shadow
 		WitchGodSheHe = CHARACTER_SHEHE_IT
 		WitchGodHerHis = CHARACTER_HERHIS_ITS
 		WitchGodHerHim = CHARACTER_HERHIM_IT
