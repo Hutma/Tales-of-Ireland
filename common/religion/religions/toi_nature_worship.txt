@@ -11,27 +11,27 @@
 
 	#Marriage
 	doctrine = doctrine_concubines
-	doctrine = doctrine_divorce_allowed
-	doctrine = doctrine_bastardry_legitimization
+	doctrine = doctrine_divorce_approval
+	doctrine = doctrine_bastardry_none
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
-	doctrine = doctrine_homosexuality_shunned
-	doctrine = doctrine_adultery_men_crime
+	doctrine = doctrine_homosexuality_accepted
+	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
-	doctrine = doctrine_witchcraft_accepted
+	doctrine = doctrine_witchcraft_crime
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_function_alms_and_pacification
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
-	doctrine = doctrine_clerical_succession_temporal_appointment
+	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
 
 	traits = {
-		virtues = { brave just honest }
-		sins = { craven arbitrary deceitful }
+		virtues = { just honest brave }
+		sins = { arbitrary deceitful craven }
 	}
 
 	custom_faith_icons = {
@@ -189,7 +189,11 @@
 		newgrange_faith = {
 			color = { 120 120 100 }
 			icon = zunist_custom
-
+			
+			holy_site = newgrange
+			holy_site = carrowmore_cemetery
+			holy_site = poulnabrone_dolmen
+			
 			doctrine = tenet_sun_worship
 			doctrine = tenet_aniconism
 			doctrine = tenet_newgrange_splendor
@@ -197,7 +201,11 @@
 		first_men = {
 			color = { 100 200 100 }
 			icon = waaqism
-
+			
+			holy_site = newgrange
+			holy_site = bere
+			holy_site = first_arrival_bay
+			
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_pacifism
 			doctrine = tenet_animal_worship
@@ -205,7 +213,11 @@
 		cult_of_life = {
 			color = { 80 200 120 }
 			icon = cult_of_life
-
+			
+			holy_site = newgrange
+			holy_site = bere
+			holy_site = first_arrival_bay
+			
 			doctrine = tenet_sacred_childbirth
 			doctrine = tenet_pacifism
 			doctrine = tenet_animal_worship

@@ -1,0 +1,14 @@
+﻿l_english:
+#Christian
+ councillor_court_chaplain_generic_county:1 "Druid"
+ councillor_court_chaplain_generic_county_possessive:1 "Druid's"
+ councillor_court_chaplain_generic_duchy:1 "Druid"
+ councillor_court_chaplain_generic_duchy_possessive:1 "Druid's"
+ councillor_court_chaplain_generic_kingdom:1 "Druid"
+ councillor_court_chaplain_generic_kingdom_possessive:1 "Druid's"
+ councillor_court_chaplain_generic_empire:0 "Druid"
+ councillor_court_chaplain_generic_empire_female:0 "Druid"
+ councillor_court_chaplain_generic_empire_possessive:0 "Druid's"
+ councillor_court_chaplain_generic_empire_female_possessive:0 "Druid's"
+
+ 

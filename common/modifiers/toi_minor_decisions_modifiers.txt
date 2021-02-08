@@ -1,0 +1,95 @@
+﻿great_blessing_war = {
+	icon = magic_positive
+	levy_reinforcement_rate = 0.3
+	levy_size = 0.2
+	garrison_size = 0.1
+	character_capital_county_monthly_development_growth_add = -0.1
+	diplomacy = 2
+	martial = 3
+	stewardship = 2 
+	intrigue = 2
+	learning = 2
+}
+
+great_blessing_peace = {
+	icon = magic_positive
+	character_capital_county_monthly_development_growth_add = 0.3
+	build_gold_cost = -0.2
+	domain_tax_mult = 0.1
+	levy_reinforcement_rate = -0.1
+	diplomacy = 2
+	martial = 2
+	stewardship = 3
+	intrigue = 2
+	learning = 2
+}
+
+important_blessing_war = {
+	icon = magic_positive
+	levy_reinforcement_rate = 0.2
+	levy_size = 0.1
+	character_capital_county_monthly_development_growth_add = -0.1
+	diplomacy = 1
+	martial = 2
+	stewardship = 1 
+	intrigue = 1
+	learning = 1
+}
+
+important_blessing_peace = {
+	icon = magic_positive
+	character_capital_county_monthly_development_growth_add = 0.2
+	build_gold_cost = -0.1
+	levy_reinforcement_rate = -0.1
+	diplomacy = 1
+	martial = 1
+	stewardship = 2 
+	intrigue = 1
+	learning = 1
+}
+
+good_omen_war = {
+	icon = magic_positive
+	levy_reinforcement_rate = 0.1
+	levy_size = 0.05
+	character_capital_county_monthly_development_growth_add = -0.1
+	martial = 2
+}
+
+good_omen_peace = {
+	icon = magic_positive
+	character_capital_county_monthly_development_growth_add = 0.1
+	build_gold_cost = -0.05
+	levy_reinforcement_rate = -0.1
+	stewardship = 2 
+}
+
+bad_omen_war = {
+	icon = magic_negative
+	levy_reinforcement_rate = -0.1
+	levy_size = -0.1
+	diplomacy = -1
+	martial = -1
+	stewardship = -1 
+	intrigue = -1
+	learning = -1
+}
+
+bad_omen_peace = {
+	icon = magic_negative
+	character_capital_county_monthly_development_growth_add = -0.1
+	build_gold_cost = 0.1
+	diplomacy = -1
+	martial = -1
+	stewardship = -1 
+	intrigue = -1
+	learning = -1
+}
+
+high_king_hailed = {
+	icon = prestige_positive
+	diplomacy_per_prestige_level = 1
+	martial_per_prestige_level = 1
+	stewardship_per_prestige_level = 1
+	monthly_prestige_gain_mult = 0.15
+}

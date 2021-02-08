@@ -11,27 +11,27 @@
 
 	#Marriage
 	doctrine = doctrine_concubines
-	doctrine = doctrine_divorce_allowed
+	doctrine = doctrine_divorce_approval
 	doctrine = doctrine_bastardry_legitimization
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
 	doctrine = doctrine_homosexuality_shunned
-	doctrine = doctrine_adultery_men_crime
+	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
-	doctrine = doctrine_deviancy_crime
+	doctrine = doctrine_deviancy_shunned
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_recruitment
 	doctrine = doctrine_clerical_gender_male_only
-	doctrine = doctrine_clerical_marriage_allowed
+	doctrine = doctrine_clerical_marriage_disallowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 
 	traits = {
-		virtues = { brave just honest }
-		sins = { craven arbitrary deceitful }
+		virtues = { brave wrathful vengeful }
+		sins = { craven deceitful forgiving }
 	}
 
 	custom_faith_icons = {
@@ -189,7 +189,11 @@
 		sons_of_the_ocean = {
 			color = { 1 11 111 }
 			icon = germanic_custom
-
+			
+			holy_site = newgrange
+			holy_site = tralee
+			holy_site = lough_gur
+			
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_adaptive
 			doctrine = tenet_seafarers

@@ -41,12 +41,7 @@ e_munster = {
 		capital = c_cork
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_bere = {
@@ -2348,12 +2343,7 @@ e_munster = {
 		capital = c_cork
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_coshmore = {
@@ -3106,12 +3096,7 @@ e_munster = {
 		capital = c_killarney
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_glanarought = {
@@ -4420,12 +4405,7 @@ e_munster = {
 		capital = c_limerick
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_shanid = {
@@ -5442,12 +5422,7 @@ e_munster = {
 		capital = c_ennis
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_tulla = {
@@ -6507,12 +6482,7 @@ e_munster = {
 		capital = c_thurles
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_arra = {
@@ -7822,12 +7792,23 @@ e_connacht = {
 	definite_form = yes
 	
 	ai_primary_priority = {
-		if = {
-			limit = {
-				culture = culture:greek
+
+	}
+	
+	k_aran = {
+		color = { 140 155 130 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:sea_fomorians
+				}
+				add = @correct_culture_primary_score
 			}
-			add = @correct_culture_primary_score
 		}
+
+		capital = c_aran
 	}
 	
 	k_galway = {
@@ -7837,12 +7818,7 @@ e_connacht = {
 		capital = c_galway
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_kiltartan = {
@@ -9948,12 +9924,7 @@ e_connacht = {
 		capital = c_westport
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		d_murrisk = {
 			color = { 30 100 30 }
@@ -11915,12 +11886,7 @@ e_connacht = {
 		capital = c_sligo
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		d_tireragh = {
 			color = { 5 100 40 }
@@ -12651,12 +12617,7 @@ e_connacht = {
 		capital = c_roscommon
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		d_moycarn = {
 			color = { 40 100 40 }
@@ -13617,12 +13578,7 @@ e_connacht = {
 		capital = c_leitrim
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		d_rosclogher = {
 			color = { 50 240 50 }
@@ -14235,12 +14191,7 @@ e_ulster = {
 	definite_form = yes
 	
 	ai_primary_priority = {
-		if = {
-			limit = {
-				culture = culture:greek
-			}
-			add = @correct_culture_primary_score
-		}
+
 	}
 	
 	k_donegal = {
@@ -14250,12 +14201,7 @@ e_ulster = {
 		capital = c_galway
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_banagh = {
@@ -15954,12 +15900,7 @@ e_ulster = {
 		capital = c_cavan
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_tullyhaw = {
@@ -16786,12 +16727,7 @@ e_ulster = {
 		capital = c_monaghan
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_trough = {
@@ -17395,12 +17331,7 @@ e_ulster = {
 		capital = c_enniskillen
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_clankelly = {
@@ -18283,12 +18214,7 @@ e_ulster = {
 		capital = c_omagh
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_clogher = {
@@ -19688,12 +19614,7 @@ e_ulster = {
 		capital = c_armagh
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_tiranny = {
@@ -20200,12 +20121,7 @@ e_ulster = {
 		capital = c_derry
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_loughinsholin = {
@@ -21004,12 +20920,7 @@ e_ulster = {
 		capital = c_newcastle
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_moira = {
@@ -22216,12 +22127,7 @@ e_ulster = {
 		capital = c_antrim
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_massereene = {
@@ -23692,12 +23598,7 @@ e_leinster = {
 		capital = c_louth
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_dundalk = {
@@ -24092,12 +23993,7 @@ e_leinster = {
 		capital = c_longford
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_longford = {
@@ -24612,12 +24508,7 @@ e_leinster = {
 		capital = c_wexford
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_shelmaliere = {
@@ -25587,12 +25478,7 @@ e_leinster = {
 		capital = c_kilkenny
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_iverk = {
@@ -26563,12 +26449,7 @@ e_leinster = {
 		capital = c_carlow
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_stmullin = {
@@ -27019,12 +26900,7 @@ e_leinster = {
 		capital = c_wicklow
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_shillelagh = {
@@ -27913,12 +27789,7 @@ e_leinster = {
 		capital = c_portlaoise
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_slievemargy = {
@@ -28763,12 +28634,7 @@ e_leinster = {
 		capital = c_banagher
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_clonlisk = {
@@ -29727,12 +29593,7 @@ e_leinster = {
 		capital = c_ballymore
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_clonlanan = {
@@ -30694,12 +30555,7 @@ e_leinster = {
 		capital = c_tara
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_oldcastle = {
@@ -31905,12 +31761,7 @@ e_leinster = {
 		capital = c_kildare
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_carbury = {
@@ -32723,12 +32574,7 @@ e_leinster = {
 		capital = c_dublin
 		
 		ai_primary_priority = {
-			if = {
-				limit = {
-					culture = culture:greek
-				}
-				add = @correct_culture_primary_score
-			}
+
 		}
 		
 		d_balrothery = {

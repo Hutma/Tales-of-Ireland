@@ -1,0 +1,55 @@
+﻿namespace = toi_decision_race
+
+#The aran kingdom revived.
+toi_decision_race.0001 = {
+	type = character_event
+	title = toi_decision_race.0001.t
+	desc = toi_decision_race.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { restore_aran_kingship_decision_scripted_effect = yes }
+
+	#No thanks on the nickname, more prestige instead please.
+	option = {
+		name = toi_decision_race.0001.a
+		add_prestige = medium_prestige_gain
+		root.capital_county = {
+			change_development_level = 5
+		}
+	}
+}
+
+
+#Inform any players.
+toi_decision_race.0002 = {
+	type = character_event
+	title = toi_decision_race.0002.t
+	desc = toi_decision_race.0002.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = { #Fomorian peoples are happy.
+			trigger = {
+				has_culture_group = culture_group:toi_fomorian_group
+			}
+			text = toi_decision_race.0002.a
+		}
+		name = { #Noone else especially cares.
+			trigger = {
+				NOR = {
+					has_culture_group = culture_group:toi_fomorian_group
+				}
+			}
+			text = toi_decision_race.0002.b
+		}
+	}
+}

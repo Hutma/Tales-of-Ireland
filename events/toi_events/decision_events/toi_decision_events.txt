@@ -1,0 +1,834 @@
+﻿namespace = toi_decisions
+
+#Coax giant events
+toi_decisions.001 =  {
+	title = toi_decisions.001.t
+	desc = toi_decisions.001.desc
+	theme = hunt_activity
+	override_background = {
+		event_background = giant_causeway
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.001.a #Find the giant!
+		hidden_effect = {
+			random_list = {
+				45 = {
+					trigger_event = {
+						id = toi_decisions.002 #Nice Giant
+						days = 30
+					}
+				}
+				45 = {
+					trigger_event = {
+						id = toi_decisions.003 #Demanding Giant
+						days = 30
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = toi_decisions.004 #Angry Giant
+						days = 30
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = craven
+				add = -30
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.001.b #Let's not do this
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_trait = craven
+				add = 30
+			}
+		}
+	}
+}
+
+toi_decisions.002 =  { #Nice giant
+	title = toi_decisions.002.t
+	desc = toi_decisions.002.desc
+	theme = hunt_activity
+	override_background = {
+		event_background = giant_causeway
+	}
+	
+	right_portrait = {
+		character = scope:giant
+		animation = personality_content
+	}
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	trigger = {
+		
+	}
+	
+	immediate = {
+		create_character = {
+			age = { 30 55 }
+			trait = giant
+			trait = physique_good_3
+			trait = gaelic_giant
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = faith:sidhe_beliefs
+			culture = this.culture
+			save_scope_as = giant
+		}
+	}
+	
+	option = {
+		name = toi_decisions.002.a #Kneel before your new liege
+		remove_short_term_gold = 50
+		add_prestige = 100
+		add_courtier = scope:giant
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = greedy
+				add = -10
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.002.b #I can't meet these terms
+		ai_chance = {
+			base = 90
+			modifier = {
+				has_trait = greedy
+				add = 10
+			}
+		}
+	}
+}
+
+toi_decisions.003 =  { #Demanding giant
+	title = toi_decisions.003.t
+	desc = toi_decisions.003.desc
+	theme = hunt_activity
+	override_background = {
+		event_background = giant_causeway
+	}
+	
+	right_portrait = {
+		character = scope:giant
+		animation = personality_greedy
+	}
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	trigger = {
+		
+	}
+	
+	immediate = {
+		create_character = {
+			age = { 35 55 }
+			trait = giant
+			trait = physique_good_3
+			trait = gaelic_giant
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = faith:sidhe_beliefs
+	#			50 = {
+	#				faith = faith:sidhe_beliefs
+	#			}
+	#			50 = {
+	#				faith = faith:dark_gods
+	#			}
+			culture = this.culture
+			save_scope_as = giant
+		}
+	}
+	
+	option = {
+		name = toi_decisions.003.a #I beg you to join us
+		remove_short_term_gold = 50
+		add_prestige = -250
+		add_courtier = scope:giant
+		ai_chance = {
+			base = 95
+			modifier = {
+				has_trait = greedy
+				add = -10
+			}
+			modifier = {
+				has_trait = arrogant
+				add = -20
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.003.b #I would never bow before you
+		add_prestige = 100
+		ai_chance = {
+			base = 15
+			modifier = {
+				has_trait = greedy
+				add = 10
+			}
+			modifier = {
+				has_trait = arrogant
+				add = 20
+			}
+		}
+	}
+}
+
+toi_decisions.004 =  { #Angry giant
+	title = toi_decisions.004.t
+	desc = toi_decisions.004.desc
+	theme = hunt_activity
+	override_background = {
+		event_background = giant_causeway
+	}
+	
+	right_portrait = {
+		character = scope:giant
+		animation = rage
+	}
+	left_portrait = {
+		character = root
+		animation = fear
+	}
+	trigger = {
+		
+	}
+	
+	immediate = {
+		create_character = {
+			age = { 30 55 }
+			trait = giant
+			trait = physique_good_3
+			trait = gaelic_giant
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = faith:sidhe_beliefs
+			culture = this.culture
+			save_scope_as = giant
+		}
+	}
+	
+	option = {
+		name = toi_decisions.004.a #I'll kill you, beast!
+		duel = {
+			skill = prowess
+			value = 12
+		
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = toi_decisions.004.a.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = toi_decisions.004.a.success
+					scope:giant = {
+						death = {
+								death_reason = death_head_ripped_off
+								killer = root
+						}
+					}
+					add_prestige = 400
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = toi_decisions.004.a.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = toi_decisions.004.a.failure
+					add_trait = wounded_2
+					add_prestige = -100
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = brave
+				add = 50
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 20
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.004.b #Run for your life
+		add_prestige = -200		
+		ai_chance = {
+			base = 90
+			modifier = {
+				has_trait = brave
+				add = -50
+			}
+			modifier = {
+				has_trait = ambitious
+				add = -20
+			}
+		}
+	}
+}
+
+#Sacrifice to Sidhe events
+toi_decisions.010 =  {
+	title = toi_decisions.010.t
+	desc = toi_decisions.010.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.010.a #We'll make a great sacrifice!
+		remove_short_term_gold = 100 
+		root.capital_county = {
+			change_development_level = -4
+		}
+		hidden_effect = {
+			random_list = {
+				25 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.011 #Sidhe Blessing war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.012 #Sidhe Blessing peace
+								days = 10
+							}
+						}
+					}
+				}
+				30 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.013 #Sidhe visiting war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.014 #Sidhe visiting peace
+								days = 10
+							}
+						}
+					}
+				}
+				35 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.015 #Good omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.016 #Good omen peace
+								days = 10
+							}
+						}
+					}
+				}
+				10 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.017 #Bad omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.018 #Bad omen peace
+								days = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+				}
+				add = -20
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.010.b #We'll make an important sacrifice!
+		remove_short_term_gold = 75
+		root.capital_county = {
+			change_development_level = -3
+		}
+		hidden_effect = {
+			random_list = {
+				15 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.011 #Sidhe Blessing war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.012 #Sidhe Blessing peace
+								days = 10
+							}
+						}
+					}
+				}
+				20 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.013 #Sidhe visiting war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.014 #Sidhe visiting peace
+								days = 10
+							}
+						}
+					}
+				}
+				45 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.015 #Good omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.016 #Good omen peace
+								days = 10
+							}
+						}
+					}
+				}
+				20 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.017 #Bad omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.018 #Bad omen peace
+								days = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+				}
+				add = -10
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.010.c #We'll make a sandard sacrifice!
+		remove_short_term_gold = 50
+		root.capital_county = {
+			change_development_level = -2
+		}
+		hidden_effect = {
+			random_list = {
+				5 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.011 #Sidhe Blessing war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.012 #Sidhe Blessing peace
+								days = 10
+							}
+						}
+					}
+				}
+				10 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.013 #Sidhe visiting war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.014 #Sidhe visiting peace
+								days = 10
+							}
+						}
+					}
+				}
+				55 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.015 #Good omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.016 #Good omen peace
+								days = 10
+							}
+						}
+					}
+				}
+				30 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.017 #Bad omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.018 #Bad omen peace
+								days = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+				}
+				add = -10
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.010.d #Small sacrifice
+		remove_short_term_gold = 25
+		root.capital_county = {
+			change_development_level = -1
+		}
+		hidden_effect = {
+			random_list = {
+				5 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.013 #Sidhe visiting war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.014 #Sidhe visiting peace
+								days = 10
+							}
+						}
+					}
+				}
+				45 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.015 #Good omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.016 #Good omen peace
+								days = 10
+							}
+						}
+					}
+				}
+				50 = {
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_decisions.017 #Bad omen war
+								days = 10
+							}
+						}
+						50 = {
+							trigger_event = {
+								id = toi_decisions.018 #Bad omen peace
+								days = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				OR = {
+					has_trait = greedy
+					has_trait = cynical
+				}
+				add = 15
+			}
+		}
+	}
+}
+
+toi_decisions.011 =  { #Great blessing war
+	title = toi_decisions.011.t
+	desc = toi_decisions.011.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.011.a #OK
+		add_character_modifier = {
+			modifier = great_blessing_war
+			years = 5
+		}
+	}
+}
+
+toi_decisions.012 =  { #Great blessing peace
+	title = toi_decisions.012.t
+	desc = toi_decisions.012.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.012.a #OK
+		add_character_modifier = {
+			modifier = great_blessing_peace
+			years = 5
+		}
+	}
+}
+
+toi_decisions.013 =  { #Sidhe visit war
+	title = toi_decisions.013.t
+	desc = toi_decisions.013.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.013.a #OK
+		add_character_modifier = {
+			modifier = important_blessing_war
+			years = 5
+		}
+	}
+}
+
+toi_decisions.014 =  { #Sidhe visit peace
+	title = toi_decisions.014.t
+	desc = toi_decisions.014.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.014.a #OK
+		add_character_modifier = {
+			modifier = important_blessing_peace
+			years = 5
+		}
+	}
+}
+
+toi_decisions.015 =  { #Good omen war
+	title = toi_decisions.015.t
+	desc = toi_decisions.015.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.015.a #OK
+		add_character_modifier = {
+			modifier = good_omen_war
+			years = 5
+		}
+	}
+}
+
+toi_decisions.016 =  { #Good omen peace
+	title = toi_decisions.016.t
+	desc = toi_decisions.016.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.016.a #OK
+		add_character_modifier = {
+			modifier = good_omen_peace
+			years = 5
+		}
+	}
+}
+
+toi_decisions.017 =  { #Bad omen war
+	title = toi_decisions.017.t
+	desc = toi_decisions.017.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.017.a #OK
+		add_character_modifier = {
+			modifier = bad_omen_war
+			years = 5
+		}
+	}
+}
+
+toi_decisions.018 =  { #Bad omen peace
+	title = toi_decisions.018.t
+	desc = toi_decisions.018.desc
+	theme = faith
+	override_background = {
+		event_background = religious_passage_tomb
+	}
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = toi_decisions.018.a #OK
+		add_character_modifier = {
+			modifier = bad_omen_peace
+			years = 5
+		}
+	}
+}

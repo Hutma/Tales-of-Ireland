@@ -101,3 +101,10 @@
  ancient_partition_succession_law:1 "Ancient Partition"
  ancient_partition_succession_law_subname:0 "All Children Inherit Equally And Heirs Are Freed"
  ancient_partition_succession_law_effects:2 "\n#V Under $ancient_partition_succession_law$, your [titles] will be divided equally between your children. New [titles] may be created for younger [realm_heirs].#!\n\n#weak $partition_base_desc$\nYounger children will have Titles created for them, if enough land is held.\n\n#!#X All heirs will gain independence over succession if you are independent.#!\n"
+ 
+ high_king_elective_succession_law:0 "High King Election"
+ high_king_elective_candidates:0 "Independent Kings"
+ high_king_elective_candidates_tooltip:0 "In order to be a valid Candidate for the High Kingship, a character must be an independence ruler, King or Emperor"
+ high_king_elective_electors:0 "Electors"
+ high_king_elective_electors_tooltip:0 "In order to be a valid [elector|E] for the High Kingship, a ruler must be an independent ruler who is at least duke"
+

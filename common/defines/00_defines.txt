@@ -498,7 +498,7 @@ NArmy = {
 	MOVEMENT_SPEED_BONUS_FRIENDLY_AREA = 0.2		# In friendly areas you get a 20% speed bonus
 	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.03			# Monthly reinforcement percentage of unraised chunks [0-1]
 	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.1		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
-	GOLD_COST_PER_SOLDIER = 0.003					# Gold maintenance cost per soldier
+	GOLD_COST_PER_SOLDIER = 0.023					# Gold maintenance cost per soldier
 	RAID_ARMY_COST_MULT = 0.5						# Maintenance of raid armies is multiplied by this
 	MOVEMENT_LOCKED = 0.5							# Percentage after which movement is locked
 	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.05
@@ -734,7 +734,7 @@ NSiege = {
 	DEFENDER_MORALE_PER_FORT_LEVEL = 75					# Defender morale added to the base per for level
 	BASE_DAILY_MORALE_LOSS = 1							# How much morale is lost every day of the siege
 	MIN_DAILY_MORALE_LOSS = 0.5							# Minimum daily morale loss for the defenders
-	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.04	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
+	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.06	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
 	RELATIVE_ATTACKER_MEN_STACK_SIZE = 50				# Extra stack size of men to start getting daily morale loss
 	MONTHLY_ATTRITION = 0.01							# Monthly attrition during siege
 	BASE_SIEGE_PHASE_LENGTH = 20						# Base length of a siege phase (time between picking new actions) in days
@@ -880,8 +880,8 @@ NDomain = {
 	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 7	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
 	LEVIES_AT_ZERO_COUNTY_CONTROL = 0.5			# How many % levies do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
-	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 0.5		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
-	TAX_AT_MAX_COUNTY_DEVELOPMENT = 0.5			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	LEVIES_AT_MAX_COUNTY_DEVELOPMENT = 1.5		# How many % levies bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
+	TAX_AT_MAX_COUNTY_DEVELOPMENT = 1.5			# How much % tax bonus do you get at 100 county development? Interpolated between this value and 0% when between 0 and 100
 	HOLDING_MIN_GARRISON_COUNT = 1				# The minimal amount of garrisons a holding should have if it should have garrisons
 }
 
@@ -910,7 +910,7 @@ NCulture = {
 	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 0.5									# Percentage of innovations to be able to go to the next era
 	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
 	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
-	FIRST_ERA_START_YEAR = 476												# When did the first era start?
+	FIRST_ERA_START_YEAR = 4700												# When did the first era start?
 
 	# Regional exposure will start with the minimum number of regions from any of the next percentages
 	INNOVATION_REGIONAL_PERCENTAGE = 0.1									# Minimum percentage of region for regional innovations to get regional exposure

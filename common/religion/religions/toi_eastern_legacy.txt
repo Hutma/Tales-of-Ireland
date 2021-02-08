@@ -11,27 +11,27 @@
 
 	#Marriage
 	doctrine = doctrine_concubines
-	doctrine = doctrine_divorce_allowed
+	doctrine = doctrine_divorce_approval
 	doctrine = doctrine_bastardry_legitimization
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
-	doctrine = doctrine_homosexuality_shunned
-	doctrine = doctrine_adultery_men_crime
+	doctrine = doctrine_homosexuality_accepted
+	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
-	doctrine = doctrine_witchcraft_accepted
+	doctrine = doctrine_witchcraft_shunned
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
-	doctrine = doctrine_clerical_gender_either
-	doctrine = doctrine_clerical_marriage_allowed
+	doctrine = doctrine_clerical_function_taxation
+	doctrine = doctrine_clerical_gender_male_only
+	doctrine = doctrine_clerical_marriage_disallowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 
 	traits = {
-		virtues = { brave just honest }
-		sins = { craven arbitrary deceitful }
+		virtues = { generous just temperate }
+		sins = { deceitful lazy sadistic }
 	}
 
 	custom_faith_icons = {
@@ -189,6 +189,10 @@
 		scythian_heritage = {
 			color = { 220 220 100 }
 			icon = pagan_magyar
+			
+			holy_site = neagh_burst
+			holy_site = leinster_bursts
+			holy_site = beaghmore_stone_circles
 
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_sky_burials
@@ -197,7 +201,13 @@
 		ancient_greek_slave = {
 			color = { 220 100 100 }
 			icon = hellenic_custom
-
+			
+			holy_site = connemara
+			holy_site = tara
+			holy_site = maige_tuired
+			
+			doctrine = doctrine_clerical_function_recruitment
+			
 			doctrine = tenet_unrelenting_faith
 			doctrine = tenet_communal_identity
 			doctrine = tenet_deep_vengeance_flame

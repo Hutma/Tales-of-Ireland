@@ -4,10 +4,19 @@
 	desc = the_first_cessarian_kingdom_decision_desc
 	
 	major = yes
+	ai_goal = yes
 	ai_check_interval = 80
 
 	is_shown = {
-		has_trait = cessarian
+		AND  = {
+			has_trait = cessarian
+			NOT = {	#You can only do it once.
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:the_first_cessarian_kingdom_decision
+				}
+			}
+		}
 	}
 
 	is_valid = {
@@ -43,10 +52,164 @@
 				modifier = cessarian_first_king
 			}
 		}
-			add_to_global_variable_list = {
-		name = unavailable_unique_decisions
-		target = flag:the_first_cessarian_kingdom_decision
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:the_first_cessarian_kingdom_decision
 		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+restore_aran_kingship_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+	ai_check_interval = 120
+
+	desc = restore_aran_kingship_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		AND = {
+			OR = {
+				has_title = title:c_aran
+				has_title = title:d_aran
+				has_title = title:d_toremoreislands
+				has_title = title:c_inishbofin
+				has_title = title:c_inishturk
+			}
+			culture = culture:sea_fomorians	
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_aran_kingship
+			}
+		}
+		highest_held_title_tier <= tier_duchy
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		OR = {
+			has_title = title:d_achill
+			has_title = title:d_belmullet
+		}
+		completely_controls = title:d_aran
+		completely_controls = title:d_toremoreislands
+		any_realm_province = { #You must have some realm support for your claims.
+			culture = culture:sea_fomorians
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			restore_aran_kingship_decision_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = toi_decision_race.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_decision_race.0002
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_aran_kingship
+			}
+		}
+	}
+
+	cost = {
+		gold = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+ceremony_in_newgrange_decision = {
+	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	major = yes
+	ai_goal = yes
+	ai_check_interval = 120
+
+	desc = ceremony_in_newgrange_decision_desc
+
+	is_shown = {
+		AND = {
+			is_ruler = yes
+			is_landed = yes
+			faith = faith:newgrange_faith 
+			NOT = {	#You can only do it once.
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:ceremony_in_newgrange_first
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		piety_level >= 2
+		has_title = title:c_slane
+		title:c_slane = { 
+			faith = faith:newgrange_faith
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		title:c_slane = {
+			add_county_modifier = {
+				modifier = upgraded_defenses_newgrange
+			}
+		}# garison to defend Newgrange until the end game
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = back_to_newgrange_dynasty
+			}
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:ceremony_in_newgrange_first
+			}
+		}
+	}
+
+	cost = {
+		piety = 200
 	}
 
 	ai_potential = {

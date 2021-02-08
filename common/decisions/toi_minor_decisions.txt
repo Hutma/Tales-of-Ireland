@@ -4,9 +4,15 @@
 	desc = sacrifice_to_sidhe_decision_desc
 
 	ai_check_interval = 80
-
+	cooldown = {
+		years = 10
+	}
+	
 	is_shown = {
-		sacrifice_to_sidhe_decision_active = yes		
+		is_ruler = yes
+		faith = {
+			has_doctrine_parameter = sacrifice_to_sidhe_decision_active
+		}		
 	}
 
 	is_valid = {
@@ -24,9 +30,110 @@
 
 	effect = {
 		trigger_event = {
-			id = 
+			id = toi_decisions.010
 			days = 7 
 		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+hail_high_king_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	
+	desc = hail_high_king_decision_desc
+
+	ai_check_interval = 200
+	cooldown = {
+		years = 10
+	}
+	
+	is_shown = {
+		is_ruler = yes
+		has_trait = milesian	
+		NOT = {
+			root = title:k_high_kingship.holder
+		}
+	}
+
+	is_valid = {
+		AND = {
+			prestige_level >= 2
+			title:k_high_kingship.holder = {
+				has_trait = milesian
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = now
+	}
+
+	cost = {
+		prestige = 150
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = high_king_hailed
+			years = 5
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+high_king_protection_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	
+	desc = high_king_protection_decision_desc
+
+	ai_check_interval = 20
+	cooldown = {
+		years = 25
+	}
+	
+	is_shown = {
+		is_ruler = yes
+		has_trait = milesian	
+		NOT = {
+			root = title:k_high_kingship.holder
+		}
+	}
+
+	is_valid = {
+		AND = {
+			is_at_war = yes
+			title:k_high_kingship.holder = {
+				has_trait = milesian
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+	}
+
+	cost = {
+		prestige = 100
+		gold = 50
+	}
+
+	effect = {
+		high_king_protection_decision_effect = yes		
 	}
 
 	ai_potential = {

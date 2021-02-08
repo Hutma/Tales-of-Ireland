@@ -1,0 +1,6 @@
+﻿l_english:
+ #Are negative values in these loc keys showing for you? Don't add new negative ones, just come out of debug mode and they're fine.
+ CHANGE_DEVELOPMENT_LEVEL:2 "The [development|E] level in [TITLE.GetName] will change by $VALUE|=0+$"
+ CHANGE_DEVELOPMENT_LEVEL_NEG:0 "[development|E] decreases by $VALUE|0-$"
+ THEY_CHANGE_DEVELOPMENT_LEVEL:2 "The [development|E] in [TITLE.GetName] will increase by $VALUE|0+$"
+ THEY_CHANGE_DEVELOPMENT_LEVEL_NEG:0 "The [development|E] in [TITLE.GetName] will decrease by $VALUE|0-$"

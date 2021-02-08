@@ -4,9 +4,9 @@
 	doctrine = pagan_hostility_doctrine
 
 	#Main Group
-	doctrine = doctrine_no_head
+	doctrine = doctrine_spiritual_head
 	doctrine = doctrine_gender_male_dominated
-	doctrine = doctrine_pluralism_pluralistic
+	doctrine = doctrine_pluralism_righteous
 	doctrine = doctrine_theocracy_temporal
 
 	#Marriage
@@ -17,20 +17,20 @@
 
 	#Crimes
 	doctrine = doctrine_homosexuality_shunned
-	doctrine = doctrine_adultery_men_crime
+	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_function_taxation
 	doctrine = doctrine_clerical_gender_male_only
-	doctrine = doctrine_clerical_marriage_allowed
-	doctrine = doctrine_clerical_succession_temporal_appointment
+	doctrine = doctrine_clerical_marriage_disallowed
+	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
 
 	traits = {
-		virtues = { brave just honest }
+		virtues = { brave just compassionate }
 		sins = { craven arbitrary deceitful }
 	}
 
@@ -189,7 +189,11 @@
 		celtic_de_danann_worship = {
 			color = { 220 200 250 }
 			icon = celtic_de_danann_worship
-
+			
+			holy_site = newgrange
+			holy_site = tara
+			holy_site = uisneach_hill
+			
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_tuatha_de_danann_worship
@@ -197,7 +201,11 @@
 		megalithic_de_danann_worship = {
 			color = { 220 220 250 }
 			icon = megalithic_de_danann_worship
-
+			
+			holy_site = newgrange
+			holy_site = tara
+			holy_site = carrowmore_cemetery
+			
 			doctrine = tenet_newgrange_splendor
 			doctrine = tenet_aniconism
 			doctrine = tenet_tuatha_de_danann_worship

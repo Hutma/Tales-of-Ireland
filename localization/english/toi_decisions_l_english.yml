@@ -4,6 +4,16 @@
  the_first_cessarian_kingdom_decision_desc:0 "For the first time the Cessarian will be united and lead by a king, may this day be the first of many glourious days."
  the_first_cessarian_kingdom_decision_tooltip:0 "Become the first Cessarian king"
  the_first_cessarian_kingdom_decision_confirm:0 "Bring me my corwn"
+ 
+ restore_aran_kingship_decision:0 "Restore Aran Kingship"
+ restore_aran_kingship_decision_desc:0 "The Fomorians once had a great kingdom in these islands, I should restore it once again."
+ restore_aran_kingship_decision_tooltip:0 "Restore the kingdom of Aran"
+ restore_aran_kingship_decision_confirm:0 "The Kingdom of Aran lives again"
+ 
+ ceremony_in_newgrange_decision:0 "Ceremony in Newgrange"
+ ceremony_in_newgrange_decision_desc:0 "Newgrange has been invaded several times and our people have lost control over it, for centuries we tried to take it back without success. We hope that someday we will able to perform ceremonies for our gods in this sacred place again."
+ ceremony_in_newgrange_decision_tooltip:0 "Perform a religious ceremony in Newgrange"
+ ceremony_in_newgrange_decision_confirm:0 "We honor the gods"
 
  #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
@@ -16,6 +26,8 @@
  call_royal_army_decision_tooltip:0 "Rally the Royal Army"
  call_royal_army_decision_confirm:0 "Call the Army!"
  
+ call_royal_army_decision_troops:0 "Royal Guard"
+ 
  high_king_reclaim_tara_decision:0 "Reclaim Tara"
  high_king_reclaim_tara_decision_desc:0 "Tara is the traditional center of the High King power, the High King should be the one ruling over it."
  high_king_reclaim_tara_decision_tooltip:0 "Gain claim on Tara"
@@ -26,3 +38,19 @@
  coax_giant_causeway_decision_desc:0 "The Giant's Causeway is known as a path to the Otherworld, a mystical place where strange creatures live. The Causeway has been built by the Giant Fionn Mac Cumhaill and his descendent could be contacted using this special site."
  coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
  coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"
+ 
+ #Minor decisions 
+ sacrifice_to_sidhe_decision:0 "Make a sacifice to the Sidhe"
+ sacrifice_to_sidhe_decision_desc:0 "We know about the fairies living in the Otherworld and we know that they can influence the material world. We will make offerings to the Sidhe, the faires and magical creatures of Ireland and hope for a good omen to lead our people."
+ sacrifice_to_sidhe_decision_tooltip:0 "Prepare the offering Ceremony"
+ sacrifice_to_sidhe_decision_confirm:0 "The Ceremony awaits"
+ 
+ hail_high_king_decision:0 "Hail the High King"
+ hail_high_king_decision_desc:0 "The master of Ireland is still a Milesian as it should be. We should hail the High King and hope that this title will stay in Milesian hands."
+ hail_high_king_decision_tooltip:0 "Acclam the High King"
+ hail_high_king_decision_confirm:0 "Milesians will rule forever!"
+ 
+ high_king_protection_decision:0 "Call the High King protection"
+ high_king_protection_decision_desc:0 "The High King is a Milesian and his influence can be used to help any Milesian that requires it. We are at war and need more men, it's time to use the influence the High King gives to our people to raise more troops."
+ high_king_protection_decision_tooltip:0 "We can muster more men"
+ high_king_protection_decision_confirm:0 "Rally the men!"

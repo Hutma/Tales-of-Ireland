@@ -6,7 +6,9 @@
 	mutually_exclusive_titles = { always = yes }
 
 	allowed_for_character = {
-		can_use_to_new_land_cb_trigger = yes
+		faith = {
+			has_doctrine_parameter = to_new_land_cb_enable
+		}
 		NOT = {
 			has_character_flag = used_lifetime_new_land_cb
 		}

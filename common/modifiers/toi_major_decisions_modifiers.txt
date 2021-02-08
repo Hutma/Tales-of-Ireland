@@ -1,0 +1,18 @@
+﻿cessarian_first_king = {
+	icon = prestige_positive
+	direct_vassal_opinion = 10
+	levy_size = 0.1
+}
+
+back_to_newgrange_dynasty = {
+	icon = outdoors_positive
+	direct_vassal_opinion = 5
+	monthly_piety = 0.5
+	monthly_piety_gain_mult = 0.2
+	holding_build_gold_cost = -0.2
+}
+
+upgraded_defenses_newgrange = {
+	additional_fort_level = 2
+	garrison_size = 0.5
+}

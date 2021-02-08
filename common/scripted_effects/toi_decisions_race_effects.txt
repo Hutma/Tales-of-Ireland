@@ -1,0 +1,47 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+#save_var_scope_effect - To check for a variable saved scope and save it as a scope
+
+#####################################################################
+# EFFECTS
+#####################################################################
+
+
+restore_aran_kingship_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_aran = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+
+	hidden_effect = {
+		title:d_achill = { save_scope_as = aran_achill }
+		title:d_belmullet = { save_scope_as = aran_belmullet }
+		title:d_aran = { set_de_jure_liege_title = title:k_aran }
+		title:d_toremoreislands = { set_de_jure_liege_title = title:k_aran }
+		if = {	#If owned, annex achill.
+			limit = {
+				title:d_achill = { holder = root }
+			}
+			title:d_achill = { set_de_jure_liege_title = title:k_aran }
+		}
+		if = {	#If owned, annex belmullet.
+			limit = {
+				title:d_belmullet = { holder = root }
+			}
+			title:d_belmullet = { set_de_jure_liege_title = title:k_aran }
+		}
+	}
+}

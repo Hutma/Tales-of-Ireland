@@ -1,0 +1,8 @@
+﻿change_development_level = {
+	global = CHANGE_DEVELOPMENT_LEVEL
+	global_neg = CHANGE_DEVELOPMENT_LEVEL_NEG  # Commented out since it can't use the same loc keys, we're inverting the value
+	first = THEY_CHANGE_DEVELOPMENT_LEVEL	#Same loc as third person, since you cannot be a county.
+	first_neg = THEY_CHANGE_DEVELOPMENT_LEVEL_NEG	#Same loc as third person, since you cannot be a county.
+	third = THEY_CHANGE_DEVELOPMENT_LEVEL
+	third_neg = THEY_CHANGE_DEVELOPMENT_LEVEL_NEG
+}

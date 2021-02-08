@@ -1,0 +1,15 @@
+﻿l_english:
+ #GROUPS
+ culture_group_military:0 "Military"
+ culture_group_civic:0 "Civic"
+ culture_group_regional:1 "Cultural and Regional"
+ culture_group_any:0 "any"
+ #ERAS
+ culture_era_tribal:0 "Fall of Milesians"
+ culture_era_tribal_desc:0 "The fall of Milesians is the era that started with the arrival of the Celts in Ireland. Decreasing the stability of the Milesian power, each people slowly gained independence."
+ culture_era_early_medieval:0 "The Heroic Era"
+ culture_era_early_medieval_desc:0 "The Heroic Era is characterized by the dominance of single individuals in the battlefields. Some power has emerged and are now fighting for more control."
+ culture_era_high_medieval:0 "Roman Era"
+ culture_era_high_medieval_desc:0 "From the sea they came, and by hundreds. The Romans are starting to look at the British isles, wondering why aren't they already theirs."
+ culture_era_late_medieval:0 "Arrival of Christianity"
+ culture_era_late_medieval_desc:0 "The Old beliefs are slowly dying and are being replaced with the words of the  true and unique god : the Christian god. Even if many people are against the new deity, the word of God gains more and more influence."

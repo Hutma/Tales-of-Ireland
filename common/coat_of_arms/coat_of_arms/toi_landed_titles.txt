@@ -293,3 +293,11 @@ k_high_kingship = {
 		texture = "k_high_kingship_coa.dds"
 	}
 }
+
+k_aran = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_aran_coa.dds"
+	}
+}
