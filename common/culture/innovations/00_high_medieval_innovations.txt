@@ -192,7 +192,7 @@ innovation_development_03 = {
 	culture_era = culture_era_high_medieval
 	icon = @civil_construction_2
 
-	custom = reduce_develop_county_penalty_03
+	custom = reduce_develop_county_penalty_04
 
 	flag = global_regular
 	flag = high_medieval_era_regular

@@ -138,7 +138,9 @@ innovation_development_02 = {
 	culture_era = culture_era_early_medieval
 	icon = @nobility_03
 
-	custom = reduce_develop_county_penalty_02
+	modifier = {
+		character_capital_county_monthly_development_growth_add = 2.0
+	}
 
 	flag = global_regular
 	flag = early_medieval_era_regular

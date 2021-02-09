@@ -85,7 +85,7 @@ innovation_development_01 = {
 	culture_era = culture_era_tribal
 	icon = @civil_construction_1
 
-	custom = reduce_develop_county_penalty_01
+	custom = reduce_develop_county_penalty_03
 
 	flag = global_regular
 	flag = tribal_era_regular
