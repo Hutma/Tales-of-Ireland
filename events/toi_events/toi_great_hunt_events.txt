@@ -1,2 +1,528 @@
 ﻿namespace = great_hunt
 
+great_hunt.0001 = {
+	title = great_hunt.0001.t
+	desc = great_hunt.0001.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0001.a #"We'll go on a great hunt in the woods nearby"
+		remove_short_term_gold = 25
+		trigger_event = {
+			id = great_hunt.0002 
+			days = 7
+		}
+	}
+#	option = { Second option for later
+#		name = great_hunt.0001.b #"We'll go beyond our borders to find the most impressive prey"
+#		add_prestige = 50
+#		remove_short_term_gold = 50
+#		trigger_event = {
+#			id = great_hunt.0003
+#			days = 7
+#		}
+#	}
+}
+
+great_hunt.0002 = {
+	title = great_hunt.0002.t
+	desc = great_hunt.0002.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0002.a #"Let's go deep into our woods and perform the Great Hunt."
+		if = {
+			limit = { #Bad ruler
+				root = {
+					OR = {
+						AND = {
+							learning < 4
+							martial < 10
+						}
+						AND = {
+							martial < 4
+							learning < 10
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					40 = {
+						trigger_event = {
+							id = great_hunt.0022 #Good hunt
+							days = 7
+						}
+					}
+					40 = {
+						trigger_event = {
+							id = great_hunt.0023 #Bad hunt
+							days = 7
+						}
+					}
+					20 = {
+						trigger_event = {
+							id = great_hunt.0024 #Catastrophic hunt
+							days = 7
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { #Below average ruler
+				root = {
+					AND = {
+						learning < 8
+						martial < 8
+					}
+					NOT = {
+						OR = {
+							martial < 4
+							learning < 4
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					50 = {
+						trigger_event = {
+							id = great_hunt.0022 #Good hunt
+							days = 7
+						}
+					}
+					45 = {
+						trigger_event = {
+							id = great_hunt.0023 #Bad hunt
+							days = 7
+						}
+					}
+					5 = {
+						trigger_event = {
+							id = great_hunt.0024 #Catastrophic hunt
+							days = 7
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { #Average ruler
+				root = {
+					OR = {
+						learning > 8
+						martial > 8
+					}
+					NOT = {
+						AND = {
+							learning > 8
+							martial > 8
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					5 = {
+						trigger_event = {
+							id = great_hunt.0021 #Excellent hunt
+							days = 7
+						}
+					}
+					60 = {
+						trigger_event = {
+							id = great_hunt.0022 #Good hunt
+							days = 7
+						}
+					}
+					35 = {
+						trigger_event = {
+							id = great_hunt.0023 #Bad hunt
+							days = 7
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { #Above Average ruler
+				root = {
+					AND = {
+						learning > 8
+						martial > 8
+					}
+					NOT = {
+						OR = {
+							AND = {
+								learning > 10
+								martial > 12
+							}
+							AND = {
+								learning > 12
+								martial > 10
+							}
+						}
+					}				
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					15 = {
+						trigger_event = {
+							id = great_hunt.0021 #Excellent hunt
+							days = 7
+						}
+					}
+					65 = {
+						trigger_event = {
+							id = great_hunt.0022 #Good hunt
+							days = 7
+						}
+					}
+					20 = {
+						trigger_event = {
+							id = great_hunt.0023 #Bad hunt
+							days = 7
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = { #Good ruler
+				root = {
+					OR = {
+						AND = {
+							learning > 10
+							martial > 12
+						}
+						AND = {
+							learning > 12
+							martial > 10
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				random_list = {
+					25 = {
+						trigger_event = {
+							id = great_hunt.0021 #Excellent hunt
+							days = 7
+						}
+					}
+					70 = {
+						trigger_event = {
+							id = great_hunt.0022 #Good hunt
+							days = 7
+						}
+					}
+					5 = {
+						trigger_event = {
+							id = great_hunt.0023 #Bad hunt
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+great_hunt.0024 = { #Catastrophic
+	title = great_hunt.0024.t
+	desc = great_hunt.0024.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0024.a #Let's go back, we'll do better next time
+		add_prestige = -100
+		add_piety = -50
+	}
+	option = {
+		name = great_hunt.0024.b #Come on, we only failed because we have been unlucky, let's try harder
+		trigger_event = {
+			id = great_hunt.0241 #Try to save the hunt
+			days = 7
+		}
+	}
+	option = {
+		name = great_hunt.0024.c #Don't loose heart, we will party in our sacred nature
+		duel = {
+			skill = diplomacy
+			value = 10
+			desc = outcome_in_a_few_days
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = great_hunt.0024.c.success
+				add_prestige = 100
+				show_as_tooltip = {
+					add_character_modifier = {
+						general_opinion = 5
+						years = 5
+					}
+					add_diplomacy_lifestyle_xp = medium_lifestyle_xp
+				}
+			}
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				add_prestige = -100
+				desc = great_hunt.0024.c.failure
+				show_as_tooltip = {
+					add_character_modifier = {
+						general_opinion = -5
+						years = 5
+					}
+					stress_impact = {
+						base = minor_stress_impact_gain
+						arrogant = minor_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+great_hunt.0241 = { #Save the hunt!
+	title = great_hunt.0241.t
+	desc = great_hunt.0241.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0241.a #I'll kill the beast and save the day
+		duel = {
+			skill = prowess
+			value = 10
+			desc = outcome_in_a_few_days
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = great_hunt.0241.success
+				trigger_event = {
+					id = great_hunt.0242 #Saved hunt
+					days = 1
+				}
+			}
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				trigger_event = {
+					id = great_hunt.0243 #Failed hunt
+					days = 1
+				}
+				desc = great_hunt.0241.failure
+			}
+		}
+	}
+	option = {
+		name = great_hunt.0241.b #We will souround it and kill it easely
+		duel = {
+			skill = martial
+			value = 10
+			desc = outcome_in_a_few_days
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = great_hunt.0241.success
+				trigger_event = {
+					id = great_hunt.0242 #Saved hunt
+					days = 1
+				}
+			}
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				trigger_event = {
+					id = great_hunt.0243 #Failed hunt
+					days = 1
+				}
+				desc = great_hunt.0241.failure
+			}
+		}
+	}
+	option = {
+		name = great_hunt.0241.c #Let's build a trap to catch it before killing it
+		duel = {
+			skill = learning
+			value = 10
+			desc = outcome_in_a_few_days
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = great_hunt.0241.success
+				trigger_event = {
+					id = great_hunt.0242 #Saved hunt
+					days = 1
+				}
+			}
+			50 = {		
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				trigger_event = {
+					id = great_hunt.0243 #Failed hunt
+					days = 1
+				}
+				desc = great_hunt.0241.failure
+			}
+		}
+	}
+}
+
+great_hunt.0242 = { #Saved hunt
+	title = great_hunt.0242.t
+	desc = great_hunt.0242.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0242.a #Praise the gods
+		add_character_modifier = {
+			modifier = hunt_loved_gods
+			years = 3
+		}
+		add_prestige = 100
+	}
+}
+
+great_hunt.0243 = { #Failed hunt
+	title = great_hunt.0243.t
+	desc = great_hunt.0243.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0243.a #The gods are abandonning us
+		add_character_modifier = {
+			modifier = hunt_hated_gods
+			years = 5
+		}
+		add_trait = wounded
+		add_prestige = -100
+	}
+}
+
+great_hunt.0023 = { #Bad hunt
+	title = great_hunt.0023.t
+	desc = great_hunt.0023.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0023.a #The gods are abandonning us
+		add_character_modifier = {
+			modifier = hunt_hated_gods
+			years = 3
+		}
+		add_prestige = -100
+	}
+}
+
+great_hunt.0022 = { #Good hunt
+	title = great_hunt.0022.t
+	desc = great_hunt.0022.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0022.a #Praise the gods
+		add_character_modifier = {
+			modifier = hunt_loved_gods
+			years = 3
+		}
+		add_prestige = 100
+	}
+}
+
+great_hunt.0021 = { #Great hunt
+	title = great_hunt.0021.t
+	desc = great_hunt.0021.desc
+	theme = hunt_activity
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = {
+
+	}
+	option = {
+		name = great_hunt.0021.a #Praise the gods
+		add_character_modifier = {
+			modifier = hunt_loved_gods
+			years = 5
+		}
+		add_prestige = 200
+		add_piety = 100
+	}
+}

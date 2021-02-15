@@ -1,0 +1,55 @@
+partition_choice_select_character_button = {
+    scope = character
+    saved_scopes = {player_char}
+    is_shown = {
+        is_landed = yes
+        highest_held_title_tier >= tier_county
+        dynasty = scope:player_char.dynasty
+    }
+    is_valid = {
+        NOT = {
+            THIS = scope:player_char
+        }
+    }
+    effect = {
+        scope:player_char = {
+            set_player_character = PREV
+        }
+    }
+}
+
+partition_choice_random_child_button = {
+    scope = character
+    saved_scopes = {player_char}
+    is_shown = {
+        any_child = {
+            count >= 2
+            is_landed = yes
+            highest_held_title_tier >= tier_county
+            dynasty = PREV.dynasty
+            NOR = {
+                has_government = republic_government
+                has_government = theocracy_government
+            }
+        }
+    }
+    is_valid = {
+        always = yes
+    }
+    effect = {
+        random_child = {
+            limit = {
+                is_landed = yes
+                highest_held_title_tier >= tier_county
+                dynasty = PREV.dynasty
+                NOR = {
+                    has_government = republic_government
+                    has_government = theocracy_government
+                }
+            }
+            scope:player_char = {
+                set_player_character = PREV
+            }
+        }
+    }
+}

@@ -481,7 +481,7 @@ NCombat = {
 	RANDOM_ADVANTAGE_MIN = -25						# The worst initial battle Advantage from the 'random_advantage' Trait modifier
 	RANDOM_ADVANTAGE_RANGE = 65						# The roll range from the 'random_advantage' Trait modifier
 	
-	MINIMUM_COMBAT_WIDTH = 100						# Combat width cannot be smaller than this
+	MINIMUM_COMBAT_WIDTH = 50						# Combat width cannot be smaller than this
 	BASE_RATIO_CASUALTIES_CONVERSION_PURSUIT = 1	# How many of the hard casualties inflicted on the retreating side should be converted to hard casualties during retreat. Interacts with BASE_TOUGHNESS_TO_PURSUIT and such
 	PURSUIT_STAT_TO_PURSUIT_DAMAGE = 0.5			# The pursuit stat is multiplied by this before being turned into actual damage
 	BASE_TOUGHNESS_TO_PURSUIT = 0.10				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
@@ -502,8 +502,8 @@ NArmy = {
 	RAID_ARMY_COST_MULT = 0.5						# Maintenance of raid armies is multiplied by this
 	MOVEMENT_LOCKED = 0.5							# Percentage after which movement is locked
 	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.05
-	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 100	
-	REGIMENT_DEFAULT_STACK_SIZE = 100
+	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 25	
+	REGIMENT_DEFAULT_STACK_SIZE = 25
 	REGIMENT_DEFAULT_MAX_SIZE = 3					# Number of regiment chunks
 	REGIMENT_MAA_CAP_BY_TIER = { 0 1 2 3 4 5 }
 	REGIMENT_MAA_EXTRA_BY_CAP = 0.2					# Percentage [0-1] applied to each MAA regiment by each regiment above the cap
@@ -908,7 +908,7 @@ NPathFinding = {
 
 NCulture = {
 	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 0.5									# Percentage of innovations to be able to go to the next era
-	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
+	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.2									# Base percentage gain every month for era exposure
 	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
 	FIRST_ERA_START_YEAR = 4650												# When did the first era start?
 
@@ -921,15 +921,15 @@ NCulture = {
 	INNOVATION_PROGRESS_CHANCE_BASE = 5
 	INNOVATION_PROGRESS_CHANCE_FROM_EXPOSURE = 40							# if there is any exposure
 	# from fascination = base + max( 0, head learning skill - HEAD_LEARNING_BASE ) * PER_LEARNING_LEVEL
-	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 20
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 40
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_HEAD_LEARNING_BASE = 0
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_PER_LEARNING_LEVEL = 2
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_NO_HEAD_LEARNING = 10		# used as the skill value if there is no cultural head
 
 	# If the random roll succeeds, the innovation will progress by:
 	# base + from development + from eras ahead
-	INNOVATION_PROGRESS_GAIN_BASE = 0.3
-	INNOVATION_PROGRESS_GAIN_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.02
+	INNOVATION_PROGRESS_GAIN_BASE = 0.5
+	INNOVATION_PROGRESS_GAIN_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.01
 	INNOVATION_PROGRESS_GAIN_PER_ERA_AHEAD = 0.2
 }
 

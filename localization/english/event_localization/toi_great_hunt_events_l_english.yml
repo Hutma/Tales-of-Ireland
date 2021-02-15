@@ -1,0 +1,53 @@
+﻿l_english:
+ great_hunt_decision:0 "The Great Hunt"
+ great_hunt_decision_desc:0 "Our gods respect nature and the struggle of each living being to surpass the others to survive. To please the gods we should go on a great ceremonial hunt to be one with the forest, the nature, and the godly spirits."
+ great_hunt_decision_tooltip:0 "Prepare the ceremonial Great Hunt"
+ great_hunt_decision_confirm:0 "Gather the druids and the hunters"
+
+ hunt_loved_gods:0 "Loved by the gods"
+ hunt_hated_gods:0 "Hated by the gods"
+
+ great_hunt.0001.t:0 "The Great Hunt"
+ great_hunt.0001.desc:0 "All the people of the people is now gathered for the usual religious ceremony, at the end of it I make the announcement that we are going to prepare for a great ceremonial hunt that will honor the gods and bring their blessings upon us. The crowd cheers!"
+ great_hunt.0001.a:0 "Gather men and druids"
+ great_hunt.0001.b:0 "We'll go beyond our borders to find the most impressive prey"
+ 
+ great_hunt.0002.t:0 "The Great Hunt"
+ great_hunt.0002.desc:0 "All the hunters are gathers and ready, from all the villages and forts they came, they are armed with their most magnificent bow and dressed with their ceremonial clothes, everyone is ready and look up to me to give the command"
+ great_hunt.0002.a:0 "Let's go deep into our woods and perform the Great Hunt"
+ 
+ great_hunt.0024.t:0 "Catastrophic Hunt"
+ great_hunt.0024.desc:0 "We have caught nothing, the hunters are tired and the mood of everyone is low, it's not a ceremonial hunt, it's a catastroph."
+ great_hunt.0024.a:0 "Let's go back, we'll do better next time"
+ great_hunt.0024.b:0 "Come on, we only failed because we have been unlucky, let's try harder"
+ great_hunt.0024.c:0 "Don't loose heart, we will party in our sacred nature instead"
+ great_hunt.0024.c.success:0 "Good Party"
+ great_hunt.0024.c.failure:0 "Party does not raise mood"
+ 
+ great_hunt.0241.t:0 "Save The Hunt"
+ great_hunt.0241.desc:0 "We've been marching for hours more when you finally spot a beautiful bear, now is the chance of saving a bit this Hunt."
+ great_hunt.0241.a:0 "I'll kill the beast and save the day"
+ great_hunt.0241.b:0 "We will souround it and kill it easely"
+ great_hunt.0241.c:0 "Let's build a trap to catch it before killing it"
+ great_hunt.0241.success:0 "Saved Hunt"
+ great_hunt.0241.failure:0 "Failed Hunt"
+ 
+ great_hunt.0242.t:0 "Failed Hunt"
+ great_hunt.0242.desc:0 "After a long fight the bear we succeded in killing it and saving the day."
+ great_hunt.0242.a:0 "The gods are abandonning us"
+ 
+ great_hunt.0243.t:0 "Hunt Saved"
+ great_hunt.0243.desc:0 "The bear finally manage to escape in a cavern and we lost his trace..."
+ great_hunt.0243.a:0 "Praise the gods"
+ 
+ great_hunt.0023.t:0 "Bad Hunt"
+ great_hunt.0023.desc:0 "We have been hunting for hours and not many prey have been successfully hunted down."
+ great_hunt.0023.a:0 "The gods are abandonning us"
+ 
+ great_hunt.0022.t:0 "Good Hunt"
+ great_hunt.0022.desc:0 "The hunt went very well, we managed to kill some impressive preys and are coming home loved by the gods."
+ great_hunt.0022.a:0 "Praise the gods"
+ 
+ great_hunt.0021.t:0 "Great Hunt"
+ great_hunt.0021.desc:0 "This hunt has been a magical one, everything went well, the hunters and druids were in a great mood and with manage to kill a great brown bear. The gods are loving us and rewarded us for this ceremony."
+ great_hunt.0021.a:0 "Praise the gods"

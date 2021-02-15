@@ -13,6 +13,21 @@ on_opening_events = {
 on_game_start = {
 	effect = {
 #### TALES OF IRELAND ####
+		#Labraid story
+		if = {
+			limit = {
+				character:260000 = {
+					is_alive = yes
+				}
+			}
+			character:260000 = {
+				trigger_event = {
+					id = labraid_story.0001
+					years = { 2 4 }
+				}
+			}
+		}
+		#Labraid story end
 		#High kingship
 		every_living_character = {
 			if 	= {

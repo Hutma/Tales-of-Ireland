@@ -687,7 +687,7 @@ found_empire_decision = {
 		OR = {
 			is_independent_ruler = yes
 			any_held_title = {
-				count >= 3
+				count >= 4
 				tier = tier_kingdom
 			}
 		}
@@ -702,11 +702,11 @@ found_empire_decision = {
 				custom_description = {
 					text = found_empire_decision_three_kingdoms_held
 					any_held_title = {
-						count >= 3
+						count >= 4
 						tier = tier_kingdom
 					}
 				}
-				sub_realm_size >= 80
+				sub_realm_size >= 120
 			}
 		}
 	}
