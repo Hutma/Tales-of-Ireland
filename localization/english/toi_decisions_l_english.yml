@@ -39,6 +39,12 @@
  coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
  coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"
  
+ #Major decisions
+ try_unite_ireland_decision:0 "Declare your ambition to unite Ireland"
+ try_unite_ireland_decision_desc:0 "Ireland is divided but should be united once again, you have proven yourself to be a prestigious and capable ruler, time to unite the Emerald Island under once ruler. \n\n Taking this decision will grant you a reason to subjugate any neighbour."
+ try_unite_ireland_decision_tooltip:0 "I will rule over Ireland"
+ try_unite_ireland_decision_confirm:0 "They will kneel before me"
+ 
  #Minor decisions 
  sacrifice_to_sidhe_decision:0 "Make a sacifice to the Sidhe"
  sacrifice_to_sidhe_decision_desc:0 "We know about the fairies living in the Otherworld and we know that they can influence the material world. We will make offerings to the Sidhe, the faires and magical creatures of Ireland and hope for a good omen to lead our people."

@@ -88,7 +88,7 @@
 			rank = oldest
 			title_division = partition
 			create_primary_tier_titles = yes
-			primary_heir_minimum_share = 0.5
+			primary_heir_minimum_share = 0.35
 		}
 		flag = partition_succession_law
 		modifier = {
@@ -133,7 +133,7 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
-			primary_heir_minimum_share = 0.35
+			primary_heir_minimum_share = 0.5
 		}
 		flag = partition_succession_law
 		modifier = {

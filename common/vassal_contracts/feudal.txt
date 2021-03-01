@@ -404,7 +404,7 @@ succession_rights = {
 	display_mode = checkbox
 	is_shown = {
 		scope:vassal = {
-			can_have_confederate_partition_succession_law_trigger = yes
+			can_have_ancient_partition_succession_law_trigger = yes
 		}
 	}
 	obligation_levels = {
@@ -418,7 +418,7 @@ succession_rights = {
 		succession_rights_forced_partition = {
 			is_valid = {
 				scope:vassal = {
-					can_have_confederate_partition_succession_law_trigger = yes
+					can_have_ancient_partition_succession_law_trigger = yes
 				}
 			}
 			parent = succession_rights_default

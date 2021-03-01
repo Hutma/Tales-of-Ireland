@@ -30,7 +30,7 @@
 				}	
 			}
 			capital_county = {
-				developement >= 35
+				developement_level >= 35
 			}
 		}
 	}

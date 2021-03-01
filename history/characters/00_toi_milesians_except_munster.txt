@@ -49,7 +49,7 @@
     father=  261000 
 
     disallow_random_traits = yes
-    4757.1.1 = {
+    4760.1.1 = {
         birth = yes
     }
 }

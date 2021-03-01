@@ -27,7 +27,7 @@
 						has_government = feudal_government
 					}
 				}
-				prestige_level >= 2
+				prestige_level >= 3
 			}
 			trigger_else_if = {
 				limit = {
@@ -150,7 +150,7 @@
 					}
 				}
 				add = {
-					value = 500
+					value = 300
 					desc = CB_BASE_COST
 				}
 			}
@@ -174,17 +174,6 @@
 				multiply = {
 					value = 2.5
 					desc = CB_COST_RULES_EMPIRE
-				}
-			}	
-			if = {
-				limit = {
-					scope:attacker = {
-						has_government = feudal_government
-					}
-				}
-				multiply = {
-					value = 0.5
-					desc = CB_TRIBAL_COST
 				}
 			}
 

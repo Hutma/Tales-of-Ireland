@@ -64,6 +64,10 @@ can_have_confederate_partition_succession_law_trigger = {
 	has_government = tribal_government
 }
 
+can_have_ancient_partition_succession_law_trigger = {
+	has_government = feudal_government
+}
+
 can_keep_partition_succession_law_trigger = {
 	# The 'can_keep' triggers are dependent on actually having the law. If they aren't, the trigger breakdown for the player breaks and shows incomplete information.
 	trigger_if = {

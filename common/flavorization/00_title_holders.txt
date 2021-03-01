@@ -21,6 +21,25 @@
 #############################################
 
 # Special Titles
+high_king_feudal_male = { # High King
+	type = character
+	gender = male
+	special = holder
+	priority = 400
+	titles = { k_high_kingship }
+	only_independent = yes
+	top_liege = no
+}
+
+high_king_feudal_female = { # High Queen
+	type = character
+	gender = female
+	special = holder
+	priority = 400
+	titles = { k_high_kingship }
+	only_independent = yes
+	top_liege = no
+}
 
 # Religious Titles
 head_of_faith_male = {

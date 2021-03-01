@@ -183,3 +183,48 @@ reform_high_kingship_decision = {
 		base = 100
 	}
 }
+
+
+#Try to unite Ireland decision
+try_unite_ireland_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = try_unite_ireland_decision_desc
+
+	is_shown = {
+		highest_held_title_tier >= 4	
+		prestige_level >= 2
+		is_independent_ruler = yes
+		NOT = { has_character_flag = try_unite_ireland_flag }
+	}
+
+	is_valid = {
+		prestige_level >= 4
+		highest_held_title_tier >= 4
+		is_independent_ruler = yes
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		gold = 200
+		prestige = 600
+	}
+
+	effect = {
+		add_character_flag = {
+			flag = try_unite_ireland_flag
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
