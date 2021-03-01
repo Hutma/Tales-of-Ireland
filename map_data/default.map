@@ -50,6 +50,7 @@ impassable_mountains = RANGE { 2070 2073 }
 
 # IMPASSABLE SEA ZONES
 # These sea provinces cannot be crossed/sailed
+sea_zones = LIST { 4415 }
 
 # UNUSED PROVINCES
 # These provinces cause issues because they are passable land, but not part of any title.

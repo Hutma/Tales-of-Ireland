@@ -1,0 +1,216 @@
+﻿####################
+# Common Buildings #
+####################
+
+### Grain storage
+
+grain_storage_01 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_1_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+	county_modifier = {
+		development_growth_factor = 0.1
+	}
+	
+	next_building = grain_storage_02
+
+	type_icon = "icon_building_watchtowers.dds"
+	
+	ai_value = {
+		base = 10
+		ai_general_building_modifier = yes
+	}
+}
+
+grain_storage_02 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_2_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_2
+	}
+	county_modifier = {
+		development_growth_factor = 0.2
+	}
+	
+	next_building = grain_storage_03
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+grain_storage_03 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		always = yes
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_3_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_3
+	}
+	county_modifier = {
+		development_growth_factor = 0.3
+	}
+	
+	ai_value = {
+		base = 8
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+### Cattle lookout
+
+cattle_lookout_01 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_1_cost
+	
+	levy = poor_building_levy_tier_1
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+	county_modifier = {
+		development_growth_factor = 0.05
+	}
+	
+	next_building = cattle_lookout_02
+
+	type_icon = "icon_building_pastures.dds"
+	
+	ai_value = {
+		base = 10
+		ai_general_building_modifier = yes
+	}
+}
+
+cattle_lookout_02 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_2_cost
+	
+	levy = poor_building_levy_tier_2
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_2
+	}
+	county_modifier = {
+		development_growth_factor = 0.1
+	}
+	
+	next_building = cattle_lookout_03
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+cattle_lookout_03 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		always = yes
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_3_cost
+	
+	levy = poor_building_levy_tier_3
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_3
+	}
+	county_modifier = {
+		development_growth_factor = 0.15
+	}
+	
+	ai_value = {
+		base = 8
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}

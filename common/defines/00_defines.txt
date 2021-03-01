@@ -116,7 +116,7 @@ NCharacter = {
 	MAX_TYRANNY = 1000				# maximum tyranny value a character can have
 	TYRANNY_MONTHLY_CHANGE = -0.25	# tyranny is changing by this value each month
 	
-	BASE_FERTILITY = 0.5
+	BASE_FERTILITY = 0.4
 	BASE_HEALTH = 5.0
 	
 	# experience needed for piety/prestige levels - first/negative level requires 1000, then 350 etc.
@@ -275,7 +275,7 @@ NChildbirth = {
 	MALE_FERTILITY_MULTIPLIER = { 0.5 0.6 0.7 0.8 0.9 1.0 } # Multiplier values based on age limits from FERTILITY_MULTIPLIER_LIMITS should have an extra value at the beginning for characters older than first limit
 	FEMALE_FERTILITY_MULTIPLIER_LIMITS = { 45 40 35 30 25 } # Ages where fertility multiplier is applied 25 means up to 25, needs to be sorted in descending order
 	FEMALE_FERTILITY_MULTIPLIER = { 0.1 0.33 0.5 0.7 0.9 1.0 } # Multiplier values based on age limits from FERTILITY_MULTIPLIER_LIMITS should have an extra value at the beginning for characters older than first limit
-	MOTHER_FERTILITY_REDUCTION_PER_PREVIOUS_CHILD = 0.05
+	MOTHER_FERTILITY_REDUCTION_PER_PREVIOUS_CHILD = 0.10
 	LOW_FERTILITY = 0.1
 	PRIMARY_SPOUSE_FERTILITY_MULTIPLIER = 1
 	SECONDARY_SPOUSE_FERTILITY_MULTIPLIER = 0.5
@@ -338,7 +338,7 @@ NChildbirth = {
 	EXTRA_CHILDREN_PER_EXTRA_SPOUSE = 2 # Num of extra children per spouse above one before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_CONCUBINE = 2 # Num of extra children per concubine above one before reaching living child limit
 	EXTRA_FERTILITY_FOR_FIRST_CHILD = 0.0 # Extra fertility if the couple are primary spouses and have no children together
-	EXTRA_FERTILITY_FOR_FIRST_RULER_CHILD = 0.3 # Extra fertility if the couple are primary spouses and have no children together, and at least one of them is a ruler
+	EXTRA_FERTILITY_FOR_FIRST_RULER_CHILD = 0.4 # Extra fertility if the couple are primary spouses and have no children together, and at least one of them is a ruler
 	DIVINE_MARRIAGE_FERTILITY_MULTIPLIER = 1 # Multiplier if the couple is close or extended family and their faith allows divine marriage
 	CLOSE_FAMILY_FERTILITY_MULTIPLIER = 0.9 # Multiplier if the couple is close family and their faith does not allow divine marriage
 	EXTENDED_FAMILY_FERTILITY_MULTIPLIER = 1 # Multiplier if the couple is extended family and their faith does not allow divine marriage

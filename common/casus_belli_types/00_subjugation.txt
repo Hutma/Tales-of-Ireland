@@ -27,7 +27,7 @@
 						has_government = feudal_government
 					}
 				}
-				prestige_level >= 3
+				prestige_level >= 2
 			}
 			trigger_else_if = {
 				limit = {
