@@ -900,7 +900,10 @@ cattle_raiding_cb = {
 		AND = {
 			has_government = feudal_government
 			NOT = {
-				has_trait = cessarian
+				OR = {
+					has_trait = cessarian
+					has_doctrine_parameter = cattle_raiding_cb_disable
+				}
 			}
 		}
 	}
@@ -911,6 +914,14 @@ cattle_raiding_cb = {
 	
 	allowed_against_character = {
 		scope:defender = {
+			trigger_if = {
+				limit = { scope:attacker = { is_ai = no } } # Already pre-filtered by the AI due to ai_only_against_neighbors = yes. any_neighboring_top_liege_realm_owner is expensive
+				scope:attacker = {
+					any_neighboring_and_across_water_top_liege_realm_owner = {
+						this = scope:defender
+					}
+				}
+			}
 		}
 	}
 	
@@ -1272,53 +1283,39 @@ lure_to_cattle_raid_cb = {
 		scope:defender = {
 			OR = {
 				any_held_title = {
-					limit = {
+						count > 2
 						tier = tier_county
-					}
-					count > 2
-					development_level > 15
+						development_level > 15
 				}
 				any_held_title = {
-					limit = {
-						tier = tier_county
-					}
 					count > 1
+					tier = tier_county
 					development_level > 35
 				}
 				any_held_title = {
-					limit = {
-						tier = tier_county
-					}
 					count > 3
+					tier = tier_county
 					development_level > 10
 				}
 				AND = {
 					any_held_title = {
-						limit = {
-							tier = tier_county
-						}
 						count > 1
+						tier = tier_county
 						development_level > 15
 					}
 					any_held_title = {
-						limit = {
-							tier = tier_county
-						}
 						count > 2
+						tier = tier_county
 						development_level > 10
 					}
 					any_held_title = {
-						limit = {
-							tier = tier_county
-						}
 						count > 3
+						tier = tier_county
 					}
 				}
 				any_held_title = {
-					limit = {
-						tier = tier_county
-					}
 					count > 4
+					tier = tier_county
 				}
 			}
 		}

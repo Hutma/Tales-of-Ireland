@@ -104,6 +104,20 @@ innovation_currency_01 = {
 	flag = tribal_era_regular
 }
 
+innovation_quilted_armor = {
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	icon = @weapons_and_armor_02
+
+	unlock_maa = armored_footmen_leinster
+	unlock_maa = armored_footmen_munster
+	unlock_maa = armored_footmen_connacht
+	unlock_maa = armored_footmen_ulster
+
+	flag = global_regular
+	flag = tribal_era_regular
+}
+
 #culture_group_civic
 innovation_gavelkind = {
 	group = culture_group_civic
@@ -147,6 +161,7 @@ innovation_casus_belli = {
 	icon = @administration_1
 
 	unlock_casus_belli = individual_county_de_jure_cb
+	unlock_casus_belli = individual_duchy_de_jure_cb
 
 	flag = global_regular
 	flag = tribal_era_regular

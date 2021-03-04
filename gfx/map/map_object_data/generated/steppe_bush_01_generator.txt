@@ -5,7 +5,5 @@
 	generated_content=yes
 	layer="grass_layer"
 	pdxmesh="steppe_bush_01_mesh"
-		instances={
-		
-	}
+	count=0
 	}

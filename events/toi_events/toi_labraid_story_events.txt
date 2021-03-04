@@ -162,7 +162,7 @@ labraid_story.0002 = {
 	}
 }
 
-#The player is informed that he has 10 years to become duke or own 4 counties
+#The player is informed that he has to become duke or own 4 counties and wait a year to take his revenge
 labraid_story.0003 = {
 	title = labraid_story.0003.t
 	desc = labraid_story.0003.desc

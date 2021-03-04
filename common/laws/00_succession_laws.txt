@@ -38,6 +38,7 @@
 			rank = oldest
 			title_division = partition
 			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.20
 		}
 		flag = partition_succession_law
 		modifier = {

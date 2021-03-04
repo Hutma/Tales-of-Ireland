@@ -104,8 +104,9 @@ innovation_heraldry = {
 	culture_era = culture_era_high_medieval
 	icon = @raised_banner
 	
-	unlock_law = confederate_partition_succession_law
+	
 	modifier = {
+		monthly_dynasty_prestige_mult = 0.1
 		monthly_prestige_gain_mult = 0.05
 	}
 

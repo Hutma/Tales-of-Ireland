@@ -1,0 +1,47 @@
+﻿l_english:
+ tenet_animal_worship_name:0 "Animal Worship"
+ tenet_animal_worship_desc:0 "Gods are everything and they are especially present in living organisms, we should treat animal well and only hurt them for eating."
+ 
+ tenet_pure_island_name:0 "Pure Island"
+ tenet_pure_island_desc:0 "Only our culture is rightgeous, we should ban any stranger from our lands, from our island."
+ 
+ tenet_seafarers_name:0 "Seafarers"
+ tenet_seafarers_desc:0 "We came by sea and we will expand by sea, the gods gave us knowledge and curiosity so that we can travel and explore, this is our fate."
+ 
+ tenet_divine_agriculture_name:0 "Divine Agriculture"
+ tenet_divine_agriculture_desc:0 "The gods cultivated us until we were tall enough to live by ourselves, we must be close to the gods and mimic them to show our respect, we take care ad preserve our farms and cattle as it is our sacred mission."
+ 
+ tenet_deep_vengeance_flame_name:0 "Deep Vengeance Flame"
+ tenet_deep_vengeance_flame_desc:0 "We have been put to slavery before, and we will never bow again, we will fight for our freedom and for our beliefs."
+ 
+ tenet_masters_of_ireland_name:0 "Masters Of Ireland"
+ tenet_masters_of_ireland_desc:0 "We have ruled over Ireland for centuries now and even if our power has been weaken, it is our sacred mission to lead the population of this island to glory."
+ 
+ tenet_tuatha_de_danann_worship_name:0 "Tuatha Dé Danann Worship"
+ tenet_tuatha_de_danann_worship_desc:0 "There is no doubt that the Tuatha Dé Danann are gods among mortals, they have the deepest knowledge and the gloriest past. We must serve them and their future."
+ 
+ tenet_fomorian_worship_name:0 "Fomorian Worship"
+ tenet_fomorian_worship_desc:0 "Some can find the Fomorian disgusting, it is because they have not understood them. The Fomorians possess unmatched power, and we will serve them when they rise up to rule over all."
+ 
+ tenet_underground_sidhe_name:0 "Underground Sidhe"
+ tenet_underground_sidhe_desc:0 "We know how to speak with the spirit of the Otherworld, we know how to please them and share our knowledge with theirs."
+ 
+ tenet_great_barrows_name:0 "Great Barrows"
+ tenet_great_barrows_desc:0 "The gods have constructed great stuctures for us to pray in, we should preserve and worship those places with all our hearts."
+ 
+ tenet_sea_dwellers_name:0 "Sea Dwellers"
+ tenet_sea_dwellers_desc:0 "Most of the gods live in the deep and endless sea, water is a place of power, of magic and should be praised."
+ 
+ tenet_newgrange_splendor_name:0 "Newgrange Splendor"
+ tenet_newgrange_splendor_desc:0 "We use our construction skills to thank the gods, at the same time the splendor of our monuments terrifies our ennemies, comfort our friends, and bring onto us the benedictions of the gods."
+ 
+ tenet_old_gods_name:0 "Old gods"
+ tenet_old_gods_desc:0 "The gods are ancients and many seem to have forgotten them, but we will not. Our gods were thhe first ones to walk the Earth, they are the true gods."
+ 
+ cattle_raiding_cb_disable:0 "Can not use [cattle_raiding_cb|E]"
+ purification_cb_enabled:0 "Can use the Purification casus belli"
+ to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"
+ to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"
+ hail_high_king_decision_active:0 "Can use the Hail High King decision"
+ high_king_influence_decision_active:0 "Can use the High King Protection decision"
+ sacrifice_to_sidhe_decision_active:0 "Can make a sacrifice to the Sidhe"

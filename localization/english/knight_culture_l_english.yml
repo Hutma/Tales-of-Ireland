@@ -92,6 +92,7 @@
  knight_hero_plural:0 "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
  knight_hero_no_tooltip:0 "Champion"
  knight_hero_no_tooltip_plural:0 "Champions"
-
-
-
+ knight_hero_no_tooltip_lowercase:0 "champion"
+ knight_hero_no_tooltip_lowercase_plural:0 "champion"
+ knight_hero_no_tooltip_lowercase_adjective:0 "champion's"
+ knight_hero_no_tooltip_lowercase_plural_possessive:0 "champions'"

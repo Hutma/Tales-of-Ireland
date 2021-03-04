@@ -2295,7 +2295,7 @@
 		}
 
 		parameters = {
-			cattle_raiding_cb_enabled = no
+			cattle_raiding_cb_disable = yes
 		}
 
 		character_modifier = {

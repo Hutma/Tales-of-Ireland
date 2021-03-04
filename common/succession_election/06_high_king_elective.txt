@@ -26,6 +26,10 @@ high_king_elective = { #high king Elective.
 			type = title_claimants
 			limit = {
 				is_independent_ruler = yes
+				OR = {
+					highest_held_title_tier = 4
+					prestige_level >= 2
+				}
 				NOT = {
 					has_government = mercenary_government
 					has_government = holy_order_government

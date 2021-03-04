@@ -116,7 +116,7 @@ NCharacter = {
 	MAX_TYRANNY = 1000				# maximum tyranny value a character can have
 	TYRANNY_MONTHLY_CHANGE = -0.25	# tyranny is changing by this value each month
 	
-	BASE_FERTILITY = 0.4
+	BASE_FERTILITY = 0.5
 	BASE_HEALTH = 5.0
 	
 	# experience needed for piety/prestige levels - first/negative level requires 1000, then 350 etc.
@@ -268,7 +268,7 @@ NChildbirth = {
 	MIN_MALE_REPRODUCTION_AGE = 16
 	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 2 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
 	CHANCE_OF_LOWERED_CHILD_LIMIT = 0.5	# Chance that the child limit is lowered by 1
-	EXTRA_CHILDREN_FOR_RULERS = 2 # If either character is a ruler, they get extra children
+	EXTRA_CHILDREN_FOR_RULERS = 1 # If either character is a ruler, they get extra children
 	CHARACTER_IN_POOL_CHILD_LIMIT = -1	# If in the pool, child limit is modified by this
 	CHILD_BIRTH_TO_PREGNANCY_WAIT = 3
 	MALE_FERTILITY_MULTIPLIER_LIMITS = { 70 60 50 40 35 } # Ages where fertility multiplier is applied 25 means up to 25, needs to be sorted in descending order
@@ -282,8 +282,8 @@ NChildbirth = {
 	CONCUBINE_FERTILITY_MULTIPLIER = 0.5
 	NOT_SPOUSE_FERTILITY_MULTIPLIER = 1
 	NON_RULER_FERTILITY_MULTIPLIER = 0.85	# If neither parent is a ruler, resulting fertility gets multiplied by this
-	FERTILITY_CHANCE_MULTIPLIER = 4.75 # Fertility is an average between the father and the mother (if the mother has 0.3 and the father 0.5, the average is 0.4), this number is then multiplied by this multiplier to produce the percentage chance of impregnation. Impregnation is checked every month.
-	MIN_FERTILITY_CHANCE = 1
+	FERTILITY_CHANCE_MULTIPLIER = 2.50 # Fertility is an average between the father and the mother (if the mother has 0.3 and the father 0.5, the average is 0.4), this number is then multiplied by this multiplier to produce the percentage chance of impregnation. Impregnation is checked every month.
+	MIN_FERTILITY_CHANCE = 0.5
 	MAX_FERTILITY_CHANCE = 25
 	TWIN_BASE_CHANCE = 0.02
 	TWIN_BONUS_MAX_AGE = 35
@@ -801,7 +801,7 @@ NImprisonment = {
 }
 
 NCounty = {
-	DEVELOPMENT_SPREAD_NEIGHBOUR_FACTOR = 0.1
+	DEVELOPMENT_SPREAD_NEIGHBOUR_FACTOR = 0.03
 	DEVELOPMENT_SPREAD_USES_HIGHEST_NEIGHBOUR = yes # "yes" means only the difference from the highest dev neighbor will be used. "no" means that all higher-dev neighbors will be used
 	LEVELS_DEVELOPMENT = { 100 200 300 400 500 600 700 800 900 }
 	LEVEL_DROP_MAX_RETAINED_PROGRESS_DEVELOPMENT = 0.5
@@ -909,7 +909,7 @@ NPathFinding = {
 NCulture = {
 	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 0.5									# Percentage of innovations to be able to go to the next era
 	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
-	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
+	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.03			# How much extra per average development level
 	FIRST_ERA_START_YEAR = 4650												# When did the first era start?
 
 	# Regional exposure will start with the minimum number of regions from any of the next percentages
@@ -921,14 +921,14 @@ NCulture = {
 	INNOVATION_PROGRESS_CHANCE_BASE = 5
 	INNOVATION_PROGRESS_CHANCE_FROM_EXPOSURE = 40							# if there is any exposure
 	# from fascination = base + max( 0, head learning skill - HEAD_LEARNING_BASE ) * PER_LEARNING_LEVEL
-	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 40
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 35
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_HEAD_LEARNING_BASE = 0
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_PER_LEARNING_LEVEL = 2
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_NO_HEAD_LEARNING = 10		# used as the skill value if there is no cultural head
 
 	# If the random roll succeeds, the innovation will progress by:
 	# base + from development + from eras ahead
-	INNOVATION_PROGRESS_GAIN_BASE = 0.5
+	INNOVATION_PROGRESS_GAIN_BASE = 0.3
 	INNOVATION_PROGRESS_GAIN_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.01
 	INNOVATION_PROGRESS_GAIN_PER_ERA_AHEAD = 0.2
 }

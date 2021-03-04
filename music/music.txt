@@ -51,12 +51,12 @@ mx_mood_call_07 = {
 	can_be_interrupted = yes
 }
 
-mx_mood_call_chants_08 = {
-	music = "event:/MUSIC/Moods/Calls/mx_mood_call_chants_08/mx_mood_call_chants_08"
-	weight = 3
-	mood = yes
-	can_be_interrupted = yes
-}
+#mx_mood_call_chants_08 = {
+#	music = "event:/MUSIC/Moods/Calls/mx_mood_call_chants_08/mx_mood_call_chants_08"
+#	weight = 3
+#	mood = yes
+#	can_be_interrupted = yes
+#}
 
 
 mx_mood_call_10_dusk = {
