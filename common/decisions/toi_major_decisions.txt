@@ -1,0 +1,194 @@
+﻿one_heir_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	
+	desc = one_heir_decision_desc
+	
+	major = yes
+	ai_check_interval = 260
+
+	is_shown = {
+		AND  = {
+			prestige_level >= 2
+			piety_level >= 2
+			AND = {
+				any_heir = {
+					limit = {
+						NOT = {
+							is_primary_heir_of = root
+						}
+					}
+					NOT = {
+						has_trait = disinherited
+					}
+				}
+				any_child = {
+					limit = {
+						is_female = no
+						NOT = {
+							is_primary_heir_of = root
+						}
+					}
+					NOT = {
+						has_trait = disinherited
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			prestige_level >= 3
+			piety_level >= 3
+			any_heir = {
+				limit = {
+					NOT = {
+						is_primary_heir_of = root
+					}
+				}
+				is_landed = yes
+				highest_held_title_tier >= 3
+				is_independent = yes	
+			}
+			any_child = {
+				limit = {
+					NOT = {
+						is_primary_heir_of = root
+					}
+				}
+				is_landed = yes
+				highest_held_title_tier >= 3
+				is_independent = yes	
+			}
+			any_heir = {
+				limit = {
+					is_primary_heir_of = root
+				}
+				age >= 20
+			}
+			any_vassal = {
+				count >= 4
+				is_powerful_vassal = yes
+				opinion = {
+					target = root
+					value >= positive_opinion
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 500
+		piety = 500
+	}
+
+	effect = {
+		every_heir = {
+			limit = {
+				NOT = {
+					is_primary_heir_of = root
+				}
+			}
+			add_trait = disinherited
+		}
+		every_child = {
+			limit = {
+				is_female = no
+				NOT = {
+					is_primary_heir_of = root
+				}
+			}
+			add_trait = disinherited
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+unite_all_ireland_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	
+	desc = unite_all_ireland_decision_desc
+	
+	major = yes
+	ai_check_interval = 260
+
+	is_shown = {
+		AND  = {
+			prestige_level >= 2
+			piety_level >= 2
+			highest_held_title_tier = 5
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_united_all_ireland
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			prestige_level >= 4
+			piety_level >= 4
+			has_title = title:e_munster
+			has_title = title:e_connacht
+			has_title = title:e_ulster
+			has_title = title:e_leinster
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 100
+		piety = 100
+		gold = 300
+	}
+
+	effect = {
+		show_as_tooltip = {
+			unite_all_ireland_decision_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = toi_decision_major.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_decision_major.0002
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_united_all_ireland
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

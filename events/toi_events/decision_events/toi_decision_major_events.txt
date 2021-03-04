@@ -1,0 +1,44 @@
+﻿namespace = toi_decision_major
+
+#The aran kingdom revived.
+toi_decision_major.0001 = {
+	type = character_event
+	title = toi_decisions_major.0001.t
+	desc = toi_decisions_major.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { unite_all_ireland_decision_scripted_effect = yes }
+
+	#No thanks on the nickname, more prestige instead please.
+	option = {
+		name = toi_decisions_major.0001.a
+		add_prestige = medium_prestige_gain
+		root.capital_county = {
+			change_development_level = 15
+		}
+	}
+}
+
+
+#Inform any players.
+toi_decisions_major.0002 = {
+	type = character_event
+	title = toi_decisions_major.0002.t
+	desc = toi_decisions_major.0002.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = {
+			text = toi_decisions_major.0002.b
+		}
+	}
+}

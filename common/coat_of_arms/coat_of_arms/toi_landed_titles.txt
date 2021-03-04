@@ -301,3 +301,11 @@ k_aran = {
 		texture = "k_aran_coa.dds"
 	}
 }
+
+e_ireland = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_high_kingship_coa.dds"
+	}
+}

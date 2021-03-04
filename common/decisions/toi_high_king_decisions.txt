@@ -139,6 +139,12 @@ reform_high_kingship_decision = {
 		NOT = {
 			exists = title:k_high_kingship.holder
 		}
+		NOT = {	#Cannot do it if ireland is united.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_united_all_ireland
+			}
+		}
 	}
 
 	is_valid = {

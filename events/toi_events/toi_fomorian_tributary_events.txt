@@ -1,0 +1,383 @@
+﻿namespace = toi_fomorian_tributary
+
+#Main event for every vassal
+toi_fomorian_tributary.0001 = {
+	title = toi_fomorian_tributary.0001.t
+	desc = toi_fomorian_tributary.0001.desc
+	type = character_event
+	theme = rival_relation
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	left_portrait = {
+		character = root.liege
+		animation = personality_rational
+	}
+	
+	immediate = {
+		root.liege = {
+			save_scope_as = fomorian_liege
+		}
+		scope:fomorian_liege = {
+			set_variable = { 
+				name = cattle_taken
+				value = 0
+				days = 5
+			}
+			set_variable = { 
+				name = gold_taken
+				value = 0
+				days = 5
+			}
+		}
+	}
+	option = { #Let's pay
+		name = toi_fomorian_tributary.0001.a
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			set_variable = {
+				name = cattle_number
+				value = this.development_level
+				days = 3
+			}
+			change_variable = {
+				name = cattle_number
+				multiply = 0.6
+			}
+			scope:fomorian_liege = {
+				change_variable = { 
+					name = cattle_taken
+					add = prev.var:cattle_number
+				}
+				change_variable = {
+					name = cattle_taken_total
+					add = var:cattle_taken
+				}
+			}
+		}
+		scope:fomorian_liege = {
+			change_variable = {
+				name = gold_taken
+				add = root.yearly_character_income
+			}
+			change_variable = {
+				name = gold_taken
+				multiply = 0.6
+			}
+		}
+		pay_gold = { 
+			target = scope:fomorian_liege 
+			gold = scope:fomorian_liege.var:gold_taken
+		}
+		every_courtier_or_guest = { 
+			limit = { 
+				is_adult = no 
+			}
+			add_to_list = potential_captives_list 
+		}
+		random_in_list = {	#Nab someone related to the root, preferring tangentials.
+			list = potential_captives_list
+			limit = {
+				OR = {
+					AND = {
+						has_dynasty = yes
+						dynasty = root.dynasty
+					}
+					is_child_of = root
+				}
+			}
+			alternative_limit = { always = yes }
+			weight = {
+				base = 1
+				modifier = {
+					add = 25
+					NOT = { is_close_family_of = root }
+				}
+				modifier = {
+					add = 15
+					NOT = { is_extended_family_of = root }
+				}
+			}
+			add_to_list = definite_captives_list
+			save_temporary_scope_as = future_captive
+			scope:fomorian_liege = {
+				imprison = {
+					target = scope:future_captive
+					type = dungeon
+				}
+			}
+		}
+		ai_chance = {
+			95
+		}
+	}
+	option = { #Talk to him to reduce the payment
+		name = toi_fomorian_tributary.0001.b
+		trigger = {
+			diplomacy > 12
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			set_variable = {
+				name = cattle_number
+				value = this.development_level
+				days = 3
+			}
+			change_variable = {
+				name = cattle_number
+				multiply = 0.5
+			}
+			scope:fomorian_liege = {
+				change_variable = { 
+					name = cattle_taken
+					add = prev.var:cattle_number
+				}
+				change_variable = {
+					name = cattle_taken_total
+					add = var:cattle_taken
+				}
+			}
+		}
+		scope:fomorian_liege = {
+			change_variable = {
+				name = gold_taken
+				add = root.yearly_character_income
+			}
+			change_variable = {
+				name = gold_taken
+				multiply = 0.4
+			}
+		}
+		pay_gold = { 
+			target = scope:fomorian_liege 
+			gold = scope:fomorian_liege.var:gold_taken
+		}
+		every_courtier_or_guest = { 
+			limit = { 
+				is_adult = no 
+			}
+			add_to_list = potential_captives_list 
+		}
+		random_in_list = {	#Nab someone related to the root, preferring tangentials.
+			list = potential_captives_list
+			limit = {
+				OR = {
+					AND = {
+						has_dynasty = yes
+						dynasty = root.dynasty
+					}
+					is_child_of = root
+				}
+			}
+			alternative_limit = { always = yes }
+			weight = {
+				base = 1
+				modifier = {
+					add = 25
+					NOT = { is_close_family_of = root }
+				}
+				modifier = {
+					add = 15
+					NOT = { is_extended_family_of = root }
+				}
+			}
+			add_to_list = definite_captives_list
+			save_temporary_scope_as = future_captive
+			scope:fomorian_liege = {
+				imprison = {
+					target = scope:future_captive
+					type = dungeon
+				}
+			}
+		}
+		ai_chance = {
+			100
+		}
+	}
+	option = { #Hide a part of the cattle
+		name = toi_fomorian_tributary.0001.c
+		trigger = {
+			intrigue > 12
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			set_variable = {
+				name = cattle_number
+				value = this.development_level
+				days = 3
+			}
+			change_variable = {
+				name = cattle_number
+				multiply = 0.4
+			}
+			scope:fomorian_liege = {
+				change_variable = { 
+					name = cattle_taken
+					add = prev.var:cattle_number
+				}
+				change_variable = {
+					name = cattle_taken_total
+					add = var:cattle_taken
+				}
+			}
+		}
+		scope:fomorian_liege = {
+			change_variable = {
+				name = gold_taken
+				add = root.yearly_character_income
+			}
+			change_variable = {
+				name = gold_taken
+				multiply = 0.5
+			}
+		}
+		pay_gold = { 
+			target = scope:fomorian_liege 
+			gold = scope:fomorian_liege.var:gold_taken
+		}
+		every_courtier_or_guest = { 
+			limit = { 
+				is_adult = no 
+			}
+			add_to_list = potential_captives_list 
+		}
+		random_in_list = {	#Nab someone related to the root, preferring tangentials.
+			list = potential_captives_list
+			limit = {
+				OR = {
+					AND = {
+						has_dynasty = yes
+						dynasty = root.dynasty
+					}
+					is_child_of = root
+				}
+			}
+			alternative_limit = { always = yes }
+			weight = {
+				base = 1
+				modifier = {
+					add = 25
+					NOT = { is_close_family_of = root }
+				}
+				modifier = {
+					add = 15
+					NOT = { is_extended_family_of = root }
+				}
+			}
+			add_to_list = definite_captives_list
+			save_temporary_scope_as = future_captive
+			scope:fomorian_liege = {
+				imprison = {
+					target = scope:future_captive
+					type = dungeon
+				}
+			}
+		}
+		ai_chance = {
+			100
+		}
+	}
+	option = { #REVOLTTTTT!
+		name = toi_fomorian_tributary.0001.d
+		start_war = {
+			cb = independence_war
+			target = scope:fomorian_liege
+		}
+		ai_chance = {
+			5
+		}
+	}
+}
+
+#Pre event
+toi_fomorian_tributary.0002 = {
+	hidden = yes
+	
+	immediate = {
+		root = {
+			set_variable = { 
+				name = cattle_taken_total
+				value = 0
+			}
+		}
+		every_vassal = {
+			limit = {
+				vassal_contract_has_flag = has_fomorian_tributary_contract
+			}
+			trigger_event = {
+				id = toi_fomorian_tributary.0001
+				days = 5
+			}
+		}
+		trigger_event = {
+			id = toi_fomorian_tributary.0003
+			days = 15
+		}
+	}
+}
+
+#Fomorian gains
+toi_fomorian_tributary.0003 = {
+	title = toi_fomorian_tributary.0003.t
+	desc = toi_fomorian_tributary.0003.desc
+	type = character_event
+	theme = stewardship_wealth_focus
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		root = {
+			capital_county = {
+				change_development_level = {
+					value = var:cattle_taken_total
+					multiply = 0.3
+				}
+			}
+			change_variable = {
+				name = cattle_taken_total
+				multiply = 0.7
+			}
+			set_variable = {
+				name = number_of_counties
+				value = 0
+				days = 5
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+				}
+				scope:attacker = {
+					change_variable = {
+						name = number_of_counties
+						add = 1
+					}
+				}
+			}
+			change_variable = {
+				name = cattle_taken_total
+				divide = var:number_of_counties
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+				}
+				change_development_level = {
+					value = root.var:cattle_taken_total
+				}
+			}
+			remove_variable = cattle_taken_total
+		}
+	}
+	option = { #Good
+		name = toi_fomorian_tributary.0003.a
+	}
+}

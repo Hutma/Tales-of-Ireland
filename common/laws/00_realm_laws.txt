@@ -80,10 +80,9 @@ crown_authority = {
 			feudal_government_tax_contribution_mult = 0.1
 			vassal_levy_contribution_mult = 0.1
 		}
-		flag = vassal_internal_wars_banned
 		flag = vassal_refusal_is_treason
 		flag = can_change_succession_laws
-		flag = titles_cannot_leave_realm_on_succession # Hardcoded flag
+		flag = can_designate_heirs
 		
 		can_keep = { realm_law_use_crown_authority = yes }
 
@@ -140,7 +139,8 @@ crown_authority = {
 			vassal_levy_contribution_mult = 0.25
 		}
 		flag = vassal_all_wars_banned
-		flag = can_designate_heirs
+		flag = vassal_internal_wars_banned
+		flag = titles_cannot_leave_realm_on_succession # Hardcoded flag
 		
 		can_keep = { realm_law_use_crown_authority = yes }
 

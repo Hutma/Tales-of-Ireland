@@ -1,8 +1,27 @@
 ﻿l_english:
  TO_NEW_LAND_CB_NAME:0 "Conquer and settle in [TITLE.GetBaseName]"
- TO_NEW_LAND_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquer and settle in [TITLE.GetBaseName]"
+ TO_NEW_LAND_WAR_NAME:0 "$ORDER$ conquer and settle in [TITLE.GetBaseName] war"
  TO_NEW_LAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  UNITE_IRELAND_CB_NAME:0 "Impose your law to [DEFENDER.GetShortUIName]"
- UNITE_IRELAND_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Impose your law to [DEFENDER.GetShortUIName]"
+ UNITE_IRELAND_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Impose your law to [DEFENDER.GetShortUIName]"
  UNITE_IRELAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ cattle_raiding_cb_desc:0 "We can declare war on our neighbour to seize their wealth, their cattle. If you win we will take 1/3 of this ruler cattle."
+ CATTLE_RAIDING_CB_NAME:0 "Cattle Raiding"
+ CATTLE_RAIDING_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective]'s war to take [DEFENDER.GetShortUIName]'s cattle"
+ CATTLE_RAIDING_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ LAND_SON_CB_NAME:0 "Get land for Son"
+ LAND_SON_WAR_NAME:0 "$ORDER$ [ATTACKER.GetShortUIName]'s land conquest for his son in [DEFENDER.GetShortUIName]"
+ LAND_SON_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ PURIFICATION_CB_NAME:0 "Purify County"
+ PURIFICATION_WAR_NAME:0 "$ORDER$ Purify [DEFENDER.GetShortUIName]"
+ 
+ PURIFICATION_DUCHY_CB_NAME:0 "Purify Duchy"
+ PURIFICATION_DUCHY_WAR_NAME:0 "$ORDER$ Purify [DEFENDER.GetShortUIName]"
+ 
+ FOMORIAN_VASSALIZATION_CB_NAME:0 "Make Fomorian Tributary"
+ FOMORIAN_VASSALIZATION_WAR_NAME:0 "Make [DEFENDER.GetShortUIName] Tributary"
+ FOMORIAN_VASSALIZATION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" 

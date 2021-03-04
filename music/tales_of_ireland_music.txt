@@ -87,5 +87,60 @@ track13 = {
 	
 }
 
+track14 = {
+	music = "file:/music/Vindsvept/A_World_Unbound.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track15 = {
+	music = "file:/music/Vindsvept/Frozen_in_Time.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track16 = {
+	music = "file:/music/Vindsvept/Heart_of_Thunder.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track17 = {
+	music = "file:/music/Vindsvept/Hideaway.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track18 = {
+	music = "file:/music/Vindsvept/Through_The_Fog.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track19 = {
+	music = "file:/music/Vindsvept/Voyage_to_Nowhere.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
+
+track20 = {
+	music = "file:/music/Vindsvept/Wanderer.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	
+}
 
 ###end TALES OF IRELAND mod ###

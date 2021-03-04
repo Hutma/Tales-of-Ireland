@@ -24,7 +24,7 @@ labraid_story.0001 = {
 		
 		trigger_event = {
 			id = labraid_story.0011
-			years = { 2 4 }
+			years = { 1 2 }
 		}
 	}
 }

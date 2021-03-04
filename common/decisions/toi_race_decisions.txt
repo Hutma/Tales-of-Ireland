@@ -220,3 +220,51 @@ ceremony_in_newgrange_decision = {
 		base = 100
 	}
 }
+
+take_fomorian_tribute_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	
+	desc = take_fomorian_tribute_decision_desc
+	
+	major = yes
+	ai_check_interval = 180
+	cooldown = { years = 5 }
+
+	is_shown = {
+		AND  = {
+			has_trait = fomorian
+			any_vassal = {
+				count >= 1 
+				vassal_contract_has_flag = has_fomorian_tributary_contract
+			}
+		}
+	}
+
+	is_valid = {
+		
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		prestige = 20
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_fomorian_tributary.0002
+			days = 1
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

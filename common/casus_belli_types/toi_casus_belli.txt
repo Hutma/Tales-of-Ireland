@@ -940,6 +940,7 @@ cattle_raiding_cb = {
 	}
 	
 	on_victory = {
+		custom_tooltip = cattle_raiding_cb_desc
 		scope:attacker = { show_pow_release_message_effect = yes }		
 		#Cattle loss for defender
 		scope:defender = {
@@ -1251,7 +1252,13 @@ lure_to_cattle_raid_cb = {
 	allowed_for_character = {
 		AND = {
 			has_government = feudal_government
-			#is_ai = yes
+			is_ai = yes
+			NOT = {
+				has_trait = cessarian
+			}
+			NOT = {
+				has_character_flag = has_cattle_raided
+			}
 		}
 	}
 
@@ -1260,6 +1267,59 @@ lure_to_cattle_raid_cb = {
 			ALL_FALSE = {
 				top_liege = scope:defender.top_liege
 				liege = scope:defender
+			}
+		}
+		scope:defender = {
+			OR = {
+				any_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					count > 2
+					development_level > 15
+				}
+				any_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					count > 1
+					development_level > 35
+				}
+				any_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					count > 3
+					development_level > 10
+				}
+				AND = {
+					any_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						count > 1
+						development_level > 15
+					}
+					any_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						count > 2
+						development_level > 10
+					}
+					any_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						count > 3
+					}
+				}
+				any_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					count > 4
+				}
 			}
 		}
 	}
@@ -1297,6 +1357,12 @@ lure_to_cattle_raid_cb = {
 	}
 
 	on_declaration = {
+		scope:attacker = {
+			add_character_flag = {
+				flag = has_cattle_raided
+				days = 700
+			}
+		}
 		scope:defender = {
 			add_character_flag = {
 				flag = is_target_raid
@@ -1500,6 +1566,18 @@ land_son_cb = {
 				liege = scope:defender
 			}
 		}
+		NOT = {
+			AND = {
+				scope:defender = {
+					is_close_family_of = scope:attacker
+				}
+				NOT = {
+					scope:defender = {
+						is_sibling_of = scope:attacker
+					}
+				}
+			}
+		}
 	}
 
 	cost = {
@@ -1590,6 +1668,20 @@ land_son_cb = {
 				if = {
 					limit = {
 						this.holder = scope:defender
+					}
+					change_title_holder = {
+						holder = scope:attacker
+						change = scope:change
+						take_baronies = yes
+					}
+					add_to_global_variable_list = {
+						name = tracked_titles_for_son
+						target = this
+					}
+				}
+				if = {
+					limit = {
+						this.holder.liege = scope:defender
 					}
 					change_title_holder = {
 						holder = scope:attacker
@@ -1754,8 +1846,8 @@ land_son_cb = {
 	defender_allies_inherit = yes
 
 	war_name = "LAND_SON_WAR_NAME"
-	my_war_name = "LAND_SON_WAR_NAME"
 	war_name_base = "LAND_SON_WAR_NAME_BASE"
+	cb_name = "LAND_SON_CB_NAME"
 	interface_priority = 60
 
 
@@ -2202,8 +2294,8 @@ purification_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "RELIGIOUS_WAR_NAME"
-	cb_name = "HOLY_WAR_COUNTY_NAME"
+	war_name = "PURIFICATION_WAR_NAME"
+	cb_name = "PURIFICATION_CB_NAME"
 
 	is_holy_war = yes
 
@@ -2218,7 +2310,7 @@ purification_cb = {
 }
 
 #Same for duchies
-religious_war = {
+purification_duchy_cb = {
 	group = religious
 
 	defender_faith_can_join = yes
@@ -2667,8 +2759,8 @@ religious_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "RELIGIOUS_WAR_NAME"
-	cb_name = "HOLY_WAR_DUCHY_NAME"
+	war_name = "PURIFICATION_DUCHY_WAR_NAME"
+	cb_name = "PURIFICATION_DUCHY_CB_NAME"
 
 	is_holy_war = yes
 
@@ -3109,9 +3201,9 @@ fomorian_tributary_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "VASSALIZATION_WAR_NAME"
-	war_name_base = "VASSALIZATION_WAR_NAME_BASE"
-	cb_name = "VASSALIZATION_CB_NAME"
+	war_name = "FOMORIAN_VASSALIZATION_WAR_NAME"
+	war_name_base = "FOMORIAN_VASSALIZATION_WAR_NAME_BASE"
+	cb_name = "FOMORIAN_VASSALIZATION_CB_NAME"
 	interface_priority = 59
 	
 	ticking_war_score_targets_entire_realm = yes

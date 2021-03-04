@@ -115,7 +115,7 @@ toi_war.0001 = {
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
 			change_title_holder = {
-				holder = scope:son_1
+				holder = scope:son_2
 				change = scope:change
 			}
 		}
@@ -127,7 +127,7 @@ toi_war.0001 = {
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		scope:son_1 = {
+		scope:son_2 = {
 			becomes_independent = {
 				change = scope:change
 			}
@@ -147,7 +147,7 @@ toi_war.0001 = {
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
 			change_title_holder = {
-				holder = scope:son_1
+				holder = scope:son_3
 				change = scope:change
 			}
 		}
@@ -159,7 +159,7 @@ toi_war.0001 = {
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		scope:son_1 = {
+		scope:son_3 = {
 			becomes_independent = {
 				change = scope:change
 			}
@@ -179,7 +179,7 @@ toi_war.0001 = {
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
 			change_title_holder = {
-				holder = scope:son_1
+				holder = scope:son_4
 				change = scope:change
 			}
 		}
@@ -191,7 +191,7 @@ toi_war.0001 = {
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		scope:son_1 = {
+		scope:son_4 = {
 			becomes_independent = {
 				change = scope:change
 			}
@@ -211,7 +211,7 @@ toi_war.0001 = {
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
 			change_title_holder = {
-				holder = scope:son_1
+				holder = scope:son_5
 				change = scope:change
 			}
 		}
@@ -223,7 +223,7 @@ toi_war.0001 = {
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		scope:son_1 = {
+		scope:son_5 = {
 			becomes_independent = {
 				change = scope:change
 			}
@@ -243,7 +243,7 @@ toi_war.0001 = {
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
 			change_title_holder = {
-				holder = scope:son_1
+				holder = scope:son_6
 				change = scope:change
 			}
 		}
@@ -255,7 +255,7 @@ toi_war.0001 = {
 			save_scope_as = change
 			add_claim_on_loss = no
 		}
-		scope:son_1 = {
+		scope:son_6 = {
 			becomes_independent = {
 				change = scope:change
 			}

@@ -18,6 +18,17 @@ k_high_kingship = {
 	de_jure_drift_disabled = yes
 }
 
+e_ireland = {
+	color = { 6 127 2 }
+	color2 = { 255 255 255 }
+	
+	capital = c_tara
+	
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+}
+
 e_munster = {
 	color =  { 150 10 10 }
 	color2 = { 255 255 255 }

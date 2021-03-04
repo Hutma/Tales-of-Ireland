@@ -171,7 +171,8 @@ innovation_ledger = {
 	icon = @administration_2
 
 	modifier = {
-		domain_limit = 1
+		domain_tax_mult = 0.05
+		levy_size = 0.05
 	}
 
 	flag = global_regular
