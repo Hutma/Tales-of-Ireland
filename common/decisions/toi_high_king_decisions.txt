@@ -131,7 +131,7 @@ high_king_reclaim_tara_decision = {
 reform_high_kingship_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
-	ai_check_interval = 120
+	ai_check_interval = 60
 	desc = reform_high_kingship_decision_desc
 
 	is_shown = {
@@ -161,7 +161,6 @@ reform_high_kingship_decision = {
 	}
 
 	cost = {
-		prestige = 200
 		gold = 100
 	}
 
@@ -179,6 +178,9 @@ reform_high_kingship_decision = {
 			save_scope_as = title_k_high_kingship
 		}
 		resolve_title_and_vassal_change = scope:title_change
+		title:k_high_kingship = {
+			add_title_law = high_king_elective_succession_law
+		}
 	}
 
 	ai_potential = {

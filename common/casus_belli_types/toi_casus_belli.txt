@@ -902,7 +902,9 @@ cattle_raiding_cb = {
 			NOT = {
 				OR = {
 					has_trait = cessarian
-					has_doctrine_parameter = cattle_raiding_cb_disable
+					faith = {
+						has_doctrine_parameter = cattle_raiding_cb_disable
+					}
 				}
 			}
 		}

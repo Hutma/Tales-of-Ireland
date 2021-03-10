@@ -76,17 +76,19 @@ grant_vassal_interaction = {
 			}
 		}
 ###TALES OF IRELAND
-		OR = {
-			AND = {
-				has_realm_law = crown_authority_0
-				prestige_level >= 3
+		scope:recipient = {
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_0
+					prestige_level >= 3
+				}
+				AND = {
+					has_realm_law = crown_authority_1
+					prestige_level >= 2
+				}
+				has_realm_law = crown_authority_2
+				has_realm_law = crown_authority_3
 			}
-			AND = {
-				has_realm_law = crown_authority_1
-				prestige_level >= 3
-			}
-			has_realm_law = crown_authority_2
-			has_realm_law = crown_authority_3
 		}
 ###TALES OF IRELAND END
 	}

@@ -25,4 +25,40 @@ call_royal_army_decision_effect = {
 		}
 		location = capital_province
 	}
+	if = {
+		limit = {
+			years_from_game_start >= 200
+		}
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = call_royal_army_decision_troops
+			levies = {
+				value = 400
+			}
+			men_at_arms = {
+				type = warriors_of_tara
+				stacks = 4
+			}
+			location = capital_province
+		}
+	}
+	if = {
+		limit = {
+			years_from_game_start >= 400
+		}
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = call_royal_army_decision_troops
+			levies = {
+				value = 150
+			}
+			men_at_arms = {
+				type = warriors_of_tara
+				stacks = 4
+			}
+			location = capital_province
+		}
+	}
 }

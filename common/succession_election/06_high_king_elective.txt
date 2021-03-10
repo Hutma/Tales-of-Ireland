@@ -34,6 +34,9 @@ high_king_elective = { #high king Elective.
 					has_government = mercenary_government
 					has_government = holy_order_government
 				}
+				NOT = {
+					highest_held_title_tier <= 2
+				}
 			}
 		}
 	}

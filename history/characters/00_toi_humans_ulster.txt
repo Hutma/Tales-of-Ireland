@@ -1203,15 +1203,15 @@
 
     diplomacy =  4 
     martial =  10 
-    stewardship =  9 
-    intrigue =  11 
+    stewardship =  4
+    intrigue =  3
     learning =  3 
     prowess =  4 
 
-    trait = education_intrigue_4
+    trait = education_intrigue_1
     trait = diligent
-    trait = patient
-    trait = just
+    trait = impatient
+    trait = content
     trait = celtic_human
 
     disallow_random_traits = yes

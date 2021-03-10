@@ -28,7 +28,10 @@
 	#High King
 	high_king_elective_succession_law = {
 		can_have = {
-			highest_held_title_tier = tier_empire
+			OR = {
+				highest_held_title_tier = tier_empire
+				highest_held_title_tier = tier_kingdom
+			}
 		}
 		can_pass = {
 			always = no

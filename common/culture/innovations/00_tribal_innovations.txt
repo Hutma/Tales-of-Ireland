@@ -123,7 +123,10 @@ innovation_gavelkind = {
 	group = culture_group_civic
 	culture_era = culture_era_tribal
 	icon = @administration_3
-
+	
+	modifier = {
+		title_creation_cost_mult = -0.25
+	}
 	unlock_law = ancient_partition_succession_law
 
 	flag = global_regular
