@@ -8,7 +8,7 @@
 	
 	corca_loigde = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -237,7 +237,7 @@
 	
 	dal_riata = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -466,7 +466,7 @@
 	
 	dal_fiatach = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -695,7 +695,7 @@
 	
 	ui_maine = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -924,7 +924,7 @@
 	
 	conmaicne = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -1153,7 +1153,7 @@
 	
 	osraighe = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

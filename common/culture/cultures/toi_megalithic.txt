@@ -8,7 +8,7 @@
 	
 	bell_beakers = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -128,7 +128,7 @@
 	
 	newgrange_builders = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

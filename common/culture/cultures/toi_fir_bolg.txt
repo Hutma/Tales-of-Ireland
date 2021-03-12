@@ -8,7 +8,7 @@
 	
 	fir_bolg = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			25 = caucasian_blond
@@ -248,7 +248,7 @@
 	
 	fir_gailioin = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			25 = caucasian_blond
@@ -488,7 +488,7 @@
 	
 	fir_domnann = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			25 = caucasian_blond

@@ -9,6 +9,14 @@
 temple_01 = {
 	construction_time = slow_construction_time
 	
+	### CELTIC TEMPLE 1 ###
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_temple_01_mesh"
+		illustration = @illustration_northern_pagan
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_cultures = { irelander_building_gfx }
+	}
 	
 	### GENERIC ###
 	asset = {
@@ -268,6 +276,15 @@ temple_01 = {
 temple_02 = {
 	construction_time = slow_construction_time
 	
+	### CELTIC TEMPLE 1 ###
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_temple_01_mesh"
+		illustration = @illustration_northern_pagan
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_cultures = { irelander_building_gfx }
+	}
+	
 	### GENERIC ###
 	asset = {
 		type = pdxmesh
@@ -467,6 +484,15 @@ temple_02 = {
 
 temple_03 = {
 	construction_time = slow_construction_time
+	
+	### CELTIC TEMPLE 2 ###
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_temple_02_mesh"
+		illustration = @illustration_northern_pagan
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_cultures = { irelander_building_gfx }
+	}
 	
 	### GENERIC ###
 	asset = {
@@ -669,6 +695,15 @@ temple_03 = {
 
 temple_04 = {
 	construction_time = slow_construction_time
+	
+	### CELTIC TEMPLE 2 ###
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_temple_02_mesh"
+		illustration = @illustration_northern_pagan
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_cultures = { irelander_building_gfx }
+	}
 	
 	### GENERIC ###
 	asset = {

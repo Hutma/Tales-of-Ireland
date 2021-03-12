@@ -7,7 +7,7 @@
 	}
 	ramor_nemedians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		color = rgb { 20 170 200 }
 
@@ -243,7 +243,7 @@
 	
 	neagh_nemedians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		color = rgb { 40 180 200 }
 
@@ -479,7 +479,7 @@
 	
 	ennell_nemedians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		color = rgb { 130 230 240 }
 

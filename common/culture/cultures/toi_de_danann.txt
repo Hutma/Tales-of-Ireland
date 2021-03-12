@@ -8,7 +8,7 @@
 	
 	de_danann = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

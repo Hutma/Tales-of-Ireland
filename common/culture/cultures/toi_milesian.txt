@@ -8,7 +8,7 @@
 	
 	eremon_milesians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -220,7 +220,7 @@
 	
 	eber_milesians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -432,7 +432,7 @@
 	
 	ir_milesians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -644,7 +644,7 @@
 	
 	lughaid_milesians = {
 		graphical_cultures = {
-			irish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

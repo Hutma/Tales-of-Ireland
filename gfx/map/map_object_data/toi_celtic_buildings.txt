@@ -1,0 +1,18 @@
+﻿object={
+	name="celtic_newgrange"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="temp_layer"
+	pdxmesh="building_celtic_newgrange_mesh"
+	count=0
+}
+object={
+	name="celtic_round_tower"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="temp_layer"
+	pdxmesh="building_celtic_round_tower_01_mesh"
+	count=0
+}

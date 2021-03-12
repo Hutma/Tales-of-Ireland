@@ -8,7 +8,7 @@
 	
 	dal_naraide = {
 		graphical_cultures = {
-			scottish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -94,7 +94,7 @@
 	
 	ui_eachach_coba = {
 		graphical_cultures = {
-			scottish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -180,7 +180,7 @@
 	
 	loigis = {
 		graphical_cultures = {
-			scottish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -266,7 +266,7 @@
 	
 	sogain = {
 		graphical_cultures = {
-			scottish_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

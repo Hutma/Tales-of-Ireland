@@ -26298,7 +26298,7 @@
 4056 = {      #Corbalton (b_corbalton)
               culture = eremon_milesians
               religion = milesian_paganism
-              holding = none
+              holding = city_holding
 }
 
 4057 = {      #Skryne (b_skryne)
