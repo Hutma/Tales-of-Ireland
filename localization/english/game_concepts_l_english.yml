@@ -1185,7 +1185,7 @@
  game_concept_papal_recipient:0 "Favored Candidate"
  game_concept_papal_recipient_desc:1 "If the main target of the [great_holy_war|E] is already held or claimed by a member of the aggressor faith, they will be considered the rightful recipient of the title being fought over, unless the main [Concept( 'war_contribution', 'Contributor' )|E] decides to give precedence to their [beneficiary|E]."
  game_concept_end_date:0 "End Date"
- game_concept_end_date_desc:0 "1453 AD is the End Date, and upon reaching it the game will end."
+ game_concept_end_date_desc:0 "The end date is 5400 After Creation."
  
  game_concept_realm_size:0 "Realm Size"
  game_concept_realm_size_desc:1 "A character's $game_concept_realm_size$ is the number of [counties|E] owned by them and their [vassals|E]."

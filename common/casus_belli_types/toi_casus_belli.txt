@@ -956,101 +956,103 @@ cattle_raiding_cb = {
 		custom_tooltip = cattle_raiding_cb_desc
 		scope:attacker = { show_pow_release_message_effect = yes }		
 		#Cattle loss for defender
-		scope:defender = {
-			set_variable = { 
-				name = cattle_number_total
-				value = 0
-				days = 10
-			}
-			every_held_title = {
-				limit = {
-					tier = tier_county
-				}
+		hidden_effect = {
+			scope:defender = {
 				set_variable = { 
-					name = cattle_number
-					value = this.development_level
+					name = cattle_number_total
+					value = 0
+					days = 10
+				}
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					set_variable = {
+						name = cattle_number
+						value = this.development_level
+					}
+					change_variable = {
+						name = cattle_number
+						multiply = 0.3
+					}
+					scope:defender = {
+						change_variable = {
+							name = cattle_number_total
+							add = prev.var:cattle_number
+						}
+					}
+					change_development_level = {
+						value = var:cattle_number
+						multiply = -1.0
+					}
+					remove_variable = var:cattle_number
+				}
+			#Money gained
+				set_variable = {
+					name = cattle_raid_gold_gain
+					value = var:cattle_number_total
+					days = 5
 				}
 				change_variable = {
-					name = cattle_number
-					multiply = 0.3
+					name = cattle_raid_gold_gain
+					add = 5
 				}
-				scope:defender = {
-					change_variable = {
-						name = cattle_number_total
-						add = prev.var:cattle_number
-					}
+				change_variable = {
+					name = cattle_raid_gold_gain
+					multiply = 2.0
 				}
-				change_development_level = {
-					value = var:cattle_number
-					multiply = -1.0
+				pay_short_term_gold = {
+					gold = var:cattle_raid_gold_gain
+					target = scope:attacker
 				}
-				remove_variable = var:cattle_number
+				remove_variable = cattle_raid_gold_gain
 			}
-		#Money gained
-			set_variable = {
-				name = cattle_raid_gold_gain
-				value = var:cattle_number_total
-				days = 5
-			}
-			change_variable = {
-				name = cattle_raid_gold_gain
-				add = 5
-			}
-			change_variable = {
-				name = cattle_raid_gold_gain
-				multiply = 2.0
-			}
-			pay_short_term_gold = {
-				gold = var:cattle_raid_gold_gain
-				target = scope:attacker
-			}
-			remove_variable = cattle_raid_gold_gain
-		}
 
 
-		#Cattle gain for attacker
-		scope:attacker = {
-			set_variable = {
-				name = cattle_number_total
-				value = scope:defender.var:cattle_number_total
-				days = 10
-			}
-			capital_county = {
-				change_development_level = {
-					value = prev.var:cattle_number_total
-					multiply = 0.3
+			#Cattle gain for attacker
+			scope:attacker = {
+				set_variable = {
+					name = cattle_number_total
+					value = scope:defender.var:cattle_number_total
+					days = 10
 				}
-			}
-			change_variable = {
-				name = cattle_number_total
-				multiply = 0.7
-			}
-			set_variable = {
-				name = number_of_counties
-				value = 0
-				days = 10
-			}
-			every_held_title = {
-				limit = {
-					tier = tier_county
-				}
-				scope:attacker = {
-					change_variable = {
-						name = number_of_counties
-						add = 1
+				capital_county = {
+					change_development_level = {
+						value = prev.var:cattle_number_total
+						multiply = 0.3
 					}
 				}
-			}
-			change_variable = {
-				name = cattle_number_total
-				divide = var:number_of_counties
-			}
-			every_held_title = {
-				limit = {
-					tier = tier_county
+				change_variable = {
+					name = cattle_number_total
+					multiply = 0.7
 				}
-				change_development_level = {
-					value = scope:attacker.var:cattle_number_total
+				set_variable = {
+					name = number_of_counties
+					value = 0
+					days = 10
+				}
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					scope:attacker = {
+						change_variable = {
+							name = number_of_counties
+							add = 1
+						}
+					}
+				}
+				change_variable = {
+					name = cattle_number_total
+					divide = var:number_of_counties
+				}
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					change_development_level = {
+						value = scope:attacker.var:cattle_number_total
+					}
 				}
 			}
 		}
@@ -1153,45 +1155,47 @@ cattle_raiding_cb = {
 	}
 	
 	on_defeat = {
+		custom_tooltip = cattle_raiding_cb_defeat_desc
 		scope:attacker = { show_pow_release_message_effect = yes }
 		#Cattle loss capital attacker
-		scope:attacker = {
-			capital_county = {
-				set_variable = {
-					name = cattle_number_total
-					value = 0
-					days = 10
-				}
-				change_variable = {
-					name = cattle_number_total
-					add = this.development_level
-				}
-				change_variable = {
-					name = cattle_number_total
-					multiply = 0.3
-				}
-				change_development_level = {
-					value = var:cattle_number_total
-					multiply = -1.0
-				}
-				save_scope_as = cattle_count
-			}
-		}
-		
-		#Cattle gain capital defender
-		scope:defender = {
-			capital_county = {
-				set_variable = {
-					name = cattle_number_total
-					value = scope:cattle_count.var:cattle_number_total
-					days = 10
-				}
-				change_development_level = {
-					value = var:cattle_number_total
+		hidden_effect = {
+			scope:attacker = {
+				capital_county = {
+					set_variable = {
+						name = cattle_number_total
+						value = 0
+						days = 10
+					}
+					change_variable = {
+						name = cattle_number_total
+						add = this.development_level
+					}
+					change_variable = {
+						name = cattle_number_total
+						multiply = 0.3
+					}
+					change_development_level = {
+						value = var:cattle_number_total
+						multiply = -1.0
+					}
+					save_scope_as = cattle_count
 				}
 			}
+			
+			#Cattle gain capital defender
+			scope:defender = {
+				capital_county = {
+					set_variable = {
+						name = cattle_number_total
+						value = scope:cattle_count.var:cattle_number_total
+						days = 10
+					}
+					change_development_level = {
+						value = var:cattle_number_total
+					}
+				}
+			}
 		}
-		
 		# Prestige loss for the attacker
 		scope:attacker = {
 			pay_short_term_gold = {

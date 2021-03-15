@@ -7,7 +7,8 @@
  UNITE_IRELAND_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Impose your law to [DEFENDER.GetShortUIName]"
  UNITE_IRELAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
- cattle_raiding_cb_desc:0 "We can declare war on our neighbour to seize their wealth, their cattle. If you win we will take 1/3 of this ruler cattle."
+ cattle_raiding_cb_desc:0 "We can declare war on our neighbour to seize their wealth, their cattle. If we win we will take 1/3 of all this ruler directly controled counites cattle."
+ cattle_raiding_cb_defeat_desc:0 "If we surrender we will have to give them 1/3 of the cattle in our capital."
  CATTLE_RAIDING_CB_NAME:0 "Cattle Raiding"
  CATTLE_RAIDING_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective]'s war to take [DEFENDER.GetShortUIName]'s cattle"
  CATTLE_RAIDING_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

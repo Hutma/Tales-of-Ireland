@@ -3,10 +3,11 @@
 	clamp_to_water_level=no
 	render_under_water=no
 	generated_content=no
-	layer="temp_layer"
+	layer="building_layer"
 	pdxmesh="building_celtic_newgrange_mesh"
-	count=0
-}
+	count=1
+	transform="3284.490234 0.000000 2159.705566 0.000000 -0.591366 0.000000 0.806403 1.000000 1.000000 1.000000
+"}
 object={
 	name="celtic_round_tower"
 	clamp_to_water_level=no
