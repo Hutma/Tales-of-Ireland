@@ -84,9 +84,9 @@ to_new_land_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:attacker = { is_local_player = yes } }
-				desc = county_conquest_cb_victory_desc_attacker
+				desc = new_land_cb_victory_desc_attacker
 			}
-			desc = county_conquest_cb_victory_desc
+			desc = new_land_cb_victory_desc
 		}
 	}
 
@@ -161,9 +161,9 @@ to_new_land_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = county_conquest_cb_white_peace_desc_defender
+				desc = new_land_cb_white_peace_desc_defender
 			}
-			desc = county_conquest_cb_white_peace_desc
+			desc = new_land_cb_white_peace_desc
 		}
 	}
 
@@ -200,7 +200,7 @@ to_new_land_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = county_conquest_cb_defeat_desc_defender
+				desc = new_land_cb_defeat_desc_defender
 			}
 			triggered_desc = {
 				trigger = {
@@ -209,9 +209,9 @@ to_new_land_cb = {
 						has_targeting_faction = yes
 					}
 				}
-				desc = county_conquest_cb_defeat_desc_attacker
+				desc = new_land_cb_defeat_desc_attacker
 			}
-			desc = county_conquest_cb_defeat_desc
+			desc = new_land_cb_defeat_desc
 		}
 	}
 
@@ -949,7 +949,13 @@ cattle_raiding_cb = {
 	}
 
 	on_victory_desc = {
-
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = cattle_raiding_cb_victory_desc_attacker
+			}
+			desc = cattle_raiding_cb_victory_desc
+		}
 	}
 	
 	on_victory = {
@@ -1100,9 +1106,9 @@ cattle_raiding_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = tribal_subjugation_cb_white_peace_desc_defender
+				desc = cattle_raiding_cb_white_peace_desc_defender
 			}
-			desc = tribal_subjugation_cb_white_peace_desc
+			desc = cattle_raiding_cb_white_peace_desc
 		}
 	}
 	
@@ -1139,7 +1145,7 @@ cattle_raiding_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:defender = { is_local_player = yes } }
-				desc = tribal_subjugation_cb_white_peace_desc_defender
+				desc = cattle_raiding_cb_defeat_desc_defender
 			}
 			triggered_desc = {
 				trigger = {
@@ -1148,14 +1154,13 @@ cattle_raiding_cb = {
 						has_targeting_faction = yes
 					}
 				}
-				desc = tribal_subjugation_cb_defeat_desc_attacker
+				desc = cattle_raiding_cb_defeat_desc_attacker
 			}
-			desc = tribal_subjugation_cb_white_peace_desc
+			desc = cattle_raiding_cb_defeat_desc
 		}
 	}
 	
 	on_defeat = {
-		custom_tooltip = cattle_raiding_cb_defeat_desc
 		scope:attacker = { show_pow_release_message_effect = yes }
 		#Cattle loss capital attacker
 		hidden_effect = {
@@ -1348,6 +1353,10 @@ lure_to_cattle_raid_cb = {
 				days = 1
 			}
 		}
+		triggered_desc = {
+			trigger = { scope:defender = { is_local_player = yes } }
+			desc = cattle_luring_explaination_desc
+		}
 	}
 
 	cost = {
@@ -1517,9 +1526,9 @@ lure_to_cattle_raid_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "CONQUEST_WAR_NAME"
-	war_name_base = "CONQUEST_WAR_NAME_BASE"
-	cb_name = "CONQUEST_COUNTY_CB_NAME"
+	war_name = "CATTLE_LURE_WAR_NAME"
+	war_name_base = "CATTLE_LURE_WAR_NAME_BASE"
+	cb_name = "CATTLE_LURE_CB_NAME"
 
 	interface_priority = 79
 

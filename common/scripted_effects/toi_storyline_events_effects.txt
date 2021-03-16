@@ -26,3 +26,19 @@ labraid_story_revenge_effect = {
 		location = capital_province
 	}
 }
+
+labraid_story_exiled_effect = {
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = labraid_story_revenge_troops
+		levies = {
+			value = 100
+		}
+		men_at_arms = {
+			type = warriors_of_tara
+			stacks = 4
+		}
+		location = capital_province
+	}
+}

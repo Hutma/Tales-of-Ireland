@@ -1641,3 +1641,68 @@ ask_for_pardon_interaction = {
 		}
 	}
 }
+
+pardon_interaction = {
+	category = interaction_category_friendly
+
+	desc = pardon_interaction_desc
+	
+	is_shown = {
+		scope:actor = {
+			has_imprisonment_reason = scope:recipient
+		}
+		scope:recipient = {
+			target_is_liege_or_above = scope:actor
+		}
+	}
+
+	auto_accept = yes
+	
+	on_accept = {
+		consume_all_criminal_reasons_effect = {
+			LIEGE = scope:actor
+			CRIMINAL = scope:recipient
+		}
+		
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = grateful_opinion
+				opinion = 15
+			}
+			
+			send_interface_toast = {
+				title = pardon_interaction_toast
+				left_icon = scope:actor
+            }			
+		}			
+	}
+	
+	ai_potential = {
+		has_trait = forgiving
+	}
+	ai_targets = {
+		ai_recipients = vassals
+	}
+	ai_targets = {
+		ai_recipients = courtiers
+		chance = 0.25
+	}
+	ai_frequency = 100	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					is_primary_heir_of = scope:actor
+				}
+			}
+		}
+	}
+}

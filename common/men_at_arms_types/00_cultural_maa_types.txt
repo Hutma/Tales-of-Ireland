@@ -55,6 +55,10 @@ kern_cavalry = {
 		archers = 1
 	}
 	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -1 }
+	}
+	
 	buy_cost = { gold = light_cavalry_recruitment_cost }
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
@@ -137,6 +141,10 @@ travelers = {
 	counters = {
 		skirmishers = 1
 		archers = 1
+	}
+	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
 	}
 
 	buy_cost = { gold = 85 }

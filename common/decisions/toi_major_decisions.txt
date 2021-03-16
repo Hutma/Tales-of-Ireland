@@ -8,8 +8,10 @@
 
 	is_shown = {
 		AND  = {
-			prestige_level >= 2
-			piety_level >= 2
+			OR = {
+				prestige_level >= 2
+				piety_level >= 2
+			}
 			AND = {
 				any_heir = {
 					limit = {

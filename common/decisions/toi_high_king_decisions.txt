@@ -208,7 +208,7 @@ try_unite_ireland_decision = {
 	}
 
 	is_valid = {
-		prestige_level >= 4
+		prestige_level >= 3
 		highest_held_title_tier >= 4
 		is_independent_ruler = yes
 	}

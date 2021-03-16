@@ -6,7 +6,7 @@
 	layer="building_layer"
 	pdxmesh="building_celtic_newgrange_mesh"
 	count=1
-	transform="3284.490234 0.000000 2159.705566 0.000000 -0.591366 0.000000 0.806403 1.000000 1.000000 1.000000
+	transform="3345.429688 0.000000 2280.841553 0.000000 0.155223 0.000000 0.987879 1.000000 1.000000 1.000000
 "}
 object={
 	name="celtic_round_tower"

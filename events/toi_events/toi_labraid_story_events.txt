@@ -29,7 +29,7 @@ labraid_story.0001 = {
 	}
 }
 
-#Corbacht capture bith the king and his son 80% fails and only poison the son 20%
+#Corbacht capture both the king and his son 80% fails and only poison the son 20%
 labraid_story.0011 = {
 	hidden = yes
 	type = character_event
@@ -162,7 +162,7 @@ labraid_story.0002 = {
 	}
 }
 
-#The player is informed that he has to become duke or own 4 counties and wait a year to take his revenge
+#The player is informed that he has to become duke or own 4 counties and wait a year to take his revenge he gain 200 men
 labraid_story.0003 = {
 	title = labraid_story.0003.t
 	desc = labraid_story.0003.desc
@@ -177,6 +177,8 @@ labraid_story.0003 = {
 	}
 	option = {
 		name = labraid_story.0003.a 
+		
+		labraid_story_exiled_effect = yes
 		
 		trigger_event = {
 			id = labraid_story.0005
