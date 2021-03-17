@@ -754,7 +754,6 @@ fp1_other_decisions.0002 = {
 
 scripted_trigger sacrifice_method_hang_n_fang_trigger = {
 	scope:gf_faith = {
-		religion = religion:germanic_religion
 		has_doctrine_parameter = cannibalism_legal
 	}
 }
@@ -762,7 +761,7 @@ scripted_trigger sacrifice_method_eat_em_trigger = {
 	scope:gf_faith = { has_doctrine_parameter = cannibalism_legal }
 }
 scripted_trigger sacrifice_method_hang_em_trigger = {
-	scope:gf_faith.religion = religion:germanic_religion
+	always = no
 }
 
 scripted_trigger gruesome_festivals_available_impressable_nobles = {
@@ -1630,25 +1629,7 @@ fp1_other_decisions.0003 = {
 			else_if = {
 				limit = {
 					OR = {
-						AND = {
-							scope:old_faith.religion = { is_in_family = rf_eastern }
-							NOT = {
-								scope:gf_faith.religion = { is_in_family = rf_eastern }
-							}
-						}
-						AND = {
-							scope:old_faith.religion = { is_in_family = rf_pagan }
-							NOT = {
-								scope:gf_faith.religion = { is_in_family = rf_pagan }
-							}
-						}
-						AND = {
-							scope:old_faith.religion = { is_in_family = rf_abrahamic }
-							NOT = {
-								scope:gf_faith.religion = { is_in_family = rf_abrahamic }
-							}
-						}
-					}
+						always = no
 				}
 				give_nickname = nick_the_heathen
 			}
@@ -2779,19 +2760,13 @@ fp1_other_decisions.1000 = {
 	}
 	override_background = {
 		trigger = {
-			scope:blotter = {
-				religion = religion:germanic_religion
-			}
+			always = no
 		}
 		event_background = fp1_tribal_temple
 	}
 	override_background = {
 		trigger = {
-			scope:blotter = {
-				NOT = {
-					religion = religion:germanic_religion
-				}
-			}
+			always = no
 		}
 		event_background = temple_scope
 	}
