@@ -14,10 +14,8 @@
 			}
 			AND = {
 				any_heir = {
-					limit = {
-						NOT = {
-							is_primary_heir_of = root
-						}
+					NOT = {
+						is_primary_heir_of = root
 					}
 					NOT = {
 						has_trait = disinherited
@@ -43,10 +41,8 @@
 			prestige_level >= 3
 			piety_level >= 3
 			any_heir = {
-				limit = {
-					NOT = {
-						is_primary_heir_of = root
-					}
+				NOT = {
+					is_primary_heir_of = root
 				}
 				is_landed = yes
 				highest_held_title_tier >= 3

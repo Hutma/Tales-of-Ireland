@@ -135,7 +135,10 @@ reform_high_kingship_decision = {
 	desc = reform_high_kingship_decision_desc
 
 	is_shown = {
-		has_title = title:c_tara
+		OR = {
+			has_title = title:c_tara
+			has_title = title:k_meath
+		}
 		NOT = {
 			exists = title:k_high_kingship.holder
 		}

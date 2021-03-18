@@ -723,7 +723,7 @@ designate_shieldmaiden_interaction = {
 			has_fp1_dlc_trigger = yes
 			is_physically_able_adult = yes
 			OR = {
-				religion = religion:sons_of_the_ocean
+				religion = religion:northern_legacy_religion
 				culture = culture:first_landers
 				culture = culture:the_plagued
 			}
@@ -831,7 +831,7 @@ designate_shieldmaiden_interaction = {
 	
 	ai_potential = {
 		OR = {
-			religion = religion:sons_of_the_ocean
+			religion = religion:northern_legacy_religion
 			culture = culture:first_landers
 			culture = culture:the_plagued
 		}

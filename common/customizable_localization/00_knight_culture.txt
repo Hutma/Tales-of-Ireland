@@ -4,19 +4,19 @@
 	text = {
 		trigger = {
 			
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu
 	}
 	text = {
 		trigger = {
-			has_culture_group = culture_group:hellenic_group
+			always = no
 		}
 		localization_key = knight_hekwetai
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer
 	}
@@ -32,13 +32,13 @@ KnightCulturePlural = {
 	text = {
 		trigger = {
 			
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_plural
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_plural
 	}
@@ -53,13 +53,13 @@ KnightCultureNoTooltip = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip
 	}
@@ -74,13 +74,13 @@ KnightCulturePluralNoTooltip = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip_plural
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip_plural
 	}
@@ -95,13 +95,13 @@ KnightCultureNoTooltipLowercase = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip_lowercase
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip_lowercase
 	}
@@ -116,13 +116,13 @@ KnightCulturePluralNoTooltipLowercase = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip_lowercase_plural
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip_lowercase_plural
 	}
@@ -137,13 +137,13 @@ KnightCulturePluralPossessiveNoTooltipLowercase = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip_lowercase_plural_possessive
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip_lowercase_plural_possessive
 	}
@@ -158,13 +158,13 @@ KnightCultureAdjectiveNoTooltipLowercase = {
 
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_maryannu_no_tooltip_lowercase_adjective
 	}
 	text = {
 		trigger = {
-			culture = { has_innovation = innovation_spoked_wheel }
+			always = no
 		}
 		localization_key = knight_charioteer_no_tooltip_lowercase_adjective
 	}

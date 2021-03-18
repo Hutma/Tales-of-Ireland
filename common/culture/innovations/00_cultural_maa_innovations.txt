@@ -42,7 +42,6 @@ innovation_maa_leinster = {
 	unlock_maa = light_horsemen_leinster
 	unlock_maa = pikemen_unit_leinster
 	unlock_maa = armored_footmen_leinster
-	unlock_maa = armored_horsemen_leinster
 	
 	flag = global_maa
 }
@@ -59,7 +58,6 @@ innovation_maa_connacht = {
 	unlock_maa = light_horsemen_connacht
 	unlock_maa = pikemen_unit_connacht
 	unlock_maa = armored_footmen_connacht
-	unlock_maa = armored_horsemen_connacht
 	
 	flag = global_maa
 }
@@ -76,7 +74,6 @@ innovation_maa_munster = {
 	unlock_maa = light_horsemen_munster
 	unlock_maa = pikemen_unit_munster
 	unlock_maa = armored_footmen_munster
-	unlock_maa = armored_horsemen_munster
 	
 	flag = global_maa
 }
@@ -93,7 +90,6 @@ innovation_maa_ulster = {
 	unlock_maa = light_horsemen_ulster
 	unlock_maa = pikemen_unit_ulster
 	unlock_maa = armored_footmen_ulster
-	unlock_maa = armored_horsemen_ulster
 	
 	flag = global_maa
 }

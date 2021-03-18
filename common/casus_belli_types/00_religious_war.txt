@@ -405,25 +405,7 @@
 					remove_character_flag = ghw_recipient_will_be_crusader_king
 					add_realm_law_skip_effects = crown_authority_1
 					
-					if = { # Set the appropriate Succession Law
-						limit = {
-							can_have_single_heir_succession_law_trigger = yes
-							NOT = {
-								has_realm_law = single_heir_succession_law
-							}
-						}
-						add_realm_law_skip_effects = single_heir_succession_law
-					}
-					else_if = {
-						limit = {
-							can_have_high_partition_succession_law_trigger = yes
-							NOT = {
-								has_realm_law = high_partition_succession_law
-							}
-						}
-						add_realm_law_skip_effects = high_partition_succession_law
-					}
-					else_if = {
+					if = {
 						limit = {
 							can_have_partition_succession_law_trigger = yes
 							NOT = {

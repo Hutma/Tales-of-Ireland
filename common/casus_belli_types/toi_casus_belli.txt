@@ -2014,21 +2014,6 @@ purification_cb = {
 				}
 			}
 
-			# Innovation Piety Discounts
-			if = {
-				limit = {
-					scope:attacker = {
-						culture = {
-							has_innovation = innovation_reconquista
-						}
-					}
-				}
-				multiply = {
-					value = 0.9
-					desc = CB_RECONQUISTA_COST
-				}
-			}
-
 			# Bellum Justum Perk
 			if = {
 				limit = {
@@ -2463,21 +2448,6 @@ purification_duchy_cb = {
 				multiply = {
 					value = 0.8
 					desc = CB_REDUCED_HOLY_WAR_COST
-				}
-			}
-
-			# Innovation Piety Discounts
-			if = {
-				limit = {
-					scope:attacker = {
-						culture = {
-							has_innovation = innovation_reconquista
-						}
-					}
-				}
-				multiply = {
-					value = 0.9
-					desc = CB_RECONQUISTA_COST
 				}
 			}
 

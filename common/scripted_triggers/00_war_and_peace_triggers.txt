@@ -361,11 +361,7 @@ prisoner_gives_warscore_for_trigger = {
 }
 
 using_non_ghw_holy_war_cb_trigger = {
-	OR = {
-		using_cb = minor_religious_war
-		using_cb = religious_war
-		using_cb = major_religious_war
-	}
+	always = no
 }
 
 using_holy_war_cb_trigger = {
@@ -514,12 +510,7 @@ pressing_claim_of_character_trigger = {
 }
 
 is_religious_war = {
-	OR = {
-		using_cb = minor_religious_war
-		using_cb = religious_war
-		using_cb = major_religious_war
-		using_cb = excommunication_war
-	}
+	always = no
 }
 
 conquest_cb_holder_under_target_can_be_vassalized = {

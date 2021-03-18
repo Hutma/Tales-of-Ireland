@@ -179,7 +179,10 @@ fp1_yearly.2000 = {
 		is_available_at_peace_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_2000 }
 		
-		has_culture_group = culture_group:north_germanic_group
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		
 		any_child = {
 			suitable_child_to_leave = yes
@@ -1141,8 +1144,11 @@ fp1_yearly.2200 = {
 		}
 		
 		OR = {
-			culture_group = culture_group:north_germanic_group
-			religion = religion:germanic_religion
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			religion = religion:northern_legacy_religion
 		}
 		
 		OR = {
@@ -2191,8 +2197,11 @@ fp1_yearly.2600 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_2600 }
 		
 		OR = {
-			culture_group = culture_group:north_germanic_group
-			religion = religion:germanic_religion
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			religion = religion:northern_legacy_religion
 		}
 		
 		faith = {

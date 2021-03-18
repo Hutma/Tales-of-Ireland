@@ -335,15 +335,7 @@ scripted_effect select_special_tier_move_effect = {
 		## Is that a Crocodile?!
 		1 = {	#Super-rare, pretty much an instant kill.
 			trigger = {
-				NOT = { exists = local_var:combat_move_is_that_a_crocodile_flag }
-				# Must be happening in a wild environment.
-				scope:locale = flag:terrain_scope
-				# Can't have already had a crocodile used by either party this duel.
-				NOT = { exists = scope:had_crocodile }
-				# Must be in a place that has crocodiles.
-				single_combat_location_has_crocodilians_trigger = yes
-				# Duel must be one that would end in fatality.
-				duel_will_end_in_opponent_death_trigger = yes
+				always = no
 			}
 			set_local_variable = {
 				name = combat_move_is_that_a_crocodile_flag

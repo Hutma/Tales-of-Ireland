@@ -412,17 +412,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Iceland & the Northern Isles
 		if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -449,17 +438,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Western Scotland & the Isles
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -486,17 +464,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Ireland
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -523,17 +490,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Northern England
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -560,17 +516,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Northern France & Brittany
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -597,17 +542,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Pomerania & Prussia
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -634,17 +568,6 @@ fp1_scandinavian_adventurers.0002 = {
 		###Frisia
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -706,17 +629,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###Novgorod
 		if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -743,17 +655,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###White Rus'
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -780,17 +681,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###Vladimir
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -817,17 +707,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###Ruthenia
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -854,17 +733,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###Estonia
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes
@@ -891,17 +759,6 @@ fp1_scandinavian_adventurers.0003 = {
 		###Zaporizhia
 		else_if = {
 			limit = {
-				NOR = {
-					any_county_in_region = {
-						region = region_leinster
-						significant_north_germanic_presence_trigger = { SCANDI_ADV_TARGET_REGION = region_leinster }
-					}
-					any_county_in_region = {
-						region = region_leinster
-						count >= 3
-						scattered_north_germanic_presence_trigger = yes
-					}
-				}
 				any_county_in_region = {
 					region = region_leinster
 					valid_adventurer_target_trigger = yes

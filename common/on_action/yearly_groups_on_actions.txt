@@ -2,17 +2,19 @@
 	trigger = {
 		has_fp1_dlc_trigger = yes
 		OR = {
-			has_culture_group = culture_group:north_germanic_group
-			religion = religion:germanic_religion
+			has_culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+			religion = religion:northern_legacy_religion
 		}
 	}
 	weight_multiplier = {
 		base = 1
 		modifier = {
 			factor = 0.33
-			religion = religion:germanic_religion
+			religion = religion:northern_legacy_religion
 			NOT = {
-				has_culture_group = culture_group:north_germanic_group
+				has_culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
 			}
 		}
 	}

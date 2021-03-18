@@ -108,11 +108,11 @@ innovation_quilted_armor = {
 	group = culture_group_military
 	culture_era = culture_era_tribal
 	icon = @weapons_and_armor_02
-
-	unlock_maa = armored_footmen_leinster
-	unlock_maa = armored_footmen_munster
-	unlock_maa = armored_footmen_connacht
-	unlock_maa = armored_footmen_ulster
+	
+	modifier = {
+		skirmishers_toughness_add = 2
+		pikemen_toughness_add = 2
+	}
 
 	flag = global_regular
 	flag = tribal_era_regular

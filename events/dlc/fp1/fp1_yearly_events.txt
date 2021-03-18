@@ -70,342 +70,6 @@ scripted_trigger suitably_terrible_knight_trigger = {
 	NOT = { has_trait = blind }
 }
 
-#	A thrall leaves your court in the night.
-fp1_yearly.0001 = {
-	type = character_event
-	title = fp1_yearly.0001.t
-	desc = fp1_yearly.0001.desc
-	theme = stewardship
-	left_portrait = {
-		character = scope:scapegoat
-		animation = shame
-	}
-	override_background = { event_background = throne_room }
-
-	trigger = {
-		#DLC check.
-		has_fp1_dlc_trigger = yes
-		#Standard checks.
-		is_available_even_at_war_adult = yes
-		NOT = { has_character_flag = had_event_fp1_yearly_0001 }
-		is_landed = yes
-		#Must be able to raid, or else your thrall economy is being phased out.
-		can_raid_trigger = yes
-		#Should be North Germanic, or the flavour won't make sense.
-		has_culture_group = culture_group:north_germanic_group
-		#Needs a knight for scapegoating.
-		any_knight = {
-			count >= 1
-			suitably_terrible_knight_trigger = yes
-		}
-	}
-
-	weight_multiplier = {
-		base = 1
-		
-		#Weight up a little for rulers that thralls are desperate to escape from.
-		modifier = {
-			add = 0.5
-			has_trait = sadistic
-		}
-		modifier = {
-			add = 0.25
-			has_trait = callous
-		}
-
-		#And weight down for anyone who's a bit nicer. Not to suggest that the thralls are treated particularly well, but they're not being casually murdered for fun like a sadist might.
-		modifier = {
-			add = -0.5
-			has_trait = compassionate
-		}
-		modifier = {
-			add = -0.25
-			has_trait = forgiving
-		}
-	}
-
-	immediate = {
-		add_character_flag = {
-			flag = had_event_fp1_yearly_0001
-			days = 1825
-		}
-		# Pick a fall guy.
-		random_knight = {
-			limit = { suitably_terrible_knight_trigger = yes }
-			weight = {
-				# Every point of prowess a knight has lowers the chance for it to be them by 2%.
-				base = 0
-				modifier = {
-					add = {
-						value = 50
-						subtract = prowess
-					}
-				}
-				# And every point of compassion another 1%.
-				modifier = { add = ai_compassion }
-			}
-			save_scope_as = scapegoat
-		}
-		# Give the escaped thrall a gender for loc.
-		random_dummy_gender_effect = yes
-		# Remove the stolen jewels.
-		remove_short_term_gold = medium_gold_value
-	}
-
-	# Send out descriptions of the thrall and the stolen goods.
-	option = {
-		name = fp1_yearly.0001.a
-
-		duel = {
-			skill = stewardship
-			value = decent_skill_rating
-			# The thrall is spotted and captured several villages away.
-			50 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = 3.5
-					min = -49
-				}
-				desc = fp1_yearly.0001.a.tt_success
-				send_interface_toast = {
-					title = fp1_yearly.0001.a.tt_success
-					left_icon = root
-					add_prestige = medium_prestige_gain
-					add_gold = medium_gold_value
-				}
-			}
-			# The thrall slips the net, with your stolen goods.
-			50 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = -3.5
-					min = -49
-				}
-				desc = fp1_yearly.0001.a.tt_failure
-				send_interface_toast = {	
-					title = fp1_yearly.0001.a.tt_failure
-					left_icon = root
-					custom_tooltip = fp1_yearly.0001.gold_stays_lost.tt
-				}
-			}
-		}
-
-		stress_impact = {
-			diligent = medium_stress_impact_loss
-			lazy = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_energy = 0.5
-				ai_rationality = 0.25
-			}
-			modifier = {	# Weight up for stress.
-				add = 20
-				has_trait = diligent
-			}
-			modifier = {	# Weight down for stress.
-				add = -20
-				has_trait = lazy
-			}
-		}
-	}
-	
-	#Start a manhunt.
-	option = {
-		name = fp1_yearly.0001.b
-
-		duel = {
-			skill = martial
-			value = decent_skill_rating
-			#The thrall is caught before they can get far.
-			50 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = 3.5
-					min = -49
-				}
-				desc = fp1_yearly.0001.b.tt_success
-				send_interface_toast = {
-					title = fp1_yearly.0001.b.tt_success
-					left_icon = root
-					add_prestige = medium_prestige_gain
-					add_gold = medium_gold_value
-				}
-			}
-			#The thrall slips the net, with your stolen goods.
-			50 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = -3.5
-					min = -49
-				}
-				desc = fp1_yearly.0001.b.tt_failure
-				send_interface_toast = {	
-					title = fp1_yearly.0001.b.tt_failure
-					left_icon = root
-					custom_tooltip = fp1_yearly.0001.gold_stays_lost.tt
-				}
-			}
-		}
-
-		stress_impact = {
-			diligent = medium_stress_impact_loss
-			lazy = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_energy = 0.5
-				ai_rationality = 0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = diligent
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = lazy
-			}
-		}
-	}
-	
-	#Fine scope:scapegoat.
-	option = {
-		name = fp1_yearly.0001.c
-
-		#And no money was lost after all.
-		add_prestige = medium_prestige_gain
-
-		#Unless you're scope:scapegoat.
-		scope:scapegoat = {
-			pay_short_term_gold = {
-				target = root
-				gold = root.medium_gold_value
-			}
-			#Who is, understandably, a bit miffed.
-			progress_towards_rival_effect = {
-				CHARACTER = root
-				OPINION = no
-			}
-			add_opinion = {
-				target = root
-				modifier = angry_opinion
-				opinion = -20
-			}
-		}
-
-		stress_impact = {
-			wrathful = minor_stress_impact_loss
-			greedy = medium_stress_impact_loss
-			vengeful = major_stress_impact_loss
-			calm = minor_stress_impact_gain
-			generous = medium_stress_impact_gain
-			forgiving = major_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_vengefulness = 0.25
-				ai_compassion = -0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 10
-				has_trait = wrathful
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = greedy
-			}
-			modifier = {	#Weight up for stress.
-				add = 30
-				has_trait = vengeful
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = calm
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = generous
-			}
-			modifier = {	#Weight down for stress.
-				add = -30
-				has_trait = forgiving
-			}
-		}
-	}
-
-	#Not your fault, scope:scapegoat. These things happen.
-	option = {
-		name = fp1_yearly.0001.d
-
-		#Some assets are gone for good.
-		custom_tooltip = fp1_yearly.0001.gold_stays_lost.tt
-
-		#Welp, you _did_ show clemency.
-		if = {
-			limit = {
-				can_add_hook = {
-					type = favor_hook
-					target = scope:scapegoat
-				}
-			}
-			add_hook = {
-				type = favor_hook
-				target = scope:scapegoat
-			}
-		}
-		scope:scapegoat = {
-			add_opinion = {
-				target = root
-				modifier = relieved_opinion
-				opinion = 20
-			}
-		}
-
-		stress_impact = {
-			calm = minor_stress_impact_loss
-			generous = medium_stress_impact_loss
-			forgiving = major_stress_impact_loss
-			wrathful = minor_stress_impact_gain
-			greedy = medium_stress_impact_gain
-			vengeful = major_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_compassion = 0.5
-				ai_vengefulness = -0.5
-			}
-			modifier = {	#Weight up for stress.
-				add = 10
-				has_trait = calm
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = generous
-			}
-			modifier = {	#Weight up for stress.
-				add = 30
-				has_trait = forgiving
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = wrathful
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = greedy
-			}
-			modifier = {	#Weight down for stress.
-				add = -30
-				has_trait = vengeful
-			}
-		}
-	}
-}
-
 ##################################################
 # Locals Call for Courtier to be Declared Nithing
 # by Ewan Cowhig Croft
@@ -537,8 +201,8 @@ fp1_yearly.0011 = {
 		#Must have at least one suitable courtier.
 		any_courtier = { offensive_courtier_candidate_trigger = yes }
 		#Both yourself and your capital must be Germanic Pagans.
-		religion = religion:germanic_religion
-		capital_county.religion = religion:germanic_religion
+		religion = religion:northern_legacy_religion
+		capital_county.religion = religion:northern_legacy_religion
 	}
 
 	weight_multiplier = {
@@ -963,7 +627,7 @@ fp1_yearly.0021 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0021 }
 		is_landed = yes
 		#Must be North Germanic.
-		has_culture_group = culture_group:north_germanic_group
+		has_culture_group = culture_group:toi_partholonian_group
 		#Holmgangs must still be in fashion.
 		NOT = {
 			culture = { has_cultural_era_or_later = culture_era_high_medieval }
@@ -1160,20 +824,7 @@ fp1_yearly.0021 = {
 			125 = {
 				trigger = {
 					#Exempt faiths that don't eat pork: technically the pig could be as a pet or for non-edible purposes, but it scans best if we just don't bring this up.
-					NOR = {
-						scope:first_knight = {
-							OR = {
-								religion = religion:judaism_religion
-								religion = religion:islam_religion
-							}
-						}
-						scope:second_knight = {
-							OR = {
-								religion = religion:judaism_religion
-								religion = religion:islam_religion
-							}
-						}
-					}
+					always = yes
 				}
 				save_scope_value_as = {
 					name = dispute_nature
@@ -1585,7 +1236,10 @@ fp1_yearly.0031 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0031 }
 		is_landed = yes
 		#Must be some form of North Germanic culture.
-		has_culture_group = culture_group:north_germanic_group
+		OR = {
+			has_culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		#And that culture must not be too advanced.
 		culture = {
 			NOT = { has_cultural_era_or_later = culture_era_high_medieval }
@@ -1926,277 +1580,21 @@ scripted_trigger suitable_islamic_realm_trigger = {
 	#Making sure to only grab rulers from the Middle East.
 	capital_province = {
 		OR = {
-			geographical_region = world_asia_minor
-			geographical_region = world_middle_east_jerusalem
-			geographical_region = world_middle_east_arabia
-			geographical_region = world_middle_east_persia
-			geographical_region = world_india_rajastan
+			always = no
 		}
 	}
 	#And then misc checks to make sure that the tone is correct.
 	top_liege = {
 		NOR = {
 			#Such as the liege not having much contact with Germanic Paganism.
-			religion = religion:germanic_religion
-			any_vassal_or_below = { religion = religion:germanic_religion }
+			religion = religion:northern_legacy_religion
+			any_vassal_or_below = { religion = religion:northern_legacy_religion }
 			#The realm not being positioned next door to root.
 			character_is_realm_neighbor = root.top_liege
 			#And the realm generally not being inside the same (admittedly large) area.
 			any_realm_county = {
-				title_province = { geographical_region = dlc_fp1_region_russian_steppe }
+				title_province = { always = no }
 			}
-		}
-	}
-}
-
-#	An Islamic explorer stops by for a visit.
-fp1_yearly.0041 = {
-	type = character_event
-	title = fp1_yearly.0041.t
-	desc = fp1_yearly.0041.desc
-	theme = stewardship
-	left_portrait = {
-		character = scope:explorer
-		animation = disapproval
-	}
-	right_portrait = {
-		character = scope:sponsoring_liege
-		animation = personality_rational
-	}
-	override_background = { event_background = throne_room }
-
-	trigger = {
-		#DLC check.
-		has_fp1_dlc_trigger = yes
-		#Standard checks.
-		is_available_even_at_war_adult = yes
-		NOT = { has_character_flag = had_event_fp1_yearly_0041 }
-		is_landed = yes
-		#Must be a Norse pagan tribal.
-		has_government = tribal_government
-		religion = religion:germanic_religion
-		#With a capital in the steppe/Russia.
-		capital_province = { geographical_region = dlc_fp1_region_russian_steppe }
-		#Just for good measure, you should probably be a small-ish realm.
-		realm_size <= medium_realm_size
-		#No same-realm Muslims.
-		top_liege = {
-			NOR = {
-				religion = religion:islam_religion
-				any_vassal_or_below = { religion = religion:islam_religion }
-			}
-		}
-		#A suitable Islamic realm for the explorer to have come from must exists.
-		any_kingdom = {
-			exists = holder
-			holder = { suitable_islamic_realm_trigger = yes }
-		}
-	}
-
-	weight_multiplier = {
-		base = 1
-	}
-
-	immediate = {
-		add_character_flag = {
-			flag = had_event_fp1_yearly_0041
-			days = 3650
-		}
-		#Grab home barony for loc.
-		capital_barony = { save_scope_as = capital_barony }
-		#Assign a home realm for the explorer.
-		random_kingdom = {
-			limit = {
-				exists = holder
-				holder = { suitable_islamic_realm_trigger = yes}
-			}
-			holder = { save_scope_as = sponsoring_liege }
-		}
-		#Create the Islamic explorer.
-		create_character = {
-			location = root.capital_province
-			template = fp1_islamic_explorer_character
-			save_scope_as = explorer
-		}
-	}
-
-	#Host a small blot.
-	option = {
-		name = fp1_yearly.0041.a
-
-		#Diplomacy duel to see how well you present yourself.
-		duel = {
-			skill = diplomacy
-			value = decent_skill_rating
-			#Your blot impresses the explorer.
-			40 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = 3.5
-					min = -49
-				}
-				desc = fp1_yearly.0041.a.tt_success
-				send_interface_toast = {
-					title = fp1_yearly.0041.a.tt_success
-					left_icon = scope:explorer
-					add_prestige = medium_prestige_gain
-					add_character_modifier = {
-						modifier = exotic_foreign_lord_fp1_modifier
-						years = 10
-					}
-				}
-			}
-			#Your pagan ways disgust the explorer.
-			60 = {
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = -3.5
-					min = -49
-				}
-				desc = fp1_yearly.0041.a.tt_failure
-				send_interface_toast = {	
-					title = fp1_yearly.0041.a.tt_failure
-					left_icon = scope:explorer
-					add_prestige = minor_prestige_loss
-					add_character_modifier = {
-						modifier = horrifying_foreign_lord_fp1_modifier
-						years = 5
-					}
-				}
-			}
-		}
-
-		stress_impact = {
-			zealous = medium_stress_impact_loss
-			cynical = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_zeal = 0.5
-				ai_sociability = 0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = zealous
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = cynical
-			}
-		}
-	}
-	
-	#Invite them to stay and convert you.
-	option = {
-		name = fp1_yearly.0041.b
-		#Prohibit the AI from converting to far-away religions unless they're genuinely very interested in scope:explorer's faith.
-		trigger = {
-			OR = {
-				is_ai = no
-				AND = {
-					NOR = {
-						has_trait = zealous #Zealous characters never convert on a whim.
-						has_trait = cynical	#Cynical characters aren't really interested in what anyone is selling.
-						has_trait = arrogant #Arrogant characters believe their faith is already the best, even if they don't care much about it.
-						has_trait = paranoid #Paranoid characters don't trust scope:explorer's tales.
-					}
-					OR = {
-						has_trait = humble	#Humble characters like to give everyone a fair chance to explain their POV.
-						has_trait = trusting #Trusting characters can be talked into many things, given time & charisma.
-					}
-				}
-			}
-		}
-		
-		#Get scope:explorer as a courtier.
-		add_courtier = scope:explorer
-		#Sort conversion.
-		set_character_faith_with_conversion = scope:explorer.faith
-		#Get scope:sponsoring_liege as a friend, if possible.
-		if = {
-			limit = {
-				can_set_relation_friend_trigger = { CHARACTER = scope:sponsoring_liege }
-			}
-			set_relation_friend = scope:sponsoring_liege
-			reverse_add_opinion = {
-				target = scope:sponsoring_liege
-				modifier = pious_opinion
-				opinion = 50
-			}
-		}
-
-		stress_impact = {
-			humble = medium_stress_impact_loss
-			trusting = major_stress_impact_loss
-			paranoid = minor_stress_impact_gain
-			arrogant = medium_stress_impact_gain
-			zealous = massive_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_boldness = 0.25
-				ai_zeal = -0.75
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = humble
-			}
-			modifier = {	#Weight up for stress.
-				add = 30
-				has_trait = trusting
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = paranoid
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = arrogant
-			}
-			modifier = {	#Weight down for stress.
-				add = -50
-				has_trait = zealous
-			}
-		}
-	}
-	
-	#Give them the boot.
-	option = {
-		name = fp1_yearly.0041.c
-
-		#Consolation prize for giving them the boot.
-		## Stress loss handled in stress_impact.
-
-		stress_impact = {
-			base = minor_stress_loss
-			zealous = minor_stress_impact_loss
-			shy = major_stress_impact_loss
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_zeal = -0.25
-				ai_sociability = -0.5
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = zealous
-			}
-			modifier = {	#Weight down for stress.
-				add = -30
-				has_trait = shy
-			}
-		}
-	}
-
-	#Clean-up characters, if appropriate.
-	after = {
-		# We use a separate event delayed by a day so that scope:explorer isn't dead in the toasts.
-		trigger_event = {
-			id = fp1_yearly.0042
-			days = 1
 		}
 	}
 }
@@ -2252,7 +1650,7 @@ fp1_yearly.0051 = {
 		#With a rural, North Germanic capital.
 		capital_county = {
 			#Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
+			culture_group = culture_group:toi_partholonian_group
 			development_level <= terrible_development_level
 		}
 	}
@@ -3313,344 +2711,6 @@ scripted_effect fp1_0071_apply_hungry_troll_modifier_effect = {
 	}
 }
 
-#	[Rural] A Troll has been sighted & is attacking villages/peasants
-fp1_yearly.0071 = {
-	type = character_event
-	title = fp1_yearly.0071.t
-	desc = {
-		desc = fp1_yearly.0071.desc.intro
-		# Troll type.
-		first_valid = {
-			# A towering bear.
-			triggered_desc = {
-				trigger = { scope:troll_type = flag:bear }
-				desc = fp1_yearly.0071.desc.troll_type.bear
-			}
-			# An ancient wolf.
-			triggered_desc = {
-				trigger = { scope:troll_type = flag:wolf }
-				desc = fp1_yearly.0071.desc.troll_type.wolf
-			}
-			# A colossal wolverine.
-			triggered_desc = {
-				trigger = { scope:troll_type = flag:wolverine }
-				desc = fp1_yearly.0071.desc.troll_type.wolverine
-			}
-			# A stealthy lynx.
-			triggered_desc = {
-				trigger = { scope:troll_type = flag:lynx }
-				desc = fp1_yearly.0071.desc.troll_type.lynx
-			}
-			# An enraged moose.
-			triggered_desc = {
-				trigger = { scope:troll_type = flag:moose }
-				desc = fp1_yearly.0071.desc.troll_type.moose
-			}
-		}
-		# Outro type.
-		first_valid = {
-			triggered_desc = {
-				trigger = { exists = scope:loveli_lakes }
-				desc = fp1_yearly.0071.desc.outro.loveli_lakes
-			}
-			desc = fp1_yearly.0071.desc.outro.fallback
-		}
-	}
-	theme = hunting
-	left_portrait = {
-		character = root
-		animation = disbelief
-	}
-	right_portrait = {
-		character = scope:marshal
-		animation = dismissal
-	}
-	lower_left_portrait = scope:loveli_lakes
-	override_background = { event_background = throne_room }
-
-	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
-		# Standard checks.
-		is_available_even_at_war_adult = yes
-		NOT = { has_character_flag = had_event_fp1_yearly_0071 }
-		is_landed = yes
-		# Must be a tribal in Scandinavia.
-		has_government = tribal_government
-		fp1_is_in_scandinavia = yes
-		# With a rural, North Germanic capital.
-		capital_county = {
-			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
-			development_level <= terrible_development_level
-			# And ensure it doesn't already have a troll problem.
-			NOT = { has_county_modifier = fp1_yearly_0071_troll_attacks_modifier }
-		}
-	}
-
-	weight_multiplier = {
-		base = 1
-		
-		# Weight down a little if you're a hunter, since it means you're probably trimming the local wildlife down quite dramatically.
-		modifier = {
-			add = -0.5
-			has_trait = lifestyle_hunter
-		}
-	}
-
-	immediate = {
-		add_character_flag = {
-			flag = had_event_fp1_yearly_0071
-			days = 1825
-		}
-		# Roll to determine what type of beast we get.
-		## Five options of 20% each.
-		random_list = {
-			# A towering bear.
-			200 = {
-				save_scope_value_as = {
-					name = troll_type
-					value = flag:bear
-				}	
-			}
-			# An ancient wolf.
-			200 = {
-				save_scope_value_as = {
-					name = troll_type
-					value = flag:wolf
-				}
-			}
-			# A colossal wolverine.
-			200 = {
-				save_scope_value_as = {
-					name = troll_type
-					value = flag:wolverine
-				}
-			}
-			# A stealthy lynx.
-			200 = {
-				save_scope_value_as = {
-					name = troll_type
-					value = flag:lynx
-				}
-			}
-			# An enraged moose.
-			200 = {
-				save_scope_value_as = {
-					name = troll_type
-					value = flag:moose
-				}
-			}
-		}
-		## Did a møøse bite root's sister?
-		if = {
-			limit = {
-				scope:troll_type = flag:moose
-				# We could go for a more complex implementation, but as we want to keep the meme rare (and therefore less stale), we hard-lock it down to just shieldmaidens.
-				any_sibling = { fp1_0071_loveli_lakes_trigger = yes }
-			}
-			random_sibling = {
-				limit = { fp1_0071_loveli_lakes_trigger = yes }
-				save_scope_as = loveli_lakes
-			}
-		}
-		# Grab the martial, if possible, for delegation.
-		if = {
-			limit = {
-				any_martial_councillor = { fp1_0071_valid_marshal_for_delegation_trigger = yes }
-			}
-			random_martial_councillor = {
-				limit = { fp1_0071_valid_marshal_for_delegation_trigger = yes }
-				save_scope_as = marshal
-			}
-		}
-	}
-
-	# I'll kill the beast myself!
-	option = {
-		name = fp1_yearly.0071.a
-
-		# Inform root that they'll get a follow-up event.
-		custom_tooltip = fp1_yearly.0071.a.tt
-		# Calc which event to send out.
-		## A towering bear.
-		if = {
-			limit = { scope:troll_type = flag:bear }
-			trigger_event = {
-				id = fp1_yearly.0081
-				days = 14
-			}
-		}
-		## An ancient wolf.
-		else_if = {
-			limit = { scope:troll_type = flag:wolf }
-			trigger_event = {
-				id = fp1_yearly.0082
-				days = 14
-			}
-		}
-		## A colossal wolverine.
-		else_if = {
-			limit = { scope:troll_type = flag:wolverine }
-			trigger_event = {
-				id = fp1_yearly.0083
-				days = 14
-			}
-		}
-		## A stealthy lynx.
-		else_if = {
-			limit = { scope:troll_type = flag:lynx }
-			trigger_event = {
-				id = fp1_yearly.0084
-				days = 14
-			}
-		}
-		## An enraged moose.
-		else = {
-			trigger_event = {
-				id = fp1_yearly.0085
-				days = 14
-			}
-		}
-
-		stress_impact = {
-			brave = minor_stress_impact_loss
-			craven = minor_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_honor = 0.5
-				ai_vengefulness = 0.5
-			}
-			modifier = {	# Weight up for stress.
-				add = 10
-				has_trait = brave
-			}
-			modifier = {	# Weight down for stress.
-				add = -10
-				has_trait = craven
-			}
-		}
-	}
-	
-	# Scope:marshal, take care of this.
-	option = {
-		name = fp1_yearly.0071.b
-		trigger = { exists = scope:marshal }
-
-		# Martial duel for the marshal.
-		scope:marshal = {
-			duel = {
-				skill = martial
-				value = very_high_skill_rating
-				# Your marshal and their troops hunt down the beast.
-				50 = {
-					compare_modifier = {
-						value = scope:duel_value
-						multiplier = 3.5
-						min = -49
-					}
-					desc = fp1_yearly.0071.b.tt_success
-					root = {
-						send_interface_toast = {
-							title = fp1_yearly.0071.b.tt_success
-							left_icon = scope:marshal
-							# Huzzah! Everyone's a hero!
-							scope:marshal = { add_prestige = major_prestige_gain }
-							add_prestige = medium_prestige_gain
-						}
-					}
-				}
-				# The beast eludes scope:marshal and continues to stalk the province.
-				50 = {
-					compare_modifier = {
-						value = scope:duel_value
-						multiplier = -3.5
-						min = -49
-					}
-					desc = fp1_yearly.0071.b.tt_failure
-					root = {
-						send_interface_toast = {	
-							title = fp1_yearly.0071.b.tt_failure
-							left_icon = scope:marshal
-							# Welp, that's a lot of failure involved for everyone.
-							scope:marshal = { add_prestige = major_prestige_loss }
-							add_prestige = medium_prestige_loss
-							# Capital_county isn't happy.
-							fp1_0071_apply_hungry_troll_modifier_effect = yes
-						}
-					}
-				}
-			}
-		}
-
-		stress_impact = {
-			craven = minor_stress_impact_loss
-			lazy = medium_stress_impact_loss
-			brave = minor_stress_impact_gain
-			diligent = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_honor = -0.25
-				ai_energy = -0.5
-			}
-			modifier = {	# Weight up for stress.
-				add = 10
-				has_trait = craven
-			}
-			modifier = {	# Weight up for stress.
-				add = 20
-				has_trait = lazy
-			}
-			modifier = {	# Weight down for stress.
-				add = -10
-				has_trait = brave
-			}
-			modifier = {	# Weight down for stress.
-				add = -20
-				has_trait = diligent
-			}
-		}
-	}
-	
-	# It's probably just a bear. Deal with it yourselves, cravens.
-	option = {
-		name = fp1_yearly.0071.c
-
-		# Gain some prestige for your toughness.
-		add_prestige = minor_prestige_gain
-		# But your capital county is upset.
-		fp1_0071_apply_hungry_troll_modifier_effect = yes
-
-		stress_impact = {
-			cynical = minor_stress_impact_loss
-			craven = medium_stress_impact_loss
-			brave = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_vengefulness = -0.25
-				ai_honor = -0.5
-			}
-			modifier = {	# Weight up for stress.
-				add = 10
-				has_trait = cynical
-			}
-			modifier = {	# Weight up for stress.
-				add = 20
-				has_trait = craven
-			}
-			modifier = {	# Weight down for stress.
-				add = -20
-				has_trait = brave
-			}
-		}
-	}
-}
 
 scripted_effect fp1_0081_invalidation_toast_effect = {
 	send_interface_toast = {	
@@ -3800,7 +2860,10 @@ fp1_yearly.0081 = {
 		# With a rural, North Germanic capital.
 		capital_county = {
 			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
 			development_level <= terrible_development_level
 		}
 	}
@@ -3952,8 +3015,11 @@ fp1_yearly.0082 = {
 		# With a rural, North Germanic capital.
 		capital_county = {
 			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
-			development_level <= terrible_development_level
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			development_level <= 15
 		}
 	}
 
@@ -4104,8 +3170,11 @@ fp1_yearly.0083 = {
 		# With a rural, North Germanic capital.
 		capital_county = {
 			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
-			development_level <= terrible_development_level
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			development_level <= 15
 		}
 	}
 
@@ -4256,8 +3325,11 @@ fp1_yearly.0084 = {
 		# With a rural, North Germanic capital.
 		capital_county = {
 			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
-			development_level <= terrible_development_level
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			development_level <= 15
 		}
 	}
 
@@ -4421,8 +3493,11 @@ fp1_yearly.0085 = {
 		# With a rural, North Germanic capital.
 		capital_county = {
 			# Checking the capital, not the character, since it's a local superstition rather than something ye're insisiting on.
-			culture_group = culture_group:north_germanic_group
-			development_level <= terrible_development_level
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
+			development_level <= 15
 		}
 	}
 
@@ -4577,7 +3652,10 @@ fp1_yearly.0091 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0091 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_coastal_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 	}
 
 	weight_multiplier = {
@@ -4813,7 +3891,10 @@ fp1_yearly.0101 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0101 }
 		is_landed = yes
 		# Valid for North Germanics only.
-		culture_group = culture_group:north_germanic_group
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# Has a valid courtier/guest who can quiz you.
 		any_courtier_or_guest = { fp1_valid_riddler_at_court_trigger = yes }
 		# Doesn't have an established extreme hatred of riddles.
@@ -5214,8 +4295,8 @@ scripted_trigger fp1_0111_superstitious_courtier_trigger = {
 	# Basic checks.
 	is_available_ai_adult = yes
 	OR = {
-		fp1_is_norse = yes
-		religion = religion:germanic_religion
+		culture_group = culture_group:toi_partholonian_group
+		religion = religion:northern_legacy_religion
 	}
 	# Rule out a few key traits.
 	NOR = {
@@ -5247,8 +4328,8 @@ scripted_trigger fp1_0111_suspicious_courtier_trigger = {
 	# Basic checks.
 	is_available_ai_adult = yes
 	OR = {
-		fp1_is_norse = yes
-		religion = religion:germanic_religion
+		culture_group = culture_group:toi_partholonian_group
+		religion = religion:northern_legacy_religion
 	}
 	# Would-be sorcerers need to either know what they're doing, or else have absolutely no clue.
 	OR = {
@@ -5301,8 +4382,8 @@ scripted_trigger fp1_0111_discountable_courtier_trigger = {
 	# Basic checks.
 	is_available_ai_adult = yes
 	OR = {
-		fp1_is_norse = yes
-		religion = religion:germanic_religion
+		culture_group = culture_group:toi_partholonian_group
+		religion = religion:northern_legacy_religion
 	}
 	# Discountables must not meet minimum requirements to be suspicious.
 	fp1_0111_suspicious_courtier_trigger = no
@@ -5608,12 +4689,8 @@ fp1_yearly.0111 = {
 			NOT = { has_doctrine = doctrine_witchcraft_accepted }
 		}
 		OR = {
-			fp1_is_norse_tribal = yes
-			# Allow this after feudalisation, but not for kings and emperors with more important things going on.
-			AND = {
-				fp1_is_norse = yes
-				highest_held_title_tier <= tier_duchy 
-			}
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
 		}
 		# Make sure we have a suitably superstitious character for scope:courtier.
 		any_courtier = { fp1_0111_superstitious_courtier_trigger = yes }
@@ -6675,7 +5752,10 @@ fp1_yearly.0511 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0511 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		fp1_is_in_scandinavia_or_colonies = yes
 		# Must have a suitable random courtier.
 		any_courtier = { fp1_keeps_stinking_hunting_trophy = yes }
@@ -7694,7 +6774,10 @@ fp1_yearly.0541 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0541 }
 		is_landed = yes
 		# Intended for Norse-ish tribals.
-		fp1_is_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		fp1_is_in_scandinavia_or_colonies = yes
 		# Has a valid child.
 		any_child = { fp1_0541_valid_child_prankster_trigger = yes }
@@ -8015,8 +7098,10 @@ fp1_yearly.0551 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0551 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse_tribal = yes
-		fp1_is_in_scandinavia = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# Has a suitable courtier.
 		any_courtier = { fp1_0551_appropriately_smelly_courtier_trigger = yes }
 	}
@@ -8459,7 +7544,10 @@ fp1_yearly.0561 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0561 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# Has an appropriate available knight.
 		any_knight = { fp1_0561_is_friendly_knight_trigger = yes }
 		# Must be a suitable challengee.
@@ -8849,7 +7937,10 @@ fp1_yearly.0571 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0571 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# Must have an appropriate runestone in your territory.
 		any_held_title = { fp1_0571_suitable_vandal_site_trigger = yes }
 		# A valid child.
@@ -9204,7 +8295,7 @@ fp1_yearly.0581 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0581 }
 		is_landed = yes
 		# Filter to shieldmaiden-having religions.
-		religion = religion:germanic_religion
+		religion = religion:northern_legacy_religion
 		# Can't be following an equal faith.
 		NOT = {
 			faith = { has_doctrine = doctrine_gender_equal }
@@ -9521,14 +8612,11 @@ fp1_yearly.0581 = {
 ##################################################
 
 scripted_trigger fp1_0591_secondary_county_trigger = {
-	holder = root
-	culture = { has_innovation = innovation_all_things }
+	always = no
 }
 
 scripted_trigger fp1_0591_fighting_counties_at_thing_trigger = {
-	tier = tier_county
-	culture = { has_innovation = innovation_all_things }
-	any_neighboring_county = { fp1_0591_secondary_county_trigger = yes }
+	always = no
 }
 
 #	One of your counties is engaged in an argument with another.
@@ -9751,8 +8839,7 @@ fp1_yearly.0591 = {
 ##################################################
 
 scripted_trigger fp1_0601_valid_county_for_things_trigger = {
-	tier = tier_county
-	culture = { has_innovation = innovation_all_things }
+	always = no
 }
 
 #	An incredibly boring local assembly tries your patience.
@@ -10182,7 +9269,10 @@ fp1_yearly.0611 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0611 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# You must qualify for imitation in some way.
 		OR = {
 			has_trait = viking
@@ -10946,7 +10036,7 @@ fp1_yearly.0632 = {
 
 scripted_trigger fp1_0641_raider_with_longships_trigger = {
 	can_raid_trigger = yes
-	culture = { has_innovation = innovation_longboats }
+	culture = { has_innovation = innovation_armilary_sphere }
 	any_sub_realm_county = { is_coastal_county = yes }
 }
 
@@ -11308,7 +10398,10 @@ fp1_yearly.0651 = {
 		# Weight up for the Norse a bit.
 		modifier = {
 			add = 1
-			fp1_is_norse = yes
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
 		}
 		# Raiders spend more time at sea. Probably. Vikings do at least.
 		modifier = {
@@ -12365,7 +11458,10 @@ fp1_yearly.0691 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0691 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse_tribal = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 		# There must be at least one knight who's had a crisis of conscience.
 		any_knight = { fp1_0691_knight_still_valid_convertable_trigger = yes }
 	}
@@ -12653,7 +11749,10 @@ fp1_yearly.0692 = {
 			# Scope:raider shouldn't have had this event recently either.
 			#NOT = { has_character_flag = had_event_fp1_yearly_0691 }
 			# We don't want all raiding to result in tons of variables floating about.
-			fp1_is_norse_tribal = yes
+			OR = {
+				culture_group = culture_group:toi_partholonian_group
+				culture = culture:sea_fomorians
+			}
 			# There must be at least one eligible knight in the raid army.
 			any_knight = { fp1_0692_valid_convertable_knight_trigger = yes }
 		}
@@ -12715,13 +11814,13 @@ fp1_yearly.0692 = {
 
 scripted_trigger valid_germanic_faith_trigger = {
 	#Small enough that it probably doesn't need a trigger, but might need to be more complex in future.
-	religion = religion:germanic_religion
+	religion = religion:northern_legacy_religion
 }
 
 scripted_trigger valid_non_germanic_reformed_faith_trigger = {
 	NOR = {
 		faith = { has_doctrine = unreformed_faith_doctrine }
-		religion = religion:germanic_religion
+		religion = religion:northern_legacy_religion
 	}
 }
 
@@ -12751,679 +11850,6 @@ scripted_effect mysterious_stranger_disappears_effect = {
 	hidden_effect = {
 		scope:stranger = {
 			death = { death_reason = death_vanished }
-		}
-	}
-}
-
-#	You notice a stranger has been hanging around the court.
-fp1_yearly.1001 = {
-	type = character_event
-	title = fp1_yearly.1001.t
-	desc = {
-		desc = fp1_yearly.1001.desc.intro
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:sneaks }
-				desc = fp1_yearly.1001.desc.behaviour_1.sneaks
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:leaves_early }
-				desc = fp1_yearly.1001.desc.behaviour_1.leaves_early
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:earnest }
-				desc = fp1_yearly.1001.desc.behaviour_1.earnest
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:confident }
-				desc = fp1_yearly.1001.desc.behaviour_1.confident
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:talkative }
-				desc = fp1_yearly.1001.desc.behaviour_1.talkative
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_1 = flag:eats_their_fill }
-				desc = fp1_yearly.1001.desc.behaviour_1.eats_their_fill
-			}
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:sneaks }
-				desc = fp1_yearly.1001.desc.behaviour_2.sneaks
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:leaves_early }
-				desc = fp1_yearly.1001.desc.behaviour_2.leaves_early
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:earnest }
-				desc = fp1_yearly.1001.desc.behaviour_2.earnest
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:confident }
-				desc = fp1_yearly.1001.desc.behaviour_2.confident
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:talkative }
-				desc = fp1_yearly.1001.desc.behaviour_2.talkative
-			}
-			triggered_desc = {
-				trigger = { scope:ms_behaviour_2 = flag:eats_their_fill }
-				desc =  fp1_yearly.1001.desc.behaviour_2.eats_their_fill
-			}
-		}
-		desc = fp1_yearly.1001.desc.outro
-	}
-	theme = intrigue
-	left_portrait = {
-		character = scope:stranger
-		animation = personality_honorable
-	}
-	override_background = { event_background = feast }
-
-	trigger = {
-		#DLC check.
-		has_fp1_dlc_trigger = yes
-		#Standard checks.
-		is_available_even_at_war_adult = yes
-		NOT = { has_character_flag = had_event_fp1_yearly_1001 }
-		#Scandinavian culture group, and within Scandinavia (plus a few other places).
-		has_culture_group = culture_group:north_germanic_group
-		capital_province = { geographical_region = dlc_fp1_region_mysterious_stranger_locations }
-	}
-
-	weight_multiplier = {
-		base = 1
-	}
-
-	immediate = {
-		add_character_flag = {
-			flag = had_event_fp1_yearly_1001
-			days = 7300
-		}
-		#Spawn a suitable mysterious stranger.
-		##Each of these has a list of traits that overlap with 1-2 other spawnable categories, as well as some unique tells.
-		##The idea is that they're structured enough to be able to guess (sorta) first time, but random enough that you won't always guess correctly. At the same time, learning the tells over time, and what makes a character definitely/definitely not a specific type of stranger, rewards repeated play.
-		random_list = {
-			#Spawn a godi.
-			100 = {
-				#Requires some contact with Germanic Paganism.
-				trigger = {
-					OR = {
-						valid_germanic_faith_trigger = yes
-						any_sub_realm_county = { valid_germanic_faith_trigger = yes }
-						any_neighboring_top_liege_realm_owner = { valid_germanic_faith_trigger = yes }
-					}
-				}
-				#Create the character & set up details for later.
-				create_character = {
-					location = root.capital_province
-					template = fp1_ms_godi_character
-					save_scope_as = stranger
-				}
-				save_scope_value_as = {
-					name = ms_type
-					value = flag:godi
-				}
-				#Figure out what faith the godi would actually have.
-				##Only a random chance for now: this is to give same-religion separate-faith godis a chance to spawn if you're Germanic Pagan yourself.
-				random = {
-					chance = 50
-					if = {
-						limit = { valid_germanic_faith_trigger = yes }
-						faith = { save_scope_as = ms_faith }
-					}
-				}
-				if = {
-					limit = {
-						NOT = { exists = scope:ms_faith }
-						any_sub_realm_county = { valid_germanic_faith_trigger = yes }
-					}
-					random_sub_realm_county = {
-						limit = { valid_germanic_faith_trigger = yes }
-						faith = { save_scope_as = ms_faith }
-					}
-				}
-				else_if  = {
-					limit = {
-						any_neighboring_top_liege_realm_owner = { valid_germanic_faith_trigger = yes }
-					}
-					random_neighboring_top_liege_realm_owner = {
-						limit = { valid_germanic_faith_trigger = yes }
-						faith = { save_scope_as = ms_faith }
-					}
-				}
-				else = {
-					#If you hit this stage, go back to your own Germanic Pagan faith.
-					faith = { save_scope_as = ms_faith }
-				}
-			}
-			#Spawn a missionary from a reformed faith.
-			100 = {
-				#Requires some contact with a reformed faith that isn't Germanic Pagan.
-				trigger = {
-					OR = {
-						valid_non_germanic_reformed_faith_trigger = yes
-						any_sub_realm_county = { valid_non_germanic_reformed_faith_trigger = yes }
-						any_neighboring_top_liege_realm_owner = { valid_non_germanic_reformed_faith_trigger = yes }
-					}
-				}
-				#Create the character & set up details for later.
-				create_character = {
-					location = root.capital_province
-					template = fp1_ms_reformed_missionary_character
-					save_scope_as = stranger
-				}
-				save_scope_value_as = {
-					name = ms_type
-					value = flag:missionary
-				}
-				#Figure out what faith the missionary would actually have.
-				if = {
-					limit = { valid_non_germanic_reformed_faith_trigger = yes }
-					faith = { save_scope_as = ms_faith }
-				}
-				else_if = {
-					limit = {
-						any_sub_realm_county = { valid_non_germanic_reformed_faith_trigger = yes }
-					}
-					random_sub_realm_county = {
-						limit = { valid_non_germanic_reformed_faith_trigger = yes }
-						faith = { save_scope_as = ms_faith }
-					}
-				}
-				else = {
-					random_neighboring_top_liege_realm_owner = {
-						limit = { valid_non_germanic_reformed_faith_trigger = yes }
-						faith = { save_scope_as = ms_faith }
-					}
-				}
-			}
-			#Spawn a nithing.
-			100 = {
-				#No requirements.
-				#Create the character & set up details for later.
-				create_character = {
-					location = root.capital_province
-					template = fp1_ms_nithing_character
-					save_scope_as = stranger
-				}
-				save_scope_value_as = {
-					name = ms_type
-					value = flag:nithing
-				}
-			}
-			#Spawn a warrior.
-			100 = {
-				#No requirements.
-				#Create the character & set up details for later.
-				create_character = {
-					location = root.capital_province
-					template = fp1_ms_warrior_character
-					save_scope_as = stranger
-				}
-				save_scope_value_as = {
-					name = ms_type
-					value = flag:warrior
-				}
-			}
-			#Spawn an ordinary vagrant.
-			##These guys are the wild cards: they have no restrictions on anything, save that they suck at everything. Their job is to be confusing and make you uncertain.
-			100 = {
-				#No requirements.
-				#Create the character & set up details for later.
-				create_character = {
-					location = root.capital_province
-					template = fp1_ms_vagrant_character
-					save_scope_as = stranger
-				}
-				save_scope_value_as = {
-					name = ms_type
-					value = flag:vagrant
-				}
-			}
-		}
-		#Set behaviours.
-		##Each stranger type exhibits two of three possible behaviour patterns in the event description. All behaviour patterns overlap with at least one other stranger type, with the vagrant having access to all of them.
-		random_list = {
-			#Godi
-			100 = {
-				trigger = { scope:ms_type = flag:godi }
-				random_list = {
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:sneaks
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:leaves_early
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:earnest
-						}
-					}
-				}
-				random_list = {
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:sneaks }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:sneaks
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:leaves_early }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:leaves_early
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:earnest }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:earnest
-						}
-					}
-				}
-			}
-			#Missionary
-			100 = {
-				trigger = { scope:ms_type = flag:missionary }
-				random_list = {
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:confident
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:leaves_early
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:talkative
-						}
-					}
-				}
-				random_list = {
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:confident }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:confident
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:leaves_early }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:leaves_early
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:talkative }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:talkative
-						}
-					}
-				}
-			}
-			#Nithing
-			100 = {
-				trigger = { scope:ms_type = flag:nithing }
-				random_list = {
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:sneaks
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:eats_their_fill
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:earnest
-						}
-					}
-				}
-				random_list = {
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:sneaks }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:sneaks
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:eats_their_fill }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:eats_their_fill
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:earnest }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:earnest
-						}
-					}
-				}
-			}
-			#Warrior
-			100 = {
-				trigger = { scope:ms_type = flag:warrior }
-				random_list = {
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:confident
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:eats_their_fill
-						}
-					}
-					33 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:talkative
-						}
-					}
-				}
-				random_list = {
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:confident }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:confident
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:eats_their_fill }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:eats_their_fill
-						}
-					}
-					33 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:talkative }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:talkative
-						}
-					}
-				}
-			}
-			#Vagrant
-			100 = {
-				trigger = { scope:ms_type = flag:vagrant }
-				random_list = {
-					20 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:sneaks
-						}
-					}
-					20 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:leaves_early
-						}
-					}
-					20 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:earnest
-						}
-					}
-					20 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:confident
-						}
-					}
-					20 = {
-						save_scope_value_as = {
-							name = ms_behaviour_1
-							value = flag:talkative
-						}
-					}
-				}
-				random_list = {
-					20 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:sneaks }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:sneaks
-						}
-					}
-					20 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:leaves_early }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:leaves_early
-						}
-					}
-					20 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:earnest }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:earnest
-						}
-					}
-					20 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:confident }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:confident
-						}
-					}
-					20 = {
-						trigger = {
-							NOT = { scope:ms_behaviour_1 = flag:talkative }
-						}
-						save_scope_value_as = {
-							name = ms_behaviour_2
-							value = flag:talkative
-						}
-					}
-				}
-			}
-		}
-		#And sometimes just remove an eye for funsies.
-		random = {
-			chance = 5
-			scope:stranger = { add_trait = one_eyed }
-		}
-	}
-
-	#Ignore them: they're probably harmless.
-	##This leads to a standardised effect: something mildly beneficial/annoying, if the player is unsure or doesn't want to gamble much.
-	option = {
-		name = fp1_yearly.1001.a
-
-		#Let the player know that something will happen.
-		custom_tooltip = fp1_yearly.1001.probably_harmless.tt
-
-		#Configure for standard effects.
-		save_scope_value_as = {
-			name = ms_effect
-			value = flag:standard
-		}
-
-		#Figure out which follow-up event to send.
-		fp1_mysterious_stranger_follow_up_event_picker_effect = yes
-
-		stress_impact = {
-			trusting = minor_stress_impact_loss
-			gregarious = minor_stress_impact_loss
-			paranoid = minor_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_sociability = -0.5
-				ai_compassion = -0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 10
-				has_trait = trusting
-			}
-			modifier = {	#Weight up for stress.
-				add = 10
-				has_trait = gregarious
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = paranoid
-			}
-		}
-	}
-	
-	#Make them a guest of honour!
-	##This leads to a critical effect: we dial up the consequences, in case the player is certain they know who the stranger is/wants to risk it for a biscuit.
-	option = {
-		name = fp1_yearly.1001.b
-
-		#Warn the player that they're signing up for a dramatic event.
-		custom_tooltip = fp1_yearly.1001.guest_of_honour.tt
-
-		#Configure for critical effects.
-		save_scope_value_as = {
-			name = ms_effect
-			value = flag:critical
-		}
-
-		#Figure out which follow-up event to send.
-		fp1_mysterious_stranger_follow_up_event_picker_effect = yes
-
-		stress_impact = {
-			trusting = medium_stress_impact_loss
-			gregarious = medium_stress_impact_loss
-			paranoid = medium_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_sociability = -0.5
-				ai_compassion = -0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = trusting
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = gregarious
-			}
-			modifier = {	#Weight down for stress.
-				add = -20
-				has_trait = paranoid
-			}
-		}
-	}
-	
-	#Give 'em the boot.
-	##Opt-out with mild consequence.
-	option = {
-		name = fp1_yearly.1001.c
-
-		#The mysterious stranger vanishes.
-		mysterious_stranger_disappears_effect = yes
-
-		#Everyone thinks you're a bit mean-spirited, but that's it.
-		if = {
-			limit = { has_character_modifier = generous_host_fp1_modifier }
-			remove_character_modifier = generous_host_fp1_modifier
-		}
-		else = {
-			add_character_modifier = {
-				modifier = stingy_host_fp1_modifier
-				years = 5
-			}
-		}
-
-		stress_impact = {
-			paranoid = minor_stress_impact_loss
-			shy = medium_stress_impact_loss
-			trusting = minor_stress_impact_gain
-			gregarious = minor_stress_impact_gain
-		}
-		ai_chance = {
-			base = 100
-			ai_value_modifier = {
-				ai_sociability = 0.5
-				ai_compassion = 0.25
-			}
-			modifier = {	#Weight up for stress.
-				add = 10
-				has_trait = paranoid
-			}
-			modifier = {	#Weight up for stress.
-				add = 20
-				has_trait = shy
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = trusting
-			}
-			modifier = {	#Weight down for stress.
-				add = -10
-				has_trait = gregarious
-			}
 		}
 	}
 }
@@ -14685,7 +13111,7 @@ fp1_yearly.1061 = {
 		# DLC check.
 		has_fp1_dlc_trigger = yes
 		# Germanic faith.
-		religion = religion:germanic_religion
+		religion = religion:northern_legacy_religion
 		# Shouldn't ever happen, but just in case, exempt sky burials so that the character is never buried twice.
 		NOT = {
 			faith = { has_doctrine_parameter = sky_burials_active }
@@ -16054,7 +14480,10 @@ fp1_yearly.1071 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_1071 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		fp1_is_norse = yes
+		OR = {
+			culture_group = culture_group:toi_partholonian_group
+			culture = culture:sea_fomorians
+		}
 	}
 
 	weight_multiplier = {
@@ -16284,15 +14713,8 @@ fp1_yearly.1081 = {
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_1081 }
 		#Must be North Germanic.
-		has_culture_group = culture_group:north_germanic_group
+		has_culture_group = culture_group:toi_partholonian_group
 		#Has to keep their capital in general Scandinavian core sphere of influence.
-		capital_province = {
-			OR = {
-				geographical_region = world_europe_west
-				geographical_region = world_europe_north
-				geographical_region = world_europe_east
-			}
-		}
 		#The Norse must still be in their hyper-exploratory phase.
 		NOT = {
 			culture = { has_cultural_era_or_later = culture_era_high_medieval }
@@ -16338,25 +14760,6 @@ fp1_yearly.1081 = {
 				save_scope_value_as = {
 					name = phantom_island
 					value = flag:antilia
-				}
-				#If Portugal exists, then obviously they were time-travelling Portuguese.
-				if = {
-					limit = {
-						is_target_in_global_variable_list = {
-							name = unavailable_unique_decisions
-							target = flag:form_portugal_decision
-						}
-					}
-					culture:portuguese = { save_scope_as = antilia_culture }
-				}
-				#If Galician exists, they must have been from Galicia!
-				else_if = {
-					limit = { has_global_variable = visigothic_culture_split }
-					culture:galician = { save_scope_as = antilia_culture }
-				}
-				#Otherwise, bog-standard Visigoths.
-				else = {
-					culture:visigothic = { save_scope_as = antilia_culture }
 				}
 			}
 			#Fortunate Isles
