@@ -136,7 +136,7 @@ suitable_shieldmaiden_gaoler_trigger = {
 
 basic_can_have_trial_by_combat_trigger = {
 	NOT = {
-		culture = culture:cessarian
+		culture_group = culture_group:toi_cessarian_group
 	}
 }
 
