@@ -2846,7 +2846,7 @@ fomorian_tributary_cb = {
 				scope:defender = {
 					every_sub_realm_county = {
 						add = {
-							value = 125
+							value = 50
 						}
 					}
 				}

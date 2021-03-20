@@ -14,6 +14,11 @@
  ceremony_in_newgrange_decision_desc:0 "Newgrange has been invaded several times and our people have lost control over it, for centuries we tried to take it back without success. We hope that someday we will able to perform ceremonies for our gods in this sacred place again."
  ceremony_in_newgrange_decision_tooltip:0 "Perform a religious ceremony in Newgrange"
  ceremony_in_newgrange_decision_confirm:0 "We honor the gods"
+ 
+ take_fomorian_tribute_decision:0 "Collect The Tribute"
+ take_fomorian_tribute_decision_desc:0 "It's time, my tributaries have had time enough to grow their cattle, grow their children and grow their treasury. It's time to take the ancestral tribute, two third of their cattle, gold, and one of their children."
+ take_fomorian_tribute_decision_tooltip:0 "Send the tribute collectors"
+ take_fomorian_tribute_decision_confirm:0 "Send the tribute collectors"
 
  #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
