@@ -84,7 +84,7 @@ castle_02 = {
 		type = pdxmesh
 		name = "building_celtic_hillfort_02_mesh"
 		illustration = @holding_illustration_western
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 0 } }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 1 } }
 		graphical_cultures = { irelander_building_gfx }
 	}
 	
@@ -142,7 +142,7 @@ castle_03 = {
 		type = pdxmesh
 		name = "building_celtic_hillfort_02_mesh"
 		illustration = @holding_illustration_western
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 0 } }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 2 } }
 		graphical_cultures = { irelander_building_gfx }
 	}
 	
@@ -200,7 +200,7 @@ castle_04 = {
 		type = pdxmesh
 		name = "building_celtic_hillfort_02_mesh"
 		illustration = @holding_illustration_western
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 0 } }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 3 } }
 		graphical_cultures = { irelander_building_gfx }
 	}
 	

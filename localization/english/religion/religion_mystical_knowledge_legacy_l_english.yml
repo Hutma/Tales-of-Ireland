@@ -66,3 +66,10 @@
  sidhe_beliefs_adherent:0 "Sidhe Believer"
  sidhe_beliefs_adherent_plural:0 "Sidhe Believers" 
  sidhe_beliefs_desc:0 "The Believers know about the Otherworlds and how to communicate with them, are great power lies in it, the power of the gods."
+ 
+ #The Hy Brazil Sidhe faith loc
+ hy_brazil_sidhe:0 "Hy-Brazil Sidhe"
+ hy_brazil_sidhe_adj:0 "Hy-Brazil Sidhe"
+ hy_brazil_sidhe_adherent:0 "Sidhe Believer"
+ hy_brazil_sidhe_adherent_plural:0 "Sidhe Believers" 
+ hy_brazil_sidhe_desc:0 "The Believers know about the Otherworlds and how to communicate with them, are great power lies in it, the power of the gods. They want to use this power to subjugate their ennemies."

@@ -225,3 +225,17 @@ innovation_maa_meghalithic = {
 	unlock_maa = newgrange_guardians
 	
 }
+
+innovation_maa_hybrazil = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	
+	icon = @maa_02
+
+	potential = {
+		this.culture_group = culture_group:toi_hy_brazylian_group
+	}
+
+	unlock_maa = hy_brazylian_adventurers
+	
+}

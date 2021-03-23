@@ -95,6 +95,16 @@
  trait_gaelic_giant_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendent of Fionn Mac Cumhaill that have left the Otherworld to come back to the surface. He is very powerful and can defeat hundreds of opponents all by himself."
  trait_gaelic_giant_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendent of Fionn Mac Cumhaill that have left the Otherworld to come back to the surface. He is very powerful and can defeat hundreds of opponents all by himself."
  
+ trait_hy_brazylian:0 "Hy-Brasylian"
+ trait_hy_brazylian_desc:0 "The Hy-Brasylian come from the far away island of Hy-Brazil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
+ trait_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an Hy-Brasylian come from the far away island of Hy-Brazil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
+ trait_half_hy_brazylian:0 "Half-blooded Hy-Brasylian"
+ trait_half_hy_brazylian_desc:0 "Half the blood of this character is Hy-Brasylian blood."
+ trait_half_hy_brazylian_character_desc:0 "Half the blood of [ROOT.GetCharacter.GetFirstNameNoTooltip] is Hy-Brasylian blood."
+ trait_three_quarter_hy_brazylian:0 "Strong Hy-Brasylian Blood"
+ trait_three_quarter_hy_brazylian_desc:0 "This character is nearly more Hy-Brasylian than anything else."
+ trait_three_quarter_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is nearly more Hy-Brasylian than anything else."
+ 
  #Duel traits
  trait_aggresive_fighter:0 "Aggresive Figther"
  trait_aggresive_fighter_desc:0 "Attack is both the best offense and defense. The one who delivers the strongest blows always wins the fight."

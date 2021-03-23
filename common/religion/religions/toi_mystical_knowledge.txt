@@ -198,5 +198,17 @@
 			doctrine = tenet_esotericism
 			doctrine = tenet_underground_sidhe
 		}
+		hy_brazil_sidhe = {
+			color = { 100 5 50 }
+			icon = hy_brazil_sidhe
+			
+			holy_site = newgrange
+			holy_site = tara
+			holy_site = maige_tuired
+
+			doctrine = tenet_pursuit_of_power
+			doctrine = tenet_esotericism
+			doctrine = tenet_underground_sidhe
+		}
 	}
 }

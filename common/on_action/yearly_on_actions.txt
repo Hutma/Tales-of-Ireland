@@ -1,8 +1,45 @@
 ﻿# Called every Jan 1st
 # Root does not exist
 yearly_global_pulse = {
+#TALES OF IRELAND HY BRAZIL
 	effect = {
+		if = {
+			limit = {
+				AND = {
+					NOT = { has_global_variable = hy_brazylian_have_appeared}
+					current_date >= 4900.1.1
+				}
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.2
+					current_date < 4925.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 4925.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 4950.1.1
+				}
+				modifier = {
+					add = 80
+					current_date > 4975.1.1
+				}
+				set_global_variable = {
+					name = hy_brazylian_have_appeared
+					value = yes
+				}
+				trigger_event = {
+					id = toi_hybrazil.1001
+					days = { 2 200 }
+				}
+			}
+		}
 	}
+#TALES OF IRELAND HY BRAZIL
 }
 
 # Called from code once a year for "playable" (count+) characters.
@@ -245,6 +282,10 @@ five_year_everyone_pulse = {
 			if = {
 			limit = {has_culture_group = culture_group:toi_partholonian_group}
 				add_trait = partholonian
+			}
+			if = {
+			limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+				add_trait = hy_brazylian
 			}
 			add_trait = celtic_human
 		}
