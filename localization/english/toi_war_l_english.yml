@@ -26,6 +26,8 @@
  new_land_cb_defeat_desc_defender:1 "You keep the [title|E]."
  new_land_cb_defeat_desc_attacker:1 "[defender.GetShortUIName|U] keeps the [title|E]. All [factions|E] against you increase their [discontent|E]."
  new_land_cb_defeat_desc:1 "[defender.GetShortUIName|U] keeps the [title|E]."
+ 
+ land_for_son_cb_victory_desc_attacker:0 "If you win the war an event will allow you to chose which son gets the land and the titles."
  LAND_SON_CB_NAME:0 "Get land for Son"
  LAND_SON_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]'s land conquest for his son in [DEFENDER.GetShortUIName]"
  LAND_SON_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

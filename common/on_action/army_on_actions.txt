@@ -26,11 +26,14 @@ on_county_occupied = {
 				}
 				change_county_control = -40
 				random_list = {
-					50 = {
+					60 = {
 						change_development_level = -1
 					}
-					50 = {
-						change_development_progress_with_overflow = -25
+					30 = {
+						change_development_level = -2
+					}
+					10 = {
+						change_development_level = -3
 					}
 				}
 			}

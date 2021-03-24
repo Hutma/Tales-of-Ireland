@@ -1642,7 +1642,7 @@ land_son_cb = {
 		first_valid = {
 			triggered_desc = {
 				trigger = { scope:attacker = { is_local_player = yes } }
-				desc = county_conquest_cb_victory_desc_attacker
+				desc = land_for_son_cb_victory_desc_attacker
 			}
 			desc = county_conquest_cb_victory_desc
 		}

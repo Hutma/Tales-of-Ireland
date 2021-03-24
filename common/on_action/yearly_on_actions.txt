@@ -141,6 +141,27 @@ random_yearly_playable_pulse = {
 		delay = { days = { 85 165 } }
 		bishop_ongoing
 	}
+	random_events = {
+		chance_to_happen = 95
+		100 = cattle.0001
+		100 = cattle.0002
+		100 = cattle.0003
+		100 = cattle.0004
+		100 = cattle.0005
+		100 = cattle.0006
+		100 = cattle.0007
+		100 = cattle.0008
+		100 = cattle.2001
+		100 = cattle.2002
+		100 = cattle.2003
+		100 = cattle.2004
+		100 = cattle.2005
+		100 = cattle.2006
+		100 = cattle.2007
+		100 = cattle.2008
+		100 = cattle.2009
+		100 = cattle.2010
+	}
 }
 
 # Called from code once a year for all characters, at a random point that year (individually for each character)

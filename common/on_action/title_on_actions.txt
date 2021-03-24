@@ -286,6 +286,17 @@ on_title_gain_usurpation = {
 # scope:title = the title that changes hands
 # scope:new_holder = new holder.
 on_title_lost = {
+	#TALES OF IRELAND
+	effect = {
+		if = {
+			limit = {
+				scope:title.tier = 2
+			}
+			scope:title = {
+				change_development_level = -1
+			}
+		}
+	}
 	events = {
 	}
 }

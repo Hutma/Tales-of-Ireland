@@ -75,7 +75,27 @@ toi_hybrazil.0002 = {
 	}
 	
 	immediate = {
-
+		every_independent_ruler = {
+			add_to_list = hy_brasil_visiter_list
+		}
+		random_in_list = {
+			list = hy_brasil_visiter_list
+			save_scope_as = visitor_employer
+		}
+		create_character = {
+			age = { 20 40 }
+			trait = hy_brazilan
+			random_traits = yes
+			gender_female_chance = 0
+			employer = scope:visitor_employer
+			dynasty = generate
+			faith = faith:hy_brazil_sidhe
+			culture = culture:hy_brazylian_culture
+		}
+		scope:visitor_employer = {
+			add_gold = 200
+			add_prestige = 200
+		}
 	}
 	option = {
 		name = toi_hybrazil.0002.a
@@ -113,15 +133,14 @@ toi_hybrazil.0003 = {
 	
 	immediate = {
 		random_list = {
-			20 = { #5 invaders
+			15 = { #5 invaders
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 			}
-			20 = { #6 invaders
-				hy_brasylian_invasion_effect = yes
+			15 = { #6 invaders
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
@@ -129,7 +148,7 @@ toi_hybrazil.0003 = {
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 			}
-			20 = { #7 invaders
+			30 = { #7 invaders
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
@@ -146,8 +165,9 @@ toi_hybrazil.0003 = {
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
 			}
-			20 = { #9 invaders
+			15 = { #9 invaders
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
@@ -155,7 +175,23 @@ toi_hybrazil.0003 = {
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
 				hy_brasylian_invasion_effect = yes
-			}			
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			5 = { #12 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
 		}
 	}
 	option = {
