@@ -193,21 +193,25 @@ labraid_story.0022 = {
 			id = labraid_story.0003
 			days = 7
 		}
+		
+		ai_chance = {
+			base = 80
+		}
 	}
 	option = {
-		tigger = {
-			random_list = {
-				25 = {
-					always = yes
-				}
-				75 = {
-					always = no
-				}
-			}
-		}
 		name = labraid_story.0022.b
+		
 		add_trait = cannibal
 		add_stress = -40
+		
+		trigger_event = {
+			id = labraid_story.0003
+			days = 7
+		}
+		
+		ai_chance = {
+			base = 20
+		}
 	}
 }
 

@@ -4,7 +4,7 @@
 @illustration_india = "gfx/interface/illustrations/holding_types/temple_india.dds"
 @illustration_islamic = "gfx/interface/illustrations/holding_types/temple_islamic.dds"
 @illustration_orthodox = "gfx/interface/illustrations/holding_types/temple_orthodox.dds"
-@illustration_northern_pagan = "gfx/interface/illustrations/holding_types/temple_northern_pagan.dds"
+@illustration_northern_pagan = "gfx/interface/illustrations/holding_types/holding_megalith.dds"
 
 temple_01 = {
 	construction_time = slow_construction_time

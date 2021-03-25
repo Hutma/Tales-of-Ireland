@@ -8,7 +8,7 @@
  UNITE_IRELAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  cattle_raiding_cb_desc:0 "We can declare war on our neighbour to seize their wealth, their cattle. If we win we will take 1/3 of all this ruler directly controled counites cattle."
- cattle_raiding_cb_victory_desc_attacker:1 "We can take one third of the cattle of every directly county directly controled by ennemy ruler. We will also take part of his wealth."
+ cattle_raiding_cb_victory_desc_attacker:1 "We can take one third of the cattle of every county directly controled by the enemy ruler. We will also take part of his wealth."
  cattle_raiding_cb_victory_desc:1 "[attacker.GetShortUIName|U] takes one third of [defender.GetShortUIName|U]'s cattle."
  cattle_raiding_cb_white_peace_desc_defender:1 "No cattle is taken."
  cattle_raiding_cb_white_peace_desc:1 "[defender.GetShortUIName|U] loses no cattle."
@@ -42,7 +42,7 @@
  FOMORIAN_VASSALIZATION_WAR_NAME:0 "Make [DEFENDER.GetShortUIName] Tributary"
  FOMORIAN_VASSALIZATION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" 
  
- cattle_luring_explaination_desc:1 "This war is not over, it's being set to a real cattle raid, a false only-AI cb was used to lure the AI in using the Cattle Raid cb, otherwise the AI takes no interest in it."
+ cattle_luring_explaination_desc:1 "This war is not over, it's being set to a real cattle raid, a false AI-only cb was used to lure the AI in using the Cattle Raid cb, otherwise the AI takes no interest in it."
  CATTLE_LURE_CB_NAME:0 "Cattle Raiding"
  CATTLE_LURE_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]]'s war to take [DEFENDER.GetShortUIName]'s cattle"
  CATTLE_LURE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

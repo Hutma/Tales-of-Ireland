@@ -65,6 +65,8 @@
  nature_worship_afterlife:0 "the underworld"
  witchgodname_nature_worship_the_shadow:0 "the Shadow"
  
+ nature_worship_priest_plural:0 "Shamans"
+ 
  #The Newgrange fatih faith loc
  newgrange_faith:0 "Newgrange faith"
  newgrange_faith_adj:0 "Newgrange faith"

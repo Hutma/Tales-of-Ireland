@@ -96,7 +96,6 @@
 		}
 		every_child = {
 			limit = {
-				is_female = no
 				NOT = {
 					is_primary_heir_of = root
 				}

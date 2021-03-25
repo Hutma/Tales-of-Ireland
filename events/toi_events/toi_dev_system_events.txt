@@ -536,7 +536,7 @@ cattle.0005 = {
 				10 = { change_development_level = -2 }
 				10 = { change_development_level = -3 }
 				10 = { change_development_level = -4 }
-				10 = { change_developmente_level = -5 }
+				10 = { change_development_level = -5 }
 			}
 		}
 		
@@ -561,7 +561,7 @@ cattle.0005 = {
 				10 = { change_development_level = -2 }
 				10 = { change_development_level = -3 }
 				10 = { change_development_level = -4 }
-				10 = { change_developmente_level = -5 }
+				10 = { change_development_level = -5 }
 			}
 		}
 		
@@ -595,7 +595,7 @@ cattle.0005 = {
 				10 = { change_development_level = -2 }
 				10 = { change_development_level = -3 }
 				10 = { change_development_level = -4 }
-				10 = { change_developmente_level = -5 }
+				10 = { change_development_level = -5 }
 			}
 		}
 		
@@ -635,6 +635,10 @@ cattle.0006 = {
 		animation = fear
 	}
 	
+	trigger = {
+		exists = cp:councillor_steward
+	}
+	
 	immediate = {
 		cp:councillor_steward = {
 			save_scope_as = steward
@@ -660,7 +664,7 @@ cattle.0006 = {
 		}
 
 		capital_county = {
-			change_developmente_level = -5
+			change_development_level = -5
 		}
 		
 		ai_chance = {
@@ -691,7 +695,7 @@ cattle.0006 = {
 		fire_councillor = cp:councillor_steward
 		
 		capital_county = {
-			change_developmente_level = -5
+			change_development_level = -5
 		}
 		
 	}
@@ -709,7 +713,7 @@ cattle.0006 = {
 		}
 
 		capital_county = {
-			change_developmente_level = -5
+			change_development_level = -5
 		}
 		
 		ai_chance = {
@@ -745,7 +749,7 @@ cattle.0006 = {
 		stress_impact = { forgiving = medium_stress_impact_gain }
 
 		capital_county = {
-			change_developmente_level = -5
+			change_development_level = -5
 		}
 		
 		ai_chance = {
@@ -1383,11 +1387,11 @@ cattle.2003 = {
 		name = cattle.2003.b
 		capital_county = { 
 			random_list = {
-				10 = { change_development_level = -2 }
-				10 = { change_development_level = -3 }
-				10 = { change_development_level = -4 }
-				10 = { change_development_level = -5 }
-				10 = { change_development_level = -6 }
+				10 = { change_development_level = 2 }
+				10 = { change_development_level = 3 }
+				10 = { change_development_level = 4 }
+				10 = { change_development_level = 5 }
+				10 = { change_development_level = 6 }
 			}
 		}
 		

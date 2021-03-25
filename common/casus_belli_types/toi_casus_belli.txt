@@ -1066,7 +1066,7 @@ cattle_raiding_cb = {
 		# Prestige level progress for the attacker
 		scope:attacker = {
 			add_prestige_experience = {
-				value = minor_prestige_value
+				value = 200
 			}
 		}
 
@@ -1346,16 +1346,14 @@ lure_to_cattle_raid_cb = {
 		always = yes
 	}
 	
+	on_invalidated_desc = cattle_luring_explaination_desc
+	
 	on_invalidated = {
 		scope:attacker = {
 			trigger_event = {
 				id = toi_war.0002
 				days = 1
 			}
-		}
-		triggered_desc = {
-			trigger = { scope:defender = { is_local_player = yes } }
-			desc = cattle_luring_explaination_desc
 		}
 	}
 
@@ -1380,6 +1378,7 @@ lure_to_cattle_raid_cb = {
 				flag = is_target_raid
 			}
 		}
+		on_declaration_desc = cattle_luring_explaination_desc
 	}
 
 	on_victory_desc = {

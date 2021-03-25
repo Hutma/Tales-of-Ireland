@@ -60,6 +60,8 @@
  real_gods_water_god_name_possessive:0 "Danu's"
  real_gods_witchgodname:0 "The Morrigan"
  
+ real_gods_priest_plural:0 "Druid"
+ 
  #The celtic_de_danann_worship_worship faith loc
  celtic_de_danann_worship:0 "Celtic Tuatha Dé Danann Worship"
  celtic_de_danann_worship_adj:0 "Celtic Tuatha Dé Danann Worship"

@@ -5,7 +5,7 @@
 	character = {
 		name = "bookmark_fall_of_milesians_loegaire"
 		dynasty = 70
-		dynasty_splendor_level = 1
+		dynasty_splendor_level = 3
 		type = male
 		history_id = 260000
 		birth = 4751.1.1
@@ -22,7 +22,7 @@
 	character = {
 		name = "bookmark_fall_of_milesians_oscar"
 		dynasty = 25
-		dynasty_splendor_level = 1
+		dynasty_splendor_level = 2
 		type = male
 		history_id = 600000
 		birth = 4782.1.1
@@ -39,7 +39,7 @@
 	character = {
 		name = "bookmark_fall_of_milesians_rudraige"
 		dynasty = 72
-		dynasty_splendor_level = 1
+		dynasty_splendor_level = 2
 		type = male
 		history_id = 540000
 		birth = 4782.1.1
@@ -56,7 +56,7 @@
 	character = {
 		name = "bookmark_fall_of_milesians_nuada"
 		dynasty = 202
-		dynasty_splendor_level = 1
+		dynasty_splendor_level = 4
 		type = male
 		history_id = 1000000
 		birth = 4782.1.1
@@ -73,7 +73,7 @@
 	character = {
 		name = "bookmark_fall_of_milesians_inzhay"
 		dynasty = 104
-		dynasty_splendor_level = 1
+		dynasty_splendor_level = 3
 		type = male
 		history_id = 450124
 		birth = 4764.1.1

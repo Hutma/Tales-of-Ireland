@@ -44,4 +44,11 @@ restore_aran_kingship_decision_scripted_effect = {
 			title:d_belmullet = { set_de_jure_liege_title = title:k_aran }
 		}
 	}
+	
+	title:c_aran = {
+		# Give it an extra building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = medium_development_level_gain
+	}
 }

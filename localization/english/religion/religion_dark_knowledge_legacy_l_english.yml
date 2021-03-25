@@ -60,6 +60,8 @@
  dark_knowledge_legacy_water_god_name_possessive:0 "$dark_knowledge_legacy_health_god_name_possessive$"
  dark_knowledge_legacy_witchgodname:0 "Iohan"
  
+ dark_knowledge_legacy_priest_plural:0 "Druids"
+ 
  #The Dark Gods faith loc
  dark_gods:0 "Dark Gods"
  dark_gods_adj:0 "Dark Gods"

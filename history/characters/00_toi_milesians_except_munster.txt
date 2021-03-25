@@ -41,9 +41,9 @@
     prowess =  4 
 
     trait = education_intrigue_3
-    trait = temperate
-    trait = forgiving
-    trait = compassionate
+    trait = ambitious
+    trait = arbitrary
+    trait = callous
     trait = milesian
 
     father=  261000 

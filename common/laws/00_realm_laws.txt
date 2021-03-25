@@ -83,6 +83,7 @@ crown_authority = {
 		flag = vassal_refusal_is_treason
 		flag = can_change_succession_laws
 		flag = can_designate_heirs
+		flag = grant_vassal_allowed
 		
 		can_keep = { realm_law_use_crown_authority = yes }
 
