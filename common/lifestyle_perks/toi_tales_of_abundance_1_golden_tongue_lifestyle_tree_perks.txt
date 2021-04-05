@@ -45,8 +45,14 @@ realm_of_legends_perk = {
 	
 	parent = beneficial_reputation_perk
 	
+	effect = {
+		custom_description_no_bullet = {
+			text = erudition_legacy_1_effect
+		}
+	}
+	
 	character_modifier = {
-		courtier_and_guest_opinion = 20
+		courtier_and_guest_opinion = 15
 	}
 }
 

@@ -65,7 +65,7 @@ men_law_perk = {
 	parent = gods_law_perk
 	
 	character_modifier = {
-		vassal_tax_mult = 0.15
+		vassal_tax_contribution_mult = 0.15
 		vassal_levy_contribution_mult = 0.1
 		opinion_of_different_culture = 10
 	}
