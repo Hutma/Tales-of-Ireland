@@ -1,0 +1,273 @@
+﻿on_toi_lifestyles_yearly = {
+	effect = {
+		#Passive skill gain
+		if = {
+			limit = {
+				AND = {
+					martial >= diplomacy
+					martial >= stewardship
+				}
+			}
+			add_tales_of_war_lifestyle_xp = 20
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				OR = {
+					martial < diplomacy
+					martial < stewardship
+				}
+			}
+			add_tales_of_war_lifestyle_xp = 5
+			add_tales_of_abundance_lifestyle_xp = 20
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_tales_of_war_lifestyle_xp = 30
+			add_tales_of_abundance_lifestyle_xp = 30
+		}
+		#Peace time gain
+		if = {
+			limit = {
+				days_of_continuous_peace > 182
+			}
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				days_of_continuous_peace > 365
+			}
+			add_tales_of_abundance_lifestyle_xp = 15
+		}
+		if = {
+			limit = {
+				days_of_continuous_peace > 1000
+			}
+			add_tales_of_abundance_lifestyle_xp = 15
+		}
+		if = {
+			limit = {
+				days_of_continuous_peace > 1800
+			}
+			add_tales_of_abundance_lifestyle_xp = 15
+		}
+		#Vassals like you
+		if = {
+			limit = {
+				any_vassal = {
+					count >= 3
+					is_powerful_vassal = yes
+					opinion = {
+						taget = liege
+						value >= 5
+					}
+				}
+			}
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				any_vassal = {
+					count >= 4
+					is_powerful_vassal = yes
+					opinion = {
+						taget = liege
+						value >= 20
+					}
+				}
+			}
+			add_tales_of_abundance_lifestyle_xp = 10
+		}
+		#High Cattle
+		if = {
+			limit = {
+				OR = {
+					any_held_title = {
+							count > 2
+							tier = tier_county
+							development_level > 30
+					}
+					any_held_title = {
+						count > 1
+						tier = tier_county
+						development_level > 50
+					}
+					any_held_title = {
+						count > 3
+						tier = tier_county
+						development_level > 25
+					}
+					AND = {
+						any_held_title = {
+							count > 1
+							tier = tier_county
+							development_level > 30
+						}
+						any_held_title = {
+							count > 2
+							tier = tier_county
+							development_level > 25
+						}
+						any_held_title = {
+							count > 3
+							tier = tier_county
+						}
+					}
+					any_held_title = {
+						count > 4
+						tier = tier_county
+					}
+				}
+			}
+			add_tales_of_abundance_lifestyle_xp = 10
+		}
+		if = {
+			limit = {
+				capital_county = {
+					development_level > 70
+				}
+			}
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		#Piety level
+		if = {
+			limit = {
+				piety_level >= 2
+			}
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				piety_level >= 4
+			}
+			add_tales_of_abundance_lifestyle_xp = 5
+		}
+		
+		
+		#TALES OF WAR
+		if = {
+			limit = {
+				days_of_continuous_war >= 182
+			}
+			add_tales_of_war_lifestyle_xp = 10
+		}
+		if = {
+			limit = {
+				days_of_continuous_war >= 365
+			}
+			add_tales_of_war_lifestyle_xp = 15
+		}
+		if = {
+			limit = {
+				days_of_continuous_war >= 1000
+			}
+			add_tales_of_war_lifestyle_xp = 15
+		}
+		#Prestige level
+		if = {
+			limit = {
+				prestige_level >= 2
+			}
+			add_tales_of_war_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				prestige_level >= 4
+			}
+			add_tales_of_war_lifestyle_xp = 5
+		}
+	}
+}
+
+on_toi_lifestyles_county_culture = {
+	effect = {	
+	#Change county culture
+		if = {
+			limit = {
+				culture = root.holder.culture
+			}
+			root.holder = {
+				add_tales_of_abundance_lifestyle_xp = 55
+			}
+		}	
+	}
+}
+
+on_toi_lifestyles_marriage = {
+	effect = {
+		#Good marriage
+		if = {
+			limit = {
+				OR = {
+					prestige_level >= 3
+					highest_held_title_tier >= 4
+					OR = {
+						root.father = {
+							highest_held_title_tier >= 4
+							prestige_level >= 3
+						}						
+						root.mother	= {
+							highest_held_title_tier >= 4
+							prestige_level >= 3
+						}
+					}
+				}
+			}
+			scope:spouse.father = {
+				add_tales_of_abundance_lifestyle_xp = 55
+			}
+			scope:spouse.mother = {
+				add_tales_of_abundance_lifestyle_xp = 55
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:spouse = {
+						prestige_level >= 3
+						highest_held_title_tier >= 4
+					}
+					OR = {
+						scope:spouse.father = {
+							highest_held_title_tier >= 4
+							prestige_level >= 3
+						}						
+						scope:spouse.mother	= {
+							highest_held_title_tier >= 4
+							prestige_level >= 3
+						}
+					}
+				}
+			}
+			root.father = {
+				add_tales_of_abundance_lifestyle_xp = 55
+			}
+			root.mother = {
+				add_tales_of_abundance_lifestyle_xp = 55
+			}
+		}
+	}
+}
+
+on_toi_lifestyles_feast = {
+	effect = {
+		#Holding feast
+		add_tales_of_abundance_lifestyle_xp = 55
+	}
+}
+
+on_toi_lifestyles_battle = {
+	effect = {
+		#Winning in battle
+		add_tales_of_war_lifestyle_xp = 25
+	}
+}
+
+on_toi_lifestyles_siege = {
+	effect = {
+		#Taking a county
+		add_tales_of_war_lifestyle_xp = 25
+	}
+}

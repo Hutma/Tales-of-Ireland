@@ -142,6 +142,7 @@ crown_authority = {
 		flag = vassal_all_wars_banned
 		flag = vassal_internal_wars_banned
 		flag = titles_cannot_leave_realm_on_succession # Hardcoded flag
+		flag = grant_vassal_allowed
 		
 		can_keep = { realm_law_use_crown_authority = yes }
 

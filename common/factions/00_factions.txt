@@ -460,6 +460,18 @@
 					has_title = title:k_high_kingship
 			}
 		}
+		modifier = {
+			add = 50
+			scope:target = {
+				AND = {
+					is_ai = no
+					reverse_opinion = {
+						target = scope:target.realm_priest
+						value < 0
+					}
+				}
+			}
+		}
 	}
 
 	ai_demand_chance = {
@@ -769,6 +781,18 @@ liberty_faction = {
 			add = -25
 			scope:target = {
 					has_title = title:k_high_kingship
+			}
+		}
+		modifier = {
+			add = 50
+			scope:target = {
+				AND = {
+					is_ai = no
+					reverse_opinion = {
+						target = scope:target.realm_priest
+						value < 0
+					}
+				}
 			}
 		}
 	}
@@ -1787,6 +1811,18 @@ claimant_faction = {
 			add = -25
 			scope:target = {
 					has_title = title:k_high_kingship
+			}
+		}
+		modifier = {
+			add = 50
+			scope:target = {
+				AND = {
+					is_ai = no
+					reverse_opinion = {
+						target = scope:target.realm_priest
+						value < 0
+					}
+				}
 			}
 		}
 	}

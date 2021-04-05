@@ -2230,3 +2230,737 @@ cattle.2010 = {
 		} 
 	}
 }
+
+
+#cattle redistrbution events
+
+cattle.0501 = {
+	type = character_event
+	title = cattle.0501.t
+	desc = cattle.0501.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 20
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0501.a
+	}
+	option = {
+		name = cattle.0501.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 8 }
+		}
+	}
+}
+
+cattle.0502 = {
+	type = character_event
+	title = cattle.0502.t
+	desc = cattle.0502.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 30
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0502.a
+	}
+	option = {
+		name = cattle.0502.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 13 }
+		}
+	}
+}
+
+cattle.0503 = {
+	type = character_event
+	title = cattle.0503.t
+	desc = cattle.0503.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 40
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0503.a
+	}
+	option = {
+		name = cattle.0503.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 17 }
+		}
+	}
+}
+
+#from county to capital_county
+cattle.0504 = {
+	type = character_event
+	title = cattle.0504.t
+	desc = cattle.0504.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				this.development_level > capital_county.development_level
+			}
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0504.a
+	}
+	option = {
+		name = cattle.0504.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = -10 }
+		}
+	}
+}
+
+#for high cattle in non capital counties
+cattle.0505 = {
+	type = character_event
+	title = cattle.0505.t
+	desc = cattle.0505.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 20
+			}
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 20
+			}
+			add_to_list = counties_targeted
+		}
+		random_in_list = {
+			list = counties_targeted
+			save_scope_as = county_target
+		}
+		scope:county_target = {
+			change_development_level = {
+				value = this.development_level
+				multiply = -0.3
+			}
+		}
+	}
+
+	option = { #Damn it
+		name = cattle.0505.a
+		add_prestige = -50
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #I will rebuy some cattle
+		name = cattle.0505.b
+		remove_short_term_gold = 50
+		scope:county_target = {
+			change_development_level = {
+				value = this.development_level
+				multiply = 1.2
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+	option = { #I'll give money to help the farmers
+		name = cattle.0505.c
+		remove_short_term_gold = 50
+		scope:county = {
+			add_county_modifier = {
+				modifier = dev_growth_bonus_big
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+#lose cattle in high cattle non capital
+cattle.0506 = {
+	type = character_event
+	title = cattle.0506.t
+	desc = cattle.0506.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 25
+			}
+		}
+	}
+	
+	option = { #these things happen
+		name = cattle.0506.a
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 25
+			}
+			change_development_level = {
+				value = this.development_level
+				multiply = -0.2
+			}
+		}
+	}
+}

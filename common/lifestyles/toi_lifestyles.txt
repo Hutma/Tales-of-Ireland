@@ -1,0 +1,11 @@
+﻿tales_of_war_lifestyle = {	
+	
+	xp_per_level = 1000
+	base_xp_gain = 25
+}
+
+tales_of_abundance_lifestyle = {	
+	
+	xp_per_level = 1000
+	base_xp_gain = 25
+}

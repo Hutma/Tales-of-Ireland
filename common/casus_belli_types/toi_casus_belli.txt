@@ -915,14 +915,24 @@ cattle_raiding_cb = {
 	# scope:defender is the defender
 	
 	allowed_against_character = {
-		scope:defender = {
-			trigger_if = {
-				limit = { scope:attacker = { is_ai = no } } # Already pre-filtered by the AI due to ai_only_against_neighbors = yes. any_neighboring_top_liege_realm_owner is expensive
-				scope:attacker = {
-					any_neighboring_and_across_water_top_liege_realm_owner = {
-						this = scope:defender
-					}
+		OR = {
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.capital_county
+					value < 1000000
 				}
+			}
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.primary_title
+					value < 1000000
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				scope:defender = { target_is_liege_or_above = scope:attacker }
+				scope:attacker = { target_is_liege_or_above = scope:defender }
 			}
 		}
 	}
@@ -1285,10 +1295,24 @@ lure_to_cattle_raid_cb = {
 	}
 
 	allowed_against_character = {
-		scope:attacker = {
-			ALL_FALSE = {
-				top_liege = scope:defender.top_liege
-				liege = scope:defender
+		OR = {
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.capital_county
+					value < 1000000
+				}
+			}
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.primary_title
+					value < 1000000
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				scope:defender = { target_is_liege_or_above = scope:attacker }
+				scope:attacker = { target_is_liege_or_above = scope:defender }
 			}
 		}
 		scope:defender = {

@@ -1,0 +1,108 @@
+﻿master_of_duel_perk = {
+	lifestyle = tales_of_war_lifestyle
+	tree = heroic_warrior
+	position = { 1 0 }
+	icon = node_martial
+	
+	auto_selection_weight = {
+		value = 20
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	
+	effect = {
+		random_list = {
+			30 = {
+				root = {
+					add_trait = aggresive_fighter
+				}
+			}
+			30 = {
+				root = {
+					add_trait = defensive_fighter
+				}
+			}
+			30 = {
+				root = {
+					add_trait = cunning_fighter
+				}
+			}
+		}
+	}
+	
+	character_modifier = {
+		prowess = 3
+	}
+}
+
+training_with_scathach_perk = {
+	lifestyle = tales_of_war_lifestyle
+	tree = heroic_warrior
+	position = { 0 2 }
+	icon = node_martial
+	
+	parent = master_of_duel_perk
+	
+	character_modifier = {
+		martial = 2
+		prowess = 3
+		health = 0.25
+	}
+}
+
+giant_slayer_perk = {
+	lifestyle = tales_of_war_lifestyle
+	tree = heroic_warrior
+	position = { 0 4 }
+	icon = tales_of_war_end
+	
+	parent = training_with_scathach_perk
+	
+	character_modifier = {
+		counter_efficiency = 0.5
+		prowess = 3
+		enemy_hard_casualty_modifier = 0.2
+	}
+}
+
+a_champion_to_follow_perk = {
+	lifestyle = tales_of_war_lifestyle
+	tree = heroic_warrior
+	position = { 2 2 }
+	icon = node_martial
+	
+	parent = master_of_duel_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = a_champion_to_follow_perk_effect
+		}
+		a_champion_to_follow_perk_effect = yes
+		a_champion_to_follow_perk_effect = yes
+		a_champion_to_follow_perk_effect = yes
+	}
+	
+	character_modifier = {
+		heavy_infantry_damage_mult = 0.02
+		skirmishers_damage_mult = 0.02
+		pikemen_damage_mult = 0.02
+	}
+}
+
+adaptative_fighter_perk = {
+	lifestyle = tales_of_war_lifestyle
+	tree = heroic_warrior
+	position = { 2 4 }
+	icon = tales_of_war_end
+	
+	parent = a_champion_to_follow_perk
+	
+	character_modifier = {
+		retreat_losses = -0.3
+		advantage = 5
+	}
+}

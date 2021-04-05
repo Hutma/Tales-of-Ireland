@@ -302,6 +302,14 @@ k_aran = {
 	}
 }
 
+k_nemed_kingdom = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_nemed_kingdom.dds"
+	}
+}
+
 e_ireland = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"

@@ -5,15 +5,13 @@ yearly_global_pulse = {
 	effect = {
 		if = {
 			limit = {
-				AND = {
-					NOT = { has_global_variable = hy_brazylian_have_appeared}
-					current_date >= 4900.1.1
-				}
+				NOT = { has_global_variable = hy_brazylian_have_appeared}
+				current_date > 4900.1.1
 			}
 			random = {
 				chance = 10
 				modifier = {
-					factor = 0.2
+					factor = 0.1
 					current_date < 4925.1.1
 				}
 				modifier = {
@@ -34,7 +32,7 @@ yearly_global_pulse = {
 				}
 				trigger_event = {
 					id = toi_hybrazil.1001
-					days = { 2 200 }
+					days = { 2 100 }
 				}
 			}
 		}
@@ -64,6 +62,7 @@ yearly_playable_pulse = {
 three_year_playable_pulse = {
 ###TALES OF IRELAND
 	#High kingship
+	effect = {
 		every_living_character = {
 			if 	= {
 				limit = {
@@ -79,6 +78,7 @@ three_year_playable_pulse = {
 			add_pressed_claim = title:k_high_kingship
 			}
 		}
+	}
 	#high kingship end
 ###TALES OF IRELAND END
 	random_events = {
@@ -136,13 +136,18 @@ random_yearly_playable_pulse = {
 		4 = fp1_yearly_events
 	}
 	on_actions = {
+		delay = { days = { 50 120 } }
+		on_toi_lifestyles_yearly
+		delay = { days = { 25 85 } }
+		on_cattle_system
 		delay = { days = { 45 75 } }
 		on_yearly_common_events	
 		delay = { days = { 85 165 } }
 		bishop_ongoing
 	}
 	random_events = {
-		chance_to_happen = 95
+		chance_to_happen = 100
+		10 = 0
 		10 = cattle.0001
 		10 = cattle.0002
 		10 = cattle.0003
@@ -261,54 +266,57 @@ five_year_everyone_pulse = {
 	### TALES OF IRELAND ###
 		every_living_character = {
 			if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
-				add_trait = fomorian
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_cessarian_group}
-				add_trait = cessarian
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_cruithin_group}
+			limit = { age > 0 }
+				if = {
+				limit = {has_culture_group = culture_group:toi_fomorian_group}
+					add_trait = fomorian
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_cessarian_group}
+					add_trait = cessarian
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_cruithin_group}
+					add_trait = celtic_human
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_de_danann_group}
+					add_trait = tuatha_de_danann
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_erainn_group}
+					add_trait = celtic_human
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_laigin_group}
+					add_trait = celtic_human
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+					add_trait = fir_bolg
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_meghalithic_group}
+					add_trait = megalith_human
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_milesian_group}
+					add_trait = milesian
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_nemedian_group}
+					add_trait = nemedian
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_partholonian_group}
+					add_trait = partholonian
+				}
+				if = {
+				limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+					add_trait = hy_brazylian
+				}
 				add_trait = celtic_human
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_de_danann_group}
-				add_trait = tuatha_de_danann
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_erainn_group}
-				add_trait = celtic_human
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_laigin_group}
-				add_trait = celtic_human
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_fir_bolg_group}
-				add_trait = fir_bolg
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_meghalithic_group}
-				add_trait = megalith_human
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_milesian_group}
-				add_trait = milesian
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_nemedian_group}
-				add_trait = nemedian
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_partholonian_group}
-				add_trait = partholonian
-			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
-				add_trait = hy_brazylian
-			}
-			add_trait = celtic_human
 		}
 	}
 ### TALES OF IRELAND ###

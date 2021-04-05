@@ -1,0 +1,20 @@
+﻿namespace = toi_lifestyle
+
+#debug
+toi_lifestyle.1111 = {
+	title = toi_war.0001.t
+	desc = toi_war.0001.desc
+	type = character_event
+	theme = war
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = toi_war.0001.a
+		add_tales_of_war_lifestyle_perk_points = 5
+		add_tales_of_abundance_lifestyle_perk_points = 5
+	}
+
+}

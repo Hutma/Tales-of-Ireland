@@ -1,0 +1,55 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+#save_var_scope_effect - To check for a variable saved scope and save it as a scope
+
+#####################################################################
+# EFFECTS
+#####################################################################
+
+
+
+a_champion_to_follow_perk_effect = {
+	#Create
+	create_character = {
+		age = { 20 40 }
+		prowess = { 16 26 }
+		random_traits = yes
+		gender_female_chance = 0
+		employer = root
+		dynasty = generate
+		faith = this.faith
+		culture = this.culture
+	}
+}
+
+realm_guard_perk_effect = {
+	spawn_army = {
+		levies = {
+			add = {
+				#Base of 200.
+				add = root.max_military_strength
+				#Multiply that by the realm size of the target's top_liege.
+				multiply = 0.3
+				#Cut it off so things don't get too ridiculous.
+				max = 1000
+				#Make sure all adventurers have a moderately respectable force.
+				min = 200
+			}
+		}
+		men_at_arms = {
+			type = house_guard
+			stacks = {
+				value = 0
+				add = root.primary_title.tier
+			}
+		}
+		inheritable = no
+		uses_supply = no
+		location = capital_province
+		name = realm_guard_perk_troops
+	}
+}

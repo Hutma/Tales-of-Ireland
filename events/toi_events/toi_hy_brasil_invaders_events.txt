@@ -3,6 +3,7 @@
 #Hy Brasylian hidden triggers 0001
 toi_hybrazil.1001 = {
 	hidden = yes
+	type = empty
 	
 	immediate = {
 		every_ruler = {
@@ -84,7 +85,7 @@ toi_hybrazil.0002 = {
 		}
 		create_character = {
 			age = { 20 40 }
-			trait = hy_brazilan
+			trait = hy_brazylian
 			random_traits = yes
 			gender_female_chance = 0
 			employer = scope:visitor_employer

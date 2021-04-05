@@ -78,23 +78,38 @@ grant_vassal_interaction = {
 ###TALES OF IRELAND
 		trigger_if = {
 			limit = {
-				NOT = { has_government = tribal_government }
+				AND = {
+					NOT = { 
+						scope:actor = { 
+							prestige_level >= 3 
+						}
+					}
+					NOT = { has_government = tribal_government }
+				}
 			}
 			custom_description = {
 				text = "has_law_allowing_grant_vassal_crown"
-				has_realm_law_flag = grant_vassal_allowed
+				scope:actor = {
+					has_realm_law_flag = grant_vassal_allowed
+				}
 			}
 		}
 		trigger_if = {
 			limit = {
 				AND = { 
 					NOT = { has_government = tribal_government }
-					NOT = { has_realm_law_flag = grant_vassal_allowed }
+					NOT = { 
+						scope:actor = {
+							has_realm_law_flag = grant_vassal_allowed 
+						}
+					}
 				}
 			}
 			custom_description = {
 				text = "not_enough_prestige_grant_vassal_law_crown_weak"
-				prestige_level >= 3
+				scope:actor = {
+					prestige_level >= 3
+				}
 			}
 		}
 ###TALES OF IRELAND END

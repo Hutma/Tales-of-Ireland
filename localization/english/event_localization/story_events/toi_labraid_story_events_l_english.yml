@@ -24,3 +24,5 @@
  labraid_story.0005.desc:0 "In the past year, many soldiers joined my service. Word of the land I have conquered and the glory I have attained is spreading everywhere. The Usurper King of Tara is certainly afraid of me now if he wasn't before. \n\nI now have a choice before me. \n\nIs my destiny really vengeance and returning to Tara in arms, or was this a fated exile and the future of my kin is in [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], these warriors being the foundation for my new realm?"
  labraid_story.0005.a:0 "My place is on the throne of Tara"
  labraid_story.0005.b:0 "My place is here, with my people"
+ 
+ labraid_story_revenge_troops:0 "Labraid's loyal soldiers"

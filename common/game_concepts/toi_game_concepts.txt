@@ -1,0 +1,99 @@
+﻿fomorians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {fomorian}
+}
+
+cessarians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {cessarian}
+}
+
+partholonians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {partholonian}
+}
+
+nemedians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {nemedian}
+}
+
+fir_bolgs = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {fir_bolg}
+}
+
+de_danann = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+}
+
+milesians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {milesian}
+}
+
+celts = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {celt}
+}
+
+ancient_humans = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {ancient_human}
+}
+
+gaelic_giants = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {gaelic_giant}
+}
+
+hy_brasylians = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {hy_brasylian}
+}
+
+surface_world = {
+	texture = "gfx/interface/icons/icon_domain.dds"
+}
+
+otherworlds = {
+	texture = "gfx/interface/icons/icon_domain.dds"
+	alias = {otherworld}
+}
+
+cattle = {
+	texture = "gfx/interface/icons/council_task_types/task_develop_county.dds"
+}
+
+cattle_raid = {
+	texture = "gfx/interface/icons/war_status/war_icon.dds"
+}
+
+high_king = {
+	texture = "gfx/interface/icons/message_feed/titles.dds"
+	alias = {high_kingship high_kings}
+}
+
+sidhe = {
+	texture = "gfx/interface/icons/message_feed/technology.dds"
+}
+
+ancient_partition = {
+	texture = "gfx/interface/icons/message_feed/law.dds"
+}
+
+race_trait = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+}
+
+tales_of_war = {
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	framesize = { 144 144 }
+	frame = 2
+}
+
+tales_of_abundance = {
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	framesize = { 144 144 }
+	frame = 2
+}

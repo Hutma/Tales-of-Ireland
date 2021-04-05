@@ -1,0 +1,35 @@
+﻿l_english:
+ # Tales Of War: Heroic Warrior
+ master_of_duel_perk_name:0 "Master of Duel"
+ training_with_scathach_perk_name:0 "Training with Scáthach"
+ giant_slayer_perk_name:0 "Giant Slayer"
+ a_champion_to_follow_perk_name:0 "A Champion to follow"
+ adaptative_fighter_perk_name:0 "Adaptative Fighter"
+
+ # Tales Of War: Legendary Strategist
+ master_tactician_perk_name:0 "Master Tactician"
+ ringfort_taker_perk_name:0 "Ringfort Taker"
+ organized_army_perk_name:0 "Organized Army"
+ realm_guard_perk_name:0 "Realm Guard"
+ srengs_legacy_perk_name:0 "Sreng's Legacy"
+
+
+ CHAMPION_TO_FOLLOW_PERK:0 "Three powerful champions will join your court"
+ REALM_GUARD_PERK:0 "You will be graned special troops of levies and house guard"
+ realm_guard_perk_troops:0 "Realm's Guard"
+
+ # Tales Of Abundance: Golden Tongue
+ storyteller_perk_name:0 "Storyteller"
+ beneficial_reputation_perk_name:0 "Beneficial Reputation"
+ realm_of_legends_perk_name:0 "Realm Of Legends"
+ influential_diplomat_perk_name:0 "Influential Diplomat"
+ respected_by_all_perk_name:0 "Respected by All"
+
+ # Tales Of Abundance: Brehon Laws Keeper
+ civil_law_perk_name:0 "Civil Law"
+ justice_order_perk_name:0 "Justice and Order"
+ gods_law_perk_name:0 "Gods' Law"
+ men_law_perk_name:0 "Men's Law"
+ senchas_mar_perk_name:0 "Senchas Már"
+ 
+ INFLUENTIAL_DIPLOMAT_PERK: "This perk grants you 3 votes for the [high_kingship|E] election if you are an elector"

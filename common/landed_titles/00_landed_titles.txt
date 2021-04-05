@@ -23594,13 +23594,20 @@ e_leinster = {
 	
 	definite_form = yes
 	
-	ai_primary_priority = {
-		if = {
-			limit = {
-				culture = culture:greek
+	k_nemed_kingdom = {
+		color = { 120 185 255 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture_group = culture_group:toi_nemedian_group
+				}
+				add = @correct_culture_primary_score
 			}
-			add = @correct_culture_primary_score
 		}
+
+		capital = c_castlepollard
 	}
 	
 	k_louth = {

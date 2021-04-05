@@ -268,3 +268,86 @@ take_fomorian_tribute_decision = {
 		base = 100
 	}
 }
+
+restore_nemedian_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+	ai_check_interval = 120
+
+	desc = restore_nemedian_kingdom_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		culture_group = culture_group:toi_nemedian_group	
+		
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_nemedian_kingship
+			}
+		}
+		highest_held_title_tier <= tier_kingdom
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		OR = {
+			has_title = title:d_castlerahan
+			has_title = title:d_granard
+			has_title = title:d_delvin
+			has_title = title:d_oldcastle
+			has_title = title:d_moygoish
+		}
+		completely_controls = title:d_fore
+		completely_controls = title:d_clanmahon
+		completely_controls = title:d_corkaree
+		completely_controls = title:d_magheradernon
+		any_realm_province = { #You must have some realm support for your claims.
+			culture_group = culture_group:toi_nemedian_group
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			restore_nemedian_kingdom_decision_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = toi_decision_race.0003
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_decision_race.0004
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_nemedian_kingship
+			}
+		}
+	}
+
+	cost = {
+		gold = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

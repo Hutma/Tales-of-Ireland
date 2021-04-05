@@ -48,7 +48,7 @@ hy_brasylian_invasion_effect = {
 	#Create invader
 	create_character = {
 		age = { 20 40 }
-		trait = hy_brazilan
+		trait = hy_brazylian
 		random_traits = yes
 		gender_female_chance = 0
 		location = title:b_kilronan.title_province
