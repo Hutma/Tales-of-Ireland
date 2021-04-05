@@ -85,3 +85,15 @@ ancient_partition = {
 race_trait = {
 	texture = "gfx/interface/icons/message_feed/trait.dds"
 }
+
+tales_of_war = {
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	framesize = { 144 144 }
+	frame = 2
+}
+
+tales_of_abundance = {
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	framesize = { 144 144 }
+	frame = 2
+}

@@ -1,8 +1,0 @@
-﻿key_add_artifact =
-{
-	global = ADD_ARTIFACT_EFFECT
-	first = ADD_ARTIFACT_EFFECT_FIRST
-	first_past = ADD_ARTIFACT_EFFECT_FIRST_PAST
-	third = ADD_ARTIFACT_EFFECT_THIRD
-	third_past = ADD_ARTIFACT_EFFECT_THIRD_PAST
-}

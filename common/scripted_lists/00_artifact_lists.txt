@@ -1,1 +1,0 @@
-﻿artifact_holder = { base = living_character conditions = {has_any_artifact = yes } }

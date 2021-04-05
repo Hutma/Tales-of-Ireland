@@ -47,6 +47,10 @@ on_marriage = { # Will not fire from historical marriages
 		delay = { days = { 5 10 }}
 		marriage_effect.2001 # Monogamous wedding event
 	}
+	#TALES OF IRELAND
+	on_actions = {
+		on_toi_lifestyles_marriage
+	}
 }
 
 # Characters get divorced in any way

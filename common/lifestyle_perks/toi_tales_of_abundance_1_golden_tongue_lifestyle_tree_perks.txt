@@ -1,0 +1,87 @@
+﻿storyteller_perk = {
+	lifestyle = tales_of_abundance_lifestyle
+	tree = golden_tongue
+	position = { 1 0 }
+	icon = node_stewardship
+	
+	auto_selection_weight = {
+		value = 20
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	
+	effect = {
+		add_prestige_level = 1
+	}
+	
+	character_modifier = {
+		monthly_prestige = 0.2
+	}
+}
+
+beneficial_reputation_perk = {
+	lifestyle = tales_of_abundance_lifestyle
+	tree = golden_tongue
+	position = { 1 1.5 }
+	icon = node_stewardship
+	
+	parent = storyteller_perk
+	
+	character_modifier = {
+		diplomacy_per_prestige_level = 1
+		diplomacy_per_piety_level = 1
+	}
+}
+
+realm_of_legends_perk = {
+	lifestyle = tales_of_abundance_lifestyle
+	tree = golden_tongue
+	position = { 0 3 }
+	icon = node_stewardship
+	
+	parent = beneficial_reputation_perk
+	
+	character_modifier = {
+		courtier_and_guest_opinion = 20
+	}
+}
+
+influential_diplomat_perk = {
+	lifestyle = tales_of_abundance_lifestyle
+	tree = golden_tongue
+	position = { 2 3 }
+	icon = node_stewardship
+	
+	parent = beneficial_reputation_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = influential_diplomat_perk_effect
+		}
+		add_character_flag = {
+			flag = more_vote_weight_perk_flag
+		}
+	}
+	
+	character_modifier = {
+		vassal_limit = 5
+	}
+}
+
+respected_by_all_perk = {
+	lifestyle = tales_of_abundance_lifestyle
+	tree = golden_tongue
+	position = { 1 4.5 }
+	icon = tales_of_abundance_end
+	
+	parent = realm_of_legends_perk
+	parent = influential_diplomat_perk
+	
+	character_modifier = {
+		vassal_opinion = 20
+	}
+}

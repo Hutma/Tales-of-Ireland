@@ -1,0 +1,11 @@
+﻿a_champion_to_follow_perk_effect = {
+	global = CHAMPION_TO_FOLLOW_PERK
+}
+
+realm_guard_perk_effect = {
+	global = REALM_GUARD_PERK
+}
+
+influential_diplomat_perk_effect = {
+	global = INFLUENTIAL_DIPLOMAT_PERK
+}

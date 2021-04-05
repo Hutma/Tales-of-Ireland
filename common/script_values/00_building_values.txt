@@ -685,30 +685,10 @@ very_slow_construction_time = @[very_slow_construction_time_base]
 # scope:county = county
 # scope:holder = holder
 fill_building_slot_chance = {
-	value = 140
-	if = {
-		limit = {
-			current_date < 1066.1.1
-		}
-		subtract = 70
-	}
-	if = {
-		limit = {
-			has_building_or_higher = tribe_01
-		}
-		subtract = 15
-	}
+	value = 70
 	if = {
 		limit = {
 			has_special_building = yes
-			NOR = {
-				has_building_or_higher = hadrians_wall_01
-				has_building_or_higher = offas_dyke_01
-				has_building_or_higher = stonehenge_01
-				has_building_or_higher = the_pyramids_01
-				has_building_or_higher = the_colosseum_01
-				has_building_or_higher = alhambra_01
-			}
 			num_buildings <= 1
 		}
 		add = 35
@@ -716,12 +696,7 @@ fill_building_slot_chance = {
 	add = {
 		value = county.development_level
 		multiply = 1.5
-		max = 35
-	}
-	multiply = {
-		value = county.development_rate_modifier
-		max = 1.5
-		min = 0.85
+		max = 10
 	}
 	subtract = {
 		value = 50
@@ -737,10 +712,10 @@ fill_building_slot_chance = {
 
 # Chance of upgrading one more building. Used when starting from a bookmark. Done after filling out building slots
 upgrade_building_chance = {
-	value = 65
+	value = 0
 	if = { # Very few upgraded buildings in 867
 		limit = {
-			current_date < 1066.1.1
+			current_date < 5000.1.1
 		}
 		subtract = 70
 	}
