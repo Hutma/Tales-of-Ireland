@@ -5,7 +5,7 @@
 	generated_content=no
 	layer="env_effect_layer"
 	entity="env_desert_plains_ambient"
-	count= 0 
+	count=0
 }
 object={
 	name="env_desert_mountains"
@@ -14,7 +14,7 @@ object={
 	generated_content=no
 	layer="env_effect_mountains_layer"
 	entity="env_desert_mountains"
-	count= 0
+	count=0
 }
 object={
 	name="env_desert_plains"
@@ -23,7 +23,7 @@ object={
 	generated_content=no
 	layer="env_effect_layer"
 	entity="env_desert_plains"
-	count= 0
+	count=0
 }
 object={
 	name="env_desert_plains_ambient"
@@ -157,7 +157,6 @@ object={
 4590.911621 0.000000 3173.989014 0.000000 0.000000 0.000000 1.000000 1.346802 1.346802 1.346802
 4663.714844 0.000000 3162.239502 0.000000 0.000000 0.000000 1.000000 1.084546 1.084546 1.084546
 "}
-
 object={
 	name="env_snow_mountains"
 	clamp_to_water_level=yes
