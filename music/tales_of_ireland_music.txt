@@ -1,91 +1,163 @@
 ﻿####Music TALES OF IRELAND####
-track1 = {
+Castle_in_the_Sky = {
 	music = "file:/music/Vindsvept/Castle_in_the_Sky.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track4 = {
+Into_Silence_two = {
 	music = "file:/music/Vindsvept/Into_Silence_two.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track5 = {
+Into_the_Unknown = {
 	music = "file:/music/Vindsvept/Into_the_Unknown.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track6 = {
+Keeper_of_the_Forest = {
 	music = "file:/music/Vindsvept/Keeper_of_the_Forest.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track7= {
+Leaving_the_Dream = {
 	music = "file:/music/Vindsvept/Leaving_the_Dream.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track8 = {
+Night_of_the_Fae = {
 	music = "file:/music/Vindsvept/Night_of_the_Fae.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track9= {
+Nightfall = {
 	music = "file:/music/Vindsvept/Nightfall.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track10 = {
+Riversong = {
 	music = "file:/music/Vindsvept/Riversong.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track11 = {
+Spirit_Bond = {
 	music = "file:/music/Vindsvept/Spirit_Bond.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
-track12 = {
+The_Story_So_Far = {
 	music = "file:/music/Vindsvept/The_Story_So_Far.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
 	
 }
 
-track13 = {
+Windsong_Cavern = {
 	music = "file:/music/Vindsvept/Windsong_Cavern.mp3"
-	weight = 20
+	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
+	is_prioritized_mood = yes
 	
 }
 
+A_World_Unbound = {
+	music = "file:/music/Vindsvept/A_World_Unbound.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Frozen_in_Time = {
+	music = "file:/music/Vindsvept/Frozen_in_Time.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Heart_of_Thunder = {
+	music = "file:/music/Vindsvept/Heart_of_Thunder.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Hideaway = {
+	music = "file:/music/Vindsvept/Hideaway.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Through_The_Fog = {
+	music = "file:/music/Vindsvept/Through_The_Fog.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Voyage_to_Nowhere = {
+	music = "file:/music/Vindsvept/Voyage_to_Nowhere.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Wanderer = {
+	music = "file:/music/Vindsvept/Wanderer.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
 
 ###end TALES OF IRELAND mod ###

@@ -87,6 +87,10 @@ light_horsemen_leinster = {
 		archers = 1
 	}
 	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+	
 	buy_cost = { gold = light_cavalry_recruitment_cost }
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
@@ -178,6 +182,11 @@ armored_horsemen_leinster = {
 
 	counters = {
 		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
 	}
 
 	buy_cost = { gold = heavy_cavalry_recruitment_cost }
@@ -274,6 +283,10 @@ light_horsemen_connacht = {
 		archers = 1
 	}
 	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+	
 	buy_cost = { gold = light_cavalry_recruitment_cost }
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
@@ -365,6 +378,11 @@ armored_horsemen_connacht = {
 
 	counters = {
 		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
 	}
 
 	buy_cost = { gold = heavy_cavalry_recruitment_cost }
@@ -460,6 +478,10 @@ light_horsemen_munster = {
 		archers = 1
 	}
 	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+	
 	buy_cost = { gold = light_cavalry_recruitment_cost }
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
@@ -550,6 +572,11 @@ armored_horsemen_munster = {
 
 	counters = {
 		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
 	}
 
 	buy_cost = { gold = heavy_cavalry_recruitment_cost }
@@ -645,6 +672,10 @@ light_horsemen_ulster = {
 		archers = 1
 	}
 	
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+	
 	buy_cost = { gold = light_cavalry_recruitment_cost }
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
@@ -737,6 +768,11 @@ armored_horsemen_ulster = {
 
 	counters = {
 		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
 	}
 
 	buy_cost = { gold = heavy_cavalry_recruitment_cost }

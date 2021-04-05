@@ -477,7 +477,7 @@ Abortifacient = {
 
 	text = {
 		localization_key = abortifacient_broadleaf_sage
-		#Mediterrenean
+		#Mediterranean
 	}
 
 	text = {
@@ -493,13 +493,13 @@ Abortifacient = {
 	text = {
 		localization_key = abortifacient_bishops_lace
 		#Christian only
-		#Europe and Soutwest Asia
+		#Europe and Southwest Asia
 	}
 
 	text = {
 		localization_key = abortifacient_wild_carrot
 		#Same as Bishop's Lace
-		#Europe and Soutwest Asia
+		#Europe and Southwest Asia
 	}
 
 	text = {
@@ -522,10 +522,10 @@ Abortifacient = {
 		#Europe
 	}
 
-	text = {
-		localization_key = abortifacient_mugwort
-		#lesser chance in Europe, rest of Asia
-	}
+	#text = {
+	#	localization_key = abortifacient_mugwort
+	#	#lesser chance in Europe, rest of Asia
+	#}
 
 	text = {
 		localization_key = abortifacient_herb_of_grace

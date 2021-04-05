@@ -1,0 +1,28 @@
+﻿l_english:
+ labraid_story.0001.t:0 "Family Division"
+ labraid_story.0001.desc:0 "Some years ago, my father brought prosperity and order to Ireland as the High King, but his defeats at the hands of the Celts have sullied his legacy. \n\nMy younger brother and I were raised as equals, each inheriting half of our father's land, however my inheritance of the High King title has caused a great rift between us. \n\nEven now, my brother eyes my title like a hungry wolf. I fear what the future may bring. I must remain vigilant, and become the High King my father was..."
+ labraid_story.0001.a:0 "My brother is ambitious and I should keep an eye on him"
+ 
+ labraid_story.0021.t:0 "My treacherous brother"
+ labraid_story.0021.desc:0 "I was sure this day would come. I warned my son Ailill multiple times that my brother only seeks power, even at the expense of his kin. Nonetheless, he kept on visiting him regularly. \n\nWhen he came back from visiting his uncle today, he was appeared fine. But a few hours later, he blemmished. He fell very sick, horrifyingly fast. I sent for every druid in my Kingdom to try to cure him, but it was all in vain. \n\nThis evening, he drew his last breath. At nightfall, a messenger came to the ringfort, informing me that my brother is sick and asks for help. \n\nI'm not stupid enough to fall for his scheme...I'll send the guards, and he better be very ill if he doesn't want to spend the night behind bars!"
+ labraid_story.0021.a:0 "He will suffer for this"
+ 
+ labraid_story.0002.t:0 "My treacherous Great Uncle"
+ labraid_story.0002.desc:0 "My father? Dead. My grandfather, the King? Dead. My treacherous great uncle poisoned my father my father was poisoned in order to lure the King into a trap. \n\nThe King fell into the trap, thinking that his brother was sick, he visited him with a druid to nurse him back to health. Alas, Cobthach was not sick. When the King arrived to the place of their meeting he lashed out and wounded him. \n\nHe took him captive and tortured him before putting striking him down. Cobthach seized the power and ordered his guard to find me. He now has me in shackles, resigned to my fate."
+ labraid_story.0002.a:0 "What will he decide?"
+ 
+ labraid_story.0022.t:0 "Exiled"
+ labraid_story.0022.desc:0 "My great uncle, now King Cobthach, has spared me. I'm alive, but banished from my rightful lands. I still cannot believe what he has put me through, every night I close my eyes and think about it...he invited me to his table...and...forced me to partake in the flesh of my father and grandfather. \n\nI can still remember the smell and taste of my father's sickly meat...Or was it my father? I cannot remember which is which and I do not want to. Since he doesn't consider me a threat, he chose to sentence me to exile rather than execution. \n\nI'm now on my way to Tipperary where I hope to establish myself...And prove this cruel, fingalach usurper wrong..."
+ labraid_story.0022.a:0 "The nightmares will pass"
+ labraid_story.0022.b:0 "The truth is... I kind of liked it"
+ 
+ labraid_story.0003.t:0 "I will seek revenge"
+ labraid_story.0003.desc:0 "A few days into my exile, a ceithern loyal to my grandfather came to meet me. The majority of them are experienced and skilled warriors dillusioned with Cobtach's brutal coup and now misrule. This gives me hope that someday, I could reclaim my family's rightful seat on the Hill of Tara. \n\nI have to gain both reputation and territory to gain recognition and attract more warriors to my cause. \n\n #S Information for the player : You have to gather at least four Counties or a Duchy or reach the Illustrious level of fame. Once this is complete you just have to wait for the men to gather under your banner #!"
+ labraid_story.0003.a:0 "I'll come back home"
+ 
+ labraid_story.0005.t:0 "My Destiny"
+ labraid_story.0005.desc:0 "In the past year, many soldiers joined my service. Word of the land I have conquered and the glory I have attained is spreading everywhere. The Usurper King of Tara is certainly afraid of me now if he wasn't before. \n\nI now have a choice before me. \n\nIs my destiny really vengeance and returning to Tara in arms, or was this a fated exile and the future of my kin is in [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], these warriors being the foundation for my new realm?"
+ labraid_story.0005.a:0 "My place is on the throne of Tara"
+ labraid_story.0005.b:0 "My place is here, with my people"
+ 
+ labraid_story_revenge_troops:0 "Labraid's loyal soldiers"

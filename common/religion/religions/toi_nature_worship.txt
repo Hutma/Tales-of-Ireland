@@ -200,7 +200,7 @@
 		}
 		first_men = {
 			color = { 100 200 100 }
-			icon = waaqism
+			icon = custom_faith_fp1_yggdrasil
 			
 			holy_site = newgrange
 			holy_site = bere

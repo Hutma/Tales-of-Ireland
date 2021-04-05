@@ -1,0 +1,3 @@
+﻿l_english:
+ I_LACK_LAW_ALLOWING_GRANT_VASSAL_FEUDAL:1 "You do not have High [crown_authority|E] or better"
+ I_LACK_LAW_PRESTIGE_GRANT_VASSAL_CROWN_WEAK:1 "If you do not have High [crown_authority|E] or better you need the Illustrous level of prestige"

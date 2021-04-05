@@ -5,7 +5,5 @@
 	generated_content=yes
 	layer="tree_high_layer"
 	pdxmesh="tree_jungle_01_d_mesh"
-	instances={
-		
-	}
+	count=0
 }

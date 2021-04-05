@@ -3,4 +3,6 @@ indirection_file="map_data/indirection_heightmap.png"
 original_heightmap_size={ 8192 4096 }
 tile_size=33
 should_wrap_x=no
-level_offsets={ { 0 0 }{ 0 2590 }{ 0 3771 }{ 0 3946 }{ 0 3978 }}
+level_offsets={ { 0 0 }{ 0 2475 }{ 0 3554 }{ 0 3716 }{ 0 3748 }}
+max_compress_level=4
+empty_tile_offset={ 170 5 }

@@ -8,7 +8,7 @@
 	
 	ui_failge = {
 		graphical_cultures = {
-			welsh_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -279,7 +279,7 @@
 	
 	ui_bairrche = {
 		graphical_cultures = {
-			welsh_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -550,7 +550,7 @@
 	
 	ui_enachglaiss = {
 		graphical_cultures = {
-			welsh_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -821,7 +821,7 @@
 	
 	gaileanga = {
 		graphical_cultures = {
-			welsh_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond
@@ -1092,7 +1092,7 @@
 	
 	luighne = {
 		graphical_cultures = {
-			welsh_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			5 = caucasian_blond

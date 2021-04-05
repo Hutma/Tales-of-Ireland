@@ -131,13 +131,22 @@ high_king_reclaim_tara_decision = {
 reform_high_kingship_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
-	ai_check_interval = 120
+	ai_check_interval = 60
 	desc = reform_high_kingship_decision_desc
 
 	is_shown = {
-		has_title = title:c_tara
+		OR = {
+			has_title = title:c_tara
+			has_title = title:k_meath
+		}
 		NOT = {
 			exists = title:k_high_kingship.holder
+		}
+		NOT = {	#Cannot do it if ireland is united.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_united_all_ireland
+			}
 		}
 	}
 
@@ -155,7 +164,6 @@ reform_high_kingship_decision = {
 	}
 
 	cost = {
-		prestige = 200
 		gold = 100
 	}
 
@@ -173,6 +181,54 @@ reform_high_kingship_decision = {
 			save_scope_as = title_k_high_kingship
 		}
 		resolve_title_and_vassal_change = scope:title_change
+		title:k_high_kingship = {
+			add_title_law = high_king_elective_succession_law
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+#Try to unite Ireland decision
+try_unite_ireland_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = try_unite_ireland_decision_desc
+
+	is_shown = {
+		highest_held_title_tier >= 4	
+		prestige_level >= 2
+		is_independent_ruler = yes
+		NOT = { has_character_flag = try_unite_ireland_flag }
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		highest_held_title_tier >= 4
+		is_independent_ruler = yes
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		gold = 200
+		prestige = 600
+	}
+
+	effect = {
+		add_character_flag = {
+			flag = try_unite_ireland_flag
+		}
 	}
 
 	ai_potential = {

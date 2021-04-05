@@ -188,7 +188,7 @@
 	faiths = {
 		the_old_gods = {
 			color = { 100 200 50 }
-			icon = pagan
+			icon = custom_faith_3
 
 			holy_site = newgrange
 			holy_site = connemara

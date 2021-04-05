@@ -30,6 +30,9 @@ religious_cb_piety_white_peace = -50
 excommunication_cb_piety_change_multiplier = 4
 excommunication_cb_piety_white_peace = -50
 
+religious_cb_piety_discount_against_hof_humsac = 0.5
+hof_humsacd_fervour_gain = major_fervor_value
+
 faith_doctrine_cost_low = 200
 faith_doctrine_cost_mid = 400
 faith_doctrine_cost_high = 600

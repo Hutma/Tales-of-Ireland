@@ -104,12 +104,29 @@ innovation_currency_01 = {
 	flag = tribal_era_regular
 }
 
+innovation_quilted_armor = {
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	icon = @weapons_and_armor_02
+	
+	modifier = {
+		skirmishers_toughness_add = 2
+		pikemen_toughness_add = 2
+	}
+
+	flag = global_regular
+	flag = tribal_era_regular
+}
+
 #culture_group_civic
 innovation_gavelkind = {
 	group = culture_group_civic
 	culture_era = culture_era_tribal
 	icon = @administration_3
-
+	
+	modifier = {
+		title_creation_cost_mult = -0.25
+	}
 	unlock_law = ancient_partition_succession_law
 
 	flag = global_regular
@@ -147,6 +164,7 @@ innovation_casus_belli = {
 	icon = @administration_1
 
 	unlock_casus_belli = individual_county_de_jure_cb
+	unlock_casus_belli = individual_duchy_de_jure_cb
 
 	flag = global_regular
 	flag = tribal_era_regular
@@ -171,7 +189,8 @@ innovation_ledger = {
 	icon = @administration_2
 
 	modifier = {
-		domain_limit = 1
+		domain_tax_mult = 0.05
+		levy_size = 0.05
 	}
 
 	flag = global_regular

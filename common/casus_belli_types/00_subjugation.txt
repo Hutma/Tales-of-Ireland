@@ -150,7 +150,7 @@
 					}
 				}
 				add = {
-					value = 500
+					value = 450
 					desc = CB_BASE_COST
 				}
 			}
@@ -174,17 +174,6 @@
 				multiply = {
 					value = 2.5
 					desc = CB_COST_RULES_EMPIRE
-				}
-			}	
-			if = {
-				limit = {
-					scope:attacker = {
-						has_government = feudal_government
-					}
-				}
-				multiply = {
-					value = 0.5
-					desc = CB_TRIBAL_COST
 				}
 			}
 
@@ -311,21 +300,6 @@
 				add = {
 					value = 1000
 					desc = CB_BASE_COST
-				}
-			}
-
-			#Innovation Piety Discounts
-			if = {
-				limit = {
-					scope:attacker = {
-						culture = {
-							has_innovation = innovation_reconquista
-						}
-					}
-				}
-				multiply = {
-					value = 0.9
-					desc = CB_RECONQUISTA_COST
 				}
 			}
 

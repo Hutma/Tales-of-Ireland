@@ -8,7 +8,7 @@
 	
 	sea_fomorians = {
 		graphical_cultures = {
-			ugro_permian_group_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			100 = circumpolar_dark_hair
@@ -71,7 +71,7 @@
 	}
 	underground_fomorians = {
 		graphical_cultures = {
-			ugro_permian_group_coa_gfx
+			irelander_building_gfx
 		}
 		ethnicities = { 	
 			100 = circumpolar_dark_hair

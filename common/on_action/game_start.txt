@@ -23,7 +23,7 @@ on_game_start = {
 			character:260000 = {
 				trigger_event = {
 					id = labraid_story.0001
-					years = { 2 4 }
+					days = { 20 50 }
 				}
 			}
 		}

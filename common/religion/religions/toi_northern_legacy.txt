@@ -188,7 +188,7 @@
 	faiths = {
 		sons_of_the_ocean = {
 			color = { 1 11 111 }
-			icon = germanic_custom
+			icon = custom_faith_fp1_odins_ravens
 			
 			holy_site = newgrange
 			holy_site = tralee

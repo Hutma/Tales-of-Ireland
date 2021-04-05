@@ -53,3 +53,44 @@ toi_decision_race.0002 = {
 		}
 	}
 }
+
+#The nemedian kingdom revived.
+toi_decision_race.0003 = {
+	type = character_event
+	title = toi_decision_race.0003.t
+	desc = toi_decision_race.0003.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { restore_nemedian_kingdom_decision_scripted_effect = yes }
+
+	#No thanks on the nickname, more prestige instead please.
+	option = {
+		name = toi_decision_race.0003.a
+		add_prestige = medium_prestige_gain
+		root.capital_county = {
+			change_development_level = 5
+		}
+	}
+}
+
+
+#Inform any players.
+toi_decision_race.0004 = {
+	type = character_event
+	title = toi_decision_race.0004.t
+	desc = toi_decision_race.0004.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = toi_decision_race.0004.a
+	}
+}

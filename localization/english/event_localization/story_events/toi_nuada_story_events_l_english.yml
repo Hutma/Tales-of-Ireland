@@ -1,0 +1,37 @@
+﻿l_english:
+ nuada_story.0001.t:0 "The Pretender"
+ nuada_story.0001.desc:0 "Since the Tuatha Dé Danann escaped Ireland and went into the Otherworld I have led them. Because of this I am recognized as the rightful King here, the chosen to rule and lead our people to greatness. Within a few years we managed to take nearly all of Derry and settle in the land of this prosperous kingdom. All went for the best... until now. A messenger came to the ringfort today and he delivered some worrying news. I learnt that another group of Tuatha Dé Danann managed to espace but in another part of the Otherworld, in Tír fo Thuinn, the Land Under The Wave. The leader of this group is named Ler and he claims to be as rightful as I to rule of the Tuatha Dé Danann. He will come to my fort with a challenge that I will have to overcome, if I fail, he will take my throne. But I succed he will bow before me and will give me his men. Should I accept the challenge?"
+ nuada_story.0001.a:0 "I have to prove myself by accepting"
+ nuada_story.0001.b:0 "I don't care about this man, I won't accept"
+ 
+ nuada_story.0011.t:0 "Ler attacks!"
+ nuada_story.0011.desc:0 "Ler be damned. He has rallied his men and is now marching against me with his army. He wants to take Derry for himself! Gather the army and let's crush this arrogant fool!"
+ nuada_story.0011.a:0 "I will defeat this insolent"
+ 
+ nuada_story.0012.t:0 "Ler attacks Derry"
+ nuada_story.0012.desc:0 "Since I have lost Derry Ler estimate himslef more legitimate than the new king and is now attacking Derry with all his men."
+ nuada_story.0012.a:0 "I wonder if he will win"
+ 
+ nuada_story.0013.t:0 "King Ler"
+ nuada_story.0013.desc:0 "He has done it... Ler took my place on the throne of Derry... It's over, he deserves his victory and I have to back down. He has a greater destiny than me and the gods are with him, let's hope he will lead the Tuatha Dé Danann to greatness."
+ nuada_story.0013.a:0 "He was better than me..."
+ 
+ nuada_story.0014.t:0 "Ler has failed"
+ nuada_story.0014.desc:0 "Ler has been crushed. He has lost the war for Derry and is now running away."
+ nuada_story.0014.a:0 "He was a worthy adversary"
+ 
+ nuada_story.0002.t:0 "The challenge of Time"
+ nuada_story.0002.desc:0 "Ler is here and with him all his men. I chose a bunch of guard and entered my ringfort at my invitation. He is now marching towards me, the head hight and with a smile on his face. 'Nuada of the Tuatha Dé Danann! I am please to find you and to challenge you. You could have thought that I would find an inventive challenge to put you to test, and I have. I challenge you to a challenge of endurance, if you die before me, I will have your crown. If I die before you, you will have my men.'"
+ nuada_story.0002.a:0 "This is an interesting challenge"
+ nuada_story.0002.b:0 "I reject this challenge, go away"
+ 
+ nuada_story.0003.t:0 "The challenge of Strenght"
+ nuada_story.0003.desc:0 "Ler is here and with him all his men. I chose a bunch of guard and entered my ringfort at my invitation. He is now marching towards me, the head hight and with a smile on his face. 'Nuada of the Tuatha Dé Danann! I am please to find you and to challenge you. You could have thought that I would find an inventive challenge to put you to test, but I have not. I challenge you to a trial by combat, the winner will be crowned king!'"
+ nuada_story.0003.a:0 "I am great fighter, I will beat you with ease"
+ nuada_story.0003.b:0 "I won't fight you, go away"
+ 
+ nuada_story.0004.t:0 "Ler men"
+ nuada_story.0004.desc:0 "I have won the challenge and proven myself as the rightful king. As promised, Ler's men are now at my service and will fight and die for me. Now that there is no longer any pretender to my title, I can freely focus on restoring my people's former glory."
+ nuada_story.0004.a:0 "Destiny awaits!"
+ 
+ 

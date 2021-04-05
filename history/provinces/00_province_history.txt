@@ -526,6 +526,10 @@
               culture = corca_loigde
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 229 = {       #Maulrour (b_maulrour)
@@ -1454,6 +1458,10 @@
               culture = corca_loigde
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 326 = {       #Cloyne (b_cloyne)
@@ -1966,6 +1974,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 95 = {        #Ardmore (b_ardmore)
@@ -3081,6 +3093,10 @@
               culture = lughaid_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 467 = {       #Barrakilla (b_barrakilla)
@@ -3380,6 +3396,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 512 = {       #Finuge (b_finuge)
@@ -3873,6 +3893,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 586 = {       #Coshma (b_coshma)
@@ -4111,6 +4135,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 622 = {       #Ardpatrick (b_ardpatrick)
@@ -4152,6 +4180,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 628 = {       #Kilshenane (b_kilshenane)
@@ -4689,6 +4721,10 @@
               culture = fir_domnann
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 708 = {       #Clarecastle (b_clarecastle)
@@ -4756,6 +4792,10 @@
               culture = fir_domnann
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 718 = {       #Cragmoher (b_cragmoher)
@@ -4940,6 +4980,10 @@
               culture = fir_domnann
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 746 = {       #Moyasta (b_moyasta)
@@ -5497,6 +5541,10 @@
               culture = eber_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 830 = {       #Golden (b_golden)
@@ -6050,6 +6098,10 @@
               culture = eber_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 915 = {       #Crossogue (b_crossogue)
@@ -6342,6 +6394,10 @@
               culture = eber_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 960 = {       #Clybenane (b_clybenane)
@@ -6455,6 +6511,10 @@
               culture = newgrange_builders
               religion = newgrange_faith
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 977 = {       #Shanaglish (b_shanaglish)
@@ -6613,6 +6673,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1001 = {      #Ballinfoyle (b_ballinfoyle)
@@ -6983,6 +7047,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1070 = {      #Kilbannon (b_kilbannon)
@@ -8603,6 +8671,10 @@
               culture = fir_bolg
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1318 = {      #Drimdough (b_drimdough)
@@ -9379,6 +9451,10 @@
               culture = fir_bolg
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1437 = {      #Knockatinole (b_knockatinole)
@@ -9443,6 +9519,10 @@
               culture = fir_bolg
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1447 = {      #Garracloon (b_garracloon)
@@ -10512,6 +10592,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 1619 = {      #Rathbraughan (b_rathbraughan)
@@ -10867,6 +10951,10 @@
               culture = ui_maine
               religion = fomorian_worship
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 1678 = {      #Ballymacfarrane (b_ballymacfarrane)
@@ -12555,6 +12643,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 1948 = {      #Meenacladdy (b_meenacladdy)
@@ -13578,6 +13670,10 @@
               culture = conmaicne
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 2109 = {      #Riverrun (b_riverrun)
@@ -14246,6 +14342,10 @@
               culture = sogain
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2212 = {      #Scotshouse (b_scotshouse)
@@ -14532,6 +14632,10 @@
               culture = sogain
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2256 = {      #Blackstaff (b_blackstaff)
@@ -14831,6 +14935,10 @@
               culture = luighne 
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2300 = {      #Beagh (b_beagh)
@@ -15066,6 +15174,10 @@
               culture = underground_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2336 = {      #Killyhevlin (b_killyhevlin)
@@ -17553,6 +17665,10 @@
               culture = de_danann
               religion = sidhe_beliefs
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
 }
 
 2721 = {      #Strathfoyle (b_strathfoyle)
@@ -17844,6 +17960,10 @@
               culture = ui_eachach_coba
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2766 = {      #Murlough (b_murlough)
@@ -18445,6 +18565,10 @@
               culture = ui_eachach_coba
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2859 = {      #Balloo (b_balloo)
@@ -18639,6 +18763,10 @@
               culture = ir_milesians
               religion = celtic_de_danann_worship
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2889 = {      #Carryduff (b_carryduff)
@@ -18783,6 +18911,10 @@
               culture = ir_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2911 = {      #Gawleysgate (b_gawleysgate)
@@ -19118,6 +19250,10 @@
               culture = dal_naraide
               religion = sea_dwellers
               holding = castle_holding
+				 2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 2962 = {      #Muckamore (b_muckamore)
@@ -19917,6 +20053,10 @@
               culture = dal_riata
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3084 = {      #Mosside (b_mosside)
@@ -20106,6 +20246,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3113 = {      #Faughart (b_faughart)
@@ -20159,6 +20303,10 @@
               culture = sea_fomorians
               religion = dark_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3121 = {      #Readypenny (b_readypenny)
@@ -20317,6 +20465,10 @@
               culture = eremon_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3145 = {      #Collon (b_collon)
@@ -21887,6 +22039,10 @@
               culture = osraighe 
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3383 = {      #Loughtbrack (b_loughtbrack)
@@ -21987,6 +22143,10 @@
               culture = osraighe 
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3398 = {      #Leagh (b_leagh)
@@ -22116,6 +22276,10 @@
               culture = osraighe 
               religion = sea_dwellers
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3418 = {      #Grangefertagh (b_grangefertagh)
@@ -22418,6 +22582,10 @@
               culture = ui_bairrche
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3464 = {      #Poulmounty (b_poulmounty)
@@ -23142,6 +23310,10 @@
               culture = gaileanga
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3573 = {      #Laragh (b_laragh)
@@ -23679,6 +23851,10 @@
               culture = loigis
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3662 = {      #Ballydonnell (b_ballydonnell)
@@ -24296,6 +24472,10 @@
               culture = ui_failge
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3755 = {      #Seirkieran (b_seirkieran)
@@ -24524,6 +24704,10 @@
               culture = sogain
               religion = great_barrows
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3790 = {      #Belmont (b_belmont)
@@ -25864,6 +26048,10 @@
               culture = eremon_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 3992 = {      #Mullaghea (b_mullaghea)
@@ -26298,7 +26486,7 @@
 4056 = {      #Corbalton (b_corbalton)
               culture = eremon_milesians
               religion = milesian_paganism
-              holding = none
+              holding = city_holding
 }
 
 4057 = {      #Skryne (b_skryne)
@@ -26366,6 +26554,10 @@
               culture = eremon_milesians
               religion = milesian_paganism
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4067 = {      #Proudstown (b_proudstown)
@@ -26982,6 +27174,10 @@
               culture = the_plagued
               religion = sons_of_the_ocean
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4160 = {      #Millfarm (b_millfarm)
@@ -27195,6 +27391,10 @@
               culture = ui_bairrche
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4192 = {      #Kyle (b_kyle)
@@ -27403,6 +27603,10 @@
               culture = ui_bairrche
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4224 = {      #Ballinvalley (b_ballinvalley)
@@ -27482,6 +27686,10 @@
               culture = ui_failge
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4236 = {      #Kineagh (b_kineagh)
@@ -27498,6 +27706,10 @@
               culture = gaileanga
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4238 = {      #Rockabill (b_rockabill)
@@ -27621,6 +27833,10 @@
               culture = gaileanga
               religion = the_old_gods
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4257 = {      #Donabate (b_donabate)
@@ -27959,6 +28175,10 @@
               culture = the_plagued
               religion = sons_of_the_ocean
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
 }
 
 4300 = {      #Kilmatead (b_kilmatead)

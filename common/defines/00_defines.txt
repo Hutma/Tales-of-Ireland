@@ -234,7 +234,7 @@ NCharacter = {
 
 	DEBT_MODIFIER_THRESHOLDS = { # When do the debt modifiers kick in, by months of income of debt
 		# Match to the modifier debt_level_i and combat_debt_level_i. Starts with 0
-		0 12 24 36 48 60 120
+		0 12 24 36 48 60 120 300 600 1200
 	}
 }
 
@@ -268,22 +268,22 @@ NChildbirth = {
 	MIN_MALE_REPRODUCTION_AGE = 16
 	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 2 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
 	CHANCE_OF_LOWERED_CHILD_LIMIT = 0.5	# Chance that the child limit is lowered by 1
-	EXTRA_CHILDREN_FOR_RULERS = 2 # If either character is a ruler, they get extra children
+	EXTRA_CHILDREN_FOR_RULERS = 1 # If either character is a ruler, they get extra children
 	CHARACTER_IN_POOL_CHILD_LIMIT = -1	# If in the pool, child limit is modified by this
 	CHILD_BIRTH_TO_PREGNANCY_WAIT = 3
 	MALE_FERTILITY_MULTIPLIER_LIMITS = { 70 60 50 40 35 } # Ages where fertility multiplier is applied 25 means up to 25, needs to be sorted in descending order
 	MALE_FERTILITY_MULTIPLIER = { 0.5 0.6 0.7 0.8 0.9 1.0 } # Multiplier values based on age limits from FERTILITY_MULTIPLIER_LIMITS should have an extra value at the beginning for characters older than first limit
 	FEMALE_FERTILITY_MULTIPLIER_LIMITS = { 45 40 35 30 25 } # Ages where fertility multiplier is applied 25 means up to 25, needs to be sorted in descending order
 	FEMALE_FERTILITY_MULTIPLIER = { 0.1 0.33 0.5 0.7 0.9 1.0 } # Multiplier values based on age limits from FERTILITY_MULTIPLIER_LIMITS should have an extra value at the beginning for characters older than first limit
-	MOTHER_FERTILITY_REDUCTION_PER_PREVIOUS_CHILD = 0.05
+	MOTHER_FERTILITY_REDUCTION_PER_PREVIOUS_CHILD = 0.10
 	LOW_FERTILITY = 0.1
 	PRIMARY_SPOUSE_FERTILITY_MULTIPLIER = 1
 	SECONDARY_SPOUSE_FERTILITY_MULTIPLIER = 0.5
 	CONCUBINE_FERTILITY_MULTIPLIER = 0.5
 	NOT_SPOUSE_FERTILITY_MULTIPLIER = 1
 	NON_RULER_FERTILITY_MULTIPLIER = 0.85	# If neither parent is a ruler, resulting fertility gets multiplied by this
-	FERTILITY_CHANCE_MULTIPLIER = 4.75 # Fertility is an average between the father and the mother (if the mother has 0.3 and the father 0.5, the average is 0.4), this number is then multiplied by this multiplier to produce the percentage chance of impregnation. Impregnation is checked every month.
-	MIN_FERTILITY_CHANCE = 1
+	FERTILITY_CHANCE_MULTIPLIER = 2.50 # Fertility is an average between the father and the mother (if the mother has 0.3 and the father 0.5, the average is 0.4), this number is then multiplied by this multiplier to produce the percentage chance of impregnation. Impregnation is checked every month.
+	MIN_FERTILITY_CHANCE = 0.5
 	MAX_FERTILITY_CHANCE = 25
 	TWIN_BASE_CHANCE = 0.02
 	TWIN_BONUS_MAX_AGE = 35
@@ -338,7 +338,7 @@ NChildbirth = {
 	EXTRA_CHILDREN_PER_EXTRA_SPOUSE = 2 # Num of extra children per spouse above one before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_CONCUBINE = 2 # Num of extra children per concubine above one before reaching living child limit
 	EXTRA_FERTILITY_FOR_FIRST_CHILD = 0.0 # Extra fertility if the couple are primary spouses and have no children together
-	EXTRA_FERTILITY_FOR_FIRST_RULER_CHILD = 0.3 # Extra fertility if the couple are primary spouses and have no children together, and at least one of them is a ruler
+	EXTRA_FERTILITY_FOR_FIRST_RULER_CHILD = 0.4 # Extra fertility if the couple are primary spouses and have no children together, and at least one of them is a ruler
 	DIVINE_MARRIAGE_FERTILITY_MULTIPLIER = 1 # Multiplier if the couple is close or extended family and their faith allows divine marriage
 	CLOSE_FAMILY_FERTILITY_MULTIPLIER = 0.9 # Multiplier if the couple is close family and their faith does not allow divine marriage
 	EXTENDED_FAMILY_FERTILITY_MULTIPLIER = 1 # Multiplier if the couple is extended family and their faith does not allow divine marriage
@@ -481,14 +481,14 @@ NCombat = {
 	RANDOM_ADVANTAGE_MIN = -25						# The worst initial battle Advantage from the 'random_advantage' Trait modifier
 	RANDOM_ADVANTAGE_RANGE = 65						# The roll range from the 'random_advantage' Trait modifier
 	
-	MINIMUM_COMBAT_WIDTH = 50						# Combat width cannot be smaller than this
+	MINIMUM_COMBAT_WIDTH = 25						# Combat width cannot be smaller than this
 	BASE_RATIO_CASUALTIES_CONVERSION_PURSUIT = 1	# How many of the hard casualties inflicted on the retreating side should be converted to hard casualties during retreat. Interacts with BASE_TOUGHNESS_TO_PURSUIT and such
 	PURSUIT_STAT_TO_PURSUIT_DAMAGE = 0.5			# The pursuit stat is multiplied by this before being turned into actual damage
 	BASE_TOUGHNESS_TO_PURSUIT = 0.10				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
 	MINIMUM_PURSUIT_DAMAGE = 0.01					# High screen can't bring casualties below 1% in the pursuit phase
 	DISEMBARK_PENALTY_DAYS = 30						# How long does an army have a penalty after disembarking?
-	KNIGHT_DAMAGE_PER_PROWESS = 40					# How much "Damage" stat does a knight get per prowess?
-	KNIGHT_TOUGHNESS_PER_PROWESS = 5				# How much "Toughness" stat does a knight get per prowess?
+	KNIGHT_DAMAGE_PER_PROWESS = 30					# How much "Damage" stat does a knight get per prowess?
+	KNIGHT_TOUGHNESS_PER_PROWESS = 3				# How much "Toughness" stat does a knight get per prowess?
 	COMBAT_RESULT_MONTHS_TO_TIMEOUT = 12			# Combat results timeout after this many months
 }
 
@@ -548,7 +548,7 @@ NArmy = {
 
 NFleet = {
 	FLEET_SPEED = 15						# Fleet speed
-	EMBARK_GOLD_COST_PER_HUNDRED = 1		# Embark cost for every hundred units
+	EMBARK_GOLD_COST_PER_HUNDRED = 5		# Embark cost for every hundred units
 	GOLD_COST_MAINTENANCE_MULT = 0.25		# Increase in the gold maintenance for armies that are embarked
 	ATTRITION_AFTER_DAYS = 30				# After embarking the army can expend this time without getting attrition
 }
@@ -732,9 +732,9 @@ NSiege = {
 
 	BASE_DEFENDER_MORALE = 100							# Defender morale with no buildings, garrison etc
 	DEFENDER_MORALE_PER_FORT_LEVEL = 75					# Defender morale added to the base per for level
-	BASE_DAILY_MORALE_LOSS = 1							# How much morale is lost every day of the siege
+	BASE_DAILY_MORALE_LOSS = 1.2						# How much morale is lost every day of the siege
 	MIN_DAILY_MORALE_LOSS = 0.5							# Minimum daily morale loss for the defenders
-	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.06	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
+	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.05	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
 	RELATIVE_ATTACKER_MEN_STACK_SIZE = 50				# Extra stack size of men to start getting daily morale loss
 	MONTHLY_ATTRITION = 0.01							# Monthly attrition during siege
 	BASE_SIEGE_PHASE_LENGTH = 20						# Base length of a siege phase (time between picking new actions) in days
@@ -747,7 +747,7 @@ NSiege = {
 		2.5
 		1
 	}
-	BREACH_ASSAULT_PROGRESS_CHUNK = 100					# How many mens take an impact in the assault (rounds up)
+	BREACH_ASSAULT_PROGRESS_CHUNK = 25					# How many mens take an impact in the assault (rounds up)
 	BREACH_ASSAULT_PROGRESS_PER_CHUNK = 0.2				# How much impact in assault will have every chunk
 	STARVATION_MORALE_LEVELS = {	# How many levels of starvation are there, and how much morale does the defender lose (as a percentage of total morale)
 		0.05
@@ -759,10 +759,10 @@ NSiege = {
 	}
 	DESERTION_MORALE_LOSS = 5		# How much defender morale is lost on desertion
 	SIEGE_FORT_THRESHOLDS = { # At what levels is another level of siege tier needed to avoid reduced siege speed?
-		4
-		6
+		5
+		7
 		11
-		16
+		17
 		31
 	}
 	SIEGE_FORT_THRESHOLD_IMPACT = 0.7 # What is the impact of not having enough siege tier? Siege speed is multiplied for this for each missing tier. E.G., if siege tier is 0, and fort level is 4, siege speed is multiplied by 0.5 * 0.5
@@ -801,7 +801,7 @@ NImprisonment = {
 }
 
 NCounty = {
-	DEVELOPMENT_SPREAD_NEIGHBOUR_FACTOR = 0.1
+	DEVELOPMENT_SPREAD_NEIGHBOUR_FACTOR = 0.03
 	DEVELOPMENT_SPREAD_USES_HIGHEST_NEIGHBOUR = yes # "yes" means only the difference from the highest dev neighbor will be used. "no" means that all higher-dev neighbors will be used
 	LEVELS_DEVELOPMENT = { 100 200 300 400 500 600 700 800 900 }
 	LEVEL_DROP_MAX_RETAINED_PROGRESS_DEVELOPMENT = 0.5
@@ -820,6 +820,16 @@ NProvince = {
 	COUNTY_BUILDING_SLOTS = 5
 	SUPPLY_PER_DEVELOPMENT = 20					# Each development adds this much sto the supply limit
 	ACROSS_WATER_PROVINCE_MAX_DISTANCE = 2		# Maximum number of (traversable) water provinces between provinces to be considered "connected across water"
+	WINTER_LEVEL_THRESHOLD_MILD = 0.2           # Determines when the mild winter level takes effect, should be a value between 0.0 .. 1.0
+	WINTER_LEVEL_THRESHOLD_NORMAL = 0.5         # Determines when the normal winter level takes effect, which ranges between WINTER_LEVEL_THRESHOLD_MILD .. 1.0
+	WINTER_LEVEL_THRESHOLD_HARSH = 0.9         # Determines when the harsh winter level takes effect, which ranges between WINTER_LEVEL_THRESHOLD_NORMAL .. 1.0
+	WINTER_EFFECTS_MINIMAL_DAY_COUNT = 10       # The target effects of winter are determined on a monthly basis, it will take a number of days to reach this target between this minimum and 27 (days in February - 1)
+	WINTER_EFFECTS_FACTOR_MILD = 0.45           # Bias that offsets the newly added value for winter (on a monthly basis) while a province has no or mild winter
+	WINTER_EFFECTS_FACTOR_NORMAL = 0.3		    # Bias that offsets the newly added value for winter (on a monthly basis) while a province has normal winter
+	WINTER_EFFECTS_FACTOR_HARSH = 0.15			# Bias that offsets the newly added value for winter (on a monthly basis) while a province has harsh winter
+	WINTER_SEVERITY_DEFAULT_BIAS = 0.1			# Default bias used when determining winter on a province that doesn't have a bias set explicitely
+	WINTER_SEVERITY_RANDOM_MIN = 0.5			# Sets the lower bound of the random value that is used when determining the next winter severity
+	WINTER_SEVERITY_RANDOM_MAX = 1.0			# Sets the upper bound of the random value that is used when determining the next winter severity
 }
 
 NText = {
@@ -855,6 +865,9 @@ NDynasty = {
 	NAMING_CHANCE_TITLE = 50
 
 	CADET_COA_BASE_PATTERN = "pattern_solid.dds" # Pattern used for in the background of a tiled cadet branch CoA
+	
+	PERK_COST_BASE = 250		# Used to determine what the cost of the next legacy perk is going to be. It's calculated as: COST = PERK_COST_BASE + (Number of Unlocked Perks * PERK_COST_MULTIPLIER)
+	PERK_COST_MULTIPLIER = 500	# Used to determine what the cost of the next legacy perk is going to be. It's calculated as: COST = PERK_COST_BASE + (Number of Unlocked Perks * PERK_COST_MULTIPLIER)
 }
 
 NHouse = {
@@ -908,8 +921,8 @@ NPathFinding = {
 
 NCulture = {
 	MINIMUM_INNOVATIONS_TO_NEXT_ERA = 0.5									# Percentage of innovations to be able to go to the next era
-	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.2									# Base percentage gain every month for era exposure
-	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.05			# How much extra per average development level
+	ERA_PROGRESS_GAIN_BASE_MONTHLY = 0.1									# Base percentage gain every month for era exposure
+	ERA_PROGRESS_GAIN_MONTHLY_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.03			# How much extra per average development level
 	FIRST_ERA_START_YEAR = 4650												# When did the first era start?
 
 	# Regional exposure will start with the minimum number of regions from any of the next percentages
@@ -921,14 +934,14 @@ NCulture = {
 	INNOVATION_PROGRESS_CHANCE_BASE = 5
 	INNOVATION_PROGRESS_CHANCE_FROM_EXPOSURE = 40							# if there is any exposure
 	# from fascination = base + max( 0, head learning skill - HEAD_LEARNING_BASE ) * PER_LEARNING_LEVEL
-	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 40
+	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_BASE = 35
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_HEAD_LEARNING_BASE = 0
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_PER_LEARNING_LEVEL = 2
 	INNOVATION_PROGRESS_CHANCE_FROM_FASCINATION_NO_HEAD_LEARNING = 10		# used as the skill value if there is no cultural head
 
 	# If the random roll succeeds, the innovation will progress by:
 	# base + from development + from eras ahead
-	INNOVATION_PROGRESS_GAIN_BASE = 0.5
+	INNOVATION_PROGRESS_GAIN_BASE = 0.3
 	INNOVATION_PROGRESS_GAIN_PER_AVERAGE_DEVELOPMENT_LEVEL = 0.01
 	INNOVATION_PROGRESS_GAIN_PER_ERA_AHEAD = 0.2
 }
@@ -980,6 +993,7 @@ NHolyOrder = {
 	LEVY_COST_PER_100_SOLDIERS = 40.0		# The piety cost of the levy regiment part of holy orders, per 100 soldiers for better precision
 	MAA_COST_RATIO = 0.2					# The piety cost of the MAA regiments of holy orders as a fraction of what those regiments cost when buying them
 	PATRON_HIRE_COST_MULT = 0				# The patron pays only a fraction for hiring a holy order. Set to 0 to make it free.
+	PATRON_STEAL_COST_MULT = 1				# But if someone's already hired it, they do have to pay still
 
 	# One character can hire up to this many holy orders. Set to -1 to disable the limit.
 	HIRE_LIMIT = 1

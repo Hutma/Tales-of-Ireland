@@ -85,7 +85,7 @@ feudal_government_levies = {
 			parent = feudal_levies_low
 			position = { 2 0 }
 
-			levies = 0.125
+			levies = 0.15
 
 			ai_liege_desire = 3
 			ai_vassal_desire = 3
@@ -94,7 +94,7 @@ feudal_government_levies = {
 			parent = feudal_levies_normal
 			position = { 3 0 }
 			
-			levies = 0.175
+			levies = 0.25
 			vassal_opinion = -15
 
 			ai_liege_desire = 4
@@ -104,7 +104,7 @@ feudal_government_levies = {
 			parent = feudal_levies_high
 			position = { 4 0 }
 			
-			levies = 0.25
+			levies = 0.35
 			vassal_opinion = -25
 
 			ai_liege_desire = 5
@@ -404,7 +404,7 @@ succession_rights = {
 	display_mode = checkbox
 	is_shown = {
 		scope:vassal = {
-			can_have_confederate_partition_succession_law_trigger = yes
+			can_have_ancient_partition_succession_law_trigger = yes
 		}
 	}
 	obligation_levels = {
@@ -418,7 +418,7 @@ succession_rights = {
 		succession_rights_forced_partition = {
 			is_valid = {
 				scope:vassal = {
-					can_have_confederate_partition_succession_law_trigger = yes
+					can_have_ancient_partition_succession_law_trigger = yes
 				}
 			}
 			parent = succession_rights_default

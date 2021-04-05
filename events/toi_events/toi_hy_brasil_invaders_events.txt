@@ -1,0 +1,201 @@
+﻿namespace = toi_hybrazil
+
+#Hy Brasylian hidden triggers 0001
+toi_hybrazil.1001 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			trigger_event = {
+				id = toi_hybrazil.0001
+				days = 1
+			}
+		}
+		trigger_event = {
+			id = toi_hybrazil.1002
+			years = 7
+		}
+	}
+}
+
+#Hy Brasylian spotted for the first time
+toi_hybrazil.0001 = {
+	title = toi_hybrazil.0001.t
+	desc = toi_hybrazil.0001.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	override_background = {
+		event_background = hy_brazil_island
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	immediate = {
+
+	}
+	option = {
+		name = toi_hybrazil.0001.a
+	}
+}
+
+#Hy Brasylian hidden triggers 0002
+toi_hybrazil.1002 = {
+	hidden = yes
+	
+	immediate = {
+		every_ruler = {
+			trigger_event = {
+				id = toi_hybrazil.0002
+				days = 1
+			}
+		}
+		trigger_event = {
+			id = toi_hybrazil.1003
+			years = 7
+		}
+	}
+}
+
+#Hy Brasylian fist contact
+toi_hybrazil.0002 = {
+	title = toi_hybrazil.0002.t
+	desc = toi_hybrazil.0002.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	override_background = {
+		event_background = hy_brazil_island
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	immediate = {
+		every_independent_ruler = {
+			add_to_list = hy_brasil_visiter_list
+		}
+		random_in_list = {
+			list = hy_brasil_visiter_list
+			save_scope_as = visitor_employer
+		}
+		create_character = {
+			age = { 20 40 }
+			trait = hy_brazylian
+			random_traits = yes
+			gender_female_chance = 0
+			employer = scope:visitor_employer
+			dynasty = generate
+			faith = faith:hy_brazil_sidhe
+			culture = culture:hy_brazylian_culture
+		}
+		scope:visitor_employer = {
+			add_gold = 200
+			add_prestige = 200
+		}
+	}
+	option = {
+		name = toi_hybrazil.0002.a
+	}
+}
+
+#Hy Brasylian hidden triggers 0003
+toi_hybrazil.1003 = {
+	hidden = yes
+	
+	immediate = {
+		every_ruler = {
+			trigger_event = {
+				id = toi_hybrazil.0003
+				days = 1
+			}
+		}
+	}
+}
+
+#Hy Brasylian invasion
+toi_hybrazil.0003 = {
+	title = toi_hybrazil.0003.t
+	desc = toi_hybrazil.0003.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = hy_brazil_island
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		random_list = {
+			15 = { #5 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			15 = { #6 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			30 = { #7 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			20 = { #8 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			15 = { #9 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+			5 = { #12 invaders
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+				hy_brasylian_invasion_effect = yes
+			}
+		}
+	}
+	option = {
+		name = toi_hybrazil.0003.a
+	}
+}

@@ -40,6 +40,15 @@ innovation_machicolations = {
 	flag = late_medieval_era_regular
 }
 
+innovation_bombard = {
+	group = culture_group_military
+	culture_era = culture_era_late_medieval
+	icon = @siege_weapons
+
+	unlock_maa = siege_tower
+}
+
+
 innovation_royal_armory = {
 	group = culture_group_military
 	culture_era = culture_era_late_medieval
@@ -105,7 +114,9 @@ innovation_primogeniture = {
 	group = culture_group_civic
 	culture_era = culture_era_late_medieval
 	icon = @majesty_01
-
+	
+	unlock_law = partition_succession_law
+	
 	flag = global_regular
 	flag = late_medieval_era_regular
 }
@@ -168,7 +179,8 @@ innovation_court_officials = {
 	icon = @nobility_02
 	
 	modifier = {
-		domain_limit = 1
+		domain_tax_mult = 0.05
+		levy_size = 0.05
 	}
 
 	flag = global_regular

@@ -76,17 +76,41 @@ grant_vassal_interaction = {
 			}
 		}
 ###TALES OF IRELAND
-		OR = {
-			AND = {
-				has_realm_law = crown_authority_0
-				prestige_level >= 3
+		trigger_if = {
+			limit = {
+				AND = {
+					NOT = { 
+						scope:actor = { 
+							prestige_level >= 3 
+						}
+					}
+					NOT = { has_government = tribal_government }
+				}
 			}
-			AND = {
-				has_realm_law = crown_authority_1
-				prestige_level >= 3
+			custom_description = {
+				text = "has_law_allowing_grant_vassal_crown"
+				scope:actor = {
+					has_realm_law_flag = grant_vassal_allowed
+				}
 			}
-			has_realm_law = crown_authority_2
-			has_realm_law = crown_authority_3
+		}
+		trigger_if = {
+			limit = {
+				AND = { 
+					NOT = { has_government = tribal_government }
+					NOT = { 
+						scope:actor = {
+							has_realm_law_flag = grant_vassal_allowed 
+						}
+					}
+				}
+			}
+			custom_description = {
+				text = "not_enough_prestige_grant_vassal_law_crown_weak"
+				scope:actor = {
+					prestige_level >= 3
+				}
+			}
 		}
 ###TALES OF IRELAND END
 	}
@@ -1636,6 +1660,71 @@ ask_for_pardon_interaction = {
 		modifier = {
 			add = 100
 			scope:hook = yes
+		}
+	}
+}
+
+pardon_interaction = {
+	category = interaction_category_friendly
+
+	desc = pardon_interaction_desc
+	
+	is_shown = {
+		scope:actor = {
+			has_imprisonment_reason = scope:recipient
+		}
+		scope:recipient = {
+			target_is_liege_or_above = scope:actor
+		}
+	}
+
+	auto_accept = yes
+	
+	on_accept = {
+		consume_all_criminal_reasons_effect = {
+			LIEGE = scope:actor
+			CRIMINAL = scope:recipient
+		}
+		
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = grateful_opinion
+				opinion = 15
+			}
+			
+			send_interface_toast = {
+				title = pardon_interaction_toast
+				left_icon = scope:actor
+            }			
+		}			
+	}
+	
+	ai_potential = {
+		has_trait = forgiving
+	}
+	ai_targets = {
+		ai_recipients = vassals
+	}
+	ai_targets = {
+		ai_recipients = courtiers
+		chance = 0.25
+	}
+	ai_frequency = 100	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					is_primary_heir_of = scope:actor
+				}
+			}
 		}
 	}
 }

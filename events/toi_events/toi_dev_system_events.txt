@@ -1,0 +1,2966 @@
+﻿namespace = cattle
+
+#Event Good: Cow Market
+cattle.0001 = {
+	type = character_event
+	title = cattle.0001.t
+	desc = cattle.0001.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	option = { # yes please
+		name = cattle.0001.a
+		add_prestige = 50
+		remove_short_term_gold = 10
+		capital_county = {
+			change_development_level = 5
+		}
+
+		ai_chance = {
+			base = 90
+		}
+	}
+
+	option = { # no thx
+		name = cattle.0001.b
+		
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_greed = 2
+			}
+		}
+	}
+
+	option = { # tyranny at its finest
+		name = cattle.0001.c
+		capital_county = {
+			change_development_level = 5
+		}
+		
+		stress_impact = {
+			just = medium_stress_impact_gain
+		}
+
+		capital_county = {
+			add_county_modifier = { 
+				modifier = upset_merchants 
+				years = 10
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_value_modifier = {
+					ai_greed = 2
+					ai_honor = -1
+				}
+			}
+		}
+	}
+}
+
+	
+#Event good: Lost Sheep
+cattle.0002 = {
+	type = character_event
+	title = cattle.0002.t
+	desc = cattle.0002.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = admiration
+	}
+
+	option = { # my land, my sheep
+		name = cattle.0002.a
+		add_prestige = -100
+
+		capital_county = { 
+			random_list = {
+			   10 = { change_development_level = 10 }
+			   10 = { change_development_level = 9 }
+			   10 = { change_development_level = 8 }
+			   10 = { change_development_level = 7 }
+			   10 = { change_development_level = 6 }
+			}
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+		
+		ai_chance = {
+			base = 90
+
+			ai_value_modifier = {
+				modifier = { 
+					add = -40
+					has_trait = arrogant
+				}
+			}
+		}
+	}
+
+	option = { # i no steal
+		name = cattle.0002.b
+		add_prestige = 50
+		
+		add_character_modifier = {
+			modifier = five_opinion_general
+			years = 2
+		}
+
+		stress_impact = {
+			just = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 10
+
+			ai_value_modifier = {
+				modifier = { 
+					add = 30
+					has_trait = arrogant
+				}
+			}
+		}
+	}
+}
+
+#Event good: The Special Bull
+cattle.0003 = {
+	type = character_event
+	title = cattle.0003.t
+	desc = cattle.0003.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = admiration
+	}
+
+	option = { # this bull is my bull
+		name = cattle.0003.a
+		add_prestige = 50
+		
+		capital_county = { 
+			random_list = {
+				   10 = { change_development_level = 5 }
+				   10 = { change_development_level = 6 }
+				   10 = { change_development_level = 7 }
+				   10 = { change_development_level = 8 }
+				   10 = { change_development_level = 9 }
+				   10 = { change_development_level = 10 }
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_loss 
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { # cash > bull
+		name = cattle.0003.b
+
+		random_list = {
+			10 = { add_gold = 50 }
+			10 = { add_gold = 60 }
+			10 = { add_gold = 70 }
+			10 = { add_gold = 80 }
+			10 = { add_gold = 90 }
+			10 = { add_gold = 100 }
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {                         
+				modifier = { 
+					add = 50
+					has_trait = greedy 
+				}                          
+				modifier = { 
+					add = -50
+					has_trait = generous 
+				}
+			}
+		}
+	}
+	
+	option = { # hehehe i'm naughty
+		name = cattle.0003.c
+
+		stress_impact = {
+				honest = medium_stress_impact_gain 
+		}
+
+		duel = {
+			skill = intrigue
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.0003.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.0003.c.success
+					add_gold = 80
+					add_prestige = minor_prestige_gain
+					capital_county = { 
+						random_list = {
+								10 = { change_development_level = 1 }
+								10 = { change_development_level = 2 }
+								10 = { change_development_level = 3 }
+								10 = { change_development_level = 4 }
+								10 = { change_development_level = 5 }
+						}
+					}
+				}
+			}
+			5 = {
+				desc = cattle.0003.c.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.0003.c.failure
+					add_prestige = medium_prestige_loss
+					capital_county = { 
+						random_list = {
+							10 = { change_development_level = 1 }
+							10 = { change_development_level = 2 }
+							10 = { change_development_level = 3 }
+							10 = { change_development_level = 4 }
+							10 = { change_development_level = 5 }
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = deceitful 
+			}
+			modifier = {
+				add = -50
+				has_trait = honest 
+			}
+		}
+    }
+}
+#Event good: Blessed Water
+cattle.0004 = {
+	type = character_event
+	title = cattle.0004.t
+	desc = cattle.0004.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = admiration
+	}
+
+	right_portrait = {
+		character = scope:blessed_water_knight
+		animation = ecstasy
+	}
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				is_knight = yes
+		
+			}
+			save_scope_as = blessed_water_knight
+		}
+	}
+	option = { # risk it
+		name = cattle.0004.a
+		add_prestige = 50
+		remove_short_term_gold = 25
+		
+		hidden_effect = {
+			scope:root = { 
+				random_list = {
+					10 = {
+						root = {
+							trigger_event = {
+								id = cattle.00041
+								days = 7
+							}
+						}
+					}
+					10 = { 
+						root = {
+							trigger_event = {
+								id = cattle.00042
+								days = 7
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = ambitious
+			}
+			modifier = {
+				add = 50
+				has_trait = zealous
+			}
+		}
+	}
+
+	option = { # nah, i'm good
+		name = cattle.0004.b
+		add_prestige = -25
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -25
+				has_trait = ambitious 
+			}
+			modifier = {
+				add = -25
+				has_trait = paranoid
+			}
+		}
+	}
+}
+
+#Event good: Blessed Water 2: Electric Boogaloo
+cattle.00041 = {
+	type = character_event
+	title = cattle.00041.t
+	desc = cattle.00041.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = ecstasy
+	}
+
+	right_portrait = {
+		character = scope:blessed_water_knight
+		animation = ecstasy
+	}
+	
+	option = { # charge
+		name = cattle.00041.a
+		
+		add_character_modifier = {
+			modifier = health_water_bonus
+			years = 3 
+		}
+
+		capital_county = {
+			random_list = {
+				10 = { change_development_level = 5 }
+				10 = { change_development_level = 6 }
+				10 = { change_development_level = 7 }
+				10 = { change_development_level = 8 }
+			}
+		}
+		duel = {
+			skill = prowess
+			value = decent_skill_rating
+			10 = { # success
+				desc = cattle.00041.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.00041.a.success
+					add_prestige = minor_prestige_gain
+					scope:root = {
+						add_character_modifier = { 
+							modifier = five_opinion_general
+							years = 2
+						}
+					}
+				}
+		
+				scope:root = { 
+					random_list = {
+						5 = { 
+							increase_wounds_effect = {
+								REASON = fight	
+							} 
+						}
+						95 = { #nothing happens
+						
+						}
+					}
+				}
+			}
+			10 = { #failure
+				desc = cattle.00041.a.failure
+				increase_wounds_effect = {
+					REASON = fight 
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = brave 
+			}
+			modifier = {
+				add = 50
+				has_trait = wrathful 
+			}
+		}
+	}
+
+	option = { # run
+		name = cattle.00041.b
+		add_prestige = -100
+		
+		hidden_effect = {
+			scope:root = {
+				random_list = {
+					5 = {
+						increase_wounds_effect = {
+							REASON = fight	
+						} 
+					}
+					95 = {	#nothing happens
+					
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = craven 
+			}
+		}
+	}
+}
+
+#Event bad : Water of deceitfulness
+cattle.00042 = {
+	type = character_event
+	title = cattle.00042.t
+	desc = cattle.00042.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = sadness
+	}
+
+	right_portrait = {
+		character = scope:blessed_water_knight
+		animation = shame
+	}
+
+	option = { # take it anyway
+		name = cattle.00042.a
+		remove_short_term_gold = 50
+		add_prestige = 25
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = greedy 
+			}
+			modifier = {
+				add = 50
+				has_trait = patient
+			}
+		}
+	}
+
+	option = { # fuck this, I'm going home
+		name = cattle.00042.b
+		add_prestige = -100
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 25
+				has_trait = content 
+			}
+			modifier = {
+				add = 25
+				has_trait = impatient
+			}
+		}
+	}
+}
+
+#Event bad : Fire!
+cattle.0005 = {
+	type = character_event
+	title = cattle.0005.t
+	desc = cattle.0005.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+
+	option = { # burn, mf, burn
+		name = cattle.0005.a
+		add_prestige = -50
+
+	   capital_county = { 
+			random_list = {
+				10 = { change_development_level = -1 }
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = temperate 
+			}
+		}
+	}
+
+	option = { # bad omen
+		name = cattle.0005.b
+		add_prestige = -50
+		add_piety = 50
+		remove_short_term_gold =50
+
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -1 }
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = zealous
+			}
+			modifier = {
+				add = 50
+				has_trait = paranoid 
+			}
+		}
+	}
+	
+	option = { # TR8TR!
+		name = cattle.0005.c
+		add_prestige = -150
+		
+		remove_short_term_gold = 50
+		
+		add_character_modifier = { 
+			modifier = reenforced_security
+			years = 2
+		}
+
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -1 }
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = paranoid 
+			}
+			modifier = {
+				add = -50
+				 OR = {
+					has_trait = education_intrigue_1
+					has_trait = education_intrigue_2
+					has_trait = education_intrigue_3
+					has_trait = education_intrigue_4
+				 }
+			}
+		}
+	}
+}
+
+#Event bad : Surprise from my steward
+cattle.0006 = {
+	type = character_event
+	title = cattle.0006.t
+	desc = cattle.0006.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = anger
+	}
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = fear
+	}
+	
+	trigger = {
+		exists = cp:councillor_steward
+	}
+	
+	immediate = {
+		cp:councillor_steward = {
+			save_scope_as = steward
+		}
+	}
+
+	option = { # feast and be merry anyway
+		name = cattle.0006.a
+		add_prestige = 50
+		scope:root = {
+			add_character_modifier = {
+				modifier = ten_opinion_general
+				years = 1
+			}
+		}
+		add_hook = {
+			type = favor
+			target = cp:councillor_steward 
+		}
+		stress_impact = {
+			wrathful = medium_stress_impact_gain
+			forgiving = medium_stress_impact_loss 
+		}
+
+		capital_county = {
+			change_development_level = -5
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = forgiving 
+			}
+		}
+	}
+
+	option = { # you're fired
+		name = cattle.0006.b
+		add_prestige = 25
+		
+		scope:root = {
+			add_character_modifier = {
+				modifier = ten_opinion_general
+				years = 1
+			}
+		}
+		
+		add_opinion = { 
+			opinion = -25
+			target = root.cp:councillor_steward 
+		}
+
+		fire_councillor = cp:councillor_steward
+		
+		capital_county = {
+			change_development_level = -5
+		}
+		
+	}
+
+	option = { # i pity the fool
+		name = cattle.0006.c
+		add_piety = -50
+		add_prestige = 50
+		
+		cp:councillor_steward = { add_trait = blind }
+
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+		}
+
+		capital_county = {
+			change_development_level = -5
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = cruel 
+			}
+			modifier = {
+				add = 50
+				has_trait = wrathful 
+			}
+		}
+	}
+	
+	option = { # in the dungeon
+		name = cattle.0006.d
+		add_piety = -50
+		add_prestige = 50
+		
+		cp:councillor_steward = { add_trait = blind }
+
+		root = {
+			every_stewardship_councillor = { save_scope_as = future_imprisoned }
+		}
+		root = {
+			imprison = {
+				target = scope:future_imprisoned
+				type = dungeon 
+			}    
+		}
+
+		stress_impact = { forgiving = medium_stress_impact_gain }
+
+		capital_county = {
+			change_development_level = -5
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = vengeful 
+			}
+			modifier = {
+				add = 50
+				has_trait = wrathful 
+			}
+		}
+	}
+}
+
+#Event bad : Wolves!
+cattle.0007 = {
+	type = character_event
+	title = cattle.0007.t
+	desc = cattle.0007.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+	   character = root
+	  animation = shock 
+	}
+
+	option = { # act now think later
+		name = cattle.0007.a
+		add_prestige = 50
+		duel = {
+			skill = prowess
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.0007.a.success
+				compare_modifier = {
+						value = scope:duel_value
+						multiplier = 1 
+				}
+			}
+			5 = {
+				desc = cattle.0007.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.0007.a.failure 
+				}
+				random_knight = {
+					limit = {
+						NOT = { exist  = scope:hurt_knight1 }
+					}
+					increase_wounds_effect = { REASON = battle }
+					save_scope_as = hurt_knight1 
+				}
+				random_list = {
+					10 = {
+						random_knight = {
+							limit = {
+								NOT = { exist  = scope:hurt_knight2 }
+							}
+							increase_wounds_effect = { REASON = battle }
+							save_scope_as = hurt_knight2 
+						}
+					}
+					10 = { }
+				}
+			}
+		}
+
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = impatient
+			}
+			modifier = {
+				add = -50
+				has_trait = patient 
+			}
+		}
+	}	
+	
+	option = { # save the people
+		name = cattle.0007.b
+		
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+				10 = { change_development_level = -7 }
+				10 = { change_development_level = -8 }
+			}
+		}
+			
+		add_character_modifier = {
+			modifier = five_opinion_general
+			years = 2
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = impatient 
+			}
+			modifier = {
+				add = 50
+				has_trait = patient 
+			}
+			modifier = {
+				add = 50
+				has_trait = calm 
+			}
+			modifier = {
+				add = -50
+				has_trait = wrathful 
+			}
+		}
+	}
+
+	option = { # wuff huntahs
+		name = cattle.0007.c
+		remove_short_term_gold = 50
+
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+			}
+		}	
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -50
+				has_trait = greedy 
+			}
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}
+			modifier = {
+				add = -50
+				has_trait = vengeful 
+			}
+		}
+	}
+	
+}
+
+#Event bad : Farmer Going Away
+cattle.0008 = {
+	type = character_event
+	title = cattle.0008.t
+	desc = cattle.0008.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = worry 
+	}
+	  
+	
+	right_portrait = {
+		character = scope:farmer_councillor
+		animation = idle 
+	}
+
+	immediate = {
+		random_councillor = {
+			save_scope_as = farmer_councillor 
+		}
+	}
+
+	option = { # k then
+		name = cattle.0008.a
+		add_prestige = -75
+		
+		capital_county = {
+			random_list = {
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+			}
+		}
+
+		capital_county = {
+			add_county_modifier = {
+				modifier = farmers_going_away 
+				years = 2 
+			}
+		}	
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = temperate 
+			}
+		}
+	}
+
+	option = { # land good, make come
+		name = cattle.0008.b
+		add_prestige = -25
+		remove_short_term_gold =50
+		
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+			}
+		}
+
+		capital_county = {
+			add_county_modifier = { 
+				modifier = attractive_policies 
+				years = 3 
+			}
+		}	
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = diligent
+			}
+			modifier = {
+				add = -50
+				has_trait = lazy 
+			}
+		}
+	}         
+
+	option = { # demand tribute
+		name = cattle.0008.c
+		add_prestige = -75
+		add_dread = 5
+		
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -1 }
+				10 = { change_development_level = -2 }
+			}
+		}
+
+		add_character_modifier = {
+			modifier = minus_ten_opinion_general
+			years = 4
+		}
+
+		capital_county = {
+			add_county_modifier = { 
+				modifier = farmers_going_away
+				years = 2 
+			}
+		}
+
+		stress_impact = {
+			forgiving = medium_stress_impact_gain
+			calm = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = wrathful 
+			}
+			modifier = {
+				add = -50
+				has_trait = forgiving 
+			}
+			modifier = {
+				add = 50
+				has_trait = vengeful 
+			}
+			modifier = {
+				add = -50
+				has_trait = calm 
+			}                        
+		}
+	}    
+}
+
+#Event good learning: New fertilizer
+cattle.2001 = {
+	type = character_event
+	title = cattle.2001.t
+	desc = cattle.2001.desc
+	theme = learning
+
+	left_portrait = {
+	   character = root
+	  animation = idle 
+	}
+	
+	right_portrait = {
+		character = farmer_fertilizer
+		animation = worry 
+	}
+
+	immediate = {
+		random_courtier = {
+			save_scope_as = farmer_fertilizer 
+		}
+	}
+
+	option = { # compensation
+		name = cattle.2001.a
+
+		duel = {
+			skill = learning
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2001.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2001.a.success
+					add_prestige = 25
+					capital_county = { change_development_level = 5 }
+				}
+			}
+			5 = {
+				desc = cattle.2001.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2001.a.failure
+					add_prestige = -15
+					remove_short_term_gold = 15 
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = education_learning 
+			}
+			modifier = {
+				add = -80
+				learning < 6 
+			}
+		}
+	}
+	
+	option = { # I'm the chieftain
+		name = cattle.2001.b
+		
+		duel = {
+			skill = learning
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2001.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2001.b.success
+					add_prestige = 25
+					capital_county = { change_development_level = 5 }
+				}
+			}
+			5 = {
+				desc = cattle.2001.b.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2001.b.failure
+					add_prestige = -50
+					add_character_modifier = {
+						modifier = minus_five_opinion_general
+						years = 2
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = stubborn 
+			}
+			modifier = {
+				add = 50
+				has_trait = arbitrary 
+			}
+		}
+	}
+	
+	option = { # meh, you're right
+		name = cattle.2001.c
+		capital_county = { change_development_level = 1 }
+		add_prestige = -25
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = content 
+			}
+		}    
+	}
+}
+
+# Event bad learning: Poisoned animals
+cattle.2002 = {
+	type = character_event
+	title = cattle.2002.t
+	desc = cattle.2002.desc
+	theme = learning
+
+	left_portrait = {
+		character = root
+		animation = worry 
+	}
+
+	option = { # find the cure
+		name = cattle.2002.a
+		
+		add_prestige = 25
+		
+		duel = {
+			skill = learning
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2002.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2002.a.success
+					add_prestige = 50
+					capital_county = { 
+						random_list = {
+							10 = { change_development_level = -1 }
+							10 = { change_development_level = -2 }
+							10 = { change_development_level = -3 }
+						}
+					}
+					add_character_modifier = {
+						modifier = worked_too_hard
+						months = 4
+					}
+				}
+			}
+			5 = {
+				desc = cattle.2002.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2002.a.failure
+					add_prestige = 50
+					capital_county = { 
+						random_list = {
+							10 = { change_development_level = -2 }
+							10 = { change_development_level = -3 }
+							10 = { change_development_level = -4 }
+							10 = { change_development_level = -5 }
+							10 = { change_development_level = -6 } 
+						}
+					}
+					add_character_modifier = { 
+						modifier = worked_too_hard 
+						months = 4
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = education_learning 
+			}
+			modifier = {
+				add = -80
+				learning < 6 
+			}
+		}
+	}
+
+	option = { # hire help
+		name = cattle.2002.b
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -1 }
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+			}
+		}
+		
+		remove_short_term_gold = 75
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -50
+				has_trait = greedy 
+			}
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}
+		}
+	}
+
+	option = { # what do we say to the god of death? yes papi
+		name = cattle.2002.c
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = -2 }
+				10 = { change_development_level = -3 }
+				10 = { change_development_level = -4 }
+				10 = { change_development_level = -5 }
+				10 = { change_development_level = -6 }
+				10 = { change_development_level = -7 }
+				10 = { change_development_level = -8 }
+			}
+		}
+		
+		add_prestige = -75
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			} 
+		}
+	} 
+}
+
+# Event good diplo: Bull Exchange
+cattle.2003 = {
+	type = character_event
+	title = cattle.2003.t
+	desc = cattle.2003.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = idle 	 
+	}
+	
+	option = { # Offer two bulls for that one
+		name = cattle.2003.a
+
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2003.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2003.a.success
+
+					capital_county = { 
+						random_list = {
+							10 = { change_development_level = 2 }
+							10 = { change_development_level = 3 }
+							10 = { change_development_level = 4 }
+							10 = { change_development_level = 5 } 
+						}
+					}
+				}
+			}
+			5 = {
+				desc = cattle.2003.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2003.a.failure
+
+					capital_county = { 
+						random_list = {
+							10 = { change_development_level = 1 }
+							10 = { change_development_level = 2 }
+							10 = { change_development_level = 3 }
+							10 = { change_development_level = 4 } 
+						}
+					}
+
+				} 
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = education_diplomacy 
+			}
+			modifier = {
+				add = -80
+				diplomacy < 6 
+			}
+		}
+	}
+
+	option = { # heavy purse
+		name = cattle.2003.b
+		capital_county = { 
+			random_list = {
+				10 = { change_development_level = 2 }
+				10 = { change_development_level = 3 }
+				10 = { change_development_level = 4 }
+				10 = { change_development_level = 5 }
+				10 = { change_development_level = 6 }
+			}
+		}
+		
+		remove_short_term_gold = 150
+
+		ai_chance = {
+		base = 50
+			modifier = {
+				add = 50
+				gold > 500 
+			}
+		}
+	}
+
+	option = { # begone unruly creature
+		name = cattle.2003.c
+		add_prestige = -25
+
+		ai_chance = {
+		base = 50
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}
+		}
+	} 
+}
+
+# Event bad diplo: Gift for a ceremony
+cattle.2004 = {
+	type = character_event
+	title = cattle.2004.t
+	desc = cattle.2004.desc
+	theme = diplomacy
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # blessing of cattle
+		name = cattle.2004.a
+		capital_county = { change_development_level = -4 }
+
+		add_prestige = 100
+
+		add_character_modifier = {
+			modifier = five_opinion_general
+			years = 3 
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = generous 
+			}
+		}
+	}
+
+	option = { # surely you prefer gold?
+		name = cattle.2004.b
+
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2004.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2004.b.success
+
+					remove_short_term_gold = 50
+					add_prestige = 50
+				}
+			}
+			5 = {
+				desc = cattle.2004.b.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2004.b.failure
+
+					capital_county = { change_development_level = -3 }
+
+					remove_short_term_gold = 15
+				} 
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = education_diplomacy 
+			}
+			modifier = {
+				add = -80
+				diplomacy < 6 
+			}
+
+		} 
+	}
+
+	option = { # I actually hate them
+		name = cattle.2004.c
+		
+		add_prestige = -100
+
+		add_character_modifier = {
+			modifier = minus_five_opinion_general 
+			years = 5
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = arrogant 
+			}
+			modifier = {
+				add = -50
+				has_trait = humble 
+			}
+        }
+	}
+}
+
+#Event Good steward: New Land Repartition
+cattle.2005 = {
+	type = character_event
+	title = cattle.2005.t
+	desc = cattle.2005.desc
+	theme = stewardship
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # traditional land
+		name = cattle.2005.a
+		add_prestige = 50
+		add_piety = 50
+
+		capital_county = {
+			add_county_modifier = { 
+				modifier = farmers_not_relocated
+				years = 3
+			}
+		}
+
+		capital_county = { change_development_level = 2 }
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}
+			modifier = {
+				add = -50
+				has_trait = diligent 
+			}
+		} 
+	}
+
+	option = { # 'mo cattle, 'mo land
+		name = cattle.2005.b
+		
+	   add_prestige = 75
+	   capital_county = { change_development_level = 2 }
+	   
+		capital_county = {
+			add_county_modifier = {
+				modifier = centralized_strategy
+				years = 3
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = greedy 
+			}
+		} 
+	}
+
+	option = { # retrace everything
+		name = cattle.2005.c
+		
+		duel = {
+			skill = stewardship
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2005.c.success
+				compare_modifier = {
+						value = scope:duel_value
+						multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2005.c.success
+					
+					add_prestige = 100
+					capital_county = {
+						add_county_modifier = {
+							modifier = dev_growth_bonus_big
+							years = 3
+						}
+					}
+					capital_county = { 
+						change_development_level = 3
+					}
+				}
+			}
+			5 = {
+				desc = cattle.2005.c.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2005.c.failure
+					capital_county = {
+						add_county_modifier = {
+							modifier = dev_growth_malus_small
+							years = 3
+						}
+					}
+					capital_county = { 
+						change_development_level = -1
+						years = 3 
+					}
+					
+					add_prestige = -50
+				} 
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = education_stewardship 
+			}
+			modifier = {
+				add = -80
+				stewardship < 6 
+			}
+		} 
+	}
+}
+
+#Event bad steward: Farmer quarrel
+cattle.2006 = {
+	type = character_event
+	title = cattle.2006.t
+	desc = cattle.2006.desc
+	theme = stewardship
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # oh the gods, think of the gods
+		name = cattle.2006.a
+		
+		add_prestige = 50
+		add_dread = 5
+		
+		capital_county = { change_development_level = -2 }
+		capital_county = {
+			add_county_modifier = { 
+				modifier = unhappy_about_the_judgement
+				years = 3
+			}
+		}
+
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = zealous 
+			}                       
+		} 
+	}
+
+	option = { # oh the dogs, think of the dogs
+		name = cattle.2006.b
+		
+		add_prestige = 50
+		add_character_modifier = { 
+			modifier = one_diplomat
+			years = 5 
+		}
+	   capital_county = { change_development_level = -2 }
+	   capital_county = {
+			add_county_modifier = { 
+				modifier = unhappy_about_the_judgement
+				years = 3
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = temperate 
+			}
+			modifier = {
+				add = 50
+				has_trait = forgiving 
+			}
+		} 
+	}
+
+	option = { # nah, it's the walls
+		name = cattle.2006.c
+		capital_county = { change_development_level = -2 }
+		remove_short_term_gold =25
+		
+		duel = {
+			skill = stewardship
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2006.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2006.c.success
+					
+					add_prestige = 100
+
+					add_character_modifier = { 
+						modifier = five_opinion_general
+						years = 3 
+					}
+				}
+			}
+			5 = {
+				desc = cattle.2006.c.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2006.c.failure
+				} 
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = diligent 
+			}
+			modifier = {
+				add = 50
+				has_trait = education_stewardship 
+			}
+			modifier = {
+				add = -80
+				stewardship < 6 
+			}
+		}
+	}
+	
+	option = { # shut up, take my money
+		name = cattle.2006.d
+		
+		remove_short_term_gold = 100
+	   
+		capital_county = { change_development_level = -2 }
+	   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = generous 
+			}
+			modifier = {
+				add = 50
+				has_trait = content 
+			}
+			modifier = {
+				add = -50
+				has_trait = greedy 
+			}
+
+		} 
+	}
+}
+
+
+# Event good intrigue: Sell bad cattle for good one
+cattle.2007 = {
+	type = character_event
+	title = cattle.2007.t
+	desc = cattle.2007.desc
+	theme = intrigue
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # switcheroo
+		name = cattle.2007.a
+							
+		duel = {
+			skill = intrigue
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2007.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2007.a.success
+					
+					capital_county = { change_development_level = 5 }
+					add_gold = 25											
+				}
+			}
+			5 = {
+				desc = cattle.2007.a.failure
+				
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2007.a.failure
+
+					capital_county = { change_development_level = 2 }
+					remove_short_term_gold =50
+					add_prestige = -50
+				}
+
+			} 
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = deceitful 
+			}
+			modifier = {
+				add = 50
+				has_trait = education_intrigue 
+			}
+			modifier = {
+				add = -80
+				intrigue < 6 
+			}
+		}
+	}
+
+	option = { # honest trade is best trade
+		name = cattle.2007.b
+		
+	   remove_short_term_gold =40
+	   capital_county = { change_development_level = 3 }
+	   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = honest
+			}                       
+			modifier = {
+				add = 50
+				has_trait = just 
+			}
+		} 
+	}
+
+	option = { # i'd rather just chill
+		name = cattle.2007.c		   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}	
+		}
+	}
+}
+
+#Event bad intrigue: A Scam!
+cattle.2008 = {
+	type = character_event
+	title = cattle.2008.t
+	desc = cattle.2008.desc
+	theme = intrigue
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	option = { # troop now
+		name = cattle.2008.a
+
+		capital_county = { change_development_level = -4 }
+
+		random_list = {
+			10 = { desc = cattle.2008.a.success
+				add_gold = 50
+				add_prestige = 50 
+			}
+			10 = { desc = cattle.2008.a.failure
+				add_prestige = -50
+			} 
+		}
+	   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = impatient 
+			}                       
+			modifier = {
+				add = 50
+				has_trait = wrathful
+			}
+		} 
+	}
+
+	option = { # too late
+		name = cattle.2008.b
+
+		capital_county = { change_development_level = -4 }
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = calm 
+			}                       
+			modifier = {
+				add = 50
+				has_trait = temperate 
+			}
+			
+		} 
+	}
+
+	option = { # i know a guy
+		name = cattle.2008.c
+
+		capital_county = { change_development_level = -4 }
+		
+		duel = {
+			skill = intrigue
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2008.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2008.c.success
+					
+					add_prestige = 100
+					add_gold = 50
+				}
+			}
+			5 = {
+				desc = cattle.2008.c.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2008.c.failure
+
+					add_prestige = -100
+				} 
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = vengeful 
+			}
+			modifier = {
+				add = 50
+				has_trait = education_intrigue 
+			}
+			modifier = {
+				add = -80
+				intrigue < 6 
+			}
+
+        }
+	}
+}	
+
+# Event good martial: Wargames Tournament
+cattle.2009 = {
+	type = character_event
+	title = cattle.2009.t
+	desc = cattle.2009.desc
+	theme = martial
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # what's best in life?
+		name = cattle.2009.a
+
+		add_prestige = 50
+
+		duel = {
+			skill = martial
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2009.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2009.a.success
+					
+					add_prestige = 100
+					capital_county = { change_development_level = 5 }
+					add_character_modifier = {
+						modifier = five_opinion_general
+						years = 1
+					}
+				}			
+			}
+			5 = {
+				desc = cattle.2009.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2009.a.failure
+					
+					add_prestige = -25
+					random_list = {
+						95 = { }
+						5 = { 
+							increase_wounds_effect = {
+								REASON = figh 
+							}
+						}
+					}
+					capital_county = { change_development_level = 2 }
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = brave 
+			}
+			modifier = {
+				add = 50
+				has_trait = education_martial 
+			}
+			modifier = {
+				add = -80
+				martial < 6
+			}
+		}
+	}
+
+
+	option = { # go, don't participate
+		name = cattle.2009.b
+
+	   add_prestige = 50
+
+	   random_list = {
+			10 = { desc = cattle.2009.b.success
+				capital_county = { change_development_level = 3 } 
+			}
+			10 = { desc = cattle.2009.b.failure
+				remove_short_term_gold = 25 
+			} 
+		}
+   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = lazy 
+			}                       
+			modifier = {
+				add = 50
+				has_trait = craven 
+			}
+		}
+	}
+
+	option = { # it's a trap!
+		name = cattle.2009.c
+
+		add_prestige = -50
+ 
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = paranoid 
+			}                       
+			modifier = {
+				add = 50
+				has_trait = craven 
+			}
+		}
+	}
+}
+
+
+# Event bad martial: Raided!
+cattle.2010 = {
+	type = character_event
+	title = cattle.2010.t
+	desc = cattle.2010.desc
+	theme = martial
+
+	left_portrait = {
+		character = root
+		animation = idle 
+	}
+
+	option = { # we smart
+		name = cattle.2010.a
+
+		capital_county = { change_development_level = -3 }
+		
+		duel = {
+			skill = martial
+			value = decent_skill_rating
+			10 = {
+				desc = cattle.2010.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2010.a.success
+					
+					add_prestige = 100
+					
+					add_character_modifier = {
+						modifier = five_opinion_general
+						years = 2
+					}
+				}			
+			}
+			5 = {
+				desc = cattle.2010.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.cattle.2010.a.failure
+
+					add_prestige = -25
+				
+					capital_county = { change_development_level = -2 }
+				} 
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = brave 
+			}
+			modifier = {
+				add = 50
+				has_trait = education_martial 
+			}
+			modifier = {
+				add = -80
+				martial < 6 
+			}
+		} 
+	}
+
+	option = { # just attack
+		name = cattle.2010.b
+
+		capital_county = { change_development_level = -5 }
+
+		random_list = {
+			90 = { }
+
+			10 = { 
+				increase_wounds_effect = {
+					REASON = fight	
+				} 
+			}
+		}
+   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = wrathful 
+			}                       
+			modifier = {
+				add = 50
+				has_trait = impatient 
+			}
+		} 
+	}
+
+	option = { # hide & defend
+		name = cattle.2010.c
+
+		capital_county = { change_development_level = -5 }
+
+		add_prestige = -100
+	   
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = craven 
+			}                       
+		} 
+	}
+}
+
+
+#cattle redistrbution events
+
+cattle.0501 = {
+	type = character_event
+	title = cattle.0501.t
+	desc = cattle.0501.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 20
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0501.a
+	}
+	option = {
+		name = cattle.0501.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 8 }
+		}
+	}
+	option = {
+		name = cattle.0501.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -10 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 8 }
+		}
+	}
+}
+
+cattle.0502 = {
+	type = character_event
+	title = cattle.0502.t
+	desc = cattle.0502.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 30
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0502.a
+	}
+	option = {
+		name = cattle.0502.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 13 }
+		}
+	}
+	option = {
+		name = cattle.0502.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -15 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 13 }
+		}
+	}
+}
+
+cattle.0503 = {
+	type = character_event
+	title = cattle.0503.t
+	desc = cattle.0503.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county = {
+			development_level > 40
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0503.a
+	}
+	option = {
+		name = cattle.0503.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = 17 }
+		}
+	}
+	option = {
+		name = cattle.0503.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = -20 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = 17 }
+		}
+	}
+}
+
+#from county to capital_county
+cattle.0504 = {
+	type = character_event
+	title = cattle.0504.t
+	desc = cattle.0504.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				this.development_level > capital_county.development_level
+			}
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:county_1
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_2
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:county_3
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_4
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_5
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:county_6
+						this.development_level < capital_county.development_level
+					}
+				}
+				save_scope_as = county_6
+			}
+		}
+	}
+	
+	option = { #we do nothing
+		name = cattle.0504.a
+	}
+	option = {
+		name = cattle.0504.b
+		trigger = {
+			exists = scope:county_1
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_1 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.c
+		trigger = {
+			exists = scope:county_2
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_2 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.d
+		trigger = {
+			exists = scope:county_3
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_3 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.e
+		trigger = {
+			exists = scope:county_4
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_4 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.f
+		trigger = {
+			exists = scope:county_5
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_5 = {
+			change_development_level = { value = -10 }
+		}
+	}
+	option = {
+		name = cattle.0504.g
+		trigger = {
+			exists = scope:county_6
+		}
+		capital_county = {
+			change_development_level = { value = 9 }
+		}
+		scope:county_6 = {
+			change_development_level = { value = -10 }
+		}
+	}
+}
+
+#for high cattle in non capital counties
+cattle.0505 = {
+	type = character_event
+	title = cattle.0505.t
+	desc = cattle.0505.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 20
+			}
+		}
+	}
+	
+	immediate = {
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 20
+			}
+			add_to_list = counties_targeted
+		}
+		random_in_list = {
+			list = counties_targeted
+			save_scope_as = county_target
+		}
+		scope:county_target = {
+			change_development_level = {
+				value = this.development_level
+				multiply = -0.3
+			}
+		}
+	}
+
+	option = { #Damn it
+		name = cattle.0505.a
+		add_prestige = -50
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #I will rebuy some cattle
+		name = cattle.0505.b
+		remove_short_term_gold = 50
+		scope:county_target = {
+			change_development_level = {
+				value = this.development_level
+				multiply = 1.2
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+	option = { #I'll give money to help the farmers
+		name = cattle.0505.c
+		remove_short_term_gold = 50
+		scope:county = {
+			add_county_modifier = {
+				modifier = dev_growth_bonus_big
+				years = 2
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+#lose cattle in high cattle non capital
+cattle.0506 = {
+	type = character_event
+	title = cattle.0506.t
+	desc = cattle.0506.desc
+	theme = stewardship_duty_focus
+
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	trigger = {
+		any_held_title = {
+			AND = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 25
+			}
+		}
+	}
+	
+	option = { #these things happen
+		name = cattle.0506.a
+		every_held_title = {
+			limit = {
+				NOT = { this = root.capital_county }
+				tier = tier_county
+				development_level > 25
+			}
+			change_development_level = {
+				value = this.development_level
+				multiply = -0.2
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+# on_declared_war
+#
+# [...]
+#
+# send_captured_combatant_message: Sends the specified message to a character about a combatant being captured after a battle.
+# send_slain_combatant_message: Sends the specified message to a character about a combatant being slain after (or in) a battle.
+# add_truce_attacker_victory_effect: Used to set truces in a CB's on_victory
+# add_truce_white_peace_effect: Used to set truces in a CB's on_white_peace
+# add_truce_attacker_defeat_effect: Used to set truces in a CB's on_defeat
+
+
+#####################################################################
+# EFFECTS
+#####################################################################
+# TRUCES
+# Add attacker truce on victory
+add_truce_attacker_victory_toi_short_effect = {
+	hidden_effect = {
+		scope:attacker = {
+			add_truce_one_way = {
+				character = scope:defender
+				days = 720
+				war = root.war
+				result = victory
+			}
+		}
+	}
+}
+
+add_truce_attacker_defeat_toi_short_effect = {
+	hidden_effect = {
+		scope:attacker = {
+			add_truce_one_way = {
+				character = scope:defender
+				days = 720
+				war = root.war
+				result = defeat
+			}
+		}
+	}
+}
+
+add_truce_attacker_white_peace_toi_short_effect = {
+	hidden_effect = {
+		scope:attacker = {
+			add_truce_one_way = {
+				character = scope:defender
+				days = 720
+				war = root.war
+				result = white_peace
+			}
+		}
+	}
+}

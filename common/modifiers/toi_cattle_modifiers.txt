@@ -1,0 +1,75 @@
+#event modifiers
+upset_merchants = {
+	icon = stewardship_negative
+	tax_mult = -0.2 
+}
+farmers_going_away = { 
+	icon = stewardship_negative
+    development_growth_factor = small_development_growth_loss
+}
+attractive_policies = {
+	icon = stewardship_positive
+    development_growth_factor = medium_development_growth_gain
+}
+worked_too_hard = {
+	icon = health_negative
+	health = -0.5
+}
+farmers_not_relocated = {
+	icon = stewardship_positive
+	development_growth_factor = small_development_growth_gain
+}
+centralized_strategy = {
+	icon = stewardship_positive
+	tax_mult = 0.2
+}
+dev_growth_bonus_big = {
+	icon = county_modifier_development_positive
+	development_growth_factor = 0.35
+}
+dev_growth_malus_small = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -0.1
+}
+unhappy_about_the_judgement = {
+	icon =  stewardship_negative
+	county_opinion_add = -5
+}
+returned_calf = {
+	years = 2
+	decaying = yes
+	opinion = 25
+}
+returned_calf2 = {
+	years = 2
+	decaying = yes
+	opinion = -25
+}
+five_opinion_general = {
+	icon = letter_positive
+	general_opinion = 5
+}
+ten_opinion_general = {
+	icon = letter_positive
+	general_opinion = 10
+}
+minus_ten_opinion_general = {
+	icon = letter_negative
+	general_opinion = -10
+}
+minus_five_opinion_general = {
+	icon = letter_negative
+	general_opinion = -5
+}
+reenforced_security = {
+	icon = intrigue_positive
+	enemy_hostile_scheme_success_chance_add = -30
+}
+health_water_bonus = {
+	icon = health_positive
+	health = 0.5
+}
+one_diplomat = {
+	icon = diplomacy_positive
+	diplomacy = 1
+}

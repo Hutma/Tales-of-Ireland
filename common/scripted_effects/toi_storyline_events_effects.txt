@@ -1,0 +1,182 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+#save_var_scope_effect - To check for a variable saved scope and save it as a scope
+
+#####################################################################
+# EFFECTS
+#####################################################################
+
+
+labraid_story_revenge_effect = {
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = labraid_story_revenge_troops
+		levies = {
+			value = 500
+		}
+		men_at_arms = {
+			type = warriors_of_tara
+			stacks = 8
+		}
+		location = capital_province
+	}
+}
+
+labraid_story_exiled_effect = {
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = labraid_story_revenge_troops
+		levies = {
+			value = 100
+		}
+		men_at_arms = {
+			type = warriors_of_tara
+			stacks = 4
+		}
+		location = capital_province
+	}
+}
+
+
+hy_brasylian_invasion_effect = {
+	#Create invader
+	create_character = {
+		age = { 20 40 }
+		trait = hy_brazylian
+		random_traits = yes
+		gender_female_chance = 0
+		location = title:b_kilronan.title_province
+		dynasty = generate
+		faith = faith:hy_brazil_sidhe
+		culture = culture:hy_brazylian_culture
+		save_scope_as = hy_brazilan_invader
+	}
+	scope:hy_brazilan_invader = {
+		add_gold = 100
+	}
+	#Find a target
+	every_county_in_region = {
+		region = region_connacht
+		limit = {
+			NOT = {
+				holder = { is_in_list = hy_brasil_targets_list }
+			}
+			is_coastal_county = yes
+		}
+		add_to_list = hy_brasil_targets_list
+	}
+	every_county_in_region = {
+		region = region_connacht
+		limit = {
+			NOT = {
+				holder = { is_in_list = hy_brasil_targets_list }
+			}
+			is_coastal_county = yes
+		}
+		add_to_list = hy_brasil_targets_list
+	}
+	every_county_in_region = {
+		region = region_munster
+		limit = {
+			NOT = {
+				holder = { is_in_list = hy_brasil_targets_list }
+			}
+			is_coastal_county = yes
+		}
+		add_to_list = hy_brasil_targets_list
+	}
+	every_county_in_region = {
+		region = region_ulster
+		limit = {
+			NOT = {
+				holder = { is_in_list = hy_brasil_targets_list }
+			}
+			is_coastal_county = yes
+		}
+		add_to_list = hy_brasil_targets_list
+	}
+	random_in_list = {
+		list = hy_brasil_targets_list
+		save_scope_as = adventurer_target
+	}
+	#Give the adventurer a dynamic title to tide them over.
+	create_dynamic_title = {
+		tier = duchy
+		name = {
+			desc = HY_BRASYLIAN_ARMY
+		}
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:adventurer_target
+		set_landless_title = yes
+		set_destroy_on_succession = yes
+		set_delete_on_destroy = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:hy_brazilan_invader
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		generate_coa = yes
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war.
+	scope:hy_brazilan_invader = {
+		start_war = {
+			casus_belli = fp1_scandi_adventurer_conquest
+			target = scope:adventurer_target.holder.top_liege
+			target_title = scope:adventurer_target.duchy
+		}
+	}
+	# Setup event troops.
+	scope:hy_brazilan_invader = {
+		# Spawn in Aran
+		# Work out how many event troops we should give the adventurer for a 60:40 fight.
+		spawn_army = {
+			levies = {
+				add = {
+					#Base of 400.
+					add = scope:adventurer_target.holder.top_liege.max_military_strength
+					#Multiply that by the realm size of the target's top_liege.
+					multiply = 1
+					#Account for allies, adding more without just nullifying them.
+					scope:adventurer_target.holder.top_liege = {
+						every_ally = { add = this.max_military_strength }
+					}
+					#Cut it off so things don't get too ridiculous.
+					max = 2000
+					#Make sure all adventurers have a moderately respectable force.
+					min = 300
+				}
+			}
+			men_at_arms = {
+				type = hy_brazylian_adventurers
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = no
+			uses_supply = no
+			location = title:b_kilronan.title_province
+			name = hy_brasil_adventurers_event_troops
+		}
+	}
+}

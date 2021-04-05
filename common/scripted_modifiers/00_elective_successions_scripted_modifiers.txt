@@ -787,6 +787,15 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 			scope:candidate = { has_trait = megalith_human }
 		}
 	}
+	modifier = {
+		add = 35
+		desc = tooltip_feudal_elector_vote_distant_relative
+		NOT = { this = scope:candidate}
+		AND = {
+			root = { has_trait = hy_brazylian }
+			scope:candidate = { has_trait = hy_brazylian }
+		}
+	}
 	
 	#TALES OF IRELAND END
 }

@@ -8,7 +8,7 @@
 	
 	the_plagued = {
 		graphical_cultures = {
-			breton_coa_gfx
+			irelander_building_gfx
 		}
 		color = rgb { 180 250 210 }
 
@@ -162,7 +162,7 @@
 	}
 	first_landers = {
 		graphical_cultures = {
-			breton_coa_gfx
+			irelander_building_gfx
 		}
 		color = rgb { 200 200 240 }
 

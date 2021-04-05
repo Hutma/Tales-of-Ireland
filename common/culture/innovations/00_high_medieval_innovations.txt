@@ -103,9 +103,10 @@ innovation_heraldry = {
 	group = culture_group_civic
 	culture_era = culture_era_high_medieval
 	icon = @raised_banner
-
-	unlock_law = partition_succession_law
+	
+	
 	modifier = {
+		monthly_dynasty_prestige_mult = 0.1
 		monthly_prestige_gain_mult = 0.05
 	}
 
@@ -180,7 +181,8 @@ innovation_guilds = {
 	icon = @nobility_01
 
 	modifier = {
-		domain_limit = 1
+		domain_tax_mult = 0.05
+		levy_size = 0.05
 	}
 
 	flag = global_regular

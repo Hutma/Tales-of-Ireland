@@ -510,7 +510,7 @@ individual_county_de_jure_cb = {
 		prestige = {
 			# scale base value based on number of counties x 100, in this case 1
 			add = {
-				value = 100
+				value = 50
 				desc = CB_CLAIM_COST_TARGET_TITLES
 			}
 
@@ -830,7 +830,7 @@ individual_duchy_de_jure_cb = {
 	allowed_for_character = {
 		scope:attacker = {
 			culture = {
-				has_innovation = innovation_chronicle_writing
+				has_innovation = innovation_casus_belli
 			}
 		}
 	}
@@ -914,7 +914,7 @@ individual_duchy_de_jure_cb = {
 					list = target_titles
 					every_in_de_jure_hierarchy = { # goes down, not up
 						limit = { tier = tier_county }
-						add = 100
+						add = 50
 					}
 				}
 				desc = CB_CLAIM_COST_TARGET_TITLES

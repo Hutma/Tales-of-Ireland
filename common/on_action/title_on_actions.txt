@@ -130,6 +130,14 @@ on_title_gain = {
 			}
 			add_trait = megalith_human
 		}
+		if 	= {
+			limit = {
+				root.liege = {
+					has_trait = hy_brazylian
+				}
+			}
+			add_trait = hy_brazylian
+		}
 		
 		
 		if = {
@@ -175,6 +183,10 @@ on_title_gain = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_partholonian_group}
 			add_trait = partholonian
+		}
+		if = {
+		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+			add_trait = hy_brazylian
 		}
 		add_trait = celtic_human
 ###TALES OF IRELAND###
@@ -274,6 +286,17 @@ on_title_gain_usurpation = {
 # scope:title = the title that changes hands
 # scope:new_holder = new holder.
 on_title_lost = {
+	#TALES OF IRELAND
+	effect = {
+		if = {
+			limit = {
+				scope:title.tier = 2
+			}
+			scope:title = {
+				change_development_level = -1
+			}
+		}
+	}
 	events = {
 	}
 }

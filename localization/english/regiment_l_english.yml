@@ -53,6 +53,7 @@
  #Siege MaA
  siege_weapon:2 "[siege_weapons|E]"
  ram:0 "Ram"
+ siege_tower:0 "Siege Tower"
  
  #Regional MaA
  light_footmen_leinster:0 "Leinster Light Footmen"
@@ -104,6 +105,9 @@
  kern_warriors_flavor:0 "The Kerns are the emblematic warriors of Ireland and they deserve it.#!"
  kern_cavalry:0 "Kern nobles"
  kern_cavalry_flavor:0 "The nobility also coounts Kerns in his rank, they can afford to use a horse and smash through enmy lines.#!"
+ hy_brazylian_adventurers:0 "Hy-Brazylian Adventurers"
+ hy_brazylian_adventurers_flavor:0 "The Hy-Brazylian live on a small magical island North of Ireland, hidden in the clouds. The lack of space there forces some of the Hy-Brazylians to leave their home, looking for other shores. They are the Hy-Brazylian Adventurers."
+
  #Special MaA
  house_guard:0 "House Guard"
  house_guard_flavor:0 "#F This elite regiment is in the service of a specific Dynasty. The warriors are hand-picked from the most loyal subjects.#!"

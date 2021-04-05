@@ -60,13 +60,15 @@ duke_modifier = {
 }
 
 king_modifier = {
+	levy_size = 0.1
 	domain_limit = 2
 	knight_limit = 6
 	vassal_limit = 40
 }
 
 emperor_modifier = {
-	domain_limit = 2
+	levy_size = 0.1
+	domain_limit = 3
 	knight_limit = 6
 	vassal_limit = 60
 }

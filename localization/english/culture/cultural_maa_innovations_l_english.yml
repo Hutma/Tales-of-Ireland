@@ -14,7 +14,19 @@
  
  innovation_maa_ulster:0 "Warriors of Ulster"
  innovation_maa_ulster_desc:0 "For decades we have been fighting in the forests of Ulster, we know how to use the woods to our advantage."
-
+ 
+ innovation_chariot_leinster:0 "Chariots of Leinster"
+ innovation_chariot_leinster_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."
+ 
+ innovation_chariot_connacht:0 "Chariots of Connacht"
+ innovation_chariot_connacht_desc:0 "For decades we have been fighting in the bogs of Connacht, we know how to use this swampy terrain to our advantage."
+ 
+ innovation_chariot_munster:0 "Chariots of Munster"
+ innovation_chariot_munster_desc:0 "For decades we have been fighting in the hills of Munster, we know how to use this unregular terrain to our advantage."
+ 
+ innovation_chariot_ulster:0 "Chariots of Ulster"
+ innovation_chariot_ulster_desc:0 "For decades we have been fighting in the forests of Ulster, we know how to use the woods to our advantage."
+ 
  innovation_men_at_arms:0 "Men-at-Arms"
  innovation_men_at_arms_desc:0 "Training and equipping standing armies that remain under the direct disposal of our rulers will be a stepping stone on the road to centralize our power."
  
@@ -44,3 +56,6 @@
  
  innovation_maa_human:0 "Kerns"
  innovation_maa_human_desc:0 "The kerns are the most famous fighter of Ireland and ruled this territory warfare for centuries, they will be a great asset on the battlefield."
+ 
+ innovation_maa_hybrazil:0 "Hy-Brasylian Adventurers"
+ innovation_maa_hybrazil_desc:0 "The Hy-Brasylian live on a small magical island North of Ireland, hidden in the clouds. The lack of space there forces some of the Hy-Brasylians to leave their home, looking for other shores. They are the Hy-Brasylian Adventurers."

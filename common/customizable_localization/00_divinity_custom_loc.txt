@@ -463,14 +463,14 @@ GetFaithCreationReaction = {
 					has_doctrine_parameter = great_holy_wars_active_if_reformed
 				}
 				OR = {
-					has_doctrine = tenet_human_sacrifice
-					has_doctrine = tenet_ritual_cannibalism
+					has_doctrine_parameter = cannibalism_legal
+					has_doctrine_parameter = human_sacrifice_active
 				}
 			}
 			NOR = {
 				faith = {
-					has_doctrine = tenet_human_sacrifice
-					has_doctrine = tenet_ritual_cannibalism
+					has_doctrine_parameter = cannibalism_legal
+					has_doctrine_parameter = human_sacrifice_active
 				}
 			}
 		}

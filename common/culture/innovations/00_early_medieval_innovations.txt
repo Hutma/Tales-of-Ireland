@@ -40,7 +40,7 @@ innovation_battlements = {
 	custom = unlock_fortification_rights_contract
 	
 	modifier = {
-		men_at_arms_maintenance = -0.05
+		men_at_arms_maintenance = -0.1
 	}
 
 	flag = global_regular
@@ -103,13 +103,28 @@ innovation_horseshoes = {
 	flag = early_medieval_era_regular
 }
 
+innovation_arched_saddle = {
+	group = culture_group_military
+	culture_era = culture_era_early_medieval
+	icon = @knight
+
+	modifier = {
+		light_cavalry_pursuit_add = 2
+		heavy_cavalry_pursuit_add = 2
+	}
+
+	flag = global_regular
+	flag = early_medieval_era_regular
+}
+
 #culture_group_civic
 innovation_hereditary_rule = {
 	group = culture_group_civic
 	culture_era = culture_era_early_medieval
 	icon = @majesty_02
-
+	
 	unlock_law = confederate_partition_succession_law
+	
 	modifier = {
 		monthly_prestige_gain_mult = 0.05
 	}
@@ -177,8 +192,10 @@ innovation_chronicle_writing = {
 	group = culture_group_civic
 	culture_era = culture_era_early_medieval
 	icon = @administration_3
-
-	unlock_casus_belli = individual_duchy_de_jure_cb
+	
+	modifier = {
+		title_creation_cost_mult = -0.25
+	}
 	custom = cb_discount_prestige_10
 
 	flag = global_regular
@@ -212,3 +229,46 @@ innovation_baliffs = {
 }
 
 #culture_group_regional
+innovation_chariot_leinster = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_leinster
+	icon = @maa_02
+	
+	unlock_maa = armored_horsemen_leinster
+	
+	flag = global_maa
+}
+
+innovation_chariot_connacht = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_connacht
+	icon = @maa_02
+
+	unlock_maa = armored_horsemen_connacht
+	
+	flag = global_maa
+}
+
+innovation_chariot_munster = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_munster
+	icon = @maa_02
+
+	unlock_maa = armored_horsemen_munster
+	
+	flag = global_maa
+}
+
+innovation_chariot_ulster = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_ulster
+	icon = @maa_02
+
+	unlock_maa = armored_horsemen_ulster
+	
+	flag = global_maa
+}

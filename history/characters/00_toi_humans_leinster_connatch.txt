@@ -1879,15 +1879,15 @@
     religion = sea_dwellers
     culture = osraighe
 
-    diplomacy =  4 
-    martial =  7 
-    stewardship =  7 
-    intrigue =  7 
-    learning =  4 
+    diplomacy =  8 
+    martial =  11 
+    stewardship =  11
+    intrigue =  11
+    learning =  9 
     prowess =  5 
 
-    trait = education_intrigue_2
-    trait = humble
+    trait = education_intrigue_4
+    trait = brave
     trait = temperate
     trait = patient
     trait = celtic_human
