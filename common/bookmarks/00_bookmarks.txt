@@ -31,7 +31,7 @@
 		culture = corca_loigde
 		religion = sea_dwellers
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
-		position = { 850 850 }
+		position = { 650 775 }
 
 		animation = happiness
 	}

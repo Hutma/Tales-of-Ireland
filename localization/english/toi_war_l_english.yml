@@ -18,6 +18,7 @@
  CATTLE_RAIDING_CB_NAME:0 "Cattle Raiding"
  CATTLE_RAIDING_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]'s war to take [DEFENDER.GetShortUIName]'s cattle"
  CATTLE_RAIDING_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ recent_cattle_raid_victory:0 "Won a Cattle Raid recently"
  
  new_land_cb_victory_desc_attacker:1 "You can take and settle your tribe in [title|E]."
  new_land_cb_victory_desc:1 "[attacker.GetShortUIName|U] takes and settle his tribe in [title|E]."
@@ -46,3 +47,15 @@
  CATTLE_LURE_CB_NAME:0 "Cattle Raiding"
  CATTLE_LURE_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]]'s war to take [DEFENDER.GetShortUIName]'s cattle"
  CATTLE_LURE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ HUMILIATE_CANDIDATE_CB_NAME:0 "Humiliate Candidate"
+ HUMILIATE_CANDIDATE_WAR_NAME:0 "Humiliate [DEFENDER.GetShortUIName]"
+ HUMILIATE_CANDIDATE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]" 
+ humiliate_candidate_cb_victory_desc_attacker:1 "[defender.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
+ humiliate_candidate_cb_victory_desc_defender:1 "You are humiliated and will lose candidate score for the High Kingship election."
+ humiliate_candidate_cb_victory_desc:1 "[defender.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
+ humiliate_candidate_cb_white_peace_desc:1 "[defender.GetShortUIName] is not humiliated."
+ humiliate_candidate_cb_white_peace_desc_defender:1 "You are not humiliated."
+ humiliate_candidate_cb_defeat_desc_defender:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
+ humiliate_candidate_cb_defeat_desc_attacker:1 "You are humiliated and will lose candidate score for the High Kingship election."
+ humiliate_candidate_cb_defeat_desc:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."

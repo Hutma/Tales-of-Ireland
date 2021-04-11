@@ -1,0 +1,63 @@
+l_french:
+ #Siege
+ innovation_ram:0 "Bélier"
+ innovation_ram:0 "Utiliser un bélier nous aidera à percer les murs des forts cicrulaires." 
+
+Using Ram will help us breaking through the walls of Ringforts."
+ #Military
+ innovation_maa_leinster:0 "Guerriers de Leinster"
+ innovation_maa_leinster_desc:0 "Pendant des années nous avons combattus dans les plaines de Leinster, nous savons comment exploiter ce terrain plat."
+ 
+ innovation_maa_connacht:0 "Guerriers de Connacht"
+ innovation_maa_connacht_desc:0 "Pendant des années nous avons combattus dans les marais de Connacht,  nous savons comment exploiter ce terrain marécageux"
+ 
+ innovation_maa_munster:0 "Guerriers de Munster"
+ innovation_maa_munster_desc:0 "Pendant des années nous avons combattus dans les collines de  Munster, nous savons comment exploiter ce terrain accidenté."
+ 
+ innovation_maa_ulster:0 "Guerriers de Ulster"
+ innovation_maa_ulster_desc:0 "Pendant des années nous avons combattus dans les forêts d'Ulster, nous savons comment exploiter ce terrain boisé."
+ 
+ innovation_chariot_leinster:0 "Chars de Leinster"
+ innovation_chariot_leinster_desc:0 "Pendant des années nous avons combattus dans les plaines de Leinster, nous savons comment exploiter ce terrain plat."
+ 
+ innovation_chariot_connacht:0 "Chars de Connacht"
+ innovation_chariot_connacht_desc:0 "Pendant des années nous avons combattus dans les marais de Connacht,  nous savons comment exploiter ce terrain marécageux"
+ 
+ innovation_chariot_munster:0 "Chars de Munster"
+ innovation_chariot_munster_desc:0 "Pendant des années nous avons combattus dans les collines de  Munster, nous savons comment exploiter ce terrain accidenté."
+ 
+ innovation_chariot_ulster:0 "Chars de Ulster"
+ innovation_chariot_ulster_desc:0 "Pendant des années nous avons combattus dans les forêts d'Ulster, nous savons comment exploiter ce terrain boisé."
+ 
+ innovation_men_at_arms:0 "Gendarmes"
+ innovation_men_at_arms_desc:0 "Entraîner et équipper des armées permanentes à la disposition de nos souverains sera une étape cruciale pour centraliser notre pouvoir."
+ 
+ innovation_maa_fomorian:0 "Guerriers sanglants"
+ innovation_maa_fomorian_desc:0 "Le Dieux Sombres nous donne de la force et ce pouvoir aiguise nos guerriers. Il est tant de faire la guerre. "
+
+ innovation_maa_cessarian: "Gardiens des terres"
+ innovation_maa_cessarian_desc:0 "Aucun envahisseur ne devrait pouvoir fouler nos terres impunément. Nous avons appris à mobiliser les positions défensives."
+ 
+ innovation_maa_partholonian:0 "Vagabonds"
+ innovation_maa_partholonian_desc:0 "Nous sommes venus par la mer, et c'est par elle que nous partirons. Aucun ennemi ne peut égaler nos guerriers."
+ 
+ innovation_maa_nemedian:0 "Fermiers némédiens"
+ innovation_maa_nemedian_desc:0 "Notre terre est sacrée et sera défendue avec tout notre coeur et courage, même si nous devons en mourir."
+ 
+ innovation_maa_fir_bolog:0 "Les braves"
+ innovation_maa_fir_bolog_desc:0 "Tu n'auras crainte. Tu ne t'agenouilleras pas. Tu iras combattre et reviendra couvert de gloire."
+ 
+ innovation_maa_de_danann:0 "Anciens héros"
+ innovation_maa_de_danann_desc:0 "Les Tuatha Dé Danann étaient jadis de grands combattants, et nous le sommes toujours. Notre prestige est intact, nous leur montrerons."
+ 
+ innovation_maa_milesian:0 "Guerriers de Tara"
+ innovation_maa_milesian_desc:0 "Le siège du trône du Haut Roi, à Tara, sera toujours nôtre. Nous nous battrons à tout jamis pour celui-ci, nous sommes les maîtres de cette île."
+ 
+ innovation_maa_meghalithic:0 "Gardiens de Newgrange"
+ innovation_maa_meghalithic_desc:0 "Gardiens de nos temples, de notre culture, de nos croyances, ces guerriers sont bénis par notre peuple."
+ 
+ innovation_maa_human:0 "Kerns"
+ innovation_maa_human_desc:0 "Les kerns sont les guerriers les plus célèbres d'Irelande et ont dominé la guerre dans le pays depuis des siècles, ils seront un grand atout sur le champ de bataille."
+ 
+ innovation_maa_hybrazil:0 "Aventuriers Hy-Brasyliens "
+ innovation_maa_hybrazil_desc:0 "Les Hy-Brasyliens vivent sur une petite île magique au nord de l'Irelande, cachée dans les nuages. Le manque d'espace contraint quelques Hy-Brasyliens à vivre leur maison, pour d'autres côtes. Ce sont les aventuriers hy-brasyliens."

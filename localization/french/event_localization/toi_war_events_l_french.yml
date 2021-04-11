@@ -1,0 +1,9 @@
+﻿l_french:
+ toi_war.0001.t:0 "Guerre pour mon fils gagnée."
+ toi_war.0001.desc:0 "Nous avons bravement combattu et aujourd'hui marque un grand jour pour notre famille. J'ai mainetenant à choisir un fils qui règnera sur ces terres nouvellement conquises. \n\nQui aura les titres?"
+ toi_war.0001.a:0 "[son_1.GetTitledFirstName] aura les terres."
+ toi_war.0001.b:0 "[son_2.GetTitledFirstName] aura les terres."
+ toi_war.0001.c:0 "[son_3.GetTitledFirstName] aura les terres."
+ toi_war.0001.d:0 "[son_4.GetTitledFirstName] aura les terres."
+ toi_war.0001.e:0 "[son_5.GetTitledFirstName] aura les terres."
+ toi_war.0001.f:0 "[son_6.GetTitledFirstName] aura les terres."

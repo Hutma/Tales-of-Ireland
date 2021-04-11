@@ -1,0 +1,23 @@
+﻿l_french:
+
+ toi_fomorian_tributary.0001.t:0 "Le tribut fomorien"
+ toi_fomorian_tributary.0001.desc:0"Je déteste ce son..la corne fomorienne apportée par le vent annonce la venue de la collection annuelle du tribut. Le collecteur atteindra ma cour d'ici une heure pour saisir deux tiers de notre bétail, or ainsi...qu'un de nos enfants comme otage. Pour s'assurer de notre coopération disent-ils. Bah, j'espère juste que le triste élu, ne deviendra pas l'un des leurs... 
+
+ toi_fomorian_tributary.0001.a:0 "Nous devons payer"
+ toi_fomorian_tributary.0001.b:0 "Tenter de discuter pour réduire le tribut"
+ toi_fomorian_tributary.0001.c:0 "Essayer de dissimuler une part du bétail"
+ toi_fomorian_tributary.0001.d:0 "Tuez-le! Tuez tous les Fomoriens!"
+ 
+ toi_fomorian_tributary.0011.t:0 "Tentative ratée"
+ toi_fomorian_tributary.0011.desc:0 "
+J'ai échoué...En tentant de réduire le tribut de cette année, j'ai seulement réussi à m'attirer la rage du collecteur. Il a vociféré que [scope:fomorian_liege.GetName] aura vent de notre loyauté défaillante, que notre fin est proche. Mais, bien sûr...il a conclu en disant que "Si jamais vous payez un peu plus...cet écart de conduite ne serait jamais mentionné auprès de notre lige..." Il tire un sourire malicieux, attendant ma décision."
+ toi_fomorian_tributary.0011.a:0 "J'aurai dû payer"
+ toi_fomorian_tributary.0001.b:0 "Tuez-le! Tuez tous les Fomoriens!"
+
+ toi_fomorian_tributary.0012.t:0 "Stratégie réussie"
+ toi_fomorian_tributary.0012.desc:0 "Les dieux soient loués! Préparer des offrandes! Le collecteur de tribut a été dubitatif un temps mais, en fin de compte, est parti avec moins qu'il aurait dû prendre. \n\nDans le fort circulaire tout le monde est ravi de savoir que nous serons pas affamés cet hiver tandis que notre ennemi se repaît de notre misère. \n\nPeut-être, en temps voulu, nous nous libérerons du joug fomorien et vivrons une vie plus prospère."
+ toi_fomorian_tributary.0012.a:0 "Ce n'est pas passé loin"     
+ 
+ toi_fomorian_tributary.0003.t:0 "Le tribut"
+ toi_fomorian_tributary.0003.desc:0 " Chaque collecteur de taxe est revenu sain et sauf, m'apportat bétail, or et otages de chaque tributaire. Comme toujours, je gagne en force alors que les infidèles s'affaiblissent. Nous les laisserons renouveler leur or et remplir leur greniers pendant quelques années avant de prélever le tribut à nouveau. Ce cycle se perpétuera à tout jamais, ou jusqu'à ce que tous les impurs s'évanouissent...où fassent partie des nôtres."
+ toi_fomorian_tributary.0003.a:0 "Au revoir"

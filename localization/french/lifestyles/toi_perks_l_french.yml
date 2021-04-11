@@ -1,0 +1,35 @@
+﻿l_french:
+ # Tales Of War: Heroic Warrior
+ master_of_duel_perk_name:0 "Maître Duelliste"
+ training_with_scathach_perk_name:0 "Entraînement avec Scáthach"
+ giant_slayer_perk_name:0 "Tueur de Géant"
+ a_champion_to_follow_perk_name:0 "Un champion exemplaire"
+ adaptative_fighter_perk_name:0 "Combattant flexible"
+
+ # Tales Of War: Legendary Strategist
+ master_tactician_perk_name:0 "Maître Tacticien"
+ ringfort_taker_perk_name:0 "Assiégeant de Forts Circulaires"
+ organized_army_perk_name:0 "Armée Organisée"
+ realm_guard_perk_name:0 "Garde Permanente"
+ srengs_legacy_perk_name:0 "Héritage de Sreng"
+
+
+ CHAMPION_TO_FOLLOW_PERK:0 "Trois champion puissants vous rejoingnent"
+ REALM_GUARD_PERK:0 "Une troupe se met à votre service"
+ realm_guard_perk_troops:0 "Garde Permanente"
+
+ # Tales Of Abundance: Golden Tongue
+ storyteller_perk_name:0 "Barde"
+ beneficial_reputation_perk_name:0 "Réputation Bienfaîtrice"
+ realm_of_legends_perk_name:0 "Pays de Légendes"
+ influential_diplomat_perk_name:0 "Diplomate Influent"
+ respected_by_all_perk_name:0 "Respecté de tous"
+
+ # Tales Of Abundance: Brehon Laws Keeper
+ civil_law_perk_name:0 "Loi Civile"
+ justice_order_perk_name:0 "Ordre et Justice"
+ gods_law_perk_name:0 "Loi des Dieux"
+ men_law_perk_name:0 "Loi des Hommes"
+ senchas_mar_perk_name:0 "Senchas Már"
+ 
+ INFLUENTIAL_DIPLOMAT_PERK: "Cet avantage vous donne 3 votes pour l'élection de la [high_kingship|E] si vous en êtes un électeur"

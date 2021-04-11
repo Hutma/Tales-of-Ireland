@@ -719,16 +719,16 @@ found_empire_decision = {
 	is_valid = {
 		prestige_level >= 4
 		OR = {
-			sub_realm_size >= 120
+			sub_realm_size >= 240
 			AND = {
 				custom_description = {
 					text = found_empire_decision_three_kingdoms_held
 					any_held_title = {
-						count >= 4
+						count >= 8
 						tier = tier_kingdom
 					}
 				}
-				sub_realm_size >= 120
+				sub_realm_size >= 200
 			}
 		}
 	}

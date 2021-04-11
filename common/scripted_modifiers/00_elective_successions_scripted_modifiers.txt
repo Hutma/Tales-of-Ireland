@@ -708,8 +708,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	#TALES OF IRELAND
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = fomorian }
 			scope:candidate = { has_trait = fomorian }
@@ -717,8 +717,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = cessarian }
 			scope:candidate = { has_trait = cessarian }
@@ -726,8 +726,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = partholonian }
 			scope:candidate = { has_trait = partholonian }
@@ -735,8 +735,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = nemedian }
 			scope:candidate = { has_trait = nemedian }
@@ -744,8 +744,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = fir_bolg }
 			scope:candidate = { has_trait = fir_bolg }
@@ -753,8 +753,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = tuatha_de_danann }
 			scope:candidate = { has_trait = tuatha_de_danann }
@@ -762,8 +762,8 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 60
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = milesian }
 			scope:candidate = { has_trait = milesian }
@@ -771,17 +771,18 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
-		AND = {
-			root = { has_trait = celtic_human }
-			scope:candidate = { has_trait = celtic_human }
-		}
+		desc = tooltip_feudal_elector_vote_same_race
+
+		has_trait = celtic_human
+		
+		NOT = { this = scope:candidate } #Do not judge yourself.
+
+		scope:candidate = { has_trait = celtic_human }
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = megalith_human }
 			scope:candidate = { has_trait = megalith_human }
@@ -789,11 +790,31 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = {
 		add = 35
-		desc = tooltip_feudal_elector_vote_distant_relative
-		NOT = { this = scope:candidate}
+		desc = tooltip_feudal_elector_vote_same_race
+		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = hy_brazylian }
 			scope:candidate = { has_trait = hy_brazylian }
+		}
+	}
+	
+	modifier = {
+		add = {
+			subtract = 80
+		}
+		desc = tooltip_feudal_elector_vote_humiliated
+		NOT = { this = scope:candidate } #Do not judge yourself.
+		scope:candidate = {
+			has_character_flag = humiliated_candidate_by_cb
+		}
+	}
+	
+	modifier = {
+		add = 30
+		desc = tooltip_feudal_elector_vote_strenghten_candidature
+		NOT = { this = scope:candidate } #Do not judge yourself.
+		scope:candidate = {
+			has_character_flag = candidatutre_boosted
 		}
 	}
 	

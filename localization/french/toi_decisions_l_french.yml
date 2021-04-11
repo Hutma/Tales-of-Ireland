@@ -1,0 +1,82 @@
+﻿l_french:
+ #Race realated decisions
+ the_first_cessarian_kingdom_decision:0 "Proclamer le Premier Royaume cessarien"
+ the_first_cessarian_kingdom_decision_desc:0 "Pour la première fois le[cessarian|E] seront menés par un roi, puisse ce jour être le premier d'une longue lignée." 
+ the_first_cessarian_kingdom_decision_tooltip:0 "Vous devenez le premier roi cessarien"
+ the_first_cessarian_kingdom_decision_confirm:0 "Apportez moi ma couronne"
+ 
+ restore_aran_kingship_decision:0 "Restorer la royauté d'Aran"
+ restore_aran_kingship_decision_desc:0 "Les [fomorians|E] naguère possédé un grand royaume en cette île, je devrais le restorer."
+ restore_aran_kingship_decision_tooltip:0 "Restorer la royauté d'Aran"
+ restore_aran_kingship_decision_confirm:0 "The Kingdom of Aran lives again"
+ 
+ restore_nemedian_kingdom_decision:0 "Restorer le royaume de Nemed"
+ restore_nemedian_kingdom_decision_desc:0 "Nemed, chef de tous nos ancêtres a régné sur un royaume ici il y a bien longtemps, il est temps de le rebâtir et  faire prospérer."
+ restore_nemedian_kingdom_decision_tooltip:0 "Vous restorez le royaume de Nemed"
+ restore_nemedian_kingdom_decision_confirm:0 "Les Némédiens sont unis à nouveau"
+ 
+ ceremony_in_newgrange_decision:0 "Cérémonie à Newgrange"
+ ceremony_in_newgrange_decision_desc:0 "Newgrange a été envahie plusieurs fois et notre peuple en a perdu le contrôle, des siècles durant nous avons tenté de la reprendre sans succès. Nous espérons pouvoir réaliser un service pour nos dieux dans ce lieu sacré à nouveau."
+ ceremony_in_newgrange_decision_tooltip:0 "Officie une cérémonie à Newgrange"
+ ceremony_in_newgrange_decision_confirm:0 "Nous honorons les dieux"
+ 
+ take_fomorian_tribute_decision:0 "Collect The Tribute"
+ take_fomorian_tribute_decision_desc:0 "Le temps est arrivé, mes tributaires ont eu le temps d'agrandir leurs trésoreries et familles. Il est temps de prélever le tribut ancestral, deux tiers de leur bétail et or, plus un de leurs enfants."
+ take_fomorian_tribute_decision_tooltip:0 "Envoyez les collecteurs de tribut"
+ take_fomorian_tribute_decision_confirm:0 "Envoyez les collecteurs de tribut"
+
+ #High King decisions
+ reform_high_kingship_decision:0 "Restaurer la Haute Royauté"
+ reform_high_kingship_decision_desc:0 "D'après les lois des Irlandais nous étions dirigés par un unique [high_king|E] et il en sera ainsi de nouveau!"
+ reform_high_kingship_decision_tooltip:0 "Vous restaurez la Haute Royauté d'Irlande"
+ reform_high_kingship_decision_confirm:0 "Restaurer la Haute Royauté"
+ 
+ call_royal_army_decision:0 "Convoquer l'armée royale"
+ call_royal_army_decision_desc:0 "Le Haut Roi a le droit de mobiliser une armée formée d'hommes venus de toute l'Irlande."
+ call_royal_army_decision_tooltip:0 "Vous gagnez l'armée royale"
+ call_royal_army_decision_confirm:0 "Convoquer l'armée!"
+ 
+ call_royal_army_decision_troops:0 "Garde royale"
+ 
+ high_king_reclaim_tara_decision:0 "Revendiquer Tara"
+ high_king_reclaim_tara_decision_desc:0 "Tara est le centre traditionnel du pouvoir du [high_king|E], donc le Haut Roi devrait la gouverner.""
+ high_king_reclaim_tara_decision_tooltip:0 "Vous obtenez une revendication sur Tara"
+ high_king_reclaim_tara_decision_confirm:0 "Tara devrait m'appartenir!"
+ 
+ #Places decisions
+ coax_giant_causeway_decision:0 "Coax a Giant at the Giant's Causeway"
+ coax_giant_causeway_decision_desc:0 "The Giant's Causeway is known as a path to the [otherworld|E], a mystical place where strange creatures live. The Causeway has been built by the [gaelic_giant|E] Fionn Mac Cumhaill and his descendent could be contacted using this special site."
+ coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
+ coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"
+ 
+ #Major decisions
+ try_unite_ireland_decision:0 "Déclarer votre ambition d'unifier l'Irlande"
+ try_unite_ireland_decision_desc:0 "Ireland is divided but should be united once again, you have proven yourself to be a prestigious and capable ruler, time to unite the Emerald Island under once ruler. \n\n Taking this decision will grant you a reason to subjugate any neighbour."
+ try_unite_ireland_decision_tooltip:0 "I will rule over Ireland"
+ try_unite_ireland_decision_confirm:0 "Ils s'agenouilleront devant moi"
+ 
+ unite_all_ireland_decision:0 "Unite Ireland"
+ unite_all_ireland_decision_desc:0 "Ireland is divided but should be united once again, I control every region of Ireland and now it is time to unite them all in a single realm!"
+ unite_all_ireland_decision_tooltip:0 "Ireland is one"
+ unite_all_ireland_decision_confirm:0 "Ireland is one"
+ 
+ one_heir_decision:0 "Imposer un héritier"
+ one_heir_decision_desc:0 "L'oeuvre d'une vie menace d'être défait à ma mort. Mon domaine est condamné à la dislocation et déchirure à cause des disputes de mes fils. Peut-être sous les bonnes circonstances, je peux assurer mon héritage et tout remettre au premier dans l'ordre de succession..."
+ one_heir_decision_tooltip:0 "Le royaume restera stable"
+ one_heir_decision_confirm:0 "Le royaume restera stable"
+ 
+ #Minor decisions 
+ sacrifice_to_sidhe_decision:0 "Make a sacifice to the Sidhe"
+ sacrifice_to_sidhe_decision_desc:0 "We know about the fairies living in the [otherworld|E] and we know that they can influence the material world. We will make offerings to the [sidhe|E], the faires and magical creatures of Ireland and hope for a good omen to lead our people."
+ sacrifice_to_sidhe_decision_tooltip:0 "Prepare the offering Ceremony"
+ sacrifice_to_sidhe_decision_confirm:0 "The Ceremony awaits"
+ 
+ hail_high_king_decision:0 "Acclamer le Haut Roi"
+ hail_high_king_decision_desc:0 "Le maître de l'Irlande est un [milesian|E] comme cela devrait l'être. Nous devrions acclamer le [high_king|E] ans espérer que le titre restera entres les mains des Milésiens."
+ hail_high_king_decision_tooltip:0 "Vous acclamez le Haut Roi"
+ hail_high_king_decision_confirm:0 "Les Milésiens régneront à tout jamais!"
+ 
+ high_king_protection_decision:0 "Demander la protection du Haut Roi"
+ high_king_protection_decision_desc:0 " Le [high_king|E]  est un Milésien et son influence peut-être utilisé pour aider n'importe quel [milesian|E] dans le besoin. Nous sommes en guerre et avons besoin de troupes, le temps est venu de faire appel au Haut Roi et l'influence qu'il donne à notre peuple pour lever plus de troupes."
+ high_king_protection_decision_tooltip:0 "Nous pouvons amasser plus d'hommes"
+ high_king_protection_decision_confirm:0 "Ralliez les hommes!"

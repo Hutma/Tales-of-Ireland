@@ -1,0 +1,16 @@
+﻿l_french:
+ 
+ toi_hybrazil.0001.t:0 "Hy-Brasil"
+ toi_hybrazil.0001.desc:0 "Dans les nuages distants au dessus des mers, quelques marins disent avoir aperçus une ombre mystérieuse. Ils ont essayer de l'approcher et ont découvert...une île dans les nuages. Cette île avait comme un air mystique...magique. Une étrange lumière en émanait. Certains des marins ont décidés d'aller voir de plus prêt mettant pied à terre sur l'île mystérieuse...ils ne sont jamais revenus. \n\nQuelques jours plus tard, une nouvelle expédition est lancée amis lorsqu'elle atteint sa destination, l'île avait disparu. Tout le monde des simples fermiers et marins, aux soldats et même les souverains ragotent sur ce mystérieux endroit maintenant dénommé Hy-Brasyl.
+ toi_hybrazil.0001.a:0 "Étrange histoire"
+ 
+ toi_hybrazil.0002.t:0 "Visiteurs de Hy-Brasil"
+ toi_hybrazil.0002.desc:0 "La légende de Hy-Brasyl semble véridique. Un bateau transportant d'étranges personnes prétendant venir de cette île a atteint les côtes de l'Irlande. Il est dit qu'ils ont parcouru l'île pour la visiter. \n\nTous sauf un ont quitté l'Irlande. Le seul Hy-Brasylien restant a offert de grands cadeaux au Rí qui l'a acceuilli dans son hall. \n\nLes rumeurs s'enflamment de plus belle grâce à ce rebondissement inattendu, chaque personne en Irlande spéculant sans relâche sur l'étrange Hy-Brasyl et ses habitants.
+ toi_hybrazil.0002.a:0 "Que veulent-ils?"
+ 
+ toi_hybrazil.0003.t:0 "Invasion de Hy-Brasil"
+ toi_hybrazil.0003.desc:0 "Beaucoup parmi les peuples d'Europe se sont demandés qu'est-ce que les visiteurs hy-brasyliens cherchaient sur nos côtes. Tout le monde saît maintenant. C'étaient des éclaireurs...en repérage d'un point de débarquement pour leur intrusion \n\nCes bâtards étrangers envahissent l'île! \n\n Tentant de saisir notre terre, ils ont débarqué près de Aran. Ils ont amassé de vastes armées et leurs nombres semblent inépuisables...Ils pourraient réussir à s'établir en Irlande."
+ toi_hybrazil.0003.a:0 "Ils n'auront pas nos terres."
+ 
+ HY_BRASYLIAN_ARMY:0 "Envahisseurs Hy-Brasyliens "
+ hy_brasil_adventurers_event_troops:0 "Aventuriers Hy-Brasyliens"

@@ -43,6 +43,11 @@
  high_king_reclaim_tara_decision_tooltip:0 "Gain claim on Tara"
  high_king_reclaim_tara_decision_confirm:0 "Tara should be mine!"
  
+ strengthen_high_kingship_canditate_decision:0 "Strengthen Candidate"
+ strengthen_high_kingship_canditate_decision_desc:0 "I am worthy of the High Kingship, I am affirming it today."
+ strengthen_high_kingship_canditate_decision_tooltip:0 "I will be the next High King"
+ strengthen_high_kingship_canditate_decision_confirm:0 "I will be the next High King"
+ 
  #Places decisions
  coax_giant_causeway_decision:0 "Coax a Giant at the Giant's Causeway"
  coax_giant_causeway_decision_desc:0 "The Giant's Causeway is known as a path to the [otherworld|E], a mystical place where strange creatures live. The Causeway has been built by the [gaelic_giant|E] Fionn Mac Cumhaill and his descendent could be contacted using this special site."

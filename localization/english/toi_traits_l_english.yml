@@ -61,7 +61,7 @@
  trait_three_quarter_tuatha_de_danann_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is nearly more [de_danann|E] than anything else."
  
  trait_milesian:0 "Milesian"
- trait_milesian_desc:0 "The [milesians|E] ruled over Ireland for centuries before the coming of Humans. They are great warriors but also great rulers."
+ trait_milesian_desc:0 "The [milesians|E] ruled over Ireland for centuries before the coming of the Celts. They are great warriors but also great rulers."
  trait_milesian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Milesian, [milesians|E] ruled over Ireland for centuries before the coming of Humans. They are great warriors but also great rulers."
  trait_half_milesian:0 "Half-blooded Milesian"
  trait_half_milesian_desc:0 "Half the blood of this character is [milesian|E] blood."
@@ -96,8 +96,8 @@
  trait_gaelic_giant_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendent of Fionn Mac Cumhaill that have left the [otherworld|E] to come back to the surface. He is very powerful and can defeat hundreds of opponents all by himself."
  
  trait_hy_brazylian:0 "Hy-Brasylian"
- trait_hy_brazylian_desc:0 "The [hy_brasylians|E] come from the far away island of Hy-Brazil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
- trait_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an [hy_brasylian|E] come from the far away island of Hy-Brazil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
+ trait_hy_brazylian_desc:0 "The [hy_brasylians|E] come from the far away island of Hy-Brasil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
+ trait_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an [hy_brasylian|E], the [hy_brasylians|E] come from the far away island of Hy-Brasil. This island in the cloud which only appears once every seven years. The Hy-Brasylian are strategist that have acquired unique knowledge."
  trait_half_hy_brazylian:0 "Half-blooded Hy-Brasylian"
  trait_half_hy_brazylian_desc:0 "Half the blood of this character is [hy_brasylian|E] blood."
  trait_half_hy_brazylian_character_desc:0 "Half the blood of [ROOT.GetCharacter.GetFirstNameNoTooltip] is [hy_brasylian|E] blood."

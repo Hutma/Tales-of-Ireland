@@ -1,0 +1,5 @@
+﻿l_english:
+ IS_HIGH_KING:0 "Est Haut Roi: $VALUE|+0=$"
+ FAR_AWAY:0 "Loin: $VALUE|+0=$"
+ VERY_FAR_AWAY:0 "Très loin: $VALUE|+0=$"
+ TOO_FAR_AWAY:0 "Trop loin: $VALUE|+0=$"

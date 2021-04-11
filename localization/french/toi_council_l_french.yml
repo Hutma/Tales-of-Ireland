@@ -1,0 +1,14 @@
+﻿l_french:
+#Christian
+ councillor_court_chaplain_generic_county:1 "Druide"
+ councillor_court_chaplain_generic_county_possessive:1 "du Druide"
+ councillor_court_chaplain_generic_duchy:1 "Druide"
+ councillor_court_chaplain_generic_duchy_possessive:1 "du Druide"
+ councillor_court_chaplain_generic_kingdom:1 "Druide"
+ councillor_court_chaplain_generic_kingdom_possessive:1 "du Druide"
+ councillor_court_chaplain_generic_empire:0 "Druide"
+ councillor_court_chaplain_generic_empire_female:0 "Druide"
+ councillor_court_chaplain_generic_empire_possessive:0 "du Druide"
+ councillor_court_chaplain_generic_empire_female_possessive:0 "de la Druide"
+
+ 

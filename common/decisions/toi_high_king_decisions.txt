@@ -216,9 +216,6 @@ try_unite_ireland_decision = {
 		is_independent_ruler = yes
 	}
 
-	is_valid_showing_failures_only = {
-		
-	}
 
 	cost = {
 		gold = 200
@@ -228,6 +225,62 @@ try_unite_ireland_decision = {
 	effect = {
 		add_character_flag = {
 			flag = try_unite_ireland_flag
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#strengthen position candidate
+strengthen_high_kingship_canditate_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+
+	ai_check_interval = 180
+	desc = strengthen_high_kingship_canditate_decision_desc
+
+	is_shown = {
+		AND = {
+			title:k_high_kingship = {
+				any_election_candidate = {
+					this = root
+				}
+			}
+			NOT = {
+				has_character_flag = candidatutre_boosted
+			}
+			is_landed = yes
+			primary_title.tier > tier_barony
+			NOT = {
+				has_character_flag = humiliated_candidate_by_cb
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+	
+		custom_description = {
+			text = recent_cattle_raid_victory
+			# Won a war cattle raid
+			has_variable = recent_cattle_raid_victory
+		}
+	}
+
+	cost = {
+		gold = 100
+		prestige = 100
+	}
+
+	effect = {
+		add_character_flag = {
+			flag = candidatutre_boosted
+			years = 20
 		}
 	}
 

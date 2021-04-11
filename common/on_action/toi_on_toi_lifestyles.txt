@@ -199,53 +199,61 @@ on_toi_lifestyles_marriage = {
 	effect = {
 		#Good marriage
 		if = {
-			limit = {
-				OR = {
-					prestige_level >= 3
-					highest_held_title_tier >= 4
+			limit = { 
+				exists = root.mother
+				exists = root.father
+				exists = scope:spouse.mother
+				exists = scope:spouse.father
+			}		
+			if = {
+				limit = {
 					OR = {
-						root.father = {
-							highest_held_title_tier >= 4
-							prestige_level >= 3
-						}						
-						root.mother	= {
-							highest_held_title_tier >= 4
-							prestige_level >= 3
-						}
-					}
-				}
-			}
-			scope:spouse.father = {
-				add_tales_of_abundance_lifestyle_xp = 55
-			}
-			scope:spouse.mother = {
-				add_tales_of_abundance_lifestyle_xp = 55
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					scope:spouse = {
 						prestige_level >= 3
 						highest_held_title_tier >= 4
-					}
-					OR = {
-						scope:spouse.father = {
-							highest_held_title_tier >= 4
-							prestige_level >= 3
-						}						
-						scope:spouse.mother	= {
-							highest_held_title_tier >= 4
-							prestige_level >= 3
+						OR = {
+							root.father = {
+								highest_held_title_tier >= 4
+								prestige_level >= 3
+							}						
+							root.mother	= {
+								highest_held_title_tier >= 4
+								prestige_level >= 3
+							}
 						}
 					}
 				}
+				scope:spouse.father = {
+					add_tales_of_abundance_lifestyle_xp = 55
+				}
+				scope:spouse.mother = {
+					add_tales_of_abundance_lifestyle_xp = 55
+				}
 			}
-			root.father = {
-				add_tales_of_abundance_lifestyle_xp = 55
-			}
-			root.mother = {
-				add_tales_of_abundance_lifestyle_xp = 55
+			if = {
+				limit = {
+					OR = {
+						scope:spouse = {
+							prestige_level >= 3
+							highest_held_title_tier >= 4
+						}
+						OR = {
+							scope:spouse.father = {
+								highest_held_title_tier >= 4
+								prestige_level >= 3
+							}						
+							scope:spouse.mother	= {
+								highest_held_title_tier >= 4
+								prestige_level >= 3
+							}
+						}
+					}
+				}
+				root.father = {
+					add_tales_of_abundance_lifestyle_xp = 55
+				}
+				root.mother = {
+					add_tales_of_abundance_lifestyle_xp = 55
+				}
 			}
 		}
 	}

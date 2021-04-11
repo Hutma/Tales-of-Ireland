@@ -732,7 +732,7 @@ NSiege = {
 
 	BASE_DEFENDER_MORALE = 100							# Defender morale with no buildings, garrison etc
 	DEFENDER_MORALE_PER_FORT_LEVEL = 75					# Defender morale added to the base per for level
-	BASE_DAILY_MORALE_LOSS = 1.2						# How much morale is lost every day of the siege
+	BASE_DAILY_MORALE_LOSS = 1.1						# How much morale is lost every day of the siege
 	MIN_DAILY_MORALE_LOSS = 0.5							# Minimum daily morale loss for the defenders
 	DAILY_MORALE_LOSS_FROM_RELATIVE_ATTACKER_MEN = 0.05	# How much morale is lost every day of the siege for extra stack of men defined in RELATIVE_ATTACKER_MEN_STACK_SIZE
 	RELATIVE_ATTACKER_MEN_STACK_SIZE = 50				# Extra stack size of men to start getting daily morale loss
@@ -761,9 +761,9 @@ NSiege = {
 	SIEGE_FORT_THRESHOLDS = { # At what levels is another level of siege tier needed to avoid reduced siege speed?
 		5
 		7
-		11
-		17
-		31
+		10
+		16
+		30
 	}
 	SIEGE_FORT_THRESHOLD_IMPACT = 0.7 # What is the impact of not having enough siege tier? Siege speed is multiplied for this for each missing tier. E.G., if siege tier is 0, and fort level is 4, siege speed is multiplied by 0.5 * 0.5
 

@@ -1,0 +1,46 @@
+﻿l_french:
+ tenet_animal_worship_name:0 "Animaux Sacrés"
+ tenet_animal_worship_desc:0 "Les Dieux sont partout et sont particulièrement présent dans les organismes vivant, nous nous devons de bien traîter les animaux et ne leur faire du mal que pour les manger."
+ 
+ tenet_pure_island_name:0 "Ile Pure"
+ tenet_pure_island_desc:0 "Notre culture est supérieure, nous devrions bannir tous les étranger de nos terres, de notre île."
+ 
+ tenet_seafarers_name:0 "Marins aventuriers"
+ tenet_seafarers_desc:0 "Nous sommes arrivé par la mer et nous nous étendront par la mer, les Dieux nous ont donnés la connaissance et la curiosité pour que nous puissions explorer les mers, c'est nôtre Destin."
+ 
+ tenet_divine_agriculture_name:0 "Agriculture Divine"
+ tenet_divine_agriculture_desc:0 "Les dieux nous ont cultivé jusqu'à ce que nous soyons assez grand pour vivre par nous-même, nous devons être proche des dieux et les imiter pour montrer notre respect, nous prenons soin de nôtre bétail et de nos fermes, c'est nôtre mission sacrée."
+ 
+ tenet_deep_vengeance_flame_name:0 "Flamme de la Vengeance"
+ tenet_deep_vengeance_flame_desc:0 "Nous avons été mis en esclavage par le passé, cela n'arrivera plus, nous ne nous inclineront devant personne, nous nous battrons pour nôtre liberté et nos croyances."
+ 
+ tenet_masters_of_ireland_name:0 "Maîtres de l'Irlande"
+ tenet_masters_of_ireland_desc:0 "Nous avons dirigé l'Irlande pendant des siècles et même si nôtre pouvoir a été affaibli, nôtre mission est de diriger les peuples de cette île vers la gloire."
+ 
+ tenet_tuatha_de_danann_worship_name:0 "Culte des Tuatha Dé Danann"
+ tenet_tuatha_de_danann_worship_desc:0 "Il ne fait aucun doute que les Tuatha Dé Danann sont des dieux parmi les mortels, ils ont les connaissances les plus avancées et le passé le plus glorieux. Nous devons les servir, eux et leur futur."
+ 
+ tenet_fomorian_worship_name:0 "Culte des Fomorien"
+ tenet_fomorian_worship_desc:0 "Certain peuvent trouver les Fomoriens repoussants, c'est parce qu'ils ne les comprennent pas. Les Fomoriens possèdent un pouvoir inégalé et nous les serviront lorsqu'il repredront l'île et installeront leur gloire."
+ 
+ tenet_underground_sidhe_name:0 "Sidhe des Sidhs"
+ tenet_underground_sidhe_desc:0 "Nous savons comment communiquer avec le esprits qui vivent dans les Sidhs, nous savons comment leur plaire et partager nos connaissances en échange des leurs."
+ 
+ tenet_great_barrows_name:0 "Grands Tumulus"
+ tenet_great_barrows_desc:0 "Les dieux ont bâti d'impressionnantes structures pour que nous puissions prier, nous devons préserver ces stuctures quel que soit le prix."
+ 
+ tenet_sea_dwellers_name:0 "Dieux Sous Marins"
+ tenet_sea_dwellers_desc:0 "La majorité des dieux vivent dans les océans infinis, l'eau et la mer contiennent leur pouvoir."
+ 
+ tenet_newgrange_splendor_name:0 "Splendeur de Newgrange"
+ tenet_newgrange_splendor_desc:0 "We use our construction skills to thank the gods, at the same time the splendor of our monuments terrifies our ennemies, comfort our friends, and bring onto us the benedictions of the gods."
+ 
+ tenet_old_gods_name:0 "Les Anciens Dieux"
+ tenet_old_gods_desc:0 "Les dieux sont anciens et beaucoup sont ceux qui semblent l'avoir oublié, mais nous n'oubliront pas. Nos dieux furent les premiers à fouler la Terre, ils sont les véritables dieux."
+ 
+ doctrine_parameter_cattle_raiding_cb_disable:0 "Ne peux pas utiliser [cattle_raiding_cb|E]"
+ doctrine_parameter_purification_cb_enabled:0 "Peut utiliser le casus belli de Purification"
+ doctrine_parameter_to_new_land_cb_enable:0 "Peut utiliser le casus belli Vers de Nouveaux Horizons"
+ doctrine_parameter_hail_high_king_decision_active:0 "Peut rendre hommage au Haut Roi"
+ doctrine_parameter_high_king_influence_decision_active:0 "Peut demander la Protection du Haut Roi"
+ doctrine_parameter_sacrifice_to_sidhe_decision_active:0 "Peut faire un sacrifice aux Sidhe"

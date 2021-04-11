@@ -1,4 +1,4 @@
-﻿l_french:
+﻿l_english:
  TITLE_NAME:0 "$NAME$"
  TITLE_TIERED_NAME:0 "$TIER|U$ of $NAME$"
  TITLE_CLAN_TIERED_NAME:0 "the $NAME$ $TIER|U$"
@@ -5637,4 +5637,8 @@
  c_tallaght:0 "Tallaght"
  c_clondalkin:0 "Clondalkin"
  c_sandyford:0 "Sandyford"
- :0 ""
+ k_high_kingship:0 "Haut Roi"
+ k_aran:0"Aran"
+ k_nemed_kingdom:0"Nemed"
+ e_ireland:0"Irlande"
+

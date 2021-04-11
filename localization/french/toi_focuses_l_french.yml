@@ -1,0 +1,13 @@
+﻿l_french:
+
+ #Tales of War
+ tales_of_war_lifestyle_name:0 "[tales_of_war|E]"
+ tales_of_war_lifestyle_desc:0 "#S EN participant dans des batailles, guerres et duels, vôtre renomée de Héros Légendaire grandira jusqu'à ce que des chansons et légendes soient écrites à propos de vos exploits sur les champs de batailles. #!"
+ heroic_warrior_name:0 "Guerrier Héroïque"
+ legendary_strategist_name:0 "Stratège Légendaire"
+ 
+ #Tales of Abundance
+ tales_of_abundance_lifestyle_name:0 "[tales_of_abundance|E]"
+ golden_tongue_name:0 "Langue d'Or"
+ tales_of_abundance_lifestyle_desc:0 "#S Régner sur un territoire à la fois en paix et dynamique vous fera entrer dans les légendes et dans l'histoire. Il existe de nombreux contes de conflits et de champions guerriers les légendes de paix et d'abondance sont celles qui comptent le plus. #!"
+ brehon_laws_keeper_name:0 "Gardien des Lois des brehons"

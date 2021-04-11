@@ -1,0 +1,62 @@
+﻿l_french:
+ introduction_event.001.t:0 "Bienvenue en Irlande"
+ introduction_event.001.desc:0 "Bienvenue à Tales Of Ireland, votre aventure va commencer ici. \n\nAvant de débuter vous devriez savoir que certains aspects du jeu sont différents.\n\nVoudriez-vous en savoir plus?\n\nParlez-moi de..."
+
+
+ introduction_event.001.a:0 "Cet endroit et moi-même"
+ introduction_event.001.b:0 "Le système de développement"
+ introduction_event.001.c:0 "Le Haut Roi d'Irlande"
+ introduction_event.001.d:0 "Modifications de la guerre"
+ introduction_event.001.e:0 "Les nouveaux lifestyles"
+ introduction_event.001.f:0 "Le système de magie"
+ introduction_event.001.g:0 "Je suis déjà au courant de tout cela et mon aventure débutera dès maintenant"
+
+
+ 
+ introduction_event.001.back:0 "Quoi d'autre puis-je apprendre?"
+  
+ introduction_event.010.t:0 "Les Fomoriens, premiers habitants d'Irlande"
+ introduction_event.010.desc:0 "Personne ne sait vraiment quand les premier Fomoriens sont arrivés en Irlande, ce qui pousse certains à dire qu'ils ont toujours été là. Les [fomorians|E] sont un peuple fier et puissant qui loue des dieux sombres et réalise des sacrifices humains. \n\nLeur principal objectif est de purger l'Irlande de tous les habitants venus après eux, car considérés comme impurs. Il maintiennent une tradition de faire payer un tribut à leurs ennemis, prélevant deux tiers de toute leur richesse et un de leurs enfants régulièrement jusqu'à ce qui meurent de famine ou quittent l'île pour de bon."
+ 
+ introduction_event.002.t:0 "Les Cessariens, peuple paisible "
+ introduction_event.002.desc:0 "Les [cessarians|E] étaient le peuple suivant Cessair, une vigoureuse femme menant une tribu forte de trente-neuf femmes et trois hommes en Irlande. Ils vivèrent des longs siècles paisibles et prospères en restant à l'écart des guerres majeures qui ont déchiré l'Irlande en des temps anciens. Certains racontent que les [cessarians|E] peuvent se transformer en saumons dorés comme le légendaire sage Fintan mac Bóchra. \n\nMais à présent la guerre s'est embrasé et dévaste l'Irlande dû à l'invasion des [milesians|E] par les [celts|] et chacune des tribus qui leur étaient jadis vassales. \n\n Les paisibles [cessarians|E] sont riches...en temps de grand trouble, cette richess peut attirer les convoitises vers leurs terres. Les [cessarians|E] doivent s'unir et se préparer."
+
+ introduction_event.003.t:0 "Les Partholoniens, les vagabonds pestiférés"
+ introduction_event.003.desc:0 "Les [partholonians|E] ont parcouru le monde entier avant de s'établir en Irland. Avant d'arriver en Irlande ils vivèrent un siècle durant dans le Nord. Cela a profondément marqué leur culture et religion. Quand les [partholonians|E] s'établirent en Irlande ils entrèrent en guerre avec les [fomorians|E] rencontrant quelques succès qui préserva leur indépendance. Libéré de la tyrannie des [fomorians|E],
+un jour une obscure maladie s'est emparé des [partholonians|E] un à un. Quand ce mal s'est résorbé, seul quelques [partholonians|E] restaient. Depuis ce jour, ils toujours été les sujets d'un autre peuple jusqu'à ce que l'arrivée
+ des [celts|E] brise le règne milésien. \n\nUne ascension nouvelle des [partholonians|E] tentera de regagner terres et richesse pour leur peuple."
+ 
+ introduction_event.004.t:0 "Les Némédiens, descendants des Scythes "
+ introduction_event.004.desc:0 "Les [nemedians|E] vinrent d'une terre lointaine, trente ans après les [partholonians|E]. Ils partirent de la Scythie, une terre de soleil éternel, mené par une homme prénommé Nemed. Aussitôt installé en Irlande, ils firent une guerre constant à la race dominante de l'île, les [fomorians|E]. Au bout de huit ans de combat, la majorité d'entre eux payaient le lourd tribut fomorien des deux tiers du bétail, richesse, lait et enfants de temps en temps. C'est la cause de la fragementation des [nemedians|E] en plusieurs tribus. Un groupe fuit l'Irlande en voguant vers le Nord, un autre vers le Sud et un dernier resta en Irlande, luttant pour sa survie. Quand les [fir_bolgs|E] vainquirent les [fomoriens|] bien des années plus tard, [nemedians|E] s'affranchirent de leurs maîtres et s'enrichirent. \n\nAvec les guerres présentes et l'instabilité politique, les [nemedians|E] cherche à rester indépendant, et bien sûr, survivre."  
+ 
+ introduction_event.005.t:0 "Les Fir Bolgs, anciens esclaves"
+ introduction_event.005.desc:0 "Quelques [nemedians|E] s'enfuirent en Grèce , où ils devinrent soumis et asservis. Ils en vinrent à être connus comme les [fir_bolgs|E] ou "Hommes des Sacs". Ils se révoltèrent éventuellement, arrachant leur liberté et revinrent en Irlande. Après avoir vaincu les [fomorians|E], ils créèrent la [high_kingship|E] qui unit l'Irlande pour la première fois. Leur gloire renouée sera de courte durée cependant, dû à l'incursion des [de danann|E] qui les a réduit à Connacht passé un siècle. C'est l'origine d'une rancoeur tenace entre les [fir_bolgs|E] et les [de danann|E]."
+ 
+ introduction_event.006.t:0 "Les Tuatha Dé Danann, être mystiques"
+ introduction_event.006.desc:0 "Les [de_danann|E] descendent de [nemedians|E] qui se sont établis dans une terre au Nord de l'Irlande. De retour, ils défirent les [fir_bolgs|E] seigneurs de l'île à l'époque, et entrèrent contre les  [fomorians|E]. Ils perdirent et les [fomorians|E] devinrent la force dominante, assujetissant les [de_danann|E] à un lourd tribut.Un jour, un célèbre guerrier nommé Lugh a conduit une rébellion contre les [fomorians|E] et réussi.\n\Depuis ce jour les Tuatha ont régné sur l'Irlande...jusqu'à l'arrivée des The [milesians|E].\n\nLes The [milesians|E] étaient des féroces guerriers trop nombreux pour être combattus et battus par les [de_danann|E].\n\n Après cette défaite, les [de_danann|E] s'éxilèrent dans le Sidh, le plan magique des Dieux. Ils y ont flori et sont devenus eux-mêmes des Dieux, en apprenant les voies de la magie et des fées d'Irlande. Ayant appris les difficultés des [milesians|E] face aux [celts|E], une partie des [de_danann|E] a décidé de quitter le [otherworld|E] pour recouvrir le prestige passé.\n\n En quittant le Sidh, leur part divine est restée car incapable de quitter le plan. Les Tuatha pourront-ils se rétablir dans ces conditions?"
+ 
+ introduction_event.007.t:0 "Les Milésiens, maîtres de l'Irlande"
+ introduction_event.007.desc:0 "Les [milesians|E] sont originaires d'Espagne, ils ont défait les [de_danann|E] et imposé leur domination à toutes les tribus de l'île. Des siècles durant ils ont développés le pays et assuré la paix entre chaque tribu. Leur pouvoir était absolu. \n\nFinalement, il y a une décennie, le peuple Celte arriva en Irlande, défiant leur autorité.Les [milesians|E] avaient mené bien des guerres mais les [celts|E] semblaient invincibles. Ce fut le début de la déchéance des Milésiens. \\Même s'ils conservent la [high_kingship|E] et le royaume de Tara, chacun sait que cela ne fera pas long feu. Les Milésiens doivent tenir et se battre, ou voir leur héritage détruit..."
+ 
+ introduction_event.008.t:0 "Les Celtes, les nouvelles tribus"
+ introduction_event.008.desc:0 "Le peuple celte a gagné en force d'année en année dans les décennies précédentes jusqu'à sa révolte contre les [milesians|E] et le [high_king|E]. Cette révolte eu un succès retentissant. L'Irlande s'est promptement disloquée politiquement avec les [celts|E] en position de force. Mais cette liberté nouvellement acquise ne fut pas suivie d'unité. Le chaos reigne en maître, chaque tribu cherchant à dominer une autre.\n\nC'est une ère chaotique, et les [celts|E] doivent triompher."
+
+ introduction_event.009.t:0 "Les Humains Antiques, bâtisseurs de mégalithes"
+ introduction_event.009.desc:0 "Les Campagnards et d'autres cultures de naguère ayant construit les Monolithes d'Irlande comme Newgrange, ont été témoin de l'arrivée d'autres peuples un à un. Ces [ancient_humans|E] ont essayé de se battre au début sans grand succès. C'est cause de la perte progressive de leur territoire. Ils ne sont plus que l'ombre d'eux mêmes et leurs sites sacrés sont aux mains d'étrangers. \n\n Avec la récente chute des suzerains [milesians|E], il est temps de se rebeller et récupérer leurs lieux saints."
+ 
+ introduction_event.011.t:0 "Le Développement et le système de Bétail."
+ introduction_event.011.desc:0 " Dans Tales of Ireland le développement représente la quantité de [cattle|E] qu'un comté possède.\n\n Chaque année un évènement affectera le bétail du comté capital. Le bonus lié est trois fois plus important que dans le jeu de base\n\n Attention quand un comté est occupé il perd entre un et trois Bétail et quand un titre est conquis par une guerre il perd un Bétail."
+ 
+ introduction_event.012.t:0 "Présentation du Haut Roi"
+ introduction_event.012.desc:0 "La [high_kingship|E] d'Irlande est un titre spécial crée par les [fir_bolgs|E] quand ils régnaient sur l'île. Le [high_king|E] est élu parmi tous les rois indépendants par chaque souverain de rang ducal et assez prestigieux. \n\nÊtre [high_king|E] donne accès à de puissantes décisions et une version améliorée du casus belli de Vassalisation forcée. \n\nQuelques évènements uniques et petits boni sont aussi liés à la [high_kingship|E]."
+
+ 
+ introduction_event.013.t:0 "Introduction à la guerre"
+ introduction_event.013.desc:0 "Dans ce mod pour un souverain, les levées sont environ huit fois moins grandes, les régiments de gendarmes quatre fois moins grands et la puissance des chevaliers trois fois moins forts.\n\nCela signifie que les gendarmes, et à fortiori les chevaliers sont cruciaux à présent.\n\nDe cette façon un comte compétent peut battre un roi avec les bonnes cartes en main. \n\n S# WIP:Notez aussi qu'une guerre peut-être résolue par un duel entre deux champions, un pour chaque côté. Refuser un duel ou ignorer son issue est très mal perçu.#!"
+
+ 
+ introduction_event.014.t:0 "New Lifestyles presentation"
+ introduction_event.014.desc:0 "#S Not implemented yet, work in progress. #! \n \n The new lifestyle trees will be powerful but will have no focus. Experience points in those lifestyle can only be acquired through events and on one’s different actions. \n \nFor example if your character fights in a lot of wars he will gain experience in the Heroic Warrior lifestyle."
+ 
+ introduction_event.015.t:0 "Magic system"
+ introduction_event.015.desc:0 "#S Not implemented yet, work in progress. #!" 
