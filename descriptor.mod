@@ -1,6 +1,7 @@
-version="0.1.3"
+version="0.1"
 tags={
-	"Alternative History"
+	"Total Conversion"
 }
 name="Tales of Ireland"
 supported_version="1.3.1"
+remote_file_id="2453915294"
