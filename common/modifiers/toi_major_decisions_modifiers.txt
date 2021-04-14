@@ -16,3 +16,27 @@ upgraded_defenses_newgrange = {
 	additional_fort_level = 2
 	garrison_size = 0.5
 }
+
+serves_galway = {
+	development_growth_factor = -0.1
+	levy_size = -0.1
+	tax_mult = -0.1
+}
+
+is_served_galway_one = {
+	development_growth_factor = 0.15
+	levy_size = 0.15
+	tax_mult = 0.15
+}
+
+is_served_galway_two = {
+	development_growth_factor = 0.2
+	levy_size = 0.2
+	tax_mult = 0.2
+}
+
+is_served_galway_three = {
+	development_growth_factor = 0.3
+	levy_size = 0.3
+	tax_mult = 0.3
+}

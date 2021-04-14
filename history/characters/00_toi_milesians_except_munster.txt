@@ -12,9 +12,9 @@
     prowess =  6 
 
     trait = education_martial_3
-    trait = arbitrary
+    trait = greedy
     trait = honest
-    trait = lazy
+    trait = vengeful
     trait = milesian
 
     father=  261000 

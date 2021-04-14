@@ -310,6 +310,14 @@ k_nemed_kingdom = {
 	}
 }
 
+k_people_cessair = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_people_of_cessair.dds"
+	}
+}
+
 e_ireland = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"

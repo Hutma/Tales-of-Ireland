@@ -12,9 +12,9 @@
     prowess =  5 
 
     trait = education_martial_3
-    trait = arbitrary
+    trait = brave
     trait = honest
-    trait = lazy
+    trait = sadistic
     trait = fomorian
 
     father=  451001 

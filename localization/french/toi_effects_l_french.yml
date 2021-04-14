@@ -1,6 +1,13 @@
-﻿l_english:
+﻿l_french:
  #Are negative values in these loc keys showing for you? Don't add new negative ones, just come out of debug mode and they're fine.
  CHANGE_DEVELOPMENT_LEVEL:2 "Le [development|E] dans [TITLE.GetName] changera de $VALUE|=0+$"
  CHANGE_DEVELOPMENT_LEVEL_NEG:0 "[development|E] baissera de $VALUE|0-$"
  THEY_CHANGE_DEVELOPMENT_LEVEL:2 "Le [development|E] dans [TITLE.GetName] augmentera de $VALUE|0+$"
  THEY_CHANGE_DEVELOPMENT_LEVEL_NEG:0 "Le [development|E] dans [TITLE.GetName] baissera de $VALUE|0-$"
+ 
+ GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ I_GAIN_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gain $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ I_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ TARGET_GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ TARGET_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"

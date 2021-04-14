@@ -44,3 +44,6 @@
  doctrine_parameter_hail_high_king_decision_active:0 "Peut rendre hommage au Haut Roi"
  doctrine_parameter_high_king_influence_decision_active:0 "Peut demander la Protection du Haut Roi"
  doctrine_parameter_sacrifice_to_sidhe_decision_active:0 "Peut faire un sacrifice aux Sidhe"
+ sea_fomorian_opinion:0 "Fomorien Marin opinion"
+ underground_fomorian_opinion:0 "Fomorien sous terrain opinion"
+ can_go_on_great_hunt_decision_active:0 "Peut mener une chasse cérémoniale"

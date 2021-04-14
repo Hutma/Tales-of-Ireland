@@ -206,8 +206,8 @@
 			holy_site = tara
 			holy_site = carrowmore_cemetery
 			
-			doctrine = tenet_newgrange_splendor
 			doctrine = tenet_aniconism
+			doctrine = tenet_newgrange_splendor
 			doctrine = tenet_tuatha_de_danann_worship
 		}
 	}

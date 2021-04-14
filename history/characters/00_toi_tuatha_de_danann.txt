@@ -85,6 +85,7 @@
     trait = honest
     trait = diligent
     trait = tuatha_de_danann
+    trait = half_fomorian
 
     disallow_random_traits = yes
     3310.1.1 = {
@@ -209,7 +210,7 @@
     stewardship =  6 
     intrigue =  4 
     learning =  10 
-    prowess =  14 
+    prowess =  25
 
     health =  176 
 

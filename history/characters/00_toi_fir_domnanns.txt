@@ -12,9 +12,9 @@
     prowess =  5 
 
     trait = education_martial_3
-    trait = arbitrary
-    trait = honest
-    trait = lazy
+    trait = arrogant
+    trait = cynical
+    trait = zealous
     trait = fir_bolg
 
     father=  501000 

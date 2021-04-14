@@ -202,6 +202,8 @@
 			color = { 100 200 100 }
 			icon = custom_faith_fp1_yggdrasil
 			
+			doctrine = doctrine_gender_equal
+			
 			holy_site = newgrange
 			holy_site = bere
 			holy_site = first_arrival_bay
@@ -213,6 +215,8 @@
 		cult_of_life = {
 			color = { 80 200 120 }
 			icon = cult_of_life
+			
+			doctrine = doctrine_gender_female_dominated
 			
 			holy_site = newgrange
 			holy_site = bere

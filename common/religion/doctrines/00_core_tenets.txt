@@ -495,7 +495,6 @@
 		}
 
 		parameters = {
-			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
 			piety_from_long_peace = 1
@@ -1150,7 +1149,6 @@
 		
 		parameters = {
 			reincarnation_resistance_to_conversion = yes
-			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
 		}
@@ -1583,12 +1581,8 @@
 		}
 
 		character_modifier = {
-			forest_advantage = 5
-			forest_attrition_mult = -0.25
-			taiga_advantage = 5
-			taiga_attrition_mult = -0.25
-			jungle_advantage = 5
-			jungle_attrition_mult = -0.25
+			forest_advantage = 10
+			forest_attrition_mult = -0.4
 			build_gold_cost = 0.1
 			county_opinion_add = 5
 		}
@@ -1643,8 +1637,8 @@
 		}
 
 		character_modifier = {
-			desert_attrition_mult = -0.25
-			desert_mountains_attrition_mult = -0.25
+			plains_attrition_mult = -0.25
+			plains_mountains_attrition_mult = -0.25
 		}
 
 		piety_cost = faith_tenet_cost_mid
@@ -2589,7 +2583,7 @@
 		}
 
 		parameters = {
-			hold_divination_decision_active = yes	
+			can_go_on_great_hunt_decision_active = yes	
 		}
 
 		character_modifier = {

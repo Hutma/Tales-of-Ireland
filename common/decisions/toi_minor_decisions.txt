@@ -144,3 +144,66 @@ high_king_protection_decision = {
 		base = 100
 	}
 }
+
+establish_sean_bar_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	
+	desc = establish_sean_bar_decision_desc
+	
+	ai_check_interval = 80
+
+	is_shown = {
+		AND  = {
+			has_trait = drunkard
+			NOT = {	#You can only do it once.
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:establish_sean_bar_decision
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			has_title = title:c_athlone
+			prestige_level >= 2
+			has_trait = drunkard
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 75
+	}
+
+	effect = {
+		add_tales_of_abundance_lifestyle_perk_points = 1
+		title:c_athlone = {
+			add_county_modifier = {
+				modifier = oldest_pub
+			}
+		}
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = oldest_pub_founder
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:establish_sean_bar_decision
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -319,7 +319,7 @@ mx_cue_crusade_starts = {
 }
 
 mx_cue_war_declared = {
-	music = "event:/MUSIC/Cues/Events/War Declared/mx_cue_war_declared"
+	music = "file:/music/Tales_of_Ireland_War_Music.mp3"
 	weight = 35
 	# play every time
 }

@@ -142,9 +142,10 @@ first_arrival_bay = {
 	county = c_bantry
 	
 	character_modifier = {
-
+		different_culture_opinion = 5
+		archers_max_size_add = 1
+		archers_screen_mult = 4
 	}
-	flag = jerusalem_conversion_bonus
 }
 
 #Northern legacy

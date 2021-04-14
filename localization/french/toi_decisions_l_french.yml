@@ -80,3 +80,8 @@
  high_king_protection_decision_desc:0 " Le [high_king|E]  est un Milésien et son influence peut-être utilisé pour aider n'importe quel [milesian|E] dans le besoin. Nous sommes en guerre et avons besoin de troupes, le temps est venu de faire appel au Haut Roi et l'influence qu'il donne à notre peuple pour lever plus de troupes."
  high_king_protection_decision_tooltip:0 "Nous pouvons amasser plus d'hommes"
  high_king_protection_decision_confirm:0 "Ralliez les hommes!"
+ 
+ establish_sean_bar_decision:0 "Fonder le Sean's Bar"
+ establish_sean_bar_decision_desc:0 "Athlone serai un endroit parfait pour y fonder un bar. Je bois chaque jour seul et aimerai bien avoir quelqu'un avec qui partager ces moments. Je devrai faire construire une grande maison où l'alcool coulerait à flot à toutes heures. \n\n#S Historiquement le pub Sean's Bar est réputé comme le plus ancien pub d'Europe. #!"
+ establish_sean_bar_decision_tooltip:0 "A boire!"
+ establish_sean_bar_decision_confirm:0 "A boire!"

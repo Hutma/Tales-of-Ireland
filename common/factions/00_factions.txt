@@ -728,13 +728,13 @@ liberty_faction = {
 			}
 		}
 		modifier = {
-			add = 20 # AI won't join at +20 Opinion
+			add = 40 # AI won't join at +40 Opinion TALES OF IRELAND
 			scope:faction.faction_target = {
 				has_realm_law = crown_authority_2
 			}
 		}
 		modifier = {
-			add = 30 # AI won't join at +30 Opinion
+			add = 50 # AI won't join at +50 Opinion TALES OF IRELAND
 			scope:faction.faction_target = {
 				has_realm_law = crown_authority_3
 			}

@@ -1,7 +1,7 @@
 ﻿l_english:
  #Race realated decisions
  the_first_cessarian_kingdom_decision:0 "Proclaim First Cessarian Kingdom"
- the_first_cessarian_kingdom_decision_desc:0 "For the first time the [cessarian|E] will be united and lead by a king, may this day be the first of many glourious days."
+ the_first_cessarian_kingdom_decision_desc:0 "For the first time the [cessarian|E] will be united and lead by a king, may this day be the first of many glorious days."
  the_first_cessarian_kingdom_decision_tooltip:0 "Become the first Cessarian king"
  the_first_cessarian_kingdom_decision_confirm:0 "Bring me my corwn"
  
@@ -54,6 +54,11 @@
  coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
  coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"
  
+ many_crowns_for_galway_decision:0 "Crowns to serve Galway"
+ many_crowns_for_galway_decision_desc:0 "The kingdom of Galway is now ruled by an influential dynasty. Its prestigious Rí knows that Galway could use help from other kingdoms to help build the farms and ringforts on top of the many bogs that cover Galway. It's now time to use this influence and make use of the other Rí of our dynasty."
+ many_crowns_for_galway_decision_tooltip:0 "Galway will use its influence"
+ many_crowns_for_galway_decision_confirm:0 "Galway will use its influence"
+ 
  #Major decisions
  try_unite_ireland_decision:0 "Declare your ambition to unite Ireland"
  try_unite_ireland_decision_desc:0 "Ireland is divided but should be united once again, you have proven yourself to be a prestigious and capable ruler, time to unite the Emerald Island under once ruler. \n\n Taking this decision will grant you a reason to subjugate any neighbour."
@@ -85,3 +90,8 @@
  high_king_protection_decision_desc:0 "The [high_king|E] is a Milesian and his influence can be used to help any [milesian|E] that requires it. We are at war and need more men, it's time to use the influence the High King gives to our people to raise more troops."
  high_king_protection_decision_tooltip:0 "We can muster more men"
  high_king_protection_decision_confirm:0 "Rally the men!"
+ 
+ establish_sean_bar_decision:0 "Establish Sean's bar"
+ establish_sean_bar_decision_desc:0 "The only thing better than enjoying a bit of ale in the evenings is having good company to enjoy it with. Maybe I could build some sort of establishment where people could gather and share a pint (or two). Some sort of public house? Maybe a pub, for short? \n\n#S Historically, Athlone's Sean's bar is known as the oldest pub in Europe. #!"
+ establish_sean_bar_decision_tooltip:0 "Time to drink!"
+ establish_sean_bar_decision_confirm:0 "Time to drink!"

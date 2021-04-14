@@ -93,3 +93,18 @@ high_king_hailed = {
 	stewardship_per_prestige_level = 1
 	monthly_prestige_gain_mult = 0.15
 }
+
+oldest_pub_founder = {
+	icon = drink_positive
+	general_opinion = 5
+	monthly_income = 0.5
+	monthly_piety = -0.5
+	health = -0.15
+}
+
+oldest_pub = {
+	icon = drink_positive
+	development_growth_factor = -0.05
+	tax_mult = 0.25
+	county_opinion_add = 25
+}

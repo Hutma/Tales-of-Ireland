@@ -56,3 +56,117 @@
 		base = 100
 	}
 }
+
+many_crowns_for_galway_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	major = yes
+	
+	ai_check_interval = 120
+	cooldown = { years = 20 }
+	
+	desc = many_crowns_for_galway_decision_desc
+
+	is_shown = {
+		has_title = title:k_galway
+	}
+
+	is_valid = {
+		AND = {
+			has_title = title:k_galway
+			custom_description = {
+				text = need_at_least_two_other_dynasty_kings
+				
+				dynasty = {
+					any_dynasty_member = {
+						is_landed = yes
+						highest_held_title_tier = 4
+						count > 2
+					}
+				}
+			}
+			dynasty_prestige_level >= 3
+			prestige_level >= 2
+			dynasty.dynast = root
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 250
+		gold = 50
+	}
+
+	effect = {
+		custom_description = {
+			text = serve_galway_decision_effect
+			
+			every_dynasty_member = {
+				limit = {
+					is_landed = yes
+					highest_held_title_tier = 4
+				}
+				add_character_modifier = {
+					modifier = serves_galway
+					years = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				root.dynasty = {
+					any_dynasty_member = {
+						is_landed = yes
+						highest_held_title_tier = 4
+						count = 2
+					}
+				}
+			}
+			add_character_modifier = {
+				modifier = is_served_galway_one
+				years = 10
+			}
+		}
+		if = {
+			limit = {
+				root.dynasty = {
+					any_dynasty_member = {
+						is_landed = yes
+						highest_held_title_tier = 4
+						count = 3
+					}
+				}
+			}
+			add_character_modifier = {
+				modifier = is_served_galway_two
+				years = 10
+			}
+		}
+		if = {
+			limit = {
+				root.dynasty = {
+					any_dynasty_member = {
+						is_landed = yes
+						highest_held_title_tier = 4
+						count > 3
+					}
+				}
+			}
+			add_character_modifier = {
+				modifier = is_served_galway_three
+				years = 10
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

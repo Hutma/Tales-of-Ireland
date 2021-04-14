@@ -46,6 +46,22 @@ e_munster = {
 		}
 	}
 	
+	k_people_cessair = {
+		color = { 5 200 20 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:cessair_descendants
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		capital = c_bantry
+	}
+	
 	k_cork = {
 		color = { 134 0 37 }
 		color2 = { 255 255 255 }

@@ -16,7 +16,7 @@
  cattle_raiding_cb_defeat_desc_attacker:1 "If we surrender we will have to give our ennemies one third of the cattle in our capital and some of our wealth."
  cattle_raiding_cb_defeat_desc:1 "[defender.GetShortUIName|U] take one third of [attacker.GetShortUIName|U]'s capital cattle."
  CATTLE_RAIDING_CB_NAME:0 "Cattle Raiding"
- CATTLE_RAIDING_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]'s war to take [DEFENDER.GetShortUIName]'s cattle"
+ CATTLE_RAIDING_WAR_NAME:0 "[ATTACKER.GetNameNicknamed|U]'s war to take [DEFENDER.GetNameNicknamed]'s cattle"
  CATTLE_RAIDING_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  recent_cattle_raid_victory:0 "Won a Cattle Raid recently"
  
@@ -45,7 +45,7 @@
  
  cattle_luring_explaination_desc:1 "This war is not over, it's being set to a real cattle raid, a false AI-only cb was used to lure the AI in using the Cattle Raid cb, otherwise the AI takes no interest in it."
  CATTLE_LURE_CB_NAME:0 "Cattle Raiding"
- CATTLE_LURE_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]]'s war to take [DEFENDER.GetShortUIName]'s cattle"
+ CATTLE_LURE_WAR_NAME:0 "$ORDER$ [ATTACKER.GetName|U]]'s war to take [DEFENDER.GetName]'s cattle"
  CATTLE_LURE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  HUMILIATE_CANDIDATE_CB_NAME:0 "Humiliate Candidate"

@@ -4,3 +4,10 @@
  CHANGE_DEVELOPMENT_LEVEL_NEG:0 "[development|E] decreases by $VALUE|0-$"
  THEY_CHANGE_DEVELOPMENT_LEVEL:2 "The [development|E] in [TITLE.GetName] will increase by $VALUE|0+$"
  THEY_CHANGE_DEVELOPMENT_LEVEL_NEG:0 "The [development|E] in [TITLE.GetName] will decrease by $VALUE|0-$"
+ 
+ GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ I_GAIN_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gain $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ I_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ TARGET_GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ TARGET_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"

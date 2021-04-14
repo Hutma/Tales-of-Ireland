@@ -421,7 +421,7 @@ NCharacterOpinion = {
 	VIRTUOUS_TRAIT = 10
 	SINFUL_TRAIT = -10
 
-	DE_JURE_COUNTY = -25
+	DE_JURE_COUNTY = -5
 	DE_JURE_DUCHY = -25
 	DE_JURE_KINGDOM = -30
 	EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY = yes 		# Dukes won't be upset as the vassal of their dejure emperor

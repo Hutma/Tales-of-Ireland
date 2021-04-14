@@ -23,11 +23,18 @@
 		AND = {
 			is_independent_ruler = yes
 			custom_description = {
-				text = found_kingdom_decision_three_duchies_held
+				text = found_kingdom_decision_three_cessairan_duchies_held
+				
 				any_held_title = {
-					count > 2
 					tier = tier_duchy
-				}	
+					count > 2
+					OR = {
+						this = title:d_bere
+						this = title:d_bantry_bay
+						this = title:d_schull
+						this = title:d_baltimore
+					}
+				}
 			}
 			capital_county = {
 				developement_level >= 35
@@ -45,7 +52,7 @@
 	}
 
 	effect = {
-		create_custom_kingdom_effect = yes
+		the_first_cessarian_kingdom_decision_scripted_effect = yes
 		add_realm_law = confederate_partition_succession_law
 		dynasty = {
 			add_dynasty_modifier = {

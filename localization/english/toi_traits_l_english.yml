@@ -106,14 +106,14 @@
  trait_three_quarter_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is nearly more [hy_brasylian|E] than anything else."
  
  #Duel traits
- trait_aggresive_fighter:0 "Aggresive Figther"
+ trait_aggresive_fighter:0 "Aggresive Fighter"
  trait_aggresive_fighter_desc:0 "Attack is both the best offense and defense. The one who delivers the strongest blows always wins the fight."
  trait_aggresive_fighter_character_desc:0 "When fighting [ROOT.GetCharacter.GetFirstNameNoTooltip] uses his strenght and violence to take the advantage."
  
- trait_defensive_fighter:0 "Defensive Figther"
+ trait_defensive_fighter:0 "Defensive Fighter"
  trait_defensive_fighter_desc:0 "Always keep your guard up. If no one can reach me in a fight I can never loose. I'll win whenever my opponent does a mistake."
  trait_defensive_fighter_character_desc:0 "When fighting [ROOT.GetCharacter.GetFirstNameNoTooltip] stays in a defensive position and waits for his enemy to do a mistake."
  
- trait_cunning_fighter:0 "Cunning Figther"
+ trait_cunning_fighter:0 "Cunning Fighter"
  trait_cunning_fighter_desc:0 "Any defense has a weakness, use your brain and you can beat anyone."
  trait_cunning_fighter_character_desc:0 "When fighting [ROOT.GetCharacter.GetFirstNameNoTooltip] delivers few blows but always lethal ones."
