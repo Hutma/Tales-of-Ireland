@@ -131,8 +131,8 @@
  scythian_heritage_water_god_name_possessive:0 "$scythian_heritage_high_god_name_possessive$"
  
  #The Ancient Greek Slaves faith loc
- ancient_greek_slave:0 "Ancient Greek Slaves"
- ancient_greek_slave_adj:0 "Ancient Greek Slaves"
+ ancient_greek_slave:0 "Slave's Hellenism"
+ ancient_greek_slave_adj:0 "Slave's Hellenism"
  ancient_greek_slave_adherent:0 "Revenger"
  ancient_greek_slave_adherent_plural:0 "Revengers" 
  ancient_greek_slave_desc:0 "The revengers were slaves under the Greeks before coming to Ireland, they swore that they will never bow to anyone again and keep their freedom."

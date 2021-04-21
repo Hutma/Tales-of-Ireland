@@ -38,7 +38,26 @@ toi_decision_major.0002 = {
 
 	option = {
 		name = {
-			text = toi_decision_major.0002.b
+			text = toi_decision_major.0002.a
+		}
+	}
+}
+
+#Meath is here.
+toi_decision_major.0003 = {
+	type = character_event
+	title = toi_decision_major.0003.t
+	desc = toi_decision_major.0003.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = {
+			text = toi_decision_major.0003.a
 		}
 	}
 }

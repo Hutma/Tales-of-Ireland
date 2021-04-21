@@ -13,30 +13,42 @@ back_to_newgrange_dynasty = {
 }
 
 upgraded_defenses_newgrange = {
+	icon = prestige_positive
 	additional_fort_level = 2
 	garrison_size = 0.5
 }
 
 serves_galway = {
+	icon = prestige_negative
 	development_growth_factor = -0.1
 	levy_size = -0.1
 	tax_mult = -0.1
 }
 
 is_served_galway_one = {
+	icon = prestige_positive
 	development_growth_factor = 0.15
 	levy_size = 0.15
 	tax_mult = 0.15
 }
 
 is_served_galway_two = {
+	icon = prestige_positive
 	development_growth_factor = 0.2
 	levy_size = 0.2
 	tax_mult = 0.2
 }
 
 is_served_galway_three = {
+	icon = prestige_positive
 	development_growth_factor = 0.3
 	levy_size = 0.3
 	tax_mult = 0.3
+}
+
+meath_empire_founded = {
+	icon = prestige_positive
+	diplomacy_per_prestige_level = 1
+	learning_per_prestige_level = 1
+	monthly_dynasty_prestige_mult = 0.2
 }

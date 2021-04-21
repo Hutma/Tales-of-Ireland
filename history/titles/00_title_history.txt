@@ -2982,13 +2982,6 @@ c_kiltullagh = {
 }
 
 #Aran
-d_aran = {
-              4799.1.1 = {
-                            holder = 4000013
-              }
-}
-
-#Aran
 c_aran = {
               1.1.1 = { change_development_level = 5 }
               4799.1.1 = {
@@ -3305,13 +3298,6 @@ c_coogla = {
               4799.1.1 = {
                             liege = d_achill
                             holder = 540015
-              }
-}
-
-#Toremoreislands
-d_toremoreislands = {
-              4799.1.1 = {
-                            holder = 4000016
               }
 }
 

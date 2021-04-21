@@ -35,7 +35,7 @@ the_first_cessarian_kingdom_decision_scripted_effect = {
 			limit = {
 				title:d_glanarought = { holder = root }
 			}
-			title:d_glanarought = { set_de_jure_liege_title = title:k_aran }
+			title:d_glanarought = { set_de_jure_liege_title = title:k_people_cessair }
 		}
 	}
 }

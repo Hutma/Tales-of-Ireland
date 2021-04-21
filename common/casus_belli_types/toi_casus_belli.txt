@@ -288,6 +288,7 @@ unite_ireland_cb = {
 
 	allowed_for_character = {
 		has_character_flag = try_unite_ireland_flag
+		NOT = { is_at_war = yes }
 	}
 	
 	# Root is the title
@@ -329,6 +330,12 @@ unite_ireland_cb = {
 					exists = faith.religious_head
 					faith.religious_head = root
 				}
+			}
+		}
+		
+		NOT = {
+			scope:defender = {
+				has_title = title:k_high_kingship
 			}
 		}
 	}
@@ -382,7 +389,7 @@ unite_ireland_cb = {
 					}
 				}
 				add = {
-					value = 150
+					value = 200
 					desc = CB_BASE_COST
 				}
 			}
@@ -393,7 +400,7 @@ unite_ireland_cb = {
 					}
 				}
 				multiply = {
-					value = 1.0
+					value = 2.0
 					desc = CB_COST_RULES_KINGDOM
 				}
 			}
@@ -404,7 +411,7 @@ unite_ireland_cb = {
 					}
 				}
 				multiply = {
-					value = 1.2
+					value = 3.2
 					desc = CB_COST_RULES_EMPIRE
 				}
 			}	
@@ -415,7 +422,7 @@ unite_ireland_cb = {
 					}
 				}
 				multiply = {
-					value = 0.5
+					value = 1
 					desc = CB_TRIBAL_COST
 				}
 			}
@@ -2120,6 +2127,13 @@ purification_cb = {
 	}
 
 	on_victory = {
+		scope:defender = {
+			pay_short_term_income = {
+				years = 3
+				target = scope:attacker
+			}
+		}
+		
 		create_character = {
 			age = { 30 55 }
 			trait = fomorian
@@ -2557,6 +2571,13 @@ purification_duchy_cb = {
 	}
 
 	on_victory = {
+		scope:defender = {
+			pay_short_term_income = {
+				years = 3
+				target = scope:attacker
+			}
+		}
+		
 		create_character = {
 			age = { 30 55 }
 			trait = fomorian
@@ -2657,7 +2678,10 @@ purification_duchy_cb = {
 		scope:defender.faith = {
 			change_fervor = 4
 		}
-
+		
+		scope:attacker = {
+			create_alliance = scope:usurpator
+		}
 		# Truce
 		add_truce_attacker_victory_effect = yes
 

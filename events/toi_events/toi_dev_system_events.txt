@@ -56,7 +56,6 @@ cattle.0001 = {
 		ai_chance = {
 			base = 10
 			ai_value_modifier = {
-				ai_value_modifier = {
 					ai_greed = 2
 					ai_honor = -1
 				}
@@ -98,12 +97,9 @@ cattle.0002 = {
 		
 		ai_chance = {
 			base = 90
-
-			ai_value_modifier = {
-				modifier = { 
-					add = -40
-					has_trait = arrogant
-				}
+			modifier = { 
+				add = -40
+				has_trait = arrogant
 			}
 		}
 	}
@@ -123,11 +119,9 @@ cattle.0002 = {
 		ai_chance = {
 			base = 10
 
-			ai_value_modifier = {
-				modifier = { 
-					add = 30
-					has_trait = arrogant
-				}
+			modifier = { 
+				add = 30
+				has_trait = arrogant
 			}
 		}
 	}
@@ -181,16 +175,14 @@ cattle.0003 = {
 		}
 
 		ai_chance = {
-			base = 50
-			ai_value_modifier = {                         
-				modifier = { 
-					add = 50
-					has_trait = greedy 
-				}                          
-				modifier = { 
-					add = -50
-					has_trait = generous 
-				}
+			base = 50                        
+			modifier = { 
+				add = 50
+				has_trait = greedy 
+			}                          
+			modifier = { 
+				add = -50
+				has_trait = generous 
 			}
 		}
 	}
@@ -655,7 +647,7 @@ cattle.0006 = {
 			}
 		}
 		add_hook = {
-			type = favor
+			type = favor_hook
 			target = cp:councillor_steward 
 		}
 		stress_impact = {
@@ -799,7 +791,7 @@ cattle.0007 = {
 				}
 				random_knight = {
 					limit = {
-						NOT = { exist  = scope:hurt_knight1 }
+						NOT = { exists  = scope:hurt_knight1 }
 					}
 					increase_wounds_effect = { REASON = battle }
 					save_scope_as = hurt_knight1 
@@ -808,7 +800,7 @@ cattle.0007 = {
 					10 = {
 						random_knight = {
 							limit = {
-								NOT = { exist  = scope:hurt_knight2 }
+								NOT = { exists  = scope:hurt_knight2 }
 							}
 							increase_wounds_effect = { REASON = battle }
 							save_scope_as = hurt_knight2 
@@ -1068,13 +1060,13 @@ cattle.2001 = {
 	}
 	
 	right_portrait = {
-		character = farmer_fertilizer
+		character = scope:farmer_fertilizer
 		animation = worry 
 	}
 
 	immediate = {
 		random_courtier = {
-			save_scope_as = farmer_fertilizer 
+			save_scope_as = scope:farmer_fertilizer 
 		}
 	}
 

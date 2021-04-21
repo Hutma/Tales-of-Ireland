@@ -85,7 +85,9 @@ many_crowns_for_galway_decision = {
 					}
 				}
 			}
-			dynasty_prestige_level >= 3
+			dynasty = {
+				dynasty_prestige_level >= 3
+			}
 			prestige_level >= 2
 			dynasty.dynast = root
 		}
@@ -168,5 +170,92 @@ many_crowns_for_galway_decision = {
 
 	ai_will_do = {
 		base = 100
+	}
+}
+
+found_meath_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	major = yes
+	
+	ai_check_interval = 480
+	
+	desc = found_meath_decision_desc
+
+	is_shown = {
+		OR = {
+			has_trait = celtic_human
+			has_trait = milesian
+			has_trait = tuatha_de_danann
+		}
+		capital_county.title_province = { geographical_region = region_leinster }
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:found_meath_decision
+			}
+		}	
+	}
+
+	is_valid = {
+		has_title = title:k_meath
+		has_title = title:c_tara
+		has_title = title:k_westmeath
+		has_title = title:k_longford
+		dynasty = {
+			dynasty_prestige_level >= 3
+		}
+		prestige_level >= 4
+		any_vassal = {
+			count >= 4
+			is_powerful_vassal = yes
+			opinion = {
+				target = root
+				value >= positive_opinion
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		prestige = 400
+		gold = 350
+	}
+
+	effect = {
+		
+		found_meath_decision_scripted_effect = yes
+		
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = meath_empire_founded
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:found_meath_decision
+		}
+		trigger_event = {
+			id = toi_decision_major.0003
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_decision_major.0003
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 25
 	}
 }

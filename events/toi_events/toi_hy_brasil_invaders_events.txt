@@ -45,6 +45,7 @@ toi_hybrazil.0001 = {
 #Hy Brasylian hidden triggers 0002
 toi_hybrazil.1002 = {
 	hidden = yes
+	type = empty
 	
 	immediate = {
 		every_ruler = {
@@ -106,6 +107,7 @@ toi_hybrazil.0002 = {
 #Hy Brasylian hidden triggers 0003
 toi_hybrazil.1003 = {
 	hidden = yes
+	type = empty
 	
 	immediate = {
 		every_ruler = {
@@ -114,25 +116,6 @@ toi_hybrazil.1003 = {
 				days = 1
 			}
 		}
-	}
-}
-
-#Hy Brasylian invasion
-toi_hybrazil.0003 = {
-	title = toi_hybrazil.0003.t
-	desc = toi_hybrazil.0003.desc
-	type = character_event
-	theme = war
-	override_background = {
-		event_background = hy_brazil_island
-	}
-	
-	right_portrait = {
-		character = root
-		animation = personality_bold
-	}
-	
-	immediate = {
 		random_list = {
 			15 = { #5 invaders
 				hy_brasylian_invasion_effect = yes
@@ -194,6 +177,26 @@ toi_hybrazil.0003 = {
 				hy_brasylian_invasion_effect = yes
 			}
 		}
+	}
+}
+
+#Hy Brasylian invasion
+toi_hybrazil.0003 = {
+	title = toi_hybrazil.0003.t
+	desc = toi_hybrazil.0003.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = hy_brazil_island
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		
 	}
 	option = {
 		name = toi_hybrazil.0003.a

@@ -176,7 +176,7 @@ cessarian = {
 	
 	physical = yes
 	prowess = -2
-	health = 2.2
+	health = 2.0
 	negate_health_penalty_add = 0.25
 	diplomacy = 2
 	

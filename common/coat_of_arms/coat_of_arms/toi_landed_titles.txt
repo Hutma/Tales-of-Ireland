@@ -325,3 +325,11 @@ e_ireland = {
 		texture = "k_high_kingship_coa.dds"
 	}
 }
+
+e_meath = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_meath_coa.dds"
+	}
+}

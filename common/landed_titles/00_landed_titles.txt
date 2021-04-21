@@ -29,6 +29,17 @@ e_ireland = {
 	}
 }
 
+e_meath = {
+	color = { 205 170 255 }
+	color2 = { 255 255 255 }
+	
+	capital = c_tara
+	
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+}
+
 e_munster = {
 	color =  { 150 10 10 }
 	color2 = { 255 255 255 }
@@ -59,7 +70,7 @@ e_munster = {
 			}
 		}
 
-		capital = c_bantry
+		capital = c_cork
 	}
 	
 	k_cork = {
@@ -23606,7 +23617,7 @@ e_leinster = {
 	color =  { 150 150 20 }
 	color2 = { 255 255 255 }
 	
-	capital = c_bantry
+	capital = c_tara
 	
 	definite_form = yes
 	

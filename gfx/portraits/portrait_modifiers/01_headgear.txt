@@ -156,7 +156,7 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 70
 				OR = {
 					AND = {
 						OR = {
@@ -180,6 +180,7 @@ headgear = {
 						is_ruler = no
 						primary_spouse = {
 							OR = {
+								
 								highest_held_title_tier = tier_duchy
 								highest_held_title_tier = tier_kingdom
 								highest_held_title_tier = tier_empire
@@ -212,8 +213,7 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
-				always = no
+				add = 70
 				OR = {
 					AND = {
 						OR = {
@@ -399,7 +399,7 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 0
 				OR = {
 					AND = {
 						OR = {
@@ -583,7 +583,7 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 0
 				OR = {
 					AND = {
 						OR = {
@@ -1562,7 +1562,7 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 70
 				highest_held_title_tier = tier_county
 				NOR = {
 					# has_dynasty = no
@@ -1582,26 +1582,26 @@ headgear = {
 			accessory = {
 				mode = add
 				gene = headgear
-				template = western_high_nobility
+				template = fp1_nobility
 				range = { 0 1 } # For the randomness to work correctly
 			}
 		}	
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 80
 				OR = {
 					AND = {
 						OR = {
 							highest_held_title_tier = tier_duchy
-							AND = {
-								has_government = republic_government
-								primary_title.tier > 2
-							}
 							has_government = theocracy_government
 						}
 						NOT = { has_government = mercenary_government } # Blocked for mercenaries
-						portrait_northern_clothing_trigger = yes
+						NOT = { has_government = republic_government }
+						#OR = {
+						#	portrait_western_clothing_trigger = yes
+						#	portrait_northern_clothing_trigger = yes
+						#}
 					}
 					AND = {
 						exists = primary_spouse
@@ -1609,13 +1609,14 @@ headgear = {
 						primary_spouse = {
 							OR = {
 								highest_held_title_tier = tier_duchy
-								AND = {
-									has_government = republic_government
-									primary_title.tier > 2
-								}
 								has_government = theocracy_government
 							}
-							portrait_western_clothing_trigger = yes
+							NOT = { has_government = mercenary_government } # Blocked for mercenaries
+							NOT = { has_government = republic_government }
+							#OR = {
+							#	portrait_western_clothing_trigger = yes
+							#	portrait_northern_clothing_trigger = yes
+							#}
 						}
 					}
 				}
@@ -1635,16 +1636,19 @@ headgear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 70
 				OR = {
 					AND = {
 						OR = {
-							highest_held_title_tier >= tier_kingdom
+							highest_held_title_tier = tier_kingdom
 							has_government = theocracy_government
 						}
 						NOT = { has_government = mercenary_government } # Blocked for mercenaries
 						NOT = { has_government = republic_government }
-						portrait_northern_clothing_trigger = yes
+						#OR = {
+						#	portrait_western_clothing_trigger = yes
+						#	portrait_northern_clothing_trigger = yes
+						#}
 					}
 					AND = {
 						exists = primary_spouse
@@ -1656,7 +1660,10 @@ headgear = {
 							}
 							NOT = { has_government = mercenary_government } # Blocked for mercenaries
 							NOT = { has_government = republic_government }
-							portrait_northern_clothing_trigger = yes
+							#OR = {
+							#	portrait_western_clothing_trigger = yes
+							#	portrait_northern_clothing_trigger = yes
+							#}
 						}
 					}
 				}

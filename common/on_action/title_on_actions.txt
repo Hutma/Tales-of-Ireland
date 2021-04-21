@@ -240,6 +240,11 @@ on_title_gain_inheritance = {
 					root = {
 						has_character_flag = not_independent_when_died
 					}
+					NOT = {
+						root = {
+							has_character_flag = not_independent_when_died_multiple_titles
+						}
+					}
 				}
 			}
 			create_title_and_vassal_change = {

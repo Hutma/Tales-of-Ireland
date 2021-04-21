@@ -9,9 +9,6 @@
 				faith.religious_head = this
 				faith = { has_doctrine = doctrine_temporal_head }
 			}
-			faith = {
-				has_doctrine = eastern_hostility_doctrine
-			}
 		}
 	}
 	
@@ -65,16 +62,6 @@
 					faith.religious_head = scope:attacker
 					scope:defender.faith = scope:attacker.faith
 					scope:attacker.faith = { has_doctrine = doctrine_temporal_head }
-				}
-				AND = { # Indian Subjugation
-					faith = {
-						has_doctrine = eastern_hostility_doctrine
-					}
-					scope:defender = {
-						faith = {
-							has_doctrine = eastern_hostility_doctrine
-						}
-					}
 				}
 			}
 		}

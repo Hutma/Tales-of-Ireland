@@ -160,4 +160,21 @@ Wanderer = {
 	
 }
 
+###FIR BOLGS
+Tales_of_Ireland_fir_bolg_one = {
+	music = "file:/music/Tales_of_Ireland_fir_bolg_one.mp3"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+	is_valid = {
+		OR = {
+			has_trait = fir_bolg
+			culture_group = culture_group:toi_fir_bolg_group
+			faith = faith:ancient_greek_slave
+		}
+	}
+}
+
 ###end TALES OF IRELAND mod ###
