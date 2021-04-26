@@ -1,0 +1,21 @@
+﻿l_german:
+
+ toi_fomorian_tributary.0001.t:0 "Die Fomorischen Stämme"
+ toi_fomorian_tributary.0001.desc:0"Ich hasse dieses Geräusche...Das fomorische Horn im Wind geblasen, um uns zu benachrichtigen das die diesjährigen Tributsammlung ansteht. Der Eintreiber kommt an meinen Hof in weniger als einer Stunde an meinen Hof um zweidrittel unseres Viehs und Gold mitzunehmen...Als auch eines unserer Kinder als Geisel. Um die Einhaltung zu gewährleisten, sagen sie. Bah, ich hoffe nur, dass der Unglückliche nicht einer von ihnen wird..."
+ toi_fomorian_tributary.0001.a:0 "Wir müssen bezahlen"
+ toi_fomorian_tributary.0001.b:0 "Versucht ihn zu überreden um die Zahlung zu vermindern"
+ toi_fomorian_tributary.0001.c:0 "Versucht einen Teil unseres Viehs zu verstecken"
+ toi_fomorian_tributary.0001.d:0 "Tötet ihn, tötet jeden Fomori!"
+ 
+ toi_fomorian_tributary.0011.t:0 "Versuch gescheitert#"
+ toi_fomorian_tributary.0011.desc:0 "Ich bin gescheitert...Beim Versuch die Tribute dieses Jahres zu verkleinern schaffte ich es nur den Eintreiber wütend zu machen. Er brüllte das [scope:fomorian_liege.GetName] von unserer schwindenden Loyalität hören würde, das unser Ende nah sei. Aber natürlich...beendete er seine Aussage mit den Worten: "Wenn ihr nur ein bisschen mehr zahlen würden... vielleicht würde dieser grobe Ungehorsam nie an seine Ohren gelangen..." Er grinst wie ein Fuchs und wartet auf meine Antwort."
+ toi_fomorian_tributary.0011.a:0 "Ich hätte zahlen sollen"
+ toi_fomorian_tributary.0001.b:0 "Tötet ihn, tötet jeden Fomori!"
+
+ toi_fomorian_tributary.0012.t:0 "Erfolgreiche Strategie"
+ toi_fomorian_tributary.0012.desc:0 "Preist die Götter! Bereitet Opfergaben vor! Der Tributeintreiber war eine Weile misstrauisch, aber schließlich ging er mit weniger, als er hätte bekommen sollen. \n\nIm Ringfort sind alle erleichtert zu wissen, dass wir in diesem Winter nicht hungern müssen, während unser Feind sich an unserem Elend fett macht. \n\nVielleicht werden wir mit der Zeit das fomorische Joch abwerfen und ein wohlhabenderes Leben führen. "
+ toi_fomorian_tributary.0012.a:0 "Es war knapp"     
+ 
+ toi_fomorian_tributary.0003.t:0 "Der Tribut"
+ toi_fomorian_tributary.0003.desc:0 "Jeder Steuereintreiber ist sicher zurückgekehrt und hat mir Vieh, Gold und Geiseln von jedem einzelnen Nebenfluss gebracht. Wie immer werde ich stärker, während die Heiden schwächer werden. Wir werden sie ihr Gold und ihre Kornkammern für einige Jahre auffüllen lassen und dann werden wir den Tribut wieder einnehmen, dieser Zyklus wird ewig weitergehen, oder bis die Unreinen alle verdorren... oder Teil unseres Volkes werden."
+ toi_fomorian_tributary.0003.a:0 "Bis zum nächsten Mal"

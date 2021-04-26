@@ -310,9 +310,6 @@ succession_gender_laws = {
 			always = no
 		}
 		can_keep = {
-			trigger_if = {
-				culture = { has_innovation = innovation_visigothic_codes }
-			}
 			trigger_else = {
 				faith = {
 					has_doctrine = doctrine_gender_equal

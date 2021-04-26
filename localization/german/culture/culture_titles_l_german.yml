@@ -1,0 +1,202 @@
+﻿l_german:
+
+ #############################################
+#General names:
+ baron:0 "Baron"
+ baron_female:0 "Baroness"
+ barony:0 "Baronie"
+ count:0 "Graf"
+ count_female:0 "Gräfin"
+ county:0 "Grafschaft"
+ duke:0 "Herzog"
+ duke_female:0 "Herzögin"
+ duchy:0 "Herzogtum"
+ king:0 "König"
+ king_female:0 "Königin"
+ kingdom:0 "Königreich"
+ emperor:0 "Kaiser"
+ emperor_female:0 "Kaiserin"
+ empire:0 "Kaiserreich"
+ 
+ baron_plural:0 "Barone"
+ count_plural:0 "Gräfen"
+ duke_plural:0 "Herzöge"
+ king_plural:0 "Könige"
+ emperor_plural:0 "Kaiser"
+ unlanded_plural:0 "Landlose"
+ 
+ realm_priest_male:0 "[CHARACTER.GetCouncilTitle]"
+ realm_priest_female:0 "[CHARACTER.GetCouncilTitle]"
+ head_of_faith_male:0 "[CHARACTER.GetFaith.ReligiousHeadName|U]"
+ head_of_faith_female:0 "[CHARACTER.GetFaith.ReligiousHeadName|U]"
+
+
+ #Default Feudal tiers 
+ #Default Republic tiers
+ #Default Theocracy tiers
+ #Default Clan tiers
+ #Default Tribal tiers
+ #Default Imperial tiers
+ #Default Nomadic Clan tiers
+ #Default Mercenary tiers
+ #Default Holy Order tiers
+ #Default Viceroyalty tiers
+
+
+ #Default Feudal tiers 
+ baron_feudal_male:0 "Baron"
+ baron_feudal_female:0 "Baroness"
+ barony_feudal:0 "Baronie"
+ count_feudal_male:0 "Rí Tuath"
+ count_feudal_female:0 "Rí Tuath"
+ county_feudal:0 "Grafschaft"
+ duke_feudal_male:0 "Rí Tuath Mór"
+ duke_feudal_female:0 "Rí Tuath Mór"
+ duchy_feudal:0 "Herzogtum"
+ duke_feudal_independent:0 "Rí Tuath Mór"
+ duke_feudal_independent_female:0 "Rí Tuath Mór"
+ duchy_feudal_independent:0 "Herzogtum"
+ king_feudal_male:0 "Rí Cuicedh"
+ king_feudal_female:0 "Rí Cuicedh"
+ kingdom_feudal:0 "Königreich"
+ emperor_feudal_male:0 "Rí Cuicedh"
+ emperor_feudal_female:0 "Rí Cuicedh"
+ empire_feudal:0 "Kaiserreich"
+
+ #Default Republic tiers
+ baron_republic_male:0 "Bürgermeister"
+ baron_republic_female:0 "Bürgermeisterin"
+ barony_republic:0 "Stadt"
+ count_republic_male:0 "Oberbürgermeister"
+ count_republic_female:0 "Oberbürgermeisterin"
+ county_republic:0 "Großstadt"
+ duke_republic_male:0 "Großbürgermeister"
+ duke_republic_female:0 "Großbürgermeisterin"
+ duchy_republic:0 "Republik"
+ king_republic_male:0 "Hochfürst"
+ king_republic_female:0 "Hochfürstin"
+ kingdom_republic:0 "Durchlauchtigste Republik"
+ emperor_republic_male:0 "Großfürst"
+ emperor_republic_female:0 "Großfürstin"
+ empire_republic:0 "Großfürstentum"
+
+ #Default Theocracy tiers
+ baron_theocracy_male:0 "Priester"
+ baron_theocracy_female:0 "Priesterin"
+ barony_theocracy:0 "Tempel"
+ count_theocracy_male:0 "Hohepriester"
+ count_theocracy_female:0 "Hohepriesterin"
+ county_theocracy:0 "Großtempel"
+ duke_theocracy_male:0 "Erzpriester"
+ duke_theocracy_female:0 "Erzpriesterin"
+ duchy_theocracy:0 "Theokratie"
+ king_theocracy_male:0 "Großpriester"
+ king_theocracy_female:0 "Großpriesterin"
+ kingdom_theocracy:0 "Großtheokratie"
+ emperor_theocracy_male:0 "Gottkaiser"
+ emperor_theocracy_female:0 "Gottkaiserin"
+ empire_theocracy:0 "Heiliges Reich"
+
+ #Default Clan tiers
+ baron_clan_male:0 "Oberhaupt"
+ baron_clan_female:0 "Oberhaupt"
+ barony_clan:0 "Stamm"
+ count_clan_male:0 "Häuptling"
+ count_clan_female:0 "Häuptling"
+ county_clan:0 "Häuptlingstum"
+ duke_clan_male:0 "Oberhäuptling"
+ duke_clan_female:0 "Oberhäuptling"
+ duchy_clan:0 "Oberhäuptlingstum"
+ king_clan_male:0 "Patriarch"
+ king_clan_female:0 "Matriarchin"
+ kingdom_clan:0 "Clan"
+ emperor_clan_male:0 "Großpatriarch"
+ emperor_clan_female:0 "Großmatriarchin"
+ empire_clan:0 "Großclan"
+
+ #Default Tribal tiers
+ baron_tribal_male:0 "Oberhaupt"
+ baron_tribal_female:0 "Oberhaupt"
+ barony_tribal:0 "Stamm"
+ count_tribal_male:0 "Häuptling"
+ count_tribal_female:0 "Häuptling"
+ county_tribal:0 "Häuptlingstum"
+ duke_tribal_male:0 "Oberhäuptling"
+ duke_tribal_female:0 "Oberhäuptling"
+ duchy_tribal:0 "Oberhäuptlingstum"
+ king_tribal_male:0 "König"
+ king_tribal_female:0 "Königin"
+ kingdom_tribal:0 "Königreich"
+ emperor_tribal_male:0 "Hochkönig"
+ emperor_tribal_female:0 "Hochkönigin"
+ empire_tribal:0 "Hochkönigreich"
+
+ #Default Mercenary tiers
+ baron_mercenary_male:0 "Leutnant"
+ baron_mercenary_female:0 "Leutnantin"
+ barony_mercenary:0 "Trupp"
+ count_mercenary_male:0 "Konstabler"
+ count_mercenary_female:0 "Konstablerin"
+ county_mercenary:0 "Schar"
+ duke_mercenary_male:0 "Hauptmann"
+ duke_mercenary_female:0 "Hauptmann"
+ duchy_mercenary:0 "Kompanie"
+ king_mercenary_male:0 "General"
+ king_mercenary_female:0 "Generalin"
+ kingdom_mercenary:0 "Armee"
+ emperor_mercenary_male:0 "Großgeneral"
+ emperor_mercenary_female:0 "Großgeneralin"
+ empire_mercenary:0 "Großarmada"
+
+ #Default Holy Order tiers
+ baron_holy_order_male:0 "Sergeant"
+ baron_holy_order_female:0 "Sergeant"
+ barony_holy_order:0 "Kapitel"
+ count_holy_order_male:0 "Meister"
+ count_holy_order_female:0 "Meisterin"
+ county_holy_order:0 "Schar"
+ duke_holy_order_male:0 "Großmeister"
+ duke_holy_order_female:0 "Großmeisterin"
+ duchy_holy_order:0 "Orden"
+ king_holy_order_male:0 "Großmeister"
+ king_holy_order_female:0 "Großmeisterin"
+ kingdom_holy_order:0 "Heiliger Orden"
+ emperor_holy_order_male:0 "Großmeister"
+ emperor_holy_order_female:0 "Großmeisterin"
+ empire_holy_order:0 "Hochheiliger Orden"
+
+# Default Faction Leader
+ faction_leader_male:0 "Anführer"
+ faction_leader_female:0 "Anführerin"
+ 
+##############################################
+#Theocracy titles, religious (group) localization.
+
+# Bon 
+# Buddhism
+# Christianity
+# Dualism
+# Germanic
+# Hellenism
+# Hinduism
+# Islam
+# Jainism
+# Judaism
+# Magyarism
+# Paganism
+# Baltic
+# Slavic 
+# Finno-Ugric
+# Taoism
+# Tengrism
+# West African 
+# West African Bori 
+# West African Roog 
+# Zoroastrianism
+# Zunism
+## Imperial Prince ##
+ prince_empire:0 "Prinz"
+ princess_empire:0 "Prinzessin"
+
+ high_king_feudal_male:0 "Ardrí na hÉireann"
+ high_king_feudal_female:0 "Ardrí na hÉireann"

@@ -1,0 +1,5 @@
+﻿l_gweman:
+ IS_HIGH_KING:0 "Is High King: $VALUE|+0=$"
+ FAR_AWAY:0 "Far away: $VALUE|+0=$"
+ VERY_FAR_AWAY:0 "Very far away: $VALUE|+0=$"
+ TOO_FAR_AWAY:0 "Too far away: $VALUE|+0=$"

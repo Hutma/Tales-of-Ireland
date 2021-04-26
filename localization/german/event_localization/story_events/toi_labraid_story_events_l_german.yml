@@ -1,0 +1,28 @@
+﻿l_german:
+ labraid_story.0001.t:0 "Spaltung der Familie"
+ labraid_story.0001.desc:0 "Vor einigen Jahren brachte mein Vater, der  Hochkönig Irlands, Reichtum und Ordnung auf diese Insel, doch seine Niederlage gegenüber den Kelten haben sein Erbe besudelt.\n\nMein jüngerer Bruder und ich wurden als Gleiche aufgezogen, jeder sollte eine Hälfte des Reiches erben, doch meine Krönung zum Hochkönig trieb einen Keil zwischen uns. \n\nNoch immer betrachtet mein eigener Bruder meinen Thron wie ein hungriger Wolf. Ich fürchte mich vor dem was die Zukunft bringen mag. Ich muss wachsam bleiben und zu dem Hochkönig werden der mein Vater lange Zeit war..."
+ labraid_story.0001.a:0 "Mein Bruder ist sehr ehrgeizig und ich sollte ihn besser im Auge behalten"
+ 
+ labraid_story.0021.t:0 "Mein verräterischer Bruder"
+ labraid_story.0021.desc:0 "Ich war mir sicher das dieser Tag kommen würde. Ich warnte meinen Sohn Ailill mehrere Male das mein Bruder nur nach Macht strebt, sogar auf Kosten seiner Familie. Nichtsdestotrotz, besuchte er ihn weiterhin regelmäßig. \n\nAls er heute von seinem Onkel zurückkam, wirkte er normal. Doch einige Stunden später wurde er ungeheuer schnell, sehr krank. Ich schickte nach jedem Druiden in meinem Königreich um zu versuchen ihn zu heilen, aber es war alles umsonst. \n\nDiesen Abend, tat er seinen letzten Atemzug. Bei Einbruch der Nacht kam ein Bote zur Ringfestung und sagte mir das mein Bruder krank sei und nach Hilfe fragt. \n\Ich bin nicht dumm genug auf seine List hereinzufallen...Ich werde die Wachen schicken und er sollte besser wirklich sehr krank sein, wenn er die Nacht nicht hinter Gittern verbringen will!"
+ labraid_story.0021.a:0 "Er wird dafür büßen"
+ 
+ labraid_story.0002.t:0 "Mein verräterischer Großonkel"
+ labraid_story.0002.desc:0 "Mein Vater? Tot. Mein Großvater, der König? Tot. Mein hinterhältiger Großonkel vergiftete meinen Vater, mein Vater wurde vergiftet um den König in eine Falle zu locken. \n\nDer König tappte in die Falle, er dachte das sein Bruder krank wäre und besuchte ihn mit einem Druiden und einem Pfleger umm ihn wieder auf die Beine zu bringen. Leider war Cobthach nicht krank. Als der König den Treffpunkt erreichte schlug er zu und verwundete ihn. \n\nEr nahm ihn gefangen und folterte ihn bevor er ihn tötete. Cobthach ergriff die Macht und trug seinen Wachen auf mich zu finden. Ich wurde gefangen genommen und habe mich nun mit meinem Schicksal abgefunden."
+ labraid_story.0002.a:0 "Was wird er tun?"
+ 
+ labraid_story.0022.t:0 "Verbannt"
+ labraid_story.0022.desc:0 "Mein Großonkel, nun König Cobthach, verschonte mich. Ich lebe, doch wurde von meinem rechtmäßigen Besitz verbannt. Ich kann es immer noch nicht glauben was er mir angetan hat. Jede Nacht schließe ich meine Augen und denke drüber nach...Er lud mich an seinen Tisch ein...und...zwang mich das Fleisch meines Vaters und Großvaters zu essen. \n\nIch kann mich immer noch an den Geruch und Geschmack des kranken Fleisches meines Vaters erinnern...Oder war es mein Großvater? Ich kann und will mich nicht erinnern welches Fleisch zu wem gehörte. Da er mich nicht als Bedrohung betrachtete, verurteilte er mich zur Verbannung und nicht zum Tod. \n\nIch bin nun auf dem Weg nach Tipperary, wo ich hoffe mich etablieren zu können...Und diesem grausamen fingalachischen Thronräuber das Gegenteil zu beweisen..."
+ labraid_story.0022.a:0 "Die Albträume werden vorüber gehen"
+ labraid_story.0022.b:0 "Die Wahrheit ist... Ich mochte es"
+ 
+ labraid_story.0003.t:0 "Ich werde mich rächen"
+ labraid_story.0003.desc:0 "Nach ein paar Tagen im Exil kam eine meinem Großvater treu ergebene Truppe, um mich zu treffen. Die meisten von ihnen sind erfahrene und fähige Krieger, die von Cobtachs brutalem Putsch und der jetzigen Missregierung enttäuscht sind. Dies gibt mir die Hoffnung das eines Tages, Ich den rechtmäßigen Sitz meiner Familie auf dem Hügel von Tara zurückerobern kann. \n\nDoch um dies zu erreichen brauche ich Land und einen guten Ruf. Denn nur so werden sich mehr Krieger meiner Sache anschließen. \n\n #S Information für den Spieler : Ihr müsst mindestens vier Grafschaften oder einen Herzogtitel besitzen. Oder aber auch den Prestigerang Illuster erreichen. Sobald dies abgeschlossen ist, müsst ihr nur darauf warten das sich einige Männer unter eurem Banner sammeln #!"
+ labraid_story.0003.a:0 "Ich werde zurück nach Hause kommen"
+ 
+ labraid_story.0005.t:0 "Mein Schicksal"
+ labraid_story.0005.desc:0 "Im vergangenen Jahr, kamen stellten sich viele neue Soldaten in meine Dienste. Geschichten von meinen Taten und Eroberungen verbreiten sich in ganz Irland. Der Thronräuber von Tara fürchtet sich sicherlich schon vor mir, wenn er es nicht schon längst tat. \n\nIch habe nun eine Entscheidung zu treffen. \n\nIst mein Schicksal wirklich Rache und bewaffnet nach Tara zurückzukehren, oder war dies ein schicksalhaftes Exil und die Zukunft meiner Familie liegt in [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], mit diesen Kriegern als Fundament für mein neues Reich?"
+ labraid_story.0005.a:0 "Mein Platz ist auf dem Thron von Tara"
+ labraid_story.0005.b:0 "Mein Platz ist hier, bei meinen Leuten"
+ 
+ labraid_story_revenge_troops:0 "Labraid's loyale Krieger"

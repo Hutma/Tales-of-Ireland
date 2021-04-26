@@ -1,0 +1,102 @@
+﻿l_german:
+ #Race realated decisions
+ the_first_cessarian_kingdom_decision:0 "Erstes Kessarreich verkünden"
+ the_first_cessarian_kingdom_decision_desc:0 "Zum ersten Mal werden die [cessarian|E] vereint sein und von einem König geführt, möge dieser Tag der erste von vielen glorreichen Tagen sein."
+ the_first_cessarian_kingdom_decision_tooltip:0 "Werdet der erste cessarische König"
+ the_first_cessarian_kingdom_decision_confirm:0 "Holt mir meine Krone"
+ 
+ restore_aran_kingship_decision:0 "Aranisches Königtum wiederherstellen"
+ restore_aran_kingship_decision_desc:0 "Die [fomorians|E] hatten einst ein großes Reich auf diesen Inseln, ich sollte es wiederherstellen."
+ restore_aran_kingship_decision_tooltip:0 "Wiederherstellung des Königreichs Aran"
+ restore_aran_kingship_decision_confirm:0 "Das Königreich von Aran lebt wieder"
+ 
+ restore_nemedian_kingdom_decision:0 "Nemeds Königreich wiederherstellen"
+ restore_nemedian_kingdom_decision_desc:0 "Nemed, der Anführer all unserer Vorfahren, regierte hier vor langer Zeit ein Königreich, es ist an der Zeit, dass wir es wieder aufbauen und es zum Blühen bringen."
+ restore_nemedian_kingdom_decision_tooltip:0 "Wiederherstellung des Königreichs Nemed"
+ restore_nemedian_kingdom_decision_confirm:0 "Nemedianer sind wieder vereint"
+ 
+ ceremony_in_newgrange_decision:0 "Zeremonie in Newgrange"
+ ceremony_in_newgrange_decision_desc:0 "Newgrange wurde mehrmals überfallen und unser Volk hat die Kontrolle darüber verloren. Über Jahrhunderte haben wir versucht, es zurückzuerobern, ohne Erfolg. Wir hoffen, dass wir eines Tages wieder in der Lage sein werden, an diesem heiligen Ort Zeremonien für unsere Götter durchzuführen."
+ ceremony_in_newgrange_decision_tooltip:0 "Durchführung einer religiösen Zeremonie in Newgrange"
+ ceremony_in_newgrange_decision_confirm:0 "Wir ehren die Götter"
+ 
+ take_fomorian_tribute_decision:0 "Den Tribut sammeln"
+ take_fomorian_tribute_decision_desc:0 "Es ist Zeit, meine Tributpflichtigen haben genug Zeit gehabt, ihr [cattle|E] wachsen zu lassen, ihre Kinder wachsen zu lassen und ihre Schatzkammer wachsen zu lassen. Es ist an der Zeit, den Ahnentribut zu nehmen, zwei Drittel ihres Viehs, Gold und eines ihrer Kinder."
+ take_fomorian_tribute_decision_tooltip:0 "Sendet die Tribut-Sammler"
+ take_fomorian_tribute_decision_confirm:0 "Sendet die Tribut-Sammler"
+
+ #High King decisions
+ reform_high_kingship_decision:0 "Wiederherstellung des Hochkönigtums"
+ reform_high_kingship_decision_desc:0 "So wie die Gesetze der Iren einst von einem einzigen [high_king|E] regiert wurden und wieder regiert werden sollen!"
+ reform_high_kingship_decision_tooltip:0 "Reform des Hochkönigtums von Irland"
+ reform_high_kingship_decision_confirm:0 "Wiederherstellung des Hochkönigtums"
+ 
+ call_royal_army_decision:0 "Ruft die königliche Armee"
+ call_royal_army_decision_desc:0 "Der Hochkönig hat das Recht, eine Armee von Männern aus ganz Irland zusammenzustellen."
+ call_royal_army_decision_tooltip:0 "Versammelt der königlichen Armee"
+ call_royal_army_decision_confirm:0 "Ruft die Armee!"
+ 
+ call_royal_army_decision_troops:0 "Königliche Wache"
+ 
+ high_king_reclaim_tara_decision:0 "Tara zurückfordern"
+ high_king_reclaim_tara_decision_desc:0 "Tara ist das traditionelle Zentrum der [high_king|E]-Macht, der Hochkönig sollte derjenige sein, der darüber herrscht."
+ high_king_reclaim_tara_decision_tooltip:0 "Anspruch auf Tara erheben"
+ high_king_reclaim_tara_decision_confirm:0 "Tara sollte mein sein!"
+ 
+ strengthen_high_kingship_canditate_decision:0 "Kandidat bestärken"
+ strengthen_high_kingship_canditate_decision_desc:0 "Ich bin des Hochkönigtums würdig, ich bekräftige es heute."
+ strengthen_high_kingship_canditate_decision_tooltip:0 "Ich werde der nächste Hochkönig sein"
+ strengthen_high_kingship_canditate_decision_confirm:0 "Ich werde der nächste Hochkönig sein"
+ 
+ #Places decisions
+ coax_giant_causeway_decision:0 "Überredet einen Riesen am Giant's Causeway"
+ coax_giant_causeway_decision_desc:0 "Der Giant's Causeway ist bekannt als ein Weg in die [otherworld|E], ein mystischer Ort, an dem seltsame Kreaturen leben. Der Causeway wurde von dem [gaelic_giant|E] Fionn Mac Cumhaill erbaut und sein Nachkomme konnte über diesen speziellen Ort kontaktiert werden."
+ coax_giant_causeway_decision_tooltip:0 "Versucht, einen Riesen zu rekrutieren"
+ coax_giant_causeway_decision_confirm:0 "Riese, Ich warte auf dich"
+ 
+ many_crowns_for_galway_decision:0 "Kronen zum Dienen von Galway"
+ many_crowns_for_galway_decision_desc:0 "Das Königreich Galway wird nun von einer einflussreichen Dynastie regiert. Ihr angesehener Rí weiß, dass Galway Hilfe von anderen Königreichen gebrauchen könnte, um die Farmen und Ringforts auf den vielen Mooren, die Galway bedecken, zu bauen. Es ist nun an der Zeit, diesen Einfluss zu nutzen und sich der anderen Rí unserer Dynastie zu bedienen."
+ many_crowns_for_galway_decision_tooltip:0 "Galway wird seinen Einfluss nutzen"
+ many_crowns_for_galway_decision_confirm:0 "Galway wird seinen Einfluss nutzen"
+ 
+ #Major decisions
+ try_unite_ireland_decision:0 "Verkündet euren Ehrgeiz, Irland zu vereinen"
+ try_unite_ireland_decision_desc:0 "Irland ist geteilt, sollte aber wieder vereint werden. Ihr habt bewiesen, dass ihr ein angesehener und fähiger Herrscher sind, Zeit, die Smaragdinsel unter einem Herrscher zu vereinen. \n\n Wenn ihr diese Entscheidung trefft, haben Sie einen Grund, jeden Nachbarn zu unterjochen."
+ try_unite_ireland_decision_tooltip:0 "Ich werde über Irland herrschen"
+ try_unite_ireland_decision_confirm:0 "Sie werden vor mir knien"
+ 
+ unite_all_ireland_decision:0 "Vereint Irland"
+ unite_all_ireland_decision_desc:0 "Irland ist geteilt, sollte aber wieder vereint werden, ich kontrolliere jede Region Irlands und jetzt ist es an der Zeit, sie alle in einem einzigen Reich zu vereinen!"
+ unite_all_ireland_decision_tooltip:0 "Irland ist eins"
+ unite_all_ireland_decision_confirm:0 "Irland ist eins"
+ 
+ one_heir_decision:0 "Einen Erben ernennen"
+ one_heir_decision_desc:0 "Seit Menschengedenken ist Irland in vier große Provinzen aufgeteilt: Ulster, Munster, Leinster und Connacht. Nur sehr wenige waren in der Lage, sie einzunehmen, und noch viel weniger haben es geschafft, sie zu halten. \n\nNun, da ich Tara, Westmeath und Longford besitze, kann ich mein Reich zur neuen Hauptprovinz erklären, die ich Meath nennen werde.\n\nIm Gegensatz zu anderen, längst vergessenen Reichen, wird dieses die Karte Irlands für immer verändern, indem es die Anzahl der Hauptprovinzen von vier auf fünf erhöht. Diese neue Provinz soll geeint bleiben und als eine Einheit stehen."
+ one_heir_decision_tooltip:0 "Das Reich wird stabil bleiben"
+ one_heir_decision_confirm:0 "Das Reich wird stabil bleiben"
+ 
+ found_meath_decision:0 "Meath gründen"
+ found_meath_decision_desc:0 "Mit Tara, Westmeath und Longford in meinem Besitz habe ich es geschafft, genug Macht zu sammeln, um mein Reich als neue Provinz von Irland durchzusetzen. Diese neue Provinz soll geeint bleiben und als Einheit gegen unsere gegenwärtigen und zukünftigen Feinde stehen."
+ found_meath_decision_tooltip:0 "Eine fünfte Provinz für Irland"
+ found_meath_decision_confirm:0 "Eine fünfte Provinz für Irland"
+ 
+ #Minor decisions 
+ sacrifice_to_sidhe_decision:0 "Bringt den Sidhe ein Opfer dar"
+ sacrifice_to_sidhe_decision_desc:0 "Wir wissen von den Feen, die in der [otherworld|E] leben, und wir wissen, dass sie die materielle Welt beeinflussen können. Wir werden den [sidhe|E], den Feen und magischen Wesen Irlands Opfergaben bringen und auf ein gutes Omen hoffen, das unser Volk führt."
+ sacrifice_to_sidhe_decision_tooltip:0 "Bereitet die Opferzeremonie vor"
+ sacrifice_to_sidhe_decision_confirm:0 "Die Zeremonie steht an"
+ 
+ hail_high_king_decision:0 "Heil dem Hochkönig"
+ hail_high_king_decision_desc:0 "Der Meister von Irland ist immer noch ein [milesian|E], wie es sich gehört. Wir sollten den [high_king|E] bejubeln und hoffen, dass dieser Titel in milesischer Hand bleibt."
+ hail_high_king_decision_tooltip:0 "Den Hochkönig bejubeln"
+ hail_high_king_decision_confirm:0 "Milesianer werden für immer herrschen!"
+ 
+ high_king_protection_decision:0 "Erlangt den Hochkönigsschutz"
+ high_king_protection_decision_desc:0 "Der [high_king|E] ist ein Milesianer und sein Einfluss kann genutzt werden, um jedem [milesian|E] zu helfen, der ihn benötigt. Wir sind im Krieg und brauchen mehr Männer, es ist an der Zeit, den Einfluss zu nutzen, den der Hochkönig unserem Volk gibt, um mehr Truppen aufzustellen."
+ high_king_protection_decision_tooltip:0 "Wir können mehr Männer auftreiben"
+ high_king_protection_decision_confirm:0 "Versammelt die Krieger!"
+ 
+ establish_sean_bar_decision:0 "Gründet Sean's bar"
+ establish_sean_bar_decision_desc:0 "Das Einzige, was noch besser ist, als abends ein Bierchen zu genießen, ist eine gute Gesellschaft, mit der man es genießen kann. Vielleicht könnte ich eine Art Etablissement bauen, in dem sich die Leute versammeln und ein (oder zwei) Bierchen trinken können. Eine Art öffentliches Haus? Vielleicht ein Pub, kurz gesagt? \n\n#S Historisch gesehen ist Sean's Bar in Athlone als der älteste Pub Europas bekannt. #!"
+ establish_sean_bar_decision_tooltip:0 "Zeit zu trinken!"
+ establish_sean_bar_decision_confirm:0 "Zeit zu trinken!"

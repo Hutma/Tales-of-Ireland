@@ -1,0 +1,47 @@
+﻿l_german:
+ tenet_animal_worship_name:0 "Tieranbetung"
+ tenet_animal_worship_desc:0 "Götter sind alles und sie sind besonders in lebenden Organismen vorhanden, wir sollten Tiere gut behandeln und sie nur zum Essen verletzen."
+ 
+ tenet_pure_island_name:0 "Reine Insel"
+ tenet_pure_island_desc:0 "Nur unsere Kultur ist richtig, wir sollten jeden Fremden von unserem Land, von unserer Insel verbannen."
+ 
+ tenet_seafarers_name:0 "Seefahrer"
+ tenet_seafarers_desc:0 "Wir kamen über das Meer und wir werden über das Meer expandieren, die Götter gaben uns Wissen und Neugier, damit wir reisen und erkunden können, das ist unser Schicksal."
+ 
+ tenet_divine_agriculture_name:0 "Göttliche Landwirtschaft"
+ tenet_divine_agriculture_desc:0 "Die Götter haben uns kultiviert, bis wir groß genug waren, um selbst zu leben, wir müssen den Göttern nahe sein und sie nachahmen, um unseren Respekt zu zeigen, wir achten darauf, unsere Höfe und unser Vieh zu erhalten, da es unsere heilige Mission ist."
+ 
+ tenet_deep_vengeance_flame_name:0 "Tiefe Racheflamme"
+ tenet_deep_vengeance_flame_desc:0 "Wir wurden schon einmal versklavt, und wir werden uns nie wieder beugen, wir werden für unsere Freiheit und für unsere Überzeugungen kämpfen."
+ 
+ tenet_masters_of_ireland_name:0 "Meister von Irland"
+ tenet_masters_of_ireland_desc:0 "Wir herrschen nun schon seit Jahrhunderten über Irland, und auch wenn unsere Macht geschwächt wurde, ist es unsere heilige Mission, die Bevölkerung dieser Insel zum Ruhm zu führen."
+ 
+ tenet_tuatha_de_danann_worship_name:0 "Tuatha Dé Danann Anbetung"
+ tenet_tuatha_de_danann_worship_desc:0 "Es besteht kein Zweifel, dass die Tuatha Dé Danann Götter unter den Sterblichen sind, sie haben das tiefste Wissen und die ruhmreichste Vergangenheit. Wir müssen ihnen und ihrer Zukunft dienen."
+ 
+ tenet_fomorian_worship_name:0 "Fomorianische Anbetung"
+ tenet_fomorian_worship_desc:0 "Einige können die Fomorianer ekelhaft finden, es ist, weil sie sie nicht verstanden haben. Die Fomorianer besitzen unübertroffene Macht, und wir werden ihnen dienen, wenn sie sich erheben, um über alles zu herrschen."
+ 
+ tenet_underground_sidhe_name:0 "Untergrund Sidhe"
+ tenet_underground_sidhe_desc:0 "Wir wissen, wie wir mit den Geistern der Anderswelt sprechen können, wir wissen, wie wir sie erfreuen und unser Wissen mit ihrem teilen können."
+ 
+ tenet_great_barrows_name:0 "Große Grabhügel"
+ tenet_great_barrows_desc:0 "Die Götter haben großartige Strukturen für uns gebaut, um darin zu beten, wir sollten diese Orte bewahren und von ganzem Herzen verehren."
+ 
+ tenet_sea_dwellers_name:0 "Meeresbewohner"
+ tenet_sea_dwellers_desc:0 "Die meisten Götter leben im tiefen und endlosen Meer, Wasser ist ein Ort der Kraft, der Magie und sollte gepriesen werden."
+ 
+ tenet_newgrange_splendor_name:0 "Newgrange Pracht"
+ tenet_newgrange_splendor_desc:0 "Wir nutzen unsere Baukunst, um den Göttern zu danken, gleichzeitig schreckt die Pracht unserer Monumente unsere Feinde ab, tröstet unsere Freunde und bringt den Segen der Götter auf uns."
+ 
+ tenet_old_gods_name:0 "Die alten Götter"
+ tenet_old_gods_desc:0 "Die Götter sind alt und viele scheinen sie vergessen zu haben, aber wir werden es nicht. Unsere Götter waren die ersten, die auf der Erde wandelten, sie sind die wahren Götter."
+ 
+ doctrine_parameter_cattle_raiding_cb_disable:0 "Kann [cattle_raiding_cb|E] nicht benutzen"
+ doctrine_parameter_purification_cb_enabled:0 "Kann den Casus belli Reinigung verwenden"
+ doctrine_parameter_to_new_land_cb_enable:0 "Kann den Ins neue Land gehen casus belli verwenden"
+ doctrine_parameter_to_new_land_cb_enable:0 "Kann den Ins neue Land gehen casus belli verwenden"
+ doctrine_parameter_hail_high_king_decision_active:0 "Kann die Entscheidung den Hochkönig grüßen verwenden"
+ doctrine_parameter_high_king_influence_decision_active:0 "Kann die Entscheidung Schutz des hohen Königs verwenden"
+ doctrine_parameter_sacrifice_to_sidhe_decision_active:0 "Kann ein Opfer an die Sidhe bringen"

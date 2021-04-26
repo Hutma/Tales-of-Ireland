@@ -1,0 +1,29 @@
+﻿l_german:
+ toi_decision_race.0001.t:0 "Aranisches Königtum wiederhergestellt"
+ toi_decision_race.0001.desc:0 "Das uralte Königreich Aran wird durch meine Bemühungen wiedergeboren; dieses Reich wird wieder unter fomorischer Herrschaft stehen!\n\nIch trete in die Fußstapfen von Legenden wie Balor und Bres, den alten Meistern unseres Volkes, ich werde nicht zulassen, dass das Königreich jemals wieder an Fremde fällt!"
+ toi_decision_race.0001.a:0 "Wir erheben uns erneut"
+ 
+ toi_decision_race.0002.t:0 "Der aranische König"
+ toi_decision_race.0002.desc:0 "Nach jahrhundertelangem Kampf hat [founder.GetFullName] das uralte Königreich Aran wiederhergestellt und die fremden Eindringlinge der Insel zurückgeschlagen. Obwohl die anderen Herrscher Irlands es kaum dulden werden, dass diese aufstrebende Macht in das eindringt, was sie als ihr Land betrachten, hat das Volk von [founder.GetPrimaryTitle.GetAdjective] schlimmere Invasionen überstanden als alles, was dieses moderne Zeitalter aufbieten kann. Sie bereiten sich bereits darauf vor, der unvermeidlichen grimmigen Vergeltung zu widerstehen..."
+ toi_decision_race.0002.a:0 "Aran ist wieder groß"
+ toi_decision_race.0002.b:0 "Solche Königreiche kommen und gehen"
+ 
+ toi_decision_race.0003.t:0 "Nemedianisches Königreich wiederhergestellt"
+ toi_decision_race.0003.desc:0 "Das uralte Königreich von Nemed wurde durch meine Bemühungen wiedergeboren; dieses Reich wird wieder gedeihen.\n\nIch trete in die Fußstapfen von Legenden wie den Söhnen von Nemed, den Gründern der Stämme, den alten Meistern unseres Volkes, ich werde nicht zulassen, dass das Königreich jemals wieder an Fremde fällt!"
+ toi_decision_race.0003.a:0 "Die Nemedier sind wieder vereint"
+ 
+ toi_decision_race.0004.t:0 "Der nemedische König"
+ toi_decision_race.0004.desc:0 "Nach jahrhundertelangem Kampf hat [founder.GetFullName] das uralte Königreich Aran wiederhergestellt und die fremden Eindringlinge der Insel zurückgeschlagen. Obwohl die anderen Herrscher Irlands es kaum dulden werden, dass diese aufstrebende Macht in das eindringt, was sie als ihr Land betrachten, hat das Volk von [founder.GetPrimaryTitle.GetAdjective] schlimmere Invasionen überstanden als alles, was dieses moderne Zeitalter aufbieten kann. Sie bereiten sich bereits darauf vor, der unvermeidlichen grimmigen Vergeltung zu widerstehenn..."
+ toi_decision_race.0004.a:0 "Die Nemedier sind wieder vereint"
+ 
+ toi_decision_major.0001.t:0 "Irland ist vereint"
+ toi_decision_major.0001.desc:0 "Zum ersten Mal, seit die Milesianer die Kontrolle über die Smaragdinsel verloren haben, ist Irland unter einem Herrscher und einer Flagge vereint. Hoffen wir, dass diese Union stark bleibt und allen irischen Stämmen erlaubt, zu gedeihen."
+ toi_decision_major.0001.a:0 "Ireland can look beyond its borders"
+ 
+ toi_decision_major.0002.t:0 "Irland ist vereint"
+ toi_decision_major.0002.desc:0 "Zum ersten Mal, seit die Milesianer die Kontrolle über die Smaragdinsel verloren haben, ist Irland unter einem Herrscher und einer Flagge vereint. Hoffen wir, dass diese Union stark bleibt und allen irischen Stämmen erlaubt, zu gedeihen."
+ toi_decision_major.0002.a:0 "Irland ist nun vereint"
+ 
+ toi_decision_major.0003.t:0 "Meath erhebt sich"
+ toi_decision_major.0003.desc:0 "Irland ist ein Reich mit vielen Königreichen, Stämmen und Festungen, aber keine Namen unterhalb des Hochkönigtums stehen höher als die der vier Provinzen: Leinster, Connacht, Ulster und Munster. \n\nSie sind die größten Einflusssphären direkt unterhalb des Hochkönigs und jeder Herrscher, der stark genug ist, sich als alleiniger Herrscher einer Provinz zu etablieren, wird von den vielen Völkern Irlands mit Ehrfurcht und Respekt betrachtet. \n\nAber etwas fehlt... Im Norden von Leinster, wo das gesegnete Tara liegt, gibt es ein weiteres Machtzentrum... eine fünfte Provinz. \n\nIch habe die totale Herrschaft über dieses Land und von nun an soll es als "Meath" bekannt sein, denn es liegt in der Mitte des Landes. \n\n#S So soll es allen bekannt sein! Das Königreich Meath steht keiner anderen der nunmehr Fünf Provinzen nach. #!"
+ toi_decision_major.0003.a:0 "Eine neue Provinz für Irland"

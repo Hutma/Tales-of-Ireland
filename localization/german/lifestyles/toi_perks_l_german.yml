@@ -1,0 +1,35 @@
+﻿l_german:
+ # Tales Of War: Heroic Warrior
+ master_of_duel_perk_name:0 "Meister des Duells"
+ training_with_scathach_perk_name:0 "Training mit Scáthach"
+ giant_slayer_perk_name:0 "Riesentöter"
+ a_champion_to_follow_perk_name:0 "Ein Krieger dem man folgt"
+ adaptative_fighter_perk_name:0 "Anpassungsfähiger Kämpfer"
+
+ # Tales Of War: Legendary Strategist
+ master_tactician_perk_name:0 "Meister Taktiker"
+ ringfort_taker_perk_name:0 "Ringfort Eroberer"
+ organized_army_perk_name:0 "Organisierte Armee"
+ realm_guard_perk_name:0 "Reichswache"
+ srengs_legacy_perk_name:0 "Sreng's Erbe"
+
+
+ CHAMPION_TO_FOLLOW_PERK:0 "Drei mächtige Krieger werden eurem Hofstaat beitreten"
+ REALM_GUARD_PERK:0 "Ihr erhaltet spezielle Truppen von Soldaten und Hauswachen"
+ realm_guard_perk_troops:0 "Reichswache"
+
+ # Tales Of Abundance: Golden Tongue
+ storyteller_perk_name:0 "Geschichtenerzähler"
+ beneficial_reputation_perk_name:0 "Vorteilhafte Reputation"
+ realm_of_legends_perk_name:0 "Reich der Legenden"
+ influential_diplomat_perk_name:0 "Einflussreicher Diplomat"
+ respected_by_all_perk_name:0 "Von ALLEN respektiert"
+
+ # Tales Of Abundance: Brehon Laws Keeper
+ civil_law_perk_name:0 "Zivilrecht"
+ justice_order_perk_name:0 "Recht und Ordnung"
+ gods_law_perk_name:0 "Gesetz der Götter"
+ men_law_perk_name:0 "Gesetz der Menschen"
+ senchas_mar_perk_name:0 "Senchas Már"
+ 
+ INFLUENTIAL_DIPLOMAT_PERK: "Diese Vergünstigung gewährt euch 3 Stimmen für die [high_kingship|E]-Wahl, wenn Sie ein Kurfürst sind"

@@ -335,7 +335,7 @@ unite_ireland_cb = {
 		
 		NOT = {
 			scope:defender = {
-				has_title = title:k_high_kingship
+				highest_held_title_tier >= 4
 			}
 		}
 	}
@@ -1283,6 +1283,9 @@ cattle_raiding_cb = {
 	interface_priority = 59
 	
 	attacker_wargoal_percentage = 0.8
+	
+	max_attacker_score_from_battles = 70
+	max_defender_score_from_battles = 70
 	
 	min_ai_score = 100
 }

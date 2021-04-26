@@ -318,6 +318,14 @@ k_people_cessair = {
 	}
 }
 
+k_umhaill = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_umhaill.dds"
+	}
+}
+
 e_ireland = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"

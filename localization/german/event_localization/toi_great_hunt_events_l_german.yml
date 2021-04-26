@@ -1,0 +1,53 @@
+﻿l_german:
+ great_hunt_decision:0 "Die große Jagd"
+ great_hunt_decision_desc:0 "Unsere Götter respektieren die Natur und den Kampf eines jeden Lebewesens, die anderen zu übertreffen, um zu überleben. Um die Götter zu erfreuen, sollten wir auf eine große zeremonielle Jagd gehen, um eins mit dem Wald, der Natur und den göttlichen Geistern zu werden."
+ great_hunt_decision_tooltip:0 "Bereitet die zeremonielle Große Jagd vor"
+ great_hunt_decision_confirm:0 "Versammelt die Druiden und die Jäger"
+
+ hunt_loved_gods:0 "Geliebt von den Göttern"
+ hunt_hated_gods:0 "Gehasst von den Göttern"
+
+ great_hunt.0001.t:0 "Die große Jagd"
+ great_hunt.0001.desc:0 "Das ganze Volk ist nun zu der üblichen religiösen Zeremonie versammelt, an deren Ende ich die Ankündigung mache, dass wir uns auf eine große zeremonielle Jagd vorbereiten werden, die die Götter ehren und ihren Segen über uns bringen wird. Die Menge jubelt!"
+ great_hunt.0001.a:0 "Versammelt Männer und Druiden"
+ great_hunt.0001.b:0 "Wir gehen über unsere Grenzen hinaus, um die beeindruckendste Beute zu finden"
+ 
+ great_hunt.0002.t:0 "Die große Jagd"
+ great_hunt.0002.desc:0 "Alle Jäger sind versammelt und bereit, aus allen Dörfern und Festungen sind sie gekommen, sie sind mit ihren prächtigsten Bögen bewaffnet und mit ihren zeremoniellen Kleidern bekleidet, alle sind bereit und schauen zu mir auf, um das Kommando zu geben"
+ great_hunt.0002.a:0 "Lasst uns tief in unsere Wälder gehen und die Große Jagd durchführen"
+ 
+ great_hunt.0024.t:0 "Katastrophale Jagd"
+ great_hunt.0024.desc:0 "Wir haben nichts gefangen, die Jäger sind müde und die Stimmung aller ist gedrückt, es ist keine feierliche Jagd, es ist eine Katastrophe."
+ great_hunt.0024.a:0 "Lasst uns zurückgehen, das nächste Mal machen wir es besser"
+ great_hunt.0024.b:0 "Kommt schon, wir sind nur gescheitert, weil wir Pech hatten, lasst es uns härter versuchen"
+ great_hunt.0024.c:0 "Verliert nicht den Mut, wir feiern stattdessen in unserer heiligen Natur"
+ great_hunt.0024.c.success:0 "Gute Party"
+ great_hunt.0024.c.failure:0 "Partys heben nicht die Stimmung"
+ 
+ great_hunt.0241.t:0 "Rettet die Jagd"
+ great_hunt.0241.desc:0 "Wir sind schon stundenlang marschiert, als wir endlich einen schönen Bären sehen, jetzt ist die Chance, ein bisschen diese Jagd zu retten."
+ great_hunt.0241.a:0 "Ich werde die Bestie töten und den Tag retten"
+ great_hunt.0241.b:0 "Wir umzingeln ihn und töten ihn mit Leichtigkeit"
+ great_hunt.0241.c:0 "Bauen wir eine Falle, um ihn zu fangen, bevor wir ihn töten"
+ great_hunt.0241.success:0 "Gerettete Jagd"
+ great_hunt.0241.failure:0 "Gescheiterte Jagd"
+ 
+ great_hunt.0242.t:0 "Gescheiterte Jagd"
+ great_hunt.0242.desc:0 "Nach einem langen Kampf gelang es uns, den Bären zu töten und den Tag zu retten."
+ great_hunt.0242.a:0 "Die Götter verlassen uns"
+ 
+ great_hunt.0243.t:0 "Jagd gerettet"
+ great_hunt.0243.desc:0 "Dem Bären gelang schließlich die Flucht in eine Höhle und wir verloren seine Spur..."
+ great_hunt.0243.a:0 "Lobt die Götter"
+ 
+ great_hunt.0023.t:0 "Schlechte Jagd"
+ great_hunt.0023.desc:0 "Wir haben stundenlang gejagt und nicht viel Beute erfolgreich erlegt."
+ great_hunt.0023.a:0 "Die Götter verlassen uns"
+ 
+ great_hunt.0022.t:0 "Gute Jagd"
+ great_hunt.0022.desc:0 "Die Jagd verlief sehr gut, wir konnten einige beeindruckende Beutetiere erlegen und kommen von den Göttern geliebt nach Hause."
+ great_hunt.0022.a:0 "Lobt die Götter"
+ 
+ great_hunt.0021.t:0 "Großartige Jagd"
+ great_hunt.0021.desc:0 "Diese Jagd war eine magische Jagd, alles lief gut, die Jäger und Druiden waren in bester Stimmung und haben es geschafft, einen großen Braunbären zu erlegen. Die Götter sind uns lieb und belohnen uns für diese Zeremonie."
+ great_hunt.0021.a:0 "Lobt die Götter"

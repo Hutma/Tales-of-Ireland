@@ -59,6 +59,11 @@
  many_crowns_for_galway_decision_tooltip:0 "Galway will use its influence"
  many_crowns_for_galway_decision_confirm:0 "Galway will use its influence"
  
+ found_umhaill_decision:0 "Found the Kingdom of Umhaill"
+ found_umhaill_decision_desc:0 "Why should I bow to the king of Mayo when my army is stronger than his, when my land is rich, and when I have all the lands lying north and south of the Clew Bay? I shall forge my own kingdom!"
+ found_umhaill_decision_tooltip:0 "Umhaill will prosper"
+ found_umhaill_decision_confirm:0 "Umhaill will prosper"
+ 
  #Major decisions
  try_unite_ireland_decision:0 "Declare your ambition to unite Ireland"
  try_unite_ireland_decision_desc:0 "Ireland is divided but should be united once again, you have proven yourself to be a prestigious and capable ruler, time to unite the Emerald Island under once ruler. \n\n Taking this decision will grant you a reason to subjugate any neighbour."

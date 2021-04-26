@@ -1,0 +1,14 @@
+﻿l_german:
+#Christian
+ councillor_court_chaplain_generic_county:1 "Druide"
+ councillor_court_chaplain_generic_county_possessive:1 "Druiden"
+ councillor_court_chaplain_generic_duchy:1 "Druide"
+ councillor_court_chaplain_generic_duchy_possessive:1 "Druiden"
+ councillor_court_chaplain_generic_kingdom:1 "Druide"
+ councillor_court_chaplain_generic_kingdom_possessive:1 "Druiden"
+ councillor_court_chaplain_generic_empire:0 "Druide"
+ councillor_court_chaplain_generic_empire_female:0 "Druidin"
+ councillor_court_chaplain_generic_empire_possessive:0 "Druiden"
+ councillor_court_chaplain_generic_empire_female_possessive:0 "Druidin"
+
+ 

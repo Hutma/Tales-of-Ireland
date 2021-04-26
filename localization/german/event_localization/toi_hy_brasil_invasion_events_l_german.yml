@@ -1,0 +1,16 @@
+﻿l_german:
+ 
+ toi_hybrazil.0001.t:0 "Hy-Brasil"
+ toi_hybrazil.0001.desc:0 "In den fernen Wolken über den Meeren haben einige Seeleute einen mysteriösen Schatten entdeckt, sie versuchten sich ihm zu nähern und entdeckten... eine Insel in den Wolken. Diese Insel schien mystisch zu sein... magisch. Ein seltsames Licht strahlte von ihr aus. Einige der Matrosen beschlossen, einen Blick darauf zu werfen und landeten auf der seltsamen Insel... Sie kamen nie wieder zurück. \n\nEin paar Tage später wurde eine weitere Expedition gestartet, um diese Insel zu erkunden, aber als sie ihr kartografiertes Ziel erreichte, war die Insel verschwunden. Jeder, von Matrosen und Bauern bis hin zu Soldaten und sogar Herrschern, tratscht nun über diesen mysteriösen Ort, der nun Hy-Brasil genannt wird."
+ toi_hybrazil.0001.a:0 "Komische Geschichte"
+ 
+ toi_hybrazil.0002.t:0 "Besucher aus Hy-Brasil"
+ toi_hybrazil.0002.desc:0 "An der Legende von Hy-Brasil scheint etwas Wahres dran zu sein. Ein Boot mit einigen seltsamen Menschen, die behaupten, von dieser Insel zu stammen, hat Irlands Küsten erreicht. Es wird gesagt, dass sie die Insel umwanderten und sie besuchten. \n\nAlle bis auf einen von ihnen haben Irland verlassen. Der einzige Hy-Brasylianer bot dem Rí große Geschenke an, der ihn in seiner Halle willkommen hieß. \n\nDas Feuer der Gerüchte wurde durch diese neue und unerwartete Entwicklung geschürt, und jeder Mensch in Irland spekulierte ohne Ruhe über den seltsamen Hy-Brasil und seine seltsamen Bewohner."
+ toi_hybrazil.0002.a:0 "Was wollen sie?"
+ 
+ toi_hybrazil.0003.t:0 "Eroberung aus Hy-Brasil"
+ toi_hybrazil.0003.desc:0 "Viele unter den Bewohnern Irlands fragten sich, was die Hy-Brasil-Besucher an unseren Ufern zu suchen hatten. Jetzt weiß es jeder. Sie waren Späher ... auf der Suche nach einem geeigneten Landekopf für ihre Invasion. \n\nDiese ausländischen Bastarde fallen auf der Insel ein!  \n\n In einem Versuch, unser Land zu erobern, sind sie in der Nähe von Aran gelandet. Sie haben große Armeen angehäuft und ihre Zahl zeigt kein Ende in Sicht... sie könnten sich auf Irland niederlassen."
+ toi_hybrazil.0003.a:0 "Sie werden unser Land nicht bekommen"
+ 
+ HY_BRASYLIAN_ARMY:0 "Hy-Brasylian Eroberer"
+ hy_brasil_adventurers_event_troops:0 "Hy-Brasylian Abenteurer"

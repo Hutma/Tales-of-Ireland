@@ -259,3 +259,81 @@ found_meath_decision = {
 		base = 25
 	}
 }
+
+found_umhaill_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+
+	desc = found_umhaill_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_mayo
+			}
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_galway
+			}
+		}
+		NOT = { has_trait = fir_bolg }
+		NOT = { 
+			has_title = title:k_mayo
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_umhaill
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= high_prestige_level
+		completely_controls = title:d_achill
+		completely_controls = title:d_burrishoole
+		OR = {
+			completely_controls = title:d_toremoreislands
+			completely_controls = title:d_murrisk
+		}
+		NOT = { 
+			has_title = title:k_mayo
+		}
+		prestige_level >= title:k_mayo.holder.prestige_level
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		founded_umhaill_decision_scripted_effect = yes
+		
+		save_scope_as = founder
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_umhaill
+			}
+		}
+	}
+
+	cost = {
+		prestige = 750
+		gold = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

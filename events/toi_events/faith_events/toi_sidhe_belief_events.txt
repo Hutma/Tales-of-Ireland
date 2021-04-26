@@ -1,0 +1,318 @@
+﻿namespace = sidhe_belief
+
+sidhe_belief.0001 = { #the spring maiden
+	title = sidhe_belief.0001.t
+	desc = sidhe_belief.0001.desc
+	theme = seduction
+	override_background = {
+		event_background = terrain_scope
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = scope:maiden
+		animation = flirtation
+	}
+	
+	trigger = {
+		AND = {
+			religion = religion:mystical_knowledge_legacy_religion
+			highest_held_title_tier >= 3
+		}
+	}
+	
+	immediate = {
+		create_character = {
+			age = { 20 25 }
+			random_traits = yes
+			gender_female_chance = 100
+			add_trait = beauty_good_3
+			dynasty = none
+			faith = this.faith
+			culture = this.culture
+			location = root.capital_province
+			save_scope_as = maiden
+		}
+	}
+	
+	option = {
+		name = sidhe_belief.0001.a #"A test of Guile"
+		duel = {
+			skill = intrigue
+			value = decent_skill_rating
+			10 = {
+				desc = sidhe_belief.0001.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.success
+					add_prestige = minor_prestige_gain
+					add_character_modifier = { 
+						modifier = five_intrigue_bonus
+						years = 3
+					}
+				}
+			}
+			10 = {
+				desc = sidhe_belief.0001.failure
+				trigger_event = {
+					id = sidhe_belief.0002
+					days = 4
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.failure
+					add_prestige = medium_prestige_loss
+				}
+			}
+		}
+	}
+	option = {
+		name = sidhe_belief.0001.b #"martial"
+		duel = {
+			skill = martial
+			value = decent_skill_rating
+			10 = {
+				desc = sidhe_belief.0001.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.success
+					add_prestige = minor_prestige_gain
+					add_character_modifier = { 
+						modifier = five_martial_bonus
+						years = 3
+					}
+				}
+			}
+			10 = {
+				desc = sidhe_belief.0001.failure
+				trigger_event = {
+					id = sidhe_belief.0002
+					days = 4
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.failure
+					add_prestige = medium_prestige_loss
+				}
+			}
+		}
+	}
+	option = {
+		name = sidhe_belief.0001.c #"learning"
+		duel = {
+			skill = learning
+			value = decent_skill_rating
+			10 = {
+				desc = sidhe_belief.0001.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.success
+					add_prestige = minor_prestige_gain
+					add_character_modifier = { 
+						modifier = five_learning_bonus
+						years = 3
+					}
+				}
+			}
+			10 = {
+				desc = sidhe_belief.0001.failure
+				trigger_event = {
+					id = sidhe_belief.0002
+					days = 4
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.failure
+					add_prestige = medium_prestige_loss
+				}
+			}
+		}
+	}
+	option = {
+		name = sidhe_belief.0001.d #"diplomacy"
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+			10 = {
+				desc = sidhe_belief.0001.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.success
+					add_prestige = minor_prestige_gain
+					add_character_modifier = { 
+						modifier = five_diplomacy_bonus
+						years = 3
+					}
+				}
+			}
+			10 = {
+				desc = sidhe_belief.0001.failure
+				trigger_event = {
+					id = sidhe_belief.0002
+					days = 4
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0001.failure
+					add_prestige = medium_prestige_loss
+				}
+			}
+		}
+	}
+}
+
+sidhe_belief.0002 = { #offended maiden
+	title = sidhe_belief.0002.t
+	desc = sidhe_belief.0002.desc
+	theme = skull
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:maiden
+		animation = anger
+	}
+	
+	override_background = {
+		event_background = terrain_scope
+	}
+	
+	option = {
+		name = sidhe_belief.0002.a #give a knight
+		random_knight = {
+			save_scope_as = sacrificed
+		}
+		scope:sacrificed = {
+			death = {
+				killer = root
+				death_reason = death_execution
+			}
+		}
+		add_prestige = -125
+		add_piety = -125
+	}
+	option = {
+		name = sidhe_belief.0002.b #give my blood
+		add_trait = wounded_3
+		add_prestige = 175
+		add_piety = 175		
+	}
+	option = {
+		name = sidhe_belief.0002.c #kill her
+		duel = {
+			skill = prowess
+			value = 14
+			10 = {
+				desc = sidhe_belief.0002.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0002.c.succes
+					add_prestige = 400
+				}
+			}
+			5 = {
+				desc = sidhe_belief.0002.c.failure
+
+				send_interface_toast = {
+					left_icon = root
+					title = sidhe_belief.0002.c.failure
+					death = {
+						killer = scope:maiden
+						death_reason = death_duel
+					}
+				}
+			}
+		}
+	}
+}
+
+sidhe_belief.0003 = { #a dry spell
+	title = sidhe_belief.0003.t
+	desc = sidhe_belief.0003.desc
+	theme = faith
+	left_portrait = {
+		character = root.primary_heir
+		animation = shame
+	}
+	right_portrait = {
+		character = cp:councillor_court_chaplain
+		animation = personality_rational
+	}
+	
+	trigger = {
+		AND = {
+			religion = religion:mystical_knowledge_legacy_religion
+			exists = cp:councillor_court_chaplain
+			root.primary_heir = {
+				is_courtier = yes
+			}
+		}
+	}
+	
+	option = {
+		name = sidhe_belief.0003.a #punish the heir
+		
+		random_list = {
+			55 = {
+				root.primary_heir = {
+					add_trait = wounded_1
+				}
+			}
+			30 = {
+				root.primary_heir = {
+					add_trait = wounded_2
+				}
+			}
+			10 = {
+				root.primary_heir = {
+					add_trait = wounded_3
+				}
+			}
+			5 = {
+				root.primary_heir = {
+					death = {
+						death_reason = death_vanished
+					}
+				}
+			}
+		}	
+	}
+	option = {
+		name = sidhe_belief.0003.b #make tribute
+		capital_county = {
+			change_development_level = -15
+		}	
+	}
+	option = {
+		name = sidhe_belief.0003.c #do nothing
+		capital_county = {
+			add_county_modifier = { 
+				modifier = upset_sidhe 
+				years = 10
+			}
+		}
+	}
+}

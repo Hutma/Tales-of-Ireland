@@ -1,0 +1,26 @@
+﻿five_intrigue_bonus = {
+	icon = magic_positive
+	intrigue = 5
+}
+
+five_martial_bonus = {
+	icon = magic_positive
+	martial = 5
+}
+
+five_learning_bonus = {
+	icon = magic_positive
+	learning = 5
+}
+
+five_diplomacy_bonus = {
+	icon = magic_positive
+	diplomacy = 5
+}
+
+upset_sidhe = {
+	icon = magic_negative
+	tax_mult = -0.15
+	development_growth_factor = -0.15
+	build_speed = 0.2
+}

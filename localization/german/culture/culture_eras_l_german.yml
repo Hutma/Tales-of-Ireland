@@ -1,0 +1,15 @@
+﻿l_german:
+ #GROUPS
+ culture_group_military:0 "Militärisch"
+ culture_group_civic:0 "Zivil"
+ culture_group_regional:1 "Kultur und Regional"
+ culture_group_any:0 "jede"
+ #ERAS
+ culture_era_tribal:0 "Fall der Milesier"
+ culture_era_tribal_desc:0 "Der Fall der Milesier ist eine Ära die mit der Ankunft der Kelten in Irland begann. Die Milesianische Macht schwächend erlangten viele Völker die Freiheit."
+ culture_era_early_medieval:0 "Die Ära der Helden"
+ culture_era_early_medieval_desc:0 "Die Ära der Helden wird von der Dominaz einzelner Individuuen auf dem Schlachtfeld geprägt. Eine gewisse Macht hat sich herausgebildet und kämpft nun um mehr Kontrolle."
+ culture_era_high_medieval:0 "Römische Ära"
+ culture_era_high_medieval_desc:0 "Sie kamen zu Hunderten vom Meer. Die Römer fangen an auf die Britischen Inseln zu schauen und sich zu wundern warum es nicht schon längst in ihrem Besitz ist."
+ culture_era_late_medieval:0 "Ankunft des Christentums"
+ culture_era_late_medieval_desc:0 "Die alten Religionen sterben langsam und werden mit den Worten des wahren und einzigartigen Gottes ersetzt: Dem Christlichen Gott. Selbst wenn viele Menschen gegen den neuen Gott sind, das Wort Gottes erlangt mehr und mehr Einfluss."

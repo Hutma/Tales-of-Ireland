@@ -1,0 +1,23 @@
+﻿l_english:
+ sidhe_belief.0001.t:0 "The Maiden of the Spring"
+ sidhe_belief.0001.desc:0 "One day as I am surveying the forest near my ringfort for wild game and other resources, I come across a hidden glade, seemingly uncharted according to my rangers. \n\nWe come closer and feel an otherwordly aura enveloping us. This glade is not simple. Beautiful animals come and go seemingly unafraid of us amongst orchards and fields of grain beneath the trees.. One of the guards even catches a deer “with a malicious grin” or a rabbit “with a sinister gleam in his eyes”. \n\nWe finally make our way to a spring which appears to be the nexus of this place. \n\nA fair maiden hails us: “You are now in my domain, whether by wit, chance or destiny. Nevertheless, I shall put you through an ordeal. Choose your skill and choose wisely. If you prevail the rewards will be great. If you fail however, there will be dire consequences.” \n\nThe spring hums and we see white rocks in the water. Human rocks."
+ sidhe_belief.0001.a:0 "A test of Guile shall not disappoint you!"
+ sidhe_belief.0001.b:0 "Try our valor and you will not be left wanting!"
+ sidhe_belief.0001.c:0 "Our shrewdness could surprise you!"
+ sidhe_belief.0001.d:0 "We have silver tongues and golden fingers. Some poetry perhaps?"
+ sidhe_belief.0001.success:0 "The Sidhe is impressed"
+ sidhe_belief.0001.failure:0 "The Sidhe is disappointed"
+ 
+ sidhe_belief.0002.t:0 "Offended Maiden"
+ sidhe_belief.0002.desc:0 "You performed...poorly. There is a blood price to pay. “One life or a bucket of the Blood of a Rí Tuath. Pay up. #S Now. #!” \n\nMy Knights look frightened. None of them wants to die, their family will hold me responsible too. I could give her my blood but this will leave me barely hanging on to life."
+ sidhe_belief.0002.a:0 "One of you will have to stay here"
+ sidhe_belief.0002.b:0 "Take the blood"
+ sidhe_belief.0002.c:0 "We won't be bullied by you, witch. I'll slay you!"
+ sidhe_belief.0002.c.success:0 "You slay the Maiden"
+ sidhe_belief.0002.c.failure:0 "The Maiden kills you"
+ 
+ sidhe_belief.0003.t:0 "A Dry Spell"
+ sidhe_belief.0003.desc:0 "The land is unusually parched. My druid's divination concluded it's a curse put in place by an angry Sidhe. \n\nFollowing a public announcement of this, my heir [GetPrimaryHeir.GetName] comes to me with a confession. He seemed to have recklessly pursued a young boy who stole his spear, going so far as to curse him to a terrible death. \n\nThis boy was in fact a Sidhe in disguise, and disappointed with my heir's conduct put this curse on us. My druid says that without appeasement the land will stay stricken by drought."
+ sidhe_belief.0003.a:0 "You shall give yourself up for punishment"
+ sidhe_belief.0003.b:0 "We must give tribute to make up for your transgression"
+ sidhe_belief.0003.c:0 "We will pull through eventually"

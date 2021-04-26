@@ -1,0 +1,6 @@
+﻿l_german:
+#Feudal Elective AI behavior
+
+ tooltip_feudal_elector_vote_same_race:0 "[candidate.GetSheHe|U] belongs to my people: $VALUE|=+0$"
+ tooltip_feudal_elector_vote_humiliated:0 "[candidate.GetSheHe|U] has been humiliated: $VALUE|=+0$"
+ tooltip_feudal_elector_vote_strenghten_candidature:0 "[candidate.GetSheHe|U] has strenghtened his candidature: $VALUE|=+0$"

@@ -1,0 +1,62 @@
+﻿l_german:
+ toi_decisions.001.t:0 "Zeremonie zum Überreden eines Riesen"
+ toi_decisions.001.desc:0 "Ich stehe auf dem Damm, neben dem Druiden, der mit der religiösen Zeremonie fortfährt. Er singt in der Sprache der Götter, um einen der Giganten anzulocken, die in der Anderswelt leben. Die Gesänge gehen weiter, bis die Erde anfängt zu beben und zu zittern. Seit knapp zwei Stunden ist der Druide erschöpft. \nDann starrt er mich an und fragt: "Bist du sicher, dass du das tun willst? [ROOT.Char.GetFirstNameNoTooltip]?" "
+ toi_decisions.001.a:0 "Ja, beende die Zeremonie"
+ toi_decisions.001.b:0 "Nein, du hast Recht, es it ein zu großes Risiko"
+ 
+ toi_decisions.002.t:0 "Freundlicher Riesen"
+ toi_decisions.002.desc:0 "Am Ende der Zeremonie hört die Erde auf zu beben, der Wind hört auf zu wehen. Es ist, als würde die Natur für einen kurzen Moment aufhören zu leben. Dann nehme ich wahr, wie sich ein riesiger Felsen in der Nähe des Causeway bewegt und aus dem Boden darunter ein Riese hervorkommt. \n \nEr setzt sich auf den Causeway und schaut auf das Meer. Ich warte, stundenlang, stehe still da und warte darauf, dass er zu sprechen beginnt. Endlich dreht er sich um, schaut mich an und sagt : \n"Du hast mich gerufen, warum hast du mich gerufen?"\nIch erkläre, dass ich ihn brauche, um an meiner Seite auf dem Schlachtfeld zu kämpfen, ich verspreche ihm Ruhm und Ehre. Er hört aufmerksam zu und willigt ein, mir zu dienen, wenn ich seinen Brüdern in der Anderswelt ein Opfer bringe."
+ toi_decisions.002.a:0 "Natürlich werden Sie Ihr Opfer haben, komm und schließ dich mir an"
+ toi_decisions.002.b:0 "Entschuldigung, ich kann diese Bedingungen nicht akzeptieren"
+ 
+ toi_decisions.003.t:0 "Stolzer Riese"
+ toi_decisions.003.desc:0 "Am Ende der Zeremonie hört die Erde auf zu beben, der Wind hört auf zu wehen. Es ist, als würde die Natur für einen kurzen Moment aufhören zu leben. Dann nehme ich wahr, wie sich ein riesiger Felsen in der Nähe des Dammes bewegt, und aus dem Boden darunter kommt ein Riese hervor. \n\nHe listened to my terms, asking him to join me and fight alongside my soldiers, he responds : "Ich werde dir helfen, aber nur, wenn du dich vor mir beugst, vor meiner Macht und Stärke.""
+ toi_decisions.003.a:0 "Natürlich du bist der mächtigste"
+ toi_decisions.003.b:0 "Ich werde mich niemals vor dir verbeugen, ich brauche dich nicht"
+ 
+ toi_decisions.004.t:0 "Wütender Riese"
+ toi_decisions.004.desc:0 "Am Ende der Zeremonie hört die Erde auf zu beben, der Wind hört auf zu wehen. Es ist, als würde die Natur für einen kurzen Moment aufhören zu leben. Dann nehme ich wahr, wie sich ein riesiger Felsen in der Nähe des Dammes bewegt, und aus dem Boden darunter kommt ein Riese hervor. \n\nSobald er draußen ist, fängt er an zu schreien und rennt wütend auf uns zu!"
+ toi_decisions.004.a:0 "Ich werde dich töten, Bestie!"
+ toi_decisions.004.a.success:0 "Riese erschlagen"
+ toi_decisions.004.a.failure:0 "Verletzt durch den Riesen"
+ toi_decisions.004.b:0 "Lauft! Lauft! Laufen um euer Leben!"
+
+#Sacrifice to sidhe
+ toi_decisions.010.t:0 "Opferung an die Sidhe"
+ toi_decisions.010.desc:0 "Vor langer Zeit reisten unsere Vorfahren in die Anderswelt, die Heimat der mächtigen Geister, die als Sidhe bekannt sind. Sie lernten, wie die Magie der Sidhe die Welt auf subtile Weise beeinflusst und die Menschen lenkt, und dass es sich lohnt, ihnen Respekt und Hingabe zu erweisen. Es ist nun an der Zeit, unser Band in einer großen Zeremonie zu erneuern.\n\nUnsere Druiden haben Gesänge gesungen und heilige Runen in den Boden geritzt. Dieses delikate Ritual öffnet einen Pfad zur Anderswelt, und die Luft wird mit seltsamer und mystischer Kraft verzaubert. \n\nDie Farben werden lebendig, die Geräusche verstummen und die Zeit verlangsamt sich. Wir haben die Aufmerksamkeit der Sidhe erregt, und jetzt warten sie auf mein Angebot an sie. Wie viel soll ich ihnen geben??"
+ toi_decisions.010.a:0 "Ein riesiges Opfer wird meine Hingabe zeigen"
+ toi_decisions.010.b:0 "Ein großes Opfer wird sie ehren"
+ toi_decisions.010.c:0 "Ein Standardopfer sollte sie besänftigen"
+ toi_decisions.010.d:0 "Ein kleines Opfer"
+ 
+ toi_decisions.011.t:0 "Ein großer Segen"
+ toi_decisions.011.desc:0 "Die Sidhe haben unseren Ruf erhört und die Opfergabe angenommen! Die Feierlichkeiten verstärken sich, als wir sie sehen, hören, fühlen, wie die Sidhe um uns herum tanzen. Selbst die Druiden bewundern unsere Hingabe.\n\nUnsere Verbindung mit den Geistern gestärkt, knien wir demütig vor ihnen nieder und nehmen ihre Gaben entgegen.\n\nDie Kraft legendärer Helden und unerschütterliche Entschlossenheit wird unseren Kriegern gegeben, und die Druiden prophezeien viele große Siege für unsere Zukunft."
+ toi_decisions.011.a:0 "Zeit für Krieg"
+ 
+ toi_decisions.012.t:0 "Ein großer Segen"
+ toi_decisions.012.desc:0 "Die Sidhe haben unseren Ruf erhört und die Opfergabe angenommen! Die Feierlichkeiten verstärken sich, als wir sie sehen, hören, fühlen, wie die Sidhe um uns herum tanzen. Selbst die Druiden bewundern unsere Hingabe.\n\nUnsere Verbindung mit den Geistern gestärkt, knien wir demütig vor ihnen nieder und nehmen ihre Gaben entgegen.\n\nUnser Viehbestand ist gestärkt, unsere Baumeister haben reiche Materialien entdeckt, und die Druiden sagen für die Zukunft großen Wohlstand voraus."
+ toi_decisions.012.a:0 "Reichtum erwartet uns"
+ 
+ toi_decisions.013.t:0 "Wichtiger Segen"
+ toi_decisions.013.desc:0 "Die Sidhe haben unseren Ruf erhört und die Opfergabe angenommen. Ihre freudige und mystische Musik verbindet sich mit unserer eigenen, doch sie treten nicht aus der Anderswelt heraus, um sich uns persönlich anzuschließen. Nichtsdestotrotz können wir spüren, wie ihre Gaben uns überfluten und stärken. \n\nUnsere Verbindung mit den Geistern wurde erneuert, wir knien demütig vor ihnen nieder und nehmen ihre Gaben entgegen. Die Krieger sind mit unmenschlicher Stärke und eisernem Willen gesegnet, und die Druiden sagen eine stärkere Zukunft voraus."
+ toi_decisions.013.a:0 "Zeit für Krieg"
+ 
+ toi_decisions.014.t:0 "Wichtiger Segen"
+ toi_decisions.014.desc:0 "The Sidhe have heeded our call and received the offering. Their joyful and mystical music joins our own, yet they don’t step out of the Otherworld to personally join us. Nevertheless, we can feel their gifts wash over and strengthen us.\n\nOur bond with the spirits renewed, we humbly kneel before them and receive their gifts.\n\nOur livestock are fruitful, our builders have discovered strong materials, and the druids foretell a wealthy future."
+ toi_decisions.014.a:0 "Reichtum erwartet uns"
+ 
+ toi_decisions.015.t:0 "Gutes Omen"
+ toi_decisions.015.desc:0 "Wir spüren die Macht der Sidhe, aber nicht viel. Sie haben zwar unsere Gaben angenommen, aber es scheint, als wären sie unbeeindruckt. Die Blätter der Bäume verfärben sich lebhaft, ein deutliches Zeichen ihrer Anwesenheit, jedoch kaum über ihre Anwesenheit außerhalb einer Zeremonie. Dennoch sind die Menschen erleichtert, ein Zeichen zu sehen. \n\nUnsere Verbindung zu den Geistern ist geschwächt, wir knien demütig vor ihnen nieder und nehmen ihre Gaben entgegen.\n\nDie Krieger sind mit neuer Kraft gestärkt, und die Druiden sagen eine sichere Zukunft voraus."
+ toi_decisions.015.a:0 "Zeit für Krieg"
+ 
+ toi_decisions.016.t:0 "Gutes Omen"
+ toi_decisions.016.desc:0 "Wir spüren die Macht der Sidhe, aber nicht viel. Sie haben zwar unsere Gaben angenommen, aber es scheint, als wären sie unbeeindruckt. Die Blätter der Bäume verfärben sich lebhaft, ein deutliches Zeichen ihrer Anwesenheit, jedoch kaum über ihre Anwesenheit außerhalb einer Zeremonie. Dennoch sind die Menschen erleichtert, ein Zeichen zu sehen. \n\nUnsere Verbindung zu den Geistern ist geschwächt, wir knien demütig vor ihnen nieder und nehmen ihre Gaben entgegen.\n\nUnser Vieh ist fruchtbarer, unsere Baumeister haben neue Materialien entdeckt, und die Druiden sagen eine bessere Zukunft voraus."
+ toi_decisions.016.a:0 "Reichtum erwartet uns"
+ 
+ toi_decisions.017.t:0 "Schlechtes Omen"
+ toi_decisions.017.desc:0 "Das Angebot ist vollständig. Wir haben gewartet... und gewartet... und es wurde klar, dass nichts passieren würde. Es gibt keine Sidhe, die unseren Ruf erhören, und keinen Segen für uns zu empfangen. Einige schreien verzweifelt auf. Haben die Sidhe uns verlassen, oder wurden sie durch mein Opfer beleidigt?\n\nUnsere Verbindung mit den Geistern ist zerbrochen, wir kehren verzweifelt nach Hause zurück.\n\nUnsere Krieger haben ihre Stärke verloren, und die Druiden sehen nur noch Verlust in der Zukunft."
+ toi_decisions.017.a:0 "Ich hoffe wir müssen nicht in den Krieg ziehen"
+ 
+ toi_decisions.018.t:0 "Schlechtes Omen"
+ toi_decisions.018.desc:0 "Das Angebot ist vollständig. Wir haben gewartet... und gewartet... und es wurde klar, dass nichts passieren würde. Es gibt keine Sidhe, die unseren Ruf erhören, und keinen Segen für uns zu empfangen. Einige schreien verzweifelt auf. Haben die Sidhe uns verlassen oder wurden sie durch mein Opfer beleidigt? \n\nUnsere Verbindung mit den Geistern ist zerbrochen, wir kehren verzweifelt in unsere Häuser zurück. Unser Vieh ist krank, unsere Gebäude verfallen und die Druiden sehen nur noch Ruinen in der Zukunft."
+ toi_decisions.018.a:0 "Ein großes Opfer wird meine Hingabe beweisen"

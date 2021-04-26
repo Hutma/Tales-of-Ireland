@@ -1,0 +1,25 @@
+﻿l_german:
+ toi_decision_race.0001.t:0 "Aranisches Königreich wiederhergestellt"
+ toi_decision_race.0001.desc:0 "Das antike Königreich von Aran wurde durch meine Behmühungen wiederhergestellt; Dieses Reich wird wieder einmal unter fomorischer Herrschaft sein!\n\nIch wandle in den Fußstapfen von Legen wie Balor und Bres, den alte Helden unseres Volkes, Ich werde nicht zulassen das dieses Königreich wieder an Fremde fallen wird!"
+ toi_decision_race.0001.a:0 "Wir erheben uns erneut"
+ 
+ toi_decision_race.0002.t:0 "Der Aranische König"
+ toi_decision_race.0002.desc:0 "Nach Jahrhunderten von Problemen, hat [founder.GetFullName] das Königreich von Aran wiederhergestellt und dessen Inselfremden Eroberer zurückgedrängt.\n\nObwohl die anderen Lords von Irland werden es wohl kaum dulden, dass diese aufstrebende Macht in das eindringt, was sie als ihr Land betrachten, die [founder.GetPrimaryTitle.GetAdjective] Einwohner haben schlimmere Invasionen überstanden als alles, was dieses moderne Zeitalter aufbieten kann. Sie bereiten sich bereits darauf vor, der unvermeidlichen grimmigen Vergeltung zu widerstehen..."
+ toi_decision_race.0002.a:0 "Aran ist wieder groß"
+ toi_decision_race.0002.b:0 "Diese Königreiche kommen und gehen"
+ 
+ toi_decision_race.0003.t:0 "Nemedisches Königreich wiederhergestellt"
+ toi_decision_race.0003.desc:0 "Das antike Königreich von Nemed wurde durch meine Behmühungen wiederhergestellt; Dieses Reich wird wieder einmal gedeihen.\n\nIch wandle in den Fußstapfen von Legen wie den Söhnen von Nemed, Gründer der Stämme, den alte Helden unseres Volkes, Ich werde nicht zulassen das dieses Königreich wieder an Fremde fallen wird!"
+ toi_decision_race.0003.a:0 "Die Nemeder sind wieder vereint"
+ 
+ toi_decision_race.0004.t:0 "Der Nemedische König"
+ toi_decision_race.0004.desc:0 "Nach Jahrhunderten von Problemen, hat [founder.GetFullName] das Königreich von Nemedund dessen Inselfremden Eroberer zurückgedrängt.\n\nObwohl die anderen Lords von Irland werden es wohl kaum dulden, dass diese aufstrebende Macht in das eindringt, was sie als ihr Land betrachten, die [founder.GetPrimaryTitle.GetAdjective] Einwohner haben schlimmere Invasionen überstanden als alles, was dieses moderne Zeitalter aufbieten kann. Sie bereiten sich bereits darauf vor, der unvermeidlichen grimmigen Vergeltung zu widerstehen..."
+ toi_decision_race.0004.a:0 "Die Nemeder sind wieder vereint"
+ 
+ toi_decision_major.0001.t:0 "Irland ist vereint"
+ toi_decision_major.0001.desc:0 "Das erste Mal seitdem die Milesier die Kontrolle über die Smaragdinsel verloren haben ist Irland wieder unter einem Herrscher, unter einer Flagge vereint. Lasst uns hoffen das diese Union stark bleiben wird und alle irischen Stämme gedeihen können."
+ toi_decision_major.0001.a:0 "Irland kann über seine Grenzen hinausblicken"
+ 
+ toi_decision_major.0002.t:0 "Irland ist vereint"
+ toi_decision_major.0002.desc:0 "Das erste Mal seitdem die Milesier die Kontrolle über die Smaragdinsel verloren haben ist Irland wieder unter einem Herrscher, unter einer Flagge vereint. Lasst uns hoffen das diese Union stark bleiben wird und alle irischen Stämme gedeihen können."
+ toi_decision_major.0002.a:0 "Irland ist jetzt vereint"

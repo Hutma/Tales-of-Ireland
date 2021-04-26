@@ -7850,6 +7850,17 @@ e_connacht = {
 		capital = c_aran
 	}
 	
+	k_umhaill = {
+		color = { 185 250 100 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			
+		}
+
+		capital = c_westport
+	}
+	
 	k_galway = {
 		color = { 6 127 2 }
 		color2 = { 255 255 255 }

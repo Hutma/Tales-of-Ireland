@@ -1,0 +1,9 @@
+﻿l_german:
+ toi_war.0001.t:0 "Krieg für meinen Sohn gewonnen"
+ toi_war.0001.desc:0 "Wir haben mutig für meinen Sohn gekämpft und heute ist ein großer Sieh für meine Familie. Nun muss ich einen Sohn aussuchen der über diese neuen Ländereien herrschen wird. \n\nWer bekommt den Titel?"
+ toi_war.0001.a:0 "[son_1.GetTitledFirstName] bekommt das Land"
+ toi_war.0001.b:0 "[son_2.GetTitledFirstName] bekommt das Land"
+ toi_war.0001.c:0 "[son_3.GetTitledFirstName] bekommt das Land"
+ toi_war.0001.d:0 "[son_4.GetTitledFirstName] bekommt das Land"
+ toi_war.0001.e:0 "[son_5.GetTitledFirstName] bekommt das Land"
+ toi_war.0001.f:0 "[son_6.GetTitledFirstName] bekommt das Land"

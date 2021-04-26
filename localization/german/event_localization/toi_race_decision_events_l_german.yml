@@ -1,0 +1,9 @@
+﻿l_german:
+ toi_decision_race.001.t:0 "Aranisches Königreich wiederhergestellt"
+ toi_decision_race.001.desc:0 "Das antike Königreich von Aran wurde durch meine Behmühungen wiederhergestellt; Dieses Reich wird wieder einmal [restorer.GetCulture.GetName] Herrschaft sein!\n\nIch wandle in den Fußstapfen von Legen wie Balor und Bres, alte Helden, und von [restorer.GetFaith.WarGodName], Ich werde nicht zulassen das dieses Königreich wieder an Fremde fallen wird!"
+ toi_decision_race.001.a:0 "Wir erheben uns erneut"
+ 
+ toi_decision_race.002.t:0 "Der Aranische König"
+ toi_decision_race.002.desc:0 "Nach Jahrhunderten von Problemen, hat [founder.GetFullName] das Königreich von Aran wiederhergestellt und dessen Inselfremden Eroberer zurückgedrängt.\n\nObwohl die anderen Lords von Irland werden es wohl kaum dulden, dass diese aufstrebende Macht in das eindringt, was sie als ihr Land betrachten, die [founder.GetPrimaryTitle.GetAdjective] Einwohner haben schlimmere Invasionen überstanden als alles, was dieses moderne Zeitalter aufbieten kann. Sie bereiten sich bereits darauf vor, der unvermeidlichen grimmigen Vergeltung zu widerstehen..."
+ toi_decision_race.002.a:0 "Aran ist wieder groß"
+ toi_decision_race.002.b:0 "Diese Königreiche kommen und gehen"

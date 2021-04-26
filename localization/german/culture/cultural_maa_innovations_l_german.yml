@@ -1,0 +1,61 @@
+﻿l_german:
+ #Siege
+ innovation_ram:0 "Rammbock"
+ innovation_ram:0 "Mithilfe von Rammböcken werden wir einfacher durch die Mauern der Ringfestungen kommen."
+ #Military
+ innovation_maa_leinster:0 "Krieger von Leinster"
+ innovation_maa_leinster_desc:0 "Für Jahrzehnte haben wir in the Feldern von Leinster gekämpft, wir wissen nun wie wir dieses flache Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_maa_connacht:0 "Kriegr von Connacht"
+ innovation_maa_connacht_desc:0 "Für Jahrzehnte haben wir in den Mooren von Connacht gekämpft, wir wissen nun wie wir dieses schlammige Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_maa_munster:0 "Krieger von Munster"
+ innovation_maa_munster_desc:0 "Für Jahrzehnte haben wir in den Bergen von Munster gekämpft, wir wissen nun wie wir dieses unstete Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_maa_ulster:0 "Krieger von Ulster"
+ innovation_maa_ulster_desc:0 "Für Jahrzehnte haben wir in den Wäldern von Ulster gekämpft, wir wissen nun wie wir diese Wälder zu unserem Vorteil nutzen können."
+ 
+ innovation_chariot_leinster:0 "Streitwägen von Leinster"
+ innovation_chariot_leinster_desc:0 "Für Jahrzehnte haben wir in the Feldern von Leinster gekämpft, wir wissen nun wie wir dieses flache Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_chariot_connacht:0 "Streitwägen von Connacht"
+ innovation_chariot_connacht_desc:0 "Für Jahrzehnte haben wir in den Mooren von Connacht gekämpft, wir wissen nun wie wir dieses schlammige Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_chariot_munster:0 "Streitwägen Munster"
+ innovation_chariot_munster_desc:0 "Für Jahrzehnte haben wir in den Bergen von Munster gekämpft, wir wissen nun wie wir dieses unstete Terrain zu unserem Vorteil nutzen können."
+ 
+ innovation_chariot_ulster:0 "Streitwägen von Ulster"
+ innovation_chariot_ulster_desc:0 "Für Jahrzehnte haben wir in den Wäldern von Ulster gekämpft, wir wissen nun wie wir diese Wälder zu unserem Vorteil nutzen können."
+ 
+ innovation_men_at_arms:0 "Kriegsvolk"
+ innovation_men_at_arms_desc:0 "Das Trainieren und Ausrüsten dauerhafter Armeen, die unter direkter Gewalt unserer Herrscher stehen, wird ein Meilenstein in der Zentralisierung unserer Macht sein."
+ 
+ innovation_maa_fomorian:0 "Blutige Krieger"
+ innovation_maa_fomorian_desc:0 "Die dunklen Götter geben uns ihre Stärke und diese Macht verstärkt unsere Krieger. Es ist Zeit für Krieg."
+
+ innovation_maa_cessarian: "Wächter des Landes"
+ innovation_maa_cessarian_desc:0 "Kein Eindringling sollte in der Lage sein auf unserem Land straffrei zu wandeln. Wir haben gelernt defensive Positionen zu unserem Vorteil zu nutzen."
+ 
+ innovation_maa_partholonian:0 "Reisende"
+ innovation_maa_partholonian_desc:0 "Von der See kamen wir, und mit der See werden wir gehen. Niemand wird sich mit unseren Kriegern messen können."
+ 
+ innovation_maa_nemedian:0 "Nemedianische Bauern"
+ innovation_maa_nemedian_desc:0 "Unser Land ist heilig und wird mit all unserem Mut und Herzen verteidigt, auch wenn wir dafür sterben müssen."
+ 
+ innovation_maa_fir_bolog:0 "Die Mutigen"
+ innovation_maa_fir_bolog_desc:0 "Sie werden nichts fürchten. Sie werden sich nicht ergeben. Sie werden in die Schlacht ziehen und ruhmreich wiederkommen."
+ 
+ innovation_maa_de_danann:0 "Antike Helden"
+ innovation_maa_de_danann_desc:0 "Die Túatha Dé Danann waren einst große Kämpfer, und dies sind wir immer noch! Unser Ruhm ist noch intakt, dies werden wir ihnen zeigen."
+ 
+ innovation_maa_milesian:0 "Krieger von Tara"
+ innovation_maa_milesian_desc:0 "Der Thron des Hoch Königs, in Tara, soll auf ewig uns gehören. Wir werden immer für diesen kämpfen, wir sind die Herren dieser Insel."
+ 
+ innovation_maa_meghalithic:0 "Wächter von Newgrange"
+ innovation_maa_meghalithic_desc:0 "Die Wächter unserer Tempel, unserer Kultur, unserer Relgionen, diese Krieger sind von den Göttern gesegnet."
+ 
+ innovation_maa_human:0 "Kerns"
+ innovation_maa_human_desc:0 "Die kerns sind die berühmtesten Kämpfer Irlands und beherrschten die Kriege dieser Lande für Jahrhunderte, sie werden ein großer Zuwachs auf dem Schlachtfeld sein."
+ 
+ innovation_maa_hybrazil:0 "Hy-Brasylische Abenteurer"
+ innovation_maa_hybrazil_desc:0 "Die Einwohner Brasils leben auf einer kleinen magischen Insel nördlich von Irland, versteckt in den Wolken. Das dortige Fehlen von Platz zwingt einige Hy-Brasylianer ihre Heimat zu verlassen um nach anderen Ufern zu suchen. Sie sind die Hy-Brasylianischen Abenteurer."
