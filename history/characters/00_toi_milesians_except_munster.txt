@@ -3,7 +3,9 @@
     dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
-
+	
+	dna = 2_king_loegaire
+	
     diplomacy =  15 
     martial =  5
     stewardship =  8 

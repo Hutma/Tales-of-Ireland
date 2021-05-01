@@ -3,7 +3,9 @@
     dynasty =  25 
     religion = sea_dwellers
     culture = corca_loigde
-
+	
+	dna = 4_king_oscar
+	
     diplomacy =  1 
     martial =  5 
     stewardship =  5 

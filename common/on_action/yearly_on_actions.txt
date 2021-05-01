@@ -73,6 +73,7 @@ three_year_playable_pulse = {
 							highest_held_title_tier = 4
 							highest_held_title_tier = 5
 						}
+						capital_county.title_province = { geographical_region = ireland_region }
 					}
 				}
 			add_pressed_claim = title:k_high_kingship
@@ -314,6 +315,14 @@ five_year_everyone_pulse = {
 				if = {
 				limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 					add_trait = hy_brazylian
+				}
+				if = {
+					limit = {has_culture = culture:bann_culture}
+						add_trait = megalith_human
+					}
+				if = {
+				limit = {has_culture = culture:brythonic_mann}
+					add_trait = celtic_human
 				}
 				add_trait = celtic_human
 			}

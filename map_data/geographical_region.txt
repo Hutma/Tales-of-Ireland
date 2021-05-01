@@ -99,3 +99,16 @@ region_leinster = {
 	}
 }
 
+ireland_region = {
+	regions = {
+		region_connacht region_leinster region_munster region_ulster
+	}
+}
+
+region_mann = {
+	duchies = {
+		#Mann
+		d_rosien d_glion_faba d_medall d_maayl d_garff d_inver_ayre
+	}
+}
+

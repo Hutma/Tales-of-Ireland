@@ -105,3 +105,11 @@
  toi_hy_brazylian_group_collective_noun:0 "Hy-Brasylians"
  hy_brazylian_culture:0 "Hy-Brasylian"
  hy_brazylian_culture_collective_noun:0 "Hy-Brasylians"
+ 
+ #Manx group
+ toi_manx_group:0 "Manx"
+ toi_manx_group_collective_noun:0 "Manx"
+ bann_culture:0 "Bann"
+ bann_culture_collective_noun:0 "Bann"
+ brythonic_mann:0 "Manaw "
+ brythonic_mann_collective_noun:0 "Manaw"

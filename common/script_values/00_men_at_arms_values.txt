@@ -8,44 +8,65 @@
 
 @high_maint_mult = 3
 
+#TALES OF IRELAND
+@high_mann_maint_mult = 2.25
+
 ### Base Cost Values
 @skirmisher_recruitment_cost = 45
 @skirmisher_low_maint_cost = 0.15
 @skirmisher_high_maint_cost = @[skirmisher_low_maint_cost * high_maint_mult]
+#MANN
+@skirmisher_high_mann_maint_cost = @[skirmisher_low_maint_cost * high_mann_maint_mult]
 
 @archers_recruitment_cost = 55
 @archers_low_maint_cost = 0.2
 @archers_high_maint_cost = @[archers_low_maint_cost * high_maint_mult]
+#MANN
+@archers_high_mann_maint_cost = @[archers_low_maint_cost * high_mann_maint_mult]
 
 @pikemen_recruitment_cost = 75
 @pikemen_low_maint_cost = 0.3
 @pikemen_high_maint_cost = @[pikemen_low_maint_cost * high_maint_mult]
+#MANN
+@pikemen_high_mann_maint_cost = @[pikemen_low_maint_cost * high_mann_maint_mult]
 
 @heavy_infantry_recruitment_cost = 90
 @heavy_infantry_low_maint_cost = 0.4
 @heavy_infantry_high_maint_cost = @[heavy_infantry_low_maint_cost * high_maint_mult]
+#MANN
+@heavy_infantry_high_mann_maint_cost = @[heavy_infantry_low_maint_cost * high_mann_maint_mult]
 
 @light_cavalry_recruitment_cost = 85
 @light_cavalry_low_maint_cost = 0.35
 @light_cavalry_high_maint_cost = @[light_cavalry_low_maint_cost * high_maint_mult]
+#MANN
+@light_cavalry_high_mann_maint_cost = @[light_cavalry_low_maint_cost * high_mann_maint_mult]
 
 @heavy_cavalry_recruitment_cost = 200
 @heavy_cavalry_low_maint_cost = 0.7
 @heavy_cavalry_high_maint_cost = @[heavy_cavalry_low_maint_cost * high_maint_mult]
+#MANN
+@heavy_cavalry_high_mann_maint_cost = @[heavy_cavalry_low_maint_cost * high_mann_maint_mult]
 
 @siege_weapons_recruitment_cost = 60
 @siege_weapons_low_maint_cost = 0.1
 @siege_weapons_high_maint_cost = @[siege_weapons_low_maint_cost * high_maint_mult]
+#MANN
+@siege_weapons_high_mann_maint_cost = @[siege_weapons_low_maint_cost * high_mann_maint_mult]
 
 
 ### Base MAA
 skirmisher_recruitment_cost = @[skirmisher_recruitment_cost]
 skirmisher_low_maint_cost = @[skirmisher_low_maint_cost]
 skirmisher_high_maint_cost = @[skirmisher_high_maint_cost]
+#MANN
+skirmisher_high_mann_maint_cost = @[skirmisher_high_mann_maint_cost]
 
 bowmen_recruitment_cost = @[archers_recruitment_cost]
 bowmen_low_maint_cost = @[archers_low_maint_cost]
 bowmen_high_maint_cost = @[archers_high_maint_cost]
+#MANN
+bowmen_high_mann_maint_cost = @[archers_high_mann_maint_cost]
 
 crossbowmen_recruitment_cost = @[archers_recruitment_cost * 1.6]
 crossbowmen_low_maint_cost = @[archers_low_maint_cost * 1.5]
@@ -54,18 +75,26 @@ crossbowmen_high_maint_cost = @[archers_high_maint_cost * 1.5]
 pikemen_recruitment_cost = @[pikemen_recruitment_cost]
 pikemen_low_maint_cost = @[pikemen_low_maint_cost]
 pikemen_high_maint_cost = @[pikemen_high_maint_cost]
+#MANN
+pikemen_high_mann_maint_cost = @[pikemen_high_mann_maint_cost]
 
 heavy_infantry_recruitment_cost = @[heavy_infantry_recruitment_cost]
 heavy_infantry_low_maint_cost = @[heavy_infantry_low_maint_cost]
 heavy_infantry_high_maint_cost = @[heavy_infantry_high_maint_cost]
+#MANN
+heavy_infantry_high_mann_maint_cost = @[heavy_infantry_high_mann_maint_cost]
 
 light_cavalry_recruitment_cost = @[light_cavalry_recruitment_cost]
 light_cavalry_low_maint_cost = @[light_cavalry_low_maint_cost]
 light_cavalry_high_maint_cost = @[light_cavalry_high_maint_cost]
+#MANN
+light_cavalry_high_mann_maint_cost = @[light_cavalry_high_mann_maint_cost]
 
 heavy_cavalry_recruitment_cost = @[heavy_cavalry_recruitment_cost]
 heavy_cavalry_low_maint_cost = @[heavy_cavalry_low_maint_cost]
 heavy_cavalry_high_maint_cost = @[heavy_cavalry_high_maint_cost]
+#MANN
+heavy_cavalry_high_mann_maint_cost = @[heavy_cavalry_high_mann_maint_cost]
 
 
 ### Siege Weapons MAA

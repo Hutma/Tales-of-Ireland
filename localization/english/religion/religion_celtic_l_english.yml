@@ -90,3 +90,10 @@
  milesian_paganism_adherent:0 "Celt"
  milesian_paganism_adherent_plural:0 "Celts" 
  milesian_paganism_desc:0 "This faith is the one that brought the Milesians with them when they reached Ireland, they worship the god of war and power above the others."
+ 
+ #The Father of Manx faith loc
+ fathers_of_manx:0 "Fathers of Manx"
+ fathers_of_manx_adj:0 "Fathers of Manx"
+ fathers_of_manx_adherent:0 "Manx Celt"
+ fathers_of_manx_adherent_plural:0 "Manx Celts" 
+ fathers_of_manx_desc:0 "This is a syncretic faith, merging Celtic ancestor worship with local Manx mythology."

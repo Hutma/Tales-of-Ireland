@@ -237,5 +237,18 @@
 			doctrine = tenet_legalism
 			doctrine = tenet_masters_of_ireland
 		}
+		fathers_of_manx = {
+			color = { 120 120 105 }
+			icon = fathers_of_manx
+
+			holy_site = ballaharra_stones
+			holy_site = kings_grave_site
+			holy_site = meayll_circle
+			holy_site = cashtal_yn_ard
+
+			doctrine = tenet_ancestor_worship
+			doctrine = tenet_mystical_birthright
+			doctrine = tenet_manx_legacy
+		}
 	}
 }

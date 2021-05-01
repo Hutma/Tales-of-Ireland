@@ -39,6 +39,7 @@ on_game_start = {
 							highest_held_title_tier = 4
 							highest_held_title_tier = 5
 						}
+						capital_county.title_province = { geographical_region = ireland_region }
 					}
 				}
 			add_pressed_claim = title:k_high_kingship
@@ -90,6 +91,14 @@ on_game_start = {
 			if = {
 			limit = {has_culture_group = culture_group:toi_partholonian_group}
 				add_trait = partholonian
+			}
+			if = {
+			limit = {has_culture = culture:bann_culture}
+				add_trait = megalith_human
+			}
+			if = {
+			limit = {has_culture = culture:brythonic_mann}
+				add_trait = celtic_human
 			}
 			add_trait = celtic_human
 		}

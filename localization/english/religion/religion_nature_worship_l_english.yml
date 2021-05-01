@@ -87,3 +87,10 @@
  cult_of_life_adherent:0 "Pagan"
  cult_of_life_adherent_plural:0 "Pagans" 
  cult_of_life_desc:0 "Above all we worship the all mighty nature, which nourrishes us and provide us with anything we need."
+ 
+ #The manx_builders faith loc
+ manx_builders:0 "Manx Builders"
+ manx_builders_adj:0 "Manx Builders"
+ manx_builders_adherent:0 "Pagan"
+ manx_builders_adherent_plural:0 "Pagans" 
+ manx_builders_desc:0 "These persons believe that the ancient structures of Manx have been built by their ancestors with the help of the gods."

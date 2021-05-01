@@ -44,6 +44,7 @@ high_king_elective = { #high king Elective.
 				NOT = {
 					highest_held_title_tier <= 2
 				}
+				capital_county.title_province = { geographical_region = ireland_region }
 			}
 		}
 	}
@@ -80,6 +81,7 @@ high_king_elective = { #high king Elective.
 					highest_held_title_tier = 4
 					highest_held_title_tier = 5
 				}
+				capital_county.title_province = { geographical_region = ireland_region }
 			}
 		}
 		add = {

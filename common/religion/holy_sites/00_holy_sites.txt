@@ -158,3 +158,47 @@ tralee = {
 		stewardship = 1
 	}
 }
+
+#Manx religions
+ballaharra_stones = {
+	
+	county = c_balley_keeill_eoin
+	
+	character_modifier = {
+		name = holy_site_ballaharra_stones_effect_name
+		learning_per_piety_level = 1
+		monthly_learning_lifestyle_xp_gain_mult = 0.1		
+	}
+}
+
+kings_grave_site = {
+	
+	county = c_agneash
+	
+	character_modifier = {
+		name = holy_site_kings_grave_effect_name
+		monthly_county_control_change_factor = 0.1
+		prowess = 2
+	}
+}
+
+meayll_circle = {
+	
+	county = c_chiarn
+	
+	character_modifier = {
+		name = holy_site_meayll_circle_effect_name
+		county_opinion_add = 10
+	}
+}
+
+cashtal_yn_ard = {
+	
+	county = c_rhumsaa
+	
+	character_modifier = {
+		name = holy_site_cashtal_yn_ard_effect_name
+		monthly_prestige_gain_mult = 0.05
+		monthly_piety_gain_mult = 0.05
+	}
+}

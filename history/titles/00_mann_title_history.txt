@@ -1,0 +1,126 @@
+﻿#Chiarn 
+c_chiarn  = {
+              1.1.1 = { change_development_level = 12 }
+              4799.1.1 = {
+                            holder = 2000000
+              }
+}
+
+#Balley Chashtal 
+c_balley_chashtal  = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 2000000
+              }
+}
+
+#Peel 
+c_peel = {
+              1.1.1 = { change_development_level = 15 }
+              4799.1.1 = {
+                            holder = 2000001
+              }
+}
+
+#Keeill Eoin 
+c_balley_keeill_eoin  = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 2000002
+              }
+}
+
+#Ballagyr 
+c_ballagyr  = {
+              1.1.1 = { change_development_level = 14 }
+              4799.1.1 = {
+                            holder = 2000003
+              }
+}
+
+#Medall
+d_medall = {
+              4799.1.1 = {
+                            holder = 2000004
+              }
+}
+
+#Doolish 
+c_doolish  = {
+              1.1.1 = { change_development_level = 18 }
+              4799.1.1 = {
+                            holder = 2000004
+              }
+}
+
+#Kione Droghad 
+c_kione_droghad  = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 2000004
+              }
+}
+
+#Laksaa 
+c_laksaa  = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 2000005
+              }
+}
+
+#Kirk Michael 
+c_kirk_michael  = {
+              1.1.1 = { change_development_level = 9 }
+              4799.1.1 = {
+                            holder = 2000006
+              }
+}
+
+#Snaefell 
+c_snaefell  = {
+              1.1.1 = { change_development_level = 10 }
+              4799.1.1 = {
+                            holder = 2000007
+              }
+}
+
+#Rhumsaa 
+c_rhumsaa  = {
+              1.1.1 = { change_development_level = 4 }
+              4799.1.1 = {
+                            holder = 2000008
+              }
+}
+
+#Agneash 
+c_agneash  = {
+              1.1.1 = { change_development_level = 3 }
+              4799.1.1 = {
+                            holder = 2000007
+              }
+}
+
+#Inver Ayre
+d_inver_ayre = {
+              4799.1.1 = {
+                            holder = 2000009
+              }
+}
+
+#Skeerey Jorby 
+c_skeerey_jorby  = {
+              1.1.1 = { change_development_level = 13 }
+              4799.1.1 = {
+                            holder = 2000009
+              }
+}
+
+#Smeale 
+c_smeale  = {
+              1.1.1 = { change_development_level = 20 }
+              4799.1.1 = {
+                            holder = 2000009
+              }
+}
+

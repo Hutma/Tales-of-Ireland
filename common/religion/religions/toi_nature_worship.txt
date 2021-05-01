@@ -226,5 +226,18 @@
 			doctrine = tenet_pacifism
 			doctrine = tenet_animal_worship
 		}
+		manx_builders = {
+			color = { 125 90 80 }
+			icon = manx_builders
+			
+			holy_site = ballaharra_stones
+			holy_site = kings_grave_site
+			holy_site = meayll_circle
+			holy_site = cashtal_yn_ard
+			
+			doctrine = tenet_sun_worship
+			doctrine = tenet_sanctity_of_nature
+			doctrine = tenet_manx_legacy
+		}
 	}
 }

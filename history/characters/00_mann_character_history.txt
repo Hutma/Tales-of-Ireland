@@ -1,0 +1,300 @@
+﻿2000000 = {
+    name = "Petros"
+    dynasty =  207 
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy =  8 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  6 
+    learning =  12 
+    prowess =  12 
+
+    trait = education_martial_4
+    trait = brave
+    trait = patient
+    trait = wrathful
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4765.1.1 = {
+        birth = yes
+    }
+}
+2000001 = {
+    name = "Ualtar"
+    dynasty =  212 
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy =  1 
+    martial =  10 
+    stewardship =  10 
+    intrigue =  9 
+    learning =  1 
+    prowess =  5 
+
+    trait = education_martial_3
+    trait = arbitrary
+    trait = honest
+    trait = lazy
+    trait = fir_bolg
+
+    father=  2010002 
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+        add_pressed_claim = c_balley_keeill_eoin
+    }
+}
+2000002 = {
+    name = "Nonna"
+    dynasty =  212 
+    religion = manx_builders
+    culture = fir_bolg
+    female = yes
+
+    diplomacy =  12 
+    martial =  5 
+    stewardship =  7 
+    intrigue =  10 
+    learning =  1 
+    prowess =  6 
+
+    trait = education_learning_2
+    trait = temperate
+    trait = forgiving
+    trait = compassionate
+    trait = fir_bolg
+
+    father=  2010002 
+
+    disallow_random_traits = yes
+    4775.1.1 = {
+        birth = yes
+        add_pressed_claim = c_peel
+    }
+}
+2000003 = {
+    name = "Fuirechtach"
+    dynasty =  117 
+    religion = sea_dwellers
+    culture = dal_riata
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_3
+    trait = fickle
+    trait = arrogant
+    trait = diligent
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4778.1.1 = {
+        birth = yes
+    }
+}
+2000004 = {
+    name = "Artgal"
+    dynasty =  210 
+    religion = the_old_gods
+    culture = brythonic_mann
+
+    diplomacy =  1 
+    martial =  7 
+    stewardship =  2 
+    intrigue =  2 
+    learning =  10 
+    prowess =  3 
+
+    trait = education_learning_4
+    trait = diligent
+    trait = honest
+    trait = wrathful
+    trait = celtic_human
+
+    father=  2010001 
+
+    disallow_random_traits = yes
+    4753.1.1 = {
+        birth = yes
+    }
+}
+2000005 = {
+    name = "Dalbach"
+    dynasty =  210 
+    religion = fathers_of_manx
+    culture = brythonic_mann
+
+    diplomacy =  4 
+    martial =  2 
+    stewardship =  2 
+    intrigue =  8 
+    learning =  5 
+    prowess =  5 
+
+    trait = education_learning_4
+    trait = fickle
+    trait = forgiving
+    trait = compassionate
+    trait = celtic_human
+
+    father=  2010001 
+
+    disallow_random_traits = yes
+    4755.1.1 = {
+        birth = yes
+        add_pressed_claim = d_medall
+    }
+}
+2000006 = {
+    name = "Somhairle"
+    dynasty =  208 
+    religion = manx_builders
+    culture = bann_culture
+
+    diplomacy =  1 
+    martial =  6 
+    stewardship =  11 
+    intrigue =  4 
+    learning =  10 
+    prowess =  4 
+
+    trait = education_diplomacy_4
+    trait = stubborn
+    trait = arrogant
+    trait = ambitious
+    trait = megalithic_human
+
+    disallow_random_traits = yes
+    4757.1.1 = {
+        birth = yes
+    }
+}
+2000007 = {
+    name = "Endelient"
+    dynasty =  207 
+    religion = fathers_of_manx
+    culture = neagh_nemedians
+
+    diplomacy =  9 
+    martial =  11 
+    stewardship =  11 
+    intrigue =  1 
+    learning =  7 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = cynical
+    trait = arrogant
+    trait = generous
+    trait = nemedian
+
+    disallow_random_traits = yes
+    4763.1.1 = {
+        birth = yes
+    }
+}
+2000008 = {
+    name = "Ruarcc"
+    dynasty =  211 
+    religion = fathers_of_manx
+    culture = brythonic_mann
+
+    diplomacy =  4 
+    martial =  1 
+    stewardship =  3 
+    intrigue =  12 
+    learning =  1 
+    prowess =  4 
+
+    trait = education_martial_4
+    trait = arbitrary
+    trait = shy
+    trait = greedy
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4761.1.1 = {
+        birth = yes
+    }
+}
+2000009 = {
+    name = "Clemens"
+    dynasty =  209 
+    religion = manx_builders
+    culture = bann_culture
+
+    diplomacy =  2 
+    martial =  12 
+    stewardship =  8 
+    intrigue =  7 
+    learning =  5 
+    prowess =  2 
+
+    trait = education_intrigue_1
+    trait = gregarious
+    trait = lustful
+    trait = diligent
+    trait = megalithic_human
+
+    disallow_random_traits = yes
+    4779.1.1 = {
+        birth = yes
+    }
+}
+2010001 = {
+    name = "Findbarr"
+    dynasty =  210 
+    religion = fathers_of_manx
+    culture = brythonic_mann
+
+    diplomacy =  3 
+    martial =  1 
+    stewardship =  2 
+    intrigue =  4 
+    learning =  2 
+    prowess =  1 
+
+    trait = education_learning_1
+    trait = greedy
+    trait = impatient
+    trait = humble
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4730.1.1 = {
+        birth = yes
+    }
+}
+2010002 = {
+    name = "Ualtar"
+    dynasty =  212 
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy =  9 
+    martial =  6 
+    stewardship =  5 
+    intrigue =  2 
+    learning =  9 
+    prowess =  10 
+
+    trait = education_diplomacy_2
+    trait = just
+    trait = honest
+    trait = trusting
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4752.1.1 = {
+        birth = yes
+    }
+}

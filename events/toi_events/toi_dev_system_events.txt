@@ -56,9 +56,8 @@ cattle.0001 = {
 		ai_chance = {
 			base = 10
 			ai_value_modifier = {
-					ai_greed = 2
-					ai_honor = -1
-				}
+				ai_greed = 2
+				ai_honor = -1
 			}
 		}
 	}

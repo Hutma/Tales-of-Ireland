@@ -1041,3 +1041,34 @@
 	name = "Gobae"
 	culture = "de_danann"
 }
+
+#MANX
+207 = {
+	name = "Koloksai"
+	culture = "neagh_nemedians"	
+}
+
+208 = {
+	name = "mac Fergusa"
+	culture = "bann_culture"	
+}
+
+209 = {
+	name = "Conung"
+	culture = "bann_culture"	
+}
+
+210 = {
+	name = "Crovan"
+	culture = "brythonic_mann"	
+}
+
+211 = {
+	name = "Dubgaill"
+	culture = "brythonic_mann"	
+}
+
+212 = {
+	name = "Argead"
+	culture = "fir_bolg"	
+}

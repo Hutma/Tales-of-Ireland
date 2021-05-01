@@ -3,7 +3,9 @@
     dynasty =  202 
     religion = sidhe_beliefs
     culture = de_danann
-
+	
+	dna = 3_king_nuada
+	
     diplomacy =  8 
     martial =  12 
     stewardship =  8 

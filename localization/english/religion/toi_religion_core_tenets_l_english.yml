@@ -38,6 +38,9 @@
  tenet_old_gods_name:0 "Old gods"
  tenet_old_gods_desc:0 "The gods are ancients and many seem to have forgotten them, but we will not. Our gods were thhe first ones to walk the Earth, they are the true gods."
  
+ tenet_manx_legacy_name:0 "Manx Legacy"
+ tenet_manx_legacy_desc:0 "Our island's ancient megaliths, unique myths and rich history has granted us rituals and beliefs unlike anywhere else."
+ 
  doctrine_parameter_cattle_raiding_cb_disable:0 "Can not use [cattle_raiding_cb|E]"
  doctrine_parameter_purification_cb_enabled:0 "Can use the Purification casus belli"
  doctrine_parameter_to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"

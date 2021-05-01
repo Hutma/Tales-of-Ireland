@@ -3,7 +3,9 @@
     dynasty =  72 
     religion = ancient_greek_slave
     culture = fir_bolg
-
+	
+	dna = 5_king_rudraige
+	
     diplomacy =  1 
     martial =  10 
     stewardship =  10 
@@ -75,7 +77,7 @@
     }
 }
 540003 = {
-    name = "Sláine "
+    name = "Sláine"
     dynasty =  74 
     religion = ancient_greek_slave
     culture = fir_bolg

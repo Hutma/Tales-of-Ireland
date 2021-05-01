@@ -94,6 +94,22 @@ innovation_maa_ulster = {
 	flag = global_maa
 }
 
+innovation_maa_manx = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_mann
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_manx
+	unlock_maa = bowmen_manx
+	unlock_maa = light_horsemen_manx
+	unlock_maa = pikemen_unit_manx
+	unlock_maa = armored_footmen_manx
+	
+	flag = global_maa
+}
+
 #CULTURAL MAA
 innovation_maa_human = {
 	group = culture_group_regional
@@ -106,6 +122,7 @@ innovation_maa_human = {
 			this.culture_group = culture_group:toi_cruithin_group
 			this.culture_group = culture_group:toi_erainn_group
 			this.culture_group = culture_group:toi_laigin_group
+			this = culture:brythonic_mann
 		}
 	}
 
@@ -219,7 +236,10 @@ innovation_maa_meghalithic = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_meghalithic_group
+		OR = {
+			this.culture_group = culture_group:toi_meghalithic_group
+			this = culture:bann_culture
+		}
 	}
 
 	unlock_maa = newgrange_guardians

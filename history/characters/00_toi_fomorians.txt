@@ -580,7 +580,9 @@
     dynasty =  104 
     religion = dark_gods
     culture = underground_fomorians
-
+	
+	dna = 1_king_inzhay
+	
     diplomacy =  3 
     martial =  11 
     stewardship =  5 

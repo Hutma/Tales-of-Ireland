@@ -83,7 +83,14 @@
  pikemen_unit_ulster:0 "Ulster Pikemen"
  armored_footmen_ulster:0 "Ulster Armored Footmen"
  armored_horsemen_ulster:0 "Ulster Chariots"
-
+ 
+ light_footmen_manx:0 "Manx Light Footmen"
+ bowmen_manx:0 "Manx Bowmen"
+ light_horsemen_manx:0 "Manx Light Horsemen"
+ pikemen_unit_manx:0 "Manx Pikemen"
+ armored_footmen_manx:0 "Manx Armored Footmen"
+ armored_horsemen_manx:0 "Manx Chariots"
+ 
  #Cultural MaA
  bloody_warriors:0 "Bloody warriors"
  bloody_warriors_flavor:0 "Warriors of the Dark Gods, their brutality is unmatched.#!"

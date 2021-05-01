@@ -272,3 +272,14 @@ innovation_chariot_ulster = {
 	
 	flag = global_maa
 }
+
+innovation_chariot_manx = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_mann
+	icon = @maa_02
+
+	unlock_maa = armored_horsemen_manx
+	
+	flag = global_maa
+}

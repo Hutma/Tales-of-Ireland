@@ -492,7 +492,14 @@
  holy_site_first_arrival_bay_effect_name:0 "From [holy_site|E] #weak ($holy_site_first_arrival_bay_name$)#!"
  holy_site_tralee_name:0 "Tralee"
  holy_site_tralee_effect_name:0 "From [holy_site|E] #weak ($holy_site_tralee_name$)#!"
-
+ holy_site_ballaharra_stones_name:0 "Ballaharra Stones"
+ holy_site_tralee_effect_name:0 "From [holy_site|E] #weak ($holy_site_ballaharra_stones_name$)#!"
+ kings_grave_site_name:0 "King's Grave"
+ kings_grave_site_effect_name:0 "From [holy_site|E] #weak ($kings_grave_site_name$)#!"
+ holy_site_meayll_circle_name:0 "Meayll Circle"
+ holy_site_meayll_circle_effect_name:0 "From [holy_site|E] #weak ($holy_site_meayll_circle_name$)#!"
+ holy_site_cashtal_yn_ard_name:0 "Cashtal yn Ard"
+ holy_site_cashtal_yn_ard_effect_name:0 "From [holy_site|E] #weak ($holy_site_cashtal_yn_ard_name$)#!"
 
  rf_overworld:0 "Otherworld"
  rf_pagan:0 "Pagan"

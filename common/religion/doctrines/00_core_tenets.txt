@@ -2704,5 +2704,33 @@
 			
 		}
 	}
+	
+	tenet_manx_legacy = {
+		icon = core_tenet_shadyfigure
+		is_shown = {
+			always = no
+		}
+		can_pick = {
+			always = yes
+		}
+
+		piety_cost = {
+			value = faith_tenet_cost_high
+		}
+
+		parameters = {
+			reincarnation_resistance_to_conversion = yes	
+		}
+
+		character_modifier = {
+			embarkation_cost_mult = -0.15
+			stewardship_per_piety_level = 1
+			holding_build_gold_cost = -0.25
+		}
+
+		traits = {
+			
+		}
+	}
 }
 

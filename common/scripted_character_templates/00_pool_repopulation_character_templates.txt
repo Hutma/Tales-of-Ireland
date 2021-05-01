@@ -203,6 +203,14 @@ pool_repopulate_prowess = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
 		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
 		add_trait = celtic_human
 	}
 ###TALES OF IRELAND###
