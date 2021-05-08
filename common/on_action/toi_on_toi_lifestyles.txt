@@ -57,28 +57,37 @@
 		if = {
 			limit = {
 				any_vassal = {
-					count >= 3
+					count >= 1
 					is_powerful_vassal = yes
-					opinion = {
-						taget = liege
-						value >= 5
-					}
+					exists = yes
 				}
 			}
-			add_tales_of_abundance_lifestyle_xp = 5
-		}
-		if = {
-			limit = {
-				any_vassal = {
-					count >= 4
-					is_powerful_vassal = yes
-					opinion = {
-						taget = liege
-						value >= 20
+			if = {
+				limit = {
+					any_vassal = {
+						count >= 3
+						is_powerful_vassal = yes
+						opinion = {
+							target = liege
+							value >= 5
+						}
 					}
 				}
+				add_tales_of_abundance_lifestyle_xp = 5
 			}
-			add_tales_of_abundance_lifestyle_xp = 10
+			if = {
+				limit = {
+					any_vassal = {
+						count >= 4
+						is_powerful_vassal = yes
+						opinion = {
+							target = liege
+							value >= 20
+						}
+					}
+				}
+				add_tales_of_abundance_lifestyle_xp = 10
+			}
 		}
 		#High Cattle
 		if = {

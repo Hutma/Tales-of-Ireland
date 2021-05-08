@@ -2,7 +2,7 @@
 # History database id:260000
 bookmark_fall_of_milesians_loegaire={
 	type=male
-	id=89
+	id=90
 	age=0.490000
 	genes={ 		hair_color={ 189 109 176 201 }
  		skin_color={ 71 90 76 90 }
@@ -14,7 +14,7 @@ bookmark_fall_of_milesians_loegaire={
  		gene_eye_depth={ "eye_depth_neg" 114 "eye_depth_pos" 161 }
  		gene_eye_height={ "eye_height_pos" 131 "eye_height_neg" 120 }
  		gene_eye_distance={ "eye_distance_neg" 123 "eye_distance_pos" 127 }
- 		gene_eye_shut={ "eye_shut_neg" 109 "eye_shut_pos" 133 }
+ 		gene_eye_shut={ "eye_shut_neg" 54 "eye_shut_pos" 133 }
  		gene_forehead_angle={ "forehead_angle_neg" 102 "forehead_angle_neg" 118 }
  		gene_forehead_brow_height={ "forehead_brow_height_pos" 149 "forehead_brow_height_neg" 102 }
  		gene_forehead_roundness={ "forehead_roundness_pos" 129 "forehead_roundness_neg" 117 }
@@ -53,7 +53,7 @@ bookmark_fall_of_milesians_loegaire={
  		gene_bs_eye_upper_lid_size={ "eye_upper_lid_size_pos" 141 "eye_upper_lid_size_pos" 163 }
  		gene_bs_forehead_brow_curve={ "forehead_brow_curve_pos" 33 "forehead_brow_curve_neg" 46 }
  		gene_bs_forehead_brow_forward={ "forehead_brow_forward_neg" 68 "forehead_brow_forward_pos" 9 }
- 		gene_bs_forehead_brow_inner_height={ "forehead_brow_inner_height_pos" 102 "forehead_brow_inner_height_pos" 23 }
+ 		gene_bs_forehead_brow_inner_height={ "forehead_brow_inner_height_pos" 127 "forehead_brow_inner_height_pos" 23 }
  		gene_bs_forehead_brow_outer_height={ "forehead_brow_outer_height_neg" 44 "forehead_brow_outer_height_pos" 102 }
  		gene_bs_forehead_brow_width={ "forehead_brow_width_neg" 34 "forehead_brow_width_pos" 20 }
  		gene_bs_jaw_def={ "jaw_def_pos" 109 "jaw_def_neg" 93 }
@@ -91,13 +91,13 @@ bookmark_fall_of_milesians_loegaire={
  		face_detail_nose_tip_def={ "nose_tip_def" 20 "nose_tip_def" 254 }
  		face_detail_temple_def={ "temple_def" 185 "temple_def" 223 }
  		expression_brow_wrinkles={ "brow_wrinkles_02" 255 "brow_wrinkles_01" 152 }
- 		expression_eye_wrinkles={ "eye_wrinkles_01" 154 "eye_wrinkles_01" 157 }
- 		expression_forehead_wrinkles={ "forehead_wrinkles_01" 61 "forehead_wrinkles_02" 160 }
- 		expression_other={ "cheek_wrinkles_both_01" 29 "cheek_wrinkles_both_01" 0 }
+ 		expression_eye_wrinkles={ "eye_wrinkles_01" 255 "eye_wrinkles_01" 157 }
+ 		expression_forehead_wrinkles={ "forehead_wrinkles_01" 179 "forehead_wrinkles_02" 160 }
+ 		expression_other={ "cheek_wrinkles_both_01" 78 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_7" 105 "complexion_1" 155 }
  		gene_height={ "normal_height" 137 "normal_height" 103 }
- 		gene_bs_body_type={ "body_fat_head_fat_full" 121 "body_fat_head_fat_low" 113 }
- 		gene_bs_body_shape={ "body_shape_average_clothed" 132 "body_shape_rectangle_full" 34 }
+ 		gene_bs_body_type={ "body_fat_head_fat_full" 114 "body_fat_head_fat_low" 113 }
+ 		gene_bs_body_shape={ "body_shape_average_clothed" 255 "body_shape_rectangle_full" 34 }
  		gene_bs_bust={ "bust_clothes" 68 "bust_default" 185 }
  		gene_age={ "old_3" 186 "old_2" 118 }
  		gene_eyebrows_shape={ "far_spacing_lower_thickness" 122 "far_spacing_high_thickness" 150 }
@@ -109,13 +109,14 @@ bookmark_fall_of_milesians_loegaire={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 157 "normal_eyelashes" 157 }
  		pose={ "" 255 "" 0 }
- 		cloaks={ "fp1_cloak" 41 "no_cloak" 0 }
+ 		beards={ "no_beard" 120 "no_beard" 0 }
+ 		cloaks={ "fp1_cloak" 101 "no_cloak" 0 }
  		gene_bs_cloak={ "cloak" 255 "no_cloak" 0 }
- 		clothes={ "western_royalty_clothes" 75 "most_clothes" 0 }
- 		hairstyles={ "western_hairstyles_curly" 224 "all_hairstyles" 0 }
- 		headgear={ "western_high_nobility" 100 "no_headgear" 0 }
- 		legwear={ "western_common_legwear" 150 "all_legwear" 0 }
+ 		clothes={ "western_royalty_clothes" 240 "most_clothes" 0 }
+ 		hairstyles={ "western_hairstyles_curly" 245 "all_hairstyles" 0 }
+ 		headgear={ "western_high_nobility" 87 "no_headgear" 0 }
+ 		legwear={ "western_common_legwear" 108 "all_legwear" 0 }
  }
-	entity={ 2268070609 2268070609 }
+	entity={ 1903276529 1903276529 }
 }
 

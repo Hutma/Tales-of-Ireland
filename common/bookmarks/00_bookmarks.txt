@@ -87,3 +87,89 @@
 		animation = personality_bold
 	}
 }
+
+
+bm_manxs_fate = {
+	start_date = 4800.1.1
+	is_playable = yes
+	character = {
+		name = "bookmark_manxs_fate_caoimhin"
+		dynasty = 207
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 2000000
+		birth = 4765.1.1
+		title = c_chiarn
+		government = feudal_government
+		culture = fir_bolg
+		religion = ancient_greek_slave
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		position = { 425 775 }
+
+		animation = war_attacker
+	}
+	character = {
+		name = "bookmark_manxs_fate_fuirechtach"
+		dynasty = 117
+		dynasty_splendor_level = 3
+		type = male
+		history_id = 2000003
+		birth = 4778.1.1
+		title = c_ballagyr
+		government = feudal_government
+		culture = dal_riata
+		religion = sea_dwellers
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 450 450 }
+
+		animation = personality_bold
+	}
+	character = {
+		name = "bookmark_manxs_fate_artgal"
+		dynasty = 210
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 2000004
+		birth = 4753.1.1
+		title = d_medall
+		government = feudal_government
+		culture = brythonic_mann
+		religion = the_old_gods
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 870 775 }
+
+		animation = personality_rational
+	}
+	character = {
+		name = "bookmark_manxs_fate_endelient"
+		dynasty = 207
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 2000007
+		birth = 4763.1.1
+		title = c_snaefell
+		government = feudal_government
+		culture = neagh_nemedians
+		religion = fathers_of_manx
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 950 500 }
+
+		animation = personality_honorable
+	}
+	character = {
+		name = "bookmark_manxs_fate_clemens"
+		dynasty = 209
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 2000009
+		birth = 4779.1.1
+		title = d_inver_ayre
+		government = feudal_government
+		culture = bann_culture
+		religion = manx_builders
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 700 200 }
+
+		animation = personality_vengeful
+	}
+}

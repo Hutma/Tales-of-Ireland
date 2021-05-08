@@ -84,12 +84,12 @@
  armored_footmen_ulster:0 "Ulster Armored Footmen"
  armored_horsemen_ulster:0 "Ulster Chariots"
  
- light_footmen_manx:0 "Manx Light Footmen"
- bowmen_manx:0 "Manx Bowmen"
- light_horsemen_manx:0 "Manx Light Horsemen"
- pikemen_unit_manx:0 "Manx Pikemen"
- armored_footmen_manx:0 "Manx Armored Footmen"
- armored_horsemen_manx:0 "Manx Chariots"
+ light_footmen_manx:0 "Mannin Light Footmen"
+ bowmen_manx:0 "Mannin Bowmen"
+ light_horsemen_manx:0 "Mannin Light Horsemen"
+ pikemen_unit_manx:0 "Mannin Pikemen"
+ armored_footmen_manx:0 "Mannin Armored Footmen"
+ armored_horsemen_manx:0 "Mannin Chariots"
  
  #Cultural MaA
  bloody_warriors:0 "Bloody warriors"
@@ -126,3 +126,39 @@
  armored_footmen_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
  pikemen_unit_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
  armored_horsemen_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
+ 
+ #TALES OF IRELAND FLAVOR
+ bowmen_leinster_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ light_footmen_leinster_flavor:1 "#F Veteran skirmishers are invaluable harriers, disrupting enemy flanks and chipping away at morale.#!"
+ light_horsemen_leinster_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routing enemies.#!"
+ armored_footmen_leinster_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ pikemen_unit_leinster_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
+ armored_horsemen_leinster_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
+ 
+ bowmen_munster_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ light_footmen_munster_flavor:1 "#F Veteran skirmishers are invaluable harriers, disrupting enemy flanks and chipping away at morale.#!"
+ light_horsemen_munster_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routing enemies.#!"
+ armored_footmen_munster_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ pikemen_unit_munster_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
+ armored_horsemen_munster_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
+ 
+ bowmen_connacht_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ light_footmen_connacht_flavor:1 "#F Veteran skirmishers are invaluable harriers, disrupting enemy flanks and chipping away at morale.#!"
+ light_horsemen_connacht_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routing enemies.#!"
+ armored_footmen_connacht_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ pikemen_unit_connacht_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
+ armored_horsemen_connacht_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
+ 
+ bowmen_ulster_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ light_footmen_ulster_flavor:1 "#F Veteran skirmishers are invaluable harriers, disrupting enemy flanks and chipping away at morale.#!"
+ light_horsemen_ulster_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routing enemies.#!"
+ armored_footmen_ulster_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ pikemen_unit_ulster_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
+ armored_horsemen_ulster_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"
+ 
+ bowmen_manx_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ light_footmen_manx_flavor:1 "#F Veteran skirmishers are invaluable harriers, disrupting enemy flanks and chipping away at morale.#!"
+ light_horsemen_manx_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routing enemies.#!"
+ armored_footmen_manx_flavor:1 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ pikemen_unit_manx_flavor:0 "#F Long pikes allow these regiments to form walls of spikes that can stop a cavalry charge dead.#!"
+ armored_horsemen_manx_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"

@@ -56,4 +56,6 @@
  d_maayl:0 "Maayl"
  d_garff:0 "Garff"
  d_inver_ayre:0 "Inver Ayre"
- k_mann:0 "Manx"
+ k_mann:0 "Mannin"
+ k_mann_west:0 "Western Mannin"
+ k_mann_east:0 "Eastern Mannin"

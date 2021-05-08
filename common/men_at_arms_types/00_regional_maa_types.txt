@@ -836,7 +836,7 @@ bowmen_manx = {
 
 	buy_cost = { gold = bowmen_recruitment_cost }
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
-	high_maintenance_cost = { gold = archers_high_mann_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_mann_maint_cost }
 	
 	mercenary_fallback = yes
 	holy_order_fallback = yes

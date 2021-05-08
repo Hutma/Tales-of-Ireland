@@ -1,0 +1,295 @@
+﻿unite_manx_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	desc = unite_manx_decision_desc
+	
+	major = yes
+	ai_goal = yes
+
+	is_shown = {
+		AND  = {
+			capital_county.title_province = { geographical_region = region_mann }
+			NOT = {	#You can only do it once.
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:united_manx_decision
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			is_independent_ruler = yes
+			completely_controls = title:k_mann_west
+			completely_controls = title:k_mann_east
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 50
+		prestige = 250
+	}
+
+	effect = {
+		unite_manx_decision_scripted_effect = yes
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:united_manx_decision
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+control_over_manx_legacy_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	
+	desc = control_over_manx_legacy_decision_desc
+	
+	major = yes
+	ai_check_interval = 80
+	
+	cooldown = { years = 30 }
+
+	is_shown = {
+		AND  = {
+			capital_county.title_province = { geographical_region = region_mann }
+			NOT = {
+				exists = title:k_mann.holder
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			is_independent_ruler = yes
+			OR = {
+				AND = {
+					completely_controls = title:c_chiarn
+					completely_controls = title:c_balley_keeill_eoin
+				}
+				AND = {
+					completely_controls = title:c_agneash
+					completely_controls = title:c_rhumsaa
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 50
+		prestige = 250
+	}
+
+	effect = {
+		army_of_manx_effect = yes		
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+a_claim_in_manx_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	
+	desc = a_claim_in_manx_decision_desc
+	
+	major = yes
+	ai_check_interval = 80
+	
+	cooldown = { years = 20 }
+
+	is_shown = {
+		AND  = {
+			capital_county.title_province = { geographical_region = region_mann }
+			NOT = {
+				exists = title:k_mann.holder
+			}
+		}
+	}
+
+	is_valid = {
+		AND = {
+			is_independent_ruler = yes
+			prestige_level >= 2
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 20
+		prestige = 100
+	}
+
+	effect = {
+		custom_description = {
+			text = a_claim_in_manx_decision_random_manx_county
+		}
+		hidden_effect = {
+			every_county_in_region = {
+				region = region_mann
+				limit = {
+					NOT = { this.holder.top_liege = root }
+				}
+				add_to_list = possible_claimed_county
+			}
+			random_in_list = {
+				list = possible_claimed_county
+				save_scope_as = claimed_county
+			}
+			root = {
+				add_pressed_claim = scope:claimed_county
+			}
+			#Declare war if less powerful
+			if = {
+				limit = {
+					scope:claimed_county.holder.top_liege.max_military_strength < root.max_military_strength
+				}
+				trigger_event = {
+					id = toi_mann.0001
+					days = 1
+				}
+			}
+			random_list = {
+				50 = {
+					
+				}
+				10 = {
+					modifier = {
+						add = 20
+						root = {
+							prestige_level >= 2
+						}
+					}
+					modifier = {
+						add = 20
+						root = {
+							OR = {
+								has_trait = education_martial_1
+								has_trait = education_martial_2
+								has_trait = education_martial_3
+								has_trait = education_martial_4
+							}
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0002 #A knight joins you
+						days = { 3 10 }
+					}
+				}
+				10 = {
+					modifier = {
+						add = 20
+						root = {
+							highest_held_title_tier >= 3
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0003 #A ruler of Mann rivals you or become friend
+						days = { 3 10 }
+					}
+				}
+				10 = {
+					modifier = {
+						add = 20
+						root = {
+							piety_level >= 2
+						}
+					}
+					modifier = {
+						add = 20
+						root = {
+							OR = {
+								has_trait = education_learning_1
+								has_trait = education_learning_2
+								has_trait = education_learning_3
+								has_trait = education_learning_4
+							}
+						}
+					}
+					random_list = {
+						50 = {
+							trigger_event = {
+								id = toi_mann.0004 #encounter the Buggane
+								days = { 3 10 }
+							}
+						}
+						30 = {
+							trigger_event = {
+								id = toi_mann.0005 #encounter the Fenodyree
+								days = { 3 10 }
+							}
+						}
+						20 = {
+							trigger_event = {
+								id = toi_mann.0006 #encounter the Glashtyn 
+								days = { 3 10 }
+							}
+						}
+					}
+				50 = {
+					random_list = {
+						10 = {
+							trigger_event = {
+								id = toi_mann.0007 #gain prestige
+								days = { 3 10 }
+							}
+						}
+						10 = {
+							trigger_event = {
+								id = toi_mann.0008 #gain piety
+								days = { 3 10 }
+							}
+						}
+						10 = {
+							trigger_event = {
+								id = toi_mann.0009 #lose prestige 
+								days = { 3 10 }
+							}
+						}
+						10 = {
+							trigger_event = {
+								id = toi_mann.0010 #lose piety 
+								days = { 3 10 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

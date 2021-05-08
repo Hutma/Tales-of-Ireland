@@ -2,7 +2,7 @@
 # History database id:450124
 bookmark_fall_of_milesians_inzhay={
 	type=male
-	id=204
+	id=211
 	age=0.360000
 	genes={ 		hair_color={ 16 240 16 240 }
  		skin_color={ 46 255 46 101 }
@@ -95,9 +95,9 @@ bookmark_fall_of_milesians_inzhay={
  		expression_forehead_wrinkles={ "forehead_wrinkles_01" 170 "forehead_wrinkles_01" 170 }
  		expression_other={ "cheek_wrinkles_both_01" 0 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_ugly_1" 255 "complexion_2" 179 }
- 		gene_height={ "normal_height" 163 "normal_height" 138 }
- 		gene_bs_body_type={ "body_fat_head_fat_low" 93 "body_fat_head_fat_low" 136 }
- 		gene_bs_body_shape={ "body_shape_average_clothed" 158 "body_shape_triangle_half" 46 }
+ 		gene_height={ "normal_height" 188 "normal_height" 138 }
+ 		gene_bs_body_type={ "body_fat_head_fat_low" 123 "body_fat_head_fat_low" 136 }
+ 		gene_bs_body_shape={ "body_shape_average_clothed" 255 "body_shape_triangle_half" 46 }
  		gene_bs_bust={ "bust_clothes" 82 "bust_shape_3_full" 82 }
  		gene_age={ "old_4" 64 "old_4" 64 }
  		gene_eyebrows_shape={ "avg_spacing_avg_thickness" 175 "avg_spacing_avg_thickness" 175 }
@@ -109,12 +109,13 @@ bookmark_fall_of_milesians_inzhay={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "asian_eyelashes" 31 "asian_eyelashes" 31 }
  		pose={ "" 255 "" 0 }
- 		cloaks={ "fp1_cloak" 113 "no_cloak" 0 }
+ 		beards={ "thin_beards_straight" 8 "no_beard" 0 }
+ 		cloaks={ "fp1_cloak" 8 "no_cloak" 0 }
  		gene_bs_cloak={ "cloak" 255 "no_cloak" 0 }
- 		clothes={ "western_royalty_clothes" 210 "most_clothes" 0 }
- 		hairstyles={ "western_hairstyles_straight" 116 "all_hairstyles" 0 }
- 		headgear={ "western_high_nobility" 103 "no_headgear" 0 }
- 		legwear={ "western_common_legwear" 116 "all_legwear" 0 }
+ 		clothes={ "western_royalty_clothes" 162 "most_clothes" 0 }
+ 		hairstyles={ "western_hairstyles_straight" 43 "all_hairstyles" 0 }
+ 		headgear={ "western_high_nobility" 55 "no_headgear" 0 }
+ 		legwear={ "western_common_legwear" 43 "all_legwear" 0 }
  }
 	entity={ 979141817 979141817 }
 }

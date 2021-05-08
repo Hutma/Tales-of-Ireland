@@ -169,7 +169,7 @@ hy_brasylian_invasion_effect = {
 			men_at_arms = {
 				type = hy_brazylian_adventurers
 				stacks = {
-					value = 2
+					value = 3
 					add = scope:adventurer_target.holder.top_liege.primary_title.tier
 				}
 			}

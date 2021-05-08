@@ -288,3 +288,179 @@ wonder_dun_duchathair_02 = {
 		base = 100
 	}
 }
+
+#MANX WONDERS
+#King's grave
+wonder_king_grave_01 = {
+	type_icon = "icon_structure_king_orry_grave.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		diplomacy_per_piety_level = 1
+		monthly_prestige = 0.5
+	}
+	province_modifier = {
+		development_growth = 0.25
+	}
+
+	next_building = wonder_king_grave_02
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+wonder_king_grave_02 = {
+	type_icon = "icon_structure_king_orry_grave.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = expensive_building_tier_2_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_house_soldiers
+			has_innovation = innovation_development_01
+		}
+		has_title = title:k_mann
+	}
+	
+	character_modifier = {
+		diplomacy_per_piety_level = 1
+		monthly_prestige = 0.8
+	}
+	province_modifier = {
+		development_growth = 0.5
+	}
+
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#ballaharra_stones
+wonder_ballaharra_stones_01 = {
+	type_icon = "icon_structure_stone_cricle.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		same_faith_opinion = 5
+		faith_creation_piety_cost_mult = -0.2
+	}
+	county_modifier = {
+		tax_mult = 0.1
+	}
+
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#meayll_circle
+wonder_meayll_circle_01 = {
+	type_icon = "icon_structure_stone_cricle.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}
+
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#cashtal_yn_ard
+wonder_cashtal_yn_ard_01 = {
+	type_icon = "icon_structure_king_orry_grave.dds"
+	asset = {
+
+	}
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		naval_speed = 0.15
+	}
+	county_modifier = {
+		levy_size = 0.15
+		defender_advantage = 5
+		
+	}
+	garrison = 35
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
