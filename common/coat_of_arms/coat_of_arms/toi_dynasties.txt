@@ -37,3 +37,35 @@
 		texture = "k_cork_coa.dds"
 	}
 }
+
+207 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_snaefell_coa.dds"
+	}
+}
+
+117 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_ballagyr_coa.dds"
+	}
+}
+
+210 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_medall_coa.dds"
+	}
+}
+
+209 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_inver_ayre_coa.dds"
+	}
+}

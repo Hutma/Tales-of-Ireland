@@ -7,6 +7,10 @@
               culture = fir_bolg
               religion = ancient_greek_slave
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_meayll_circle_01
+				special_building = wonder_meayll_circle_01
+			}
 }
 
 4423 = {      #Creneash (b_creneash)
@@ -62,6 +66,10 @@
               culture = fir_bolg
               religion = manx_builders
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_ballaharra_stones_01
+				special_building = wonder_ballaharra_stones_01
+			}
 }
 
 4431 = {      #Greeba (b_greeba)
@@ -181,6 +189,10 @@
               culture = brythonic_mann
               religion = fathers_of_manx
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_cashtal_yn_ard_01
+				special_building = wonder_cashtal_yn_ard_01
+			}
 }
 
 4448 = {      #Maghal (b_maghal)
@@ -201,6 +213,10 @@
               culture = brythonic_mann
               religion = fathers_of_manx
               holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_king_grave_01
+				special_building = wonder_king_grave_01
+			}
 }
 
 4451 = {      #Verandah (b_verandah)

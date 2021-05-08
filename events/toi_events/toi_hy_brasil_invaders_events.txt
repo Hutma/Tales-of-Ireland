@@ -107,7 +107,6 @@ toi_hybrazil.0002 = {
 #Hy Brasylian hidden triggers 0003
 toi_hybrazil.1003 = {
 	hidden = yes
-	type = empty
 	
 	immediate = {
 		every_ruler = {

@@ -2,7 +2,7 @@
 # History database id:600000
 bookmark_fall_of_milesians_oscar={
 	type=male
-	id=388
+	id=400
 	age=0.180000
 	genes={ 		hair_color={ 193 174 197 191 }
  		skin_color={ 59 85 49 82 }
@@ -93,11 +93,11 @@ bookmark_fall_of_milesians_oscar={
  		expression_brow_wrinkles={ "brow_wrinkles_03" 203 "brow_wrinkles_02" 251 }
  		expression_eye_wrinkles={ "eye_wrinkles_01" 255 "eye_wrinkles_03" 213 }
  		expression_forehead_wrinkles={ "forehead_wrinkles_01" 133 "forehead_wrinkles_03" 221 }
- 		expression_other={ "cheek_wrinkles_both_01" 33 "cheek_wrinkles_both_01" 0 }
+ 		expression_other={ "cheek_wrinkles_both_01" 84 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_2" 247 "complexion_5" 126 }
  		gene_height={ "normal_height" 123 "normal_height" 114 }
- 		gene_bs_body_type={ "body_fat_head_fat_medium" 122 "body_fat_head_fat_medium" 148 }
- 		gene_bs_body_shape={ "body_shape_average_clothed" 80 "body_shape_hourglass_half" 0 }
+ 		gene_bs_body_type={ "body_fat_head_fat_medium" 110 "body_fat_head_fat_medium" 148 }
+ 		gene_bs_body_shape={ "body_shape_average_clothed" 161 "body_shape_hourglass_half" 0 }
  		gene_bs_bust={ "bust_clothes" 130 "bust_shape_4_full" 189 }
  		gene_age={ "old_1" 229 "old_1" 214 }
  		gene_eyebrows_shape={ "far_spacing_low_thickness" 141 "avg_spacing_avg_thickness" 178 }
@@ -109,13 +109,14 @@ bookmark_fall_of_milesians_oscar={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 30 "normal_eyelashes" 30 }
  		pose={ "" 255 "" 0 }
- 		cloaks={ "fp1_cloak" 84 "no_cloak" 0 }
+ 		beards={ "no_beard" 145 "no_beard" 0 }
+ 		cloaks={ "fp1_cloak" 103 "no_cloak" 0 }
  		gene_bs_cloak={ "cloak" 255 "no_cloak" 0 }
- 		clothes={ "western_royalty_clothes" 8 "most_clothes" 0 }
- 		hairstyles={ "western_hairstyles_curly" 229 "all_hairstyles" 0 }
- 		headgear={ "western_high_nobility" 174 "no_headgear" 0 }
- 		legwear={ "western_common_legwear" 158 "all_legwear" 0 }
+ 		clothes={ "western_royalty_clothes" 21 "most_clothes" 0 }
+ 		hairstyles={ "western_hairstyles_curly" 25 "all_hairstyles" 0 }
+ 		headgear={ "western_high_nobility" 172 "no_headgear" 0 }
+ 		legwear={ "western_common_legwear" 90 "all_legwear" 0 }
  }
-	entity={ 2268070609 2268070609 }
+	entity={ 1663114784 1663114784 }
 }
 

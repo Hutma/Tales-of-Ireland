@@ -33180,6 +33180,17 @@ k_mann = {
 	ai_primary_priority = {
 
 	}
+}
+
+k_mann_west = {
+	color = { 163 38 38 }
+	color2 = { 255 255 255 }
+	
+	capital = c_smeale
+	
+	ai_primary_priority = {
+
+	}
 	
 	d_rosien = {
 		color = { 130 10 0 }
@@ -33290,6 +33301,99 @@ k_mann = {
 			}
 		}
 	}
+	d_inver_ayre = {
+		color = { 212 51 51 }
+		color2 = { 255 255 255 }
+		
+		capital = c_smeale
+		c_skeerey_jorby = {
+			color = { 201 46 46 }
+			color2 = { 255 255 255 }
+			
+			b_skeerey_jorby = {
+				province = 4452
+				
+				color = { 201 46 46 }
+				color2 = { 255 255 255 }
+			}
+			b_crawyn = {
+				province = 4453
+				
+				color = { 201 46 46 }
+				color2 = { 255 255 255 }
+			}
+			b_sulby = {
+				province = 4454
+				
+				color = { 201 46 46 }
+				color2 = { 255 255 255 }
+			}
+		}
+		c_kirk_michael = {
+			color = { 138 26 45 }
+			color2 = { 255 255 255 }
+			
+			b_kirk_michael = {
+				province = 4441
+				
+				color = { 138 26 45 }
+				color2 = { 255 255 255 }
+			}
+			b_orrisdale = {
+				province = 4442
+				
+				color = { 138 26 45 }
+				color2 = { 255 255 255 }
+			}
+			b_balley_ny_loughey = {
+				province = 4443
+				
+				color = { 138 26 45 }
+				color2 = { 255 255 255 }
+			}
+		}
+		c_smeale = {
+			color = { 163 38 38 }
+			color2 = { 255 255 255 }
+			
+			b_smeale = {
+				province = 4455
+				
+				color = { 163 38 38 }
+				color2 = { 255 255 255 }
+			}
+			b_ayre = {
+				province = 4456
+				
+				color = { 163 38 38 }
+				color2 = { 255 255 255 }
+			}
+			b_cranstal = {
+				province = 4457
+				
+				color = { 163 38 38 }
+				color2 = { 255 255 255 }
+			}
+			b_andreas = {
+				province = 4458
+				
+				color = { 163 38 38 }
+				color2 = { 255 255 255 }
+			}
+		}
+	}
+}
+
+k_mann_east = {
+	color = { 158 79 19 }
+	color2 = { 255 255 255 }
+	
+	capital = c_doolish
+	
+	ai_primary_priority = {
+
+	}
+	
 	d_medall = {
 		color = { 150 65 0 }
 		color2 = { 255 255 255 }
@@ -33355,29 +33459,6 @@ k_mann = {
 				province = 4440
 				
 				color = { 171 10 37 }
-				color2 = { 255 255 255 }
-			}
-		}
-		c_kirk_michael = {
-			color = { 138 26 45 }
-			color2 = { 255 255 255 }
-			
-			b_kirk_michael = {
-				province = 4441
-				
-				color = { 138 26 45 }
-				color2 = { 255 255 255 }
-			}
-			b_orrisdale = {
-				province = 4442
-				
-				color = { 138 26 45 }
-				color2 = { 255 255 255 }
-			}
-			b_balley_ny_loughey = {
-				province = 4443
-				
-				color = { 138 26 45 }
 				color2 = { 255 255 255 }
 			}
 		}
@@ -33447,64 +33528,6 @@ k_mann = {
 				province = 4451
 				
 				color = { 148 30 63 }
-				color2 = { 255 255 255 }
-			}
-		}
-	}
-	d_inver_ayre = {
-		color = { 212 51 51 }
-		color2 = { 255 255 255 }
-		
-		capital = c_skeerey_jorby
-		c_skeerey_jorby = {
-			color = { 201 46 46 }
-			color2 = { 255 255 255 }
-			
-			b_skeerey_jorby = {
-				province = 4452
-				
-				color = { 201 46 46 }
-				color2 = { 255 255 255 }
-			}
-			b_crawyn = {
-				province = 4453
-				
-				color = { 201 46 46 }
-				color2 = { 255 255 255 }
-			}
-			b_sulby = {
-				province = 4454
-				
-				color = { 201 46 46 }
-				color2 = { 255 255 255 }
-			}
-		}
-		c_smeale = {
-			color = { 163 38 38 }
-			color2 = { 255 255 255 }
-			
-			b_smeale = {
-				province = 4455
-				
-				color = { 163 38 38 }
-				color2 = { 255 255 255 }
-			}
-			b_ayre = {
-				province = 4456
-				
-				color = { 163 38 38 }
-				color2 = { 255 255 255 }
-			}
-			b_cranstal = {
-				province = 4457
-				
-				color = { 163 38 38 }
-				color2 = { 255 255 255 }
-			}
-			b_andreas = {
-				province = 4458
-				
-				color = { 163 38 38 }
 				color2 = { 255 255 255 }
 			}
 		}
