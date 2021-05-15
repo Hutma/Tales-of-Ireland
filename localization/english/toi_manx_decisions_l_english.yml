@@ -16,3 +16,13 @@
  A_CLAIM_IN_MANX_DECISION_RANDOM_MANX_COUNTY_GLOB:0 "You gain a claim on a random county of Mannin"
  a_claim_in_manx_decision_tooltip:0 "Prepare the armies"
  a_claim_in_manx_decision_confirm:0 "Prepare the armies"
+ 
+ fir_mannin_decision:0 "Establish Fir Mannin culture"
+ fir_mannin_decision_desc:0 "Our old traditions have been altered by the ways of Mannin. We should look to the locals and see what we can learn from them."
+ fir_mannin_decision_tooltip:0 "We are the Fir Mannin"
+ fir_mannin_decision_confirm:0 "We are the Fir Mannin"
+ 
+ visit_ballaharra_stones_decision:0 "Visit Ballaharra Stones"
+ visit_ballaharra_stones_decision_desc:0 "Even if Mannin is now united there is still a lot that the gods can tell us about our future."
+ visit_ballaharra_stones_decision_tooltip:0 "I will talk with the gods"
+ visit_ballaharra_stones_decision_confirm:0 "I will talk with the gods"

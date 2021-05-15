@@ -61,6 +61,7 @@
  real_gods_witchgodname:0 "The Morrigan"
  
  real_gods_priest_plural:0 "Druid"
+ real_gods_legacy_mother_earth_father_sky:0 "The Tuatha"
  
  #The celtic_de_danann_worship_worship faith loc
  celtic_de_danann_worship:0 "Celtic Tuatha Dé Danann Worship"

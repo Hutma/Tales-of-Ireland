@@ -1576,3 +1576,29 @@ cunning_fighter = {
 		}
 	}
 }
+
+###OTHER TRAITS###
+wolfwalker = {
+	index = 1035
+	icon = wolfwalker.dds
+	
+	enemy_hard_casualty_modifier = 0.1
+	prowess = 4
+	levy_size = 0.25
+	development_growth = -3
+	health = 1
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_cunning_fighter_desc
+			}
+			desc = trait_cunning_fighter_character_desc
+		}
+	}
+}

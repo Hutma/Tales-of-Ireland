@@ -276,8 +276,9 @@ special_contract = {
 			flag = has_fomorian_tributary_contract
 			
 			ai_liege_desire =  {
-				value = 5
+				value = 10
 			}
+			ai_vassal_desire = 10
 		}
 	}
 }

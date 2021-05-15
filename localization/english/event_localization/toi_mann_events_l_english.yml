@@ -1,0 +1,86 @@
+﻿l_english:
+ toi_mann.0001.t:0 "To war!"
+ toi_mann.0001.desc:0 "The Stones and the Signs have unveiled the true path. Our enemy is guarded by weaklings, counselled by fools and allied with cowards. The gods will guide my sword, and those that taste our steel will know I am the rightful ruler of this island!"
+ toi_mann.0001.a:0 "To war!"
+ toi_mann.0001.b:0 "The time is not right."
+ 
+ toi_mann.0002.t:0 "A Champion"
+ toi_mann.0002.desc:0 "As my band departs from the Stones, our path crosses with a mysterious warrior. His tattered clothes reveal his landless status, but the scars speak of many battles.\n\n“I watched you commune with the gods, they say only a worthy ruler is capable of such a feat. I have seen many battles, and it would be a great honor to serve you.”\n\nShould I recruit this man? He certainly looks capable and experienced, but it's possible he could be a spy or have his own agenda. I know nothing about this man, but I'll never find out unless I accept."
+ toi_mann.0002.a:0 "Be my sword? [champion.GetFirstName]."
+ toi_mann.0002.b:0 "I don't trust you."
+ 
+ toi_mann.0031.t:0 "A Friend at the Stones"
+ toi_mann.0031.desc:0 " The Ballaharra ceremony is a delicate and complex ritual. Every detail must be exact, every word spoken to the last syllable, lest the gods be insulted and a curse is brought upon my line. Despite my careful preparation and training for this moment, I choked.\n\nDid I bring too much of this? Did I place too little of that? Are things laid out correctly? Am I speaking the words right? As the ritual begins to fall apart, I can feel the gods turning from curiosity to fury.\n\nSuddenly, almost as if the gods had sympathy for my plight, a man appeared out of nowhere and offered to help. He was clearly from a foreign, rival realm, yet I swallowed my pride and accepted.\n\nHe helped my finish the ritual, ensuring I would be blessed, or at least avoid a curse. We talked for a while, and found we had a lot more in common than expected. In a place like this, surely the gods brought us together, to find trust and friendship in this chaotic, blood-soaked island.\n\nIf we ever cross paths again, I hope it's not on the field of battle."
+ toi_mann.0031.a:0 "I hope to see you soon again."
+ toi_mann.0031.b:0 "I like him, but he is no firend."
+ 
+ toi_mann.0032.t:0 "A Rival at the Stones"
+ toi_mann.0032.desc:0 "The Ballaharra ceremony is a delicate and complex ritual. Every detail must be exact, every word spoken to the last syllable, lest the gods be insulted and a curse is brought upon my line. The ritual went smoothly, up until the last moment.\n\nSome smug bastard tried to spoil the ceremony, though of course he claimed it was an accident. Even this insolent fool would know the consequences, how a failed ritual can insult the gods and doom an entire Kingdom.\n\nMercifully, I was able to finish the ceremony without further complications. After that I confronted the interloper. We began to argue, which turned to insults, and before we knew it our swords were drawn.\n\nBefore he could be given a lesson in respect, the Druids intervened and broke up the fight. They banished both of us from the site, as the gods forbid spilling blood on this sacred ground.\n\nIf we ever cross paths again, I hope it's on the field of battle."
+ toi_mann.0032.a:0 "I'll kill you one day."
+ 
+ toi_mann.0004.t:0 "Meet the Glashtin"
+ toi_mann.0004.desc:0 "I was on my way to visit the gods' stones when I saw a strange creature coming towards me. Curiosity got the better of me and I waited to see what that thing was. As the creature neared me I could see that it has the shape of a horse but walks on only two of his... feet? What should I do?"
+ toi_mann.0004.a:0 "I'll wait and see."
+ toi_mann.0004.b:0 "I think I should go away."
+ 
+ toi_mann.0005.t:0 "Punished by the Glashtin"
+ toi_mann.0005.desc:0 "I tried to run away, to get away from this horrible creature. But he is too fast, too strong, too smart... I have to face my end on my terms..."
+ toi_mann.0005.a:0 "I'll make it through, I hope."
+ 
+ toi_mann.0042.t:0 "Meet the Glashtin"
+ toi_mann.0042.desc:0 "I have decided to wait and talk to the creature, if I can. As soon as the thing arrives I show myself ensuring I am close enough to yell at it but far enough to make a hasty retreat if necessary. The creature calls out to me: “I am the Glashtin, I am the king of the waters, come to me mortal, you who was too curious to run away from me.”"
+ toi_mann.0042.a:0 "I must answer."
+ toi_mann.0042.b:0 "I should... Run away!"
+ 
+ toi_mann.0043.t:0 "Meet the Glashtin"
+ toi_mann.0043.desc:0 "“What do you want from me?” I asked. He is now standing right in front of me, this impressive man-horse-god. I don't know if I should be amazed or terrified. \n\n“You have awoken me and I must be satisfied now so that I can go back to my underwater realm, mortal.”"
+ toi_mann.0043.a:0 "I've heard a bit about the Glashtin before, maybe..."
+ toi_mann.0043.b:0 "What would satisfy you?"
+ toi_mann.0043.c:0 "I should go before it's too late... Run away!"
+ 
+ toi_mann.0431.t:0 "Meet the Glashtin"
+ toi_mann.0431.desc:0 "Thanks to my knowledge of the godly creatures I knew that giving him my horse and promising him that I will preserve the horse race of Mannin's island would appease him. He took my horse and returned back to his water kingdom."
+ toi_mann.0431.a:0 "He even rewarded me!"
+ 
+ toi_mann.0432.t:0 "Meet the Glashtin"
+ toi_mann.0432.desc:0 "Damn the gods! I tried to give him some of my gold and bowed to him to appease him but it didn't work. He is now chasing after me! Please someone save me from this evil-horseman!"
+ toi_mann.0432.a:0 "I am doomed! Run!"
+ 
+ toi_mann.0044.t:0 "Strange Gift for the Glashtin"
+ toi_mann.0044.desc:0 "“What would satisfy you?” I ask, hoping to please him. \n\n“I want you to give me a woman, I want to show her my realm and give her my benediction. I count on you to give me the finest one you have. If I'm pleased, you will be rewarded.” I have now to decide who will be sent to him... or perhaps I should just run away?"
+ toi_mann.0044.a:0 "I will offer you my wife."
+ toi_mann.0044.b:0 "You can have one of my daughters."
+ toi_mann.0044.c:0 "I'll give you a courtier."
+ toi_mann.0044.d:0 "It's my last chance. Run! Run! Run!"
+ 
+ toi_mann.0451.t:0 "The Glashtin is pleased"
+ toi_mann.0451.desc:0 "[woman_given.GetFirstName] has been returned safely and brings tons of goods from the gods themselves with her. The Glashtin was very satisfied and gave her many presents to thank me."
+ toi_mann.0451.a:0 "The end of this singular encounter."
+ 
+ toi_mann.0452.t:0 "Unsatisfied Glashtin"
+ toi_mann.0452.desc:0 "The Glashtin was not very satisfied, [woman_given.GetFirstName] has returned to us but has been injured and told us that the horse-god brings shame on me...."
+ toi_mann.0452.a:0 "At least his is back in the waters."
+ 
+ toi_mann.0453.t:0 "Angry Glashtin"
+ toi_mann.0453.desc:0 "[woman_given.GetFirstName] never returned… Weeks later her body was found near the lake where I first saw the creature... \n\nShe died because of me... Perhaps I’m not as good at being the chieftain as I once thought..."
+ toi_mann.0453.a:0 "I am ashamed."
+ 
+ toi_mann.0046.t:0 "Glashtin's Legacy"
+ toi_mann.0046.desc:0 "[woman_given.GetFirstName] has recently given birth to a child, but this child is different, he can already swim better than the men of the tribe. Maybe his father is... Hmmm. Let's not think about that..."
+ toi_mann.0046.a:0 "Weird child..."
+ 
+ toi_mann.0007.t:0 "Prestigious Ceremony"
+ toi_mann.0007.desc:0 "The ceremony brought hope and joy to everyone in attendance. When I entered the site, the attendants were speaking of my accomplishments, recognising me as a worthy ruler. After completing the ceremony, all the turmoil and hatred that stirred in our hearts fell silent. My men cheered for me, and were soon joined by those from rival domains.\n\nOn the journey back, word spread of my charm and talent. A sure sign that I am respected and admired around the island."
+ toi_mann.0007.a:0 "It was a great ceremony."
+ 
+ toi_mann.0008.t:0 "Laughable Ceremony"
+ toi_mann.0008.desc:0 "The ceremony never began. I waited hours for my turn, during which time I was harassed by animals and trickster Spirits. When I entered the site, the attendants were speaking of my past mistakes, no doubt exaggerations and propaganda by my enemies. I stormed off, afraid I would smash the Stones in fury if I stayed any longer. Then I tripped over a stick.\n\nOn the journey back, word spread of the humiliating ordeal. A sure sign that I am ridiculed and mocked around the island."
+ toi_mann.0008.a:0 "Everyone will soon forget that..."
+ 
+ toi_mann.0009.t:0 "Pious Ceremony"
+ toi_mann.0009.desc:0 "The ceremony went much better than I expected. Even those around me could feel the power of the gods as I received the blessing. After completing the ceremony, the Druids of Ballaharra congratulated me and commended my devotion.\n\nOn the journey back, a bright sun lit the way and I felt invigorated. A sure sign the gods were watching over me."
+ toi_mann.0009.a:0 "I am blessed."
+ 
+ toi_mann.0010.t:0 "Disastrous Ceremony"
+ toi_mann.0010.desc:0 "The ceremony went horribly. I was completely unprepared, couldn't remember the right prayers. I felt something from the gods, but it was bitter and hateful. I didn't even finish the ceremony; the Druids had to step in and stop me from insulting the gods further before I brought a curse upon the whole site.\n\nOn the journey back, it didn't stop raining and my party was attacked by wolves. A sure sign the gods have cursed me."
+ toi_mann.0010.a:0 "May the gods forgive me."

@@ -123,7 +123,7 @@
  cattle.2007.a.success: "They fell for my ruse!"
  tooltip.cattle.2007.a.success: "The trade is done!"
  cattle.2007.a.failure: "They've seen through my ruse!"
- tooltip.cattle.2007.a.failure: "The trade is gone!"
+ tooltip.cattle.2007.a.failure: "The ruse was uncovered!"
  cattle.2007.b: "I should just trade it honestly."
  cattle.2007.c: "We don’t need to do anything."
  cattle.2008.t: "A Scam!"

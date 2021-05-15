@@ -1,375 +1,972 @@
 ﻿namespace = toi_mann
 
-#Give title to one of your son
+#to war! 
 toi_mann.0001 = {
 	title = toi_mann.0001.t
 	desc = toi_mann.0001.desc
 	type = character_event
 	theme = war
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = war_attacker
+	}
+	left_portrait = {
+		character = scope:enemy
+		animation = war_defender
+	}
+	
+	option = { #To war
+		name = toi_mann.0001.a
+		start_war = {
+			cb = claim_cb
+			target = scope:enemy
+			claimant = root
+			target_title = scope:claimed_county
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = { #Not now
+		name = toi_mann.0001.b
+		add_piety = -100
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#a champion 
+toi_mann.0002 = {
+	title = toi_mann.0002.t
+	desc = toi_mann.0002.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
 	right_portrait = {
 		character = root
 		animation = personality_rational
 	}
+	left_portrait = {
+		character = scope:champion
+		animation = personality_honorable
+	}
 	
 	immediate = {
+		create_character = {
+			age = { 25 45 }
+			trait = physique_good_2
+			prowess = { 9 15 }
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = this.faith
+			culture = this.culture
+			location = title:b_balley_keeill_eoin
+			save_scope_as = champion
+		}
+	}
+	option = { #I welcome you
+		name = toi_mann.0002.a
+		scope:champion = {
+			set_employer = root
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = { #no need for another stupid knight
+		name = toi_mann.0002.b
+		add_prestige = 50
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#another ruler is here trigger for both determine if friend or not
+toi_mann.0003 = {
+	hidden = yes
+	
+	immediate = {
+		root = { save_scope_as = relation_prime }
+		every_county_in_region = {
+		region = region_mann
+		limit = {
+			NOT = { this.holder = root }
+		}
+		add_to_list = possible_freind_or_enemy
+		}
+		random_in_list = {
+			list = possible_freind_or_enemy
+			save_scope_as = friend_enemy
+		}
+		
+		#Chose if friend or not
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						scope:friend_enemy.top_liege = root
+						scope:friend_enemy = {
+							opinion = {
+								target = root
+								value >= 0
+							}
+						}
+					}
+					scope:friend_enemy = {
+						opinion = {
+							target = root
+							value >= 30
+						}
+					}
+					AND = {
+						scope:friend_enemy.culture = this.culture
+						scope:friend_enemy.faith = this.faith
+					}
+				}
+			}
+			scope:friend_enemy = {
+				trigger_event = {
+					id = toi_mann.0031
+					days = 2
+				}
+			}
+			scope:relation_prime = {
+				trigger_event = {
+					id = toi_mann.0031
+					days = 2
+				}
+			}
+		}
+		else = {
+			scope:friend_enemy = {
+				trigger_event = {
+					id = toi_mann.0032
+					days = 2
+				}
+			}
+			scope:relation_prime = {
+				trigger_event = {
+					id = toi_mann.0032
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+#you made a friendly friend
+toi_mann.0031 = {
+	title = toi_mann.0031.t
+	desc = toi_mann.0031.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	left_portrait = {
+		character = scope:friend_enemy
+		animation = happiness
+	}
+	immediate = {
+		if = {
+			limit = {
+				root = scope:relation_prime
+			}
+			set_relation_friend = scope:friend_enemy
+		}
+		else = {
+			set_relation_friend = scope:relation_prime
+		}
+	}
+	option = { #The gods united us
+		name = toi_mann.0031.a
+		add_prestige = 150
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { #Freindship is pointless
+		name = toi_mann.0031.a
+		add_piety = -150
+		if = {
+			limit = {
+				root = scope:relation_prime
+			}
+			remove_relation_friend = scope:friend_enemy
+		}
+		else = {
+			remove_relation_friend = scope:relation_prime
+		}
+		stress_impact = {
+			gregarious = medium_stress_impact_gain
+			zealous = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 0
+		}		
+	}
+}
+
+#rivalry at the stones
+toi_mann.0032 = {
+	title = toi_mann.0032.t
+	desc = toi_mann.0032.desc
+	type = character_event
+	theme = battle
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = angry
+	}
+	left_portrait = {
+		character = scope:friend_enemy
+		animation = angry
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				root = scope:relation_prime
+			}
+			set_relation_rival = scope:friend_enemy
+		}
+		else = {
+			set_relation_rival = scope:relation_prime
+		}
+	}
+	option = { #i'm angry with you
+		name = toi_mann.0032.a
+	}
+}
+
+#meet the Glashtin part 1 
+toi_mann.0004 = {
+	title = toi_mann.0004.t
+	desc = toi_mann.0004.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+
+	option = { #wait a bit
+		name = toi_mann.0004.a
+		trigger_event = {
+			id = toi_mann.0042
+			days = { 3 10 }
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = { #run away!
+		name = toi_mann.0004.b
+		add_prestige = -25
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#meet the Glashtin bad ending
+toi_mann.0005 = {
+	title = toi_mann.0005.t
+	desc = toi_mann.0005.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+
+	option = { #i'm punished
+		name = toi_mann.0005.a
+		random_list = {
+			40 = {
+				add_trait = wounded_1
+			}
+			15 = {
+				add_trait = wounded_2
+			}
+			15 = {
+				add_trait = wounded_3
+			}
+			10 = {
+				death = {
+					death_reason = death_mysterious
+				}
+			}			
+		}
+		add_piety_level = -1
+		add_prestige = -200
+	}
+}
+
+#meet the Glashtin part 2
+toi_mann.0042 = {
+	title = toi_mann.0042.t
+	desc = toi_mann.0042.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+
+	option = { #answer him
+		name = toi_mann.0042.a
+		trigger_event = {
+			id = toi_mann.0043
+			days = { 3 5 }
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = { #run away!
+		name = toi_mann.0042.b
+		add_prestige = -25
+		duel = {
+			skill = prowess
+			value = 10
+		
+			75 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					title = toi_mann.youescaped
+					left_icon = root
+				}
+			}
+			25 = {
+				trigger_event = {
+					id = toi_mann.0005
+					days = { 2 4 }
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#meet the Glashtin part 3
+toi_mann.0043 = {
+	title = toi_mann.0043.t
+	desc = toi_mann.0043.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = { #learning test
+		name = toi_mann.0043.a
+		duel = {
+			skill = learning
+			value = 10
+		
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				trigger_event = {
+					id = toi_mann.0431
+					days = { 2 4 }
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = toi_mann.0432
+					days = { 2 4 }
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 150
+				learning > 10
+			}
+		}
+	}
+	option = { #what would satisfy you?
+		name = toi_mann.0043.b
+		trigger_event = {
+			id = toi_mann.0044
+			days = { 3 5 }
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = { #run away!
+		name = toi_mann.0043.c
+		add_prestige = -25
+		duel = {
+			skill = prowess
+			value = 10
+		
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					title = toi_mann.youescaped
+					left_icon = root
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = toi_mann.0005
+					days = { 2 4 }
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#meet the Glashtin part 3.1 
+toi_mann.0431 = {
+	title = toi_mann.0431.t
+	desc = toi_mann.0431.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = { #i am rewarded
+		name = toi_mann.0431.a
+		add_piety_level = 1
+		add_gold = 200
+		add_tales_of_abundance_lifestyle_perk_points = 1
+	}
+}
+
+#meet the Glashtin part 3.2
+toi_mann.0432 = {
+	title = toi_mann.0432.t
+	desc = toi_mann.0432.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = fear
+	}
+
+	option = { #i am doomed, run!
+		name = toi_mann.0432.a
+		add_prestige = -25
+		duel = {
+			skill = prowess
+			value = 10
+		
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					title = toi_mann.youescaped
+					left_icon = root
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = toi_mann.0005
+					days = { 2 4 }
+				}
+			}
+		}
+	}
+}
+
+#meet the Glashtin part 4
+toi_mann.0044 = {
+	title = toi_mann.0044.t
+	desc = toi_mann.0044.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { #my spouse
+		name = toi_mann.0044.a
+		trigger = {
+			AND = {
+				exists = root.primary_spouse
+				root.primary_spouse = {
+					is_female = yes
+				}
+				root.primary_spouse = {
+					is_pregnant = no
+				}
+			}
+		}
+		root.primary_spouse = {
+			save_scope_as = woman_given
+		}
+		trigger_event = {
+			id = toi_mann.0450
+			days = 1
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #one of my doughters
+		name = toi_mann.0044.b
+		trigger = {
+			any_child = {
+				is_adult = yes
+				is_female = yes
+				is_pregnant = no
+			}
+		}
 		every_child = {
 			limit = {
 				AND = {
 					is_adult = yes
-					is_female = no
-					is_landed = no
+					is_female = yes
+					is_pregnant = no
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						exists = scope:son_1
-					}
-				}
-				save_scope_as = son_1
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_2
-					}
-				}
-				save_scope_as = son_2
-			}
-			else_if  = {
-				limit = {
-					NOT = {
-						exists = scope:son_3
-					}
-				}
-				save_scope_as = son_3
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_4
-					}
-				}
-				save_scope_as = son_4
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_5
-					}
-				}
-				save_scope_as = son_5
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_6
-					}
-				}
-				save_scope_as = son_6
-			}
+			add_to_list = child_given_list
+		}
+		random_in_list = {
+			list = child_given_list
+			save_scope_as = woman_given
+		}
+		trigger_event = {
+			id = toi_mann.0450
+			days = 1
+		}
+		ai_chance = {
+			base = 30
 		}
 	}
-	option = {
-		name = toi_mann.0001.a
-		trigger = {
-			exists = scope:son_1
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_1
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
+	option = { #one of my courtier
+		name = toi_mann.0044.c
+		every_courtier = {
+			limit = {
+				AND = {
+					is_adult = yes
+					is_female = yes
+					is_pregnant = no
+					age <= 35
 				}
 			}
+			add_to_list = courtier_given_list
 		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
+		random_in_list = {
+			list = courtier_given_list
+			save_scope_as = woman_given
+		}
+		trigger_event = {
+			id = toi_mann.0450
+			days = 1
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #i am doomed, run!
+		name = toi_mann.0044.d
+		add_prestige = -25
+		duel = {
+			skill = prowess
+			value = 10
 		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_1 = {
-			becomes_independent = {
-				change = scope:change
+			30 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					title = toi_mann.youescaped
+					left_icon = root
+				}
 			}
-			resolve_title_and_vassal_change = scope:change
-		}
-	}
-	option = {
-		name = toi_mann.0001.b
-		trigger = {
-			exists = scope:son_2
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_2
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
+			70 = {
+				trigger_event = {
+					id = toi_mann.0005
+					days = { 2 4 }
 				}
 			}
 		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
-		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_2 = {
-			becomes_independent = {
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
+		ai_chance = {
+			base = 10
 		}
 	}
-	option = {
-		name = toi_mann.0001.c
-		trigger = {
-			exists = scope:son_3
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_3
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
-				}
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
-		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_3 = {
-			becomes_independent = {
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
-		}
-	}
-	option = {
-		name = toi_mann.0001.d
-		trigger = {
-			exists = scope:son_4
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_4
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
-				}
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
-		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_4 = {
-			becomes_independent = {
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
-		}
-	}
-	option = {
-		name = toi_mann.0001.e
-		trigger = {
-			exists = scope:son_5
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_5
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
-				}
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
-		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_5 = {
-			becomes_independent = {
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
-		}
-	}
-	option = {
-		name = toi_mann.0001.f
-		trigger = {
-			exists = scope:son_6
-		}
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		every_in_global_list  = {
-			variable = tracked_titles_for_son
-			change_title_holder = {
-				holder = scope:son_6
-				change = scope:change
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						this.tier = 2
-					}
-					this = {
-						change_development_level = 1
-						change_county_control = 400
-					}
-				}
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-		clear_global_variable_list = tracked_titles_for_son
-		
-		create_title_and_vassal_change = {
-			type = independency
-			save_scope_as = change
-			add_claim_on_loss = no
-		}
-		scope:son_6 = {
-			becomes_independent = {
-				change = scope:change
-			}
-			resolve_title_and_vassal_change = scope:change
-		}
-	}
-	option = {
-		name = toi_mann.0001.g
-		trigger = {
-			NOT = {
-				OR = {
-					exists = scope:son_1
-					exists = scope:son_2
-					exists = scope:son_3
-					exists = scope:son_4
-					exists = scope:son_5
-					exists = scope:son_6
-				}
-			}
-		}
-		add_prestige = -100
-		add_piety = -100
-	}
-}	
+}
 
-#Lure to cattle raiding event
-toi_mann.0002 = {
+#is the woman right
+toi_mann.0450 = {
 	hidden = yes
-	type = character_event
 	
 	immediate = {
-		every_independent_ruler = {
-			if = {
-				limit = {
-					AND = {
-						has_character_flag = is_target_raid
-						NOT = {
-							exists = scope:target_ruler
+		random_list = {
+			50 = {
+				modifier = {
+					add = 20
+					scope:woman_given = {
+						learning >= 8
+					}
+				}
+				modifier = {
+					add = 20
+					scope:woman_given = {
+						diplomacy >= 8
+					}
+				}
+				modifier = {
+					add = 40
+					scope:woman_given = {
+						OR = {
+							has_trait = beauty_good_1
+							has_trait = beauty_good_2
+							has_trait = beauty_good_3
 						}
 					}
 				}
-				save_scope_as = target_ruler
-				remove_character_flag = is_target_raid
+				trigger_event = {
+					id = toi_mann.0451
+					days = 1
+				}
+			}
+			40 = {
+				trigger_event = {
+					id = toi_mann.0452
+					days = 1
+				}
+			}
+			10 = {
+				modifier = {
+					add = 20
+					scope:woman_given = {
+						learning <= 4
+					}
+				}
+				modifier = {
+					add = 20
+					scope:woman_given = {
+						diplomacy <= 4
+					}
+				}
+				trigger_event = {
+					id = toi_mann.0453
+					days = 1
+				}
 			}
 		}
-		start_war = {
-			cb = cattle_raiding_cb
-			target = scope:target_ruler
+	}
+}
+
+#meet the glashtin part 5.1 
+toi_mann.0451 = {
+	title = toi_mann.0451.t
+	desc = toi_mann.0451.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	left_portrait = {
+		character = scope:woman_given
+		animation = happiness
+	}
+	
+	immediate = {
+		create_character = {
+			name = "Glashtin"
+			age = { 25 }
+			trait = physique_good_2
+			trait = beauty_good_2
+			prowess = 25
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = faith:fathers_of_manx
+			culture = culture:bann_culture
+			location = title:b_balley_keeill_eoin
+			save_scope_as = glashtin
+		}
+		scope:woman_given = {
+			make_pregnant = {
+				father = scope:glashtin
+				number_of_children = 1
+			}
 		}
 	}
-}	
+	
+	option = { #good
+		name = toi_mann.0451.a
+		add_piety_level = 1
+		add_gold = 200
+		add_tales_of_abundance_lifestyle_perk_points = 1
+		trigger_event = {
+			id = toi_mann.0046
+			days = 310
+		}
+		hidden_effect = {
+			scope:glashtin = {
+				death = {
+					death_reason = death_mysterious
+				}
+			}			
+		}
+	}
+}
+
+#meet the glashtin part 5.2
+toi_mann.0452 = {
+	title = toi_mann.0452.t
+	desc = toi_mann.0452.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	left_portrait = {
+		character = scope:woman_given
+		animation = stress
+	}
+	
+	immediate = {
+		create_character = {
+			name = "Glashtin"
+			age = { 25 }
+			trait = physique_good_2
+			trait = beauty_good_2
+			prowess = 25
+			random_traits = yes
+			gender_female_chance = 0
+			dynasty = none
+			faith = faith:fathers_of_manx
+			culture = culture:bann_culture
+			location = title:b_balley_keeill_eoin
+			save_scope_as = glashtin
+		}
+		scope:woman_given = {
+			make_pregnant = {
+				father = scope:glashtin
+				number_of_children = 1
+			}
+		}
+	}
+	option = { #hmmmm...
+		name = toi_mann.0452.a
+		add_piety_level = -1
+		add_prestige = -150
+		trigger_event = {
+			id = toi_mann.0046
+			days = 310
+		}
+		hidden_effect = {
+			scope:glashtin = {
+				death = {
+					death_reason = death_mysterious
+				}
+			}			
+		}
+	}
+}
+
+#meet the glashtin part 5.3
+toi_mann.0453 = {
+	title = toi_mann.0453.t
+	desc = toi_mann.0453.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+	
+	immediate = {
+		scope:woman_given = {
+			death = {
+				death_reason = death_mysterious
+			}
+		}
+	}
+	
+	option = { #noooooo
+		name = toi_mann.0453.a
+		add_piety_level = -1
+		add_prestige = -250
+	}
+}
+
+#meet the glashtin part 6
+toi_mann.0046 = {
+	title = toi_mann.0046.t
+	desc = toi_mann.0046.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = { #hmmm weird child
+		name = toi_mann.0046.a
+		scope:woman_given = {
+			every_child = {
+				limit = {
+					age < 1 
+				}
+				add_character_modifier = {
+					modifier = glashtin_child
+				}
+				add_trait = physique_good_2
+			}
+		}
+	}
+}
+
+#gain prestige 
+toi_mann.0007 = {
+	title = toi_mann.0007.t
+	desc = toi_mann.0007.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	option = { #A motivating sign
+		name = toi_mann.0007.a
+		add_prestige = 150
+	}
+}
+
+#loose prestige 
+toi_mann.0008 = {
+	title = toi_mann.0008.t
+	desc = toi_mann.0008.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+
+	option = { #A bad sign
+		name = toi_mann.0008.a
+		add_prestige = -150
+	}
+}
+
+#gain piety 
+toi_mann.0009 = {
+	title = toi_mann.0009.t
+	desc = toi_mann.0009.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = { #A good sign
+		name = toi_mann.0009.a
+		add_piety = 150
+	}
+}
+
+#loose piety 
+toi_mann.0010 = {
+	title = toi_mann.0010.t
+	desc = toi_mann.0010.desc
+	type = character_event
+	theme = faith
+	override_background = {
+		event_background = manx_megaliths
+	}
+	right_portrait = {
+		character = root
+		animation = shame
+	}
+
+	option = { #A bad sign
+		name = toi_mann.0010.a
+		add_piety = -150
+	}
+}

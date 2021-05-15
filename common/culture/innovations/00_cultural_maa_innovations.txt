@@ -123,6 +123,7 @@ innovation_maa_human = {
 			this.culture_group = culture_group:toi_erainn_group
 			this.culture_group = culture_group:toi_laigin_group
 			this = culture:brythonic_mann
+			this = culture:fir_mannin
 		}
 	}
 
@@ -239,6 +240,7 @@ innovation_maa_meghalithic = {
 		OR = {
 			this.culture_group = culture_group:toi_meghalithic_group
 			this = culture:bann_culture
+			this = culture:fir_mannin
 		}
 	}
 

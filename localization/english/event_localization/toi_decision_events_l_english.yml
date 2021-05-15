@@ -1,18 +1,18 @@
 ﻿l_english:
  toi_decisions.001.t:0 "Ceremony to coax a Giant"
  toi_decisions.001.desc:0 "I'm standing on the causeway, next to the druid who is going on with the religious ceremony. He sings in the language of the gods to attract one of the Giants that live in the Otherworld. The chants continues until the earth starts trembling and shaking. We have been here for wearly two hours and the druid is exhausted. \nHe then stares at me and ask : "Are you sure you want to do that [ROOT.Char.GetFirstNameNoTooltip]?" "
- toi_decisions.001.a:0 "Yes, finish the ceremony"
- toi_decisions.001.b:0 "No, you're right, it's too big a risk"
+ toi_decisions.001.a:0 "Yes, finish the ceremony."
+ toi_decisions.001.b:0 "No, you're right, it's too big a risk."
  
  toi_decisions.002.t:0 "Friendly Giant"
  toi_decisions.002.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nHe sits on the Causeway and looks at the sea. I wait, for hours, standing there, standing still, waiting for him to start talking. He finally turns back, faces me and says : \n"You have summoned me, why have you called me?"\nI explain that I need him to fight alongside me on the battlefield, I promise him glory and fame. He listens carefully and accepts to serve me if I make a sacrifice to his brothers in the Otherworld."
- toi_decisions.002.a:0 "Of course, you will have your sacrifice, come and join me"
- toi_decisions.002.b:0 "Sorry, I can't accept those terms"
+ toi_decisions.002.a:0 "Of course, you will have your sacrifice, come and join me."
+ toi_decisions.002.b:0 "Sorry, I can't accept those terms."
  
  toi_decisions.003.t:0 "Proud Giant"
  toi_decisions.003.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nHe listened to my terms, asking him to join me and fight alongside my soldiers, he responds : "I will help you, but only if you bow before me, before my power and strenght.""
- toi_decisions.003.a:0 "Of course, you are the most powerful"
- toi_decisions.003.b:0 "I will never bow before you, I don't need you"
+ toi_decisions.003.a:0 "Of course, you are the most powerful."
+ toi_decisions.003.b:0 "I will never bow before you, I don't need you."
  
  toi_decisions.004.t:0 "Angry Giant"
  toi_decisions.004.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nAs soon as he is out he start screaming and running toward us in rage!"
@@ -24,39 +24,39 @@
 #Sacrifice to sidhe
  toi_decisions.010.t:0 "Sacrifice to the Sidhe"
  toi_decisions.010.desc:0 "Long ago, our ancestors travelled to the Otherworld, home of the powerful spirits known as Sidhe. They learned how Sidhe magic subtly influences the world and guides its people, and showing respect and devotion to them yields great rewards. It is now time to renew our bond in a great ceremony.\n\nOur druids have sang chants and carved sacred runes into the ground. This delicate ritual opens a path to the Otherworld, and the air becomes enchanted with strange and mystical power. \n\nColours become vivid, the sound dies down and time slows to a crawl. We have caught the Sidhe’s attention, and now they await my offering to them.\n\nHow much shall I give?"
- toi_decisions.010.a:0 "A large sacrifice will show my devotion"
- toi_decisions.010.b:0 "A big sacrifice will honour them"
- toi_decisions.010.c:0 "A standard sacrifice ought to placate them"
- toi_decisions.010.d:0 "A small sacrifice"
+ toi_decisions.010.a:0 "A large sacrifice will show my devotion."
+ toi_decisions.010.b:0 "A big sacrifice will honour them."
+ toi_decisions.010.c:0 "A standard sacrifice ought to placate them."
+ toi_decisions.010.d:0 "A small sacrifice."
  
  toi_decisions.011.t:0 "A Great Blessing"
  toi_decisions.011.desc:0 "The Sidhe have heeded our call and accepted the offering! The festivities strengthen as we see them, hear them, feel the Sidhe dance around us. Even the druids admire our devotion.\n\nOur bond with the spirits strengthened, we humbly kneel before them and receive their gifts.\n\nThe strength of legendary heroes and unshakeable resolve is thrust upon our warriors, and the druids foretell many great victories in the future."
- toi_decisions.011.a:0 "Time to go to war"
+ toi_decisions.011.a:0 "Time to go to war."
  
  toi_decisions.012.t:0 "A Great Blessing"
  toi_decisions.012.desc:0 "The Sidhe have heeded our call and accepted the offering! The festivities strengthen as we see them, hear them, feel the Sidhe dance around us. Even the druids admire our devotion.\n\nOur bond with the spirits strengthened, we humbly kneel before them and receive their gifts.\n\nOur livestock are invigorated, our builders have discovered rich materials, and the druids foretell great prosperity in the future."
- toi_decisions.012.a:0 "Richness awaits us"
+ toi_decisions.012.a:0 "Richness awaits us."
  
  toi_decisions.013.t:0 "Important Blessing"
  toi_decisions.013.desc:0 "The Sidhe have heeded our call and received the offering. Their joyful and mystical music joins our own, yet they don’t step out of the Otherworld to personally join us. Nevertheless, we can feel their gifts wash over and strengthen us.\n\nOur bond with the spirits renewed, we humbly kneel before them and receive their gifts.\n\nThe warriors are blessed with inhuman strength and iron will, and the druids foretell a stronger future."
- toi_decisions.013.a:0 "Time to go to war"
+ toi_decisions.013.a:0 "Time to go to war."
  
  toi_decisions.014.t:0 "Important Blessing"
  toi_decisions.014.desc:0 "The Sidhe have heeded our call and received the offering. Their joyful and mystical music joins our own, yet they don’t step out of the Otherworld to personally join us. Nevertheless, we can feel their gifts wash over and strengthen us.\n\nOur bond with the spirits renewed, we humbly kneel before them and receive their gifts.\n\nOur livestock are fruitful, our builders have discovered strong materials, and the druids foretell a wealthy future."
- toi_decisions.014.a:0 "Richness awaits us"
+ toi_decisions.014.a:0 "Richness awaits us."
  
  toi_decisions.015.t:0 "Good Omen"
  toi_decisions.015.desc:0 "We feel the power of the Sidhe, but not much. While they accepted our gifts, it seems they were unimpressed. The leaves of the trees turn vivid, a clear sign of their presence, yet barely above their presence outside a ceremony. Still, the people are relieved to see a sign. \n\nOur bond with the spirits weakened, we humbly kneel before them and receive their gifts.\n\nThe warriors are invigorated with renewed strength, and the druids foretell a secure future."
- toi_decisions.015.a:0 "Time to go to war"
+ toi_decisions.015.a:0 "Time to go to war."
  
  toi_decisions.016.t:0 "Good Omen"
  toi_decisions.016.desc:0 "We feel the power of the Sidhe, but not much. While they accepted our gifts, it seems they were unimpressed. The leaves of the trees turn vivid, a clear sign of their presence, yet barely above their presence outside a ceremony. Still, the people are relieved to see a sign. \n\nOur bond with the spirits weakened, we humbly kneel before them and receive their gifts.\n\nOur livestock are more fertile, our builders have discovered new materials, and the druids foretell a brighter future."
- toi_decisions.016.a:0 "Richness awaits us"
+ toi_decisions.016.a:0 "Richness awaits us."
  
  toi_decisions.017.t:0 "Bad Omen"
  toi_decisions.017.desc:0 " The offering is complete. We waited… and waited… and it became clear nothing would happen. There are no Sidhe to heed our call, and no blessing for us to receive. Some cry out in anguish. Have the Sidhe abandoned us, or were they insulted by my offering?\n\nOur bond with the spirits broken, we return to our homes in despair.\n\nOur warriors have lost their strength, and the druids see only loss in the future."
- toi_decisions.017.a:0 "I hope we don’t go to war"
+ toi_decisions.017.a:0 "I hope we don’t go to war."
  
  toi_decisions.018.t:0 "Bad Omen"
  toi_decisions.018.desc:0 "The offering is complete. We waited… and waited… and it became clear nothing would happen. There are no Sidhe to heed our call, and no blessing for us to receive. Some cry out in anguish. Have the Sidhe abandoned us, or were they insulted by my offering?\n\nOur bond with the spirits broken, we return to our homes in despair.\n\nOur livestock are sick, our buildings crumble, and the druids see only ruin in the future."
- toi_decisions.018.a:0 "A large sacrifice will show my devotion"
+ toi_decisions.018.a:0 "A large sacrifice will show my devotion."

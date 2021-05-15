@@ -70,6 +70,10 @@ hy_brazil_island = {
 	}
 }
 
-
-
-
+manx_megaliths = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/manx_megaliths_background.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+}

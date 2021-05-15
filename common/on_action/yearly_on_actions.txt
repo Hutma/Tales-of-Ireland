@@ -149,7 +149,7 @@ random_yearly_playable_pulse = {
 	random_events = {
 		delay = { days = { 15 30 } }
 		chance_to_happen = 100
-		10 = 0
+		30 = 0
 		10 = cattle.0001
 		10 = cattle.0002
 		10 = cattle.0003

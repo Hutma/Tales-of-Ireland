@@ -1,9 +1,9 @@
 ﻿l_english:
  toi_decision_race.001.t:0 "Aran Kingship restored"
  toi_decision_race.001.desc:0 "The ancient kingdom of Aran is reborn by my efforts; this realm will once again know [restorer.GetCulture.GetName] rule!\n\nI am walking in the footsteps of legends such as Balor and Bres, champions of old, and by [restorer.GetFaith.WarGodName], I will not let the kingdom fall to strangers ever again!""
- toi_decision_race.001.a:0 "We rise again"
+ toi_decision_race.001.a:0 "We rise again."
  
  toi_decision_race.002.t:0 "The Aran King"
  toi_decision_race.002.desc:0 "After centuries of struggle, [founder.GetFullName] has restored the ancient kingdom of Aran, and thrown back their island's foreign invaders.\n\nThough the other lords of the Ireland are unlikely to brook this upstart power infringing on what they view as their lands, the [founder.GetPrimaryTitle.GetAdjective] people have weathered worse invasions than anything this modern age can muster. Already, they prepare to resist the inevitable grim-retaliation..."
- toi_decision_race.002.a:0 "Aran is great again"
- toi_decision_race.002.b:0 "Those kingdoms comes and goes"
+ toi_decision_race.002.a:0 "Aran is great again."
+ toi_decision_race.002.b:0 "Those kingdoms comes and goes."

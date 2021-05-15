@@ -2896,7 +2896,7 @@ cattle.0505 = {
 		scope:county_target = {
 			change_development_level = {
 				value = this.development_level
-				multiply = 1.2
+				multiply = 0.2
 			}
 		}
 		ai_chance = {

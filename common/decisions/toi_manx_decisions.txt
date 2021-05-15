@@ -171,13 +171,14 @@ a_claim_in_manx_decision = {
 				limit = {
 					scope:claimed_county.holder.top_liege.max_military_strength < root.max_military_strength
 				}
+				scope:claimed_county.holder = { save_scope_as = enemy }
 				trigger_event = {
 					id = toi_mann.0001
 					days = 1
 				}
 			}
 			random_list = {
-				50 = {
+				40 = {
 					
 				}
 				10 = {
@@ -217,7 +218,7 @@ a_claim_in_manx_decision = {
 				}
 				10 = {
 					modifier = {
-						add = 20
+						add = 10
 						root = {
 							piety_level >= 2
 						}
@@ -233,26 +234,135 @@ a_claim_in_manx_decision = {
 							}
 						}
 					}
+					trigger_event = {
+						id = toi_mann.0004 #encounter the Buggane
+						days = { 3 10 }
+					}					
+				}
+				60 = {
 					random_list = {
-						50 = {
+						10 = {
 							trigger_event = {
-								id = toi_mann.0004 #encounter the Buggane
+								id = toi_mann.0007 #gain prestige
 								days = { 3 10 }
 							}
 						}
-						30 = {
+						10 = {
 							trigger_event = {
-								id = toi_mann.0005 #encounter the Fenodyree
+								id = toi_mann.0008 #gain piety
 								days = { 3 10 }
 							}
 						}
-						20 = {
+						10 = {
 							trigger_event = {
-								id = toi_mann.0006 #encounter the Glashtyn 
+								id = toi_mann.0009 #lose prestige 
+								days = { 3 10 }
+							}
+						}
+						10 = {
+							trigger_event = {
+								id = toi_mann.0010 #lose piety 
 								days = { 3 10 }
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+visit_ballaharra_stones_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	
+	desc = visit_ballaharra_stones_decision_desc
+	
+	ai_check_interval = 80
+	
+	cooldown = { years = 20 }
+
+	is_shown = {
+		AND  = {
+			capital_county.title_province = { geographical_region = region_mann }
+			exists = title:k_mann.holder
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		gold = 20
+		prestige = 100
+	}
+
+	effect = {
+		add_piety = 200
+		hidden_effect = {
+			random_list = {
+				50 = {
+					
+				}
+				10 = {
+					modifier = {
+						add = 20
+						root = {
+							prestige_level >= 2
+						}
+					}
+					modifier = {
+						add = 20
+						root = {
+							OR = {
+								has_trait = education_martial_1
+								has_trait = education_martial_2
+								has_trait = education_martial_3
+								has_trait = education_martial_4
+							}
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0002 #A knight joins you
+						days = { 3 10 }
+					}
+				}
+				10 = {
+					modifier = {
+						add = 10
+						root = {
+							piety_level >= 2
+						}
+					}
+					modifier = {
+						add = 20
+						root = {
+							OR = {
+								has_trait = education_learning_1
+								has_trait = education_learning_2
+								has_trait = education_learning_3
+								has_trait = education_learning_4
+							}
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0004 #encounter the Buggane
+						days = { 3 10 }
+					}					
+				}
 				50 = {
 					random_list = {
 						10 = {
@@ -282,6 +392,125 @@ a_claim_in_manx_decision = {
 					}
 				}
 			}
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+fir_mannin_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	desc = fir_mannin_decision_desc
+	
+	major = yes
+	ai_check_interval = 80
+
+	is_shown = {
+		has_title = title:k_mann
+		NOT = {
+			OR = {
+				culture = culture:bann_culture
+				culture = culture:brythonic_mann
+			}
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:established_fir_mannin_culture
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		completely_controls = title:k_mann
+		any_vassal = {
+			count >= 3
+			is_powerful_vassal = yes
+			opinion = {
+				target = root
+				value >= positive_opinion
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no		
+	}
+
+	cost = {
+		piety = 250
+		prestige = 250
+	}
+
+	effect = {
+		#Change county culture
+		title:k_mann = {
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_county}
+				add_to_list = mann_counties
+			}
+		}
+		
+		root.culture = {save_scope_as = old_culture_1}
+		every_in_list = {
+			list = mann_counties
+			limit = {
+				OR = {
+					this.culture = scope:old_culture_1
+					this.culture = culture:bann_culture
+					this.culture = culture:brythonic_mann
+				}
+			}
+			set_county_culture = culture:fir_mannin
+		}
+		
+		# Player changes culture
+		set_culture = culture:fir_mannin
+		add_character_flag = converted_culture_this_lifetime
+		hidden_effect = {
+			every_in_list = {
+				list = mann_counties
+				limit = {
+					this.culture = culture:fir_mannin
+					holder.capital_county = { is_in_list = mann_counties }
+				}
+				holder = {
+					add_to_list = mass_melting_pot_list
+					every_courtier = { add_to_list = mass_melting_pot_list }
+					every_courtier_away = { add_to_list = mass_melting_pot_list }
+				}
+				every_in_list = {
+					list = mass_melting_pot_list
+					limit = {
+						OR = {
+							culture = scope:old_culture_1
+							culture = culture:bann_culture
+							culture = culture:brythonic_mann
+						}
+					}
+					set_culture = culture:fir_mannin
+				}
+			}
+			
+			#Get innovations
+			culture:fir_mannin = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = culture:bann_culture
+				get_all_innovations_from = culture:brythonic_mann
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:established_fir_mannin_culture
 		}
 	}
 

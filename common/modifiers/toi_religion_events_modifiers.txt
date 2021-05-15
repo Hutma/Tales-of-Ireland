@@ -24,3 +24,12 @@ upset_sidhe = {
 	development_growth_factor = -0.15
 	build_speed = 0.2
 }
+
+glashtin_child = {
+	icon = family_positive
+	prowess = 4
+	health = 1
+	monthly_piety = 2
+	diplomacy = 1
+	learning = 2
+}

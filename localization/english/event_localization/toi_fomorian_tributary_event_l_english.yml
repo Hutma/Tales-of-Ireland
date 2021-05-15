@@ -2,20 +2,20 @@
 
  toi_fomorian_tributary.0001.t:0 "The Fomorian Tribute"
  toi_fomorian_tributary.0001.desc:0"I hate this sound...The Fomorian horn blowing in the wind, notifying us that this year's tribute collection is upon us. The collector will reach my court in under an hour to take two thirds of our cattle,  gold as well...as one of our children as an hostage. To ensure compliance they say. Bah, I just hope the unlucky one doesn't become one of them..."
- toi_fomorian_tributary.0001.a:0 "We must pay"
- toi_fomorian_tributary.0001.b:0 "Try to talk to him to reduce payement"
- toi_fomorian_tributary.0001.c:0 "Try to hide a part of the cattle"
+ toi_fomorian_tributary.0001.a:0 "We must pay."
+ toi_fomorian_tributary.0001.b:0 "Try to talk to him to reduce payement."
+ toi_fomorian_tributary.0001.c:0 "Try to hide a part of the cattle."
  toi_fomorian_tributary.0001.d:0 "Kill him, kill every  Fomorian!"
  
  toi_fomorian_tributary.0011.t:0 "Attempt Failed"
  toi_fomorian_tributary.0011.desc:0 "I failed...By trying to reduce the tribute this year, I only managed to enrage the collector. He screamed that [scope:fomorian_liege.GetName] will hear of our failing loyalty, that our end is near. But, of course...he finished his statement saying that "If you only you paid a little more...maybe this gross insubordination would never reach his ears..." He is grinning like a fox, waiting for my reply."
- toi_fomorian_tributary.0011.a:0 "I should have paid"
+ toi_fomorian_tributary.0011.a:0 "I should have paid."
  toi_fomorian_tributary.0001.b:0 "Kill him, kill every Fomorian!"
 
  toi_fomorian_tributary.0012.t:0 "Successful Strategy"
  toi_fomorian_tributary.0012.desc:0 "Praise the gods! Prepare offerings! The tribute collector was suspicious for a while but, at last, he left with less than what he should have gotten. \n\nIn the ringfort, everyone is relieved to know that we will not have to go hungry this winter whilst our enemy grow fat off our misery. \n\nPerhaps, in time, we will throw off the Fomorian yoke and live a more prosperous life. "
- toi_fomorian_tributary.0012.a:0 "It was close"     
+ toi_fomorian_tributary.0012.a:0 "It was close."     
  
  toi_fomorian_tributary.0003.t:0 "The Tribute"
  toi_fomorian_tributary.0003.desc:0 "Every tax collector has safely returned, bringing me cattle, gold and hostages from every single tributary. As always, I grow stronger while the heathens get weaker. We will let them replenish their gold, and granaries for some years and then we will take the tribute again, this cycle will go on forever, or until the impure all wither away...or become part of our people."
- toi_fomorian_tributary.0003.a:0 "Until next time"
+ toi_fomorian_tributary.0003.a:0 "Until next time."
