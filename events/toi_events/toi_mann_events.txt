@@ -558,6 +558,7 @@ toi_mann.0044 = {
 		root.primary_spouse = {
 			save_scope_as = woman_given
 		}
+		custom_tooltip = toi_mann.0044.tt
 		trigger_event = {
 			id = toi_mann.0450
 			days = 1
@@ -589,6 +590,7 @@ toi_mann.0044 = {
 			list = child_given_list
 			save_scope_as = woman_given
 		}
+		custom_tooltip = toi_mann.0044.tt
 		trigger_event = {
 			id = toi_mann.0450
 			days = 1
@@ -614,6 +616,7 @@ toi_mann.0044 = {
 			list = courtier_given_list
 			save_scope_as = woman_given
 		}
+		custom_tooltip = toi_mann.0044.tt
 		trigger_event = {
 			id = toi_mann.0450
 			days = 1

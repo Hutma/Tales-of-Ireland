@@ -59,6 +59,11 @@
  many_crowns_for_galway_decision_tooltip:0 "Galway wird seinen Einfluss nutzen"
  many_crowns_for_galway_decision_confirm:0 "Galway wird seinen Einfluss nutzen"
  
+ found_umhaill_decision:0 "Gründet das Königreich Umhaill"
+ found_umhaill_decision_desc:0 "Warum sollte ich mich dem König von Mayo beugen, wenn meine Armee stärker ist als seine, wenn mein Land reich ist und wenn ich alle Ländereien nördlich und südlich der Clew Bay besitze? Ich werde mein eigenes Königreich gründen!"
+ found_umhaill_decision_tooltip:0 "Umhaill wird sich durchsetzen"
+ found_umhaill_decision_confirm:0 "Umhaill wird sich durchsetzen"
+
  #Major decisions
  try_unite_ireland_decision:0 "Verkündet euren Ehrgeiz, Irland zu vereinen"
  try_unite_ireland_decision_desc:0 "Irland ist geteilt, sollte aber wieder vereint werden. Ihr habt bewiesen, dass ihr ein angesehener und fähiger Herrscher sind, Zeit, die Smaragdinsel unter einem Herrscher zu vereinen. \n\n Wenn ihr diese Entscheidung trefft, haben Sie einen Grund, jeden Nachbarn zu unterjochen."

@@ -149,25 +149,26 @@ random_yearly_playable_pulse = {
 	random_events = {
 		delay = { days = { 15 30 } }
 		chance_to_happen = 100
-		30 = 0
-		10 = cattle.0001
-		10 = cattle.0002
-		10 = cattle.0003
-		10 = cattle.0004
-		10 = cattle.0005
-		10 = cattle.0006
-		10 = cattle.0007
-		10 = cattle.0008
-		10 = cattle.2001
-		10 = cattle.2002
-		10 = cattle.2003
-		10 = cattle.2004
-		10 = cattle.2005
-		10 = cattle.2006
-		10 = cattle.2007
-		10 = cattle.2008
-		10 = cattle.2009
-		10 = cattle.2010
+		chance_of_no_event = 20
+		1 = 0
+		1 = cattle.0001
+		1 = cattle.0002
+		1 = cattle.0003
+		1 = cattle.0004
+		1 = cattle.0005
+		1 = cattle.0006
+		1 = cattle.0007
+		1 = cattle.0008
+		1 = cattle.2001
+		1 = cattle.2002
+		1 = cattle.2003
+		1 = cattle.2004
+		1 = cattle.2005
+		1 = cattle.2006
+		1 = cattle.2007
+		1 = cattle.2008
+		1 = cattle.2009
+		1 = cattle.2010
 	}
 }
 

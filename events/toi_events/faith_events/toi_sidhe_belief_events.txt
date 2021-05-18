@@ -229,7 +229,7 @@ sidhe_belief.0002 = { #offended maiden
 				}
 				send_interface_toast = {
 					left_icon = root
-					title = sidhe_belief.0002.c.succes
+					title = sidhe_belief.0002.c.success
 					add_prestige = 400
 				}
 			}
@@ -272,6 +272,11 @@ sidhe_belief.0003 = { #a dry spell
 		}
 	}
 	
+	immediate = {
+		root.primary_heir = {
+			save_scope_as = foolish_heir
+		}
+	}
 	option = {
 		name = sidhe_belief.0003.a #punish the heir
 		

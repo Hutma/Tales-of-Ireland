@@ -84,6 +84,14 @@
  armored_footmen_ulster:0 "Ulster Schweres Fußvolk"
  armored_horsemen_ulster:0 "Ulster Streitwagen"
 
+ light_footmen_manx:0 "Manx Leichtes Fußvolk"
+ bowmen_manx:0 "Manx Bogenschützen"
+ light_horsemen_manx:0 "Manx Leichte Reiter"
+ pikemen_unit_manx:0 "Manx Pikeniere"
+ armored_footmen_manx:0 "Manx Schweres Fußvolk"
+ armored_horsemen_manx:0 "Manx Streitwagen"
+
+
  #Cultural MaA
  bloody_warriors:0 "Blutige Krieger"
  bloody_warriors_flavor:0 "Krieger der dunklen Götter, ihre Brutalität ist unvergleichlich.#!"
@@ -107,6 +115,11 @@
  kern_cavalry_flavor:0 "Die Noblen haben auch Kerner in ihren Rängen, sie können sich Pferde leisten und zerschlagen die gegnerischen Linien.#!"
  hy_brazylian_adventurers:0 "Hy-Brazylian Abenteurer"
  hy_brazylian_adventurers_flavor:0 "Die Hy-Brazylian leben auf einer kleinen magischen Insel im Norden Irlands versteckt in den Wolken. Das Fehlen von Platz zwingt einige der Hy-Brazylians ihre Heime zu verlassen und nach anderen Ufern zu suchen. Sie sind die Hy-Brazylian Abenteurer."
+ innovation_chariot_manx:0 "Streitwägen von Manx"
+ innovation_chariot_manx_desc:0 "Unsere Wagenfahrer sind es gewohnt, keine Ressourcen zu verschwenden, wir mögen auf einer kleinen Insel leben, aber wir können trotzdem große Armeen unterhalten, um in großen Kriegen zu kämpfen."
+ innovation_maa_manx:0 "Krieger von Manx"
+ innovation_maa_manx_desc:0 "Unsere Krieger sind es gewohnt, keine Ressourcen zu verschwenden, wir mögen auf einer kleinen Insel leben, aber wir können trotzdem große Armeen unterhalten, um in großen Kriegen zu kämpfen."
+
 
  #Special MaA
  house_guard:0 "Palastwachen"

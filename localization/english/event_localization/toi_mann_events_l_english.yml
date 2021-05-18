@@ -52,6 +52,7 @@
  toi_mann.0044.b:0 "You can have one of my daughters."
  toi_mann.0044.c:0 "I'll give you a courtier."
  toi_mann.0044.d:0 "It's my last chance. Run! Run! Run!"
+ toi_mann.0044.tt:0 "[woman_given.GetFirstName] is given to the Glashtin"
  
  toi_mann.0451.t:0 "The Glashtin is pleased"
  toi_mann.0451.desc:0 "[woman_given.GetFirstName] has been returned safely and brings tons of goods from the gods themselves with her. The Glashtin was very satisfied and gave her many presents to thank me."

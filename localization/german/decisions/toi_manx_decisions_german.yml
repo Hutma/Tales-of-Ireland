@@ -1,0 +1,28 @@
+﻿l_german:
+#Manx decisions
+ unite_manx_decision:0 "Vereine Mannin"
+ unite_manx_decision_desc:0 "Zum ersten Mal seit dem goldenen Zeitalter der Bann-Kultur ist die Insel Mannin eins und geeint. Es ist an der Zeit, die Trennung zwischen dem östlichen und dem westlichen Teil der Insel zu überwinden und sie zu einer Einheit zu machen."
+ unite_manx_decision_tooltip:0 "Mannin ist eins"
+ unite_manx_decision_confirm:0 "Mannin ist eins"
+ 
+ control_over_manx_legacy_decision:0 "Kontrolle über das Erbe von Mannin"
+ control_over_manx_legacy_decision_desc:0 "Wir haben unser Reich erweitert und kontrollieren nun zwei der vier wichtigsten Orte von Mannin. Es ist nun an der Zeit, dass wir daraus einen Vorteil ziehen. Dank dieser Machtdemonstration werden sich uns viele Menschen anschließen und denken, dass wir von den Göttern begünstigt sind. Mannin wird bald unser sein."
+ control_over_manx_legacy_decision_tooltip:0 "Wir werden die Situation ausnutzenn"
+ control_over_manx_legacy_decision_confirm:0 "Wir werden die Situation ausnutzen"
+ army_of_manx_decision_troops:0 "Krieger von Mannin"
+ 
+ a_claim_in_manx_decision:0 "Omen der Eroberung"
+ a_claim_in_manx_decision_desc:0 "Mannin sollte unter einem wahren Anführer vereint sein. Mir wurde gesagt, dass die Götter bei den Ballaharra-Steinen unser Schicksal vorhersagen können. Ich werde dorthin reisen und die Götter fragen, welches Gebiet ich als nächstes erobern soll."
+ a_claim_in_manx_decision_tooltip:0 "Bereitet die Armee vor"
+ a_claim_in_manx_decision_confirm:0 "Bereitet die Armee vor"
+ gain_a_claim_on_random_manx_county:0 "Ihr erhaltet einen Anspruch auf eine beliebige Grafschaft von Mannin"
+
+ fir_mannin_decision:0 "Kultur der Fir Mannin begründen"
+ fir_mannin_decision_desc:0 "Unsere alten Traditionen wurden durch die Wege von Mannin verändert. Wir sollten auf die Einheimischen schauen und sehen, was wir von ihnen lernen können."
+ fir_mannin_decision_tooltip:0 "Wir sind Fir Mannin!"
+ fir_mannin_decision_confirm:0 "Wir sind Fir Mannin!"
+
+ visit_ballaharra_stones_decision:0 "Besucht die Ballaharra Steine"
+ visit_ballaharra_stones_decision_desc:0 "Auch wenn Mannin nun geeint ist, können uns die Götter noch viel über unsere Zukunft sagen."
+ visit_ballaharra_stones_decision_tooltip:0 "Ich werde mit den Göttern reden"
+ visit_ballaharra_stones_decision_confirm:0 "Ich werde mit den Göttern reden"

@@ -861,3 +861,13 @@
  hostility_astray_tooltippable:0 "[GetHostilityLevelName('(int32)1')|V]"
  hostility_hostile_tooltippable:0 "[GetHostilityLevelName('(int32)2')|V]"
  hostility_evil_tooltippable:0 "[GetHostilityLevelName('(int32)3')|V]"
+
+#Manx holy sites
+holy_site_ballaharra_stones_name:0 "Ballaharra Steine"
+holy_site_tralee_effect_name:0 "Durch [holy_site|E] #weak ($holy_site_ballaharra_stones_name$)#!"
+kings_grave_site_name:0 "Königsgräber"
+kings_grave_site_effect_name:0 "Durch [holy_site|E] #weak ($kings_grave_site_name$)#!"
+holy_site_meayll_circle_name:0 "Meayllkreis"
+holy_site_meayll_circle_effect_name:0 "Durch [holy_site|E] #weak ($holy_site_meayll_circle_name$)#!"
+holy_site_cashtal_yn_ard_name:0 "Cashtal yn Ard"
+holy_site_cashtal_yn_ard_effect_name:0 "Durch [holy_site|E] #weak ($holy_site_cashtal_yn_ard_name$)#!"

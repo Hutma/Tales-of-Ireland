@@ -90,3 +90,10 @@
  milesian_paganism_adherent:0 "Kelte"
  milesian_paganism_adherent_plural:0 "Kelten" 
  milesian_paganism_desc:0 "Dieser Glaube ist derjenige, den die Milesianer mitbrachten, als sie Irland erreichten, sie verehren den Gott des Krieges und der Macht über alle anderen."
+
+#The Father of Manx faith loc
+ fathers_of_manx:0 "Väter von Manx"
+ fathers_of_manx_adj:0 "Väter von Manx"
+ fathers_of_manx_adherent:0 "Manx Kelte"
+ fathers_of_manx_adherent_plural:0 "Manx Kelten" 
+ fathers_of_manx_desc:0 "Diese Menschen haben den Ahnenkult der alten keltischen Glaubensrichtungen mit den lokalen Mythen der Isle of Manx verschmolzen."

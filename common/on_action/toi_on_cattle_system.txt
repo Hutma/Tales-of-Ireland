@@ -5,12 +5,12 @@ on_cattle_system = {
 		chance_of_no_event = {   
 			value = 75
         }
-		10 = 0
-		10 = cattle.0501
-		10 = cattle.0502
-		10 = cattle.0503
-		10 = cattle.0504
-		10 = cattle.0505
-		10 = cattle.0506
+		1 = 0
+		1 = cattle.0501
+		1 = cattle.0502
+		1 = cattle.0503
+		1 = cattle.0504
+		1 = cattle.0505
+		1 = cattle.0506
 	}
 }

@@ -37,6 +37,10 @@
  
  tenet_old_gods_name:0 "Die alten Götter"
  tenet_old_gods_desc:0 "Die Götter sind alt und viele scheinen sie vergessen zu haben, aber wir werden es nicht. Unsere Götter waren die ersten, die auf der Erde wandelten, sie sind die wahren Götter."
+
+tenet_manx_legacy_name:0 "Manx Erbe"
+tenet_manx_legacy_desc:0 "Manx ist ein Ort wie kein anderer, ein Ort voller Mythen, alter megalithischer Strukturen, einzigartiger Geschichte. All dies hat unsere Glaubensvorstellungen und Rituale beeinflusst."
+
  
  doctrine_parameter_cattle_raiding_cb_disable:0 "Kann [cattle_raiding_cb|E] nicht benutzen"
  doctrine_parameter_purification_cb_enabled:0 "Kann den Casus belli Reinigung verwenden"

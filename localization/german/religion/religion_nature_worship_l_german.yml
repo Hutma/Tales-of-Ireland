@@ -87,3 +87,10 @@
  cult_of_life_adherent:0 "Heide"
  cult_of_life_adherent_plural:0 "Heiden" 
  cult_of_life_desc:0 "Vor allem verehren wir die allmächtige Natur, die uns nährt und uns mit allem versorgt, was wir brauchen."
+
+#The manx_builders faith loc
+ manx_builders:0 "Manx Erbauer"
+ manx_builders_adj:0 "Manx Erbauer"
+ manx_builders_adherent:0 "Heide"
+ manx_builders_adherent_plural:0 "Heiden" 
+ manx_builders_desc:0 "Diese Personen glauben, dass die alten Strukturen der Manx von ihren Vorfahren mit Hilfe der Götter erbaut worden sind."

@@ -1,0 +1,70 @@
+﻿l_german:
+ toi_mann.0001.t:0 "In den Krieg!"
+ toi_mann.0001.desc:0 "Die Steine und die Zeichen haben den wahren Weg enthüllt. Unser Feind wird von Schwächlingen bewacht, von Narren beraten und mit Feiglingen verbündet. Die Götter werden mein Schwert leiten, und diejenigen, die unseren Stahl kosten, werden wissen, dass ich der rechtmäßige Herrscher dieser Insel bin!"
+ toi_mann.0001.a:0 "In den Krieg!"
+ toi_mann.0001.b:0 "Die Zeit ist noch nicht reif."
+ 
+ toi_mann.0002.t:0 "Ein Champion"
+ toi_mann.0002.desc:0 "Als sich meine Gruppe von den Steinen entfernt, kreuzt sich unser Weg mit einem mysteriösen Krieger. Seine zerfledderte Kleidung verrät seinen landlosen Status, aber die Narben sprechen von vielen Schlachten. "Ich habe gesehen, wie du mit den Göttern kommuniziert hast, man sagt, dass nur ein würdiger Herrscher zu so einer Leistung fähig ist. Ich habe viele Schlachten gesehen, und es wäre mir eine große Ehre, Euch zu dienen."\n\nSollte ich diesen Mann rekrutieren? Er sieht sicherlich fähig und erfahren aus, aber es ist möglich, dass er ein Spion ist oder seine eigenen Absichten hat. Ich weiß nichts über diesen Mann, aber ich werde es nie herausfinden, wenn ich nicht akzeptiere.."
+ toi_mann.0002.a:0 "Sei mein Schwert [champion.GetFirstName]."
+ toi_mann.0002.b:0 "Ich vertraue dir nicht."
+ 
+ toi_mann.0031.t:0 "Ein Freund bei den Steinen"
+ toi_mann.0031.desc:0 "Die Ballaharra-Zeremonie ist ein heikles und komplexes Ritual. Jedes Detail muss exakt sein, jedes Wort bis zur letzten Silbe gesprochen, damit die Götter nicht beleidigt werden und ein Fluch über meine Linie gebracht wird. Trotz meiner sorgfältigen Vorbereitung und meines Trainings für diesen Moment, bin ich nervös. Habe ich zu viel von dem mitgebracht? Habe ich zu wenig von dem platziert? Sind die Dinge richtig ausgelegt? Spreche ich die Worte richtig? Als das Ritual zu scheitern beginnt, spüre ich, wie die Götter von Neugier in Wut umschlagen.\n\nPlötzlich, fast so, als hätten die Götter Mitleid mit meiner Notlage, tauchte ein Mann aus dem Nichts auf und bot seine Hilfe an. Er kam eindeutig aus einem fremden, rivalisierenden Reich, doch ich schluckte meinen Stolz herunter und akzeptierte. Er half mir, das Ritual zu beenden und stellte sicher, dass ich gesegnet wurde oder zumindest einen Fluch vermeiden würde. Wir unterhielten uns eine Weile und stellten fest, dass wir viel mehr gemeinsam hatten, als erwartet. An einem Ort wie diesem haben uns die Götter zusammengeführt, um Vertrauen und Freundschaft auf dieser chaotischen, blutgetränkten Insel zu finden. Wenn sich unsere Wege jemals wieder kreuzen, hoffe ich, dass es nicht auf dem Schlachtfeld ist."
+ toi_mann.0031.a:0 "Ich hoffe, euch bald wieder zu sehen."
+ toi_mann.0031.b:0 "Ich mag ihn, aber er ist kein Freund."
+ 
+ toi_mann.0032.t:0 "Ein Rivale bei den Steinen"
+ toi_mann.0032.desc:0 "Die Ballaharra-Zeremonie ist ein heikles und komplexes Ritual. Jedes Detail muss exakt sein, jedes Wort bis zur letzten Silbe gesprochen, damit die Götter nicht beleidigt werden und ein Fluch über meine Linie kommt. Das Ritual verlief reibungslos, bis zum letzten Moment. Irgendein selbstgefälliger Bastard versuchte, die Zeremonie zu stören, obwohl er natürlich behauptete, dass es ein Unfall war. Selbst dieser freche Narr würde die Konsequenzen kennen, wie ein fehlgeschlagenes Ritual die Götter beleidigen und ein ganzes Königreich ins Verderben stürzen kann.\n\nGlücklicherweise konnte ich die Zeremonie ohne weitere Komplikationen beenden. Danach konfrontierte ich den Eindringling. Wir begannen zu streiten, was in Beleidigungen ausartete, und ehe wir uns versahen, waren unsere Schwerter gezückt.\n\nBevor ich ihm eine Lektion in Sachen Respekt erteilt werden konnte, griffen die Druiden ein und beendeten den Kampf. Sie verbannten uns beide von diesem Ort, da die Götter es verbieten, auf diesem heiligen Boden Blut zu vergießen.\n\nWenn sich unsere Wege jemals wieder kreuzen, hoffe ich, dass es auf dem Schlachtfeld ist."
+ toi_mann.0032.a:0 "Ich werde dich eines Tages töten."
+ 
+ toi_mann.0004.t:0 "Treffen mit dem Glaschtin"
+ toi_mann.0004.desc:0 "Ich war auf dem Weg zu den Steinen der Götter, als ich ein seltsames Wesen auf mich zukommen sah. Die Neugierde übermannte mich und ich wartete, um zu sehen, was das Ding war. Als die Kreatur sich mir näherte, konnte ich sehen, dass sie die Form eines Pferdes hat, aber nur auf zwei seiner... Füße läuft? Was sollte ich tun?"
+ toi_mann.0004.a:0 "Ich werde abwarten und sehen."
+ toi_mann.0004.b:0 "Ich denke, ich sollte weggehen."
+ 
+ toi_mann.0005.t:0 "Bestrafung durch den Glaschtin"
+ toi_mann.0005.desc:0 "Ich habe versucht, wegzulaufen, um dieser schrecklichen Kreatur zu entkommen. Aber er ist zu schnell, zu stark, zu schlau... Ich muss mich meinem Ende zu meinen Bedingungen stellen...."
+ toi_mann.0005.a:0 "Ich werde es schaffen, hoffe ich."
+ 
+ toi_mann.0042.t:0 "Treffen mit dem Glaschtin"
+ toi_mann.0042.desc:0 "Ich habe beschlossen, zu warten und mit der Kreatur zu reden, wenn ich kann. Sobald das Ding auftaucht, zeige ich mich und sorge dafür, dass ich nah genug bin, um es anzuschreien, aber weit genug, um einen eiligen Rückzug zu machen, falls nötig. Die Kreatur ruft mir zu: “Ich bin der Glashtin, ich bin der König der Gewässer, komm zu mir Sterblicher, du, der du zu neugierig warst, um vor mir wegzulaufen.”"
+ toi_mann.0042.a:0 "Ich muss antworten."
+ toi_mann.0042.b:0 "Ich sollte... Rennen!"
+ 
+ toi_mann.0043.t:0 "Treffen mit dem Glaschtin"
+ toi_mann.0043.desc:0 "“Was wollen Ihr von mir?" fragte ich. Er steht nun direkt vor mir, dieser beeindruckende Mensch-Pferd-Gott. Ich weiß nicht, ob ich erstaunt oder erschrocken sein soll. \n\n"Du hast mich geweckt und ich muss jetzt zufrieden sein, damit ich in mein Unterwasserreich zurückkehren kann, Sterblicher.”"
+ toi_mann.0043.a:0 "Ich habe schon mal etwas über den Glashtin gehört, vielleicht..."
+ toi_mann.0043.b:0 "Was würde dich zufriedenstellen?"
+ toi_mann.0043.c:0 "Ich sollte gehen, bevor es zu spät ist... Lauft!"
+ 
+ toi_mann.0431.t:0 "Treffen mit dem Glaschtin"
+ toi_mann.0431.desc:0 "Dank meines Wissens über die göttlichen Wesen wusste ich, dass ich ihn besänftigen würde, wenn ich ihm mein Pferd gebe und ihm verspreche, dass ich die Pferderasse der Insel Mannin erhalten werde. Er nahm mein Pferd und kehrte zurück in sein Wasserkönigreich."
+ toi_mann.0431.a:0 "Er hat mich sogar belohnt!"
+ 
+ toi_mann.0432.t:0 "Treffen mit dem Glaschtin"
+ toi_mann.0432.desc:0 "Verdammt seien die Götter! Ich habe versucht, ihm etwas von meinem Gold zu geben und mich vor ihm verbeugt, um ihn zu besänftigen, aber es hat nicht funktioniert. Er ist jetzt hinter mir her! Bitte rettet mich jemand vor diesem bösen Reiter!"
+ toi_mann.0432.a:0 "Ich bin verdammt! Lauft!"
+ 
+ toi_mann.0044.t:0 "Seltsames Geschenk für den Glaschtin"
+ toi_mann.0044.desc:0 "“Was würde euch zufriedenstellen?" frage ich, in der Hoffnung, ihn zu befriedigen.\n\n"Ich möchte, dass du mir eine Frau gibst, ich möchte ihr mein Reich zeigen und ihr meinen Segen geben. Ich verlasse mich darauf, dass du mir die Beste gibst, die du hast. Wenn ich zufrieden bin, wirst du belohnt werden." Ich muss nun entscheiden, wer zu ihm geschickt wird ... oder vielleicht sollte ich einfach weglaufen?"
+ toi_mann.0044.a:0 "Ich werde dir meine Frau geben."
+ toi_mann.0044.b:0 "Du kannst eine meiner Töchter haben."
+ toi_mann.0044.c:0 "Ich werde dir einen Höfling geben."
+ toi_mann.0044.d:0 "Das ist meine letzte Chance! Lauf! Lauf! Lauf!"
+ 
+ toi_mann.0451.t:0 "Der Glashtin freut sich"
+ toi_mann.0451.desc:0 "[woman_given.GetFirstName] ist wohlbehalten zurückgekehrt und bringt haufenweise Geschenke von den Göttern selbst mit. Der Glashtin war sehr zufrieden und gab ihr zum Dank viele Geschenke."
+ toi_mann.0451.a:0 "Das Ende dieser einmaligen Begegnung."
+ 
+ toi_mann.0452.t:0 "Unzufriedener Glashtin"
+ toi_mann.0452.desc:0 "Der Glaschtin war nicht sehr zufrieden, [woman_given.GetFirstName] ist zu uns zurückgekehrt, ist aber verletzt und hat uns gesagt, dass der Pferdegott Schande über mich bringt..."
+ toi_mann.0452.a:0 "Wenigstens ist er wieder im Wasser."
+ 
+ toi_mann.0453.t:0 "Wütender Glashtin"
+ toi_mann.0453.desc:0 "[woman_given.GetFirstName] kehrte nie zurück... Wochen später wurde ihre Leiche in der Nähe des Sees gefunden, wo ich die Kreatur zuerst sah... \n\nSie starb meinetwegen... Vielleicht bin ich nicht so gut darin, der Häuptling zu sein, wie ich einst dachte...."
+ toi_mann.0453.a:0 "Ich bin beschämt."
+ 
+ toi_mann.0046.t:0 "Glashtin's Erbe"
+ toi_mann.0046.desc:0 "[woman_given.GetFirstName] hat vor kurzem ein Kind zur Welt gebracht, aber dieses Kind ist anders, es kann schon besser schwimmen als die Männer des Stammes. Vielleicht ist sein Vater... Hmmm. Lass uns nicht darüber nachdenken..."
+ toi_mann.0046.a:0 "Komisches Kind..."
