@@ -2228,6 +2228,10 @@ cattle.0501 = {
 	}
 	
 	trigger = {
+		any_held_title = {
+			count > 1
+			tier = tier_county
+		}
 		capital_county = {
 			development_level > 20
 		}
@@ -2379,6 +2383,10 @@ cattle.0502 = {
 	}
 	
 	trigger = {
+		any_held_title = {
+			count > 1
+			tier = tier_county
+		}
 		capital_county = {
 			development_level > 30
 		}
@@ -2530,6 +2538,10 @@ cattle.0503 = {
 	}
 	
 	trigger = {
+		any_held_title = {
+			count > 1
+			tier = tier_county
+		}
 		capital_county = {
 			development_level > 40
 		}
@@ -2844,6 +2856,10 @@ cattle.0505 = {
 	
 	trigger = {
 		any_held_title = {
+			count > 1
+			tier = tier_county
+		}
+		any_held_title = {
 			AND = {
 				NOT = { this = root.capital_county }
 				tier = tier_county
@@ -2921,6 +2937,10 @@ cattle.0506 = {
 	}
 	
 	trigger = {
+		any_held_title = {
+			count > 1
+			tier = tier_county
+		}
 		any_held_title = {
 			AND = {
 				NOT = { this = root.capital_county }

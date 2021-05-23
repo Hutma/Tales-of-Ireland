@@ -78,7 +78,7 @@ introduction_event.001 =  {
 				}
 			}
 			trigger_event = {
-				id = introduction_event.007
+				id = introduction_event.008
 			}
 		}
 		if = {

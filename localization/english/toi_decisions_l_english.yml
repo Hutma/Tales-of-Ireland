@@ -76,12 +76,12 @@
  unite_all_ireland_decision_confirm:0 "Ireland is one"
  
  one_heir_decision:0 "Impose one heir"
- one_heir_decision_desc:0 "Since time immemorial, Ireland has been divided into four major provinces; Ulster, Munster, Leinster and Connacht. Very few have been able to take them, and far fewer have managed to hold them. \n\nNow that I hold Tara, Westmeath and Longford, I can declare my Realm as the new major province which I shall call Meath.\n\nUnlike other Realms long forgotten, this one shall forever change the map of Ireland, bringing the count of major provinces from four to five. This new province shall remain united and stand as one."
+ one_heir_decision_desc:0 "My life's work threatens to be undone when I depart this world. My land is doomed to be broken up and torn apart by squabbling sons. Perhaps under the right circumstances, I can secure my legacy and give all to the first in the succession line..."
  one_heir_decision_tooltip:0 "The realm will stay stable"
  one_heir_decision_confirm:0 "The realm will stay stable"
  
  found_meath_decision:0 "Found Meath"
- found_meath_decision_desc:0 "With Tara, Westmeath and Longford in my possession I have managed to gather enough power to impose my realm as a new province of Ireland. This new province shall remain united and stand as one against our present and future enemies."
+ found_meath_decision_desc:0 "Since time immemorial, Ireland has been divided into four major provinces; Ulster, Munster, Leinster and Connacht. Very few have been able to take them, and far fewer have managed to hold them. \n\nNow that I hold Tara, Westmeath and Longford, I can declare my Realm as the new major province which I shall call Meath.\n\nUnlike other Realms long forgotten, this one shall forever change the map of Ireland, bringing the count of major provinces from four to five. This new province shall remain united and stand as one."
  found_meath_decision_tooltip:0 "A fifth province for Ireland"
  found_meath_decision_confirm:0 "A fifth province for Ireland"
  

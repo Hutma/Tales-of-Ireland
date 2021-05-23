@@ -344,7 +344,6 @@ wonder_king_grave_02 = {
 			has_innovation = innovation_house_soldiers
 			has_innovation = innovation_development_01
 		}
-		has_title = title:k_mann
 	}
 	
 	character_modifier = {
