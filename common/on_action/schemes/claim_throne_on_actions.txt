@@ -42,6 +42,9 @@ claim_throne_failed = {
 }
 
 claim_throne_ongoing = {
+	trigger = {
+		exists = scope:scheme
+	}
 	# Events that can happen while Claiming Throne from your Liege
 	
 	random_events = {

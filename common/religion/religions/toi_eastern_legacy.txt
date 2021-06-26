@@ -190,6 +190,8 @@
 			color = { 220 220 100 }
 			icon = pagan_magyar
 			
+			doctrine = doctrine_consanguinity_unrestricted
+			
 			holy_site = neagh_burst
 			holy_site = leinster_bursts
 			holy_site = beaghmore_stone_circles

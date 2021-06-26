@@ -47,20 +47,20 @@
  baron_feudal_male:0 "Baron"
  baron_feudal_female:0 "Baroness"
  barony_feudal:0 "Barony"
- count_feudal_male:0 "Rí Tuath"
- count_feudal_female:0 "Rí Tuath"
+ count_feudal_male:0 "Rí Túath"
+ count_feudal_female:0 "Banríon Túath"
  county_feudal:0 "County"
- duke_feudal_male:0 "Rí Tuath Mór"
- duke_feudal_female:0 "Rí Tuath Mór"
+ duke_feudal_male:0 "Rí Túath Mór"
+ duke_feudal_female:0 "Banríon Túath Mór"
  duchy_feudal:0 "Duchy"
- duke_feudal_independent:0 "Rí Tuath Mór"
- duke_feudal_independent_female:0 "Rí Tuath Mór"
+ duke_feudal_independent:0 "Rí Túath Mór"
+ duke_feudal_independent_female:0 "Banríon Túath Mór"
  duchy_feudal_independent:0 "Duchy"
  king_feudal_male:0 "Rí Cuicedh"
- king_feudal_female:0 "Rí Cuicedh"
+ king_feudal_female:0 "Banríon Cuicedh"
  kingdom_feudal:0 "Kingdom"
  emperor_feudal_male:0 "Rí Cuicedh"
- emperor_feudal_female:0 "Rí Cuicedh"
+ emperor_feudal_female:0 "Banríon Cuicedh"
  empire_feudal:0 "Empire"
 
  #Default Republic tiers
@@ -195,8 +195,8 @@
 # Zoroastrianism
 # Zunism
 ## Imperial Prince ##
- prince_empire:0 "Prince"
- princess_empire:0 "Princess"
+ prince_empire:0 "Prionsa"
+ princess_empire:0 "Banphrionsa"
 
  high_king_feudal_male:0 "Ardrí na hÉireann"
- high_king_feudal_female:0 "Ardrí na hÉireann"
+ high_king_feudal_female:0 "Ardbanríon na hÉireann"

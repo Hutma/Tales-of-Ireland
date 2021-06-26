@@ -53,7 +53,7 @@ wonder_round_tower_02 = {
 			has_innovation = innovation_burhs
 		}
 	}
-	garrison = 30
+	max_garrison = 30
 	
 	character_modifier = {
 		monthly_prestige = 0.6
@@ -94,7 +94,7 @@ wonder_round_tower_03 = {
 			has_innovation = innovation_windmills
 		}
 	}
-	garrison = 60
+	max_garrison = 60
 	
 	character_modifier = {
 		monthly_prestige = 0.8

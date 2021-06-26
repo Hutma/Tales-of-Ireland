@@ -50,4 +50,4 @@
  doctrine_parameter_sacrifice_to_sidhe_decision_active:0 "Can make a sacrifice to the Sidhe"
  sea_fomorian_opinion:0 "Sea Fomorian opinion"
  underground_fomorian_opinion:0 "Underground Fomorian opinion"
- can_go_on_great_hunt_decision_active:0 "Can go on a great ceremonial hunt"
+ doctrine_parameter_can_go_on_great_hunt_decision_active:0 "Can go on a great ceremonial hunt"

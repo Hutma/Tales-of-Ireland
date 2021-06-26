@@ -1354,6 +1354,7 @@ child_personality.0006 = {
 		if = {
 			limit = {
 				is_ai = yes
+				exists = scope:crush
 			}
 			random_relation = {
 				type = guardian
@@ -1397,6 +1398,7 @@ child_personality.0006 = {
 		if = {
 			limit = {
 				is_ai = yes
+				exists = scope:crush
 			}
 			random_relation = {
 				type = guardian
@@ -1440,6 +1442,7 @@ child_personality.0006 = {
 		if = {
 			limit = {
 				is_ai = yes
+				exists = scope:crush
 			}
 			random_relation = {
 				type = guardian
@@ -4742,7 +4745,7 @@ child_personality.1022 = {
 		trigger = {
 			NOT = {
 				scope:child = {
-					OR = {
+					NOR = {
 						has_trait = arrogant
 						has_trait = humble
 					}

@@ -782,6 +782,16 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	modifier = {
 		add = 35
 		desc = tooltip_feudal_elector_vote_same_race
+
+		has_trait = latin_human
+		
+		NOT = { this = scope:candidate } #Do not judge yourself.
+
+		scope:candidate = { has_trait = latin_human }
+	}
+	modifier = {
+		add = 35
+		desc = tooltip_feudal_elector_vote_same_race
 		NOT = { this = scope:candidate } #Do not judge yourself.
 		AND = {
 			root = { has_trait = megalith_human }

@@ -2,12 +2,12 @@
  #Manx decisions
  unite_manx_decision:0 "Unite Mannin"
  unite_manx_decision_desc:0 "For too long, this fair island has been soaked in blood as warlords and petty kings staked their claim. Now that Mannin is once again under a single banner, they shall be cast aside. I shall follow in the footsteps of old Bann, and re-establish the Kingdom of Mannin."
- unite_manx_decision_tooltip:0 "Mannin is one"
+ unite_manx_decision_tooltip:0 "Re-Establish the Kingdom of Mannin"
  unite_manx_decision_confirm:0 "Mannin is one"
  
  control_over_manx_legacy_decision:0 "Control over Mannin's legacy"
- control_over_manx_legacy_decision_desc:0 "Countless warriors on this fair island have thrown away their lives in vain attempts to unify it. When I began my conquests, many in my Court believed I would end up the same. Yet, those voices are now hushed, replaced with cheers and praise.\n\nThere are four major sites that are key to unifying this land, and I control two. Great warriors have abandoned their pretender lords to join our cause, and the zealous consider us favoured by the gods. Mannin will soon be ours."
- control_over_manx_legacy_decision_tooltip:0 "We'll take advantage of the situation"
+ control_over_manx_legacy_decision_desc:0 "Countless warriors on this fair island have thrown away their lives in vain attempts to unify it. When I began my conquests, many in my Court believed I would end up the same. Those voices are now hushed, replaced with cheers and praise.\n\nThere are four major sites that are key to unifying this land, and I control two. Great warriors have abandoned their pretender lords to join our cause, and the zealous consider us favoured by the gods. Mannin will soon be ours."
+ control_over_manx_legacy_decision_tooltip:0 "Affirm your ambitions to control Mannin"
  control_over_manx_legacy_decision_confirm:0 "We'll take advantage of the situation"
  army_of_manx_decision_troops:0 "Warriors of Mannin"
  
@@ -15,14 +15,14 @@
  a_claim_in_manx_decision_desc:0 "Once, Mannin was a force to be reckoned with, and even the great kings of Ireland and Britain feared our wrath. Only through unification under a single ruler can this past glory be reclaimed.\n\nLegends speak of the gods communing with warlords at the Ballaharra Stones. I shall travel there, and they will guide me to my next conquest."
  A_CLAIM_IN_MANX_DECISION_RANDOM_MANX_COUNTY_GLOB:0 "You gain a claim on a random county of Mannin"
  a_claim_in_manx_decision_tooltip:0 "Prepare the armies"
- a_claim_in_manx_decision_confirm:0 "Prepare the armies"
+ a_claim_in_manx_decision_confirm:0 "We set forth for conquest!"
  
  fir_mannin_decision:0 "Establish Fir Mannin culture"
  fir_mannin_decision_desc:0 "Our old traditions have been altered by the ways of Mannin. We should look to the locals and see what we can learn from them."
- fir_mannin_decision_tooltip:0 "We are the Fir Mannin"
+ fir_mannin_decision_tooltip:0 "Embrace our new cultural identity"
  fir_mannin_decision_confirm:0 "We are the Fir Mannin"
  
  visit_ballaharra_stones_decision:0 "Visit Ballaharra Stones"
- visit_ballaharra_stones_decision_desc:0 "Even if Mannin is now united there is still a lot that the gods can tell us about our future."
- visit_ballaharra_stones_decision_tooltip:0 "I will talk with the gods"
- visit_ballaharra_stones_decision_confirm:0 "I will talk with the gods"
+ visit_ballaharra_stones_decision_desc:0 "Even if Mannin is now united there is still a much that the gods can tell us about our future."
+ visit_ballaharra_stones_decision_tooltip:0 "Commune with the gods"
+ visit_ballaharra_stones_decision_confirm:0 "Gods, hear my prayers"

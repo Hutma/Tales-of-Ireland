@@ -100,6 +100,10 @@ on_game_start = {
 			limit = {has_culture = culture:brythonic_mann}
 				add_trait = celtic_human
 			}
+			if = {
+			limit = {has_culture = culture:roman}
+				add_trait = latin_human
+			}
 			add_trait = celtic_human
 		}
 #### TALES OF IRELAND ####

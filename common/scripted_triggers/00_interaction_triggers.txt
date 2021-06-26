@@ -56,7 +56,6 @@ title_revocation_is_tyrannical_trigger = {
 	NOR = {
 		has_revoke_title_reason = scope:recipient
 		has_claim_on = scope:landed_title
-		scope:recipient = { vassal_contract_has_flag = vassal_contract_free_revocation }
 		faith = {
 			OR = {
 				AND = {								
@@ -124,5 +123,21 @@ is_de_jure_vassal_of_liege_trigger = {
 				}
 			}
 		}
+	}
+}
+
+send_poem_positive_poem_lock_trigger = {
+	OR = {
+		is_ai = no
+		NOT = { has_relation_rival = scope:recipient }
+		NOT = { has_relation_nemesis = scope:recipient }
+	}
+}
+
+send_poem_negative_poem_lock_trigger = {
+	OR = {
+		is_ai = no
+		has_relation_rival = scope:recipient
+		has_relation_nemesis = scope:recipient
 	}
 }

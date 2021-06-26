@@ -280,7 +280,6 @@ restore_nemedian_kingdom_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
 	major = yes
 	ai_goal = yes
-	ai_check_interval = 120
 
 	desc = restore_nemedian_kingdom_decision_desc
 
@@ -348,6 +347,53 @@ restore_nemedian_kingdom_decision = {
 
 	cost = {
 		gold = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+celtic_troops_decision = {
+	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+
+	ai_check_interval = 55
+
+	desc = celtic_troops_decision_desc
+
+	cooldown = { years = 25 }
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		has_trait = celtic_human
+	}
+
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			highest_held_title_tier > 2
+		}
+		piety_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			celtic_troops_decision_scripted_effect = yes
+		}
+	}
+
+	cost = {
+		piety = 1000
 	}
 
 	ai_potential = {

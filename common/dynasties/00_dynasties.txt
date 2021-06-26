@@ -1072,3 +1072,14 @@
 	name = "Argead"
 	culture = "fir_bolg"	
 }
+
+#Latin
+213 = {
+	name = "Agricola"
+	culture = "roman"	
+}
+
+214 = {
+	name = "Paulinus"
+	culture = "roman"	
+}

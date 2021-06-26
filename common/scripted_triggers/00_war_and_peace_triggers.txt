@@ -226,11 +226,24 @@ any_liege_or_above_is_participant_trigger = {
 	}
 }
 
-can_use_conquest_cbs_trigger = {
+can_use_conquest_cbs_trigger = { #Tales of Ireland TOI
 	OR = {
 		has_government = tribal_government
-		has_government = clan_government
 		faith = { has_doctrine_parameter = conquest_cb_enabled }
+		
+		AND = {
+			has_trait = hy_brazylian
+			has_global_variable = hy_brazylian_have_appeared
+			current_date < 4940.1.1
+		}
+		
+		AND = {
+			has_faith = faith:le_cheile_faith
+			has_global_variable = fianna_have_risen
+			current_date < 5025.1.1
+		}
+		
+		has_character_flag = roman_invader
 	}
 }
 
@@ -646,6 +659,58 @@ prisoners_of_war_trigger = {
 							value <= 3
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+religious_war_vassals_constraints = {
+	trigger_if = {
+		limit = {
+			scope:attacker = { is_independent_ruler = no }
+		}
+		scope:attacker = {
+		    NOT = { character_is_land_realm_neighbor = scope:defender }
+		}
+		scope:defender = { is_independent_ruler = yes }
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+feudal_clan_tribal_conquest_constraints = {		
+	OR = {
+		trigger_if = {
+			limit = {
+				tier = tier_county
+			}
+			NOT = {
+				any_county_province = {
+					has_holding_type = tribal_holding
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				tier > tier_county
+			}
+			NOT = {
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					any_county_province = {
+						has_holding_type = tribal_holding
+					}
+				}
+			}
+		}
+		scope:attacker = {
+			NOT = { has_government = tribal_government } 
+			gold < 200
+			any_sub_realm_county = {
+				any_county_province = {
+					has_holding_type = tribal_holding
 				}
 			}
 		}

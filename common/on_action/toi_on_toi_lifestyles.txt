@@ -73,7 +73,7 @@
 						}
 					}
 				}
-				add_tales_of_abundance_lifestyle_xp = 5
+				add_tales_of_abundance_lifestyle_xp = 10
 			}
 			if = {
 				limit = {
@@ -232,10 +232,10 @@ on_toi_lifestyles_marriage = {
 					}
 				}
 				scope:spouse.father = {
-					add_tales_of_abundance_lifestyle_xp = 55
+					add_tales_of_abundance_lifestyle_xp = 105
 				}
 				scope:spouse.mother = {
-					add_tales_of_abundance_lifestyle_xp = 55
+					add_tales_of_abundance_lifestyle_xp = 105
 				}
 			}
 			if = {
@@ -258,10 +258,10 @@ on_toi_lifestyles_marriage = {
 					}
 				}
 				root.father = {
-					add_tales_of_abundance_lifestyle_xp = 55
+					add_tales_of_abundance_lifestyle_xp = 105
 				}
 				root.mother = {
-					add_tales_of_abundance_lifestyle_xp = 55
+					add_tales_of_abundance_lifestyle_xp = 105
 				}
 			}
 		}
@@ -278,7 +278,7 @@ on_toi_lifestyles_feast = {
 on_toi_lifestyles_battle = {
 	effect = {
 		#Winning in battle
-		add_tales_of_war_lifestyle_xp = 25
+		add_tales_of_war_lifestyle_xp = 35
 	}
 }
 

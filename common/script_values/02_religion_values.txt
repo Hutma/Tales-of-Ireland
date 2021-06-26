@@ -33,24 +33,24 @@ excommunication_cb_piety_white_peace = -50
 religious_cb_piety_discount_against_hof_humsac = 0.5
 hof_humsacd_fervour_gain = major_fervor_value
 
-faith_doctrine_cost_low = 200
-faith_doctrine_cost_mid = 400
-faith_doctrine_cost_high = 600
-faith_doctrine_cost_massive = 1000
+faith_doctrine_cost_low = 100
+faith_doctrine_cost_mid = 300
+faith_doctrine_cost_high = 500
+faith_doctrine_cost_massive = 900
 
-faith_tenet_cost_low = 500
-faith_tenet_cost_mid = 1000
-faith_tenet_cost_high = 1500
-faith_tenet_cost_massive = 2000
+faith_tenet_cost_low = 350
+faith_tenet_cost_mid = 850
+faith_tenet_cost_high = 1350
+faith_tenet_cost_massive = 1850
 
 faith_unchanged_doctrine_cost_mult = 0.5
 faith_changed_doctrine_cost_mult_two_step = 1.50
 faith_changed_doctrine_cost_mult_three_step = 2.25
 faith_changed_doctrine_cost_mult_four_step = 3.50
 
-hostility_multiplier_pluralism = 0.5
-hostility_multiplier_righteous = 1
-hostility_multiplier_fundamentalist = 2
+hostility_multiplier_pluralism = 0.75
+hostility_multiplier_righteous = 1.25
+hostility_multiplier_fundamentalist = 2.25
 hostility_multiplier_reduction_adaptive = -0.25
 
 heretical_defector_fervor_gain = 15 # How much fervor Old Faith gains when a ruler splits off to a New Heresy
@@ -466,243 +466,7 @@ great_holy_war_target_kingdom_weight = {
 		}
 		multiply = ghw_target_existing_same_faith_ruler
 	}
-	
-	### 2 ###
-	###Abrahamics & Zoroastrians
-	#Documentation = {
-		#Avoid adding lots of reckless GHW stretch goals, as it'll mess up the targeting if every religion has a dozen apiece.
-
-		#Below is an organised, prioritised list of the different target regions for each religion. Update it as you make changes.
-		#Christianity
-		#ghw_region_northern_italy					#heartlands
-		#ghw_region_thessalonika					#heartlands
-		#ghw_region_ethiopia						#heartlands
-		#ghw_region_france							#heartlands
-		#ghw_region_germany							#heartlands
-		#ghw_region_greece							#heartlands
-		#ghw_region_england							#heartlands
-		#ghw_region_caucasus						#heartlands
-		#ghw_region_anatolia						#frontier
-		#ghw_region_near_east						#frontier
-		#ghw_region_mediterranean					#frontier
-		#ghw_region_balkans							#frontier
-		#ghw_region_holy_land						#frontier
-		#ghw_region_iberia							#frontier
-		#ghw_region_celtic							#fringe
-		#ghw_region_germanic						#fringe
-		#ghw_region_central_european				#fringe
-		#ghw_region_baltic							#stretch
-		
-		#Islam
-		#ghw_region_holy_land						#heartlands
-		#ghw_region_arabia							#heartlands
-		#ghw_region_near_east						#heartlands
-		#ghw_region_egypt							#heartlands
-		#ghw_region_persia							#heartlands
-		#ghw_region_north_africa					#heartlands
-		#ghw_region_sicily							#frontier
-		#ghw_region_iberia							#frontier
-		#ghw_region_anatolia						#frontier
-		#ghw_region_afghanistan						#frontier
-		#ghw_region_the_sahel						#fringe
-		#ghw_region_mediterranean					#fringe
-		#ghw_region_western_india					#fringe
-		#ghw_region_southern_france					#fringe
-
-		#Yazidism
-		#ghw_region_kurdistan						#heartlands
-		#ghw_region_southern_middle_east			#frontier
-		#ghw_region_eastern_middle_east				#frontier
-		#ghw_region_caucasus						#frontier
-		#ghw_region_caspian_steppe					#fringe
-		#ghw_region_arabia							#fringe
-		#ghw_region_holy_land						#fringe
-
-		#Judaism
-		#ghw_region_holy_land						#heartlands
-		#ghw_region_arabia							#frontier
-		#ghw_region_near_east						#frontier
-		#ghw_region_egypt							#frontier
-		#ghw_region_anatolia						#fringe
-		#ghw_region_persia							#fringe
-		#ghw_region_ethiopia						#fringe
-
-		#Zoroastrianism/Dualism
-		#ghw_region_persia							#heartlands
-		#ghw_region_afghanistan						#frontier
-		#ghw_region_near_east						#frontier
-		#ghw_region_arabia							#fringe
-		#ghw_region_holy_land						#fringe
-		#ghw_region_anatolia						#fringe
-		#ghw_region_mongolia						#fringe
-		#ghw_region_western_india					#fringe
-
-		#Norse Paganism
-		#ghw_region_scandinavia						#heartlands
-		#ghw_region_britannia						#frontier
-		#ghw_region_saxony							#frontier
-		#ghw_region_russia							#frontier
-		#ghw_region_baltic							#fringe
-		#ghw_region_poland							#fringe
-		#ghw_region_thessalonika					#stretch
-
-		#Baltic Paganism
-		#ghw_region_baltic							#heartlands
-		#ghw_region_poland							#frontier
-		#ghw_region_russia							#frontier
-		#ghw_region_scandinavia						#fringe
-		#ghw_region_steppe							#fringe
-		#ghw_region_hungary							#fringe
-
-		#Slavic Paganism
-		#ghw_region_wendish_lands					#heartlands
-		#ghw_region_balkans							#heartlands
-		#ghw_region_russia							#heartlands
-		#ghw_region_hungary							#frontier
-		#ghw_region_steppe							#frontier
-		#ghw_region_mainland_greece					#fringe
-		#ghw_region_germany							#fringe
-		#ghw_region_italy							#stretch
-
-		#Finnish Paganism
-		#ghw_region_finland_&_estonia				#heartlands
-		#ghw_region_northern_russia					#heartlands
-		#ghw_region_steppe							#heartlands
-		#ghw_region_scandinavia						#frontier
-		#ghw_region_baltic							#frontier
-		#ghw_region_southern_russia					#frontier
-		#ghw_region_siberia							#frontier
-		#ghw_region_transoxiana						#fringe
-		#ghw_region_mongolia						#fringe
-
-		#Tengri Paganism
-		#ghw_region_mongolia						#heartlands
-		#ghw_region_siberia							#heartlands
-		#ghw_region_steppe							#heartlands
-		#ghw_region_russia							#frontier
-		#ghw_region_transoxiana						#frontier
-		#ghw_region_hungary							#frontier
-		#ghw_region_tibet							#fringe
-		#ghw_region_wendish_lands					#fringe
-
-		#Magyar Paganism
-		#ghw_region_hungary							#heartlands
-		#ghw_region_balkans							#frontier
-		#ghw_region_crimea							#frontier
-		#ghw_region_poland_bohemia_bavaria			#frontier
-		#ghw_region_southern_russia					#frontier
-		#ghw_region_mainland_greece					#fringe
-		#ghw_region_baltic							#fringe
-
-		#Bon Paganism, Qiangicism, Donyipoloism, & Mundhumism
-		#ghw_region_tibet							#heartlands
-		#ghw_region_northern_india					#frontier
-		#ghw_region_khotan							#frontier
-		#ghw_region_mongolia						#fringe
-		#ghw_region_transoxiana						#fringe
-		#ghw_region_southern_india					#stretch
-
-		#Mande Paganism & Senegambian Paganism
-		#ghw_region_the_sahel						#heartlands
-		#ghw_region_subsahelian_africa				#frontier
-		#ghw_region_north_african_interior			#frontier
-		#ghw_region_western_sahara					#frontier
-		#ghw_region_north_africa					#fringe
-
-		#Hausan Paganism
-		#ghw_region_north_african_interior			#heartlands
-		#ghw_region_the_sahel						#frontier
-		#ghw_region_subsahelian_africa				#frontier
-		#ghw_region_ethiopia						#frontier
-		#ghw_region_eastern_sahara					#frontier
-		#ghw_region_horn_of_africa					#fringe
-		#ghw_region_egypt_et_al						#fringe
-		#ghw_region_north_africa					#fringe
-
-		#Akan Paganism & Yoruba Paganism
-		#ghw_region_subsahelian_africa				#heartlands
-		#ghw_region_the_sahel						#frontier
-		#ghw_region_north_african_interior			#frontier
-		#ghw_region_western_sahara					#frontier
-		#ghw_region_north_africa					#fringe
-
-		#Kushite Paganism
-		#ghw_region_egypt_et_al						#heartlands
-		#ghw_region_north_african_interior			#frontier
-		#ghw_region_ethiopia						#frontier
-		#ghw_region_horn_of_africa					#frontier
-		#ghw_region_the_sahel						#fringe
-		#ghw_region_subsahelian_africa				#fringe
-		#ghw_region_eastern_sahara					#fringe
-		#ghw_region_north_africa					#fringe
-		#ghw_region_holy_land						#stretch
-		#ghw_region_arabia							#stretch
-
-		#Waaqi Paganism
-		#ghw_region_horn_of_africa					#heartlands
-		#ghw_region_ethiopia						#frontier
-		#ghw_region_egypt_et_al						#frontier
-		#ghw_region_arabia							#frontier
-		#ghw_region_north_african_interior			#fringe
-		#ghw_region_holy_land						#fringe
-
-		#Zunist Paganism
-		#ghw_region_afghanistan						#heartlands
-		#ghw_region_western_india					#frontier
-		#ghw_region_persia							#frontier
-		#ghw_region_transoxiana						#frontier
-		#ghw_region_caucasus						#fringe
-		#ghw_region_holy_land						#fringe
-		#ghw_region_near_east						#fringe
-		#ghw_region_southwestern_india				#fringe
-		#ghw_region_egypt							#stretch
-
-		#Hellenic Paganism
-		#ghw_region_mainland_greece					#heartlands
-		#ghw_region_italy							#heartlands
-		#ghw_region_anatolia						#frontier
-		#ghw_region_balkans							#frontier
-		#ghw_region_near_east						#frontier
-		#ghw_region_holy_land						#fringe
-		#ghw_region_egypt							#fringe
-		#ghw_region_north_africa					#fringe
-		#ghw_region_southern_france					#fringe
-
-		#Hinduism
-		#Hinduism prioritises the Sacred River above the rest of the sub-continent.
-		#ghw_region_the_ganges						#heartlands
-		#ghw_region_non_ganges_india				#frontier
-		#ghw_region_tibet							#fringe
-		#ghw_region_afghanistan						#fringe
-		#ghw_region_persia							#fringe
-
-		#Jainism
-		#How did you even *manage* to get a game that needs this?
-		#ghw_region_gujarat_&_rajputana				#heartlands
-		#ghw_region_non_gujarat_or_rajputana_india	#frontier
-		#ghw_region_tibet							#fringe
-		#ghw_region_afghanistan						#fringe
-		#ghw_region_persia							#fringe
-
-		#Buddhism Theravada
-		#ghw_region_lanka_&_bengal					#heartlands
-		#ghw_region_middle_india					#frontier
-		#ghw_region_western_india					#fringe
-
-		#Buddhism Mahayana & Vajrayana
-		#ghw_region_tibet							#heartlands
-		#ghw_region_mongolia						#heartlands
-		#ghw_region_khotan							#frontier
-		#ghw_region_siberia							#frontier
-		#ghw_region_transoxiana						#fringe
-		#ghw_region_afghanistan						#fringe
-
-		#Taoism
-		#ghw_region_mongolia						#heartlands
-		#ghw_region_siberia							#frontier
-		#ghw_region_tibet							#frontier
-		#ghw_region_north_eastern_india				#fringe
-	#}
+}
 
 
 great_holy_war_pledge_amount = {
@@ -1003,12 +767,12 @@ faith_conversion_cost_mult = {
 	if = {
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_abrahamic }
+				religion = { is_in_family = rf_overworld }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						is_in_family = rf_abrahamic
+						is_in_family = rf_overworld
 						NOT = { this = scope:new_faith.religion}
 					}
 				}
@@ -1023,12 +787,12 @@ faith_conversion_cost_mult = {
 	if = {
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_eastern }
+				religion = { is_in_family = rf_travelers }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						is_in_family = rf_eastern
+						is_in_family = rf_travelers
 						NOT = { this = scope:new_faith.religion}
 					}
 				}
@@ -1168,12 +932,12 @@ faith_conversion_cost_mult = {
 	if = { #Cheaper if the religion is present near/in your borders
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_abrahamic }
+				religion = { is_in_family = rf_overworld }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						NOT = { is_in_family = rf_abrahamic }
+						NOT = { is_in_family = rf_overworld }
 					}
 				}
 				OR = {
@@ -1212,12 +976,12 @@ faith_conversion_cost_mult = {
 	else_if = { #Cheaper if the religion is present near/in your borders
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_eastern }
+				religion = { is_in_family = rf_travelers }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						NOT = { is_in_family = rf_eastern }
+						NOT = { is_in_family = rf_travelers }
 					}
 				}
 				OR = {
@@ -1300,12 +1064,12 @@ faith_conversion_cost_mult = {
 	else_if = { #Cheaper if the religion is present near/in your borders
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_abrahamic }
+				religion = { is_in_family = rf_overworld }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						is_in_family = rf_abrahamic
+						is_in_family = rf_overworld
 						NOT = { this = scope:new_faith.religion}
 					}
 				}
@@ -1345,12 +1109,12 @@ faith_conversion_cost_mult = {
 	else_if = { #Cheaper if the religion is present near/in your borders
 		limit = {
 			scope:new_faith = {
-				religion = { is_in_family = rf_eastern }
+				religion = { is_in_family = rf_travelers }
 			}
 			scope:character = {
 				faith = {
 					religion = {
-						is_in_family = rf_eastern
+						is_in_family = rf_travelers
 						NOT = { this = scope:new_faith.religion}
 					}
 				}

@@ -2965,3 +2965,413 @@ cattle.0506 = {
 		}
 	}
 }
+
+#exeptionnal harvest building good
+cattle.0601 = {
+	type = character_event
+	title = cattle.0601.t
+	desc = cattle.0601.desc
+	theme = realm
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness 
+	}
+	
+	option = {
+		name = cattle.0601.a
+		trigger = {
+			any_held_title = {
+				tier = tier_county
+				this.title_province = {
+					has_building_or_higher = grain_storage_01
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 5
+		}
+		add_prestige = 100
+	}
+	option = {
+		name = cattle.0601.b
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 2
+		}
+		add_prestige = 50
+		add_gold = 100
+	}
+}
+
+#thin harvest building bad
+cattle.0602 = {
+	type = character_event
+	title = cattle.0602.t
+	desc = cattle.0602.desc
+	theme = realm
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	option = {
+		name = cattle.0602.a
+		trigger = {
+			any_held_title = {
+				tier = tier_county
+				this.title_province = {
+					has_building_or_higher = grain_storage_01
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -2
+		}
+	}
+	option = {
+		name = cattle.0602.b
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -5
+		}
+		add_prestige = -150
+		every_courtier_or_guest = {
+			add_character_modifier = {
+				modifier = fasting_bad_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+#healthy cattle building good
+cattle.0603 = {
+	type = character_event
+	title = cattle.0603.t
+	desc = cattle.0603.desc
+	theme = stewardship_domain_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness	 
+	}
+	
+	option = {
+		name = cattle.0603.a
+		trigger = {
+			any_held_title = {
+				tier = tier_county
+				this.title_province = {
+					has_building_or_higher = cattle_lookout_01
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 3
+		}
+		capital_county = {
+			change_development_level = 4
+		}
+	}
+	option = {
+		name = cattle.0603.b
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 1
+		}
+		capital_county = {
+			change_development_level = 2
+		}
+	}
+}
+
+#sick animals building bad
+cattle.0604 = {
+	type = character_event
+	title = cattle.0604.t
+	desc = cattle.0604.desc
+	theme = stewardship_domain_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = sadness 
+	}
+	
+	option = {
+		name = cattle.0604.a
+		trigger = {
+			any_held_title = {
+				tier = tier_county
+				this.title_province = {
+					has_building_or_higher = cattle_lookout_01
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -3
+		}
+	}
+	option = {
+		name = cattle.0604.b
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -5
+		}
+		add_piety = -100
+	}
+}
+
+#lot of grass = more cattle
+cattle.0605 = {
+	type = character_event
+	title = cattle.0605.t
+	desc = cattle.0605.desc
+	theme = stewardship_duty_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county.development_level < 15
+	}
+	option = {
+		name = cattle.0605.a
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 3
+		}
+		capital_county = {
+			change_development_level = 5
+		}
+	}
+}
+
+#very healthy sheep
+cattle.0606 = {
+	type = character_event
+	title = cattle.0606.t
+	desc = cattle.0606.desc
+	theme = stewardship_duty_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational 
+	}
+	
+	trigger = {
+		capital_county.development_level < 10
+	}
+	option = {
+		name = cattle.0606.a
+		capital_county = {
+			change_development_level = 5
+		}
+		add_gold = 100
+		add_prestige = 50
+	}
+}
+
+#not enough space
+cattle.0607 = {
+	type = character_event
+	title = cattle.0607.t
+	desc = cattle.0607.desc
+	theme = stewardship_duty_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = shock 
+	}
+	
+	trigger = {
+		capital_county.development_level > 65
+	}
+	option = {
+		name = cattle.0607.a
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -4
+		}
+		add_gold = 50
+	}
+}
+
+#too many cattle to oversee
+cattle.0608 = {
+	type = character_event
+	title = cattle.0608.t
+	desc = cattle.0608.desc
+	theme = stewardship_duty_focus
+	
+	override_background = {
+		event_background = round_tower
+	}
+	
+	left_portrait = {
+		character = root
+		animation = shock 
+	}
+	
+	trigger = {
+		capital_county.development_level > 65
+	}
+	option = {
+		name = cattle.0608.a
+		capital_county = {
+			change_development_level = -8
+		}
+		add_prestige = -50
+	}
+}
+
+#AI BOOST cattle minor start
+cattle.5001 = {
+	hidden = yes
+	trigger = {
+		capital_county.development_level > 5
+		capital_county.development_level < 15
+		is_ai = yes
+	}
+	immediate = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 2
+		}
+		capital_county = {
+			change_development_level = 5
+		}
+		random_list = {
+			50 = {
+				
+			}
+			40 = {
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					change_development_level = 1
+				}
+				capital_county = {
+					change_development_level = 2
+				}
+			}
+			10 = {
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					change_development_level = 2
+				}
+				capital_county = {
+					change_development_level = 4
+				}
+			}
+		}
+	}
+}
+
+#AI BOOST cattle medium start
+cattle.5002 = {
+	hidden = yes
+	trigger = {
+		capital_county.development_level > 15
+		capital_county.development_level < 25
+		is_ai = yes
+	}
+	immediate = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = 2
+		}
+		capital_county = {
+			change_development_level = 5
+		}
+		random_list = {
+			50 = {
+				
+			}
+			40 = {
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					change_development_level = 1
+				}
+				capital_county = {
+					change_development_level = 2
+				}
+			}
+			10 = {
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					change_development_level = 2
+				}
+				capital_county = {
+					change_development_level = 4
+				}
+			}
+		}
+	}
+}

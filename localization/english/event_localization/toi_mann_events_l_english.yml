@@ -85,3 +85,5 @@
  toi_mann.0010.t:0 "Disastrous Ceremony"
  toi_mann.0010.desc:0 "The ceremony went horribly. I was completely unprepared, couldn't remember the right prayers. I felt something from the gods, but it was bitter and hateful. I didn't even finish the ceremony; the Druids had to step in and stop me from insulting the gods further before I brought a curse upon the whole site.\n\nOn the journey back, it didn't stop raining and my party was attacked by wolves. A sure sign the gods have cursed me."
  toi_mann.0010.a:0 "May the gods forgive me."
+ 
+ toi_mann.youescaped: "You escaped"

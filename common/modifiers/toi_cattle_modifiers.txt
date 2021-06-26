@@ -1,4 +1,4 @@
-#event modifiers
+﻿#event modifiers
 upset_merchants = {
 	icon = stewardship_negative
 	tax_mult = -0.2 
@@ -37,12 +37,10 @@ unhappy_about_the_judgement = {
 }
 returned_calf = {
 	years = 2
-	decaying = yes
 	opinion = 25
 }
 returned_calf2 = {
 	years = 2
-	decaying = yes
 	opinion = -25
 }
 five_opinion_general = {

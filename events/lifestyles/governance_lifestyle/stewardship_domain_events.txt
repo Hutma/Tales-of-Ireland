@@ -48,9 +48,6 @@ stewardship_domain.1041 = {
 	left_portrait = root
 	
 	trigger = {
-		culture = {
-			has_innovation = innovation_potters_wheel
-		}
 		NOT = { has_character_flag = had_stewardship_domain_1041_event }	
 		
 		#Must hold a county with a city in it.
@@ -283,9 +280,6 @@ stewardship_domain.1042 = {
 	theme = stewardship_domain_focus
 	
 	trigger = {
-		culture = {
-			has_innovation = innovation_potters_wheel
-		}
 		NOT = { has_character_flag = had_stewardship_domain_1042_event }
 
 		#Must own a county which received a modifier from stewardship_domain.1041
@@ -7369,9 +7363,6 @@ stewardship_domain_special.1530 = {
 
 	trigger = {
 		# Guilds must exist in this society.
-		culture = {
-			has_innovation = innovation_potters_wheel
-		}
 
 		# Ensure our event target is valid.
 		any_sub_realm_barony = {

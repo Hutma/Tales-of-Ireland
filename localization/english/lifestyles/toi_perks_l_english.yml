@@ -33,3 +33,7 @@
  senchas_mar_perk_name:0 "Senchas Már"
  
  INFLUENTIAL_DIPLOMAT_PERK: "This perk grants you 3 votes for the [high_kingship|E] election if you are an elector"
+ 
+ 
+ SWIFT_EXECUTION_SCHEME_PERK: "This perk gives you access to the Poison Cattle scheme"
+ EMBASSIES_SCHEME_PERK: "This perk gives you access to the Force Cattle Trade scheme"

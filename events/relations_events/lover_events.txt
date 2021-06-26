@@ -6515,6 +6515,10 @@ lover.3217 = {
 		character = scope:lover
 		animation = flirtation
 	}
+	
+	trigger = {
+		scope:lover = { is_alive = yes }
+	}
 
 	immediate = {
 		if = {
@@ -6579,7 +6583,11 @@ lover.3218 = {
 		character = scope:lover
 		animation = disgust
 	}
-
+	
+	trigger = {
+		scope:lover = { is_alive = yes }
+	}
+	
 	immediate = {
 		show_as_tooltip = {
 			scope:lover = {

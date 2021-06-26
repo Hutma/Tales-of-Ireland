@@ -2732,5 +2732,35 @@
 			
 		}
 	}
+	
+	tenet_le_cheile = {
+		icon = core_tenet_festivities
+		is_shown = {
+			always = no
+		}
+		can_pick = {
+			always = yes
+		}
+
+		piety_cost = {
+			value = faith_tenet_cost_high
+		}
+
+		parameters = {
+			natural_primitivism_law_cost_increase = yes
+		}
+
+		character_modifier = {
+			martial_per_piety_level = 1
+			different_culture_opinion = 15
+			different_faith_liege_opinion = 15
+			tyranny_gain_mult = 1.00
+			powerful_vassal_opinion = 10
+		}
+
+		traits = {
+			
+		}
+	}
 }
 

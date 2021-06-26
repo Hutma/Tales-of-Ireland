@@ -305,8 +305,13 @@ on_birth_child = {
 #### PATRILINEAR ####
 		if = {
 			limit = {
-				scope:mother = {
-					patrilinear_marriage = yes
+				OR = {
+					scope:mother = {
+						patrilinear_marriage = yes
+					}
+					scope:mother = {
+						is_concubine = yes
+					}
 				}
 			}
 ### FOMORIAN ###
@@ -431,6 +436,18 @@ on_birth_child = {
 				add_trait = fomorian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fomorian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fomorian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -558,6 +575,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fomorian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fomorian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -569,8 +600,10 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_cessarian 
 				add_trait = cessarian
+				add_trait = half_fomorian
 			}
 			if = {
 				limit = {
@@ -582,7 +615,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_partholonian
+				add_trait = half_fomorian
 				add_trait = partholonian
 			}
 			if = {
@@ -595,7 +630,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_nemedian
+				add_trait = half_fomorian
 				add_trait = nemedian
 			}
 			if = {
@@ -608,7 +645,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_fir_bolg
+				add_trait = half_fomorian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -621,7 +660,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_fomorian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -634,7 +675,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_milesian
+				add_trait = half_fomorian
 				add_trait = milesian
 			}
 			if = {
@@ -647,7 +690,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_celtic_human
+				add_trait = half_fomorian
 				add_trait = celtic_human
 			}
 			if = {
@@ -660,7 +705,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_megalith_human
+				add_trait = half_fomorian
 				add_trait = megalith_human
 			}
 			if = {
@@ -673,8 +720,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_fomorian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fomorian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = fomorian 
+				remove_trait = half_latin_human
+				add_trait = half_fomorian
+				add_trait = latin_human
 			}
 ### CESSARIAN ###
 #A-A gives A
@@ -798,6 +862,18 @@ on_birth_child = {
 				add_trait = cessarian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = cessarian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = cessarian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -925,6 +1001,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = cessarian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = cessarian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -936,7 +1026,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_fomorian
+				add_trait = half_cessarian
 				add_trait = fomorian
 			}
 			if = {
@@ -949,7 +1041,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_partholonian
+				add_trait = half_cessarian
 				add_trait = partholonian
 			}
 			if = {
@@ -962,7 +1056,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_nemedian
+				add_trait = half_cessarian
 				add_trait = nemedian
 			}
 			if = {
@@ -975,7 +1071,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_fir_bolg
+				add_trait = half_cessarian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -988,7 +1086,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_cessarian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -1001,7 +1101,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_milesian
+				add_trait = half_cessarian
 				add_trait = milesian
 			}
 			if = {
@@ -1014,7 +1116,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_celtic_human
+				add_trait = half_cessarian
 				add_trait = celtic_human
 			}
 			if = {
@@ -1027,7 +1131,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_megalith_human
+				add_trait = half_cessarian
 				add_trait = megalith_human
 			}
 			if = {
@@ -1040,8 +1146,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_cessarian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = cessarian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = cessarian 
+				remove_trait = half_latin_human
+				add_trait = half_cessarian
+				add_trait = latin_human
 			}
 ### PARTHOLONIAN ###
 #A-A gives A
@@ -1165,6 +1288,18 @@ on_birth_child = {
 				add_trait = partholonian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = partholonian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = partholonian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -1292,6 +1427,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = partholonian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = partholonian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -1303,7 +1452,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_fomorian
+				add_trait = half_partholonian
 				add_trait = fomorian
 			}
 			if = {
@@ -1316,7 +1467,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_cessarian
+				add_trait = half_partholonian
 				add_trait = cessarian
 			}
 			if = {
@@ -1329,7 +1482,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_nemedian
+				add_trait = half_partholonian
 				add_trait = nemedian
 			}
 			if = {
@@ -1342,7 +1497,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_fir_bolg
+				add_trait = half_partholonian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -1355,7 +1512,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_partholonian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -1368,7 +1527,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_milesian
+				add_trait = half_partholonian
 				add_trait = milesian
 			}
 			if = {
@@ -1381,7 +1542,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_celtic_human
+				add_trait = half_partholonian
 				add_trait = celtic_human
 			}
 			if = {
@@ -1394,7 +1557,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_megalith_human
+				add_trait = half_partholonian
 				add_trait = megalith_human
 			}
 			if = {
@@ -1407,8 +1572,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_partholonian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = partholonian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = partholonian 
+				remove_trait = half_latin_human
+				add_trait = half_partholonian
+				add_trait = latin_human
 			}
 ### NEMEDIAN ###
 #A-A gives A
@@ -1532,6 +1714,18 @@ on_birth_child = {
 				add_trait = nemedian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = nemedian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = nemedian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -1659,6 +1853,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = nemedian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = nemedian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -1670,7 +1878,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_fomorian
+				add_trait = half_nemedian
 				add_trait = fomorian
 			}
 			if = {
@@ -1683,7 +1893,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_cessarian
+				add_trait = half_nemedian
 				add_trait = cessarian
 			}
 			if = {
@@ -1696,7 +1908,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_partholonian
+				add_trait = half_nemedian
 				add_trait = partholonian
 			}
 			if = {
@@ -1709,7 +1923,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_fir_bolg
+				add_trait = half_nemedian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -1722,7 +1938,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_nemedian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -1735,7 +1953,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_milesian
+				add_trait = half_nemedian
 				add_trait = milesian
 			}
 			if = {
@@ -1748,7 +1968,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_celtic_human
+				add_trait = half_nemedian
 				add_trait = celtic_human
 			}
 			if = {
@@ -1761,7 +1983,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_megalith_human
+				add_trait = half_nemedian
 				add_trait = megalith_human
 			}
 			if = {
@@ -1774,8 +1998,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_nemedian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = nemedian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = nemedian 
+				remove_trait = half_latin_human
+				add_trait = half_nemedian
+				add_trait = latin_human
 			}
 ### FIR_BOLG ###
 #A-A gives A
@@ -1899,6 +2140,18 @@ on_birth_child = {
 				add_trait = fir_bolg
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fir_bolg
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fir_bolg
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -2026,6 +2279,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fir_bolg
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fir_bolg
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -2037,7 +2304,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_fomorian
+				add_trait = half_fir_bolg
 				add_trait = fomorian
 			}
 			if = {
@@ -2050,7 +2319,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_cessarian
+				add_trait = half_fir_bolg
 				add_trait = cessarian
 			}
 			if = {
@@ -2063,7 +2334,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_partholonian
+				add_trait = half_fir_bolg
 				add_trait = partholonian
 			}
 			if = {
@@ -2076,7 +2349,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_nemedian
+				add_trait = half_fir_bolg
 				add_trait = nemedian
 			}
 			if = {
@@ -2089,7 +2364,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_fir_bolg
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -2102,7 +2379,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_milesian
+				add_trait = half_fir_bolg
 				add_trait = milesian
 			}
 			if = {
@@ -2115,7 +2394,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_celtic_human
+				add_trait = half_fir_bolg
 				add_trait = celtic_human
 			}
 			if = {
@@ -2128,7 +2409,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_megalith_human
+				add_trait = half_fir_bolg
 				add_trait = megalith_human
 			}
 			if = {
@@ -2141,8 +2424,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_hy_brazylian
+				add_trait = half_fir_bolg
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = fir_bolg
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = fir_bolg 
+				remove_trait = half_latin_human
+				add_trait = half_fir_bolg
+				add_trait = latin_human
 			}
 ### TUATHA_DE_DANANN ###
 #A-A gives A
@@ -2266,6 +2566,18 @@ on_birth_child = {
 				add_trait = tuatha_de_danann
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = tuatha_de_danann
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = tuatha_de_danann
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -2393,6 +2705,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = tuatha_de_danann
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = tuatha_de_danann
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -2404,7 +2730,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_fomorian
+				add_trait = half_tuatha_de_danann
 				add_trait = fomorian
 			}
 			if = {
@@ -2417,7 +2745,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_cessarian
+				add_trait = half_tuatha_de_danann
 				add_trait = cessarian
 			}
 			if = {
@@ -2430,7 +2760,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_partholonian
+				add_trait = half_tuatha_de_danann
 				add_trait = partholonian
 			}
 			if = {
@@ -2443,7 +2775,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_nemedian
+				add_trait = half_tuatha_de_danann
 				add_trait = nemedian
 			}
 			if = {
@@ -2456,7 +2790,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_fir_bolg
+				add_trait = half_tuatha_de_danann
 				add_trait = fir_bolg
 			}
 			if = {
@@ -2469,7 +2805,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_milesian
+				add_trait = half_tuatha_de_danann
 				add_trait = milesian
 			}
 			if = {
@@ -2482,7 +2820,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_celtic_human
+				add_trait = half_tuatha_de_danann
 				add_trait = celtic_human
 			}
 			if = {
@@ -2495,7 +2835,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_megalith_human
+				add_trait = half_tuatha_de_danann
 				add_trait = megalith_human
 			}
 			if = {
@@ -2508,8 +2850,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_hy_brazylian
+				add_trait = half_tuatha_de_danann
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = tuatha_de_danann
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = tuatha_de_danann 
+				remove_trait = half_latin_human
+				add_trait = half_tuatha_de_danann
+				add_trait = latin_human
 			}
 ### MILESIAN ###
 #A-A gives A
@@ -2633,6 +2992,18 @@ on_birth_child = {
 				add_trait = milesian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = milesian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = milesian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -2760,6 +3131,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = milesian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = milesian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -2771,7 +3156,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_fomorian
+				add_trait = half_milesian
 				add_trait = fomorian
 			}
 			if = {
@@ -2784,7 +3171,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_cessarian
+				add_trait = half_milesian
 				add_trait = cessarian
 			}
 			if = {
@@ -2797,7 +3186,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_partholonian
+				add_trait = half_milesian
 				add_trait = partholonian
 			}
 			if = {
@@ -2810,7 +3201,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_nemedian
+				add_trait = half_milesian
 				add_trait = nemedian
 			}
 			if = {
@@ -2823,7 +3216,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_fir_bolg
+				add_trait = half_milesian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -2836,7 +3231,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_milesian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -2849,7 +3246,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_celtic_human
+				add_trait = half_milesian
 				add_trait = celtic_human
 			}
 			if = {
@@ -2862,7 +3261,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_megalith_human
+				add_trait = half_milesian
 				add_trait = megalith_human
 			}
 			if = {
@@ -2875,8 +3276,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_milesian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = milesian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = milesian 
+				remove_trait = half_latin_human
+				add_trait = half_milesian
+				add_trait = latin_human
 			}
 ### CELTIC_HUMAN ###
 #A-A gives A
@@ -3000,6 +3418,18 @@ on_birth_child = {
 				add_trait = celtic_human
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = celtic_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = celtic_human
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -3127,6 +3557,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = celtic_human
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = celtic_human
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -3138,7 +3582,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_fomorian
+				add_trait = half_celtic_human
 				add_trait = fomorian
 			}
 			if = {
@@ -3151,7 +3597,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_cessarian
+				add_trait = half_celtic_human
 				add_trait = cessarian
 			}
 			if = {
@@ -3164,7 +3612,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_partholonian
+				add_trait = half_celtic_human
 				add_trait = partholonian
 			}
 			if = {
@@ -3177,7 +3627,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_nemedian
+				add_trait = half_celtic_human
 				add_trait = nemedian
 			}
 			if = {
@@ -3190,7 +3642,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_fir_bolg
+				add_trait = half_celtic_human
 				add_trait = fir_bolg
 			}
 			if = {
@@ -3203,7 +3657,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_celtic_human
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -3216,7 +3672,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_milesian
+				add_trait = half_celtic_human
 				add_trait = milesian
 			}
 			if = {
@@ -3229,7 +3687,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_megalith_human
+				add_trait = half_celtic_human
 				add_trait = megalith_human
 			}
 			if = {
@@ -3242,8 +3702,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_hy_brazylian
+				add_trait = half_celtic_human
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = celtic_human
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = celtic_human 
+				remove_trait = half_latin_human
+				add_trait = half_celtic_human
+				add_trait = latin_human
 			}
 ### MEGALITH_HUMAN ###
 #A-A gives A
@@ -3366,6 +3843,18 @@ on_birth_child = {
 				}
 				add_trait = megalith_human
 				add_trait = half_hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = megalith_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = megalith_human
+				add_trait = half_latin_human
 			}
 #A1/2B-B gives A-3/4B
 			if = {
@@ -3494,6 +3983,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = megalith_human
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = megalith_human
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -3505,7 +4008,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_fomorian
+				add_trait = half_megalith_human
 				add_trait = fomorian
 			}
 			if = {
@@ -3518,7 +4023,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_cessarian
+				add_trait = half_megalith_human
 				add_trait = cessarian
 			}
 			if = {
@@ -3531,7 +4038,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_partholonian
+				add_trait = half_megalith_human
 				add_trait = partholonian
 			}
 			if = {
@@ -3544,7 +4053,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_nemedian
+				add_trait = half_megalith_human
 				add_trait = nemedian
 			}
 			if = {
@@ -3557,7 +4068,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_fir_bolg
+				add_trait = half_megalith_human
 				add_trait = fir_bolg
 			}
 			if = {
@@ -3570,7 +4083,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_megalith_human
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -3583,7 +4098,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_milesian
+				add_trait = half_megalith_human
 				add_trait = milesian
 			}
 			if = {
@@ -3596,7 +4113,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_celtic_human
+				add_trait = half_megalith_human
 				add_trait = celtic_human
 			}
 			if = {
@@ -3609,8 +4128,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_hy_brazylian
+				add_trait = half_megalith_human
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = megalith_human
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = megalith_human 
+				remove_trait = half_latin_human
+				add_trait = half_megalith_human
+				add_trait = latin_human
 			}
 ### hy_brazylian ###
 #A-A gives A
@@ -3733,6 +4269,18 @@ on_birth_child = {
 				}
 				add_trait = hy_brazylian
 				add_trait = half_megalith_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = hy_brazylian
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = hy_brazylian
+				add_trait = half_latin_human
 			}
 	#A1/2B-B gives A-3/4B
 			if = {
@@ -3861,6 +4409,20 @@ on_birth_child = {
 				remove_trait = half_megalith_human
 				add_trait = three_quarter_megalith_human
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = hy_brazylian
+						has_trait = half_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = hy_brazylian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 	#A3/4B-B gives B
 			if = {
 				limit = {
@@ -3872,7 +4434,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_fomorian
+				add_trait = half_hy_brazylian
 				add_trait = fomorian
 			}
 			if = {
@@ -3885,7 +4449,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_cessarian
+				add_trait = half_hy_brazylian
 				add_trait = cessarian
 			}
 			if = {
@@ -3898,7 +4464,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_partholonian
+				add_trait = half_hy_brazylian
 				add_trait = partholonian
 			}
 			if = {
@@ -3911,7 +4479,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_nemedian
+				add_trait = half_hy_brazylian
 				add_trait = nemedian
 			}
 			if = {
@@ -3924,7 +4494,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_fir_bolg
+				add_trait = half_hy_brazylian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -3937,7 +4509,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_hy_brazylian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -3950,7 +4524,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_milesian
+				add_trait = half_hy_brazylian
 				add_trait = milesian
 			}
 			if = {
@@ -3963,7 +4539,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_celtic_human
+				add_trait = half_hy_brazylian
 				add_trait = celtic_human
 			}
 			if = {
@@ -3976,15 +4554,463 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_megalith_human
+				add_trait = half_hy_brazylian
 				add_trait = megalith_human
 			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = hy_brazylian
+						has_trait = three_quarter_latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = hy_brazylian 
+				remove_trait = half_latin_human
+				add_trait = half_hy_brazylian
+				add_trait = latin_human
+			}
+#Latin human
+#A-A gives A
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = latin_human
+			}
+#A-B gives A-1/2B
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = fomorian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_fomorian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = cessarian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_cessarian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = partholonian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_partholonian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = nemedian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_nemedian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = fir_bolg
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_fir_bolg
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = tuatha_de_danann
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_tuatha_de_danann
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = milesian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_milesian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = celtic_human
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_celtic_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = megalith_human
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_megalith_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+					}
+					scope:mother = {
+						has_trait = hy_brazylian
+					}
+				}
+				add_trait = latin_human
+				add_trait = half_hy_brazylian
+			}
+	#A1/2B-B gives A-3/4B
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_fomorian
+					}
+					scope:mother = {
+						has_trait = fomorian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_fomorian
+				add_trait = three_quarter_fomorian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_cessarian
+					}
+					scope:mother = {
+						has_trait = cessarian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_cessarian
+				add_trait = three_quarter_cessarian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_partholonian
+					}
+					scope:mother = {
+						has_trait = partholonian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_partholonian
+				add_trait = three_quarter_partholonian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_nemedian
+					}
+					scope:mother = {
+						has_trait = nemedian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_nemedian
+				add_trait = three_quarter_nemedian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_fir_bolg
+					}
+					scope:mother = {
+						has_trait = fir_bolg
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_fir_bolg
+				add_trait = three_quarter_fir_bolg
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_tuatha_de_danann
+					}
+					scope:mother = {
+						has_trait = tuatha_de_danann
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_tuatha_de_danann
+				add_trait = three_quarter_tuatha_de_danann
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_milesian
+					}
+					scope:mother = {
+						has_trait = milesian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_milesian
+				add_trait = three_quarter_milesian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_celtic_human
+					}
+					scope:mother = {
+						has_trait = celtic_human
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_celtic_human
+				add_trait = three_quarter_celtic_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_megalith_human
+					}
+					scope:mother = {
+						has_trait = megalith_human
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_megalith_human
+				add_trait = three_quarter_megalith_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = half_hy_brazylian
+					}
+					scope:mother = {
+						has_trait = hy_brazylian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_hy_brazylian
+				add_trait = three_quarter_hy_brazylian
+			}
+	#A3/4B-B gives B
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_fomorian
+					}
+					scope:mother = {
+						has_trait = fomorian
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_fomorian
+				add_trait = half_latin_human
+				add_trait = fomorian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_cessarian
+					}
+					scope:mother = {
+						has_trait = cessarian
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_cessarian
+				add_trait = half_latin_human
+				add_trait = cessarian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_partholonian
+					}
+					scope:mother = {
+						has_trait = partholonian
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_partholonian
+				add_trait = half_latin_human
+				add_trait = partholonian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_nemedian
+					}
+					scope:mother = {
+						has_trait = nemedian
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_nemedian
+				add_trait = half_latin_human
+				add_trait = nemedian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_fir_bolg
+					}
+					scope:mother = {
+						has_trait = fir_bolg
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_fir_bolg
+				add_trait = half_latin_human
+				add_trait = fir_bolg
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_tuatha_de_danann
+					}
+					scope:mother = {
+						has_trait = tuatha_de_danann
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_tuatha_de_danann
+				add_trait = half_latin_human
+				add_trait = tuatha_de_danann
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_milesian
+					}
+					scope:mother = {
+						has_trait = milesian
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_milesian
+				add_trait = half_latin_human
+				add_trait = milesian
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_celtic_human
+					}
+					scope:mother = {
+						has_trait = celtic_human
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_celtic_human
+				add_trait = half_latin_human
+				add_trait = celtic_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_megalith_human
+					}
+					scope:mother = {
+						has_trait = megalith_human
+					}
+				}
+				remove_trait = latin_human 
+				remove_trait = half_megalith_human
+				add_trait = half_latin_human
+				add_trait = megalith_human
+			}
+			if = {
+				limit = {
+					scope:real_father = {
+						has_trait = latin_human
+						has_trait = three_quarter_hy_brazylian
+					}
+					scope:mother = {
+						has_trait = hy_brazylian
+					}
+				}
+				remove_trait = latin_human
+				remove_trait = half_hy_brazylian
+				add_trait = half_latin_human
+				add_trait = hy_brazylian
+			}
 		}
-#### MATRILINERAIRE ####
+#### MATRILINEAR ####
 		if = {
 			limit = {
-				scope:mother = {
-					matrilinear_marriage = yes
+				OR = {
+					scope:mother = {
+						matrilinear_marriage = yes
+					}
+					scope:real_father = {
+						is_concubine = yes
+					}
 				}
 			}
 ### FOMORIAN ###
@@ -4109,6 +5135,18 @@ on_birth_child = {
 				add_trait = fomorian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fomorian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fomorian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -4236,6 +5274,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fomorian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fomorian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -4247,8 +5299,10 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_cessarian 
 				add_trait = cessarian
+				add_trait = half_fomorian
 			}
 			if = {
 				limit = {
@@ -4260,7 +5314,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_partholonian
+				add_trait = half_fomorian
 				add_trait = partholonian
 			}
 			if = {
@@ -4273,7 +5329,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_nemedian
+				add_trait = half_fomorian
 				add_trait = nemedian
 			}
 			if = {
@@ -4286,7 +5344,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_fir_bolg
+				add_trait = half_fomorian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -4299,7 +5359,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_fomorian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -4312,7 +5374,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_milesian
+				add_trait = half_fomorian
 				add_trait = milesian
 			}
 			if = {
@@ -4325,7 +5389,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_celtic_human
+				add_trait = half_fomorian
 				add_trait = celtic_human
 			}
 			if = {
@@ -4338,7 +5404,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_megalith_human
+				add_trait = half_fomorian
 				add_trait = megalith_human
 			}
 			if = {
@@ -4351,8 +5419,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = fomorian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_fomorian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fomorian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = fomorian 
+				remove_trait = half_latin_human
+				add_trait = half_fomorian
+				add_trait = latin_human
 			}
 ### CESSARIAN ###
 #A-A gives A
@@ -4476,6 +5561,18 @@ on_birth_child = {
 				add_trait = cessarian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = cessarian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = cessarian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -4603,6 +5700,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = cessarian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = cessarian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -4614,7 +5725,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_fomorian
+				add_trait = half_cessarian
 				add_trait = fomorian
 			}
 			if = {
@@ -4627,7 +5740,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_partholonian
+				add_trait = half_cessarian
 				add_trait = partholonian
 			}
 			if = {
@@ -4640,7 +5755,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_nemedian
+				add_trait = half_cessarian
 				add_trait = nemedian
 			}
 			if = {
@@ -4653,7 +5770,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_fir_bolg
+				add_trait = half_cessarian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -4666,7 +5785,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_cessarian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -4679,7 +5800,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_milesian
+				add_trait = half_cessarian
 				add_trait = milesian
 			}
 			if = {
@@ -4692,7 +5815,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_celtic_human
+				add_trait = half_cessarian
 				add_trait = celtic_human
 			}
 			if = {
@@ -4705,7 +5830,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_megalith_human
+				add_trait = half_cessarian
 				add_trait = megalith_human
 			}
 			if = {
@@ -4718,8 +5845,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = cessarian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_cessarian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = cessarian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = cessarian 
+				remove_trait = half_latin_human
+				add_trait = half_cessarian
+				add_trait = latin_human
 			}
 ### PARTHOLONIAN ###
 #A-A gives A
@@ -4843,6 +5987,18 @@ on_birth_child = {
 				add_trait = partholonian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = partholonian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = partholonian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -4970,6 +6126,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = partholonian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = partholonian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -4981,7 +6151,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_fomorian
+				add_trait = half_partholonian
 				add_trait = fomorian
 			}
 			if = {
@@ -4994,7 +6166,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_cessarian
+				add_trait = half_partholonian
 				add_trait = cessarian
 			}
 			if = {
@@ -5007,7 +6181,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_nemedian
+				add_trait = half_partholonian
 				add_trait = nemedian
 			}
 			if = {
@@ -5020,7 +6196,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_fir_bolg
+				add_trait = half_partholonian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -5033,7 +6211,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_partholonian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -5046,7 +6226,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_milesian
+				add_trait = half_partholonian
 				add_trait = milesian
 			}
 			if = {
@@ -5059,7 +6241,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_celtic_human
+				add_trait = half_partholonian
 				add_trait = celtic_human
 			}
 			if = {
@@ -5072,7 +6256,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_megalith_human
+				add_trait = half_partholonian
 				add_trait = megalith_human
 			}
 			if = {
@@ -5085,8 +6271,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = partholonian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_partholonian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = partholonian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = partholonian 
+				remove_trait = half_latin_human
+				add_trait = half_partholonian
+				add_trait = latin_human
 			}
 ### NEMEDIAN ###
 #A-A gives A
@@ -5210,6 +6413,18 @@ on_birth_child = {
 				add_trait = nemedian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = nemedian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = nemedian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -5337,6 +6552,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = nemedian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = nemedian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -5348,7 +6577,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_fomorian
+				add_trait = half_nemedian
 				add_trait = fomorian
 			}
 			if = {
@@ -5361,7 +6592,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_cessarian
+				add_trait = half_nemedian
 				add_trait = cessarian
 			}
 			if = {
@@ -5374,7 +6607,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_partholonian
+				add_trait = half_nemedian
 				add_trait = partholonian
 			}
 			if = {
@@ -5387,7 +6622,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_fir_bolg
+				add_trait = half_nemedian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -5400,7 +6637,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_nemedian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -5413,7 +6652,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_milesian
+				add_trait = half_nemedian
 				add_trait = milesian
 			}
 			if = {
@@ -5426,7 +6667,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_celtic_human
+				add_trait = half_nemedian
 				add_trait = celtic_human
 			}
 			if = {
@@ -5439,7 +6682,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_megalith_human
+				add_trait = half_nemedian
 				add_trait = megalith_human
 			}
 			if = {
@@ -5452,8 +6697,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = nemedian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_nemedian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = nemedian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = nemedian 
+				remove_trait = half_latin_human
+				add_trait = half_nemedian
+				add_trait = latin_human
 			}
 ### FIR_BOLG ###
 #A-A gives A
@@ -5577,6 +6839,18 @@ on_birth_child = {
 				add_trait = fir_bolg
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fir_bolg
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fir_bolg
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -5704,6 +6978,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fir_bolg
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = fir_bolg
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -5715,7 +7003,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_fomorian
+				add_trait = half_fir_bolg
 				add_trait = fomorian
 			}
 			if = {
@@ -5728,7 +7018,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_cessarian
+				add_trait = half_fir_bolg
 				add_trait = cessarian
 			}
 			if = {
@@ -5741,7 +7033,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_partholonian
+				add_trait = half_fir_bolg
 				add_trait = partholonian
 			}
 			if = {
@@ -5754,7 +7048,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_nemedian
+				add_trait = half_fir_bolg
 				add_trait = nemedian
 			}
 			if = {
@@ -5767,7 +7063,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_fir_bolg
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -5780,7 +7078,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_milesian
+				add_trait = half_fir_bolg
 				add_trait = milesian
 			}
 			if = {
@@ -5793,7 +7093,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_celtic_human
+				add_trait = half_fir_bolg
 				add_trait = celtic_human
 			}
 			if = {
@@ -5806,7 +7108,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_megalith_human
+				add_trait = half_fir_bolg
 				add_trait = megalith_human
 			}
 			if = {
@@ -5819,8 +7123,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = fir_bolg 
 				remove_trait = half_hy_brazylian
+				add_trait = half_fir_bolg
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = fir_bolg
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = fir_bolg 
+				remove_trait = half_latin_human
+				add_trait = half_fir_bolg
+				add_trait = latin_human
 			}
 ### TUATHA_DE_DANANN ###
 #A-A gives A
@@ -5944,6 +7265,18 @@ on_birth_child = {
 				add_trait = tuatha_de_danann
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = tuatha_de_danann
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = tuatha_de_danann
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -6071,6 +7404,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = tuatha_de_danann
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = tuatha_de_danann
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -6082,7 +7429,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_fomorian
+				add_trait = half_tuatha_de_danann
 				add_trait = fomorian
 			}
 			if = {
@@ -6095,7 +7444,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_cessarian
+				add_trait = half_tuatha_de_danann
 				add_trait = cessarian
 			}
 			if = {
@@ -6108,7 +7459,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_partholonian
+				add_trait = half_tuatha_de_danann
 				add_trait = partholonian
 			}
 			if = {
@@ -6121,7 +7474,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_nemedian
+				add_trait = half_tuatha_de_danann
 				add_trait = nemedian
 			}
 			if = {
@@ -6134,7 +7489,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_fir_bolg
+				add_trait = half_tuatha_de_danann
 				add_trait = fir_bolg
 			}
 			if = {
@@ -6147,7 +7504,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_milesian
+				add_trait = half_tuatha_de_danann
 				add_trait = milesian
 			}
 			if = {
@@ -6160,7 +7519,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_celtic_human
+				add_trait = half_tuatha_de_danann
 				add_trait = celtic_human
 			}
 			if = {
@@ -6173,7 +7534,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_megalith_human
+				add_trait = half_tuatha_de_danann
 				add_trait = megalith_human
 			}
 			if = {
@@ -6186,8 +7549,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = tuatha_de_danann 
 				remove_trait = half_hy_brazylian
+				add_trait = half_tuatha_de_danann
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = tuatha_de_danann
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = tuatha_de_danann 
+				remove_trait = half_latin_human
+				add_trait = half_tuatha_de_danann
+				add_trait = latin_human
 			}
 ### MILESIAN ###
 #A-A gives A
@@ -6311,6 +7691,18 @@ on_birth_child = {
 				add_trait = milesian
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = milesian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = milesian
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -6438,6 +7830,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = milesian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = milesian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -6449,7 +7855,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_fomorian
+				add_trait = half_milesian
 				add_trait = fomorian
 			}
 			if = {
@@ -6462,7 +7870,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_cessarian
+				add_trait = half_milesian
 				add_trait = cessarian
 			}
 			if = {
@@ -6475,7 +7885,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_partholonian
+				add_trait = half_milesian
 				add_trait = partholonian
 			}
 			if = {
@@ -6488,7 +7900,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_nemedian
+				add_trait = half_milesian
 				add_trait = nemedian
 			}
 			if = {
@@ -6501,7 +7915,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_fir_bolg
+				add_trait = half_milesian
 				add_trait = fir_bolg
 			}
 			if = {
@@ -6514,7 +7930,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_milesian
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -6527,7 +7945,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_celtic_human
+				add_trait = half_milesian
 				add_trait = celtic_human
 			}
 			if = {
@@ -6540,7 +7960,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_megalith_human
+				add_trait = half_milesian
 				add_trait = megalith_human
 			}
 			if = {
@@ -6553,8 +7975,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = milesian 
 				remove_trait = half_hy_brazylian
+				add_trait = half_milesian
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = milesian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = milesian 
+				remove_trait = half_latin_human
+				add_trait = half_milesian
+				add_trait = latin_human
 			}
 ### CELTIC_HUMAN ###
 #A-A gives A
@@ -6678,6 +8117,18 @@ on_birth_child = {
 				add_trait = celtic_human
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = celtic_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = celtic_human
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -6805,6 +8256,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = celtic_human
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = celtic_human
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -6816,7 +8281,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_fomorian
+				add_trait = half_celtic_human
 				add_trait = fomorian
 			}
 			if = {
@@ -6829,7 +8296,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_cessarian
+				add_trait = half_celtic_human
 				add_trait = cessarian
 			}
 			if = {
@@ -6842,7 +8311,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_partholonian
+				add_trait = half_celtic_human
 				add_trait = partholonian
 			}
 			if = {
@@ -6855,7 +8326,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_nemedian
+				add_trait = half_celtic_human
 				add_trait = nemedian
 			}
 			if = {
@@ -6868,7 +8341,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_fir_bolg
+				add_trait = half_celtic_human
 				add_trait = fir_bolg
 			}
 			if = {
@@ -6881,7 +8356,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_celtic_human
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -6894,7 +8371,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_milesian
+				add_trait = half_celtic_human
 				add_trait = milesian
 			}
 			if = {
@@ -6907,7 +8386,9 @@ on_birth_child = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_megalith_human
+				add_trait = half_celtic_human
 				add_trait = megalith_human
 			}
 			if = {
@@ -6920,8 +8401,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = celtic_human 
 				remove_trait = half_hy_brazylian
+				add_trait = half_celtic_human
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = celtic_human
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = celtic_human 
+				remove_trait = half_latin_human
+				add_trait = half_celtic_human
+				add_trait = latin_human
 			}
 ### MEGALITH_HUMAN ###
 #A-A gives A
@@ -7045,6 +8543,18 @@ on_birth_child = {
 				add_trait = megalith_human
 				add_trait = half_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = megalith_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = megalith_human
+				add_trait = half_latin_human
+			}
 #A1/2B-B gives A-3/4B
 			if = {
 				limit = {
@@ -7172,6 +8682,20 @@ on_birth_child = {
 				remove_trait = half_hy_brazylian
 				add_trait = three_quarter_hy_brazylian
 			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = megalith_human
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = megalith_human
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
 #A3/4B-B gives B
 			if = {
 				limit = {
@@ -7183,7 +8707,9 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_fomorian
+				add_trait = half_megalith_human
 				add_trait = fomorian
 			}
 			if = {
@@ -7196,7 +8722,9 @@ on_birth_child = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_cessarian
+				add_trait = half_megalith_human
 				add_trait = cessarian
 			}
 			if = {
@@ -7209,7 +8737,9 @@ on_birth_child = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_partholonian
+				add_trait = half_megalith_human
 				add_trait = partholonian
 			}
 			if = {
@@ -7222,7 +8752,9 @@ on_birth_child = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_nemedian
+				add_trait = half_megalith_human
 				add_trait = nemedian
 			}
 			if = {
@@ -7235,7 +8767,9 @@ on_birth_child = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_fir_bolg
+				add_trait = half_megalith_human
 				add_trait = fir_bolg
 			}
 			if = {
@@ -7248,7 +8782,9 @@ on_birth_child = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_megalith_human
 				add_trait = tuatha_de_danann
 			}
 			if = {
@@ -7261,7 +8797,9 @@ on_birth_child = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_milesian
+				add_trait = half_megalith_human
 				add_trait = milesian
 			}
 			if = {
@@ -7274,7 +8812,9 @@ on_birth_child = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_celtic_human
+				add_trait = half_megalith_human
 				add_trait = celtic_human
 			}
 			if = {
@@ -7287,8 +8827,25 @@ on_birth_child = {
 						has_trait = hy_brazylian
 					}
 				}
+				remove_trait = megalith_human 
 				remove_trait = half_hy_brazylian
+				add_trait = half_megalith_human
 				add_trait = hy_brazylian
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = megalith_human
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				remove_trait = megalith_human 
+				remove_trait = half_latin_human
+				add_trait = half_megalith_human
+				add_trait = latin_human
 			}
 ### hy_brazylian ###
 #A-A gives A
@@ -7412,7 +8969,19 @@ on_birth_child = {
 				add_trait = hy_brazylian
 				add_trait = half_megalith_human
 			}
-#A1/2B-B gives A-3/4B
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = hy_brazylian
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = hy_brazylian
+				add_trait = half_latin_human
+			}
+	#A1/2B-B gives A-3/4B
 			if = {
 				limit = {
 					scope:mother = {
@@ -7539,7 +9108,21 @@ on_birth_child = {
 				remove_trait = half_megalith_human
 				add_trait = three_quarter_megalith_human
 			}
-#A3/4B-B gives B
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = hy_brazylian
+						has_trait = half_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = hy_brazylian
+				remove_trait = half_latin_human
+				add_trait = three_quarter_latin_human
+			}
+	#A3/4B-B gives B
 			if = {
 				limit = {
 					scope:mother = {
@@ -7550,3789 +9133,571 @@ on_birth_child = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_cessarian
-					}
-					scope:real_father = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_partholonian
-					}
-					scope:real_father = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_nemedian
-					}
-					scope:real_father = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_milesian
-					}
-					scope:real_father = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_celtic_human
-					}
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:mother = {
-						has_trait = hy_brazylian
-						has_trait = three_quarter_megalith_human
-					}
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-		}
-#### CONCUBINE ####
-		if = {
-			limit = {
-				scope:mother = {
-					is_concubine = yes
-				}
-			}
-###FOMORIAN###
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = fomorian
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = fomorian
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = fomorian
 				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
 				add_trait = fomorian
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = half_hy_brazylian
-					}
 					scope:mother = {
 						has_trait = hy_brazylian
-					}
-				}
-				add_trait = fomorian
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fomorian
 						has_trait = three_quarter_cessarian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = cessarian
 					}
 				}
-				remove_trait = half_cessarian 
+				remove_trait = hy_brazylian 
+				remove_trait = half_cessarian
+				add_trait = half_hy_brazylian
 				add_trait = cessarian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_partholonian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_partholonian
+				add_trait = half_hy_brazylian
 				add_trait = partholonian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_nemedian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_nemedian
+				add_trait = half_hy_brazylian
 				add_trait = nemedian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_fir_bolg
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_fir_bolg
+				add_trait = half_hy_brazylian
 				add_trait = fir_bolg
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_tuatha_de_danann
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_hy_brazylian
 				add_trait = tuatha_de_danann
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_milesian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_milesian
+				add_trait = half_hy_brazylian
 				add_trait = milesian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_celtic_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_celtic_human
+				add_trait = half_hy_brazylian
 				add_trait = celtic_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
+					scope:mother = {
+						has_trait = hy_brazylian
 						has_trait = three_quarter_megalith_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = hy_brazylian 
 				remove_trait = half_megalith_human
+				add_trait = half_hy_brazylian
 				add_trait = megalith_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fomorian
-						has_trait = three_quarter_hy_brazylian
-					}
 					scope:mother = {
 						has_trait = hy_brazylian
+						has_trait = three_quarter_latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
 					}
 				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
+				remove_trait = hy_brazylian 
+				remove_trait = half_latin_human
+				add_trait = half_hy_brazylian
+				add_trait = latin_human
 			}
-### CESSARIAN ###
+#Latin human
 #A-A gives A
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
 					scope:mother = {
-						has_trait = cessarian
+						has_trait = latin_human
+					}
+					scope:real_father = {
+						has_trait = latin_human
 					}
 				}
-				add_trait = cessarian
+				add_trait = latin_human
 			}
 #A-B gives A-1/2B
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = fomorian
 					}
 				}
-				add_trait = cessarian
+				add_trait = latin_human
 				add_trait = half_fomorian
 			}
 			if = {
 				limit = {
+					scope:mother = {
+						has_trait = latin_human
+					}
 					scope:real_father = {
 						has_trait = cessarian
 					}
-					scope:mother = {
-						has_trait = partholonian
-					}
 				}
-				add_trait = cessarian
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = cessarian
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = cessarian
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = cessarian
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### PARTHOLONIAN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = partholonian
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = partholonian
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_cessarian
 			}
 			if = {
 				limit = {
+					scope:mother = {
+						has_trait = latin_human
+					}
 					scope:real_father = {
 						has_trait = partholonian
 					}
+				}
+				add_trait = latin_human
+				add_trait = half_partholonian
+			}
+			if = {
+				limit = {
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = nemedian
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_nemedian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = fir_bolg
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_fir_bolg
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = tuatha_de_danann
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_tuatha_de_danann
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = milesian
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_milesian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = celtic_human
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_celtic_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = megalith_human
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_megalith_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-					}
 					scope:mother = {
+						has_trait = latin_human
+					}
+					scope:real_father = {
 						has_trait = hy_brazylian
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				add_trait = half_hy_brazylian
 			}
-#A1/2B-B gives A-3/4B
+	#A1/2B-B gives A-3/4B
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = half_fomorian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = fomorian
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				remove_trait = half_fomorian
 				add_trait = three_quarter_fomorian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = half_cessarian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = cessarian
 					}
 				}
-				add_trait = partholonian
+				add_trait = latin_human
 				remove_trait = half_cessarian
 				add_trait = three_quarter_cessarian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_nemedian
-					}
 					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = partholonian
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = partholonian
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### NEMEDIAN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = nemedian
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = nemedian
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
+						has_trait = latin_human
 						has_trait = half_partholonian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = partholonian
 					}
 				}
-				add_trait = nemedian
+				add_trait = latin_human
 				remove_trait = half_partholonian
 				add_trait = three_quarter_partholonian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_fir_bolg
-					}
 					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = nemedian
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = nemedian
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### FIR_BOLG ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = fir_bolg
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = fir_bolg
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
+						has_trait = latin_human
 						has_trait = half_nemedian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = nemedian
 					}
 				}
-				add_trait = fir_bolg
+				add_trait = latin_human
 				remove_trait = half_nemedian
 				add_trait = three_quarter_nemedian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_tuatha_de_danann
-					}
 					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = fir_bolg
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = fir_bolg
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### TUATHA_DE_DANANN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = tuatha_de_danann
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = tuatha_de_danann
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
+						has_trait = latin_human
 						has_trait = half_fir_bolg
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = fir_bolg
 					}
 				}
-				add_trait = tuatha_de_danann
+				add_trait = latin_human
 				remove_trait = half_fir_bolg
 				add_trait = three_quarter_fir_bolg
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_milesian
-					}
 					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = tuatha_de_danann
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = tuatha_de_danann
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### MILESIAN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = milesian
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = milesian
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = milesian
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = milesian
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = milesian
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = milesian
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = milesian
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = milesian
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = milesian
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = milesian
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
+						has_trait = latin_human
 						has_trait = half_tuatha_de_danann
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = tuatha_de_danann
 					}
 				}
-				add_trait = milesian
+				add_trait = latin_human
 				remove_trait = half_tuatha_de_danann
 				add_trait = three_quarter_tuatha_de_danann
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_celtic_human
-					}
 					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = milesian
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = milesian
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### CELTIC_HUMAN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = celtic_human
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = celtic_human
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
+						has_trait = latin_human
 						has_trait = half_milesian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = milesian
 					}
 				}
-				add_trait = celtic_human
+				add_trait = latin_human
 				remove_trait = half_milesian
 				add_trait = three_quarter_milesian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_megalith_human
-					}
 					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_megalith_human
-				add_trait = three_quarter_megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = half_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = celtic_human
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				remove_trait = half_megalith_human
-				add_trait = megalith_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = celtic_human
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### MEGALITH_HUMAN ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = megalith_human
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = megalith_human
-				add_trait = half_hy_brazylian
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
+						has_trait = latin_human
 						has_trait = half_celtic_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = celtic_human
 					}
 				}
-				add_trait = megalith_human
+				add_trait = latin_human
 				remove_trait = half_celtic_human
 				add_trait = three_quarter_celtic_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = half_hy_brazylian
-					}
 					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = megalith_human
-				remove_trait = half_hy_brazylian
-				add_trait = three_quarter_hy_brazylian
-			}
-#A3/4B-B gives B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				remove_trait = half_fomorian
-				add_trait = fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				remove_trait = half_cessarian
-				add_trait = cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				remove_trait = half_partholonian
-				add_trait = partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				remove_trait = half_nemedian
-				add_trait = nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				remove_trait = half_fir_bolg
-				add_trait = fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				remove_trait = half_tuatha_de_danann
-				add_trait = tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				remove_trait = half_milesian
-				add_trait = milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				remove_trait = half_celtic_human
-				add_trait = celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = megalith_human
-						has_trait = three_quarter_hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				remove_trait = half_hy_brazylian
-				add_trait = hy_brazylian
-			}
-### hy_brazylian ###
-#A-A gives A
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = hy_brazylian
-			}
-#A-B gives A-1/2B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-					}
-					scope:mother = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = hy_brazylian
-				add_trait = half_megalith_human
-			}
-#A1/2B-B gives A-3/4B
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_fomorian
-					}
-					scope:mother = {
-						has_trait = fomorian
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_fomorian
-				add_trait = three_quarter_fomorian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_cessarian
-					}
-					scope:mother = {
-						has_trait = cessarian
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_cessarian
-				add_trait = three_quarter_cessarian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_partholonian
-					}
-					scope:mother = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_partholonian
-				add_trait = three_quarter_partholonian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_nemedian
-					}
-					scope:mother = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_nemedian
-				add_trait = three_quarter_nemedian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_fir_bolg
-					}
-					scope:mother = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_fir_bolg
-				add_trait = three_quarter_fir_bolg
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_tuatha_de_danann
-					}
-					scope:mother = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_tuatha_de_danann
-				add_trait = three_quarter_tuatha_de_danann
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_milesian
-					}
-					scope:mother = {
-						has_trait = milesian
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_milesian
-				add_trait = three_quarter_milesian
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
-						has_trait = half_celtic_human
-					}
-					scope:mother = {
-						has_trait = celtic_human
-					}
-				}
-				add_trait = hy_brazylian
-				remove_trait = half_celtic_human
-				add_trait = three_quarter_celtic_human
-			}
-			if = {
-				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+						has_trait = latin_human
 						has_trait = half_megalith_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = megalith_human
 					}
 				}
-				add_trait = hy_brazylian
+				add_trait = latin_human
 				remove_trait = half_megalith_human
 				add_trait = three_quarter_megalith_human
 			}
-#A3/4B-B gives B
 			if = {
 				limit = {
+					scope:mother = {
+						has_trait = latin_human
+						has_trait = half_hy_brazylian
+					}
 					scope:real_father = {
 						has_trait = hy_brazylian
+					}
+				}
+				add_trait = latin_human
+				remove_trait = half_hy_brazylian
+				add_trait = three_quarter_hy_brazylian
+			}
+	#A3/4B-B gives B
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_fomorian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = fomorian
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_fomorian
+				add_trait = half_latin_human
 				add_trait = fomorian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_cessarian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = cessarian
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_cessarian
+				add_trait = half_latin_human
 				add_trait = cessarian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_partholonian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = partholonian
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_partholonian
+				add_trait = half_latin_human
 				add_trait = partholonian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_nemedian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = nemedian
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_nemedian
+				add_trait = half_latin_human
 				add_trait = nemedian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_fir_bolg
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = fir_bolg
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_fir_bolg
+				add_trait = half_latin_human
 				add_trait = fir_bolg
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_tuatha_de_danann
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = tuatha_de_danann
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_tuatha_de_danann
+				add_trait = half_latin_human
 				add_trait = tuatha_de_danann
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_milesian
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = milesian
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_milesian
+				add_trait = half_latin_human
 				add_trait = milesian
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_celtic_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = celtic_human
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_celtic_human
+				add_trait = half_latin_human
 				add_trait = celtic_human
 			}
 			if = {
 				limit = {
-					scope:real_father = {
-						has_trait = hy_brazylian
+					scope:mother = {
+						has_trait = latin_human
 						has_trait = three_quarter_megalith_human
 					}
-					scope:mother = {
+					scope:real_father = {
 						has_trait = megalith_human
 					}
 				}
+				remove_trait = latin_human 
 				remove_trait = half_megalith_human
+				add_trait = half_latin_human
 				add_trait = megalith_human
+			}
+			if = {
+				limit = {
+					scope:mother = {
+						has_trait = latin_human
+						has_trait = three_quarter_hy_brazylian
+					}
+					scope:real_father = {
+						has_trait = hy_brazylian
+					}
+				}
+				remove_trait = latin_human
+				remove_trait = half_hy_brazylian
+				add_trait = half_latin_human
+				add_trait = hy_brazylian
 			}
 		}
 	}

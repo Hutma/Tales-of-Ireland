@@ -183,7 +183,7 @@ wonder_newgrange_01 = {
 	}
 	
 	levy = 25
-	garrison = 25
+	max_garrison = 25
 	
 	character_modifier = {
 		diplomacy = 1
@@ -224,7 +224,7 @@ wonder_dun_duchathair_01 = {
 			has_innovation = innovation_plenary_assemblies
 		}
 	}
-	garrison = 25
+	max_garrison = 25
 	
 	character_modifier = {
 		embarkation_cost_mult = -0.5
@@ -267,7 +267,7 @@ wonder_dun_duchathair_02 = {
 		}
 	}
 	
-	garrison = 50
+	max_garrison = 50
 
 	character_modifier = {
 		embarkation_cost_mult = -0.5
@@ -449,14 +449,14 @@ wonder_cashtal_yn_ard_01 = {
 	}
 	
 	character_modifier = {
-		naval_speed = 0.15
+		naval_movement_speed_mult = 0.15
 	}
 	county_modifier = {
 		levy_size = 0.15
 		defender_advantage = 5
 		
 	}
-	garrison = 35
+	max_garrison = 35
 	
 	type = special
 	ai_value = {

@@ -250,5 +250,19 @@
 			doctrine = tenet_mystical_birthright
 			doctrine = tenet_manx_legacy
 		}
+		le_cheile_faith = {
+			color = { 113 164 105 }
+			icon = le_cheile
+			
+			doctrine = doctrine_pluralism_pluralistic
+			
+			holy_site = newgrange
+			holy_site = tara
+			holy_site = beaghmore_stone_circles
+			
+			doctrine = tenet_ancestor_worship
+			doctrine = tenet_mystical_birthright
+			doctrine = tenet_le_cheile
+		}
 	}
 }

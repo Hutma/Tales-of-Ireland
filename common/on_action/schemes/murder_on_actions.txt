@@ -142,6 +142,9 @@ murder_save_roll = {
 
 		# Saved from poisoned food by dog
 		50 = murder_save.0012
+		
+		# Saved from poisoned food by gluttonous trait
+		500 = murder_save.0013
 	}
 }
 
@@ -159,6 +162,7 @@ murder_save_response = {
 		murder_save.1010
 		murder_save.1011
 		murder_save.1012
+		murder_save.1013
 	}
 }
 

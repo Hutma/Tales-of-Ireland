@@ -1,0 +1,191 @@
+﻿####################
+# Roman Buildings #
+####################
+
+### Roman aqueduct
+
+aqueduct_01 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = {
+			culture_group = culture_group:toi_latin
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_1_cost
+	
+	county_modifier = {
+		development_growth_factor = 1
+		tax_mult = 0.15
+	}
+	character_modifier = {
+		character_capital_county_monthly_development_growth_add = 0.1
+	}
+	
+	next_building = aqueduct_02
+
+	type_icon = "icon_structure_aqueduct.dds"
+	
+	ai_value = {
+		base = 90
+		ai_general_building_modifier = yes
+	}
+}
+
+aqueduct_02 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_2_cost
+	
+	county_modifier = {
+		development_growth_factor = 1.5
+		tax_mult = 0.3
+	}
+	character_modifier = {
+		character_capital_county_monthly_development_growth_add = 0.2
+	}
+	
+	next_building = aqueduct_03
+	ai_value = {
+		base = 90
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+aqueduct_03 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+
+	can_construct_potential = {
+		always = yes
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_3_cost
+	
+	county_modifier = {
+		development_growth_factor = 2
+		tax_mult = 0.4
+	}
+	character_modifier = {
+		character_capital_county_monthly_development_growth_add = 0.3
+	}
+	
+	ai_value = {
+		base = 80
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+### Roman coliseum
+
+coliseum_01 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder.culture = culture:roman
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_1_cost
+	
+	duchy_capital_county_modifier = {
+		county_opinion_add = 10
+	}
+	character_modifier = {
+		diplomacy_per_prestige_level = 1
+		army_damage_mult = 0.025
+	}
+	
+	next_building = coliseum_02
+
+	type_icon = "icon_structure_colosseum.dds"
+	
+	type = duchy_capital
+	
+	ai_value = {
+		base = 90
+		ai_general_building_modifier = yes
+	}
+}
+
+coliseum_02 = {
+	construction_time = quick_construction_time
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		scope:holder = {
+			culture_group = culture_group:toi_latin
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = expensive_building_tier_4_cost
+	
+	duchy_capital_county_modifier = {
+		county_opinion_add = 20
+	}
+	character_modifier = {
+		diplomacy_per_prestige_level = 2
+		army_damage_mult = 0.05
+	}
+	
+	type = duchy_capital
+	
+	ai_value = {
+		base = 90
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}

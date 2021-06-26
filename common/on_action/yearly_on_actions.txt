@@ -5,7 +5,40 @@ yearly_global_pulse = {
 	effect = {
 		if = {
 			limit = {
-				NOT = { has_global_variable = hy_brazylian_have_appeared}
+				NOT = { has_global_variable = hy_brazylian_have_appeared }
+				current_date > 4815.1.1
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.1
+					current_date < 4845.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 4845.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 4870.1.1
+				}
+				modifier = {
+					add = 80
+					current_date > 4875.1.1
+				}
+				set_global_variable = {
+					name = hy_brazylian_have_appeared
+					value = yes
+				}
+				trigger_event = {
+					id = toi_hybrazil.1001
+					days = { 2 100 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = fianna_have_risen }
 				current_date > 4900.1.1
 			}
 			random = {
@@ -27,11 +60,44 @@ yearly_global_pulse = {
 					current_date > 4975.1.1
 				}
 				set_global_variable = {
-					name = hy_brazylian_have_appeared
+					name = fianna_have_risen
 					value = yes
 				}
 				trigger_event = {
-					id = toi_hybrazil.1001
+					id = toi_fianna.1001
+					days = { 2 100 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = roman_are_invading }
+				current_date > 4980.1.1
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.1
+					current_date < 5005.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 5005.1.1
+				}
+				modifier = {
+					add = 5
+					current_date > 5025.1.1
+				}
+				modifier = {
+					add = 80
+					current_date > 5030.1.1
+				}
+				set_global_variable = {
+					name = roman_are_invading
+					value = yes
+				}
+				trigger_event = {
+					id = toi_roman_invasion.1001
 					days = { 2 100 }
 				}
 			}
@@ -60,6 +126,10 @@ yearly_playable_pulse = {
 # Called from code once every three years for "playable" (count+) characters.
 # Root is the character
 three_year_playable_pulse = {
+	on_actions = {
+		delay = { days = { 25 85 } }
+		on_cattle_wolfwalker
+	}
 ###TALES OF IRELAND
 	#High kingship
 	effect = {
@@ -72,6 +142,10 @@ three_year_playable_pulse = {
 							highest_held_title_tier = 3
 							highest_held_title_tier = 4
 							highest_held_title_tier = 5
+						}
+						NOT = {
+							has_government = mercenary_government
+							has_government = holy_order_government
 						}
 						capital_county.title_province = { geographical_region = ireland_region }
 					}
@@ -169,6 +243,16 @@ random_yearly_playable_pulse = {
 		1 = cattle.2008
 		1 = cattle.2009
 		1 = cattle.2010
+		1 = cattle.0601
+		1 = cattle.0602
+		1 = cattle.0603
+		1 = cattle.0604
+		1 = cattle.0605
+		1 = cattle.0606
+		1 = cattle.0607
+		1 = cattle.0608
+		2 = cattle.5001
+		2 = cattle.5002
 	}
 }
 
@@ -325,6 +409,10 @@ five_year_everyone_pulse = {
 				if = {
 				limit = {has_culture = culture:brythonic_mann}
 					add_trait = celtic_human
+				}
+				if = {
+				limit = {has_culture = culture:roman}
+					add_trait = latin_human
 				}
 				add_trait = celtic_human
 			}

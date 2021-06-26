@@ -1,0 +1,291 @@
+﻿poison_cattle = {
+	
+	skill = intrigue
+	hostile = yes
+	
+	allow = {
+		has_perk = swift_execution_perk
+		
+		age >= 16
+		is_imprisoned = no
+	}
+	
+	valid = {
+		scope:target = {
+			OR = {
+				exists = location
+				in_diplomatic_range = scope:owner
+			}
+		}
+		# Special AI exceptions
+		NOT = {
+			scope:owner = {
+				is_ai = yes
+				has_opinion_modifier = {
+					target = scope:target
+					modifier = repentant_opinion
+				}
+			}
+		}
+	}
+
+	valid_agent = {
+		age >= 14
+	}
+	
+	agent_join_chance = {
+		base = 0
+		
+		# Base Reluctance, including negative AI Energy
+		modifier = {
+			add = {
+				value = -20
+				if = {
+					limit = {
+						ai_energy < 0
+					}
+					add = {
+						value = ai_energy
+						multiply = 0.5
+					}
+				}
+			}
+			desc = BASE_RELUCTANCE
+		}
+
+		#Is Owner sending a gift in the invite interaction?
+		modifier = {
+			add = bribe_acceptance_value
+			exists = scope:gift
+			always = scope:gift
+			NOT = {
+				OR = {
+					scope:target = { is_parent_of = root }
+					root = { is_parent_of = scope:target }
+				}
+			}
+			desc = "SCHEME_WITH_GIFT"
+		}
+
+		#Default Hostile Scheme modifiers
+		hostile_murder_agent_base_join_chance_modifier = yes
+
+		#Special Modifier from events for couples that murder together
+		modifier = {
+			add = 50
+			has_opinion_modifier = {
+				target = scope:owner
+				modifier = murder_partner_opinion
+			}
+			desc = "SCHEME_MURDER_COUPLE"
+		}
+		modifier = {
+			add = -1000
+			has_variable = murder_scheme_disinterest
+			var:murder_scheme_disinterest = scope:target
+			desc = "SCHEME_MURDER_DISINTERESTED"
+		}
+	}
+	
+	base_success_chance = {
+		base = 0
+		
+		hostile_scheme_base_chance_modifier = yes
+
+		modifier = {
+			add = 10
+			scope:owner = { has_trait = lifestyle_herbalist }
+			desc = MURDER_HERBALIST_BONUS
+		}
+
+		modifier = {
+			add = -50
+			scope:target = {				
+				has_opinion_modifier = {
+					target = scope:owner
+					modifier = attempted_murder_me_crime
+				}
+			}
+			desc = HAS_ATTEMPTED_TO_MURDER_TARGET_BEFORE
+		}
+		# Spiritual Head of Faith
+		modifier = {
+			add = -25
+			desc = "SCHEME_VS_SPIRITUAL_HOF"
+			scope:target = {
+				faith = scope:owner.faith
+				faith = {
+					has_doctrine = doctrine_spiritual_head
+				}
+				faith = {
+					exists = religious_head
+					religious_head = {
+			 			this = scope:target
+			 		}
+				}
+			}
+		}
+		
+		# Spiritual Head of Faith
+		modifier = {
+			add = -50
+			desc = "SCHEME_VS_SPIRITUAL_HOF"
+			scope:target = {
+				faith = scope:owner.faith
+				faith = {
+					has_doctrine = doctrine_spiritual_head
+				}
+				faith = {
+					exists = religious_head
+					religious_head = {
+			 			this = scope:target
+			 		}
+				}
+			}
+		}
+		
+		# At War
+		first_valid = {
+			modifier = {
+				add = -50
+				desc = "SCHEME_AT_WAR"
+				scope:target = {
+					is_at_war_with = scope:owner
+				}
+			}
+			modifier = {
+				add = -25
+				scope:target = {
+					is_landed = no
+					exists = liege
+					liege = {
+						is_at_war_with = scope:owner
+					}
+				}
+				desc = "SCHEME_AT_WAR_WITH_LIEGE"
+			}
+			modifier = {
+				add = -25
+				scope:target = {
+					is_landed = yes
+					exists = liege
+					liege = {
+						is_at_war_with = scope:owner
+					}
+				}
+				desc = "SCHEME_AT_WAR_WITH_LIEGE"
+			}
+		}
+	}
+	
+	agent_success_chance = {
+		base = 0
+		
+		hostile_scheme_agent_success_chance_modifier = yes #Adds a value depending on their "closeness" to target
+	}
+	
+	agent_leave_threshold = -25
+	
+	cooldown = { years = 15 }
+	is_secret = yes
+	base_secrecy = 15
+
+	on_ready = {
+		random = {
+			chance = scope:scheme.scheme_success_chance
+
+			save_scope_value_as = {
+				name = scheme_successful
+				value = yes
+			}
+		}
+		scope:owner = {
+			if = {
+				limit = {
+					exists = scope:scheme_successful
+				}
+				trigger_event = {
+					id = poison_cattle_outcome_success.0001
+					days = 1
+				}
+			}
+			else = {
+				trigger_event = {
+					id = poison_cattle_outcome_fail.0001
+					days = 1
+				}	
+			}
+		}
+	}
+
+	on_monthly = {
+		hostile_scheme_discovery_chance_effect = yes
+	}
+
+	
+	on_invalidated = {
+		scheme_target = {
+			save_scope_as = target
+		}
+		scheme_owner = {
+			save_scope_as = owner
+		}
+		if = {
+			limit = {
+				scope:target = { is_alive = no }
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = poison_cattle_invalidated_dead
+					left_icon = scope:target
+				}
+			}
+		}
+		else_if = {	
+			limit = {
+				scope:owner = {
+					is_at_war_with = scope:target
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = poison_cattle_invalidated_war
+					left_icon = scope:target
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				scope:target = { 
+					NOT = { in_diplomatic_range = scope:owner } 
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = poison_cattle_invalidated_title
+					left_icon = scope:target
+					custom_description_no_bullet = {
+						object = scope:target
+						text = scheme_target_not_in_diplomatic_range
+					}
+				}
+			}
+		}
+	}
+
+	
+	
+	power_per_skill_point = 3.0
+	resistance_per_skill_point = 1.0
+	power_per_agent_skill_point = 2
+	
+	minimum_progress_chance = 10
+	maximum_progress_chance = 90
+	minimum_success = 5
+	maximum_secrecy = 95
+	maximum_success = 95
+	
+	success_desc = "POISON_CATTLE_SUCCESS_DESC"
+	discovery_desc = "POISON_CATTLE_DISCOVERY_DESC"
+}

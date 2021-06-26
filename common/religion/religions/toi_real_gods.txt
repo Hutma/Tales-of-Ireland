@@ -1,5 +1,5 @@
 ﻿real_gods_religion = {
-	family = rf_pagan
+	family = rf_overworld
 
 	doctrine = pagan_hostility_doctrine
 

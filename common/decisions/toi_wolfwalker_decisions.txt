@@ -1,0 +1,164 @@
+﻿my_inner_wolf_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+
+	ai_check_interval = 60
+	
+	cooldown = { years = 7 }
+	
+	desc = my_inner_wolf_decision_desc
+
+
+	is_shown = {
+		has_trait = wolfwalker
+	}
+
+	is_valid = {
+		has_trait = wolfwalker
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_wolfwalker.1100
+			days = 1
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+call_the_pack_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+
+	ai_check_interval = 80
+	
+	cooldown = { years = 20 }
+	
+	desc = call_the_pack_decision_desc
+
+
+	is_shown = {
+		has_trait = wolfwalker
+	}
+
+	is_valid = {
+		has_trait = wolfwalker
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		piety = 150
+	}
+
+	effect = {
+		call_the_pack_decision_scripted_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+wolfwalker_resilience_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	
+	major = yes
+	ai_check_interval = 40
+	
+	
+	desc = wolfwalker_resilience_decision_desc
+
+
+	is_shown = {
+		has_trait = wolfwalker
+		OR = {
+			has_trait = wounded_1
+			has_trait = wounded_2
+			has_trait = wounded_3
+			has_trait = impotent
+			has_trait = infirm
+			has_trait = incapable
+			has_trait = maimed
+			has_trait = blind
+			
+			has_trait = ill
+			has_trait = pneumonic
+			has_trait = great_pox
+			has_trait = early_great_pox
+			has_trait = lovers_pox
+			has_trait = leper
+			has_trait = gout_ridden
+			has_trait = consumption
+			has_trait = cancer
+			has_trait = typhus
+			has_trait = bubonic_plague
+			has_trait = smallpox
+		}
+	}
+
+	is_valid = {
+		has_trait = wolfwalker
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		add_stress = 25
+		
+		remove_trait = wounded_1
+		remove_trait = wounded_2
+		remove_trait = wounded_3
+		remove_trait = impotent
+		remove_trait = infirm
+		remove_trait = incapable
+		remove_trait = maimed
+		remove_trait = blind
+		
+		remove_trait = ill
+		remove_trait = pneumonic
+		remove_trait = great_pox
+		remove_trait = early_great_pox
+		remove_trait = lovers_pox
+		remove_trait = leper
+		remove_trait = gout_ridden
+		remove_trait = consumption
+		remove_trait = cancer
+		remove_trait = typhus
+		remove_trait = bubonic_plague
+		remove_trait = smallpox
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

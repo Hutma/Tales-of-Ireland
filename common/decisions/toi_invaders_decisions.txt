@@ -1,0 +1,117 @@
+﻿hy_brasilian_troops_decision = {
+	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	
+	major = yes
+	ai_check_interval = 40
+
+	desc = hy_brasilian_troops_decision_desc
+
+	cooldown = { years = 10 }
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		has_trait = hy_brazylian
+		current_date < 4950.1.1
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		current_date < 4950.1.1
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = hy_brasil_adventurers_event_troops
+			levies = {
+				value = 150
+			}
+			men_at_arms = {
+				type = hy_brazylian_adventurers
+				stacks = {
+					value = 0
+					add = primary_title.tier
+				}
+			}
+			location = capital_province
+		}
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+fianna_troops_decision = {
+	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	
+	major = yes
+	ai_check_interval = 40
+
+	desc = fianna_troops_decision_desc
+
+	cooldown = { years = 20 }
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		has_faith = faith:le_cheile_faith
+		current_date < 5035.1.1
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		current_date < 5035.1.1
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = fianna_army_event_troops
+			levies = {
+				value = 150
+			}
+			men_at_arms = {
+				type = kern_warriors
+				stacks = {
+					value = 0
+					add = primary_title.tier
+				}
+			}
+			location = capital_province
+		}
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

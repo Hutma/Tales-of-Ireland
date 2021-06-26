@@ -207,3 +207,44 @@ establish_sean_bar_decision = {
 		base = 100
 	}
 }
+
+call_gladiators_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	
+	desc = call_gladiators_decision_desc
+	
+	ai_check_interval = 80
+
+	is_shown = {
+		highest_held_title_tier >= tier_duchy
+		any_sub_realm_barony = {
+			has_building_or_higher = coliseum_01
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 75
+	}
+
+	effect = {
+		show_as_tooltip = {
+			gladiator_hired_decision_scripted_effect = yes
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -30,7 +30,7 @@ martial_modifier = {
 martial_modifier_with_offset = {
 	levy_size = 0.02
 	levy_reinforcement_rate = 0.02
-	#army_maintenance_mult = -0.02
+	siege_phase_time = -0.03
 }
 
 learning_modifier = {
@@ -57,6 +57,8 @@ duke_modifier = {
 	domain_limit = 2
 	knight_limit = 5
 	vassal_limit = 20
+	
+	mercenary_hire_cost_mult = 0.1
 }
 
 king_modifier = {
@@ -64,6 +66,8 @@ king_modifier = {
 	domain_limit = 2
 	knight_limit = 6
 	vassal_limit = 40
+	
+	mercenary_hire_cost_mult = 0.15
 }
 
 emperor_modifier = {
@@ -71,6 +75,8 @@ emperor_modifier = {
 	domain_limit = 3
 	knight_limit = 6
 	vassal_limit = 60
+	
+	mercenary_hire_cost_mult = 0.4
 }
 
 # These modifiers are applied to the holder of a title of the respective tier (per title)
@@ -224,4 +230,36 @@ debt_level_6 = {
 	development_growth_factor = -0.9
 	vassal_opinion = -50
 	county_opinion_add = -50
+}
+
+debt_level_7 = {
+	levy_size = -0.8
+	levy_reinforcement_rate = -0.8
+	development_growth_factor = -0.8
+	vassal_opinion = -50
+	county_opinion_add = -50
+}
+
+debt_level_8 = {
+	levy_size = -0.9
+	levy_reinforcement_rate = -0.9
+	development_growth_factor = -0.9
+	vassal_opinion = -75
+	county_opinion_add = -75
+}
+
+debt_level_9 = {
+	levy_size = -0.95
+	levy_reinforcement_rate = -0.95
+	development_growth_factor = -0.95
+	vassal_opinion = -100
+	county_opinion_add = -100
+}
+
+debt_level_no_income = { #Special no income
+	levy_size = -0.95
+	levy_reinforcement_rate = -0.95
+	development_growth_factor = -0.95
+	vassal_opinion = -100
+	county_opinion_add = -100
 }

@@ -278,7 +278,6 @@ to_new_land_cb = {
 
 	attacker_wargoal_percentage = 0.8
 
-	min_ai_score = 100
 }
 
 #Unite Ireland decision casus belli
@@ -895,7 +894,6 @@ unite_ireland_cb = {
 	
 	attacker_wargoal_percentage = 0.8
 	
-	min_ai_score = 100
 }
 
 #Cattle raiding
@@ -960,6 +958,8 @@ cattle_raiding_cb = {
 	on_declaration = {
 		on_declared_war = yes
 	}
+	
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
 	
 	on_invalidated = {
 		
@@ -1287,7 +1287,6 @@ cattle_raiding_cb = {
 	max_attacker_score_from_battles = 70
 	max_defender_score_from_battles = 70
 	
-	min_ai_score = 100
 }
 
 #Lure on cattle raiding for AI
@@ -1576,7 +1575,6 @@ lure_to_cattle_raid_cb = {
 
 	attacker_wargoal_percentage = 0.8
 
-	min_ai_score = 100
 }
 
 #Land for son cb
@@ -1906,7 +1904,6 @@ land_son_cb = {
 	attacker_wargoal_percentage = 0.8
 
 	max_ai_diplo_distance_to_title = 1000
-	min_ai_score = 100
 }
 
 #Fomorian religion special cb Purification
@@ -2350,7 +2347,6 @@ purification_cb = {
 	attacker_wargoal_percentage = 0.8
 
 	max_ai_diplo_distance_to_title = 500
-	min_ai_score = 100
 }
 
 #Same for duchies
@@ -2810,7 +2806,6 @@ purification_duchy_cb = {
 	attacker_wargoal_percentage = 0.8
 
 	max_ai_diplo_distance_to_title = 500
-	min_ai_score = 100
 }
 
 #Tributary fomorian cb
@@ -3252,7 +3247,6 @@ fomorian_tributary_cb = {
 	attacker_wargoal_percentage = 0.8
 	
 	max_ai_diplo_distance_to_title = 500
-	min_ai_score = 100
 }
 
 #Humiliate candidate cb
@@ -3576,5 +3570,4 @@ humiliate_candidate_cb = {
 	attacker_ticking_warscore = 0
 	attacker_wargoal_percentage = 0.8
 	
-	min_ai_score = 100
 }

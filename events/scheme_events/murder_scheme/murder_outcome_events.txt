@@ -85,7 +85,18 @@ murder_outcome.0102 = {
 murder_outcome.0103 = {
 	type = character_event
 	hidden = yes
-
+	
+	#More likely if the target is gluttonous in order to highlight the benefits of the trait
+	weight_multiplier = {
+		base = 1
+		modifier = { # More likely if lover can save them
+			add = 2
+			scope:target = {
+				has_trait = gluttonous
+			}
+		}
+	}
+	
 	immediate = {
 		save_scope_value_as = {
 			name = murder_method
@@ -3778,7 +3789,7 @@ murder_outcome.4302 = {
 					triggered_desc = {
 						trigger = {
 							scope:scheme = {
-								scheme_progress < 100
+								scheme_progress < 10
 							}
 						}
 						desc = murder_outcome.4302.failed_lack_of_planning

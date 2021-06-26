@@ -9,8 +9,8 @@
  knight_culture_player_adjective_no_tooltip_lowercase:0 "[GetPlayer.Custom( 'KnightCultureAdjectiveNoTooltipLowercase' )]"
   
   # No tooltip versions
- knight_default_no_tooltip:0 "Knight"
- knight_default_no_tooltip_plural:0 "Knights"
+ knight_default_no_tooltip:0 "Ridire"
+ knight_default_no_tooltip_plural:0 "Ridirí"
 
  knight_faris_no_tooltip:0 "Fāris"
  knight_faris_no_tooltip_plural:0 "Fāris"
@@ -63,7 +63,7 @@
 
  knight_champion_no_tooltip_lowercase:0 "champion"
  knight_champion_no_tooltip_lowercase_plural:0 "champions"
- knight_champion_no_tooltip_lowercase_plural_possessive:0 "champions'"
+ knight_champion_no_tooltip_lowercase_plural_possessive:0 "ridirí's"
  knight_champion_no_tooltip_lowercase_adjective:0 "champion"
 
   #Game Concept versions
@@ -90,9 +90,9 @@
  
  knight_hero:0 "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
  knight_hero_plural:0 "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
- knight_hero_no_tooltip:0 "Champion"
- knight_hero_no_tooltip_plural:0 "Champions"
- knight_hero_no_tooltip_lowercase:0 "champion"
- knight_hero_no_tooltip_lowercase_plural:0 "champion"
- knight_hero_no_tooltip_lowercase_adjective:0 "champion's"
- knight_hero_no_tooltip_lowercase_plural_possessive:0 "champions'"
+ knight_hero_no_tooltip:0 "Ridire"
+ knight_hero_no_tooltip_plural:0 "Ridirí"
+ knight_hero_no_tooltip_lowercase:0 "ridire"
+ knight_hero_no_tooltip_lowercase_plural:0 "ridirí"
+ knight_hero_no_tooltip_lowercase_adjective:0 "ridire's"
+ knight_hero_no_tooltip_lowercase_plural_possessive:0 "ridirí's"

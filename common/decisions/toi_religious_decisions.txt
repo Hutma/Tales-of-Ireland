@@ -1,17 +1,17 @@
-﻿##Decision for TOI and LOTR mod by Hutma
+﻿#The old gods faith
 great_hunt_decision = { #Go for a religious great hunt
 	picture = "gfx/interface/illustrations/decisions/decision_activity.dds"
 	
 	desc = great_hunt_decision_desc
 
 	ai_check_interval = 120
-	#cooldown = {
-	#	years = 10
-	#}
+	cooldown = {
+		years = 10
+	}
 	
 	is_shown = {
 		is_ruler = yes
-		faith = faith:the_old_gods #TOI faith, need change for LOTR
+		faith = faith:the_old_gods
 	}
 
 	is_valid = {
@@ -32,6 +32,109 @@ great_hunt_decision = { #Go for a religious great hunt
 		trigger_event = {
 			id = great_hunt.0001
 			days = 7 
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#de danann worshiper faith
+truce_with_de_danann_decision = { #ask for a 10 years truce with the gods
+	picture = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	
+	desc = truce_with_de_danann_decision_desc
+
+	ai_check_interval = 120
+	
+	cooldown = {
+		years = 30
+	}
+	
+	is_shown = {
+		is_ruler = yes
+		OR = {
+			faith = faith:celtic_de_danann_worship
+			faith = faith:megalithic_de_danann_worship
+		}
+	}
+
+	is_valid = {
+		piety_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		piety = 150
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_worshipers.0001
+			days = { 2 5 }
+		}
+		add_character_flag = {
+			flag = truce_with_de_dannan
+			years = 10
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#fomorian worshiper faith
+truce_with_fomorian_decision = { #ask for a 10 years truce with the gods
+	picture = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	
+	desc = truce_with_fomorian_decision_desc
+
+	ai_check_interval = 120
+	
+	cooldown = {
+		years = 30
+	}
+	
+	is_shown = {
+		is_ruler = yes
+		faith = faith:fomorian_worship
+	}
+
+	is_valid = {
+		piety_level >= 2
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		piety = 150
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_worshipers.0002
+			days = { 2 5 }
+		}
+		add_character_flag = {
+			flag = truce_with_fomorian
+			years = 10
 		}
 	}
 

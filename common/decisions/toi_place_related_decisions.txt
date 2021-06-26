@@ -337,3 +337,72 @@ found_umhaill_decision = {
 		base = 100
 	}
 }
+
+investigate_on_wolfwalkers_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+
+	desc = investigate_on_wolfwalkers_decision_desc
+	
+	cooldown = { years = 10 }
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			capital_county = {
+				kingdom = title:k_kilkenny
+			}
+			capital_county = {
+				kingdom = title:k_laois
+			}
+			capital_county = {
+				kingdom = title:k_offaly
+			}
+		}
+		NOT = {
+			OR = {
+				has_trait = wolfwolker
+				has_character_flag = has_peace_with_the_wolves
+				has_character_flag = destroyed_the_wolves
+			}
+		}
+	}
+
+	is_valid = {
+		NOT = { has_trait = fomorian }
+		NOT = { has_trait = tuatha_de_danann }
+		OR = {
+			has_trait = education_learning_3
+			has_trait = education_learning_4
+			has_trait = hunter_1
+			has_trait = hunter_2
+			has_trait = hunter_3
+			has_trait = hunter_1
+			has_trait = scholar			
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_wolfwalker.0001
+			days = { 5 7 }
+		}
+	}
+
+	cost = {
+		piety = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

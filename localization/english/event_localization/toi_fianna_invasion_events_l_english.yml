@@ -1,0 +1,27 @@
+﻿l_english:
+ 
+ toi_fianna.0001.t:0 "The Fianna"
+ toi_fianna.0001.desc:0 "For generations, bands of landless warriors called Fianna have roamed Ireland, surviving off the land and fighting for the highest bidder. The tides of many battles have been turned with their help.\n\nEver since the Milesian hegemony collapsed, Ireland is consumed by perpetual conflict. The fires of war burn bright, and the Fianna find no shortage of employers.\n\nAs their wealth grows, so too does their ambitions. Fianna leaders have gathered enough strength to start claiming land as their own. Their ranks swell with landless men seeking power, and they rule as they see fit.\n\nThese are no longer simple mercenaries. Soon, all of Ireland will feel the power of the Fianna."
+ toi_fianna.0001.a:0 "The balance of power shifts once again..."
+ 
+ toi_fianna.0002.t:0 "Tension with the Fianna"
+ toi_fianna.0002.desc:0 "Word is spreading of a Ringfort razed to the ground. Such acts are not uncommon, but it's noteworthy for the perpetrators. The few survivors say that a band of Fianna were hired by the local Chieftain. After their service ended, they demanded more payment than was originally agreed.\n\nOf course the Chieftain refused, so the Fianna massacred the populace and plundered the Ringfort. This has never happened before, and it's a sure sign of how much power and ambition the Fianna harbor now."
+ toi_fianna.0002.a:0 "I should keep an eye on the Fianna near my lands."
+ 
+ toi_fianna.0003.t:0 "The wrath of the Fianna"
+ toi_fianna.0003.desc:0 "A powerful King tried to drive the Fianna from his lands, and was slaughtered. These mercenaries now rival the strength of royal armies. Originally, a King would pay the Fianna to harm his enemy, now a King pays them to spare his land from their wrath.\n\nThe devastation left in their wake has severed trade networks and burned fields. Famine is starting to blossom all over Ireland, and what little food remains is being guarded by the Fianna; either to force others to submit, or drive the starving people into unrest..."
+ toi_fianna.0003.a:0 "We can't eat Gold or Piety!"
+ 
+ toi_fianna.0004.t:0 "Tribute to the Fianna"
+ toi_fianna.0004.desc:0 "The elders used to tell me about the Fianna. How they were brave heroes who lived off the land, honored the gods and saved entire Kingdoms. And now, I'm shaking with fear as the Fianna are outside my fort.\n\nTheir demands for tribute would make even the most tyrannical King seem generous. I can see in their eyes, they almost want me to say no, just so they have an excuse to burn down my fort and enslave my people. Or maybe they'll do that anyway if I say yes. These aren't mercenaries anymore, they're monsters.\n\nYet it's not just them I have to worry about. If I submit, my own people will see me as weak, and may oust me from power.\n\nShould I hand them the tribute and be risk hatred from my subjects? Or refuse and try to stand against them? I fear neither choice will end well..."
+ toi_fianna.0004.a:0 "Anything to be protected from these monsters."
+ toi_fianna.0004.b:0 "I won't waste a single dime on these outlaws."
+ 
+ toi_fianna.0005.t:0 "The Rise of the Fianna"
+ toi_fianna.0005.desc:0 "We knew this day was inevitable, but hoped it would have arrived later rather than sooner.\n\nThe Fianna are attacking Chieftains all over Ireland, with the intent to become Kings themselves. They've already gathered the men and gold to do so.\n\nTheir vast armies are filled with seasoned veterans. This will be our greatest challenge yet, but we could go down in history as legends!"
+ toi_fianna.0005.a:0 "These are unstable times."
+ 
+ 
+ FIANNA_ARMY:0 "The Fianna Army"
+ 
+ fianna_army_event_troops:0 "Fianna Band"

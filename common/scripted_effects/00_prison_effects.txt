@@ -1261,9 +1261,9 @@ imprison_HoF_consequences_effect = {
 		}
 		scope:actor = {
 			add_piety_level = -1
+			add_piety = medium_piety_loss
 		}
 	}
-	scope:actor = { add_piety = medium_piety_loss }
 }
 
 imprison_tyranny_effect = {

@@ -26,6 +26,17 @@
 	}
 	ai_score_mult = {
 		value = viking_conquest_ai_score_value
+		
+		# As a feudal gov, do not attack owner of tribal holdings  if you have a tribal holding to convert already
+		add = {
+			every_in_list = {
+				list = target_titles
+				if = {
+					limit = { feudal_clan_tribal_conquest_constraints = yes }
+					add = -1000
+				}
+			}
+		}
 	}
 
 	valid_to_start = {
@@ -350,6 +361,10 @@
 				value = minor_prestige_value
 				multiply = -1.0
 			}
+			stress_impact = {
+ 				ambitious = medium_stress_impact_gain
+ 				arrogant = medium_stress_impact_gain
+ 			}
 		}
 
 		# Prestige for the attacker's war allies
@@ -366,6 +381,13 @@
 			opinion = {
 				modifier = contributed_in_war
 			}
+		}
+		
+		scope:defender = {
+			stress_impact = {
+ 				ambitious = medium_stress_impact_gain
+ 				arrogant = medium_stress_impact_gain
+ 			}
 		}
 
 		add_truce_white_peace_effect = yes
@@ -453,7 +475,6 @@
 
 	attacker_wargoal_percentage = 0.8
 
-	min_ai_score = 100
 }
 
 duchy_conquest_cb = {
@@ -489,6 +510,17 @@ duchy_conquest_cb = {
 	}
 	ai_score_mult = {
 		value = viking_conquest_ai_score_value
+		
+		# As a feudal gov, do not attack tribal
+		add = {
+			every_in_list = {
+				list = target_titles
+				if = {
+					limit = { feudal_clan_tribal_conquest_constraints = yes }
+					add = -1000
+				}
+			}
+		}
 	}
 
 	valid_to_start = {
@@ -970,7 +1002,6 @@ duchy_conquest_cb = {
 
 	attacker_wargoal_percentage = 0.8
 
-	min_ai_score = 100
 }
 
 ducal_conquest_cb = {
@@ -986,12 +1017,7 @@ ducal_conquest_cb = {
 	}
 
 	allowed_against_character = {
-		#scope:attacker = {
-		#	ALL_FALSE = {
-		#		top_liege = scope:defender.top_liege
-		#		liege = scope:defender
-		#	}
-		#}
+		
 	}
 	target_titles = neighbor_land
 	target_title_tier = all
@@ -1467,7 +1493,7 @@ ducal_conquest_cb = {
 	attacker_wargoal_percentage = 0.8
 
 	max_ai_diplo_distance_to_title = 1500
-	min_ai_score = 100
+
 }
 
 ireland_laudabiliter_conquest_cb = {
@@ -2035,5 +2061,5 @@ ireland_laudabiliter_conquest_cb = {
 	attacker_wargoal_percentage = 0.8
 
 	max_ai_diplo_distance_to_title = 500
-	min_ai_score = 100
+
 }

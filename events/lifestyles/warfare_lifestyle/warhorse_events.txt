@@ -175,11 +175,9 @@ warhorse.0003 = {
 		trigger = {
 			trigger_if = {
 				limit = { is_landed = yes }
-				capital_province = { geographical_region = world_europe }
 			}
 			trigger_else_if = {
 				limit = { exists = location }
-				location = { geographical_region = world_europe }
 			}
 			trigger_else = { always = yes }
 		}

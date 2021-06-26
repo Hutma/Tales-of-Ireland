@@ -208,6 +208,9 @@ try_unite_ireland_decision = {
 		prestige_level >= 2
 		is_independent_ruler = yes
 		NOT = { has_character_flag = try_unite_ireland_flag }
+		primary_title = {
+			title_capital_county.title_province = { geographical_region = ireland_region }
+		}
 	}
 
 	is_valid = {

@@ -40,6 +40,8 @@
  REGIMENT_SIEGE_MAX_FORT_LEVEL:1 "Effective up to [fort_level|E] #high [MenAtArmsType.GetMaxFortLevel]#!"
  REGIMENT_STAT_ENTRY:0 "$KEY$: $VALUE|+=0$"
  BASE_VALUE_SIEGE:0 "Base: $VALUE|V1$"
+ REGIMENT_WINTER_NORMAL_MODIFIER_TOOLTIP:0 "#T In Normal Winter#!\n[MenAtArmsType.GetWinterNormalModifier.GetEffectString]"
+ REGIMENT_WINTER_HARSH_MODIFIER_TOOLTIP:0 "#T In Harsh Winter#!\n[MenAtArmsType.GetWinterHarshModifier.GetEffectString]"
 
  #MaA types
  skirmishers:2 "[skirmishers|E]"
@@ -114,10 +116,20 @@
  kern_cavalry_flavor:0 "The nobility also counts Kerns in his rank, they can afford to use a horse and smash through enmy lines.#!"
  hy_brazylian_adventurers:0 "Hy-Brazylian Adventurers"
  hy_brazylian_adventurers_flavor:0 "The Hy-Brazylian live on a small magical island North of Ireland, hidden in the clouds. The lack of space there forces some of the Hy-Brazylians to leave their home, looking for other shores. They are the Hy-Brazylian Adventurers."
-
+ roman_legion:1 "Roman Legion"
+ roman_legion_flavor:1 "#F The best of the best, Palatini are elite Roman soldiers who serve the Emperor directly.#!"
+ 
  #Special MaA
  house_guard:0 "House Guard"
  house_guard_flavor:0 "#F This elite regiment is in the service of a specific Dynasty. The warriors are hand-picked from the most loyal subjects.#!"
+ 
+ wolf_pack:0 "Wolf Pack"
+ wolf_pack_army:0 "Wolf Pack"
+ wolf_pack_flavor:0 "These wolves are lead by a Wolfwalker and will sacrifice themselves for their leader."
+ 
+ gladiators:0 "Gladiators"
+ gladiators_army:0 "Gladiator Band"
+ gladiators_flavor:0 "Trained to kill since their youth the gladiators are formidable and fearless fighters."
  
  #MaA Descriptions
  bowmen_flavor:1 "#F Professional archers fill the air with arrows, devastating the foremost enemy troops.#!"

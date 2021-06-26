@@ -1169,15 +1169,8 @@ ransom_interaction = {
 		localization = "RANSOM_FAVOR_OPTION"
 	}
 	
-	send_option = {
-		is_shown = { # When doing the mass ransom, its possible for no option to be valid for the gold costs, so instead of defaulting wrong we explitly fail it
-			exists = scope:mass_action
-			scope:mass_action = yes
-		}
-		flag = invalid
-	}
-	
 	localization_values = {
+		EXTORTIONATE_RANSOM_COST = scope:secondary_recipient.increased_ransom_cost_value
 		RANSOM_COST = scope:secondary_recipient.ransom_cost_value
 		CURRENT_GOLD = scope:recipient.gold
 	}
@@ -1406,6 +1399,15 @@ ransom_interaction = {
 				scope:secondary_recipient = { has_character_flag = character_ransom_refused_by_player }
 			}
 		}		
+	}
+	
+	# Needs to be after all other send options so we only default to it if everything else is blocked
+	send_option = {
+		is_shown = { # When doing the mass ransom, its possible for no option to be valid for the gold costs, so instead of defaulting wrong we explitly fail it
+			exists = scope:mass_action
+			scope:mass_action = yes
+		}
+		flag = invalid
 	}
 }
 
@@ -3209,6 +3211,16 @@ execute_prisoner_interaction = {
 	on_accept = {
 		if = {
 			limit = { scope:recipient = { is_imprisoned_by = scope:actor } }
+			# Are you HumSac'ing the HoF of a faith that doesn't practice HumSac?
+			hidden_effect = {
+				scope:actor = {
+					humsacd_a_hof_effect = {
+						SACRIFICER = scope:actor
+						SACRIFICED_HOF = scope:recipient
+					}
+				}
+			}
+			# Other Effects
 			if = {
 				limit = {
 					scope:recipient = { is_ai = no }
@@ -3313,7 +3325,9 @@ execute_prisoner_interaction = {
 	send_option = {
 		is_shown = {
 			scope:actor.faith = scope:recipient.faith
-			NOT = { scope:actor.faith = { has_doctrine = tenet_human_sacrifice } }
+			NOT = {
+				scope:actor.faith = { has_doctrine_parameter = human_sacrifice_active }
+			}
 		}
 		flag = execution_beheaded
 		localization = "EXECUTION_BEHEADED"
@@ -3337,7 +3351,7 @@ execute_prisoner_interaction = {
 		is_shown = {
 			NOT = {
 				scope:actor.faith = scope:recipient.faith
-				scope:actor.faith = { has_doctrine = tenet_human_sacrifice }
+				scope:actor.faith = { has_doctrine_parameter = human_sacrifice_active }
 			}
 		}
 		flag = execution_burned
@@ -3346,7 +3360,7 @@ execute_prisoner_interaction = {
 
 	send_option = {
 		is_shown = {
-			scope:actor.faith = { has_doctrine = tenet_human_sacrifice }
+			scope:actor.faith = { has_doctrine_parameter = human_sacrifice_active }
 		}
 		flag = execution_sacrifice
 		localization = "EXECUTION_SACRIFICE"

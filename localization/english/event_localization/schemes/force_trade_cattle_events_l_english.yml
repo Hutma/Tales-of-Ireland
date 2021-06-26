@@ -1,0 +1,4 @@
+﻿l_english:
+ befriend_ongoing.0901.t:0 ": What Could Have Been"
+ befriend_ongoing.0901.desc:0 "I have received some shocking news. [target.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)|U] has passed away.\n\nAs fate would have it, I will never get to enjoy [target.GetHerHis] friendship."
+ befriend_ongoing.0901.a:0 "The world is harsh and sudden."

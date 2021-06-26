@@ -73,6 +73,7 @@ pool_repopulate_prowess = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -152,6 +153,14 @@ pool_repopulate_prowess = {
 				}
 			}
 			add_trait = hy_brazylian
+		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
 		}
 		
 		
@@ -211,6 +220,10 @@ pool_repopulate_prowess = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
+		}
 		add_trait = celtic_human
 	}
 ###TALES OF IRELAND###
@@ -259,6 +272,7 @@ pool_repopulate_diplomacy = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -339,6 +353,14 @@ pool_repopulate_diplomacy = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -388,6 +410,18 @@ pool_repopulate_diplomacy = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+				if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 	}
@@ -430,6 +464,7 @@ pool_repopulate_martial = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -510,6 +545,14 @@ pool_repopulate_martial = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -559,6 +602,18 @@ pool_repopulate_martial = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 	}
@@ -604,6 +659,7 @@ pool_repopulate_stewardship = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -684,6 +740,14 @@ pool_repopulate_stewardship = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		if = {
 			limit = {has_culture_group = culture_group:toi_fomorian_group}
@@ -732,6 +796,18 @@ pool_repopulate_stewardship = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 	}
@@ -781,6 +857,7 @@ pool_repopulate_intrigue = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -861,6 +938,14 @@ pool_repopulate_intrigue = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -910,6 +995,18 @@ pool_repopulate_intrigue = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 	}
@@ -977,6 +1074,7 @@ pool_repopulate_learning = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -1057,6 +1155,14 @@ pool_repopulate_learning = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -1106,6 +1212,18 @@ pool_repopulate_learning = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 ###TALES OF IRELAND###
@@ -1223,6 +1341,7 @@ pool_repopulate_spouse = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -1303,6 +1422,14 @@ pool_repopulate_spouse = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -1352,6 +1479,18 @@ pool_repopulate_spouse = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 	}
@@ -1473,6 +1612,7 @@ pool_repopulate_local_flavor = {
 		remove_trait = celtic_human
 		remove_trait = megalith_human
 		remove_trait = hy_brazylian
+		remove_trait = latin_human
 		if 	= {
 			limit = {
 				root.court_owner = {
@@ -1553,6 +1693,14 @@ pool_repopulate_local_flavor = {
 			}
 			add_trait = hy_brazylian
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = latin_human
+				}
+			}
+			add_trait = latin_human
+		}
 		
 		
 		if = {
@@ -1602,6 +1750,18 @@ pool_repopulate_local_flavor = {
 		if = {
 		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
 			add_trait = hy_brazylian
+		}
+		if = {
+		limit = {has_culture = culture:bann_culture}
+			add_trait = megalith_human
+		}
+		if = {
+		limit = {has_culture = culture:brythonic_mann}
+			add_trait = celtic_human
+		}
+		if = {
+		limit = {has_culture = culture:roman}
+			add_trait = latin_human
 		}
 		add_trait = celtic_human
 ### TALES OF IRELAND ###

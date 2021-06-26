@@ -9,3 +9,11 @@ realm_guard_perk_effect = {
 influential_diplomat_perk_effect = {
 	global = INFLUENTIAL_DIPLOMAT_PERK
 }
+
+swift_execution_perk_poison_cattle_scheme_effect = {
+	global = SWIFT_EXECUTION_SCHEME_PERK
+}
+
+embassies_perk_froce_trade_scheme_effect = {
+	global = EMBASSIES_SCHEME_PERK
+}

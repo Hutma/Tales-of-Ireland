@@ -98,3 +98,10 @@
  fathers_of_manx_adherent:0 "Manx Celt"
  fathers_of_manx_adherent_plural:0 "Manx Celts" 
  fathers_of_manx_desc:0 "This is a syncretic faith, merging Celtic ancestor worship with local Manx mythology."
+ 
+ #Le Cheile faith loc
+ le_cheile_faith:0 "Le Chéile"
+ le_cheile_faith_adj:0 "Le Chéile"
+ le_cheile_faith_adherent:0 "Fianna"
+ le_cheile_faith_adherent_plural:0 "Fianna" 
+ le_cheile_faith_desc:0 "This is a syncretic faith, merging all different faiths that different Fianna members have."

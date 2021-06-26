@@ -11,7 +11,6 @@ special_succession_sumerian_trigger = {
 special_succession_city_confederation_trigger = {
 	OR = {
 		has_government = feudal_government
-		has_government = tributary_government
 	}
 	NOR = {
 		special_succession_dynastic_elective_trigger = yes
@@ -29,7 +28,6 @@ special_succession_dynastic_elective_trigger = {
 historical_succession_access_single_heir_succession_law_trigger = {
 	OR = {
 		has_government = feudal_government
-		has_government = tributary_government
 	}
 	culture = {
 		has_innovation = innovation_kingship

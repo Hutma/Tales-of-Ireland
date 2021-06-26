@@ -156,3 +156,36 @@ restore_nemedian_kingdom_decision_scripted_effect = {
 		change_development_level = medium_development_level_gain
 	}
 }
+
+celtic_troops_decision_scripted_effect = {
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = celtic_warband
+		levies = {
+			add = {
+				#Base of 200.
+				add = root.max_military_strength
+				#Multiply that by the realm size of the target's top_liege.
+				multiply = 0.25
+				#Cut it off so things don't get too ridiculous.
+				max = 1000
+				#Make sure all adventurers have a moderately respectable force.
+				min = 75
+			}
+		}
+		men_at_arms = {
+			type = kern_warriors
+			stacks = {
+				value = 1
+			}
+		}
+		men_at_arms = {
+			type = kern_cavalry
+			stacks = {
+				value = 1
+			}
+		}
+		location = capital_province
+	}
+}
