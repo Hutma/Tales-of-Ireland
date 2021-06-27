@@ -1143,7 +1143,7 @@ ransom_interaction = {
 		is_shown = {
 			scope:recipient = {
 				gold < scope:secondary_recipient.ransom_cost_value
-				gold > 0
+				gold >= 1
 			}
 		}
 		flag = current_gold
@@ -1536,7 +1536,7 @@ pay_ransom_interaction = {
 			exists = scope:recipient
 			scope:actor = {
 				gold < scope:secondary_recipient.ransom_cost_value
-				gold > 0
+				gold >= 1
 			}
 		}
 		flag = current_gold

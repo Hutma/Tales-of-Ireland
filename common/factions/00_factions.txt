@@ -314,6 +314,12 @@
 				}
 			}
 		}
+		
+		modifier = {
+			add = -1000
+			save_temporary_opinion_value_as = { name = target_opinion target = scope:faction.faction_target }
+			scope:target_opinion >= 80
+		}
 
 		#######################
 		# Standard AI Weights #
@@ -722,6 +728,12 @@ liberty_faction = {
 					NOT = { joined_faction = scope:faction }
 				}
 			}
+		}
+		
+		modifier = {
+			add = -1000
+			save_temporary_opinion_value_as = { name = target_opinion target = scope:faction.faction_target }
+			scope:target_opinion >= 80
 		}
 
 		#######################

@@ -143,3 +143,46 @@ humanity_focused_wolf = {
 	learning_per_stress_level = -2
 	prowess_per_stress_level = -2
 }
+
+peace_with_the_wolves = {
+	icon = dog_positive
+	development_growth_factor = 0.2
+	tax_mult = 0.2
+	county_opinion_add = 20
+}
+
+the_burnt_den = {
+	icon = dog_positive
+	county_opinion_add = 20
+	development_growth_factor = 0.1
+}
+
+wolves_revenge = {
+	icon = dog_negative
+	county_opinion_add = -20
+	development_growth_factor = -0.4
+	tax_mult = -0.4
+	levy_reinforcement_rate = -0.25
+}
+
+wolves_dispersed = {
+	icon = dog_positive
+	development_growth_factor = 0.2
+	tax_mult = 0.1
+	county_opinion_add = 10
+}
+
+wolves_killer = {
+	icon = dog_positive
+	diplomacy_per_prestige_level = 1
+	martial_per_prestige_level = 1
+	prowess = 2
+}
+
+wolves_small_revenge = {
+	icon = dog_negative
+	county_opinion_add = -10
+	development_growth_factor = -0.2
+	tax_mult = -0.2
+	levy_reinforcement_rate = -0.2
+}

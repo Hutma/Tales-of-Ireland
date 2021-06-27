@@ -218,7 +218,9 @@ call_gladiators_decision = {
 	is_shown = {
 		highest_held_title_tier >= tier_duchy
 		any_sub_realm_barony = {
-			has_building_or_higher = coliseum_01
+			title_province = {
+				has_building_or_higher = coliseum_01
+			}
 		}
 	}
 

@@ -7,6 +7,9 @@
 	ai_check_interval = 260
 
 	is_shown = {
+		any_child = {
+			count >= 2
+		}
 		AND  = {
 			OR = {
 				prestige_level >= 2
@@ -40,28 +43,23 @@
 		AND = {
 			prestige_level >= 3
 			piety_level >= 3
-			#any_heir = {
-			#	NOT = {
-			#		is_primary_heir_of = root
-			#	}
-			#	is_landed = yes
-			#	highest_held_title_tier >= 3
-			#	is_independent = yes	
-			#}
 			any_child = {
 				NOT = {
 					is_primary_heir_of = root
 				}
 				is_landed = yes
 				highest_held_title_tier >= 3
-				is_independent = yes	
+				OR = {
+					is_independent = yes	
+					NOT = { top_liege = root}
+				}
 			}
 			any_heir = {
 				is_primary_heir_of = root
 				age >= 20
 			}
 			any_vassal = {
-				count >= 4
+				count >= 3
 				is_powerful_vassal = yes
 				opinion = {
 					target = root

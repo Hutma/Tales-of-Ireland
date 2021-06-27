@@ -54,3 +54,171 @@ call_the_pack_decision_scripted_effect = {
 		location = capital_province
 	}
 }
+
+roman_road_decision_scripted_effect = {
+	title:c_ballylickey = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_kealkill = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballingeary = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballynagree = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_millstreet = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_kanturck = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_liscarroll = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_milford = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_kilmallock = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_orourkes = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_bruff = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_drombanna = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_limerick = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_castleconnell = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_congress = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_southill = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_portroe = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_dromineer = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballinderry = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_rathcabbin = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_banagher = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_clonmacnoise = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_lackagh = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballynahown = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_moate = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballymore = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_moyvore = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballynacarrigy = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballinalack = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_rathowen = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_granard = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_kilcogy = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballymachugh = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballyjamesduff = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_carrickaboy = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_billis = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_cootehill = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_rockcorry = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_leiter = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_monaghan = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_glaslough = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_caledon = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_dungannon = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_coalisland = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_stewartstown = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_coagh = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_magherafelt = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_maghera = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_swatragh = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_kilrea = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_caheny = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_finvoy = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_ballymoney = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_dunluce = {
+		add_county_modifier = roman_road_modifier
+	}
+	title:c_dunseverick = {
+		add_county_modifier = roman_road_modifier
+	}
+}

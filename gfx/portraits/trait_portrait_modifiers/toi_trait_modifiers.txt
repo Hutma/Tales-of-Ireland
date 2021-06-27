@@ -13,12 +13,6 @@ fomorian = {
 				gene = gene_height
 				value = 0.1
 			}
-			morph = {
-				mode = replace
-				gene = complexion
-				template = complexion_ugly_1
-				value = 1.0
-			}
 		}
 	}
 }

@@ -105,6 +105,16 @@
  trait_three_quarter_hy_brazylian_desc:0 "This character is more [hy_brasylian|E] than anything else."
  trait_three_quarter_hy_brazylian_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is more [hy_brasylian|E] than anything else."
  
+ trait_latin_human:0 "Latin"
+ trait_latin_human_desc:0 "The [latin_humans|E] come from the continent, around the Mediterranean Sea, they come from a Great Empire known as the Roman Empire. This empire is said to be the greatest of all, of unmatched power."
+ trait_latin_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a [latin_human|E]. [latin_humans|E] come from the continent, around the Mediterranean Sea, they come from a Great Empire known as the Roman Empire. This empire is said to be the greatest of all, of unmatched power."
+ trait_half_latin_human:0 "Half-blooded Latin"
+ trait_half_latin_human_desc:0 "Half the blood of this character is [latin_human|E] blood."
+ trait_half_latin_human_character_desc:0 "Half the blood of [ROOT.GetCharacter.GetFirstNameNoTooltip] is [latin_human|E] blood."
+ trait_three_quarter_latin_human:0 "Strong Latin blood"
+ trait_three_quarter_latin_human_desc:0 "This character is more [latin_human|E] than anything else."
+ trait_three_quarter_latin_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is more [latin_human|E] than anything else."
+ 
  #Duel traits
  trait_aggresive_fighter:0 "Aggresive Fighter"
  trait_aggresive_fighter_desc:0 "Attack is both the best offense and defense. The one who delivers the strongest blows always wins the fight."

@@ -52,3 +52,19 @@ meath_empire_founded = {
 	learning_per_prestige_level = 1
 	monthly_dynasty_prestige_mult = 0.2
 }
+
+roman_road_foundator = {
+	icon = rock_positive
+	movement_speed = 0.2
+	retreat_losses = -0.2
+	supply_limit = 25
+	monthly_dynasty_prestige_mult = 0.1
+}
+
+roman_road_modifier = {
+	icon = rock_positive
+	movement_speed = 0.3
+	tax_mult = 0.15
+	development_growth_factor = 0.2
+	supply_capacity_mult = 0.5
+}

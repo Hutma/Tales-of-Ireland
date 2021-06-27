@@ -647,7 +647,7 @@ toi_wolfwalker.0501 = {
 		animation = dismissal
 	}
 	
-	option = { #accept or ask to become one of them
+	option = {
 		name = toi_wolfwalker.0501.a
 		capital_county = {
 			add_county_modifier = {
@@ -683,6 +683,11 @@ toi_wolfwalker.0503 = {
 		add_prestige = 150
 		add_tales_of_war_lifestyle_perk_points = 1
 		add_character_flag = destroyed_the_wolves
+		
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			callous = medium_stress_impact_loss
+		}
 	}
 }
 
@@ -840,7 +845,7 @@ toi_wolfwalker.1000 = {
 		}
 		trigger_event = {
 			id = toi_wolfwalker.1500
-			days = 2
+			days = { 30 100 }
 		}
 	}
 }
@@ -864,14 +869,14 @@ toi_wolfwalker.1100 = {
 	}
 	
 	option = { #balance in everything
-		name = toi_wolfwalker.1100.a
+		name = toi_wolfwalker.1100.b
 		add_character_modifier = {
 			modifier = balanced_wolf
 		}
 	}
 
 	option = { #I should try to regain my humanity
-		name = toi_wolfwalker.1100.a
+		name = toi_wolfwalker.1100.c
 		add_character_modifier = {
 			modifier = humanity_focused_wolf
 		}
@@ -880,8 +885,8 @@ toi_wolfwalker.1100 = {
 
 #eating the cattle
 toi_wolfwalker.1500 = {
-	title = toi_wolfwalker.1100.t
-	desc = toi_wolfwalker.1100.desc
+	title = toi_wolfwalker.1500.t
+	desc = toi_wolfwalker.1500.desc
 	type = character_event
 	theme = learning_medicine_focus
 	right_portrait = {
@@ -891,6 +896,9 @@ toi_wolfwalker.1500 = {
 	
 	trigger = {
 		has_trait = wolfwalker
+		capital_county = {
+			development_level > 10
+		}
 	}
 	
 	option = { #yummy

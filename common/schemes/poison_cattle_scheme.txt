@@ -205,13 +205,13 @@
 					exists = scope:scheme_successful
 				}
 				trigger_event = {
-					id = poison_cattle_outcome_success.0001
+					id = poison_cattle_outcome.0001
 					days = 1
 				}
 			}
 			else = {
 				trigger_event = {
-					id = poison_cattle_outcome_fail.0001
+					id = poison_cattle_outcome.1001
 					days = 1
 				}	
 			}

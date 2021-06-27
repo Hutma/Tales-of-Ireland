@@ -1,0 +1,11 @@
+﻿toi_invasions_rule = {
+	default = default_timing
+
+	default_timing = {
+
+	}
+
+	random_invasions = {
+
+	}	
+}

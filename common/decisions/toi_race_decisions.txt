@@ -387,9 +387,7 @@ celtic_troops_decision = {
 	}
 
 	effect = {
-		show_as_tooltip = {
-			celtic_troops_decision_scripted_effect = yes
-		}
+		celtic_troops_decision_scripted_effect = yes
 	}
 
 	cost = {

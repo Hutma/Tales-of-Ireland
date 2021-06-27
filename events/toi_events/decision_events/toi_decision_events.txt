@@ -91,6 +91,7 @@ toi_decisions.002 =  { #Nice giant
 			dynasty = none
 			faith = faith:sidhe_beliefs
 			culture = this.culture
+			location = title:b_giantscauseway.title_province
 			save_scope_as = giant
 		}
 	}
@@ -150,13 +151,8 @@ toi_decisions.003 =  { #Demanding giant
 			gender_female_chance = 0
 			dynasty = none
 			faith = faith:sidhe_beliefs
-	#			50 = {
-	#				faith = faith:sidhe_beliefs
-	#			}
-	#			50 = {
-	#				faith = faith:dark_gods
-	#			}
 			culture = this.culture
+			location = title:b_giantscauseway.title_province
 			save_scope_as = giant
 		}
 	}
@@ -226,6 +222,7 @@ toi_decisions.004 =  { #Angry giant
 			dynasty = none
 			faith = faith:sidhe_beliefs
 			culture = this.culture
+			location = title:b_giantscauseway.title_province
 			save_scope_as = giant
 		}
 	}

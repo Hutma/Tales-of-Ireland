@@ -1,0 +1,102 @@
+﻿namespace = poison_cattle_outcome
+
+
+#poison cattle
+poison_cattle_outcome.0001 = {
+	type = character_event
+	title = poison_cattle_outcome.0001.t
+	desc = poison_cattle_outcome.0001.desc
+	theme = diplomacy_foreign_affairs_focus
+
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:target
+		animation = personality_irrational
+	}
+
+	option = { #poison
+		name = poison_cattle_outcome.0001.a
+		scope:target = {
+			capital_county = {
+				set_variable = {
+					name = cattle_number
+					value = this.development_level
+				}
+				change_variable = {
+					name = cattle_number
+					multiply = 0.5
+				}
+				change_development_level = {
+					value = var:cattle_number
+					multiply = -1.0
+				}
+				remove_variable = var:cattle_number
+			}
+		}
+		
+		scope:target = {
+			trigger_event = {
+				id = poison_cattle_outcome.0002
+				days = 1
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = { exists = scope:scheme }
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+	}
+}
+
+#poison has failed
+poison_cattle_outcome.1001 = {
+	type = character_event
+	title = poison_cattle_outcome.1001.t
+	desc = poison_cattle_outcome.1001.desc
+	theme = diplomacy_foreign_affairs_focus
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+
+
+	option = { #shit
+		name = poison_cattle_outcome.1001.a
+		add_prestige = -100
+	}
+	
+	after = {
+		if = {
+			limit = { exists = scope:scheme }
+			scope:scheme = {
+				end_scheme = yes
+			}
+		}
+	}
+}
+
+###inform target events###
+
+poison_cattle_outcome.0002 = {
+	type = character_event
+	title = poison_cattle_outcome.0002.t
+	desc = poison_cattle_outcome.0002.desc
+	theme = diplomacy_foreign_affairs_focus
+
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+
+	option = { #who did that?
+		name = poison_cattle_outcome.0002.a
+	}
+}

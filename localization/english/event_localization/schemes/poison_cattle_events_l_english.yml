@@ -1,0 +1,12 @@
+﻿l_english:
+ poison_cattle_outcome.0001.t:0 "Poisoned cattle"
+ poison_cattle_outcome.0001.desc:0 "The poisoning was a success! The Cattle are dropping like flies and their meat is now unusable. [scope:target.GetShortUIName|U] can only helplessly watch as his wealth rots away before him!\n\nMy agent returned to give the news. Should my rival recover, I'll know who to hire again..."
+ poison_cattle_outcome.0001.a:0 "Just don't come near my Cattle"
+ 
+ poison_cattle_outcome.1001.t:0 "Poisonning failed"
+ poison_cattle_outcome.1001.desc:0 "The poisoning was a failure! Whatever they gave the Cattle did nothing, and the wealth of [scope:target.GetShortUIName|U] continues to grow!\n\nMy agent returned, apologising profusely and promising to do better, but the opportunity has passed now..."
+ poison_cattle_outcome.1001.a:0 "This was a waste"
+ 
+ poison_cattle_outcome.0002.t:0 "Sudden cattle deaths"
+ poison_cattle_outcome.0002.desc:0 "What's happening? Yesterday my fields were bountiful, now half of my Cattle are dead! My Druids believe we were cursed, but I suspect this wasn't divine intervention..."
+ poison_cattle_outcome.0002.a:0 "How will we recover?"

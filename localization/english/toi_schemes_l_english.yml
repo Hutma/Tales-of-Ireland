@@ -1,0 +1,14 @@
+﻿l_english:
+ poison_cattle:0 "Poison Cattle Scheme"
+ poison_cattle_action:0 "Poison Cattle"
+ poison_cattle_desc:0 "I will try to poison [SCHEME.GetTarget.GetShortUINameNoTooltip]'s cattle and kill half of [SCHEME.GetTarget.GetHerHis] herd."
+ poison_cattle_desc_general:0 "Try to elaborate a plan to poison a enemy's or rival's cattle."
+ scheme_interaction_tt_poison_cattle_approved:0 "Attempt to poison [recipient.GetShortUINameNoTooltip]'s cattle, killing half of [SCHEME.GetTarget.GetHerHis] the herd!"
+ poison_cattle_invalid:0 "I stop trying to poison [TARGET_CHARACTER.GetShortUIName|U]'s cattle."
+ poison_cattle_scheme_invalidated_title:0 "@scheme_icon! Poison Cattle Scheme Ends"
+ POISON_CATTLE_SUCCESS_DESC:0 "You will kill half the cattle of [TARGET_CHARACTER.GetShortUIName|U]'s capital."
+ POISON_CATTLE_DISCOVERY_DESC:0 "You will loose opinion from [TARGET_CHARACTER.GetShortUIName|U] and prestige."
+ 
+ poison_cattle_interaction:0 "@scheme_icon!Poison Cattle"
+ poison_cattle_interaction_desc:0 "Attempt to poison [recipient.GetShortUINameNoTooltip]'s cattle, killing half of [SCHEME.GetTarget.GetHerHis] the herd!"
+ poison_cattle_hook_interaction_toast:0 "Planning Poisonning Cattle"

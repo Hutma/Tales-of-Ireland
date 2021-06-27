@@ -9,6 +9,7 @@
 	cooldown = { years = 10 }
 	
 	is_shown = {
+		has_global_variable = hy_brazylian_have_appeared
 		is_ruler = yes
 		is_landed = yes
 		exists = dynasty # Everyone should have a dynasty, but in case they don't...
@@ -68,6 +69,7 @@ fianna_troops_decision = {
 	cooldown = { years = 20 }
 	
 	is_shown = {
+		has_global_variable = fianna_have_risen
 		is_ruler = yes
 		is_landed = yes
 		exists = dynasty # Everyone should have a dynasty, but in case they don't...
@@ -105,6 +107,140 @@ fianna_troops_decision = {
 
 	cost = {
 		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+roman_troops_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	
+	major = yes
+	ai_check_interval = 40
+
+	desc = roman_troops_decision_desc
+
+	cooldown = { years = 20 }
+	
+	is_shown = {
+		has_global_variable = roman_are_invading
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		culture = culture:roman
+		current_date < 5100.1.1
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		current_date < 5100.1.1
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = fianna_army_event_troops
+			levies = {
+				value = 150
+			}
+			men_at_arms = {
+				type = roman_legion
+				stacks = {
+					value = 1
+					add = primary_title.tier
+				}
+			}
+			location = capital_province
+		}
+	}
+
+	cost = {
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+the_roman_road_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	
+	major = yes
+	ai_check_interval = 100
+
+	desc = the_roman_road_decision_desc
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		culture = culture:roman
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:the_roman_road_decision_done
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		OR = {
+			AND = {
+				highest_held_title_tier >= 4
+				prestige_level >= 4
+			}
+			AND = {
+				any_independent_ruler = {
+					count >= 2
+					culture = culture:roman
+					highest_held_title_tier >= 4
+					prestige_level >= 2
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = roman_road_foundator
+			}
+		}
+		custom_description = {
+			text = roman_road_decision_effect
+			
+			roman_road_decision_scripted_effect = yes
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:the_roman_road_decision_done
+		}
+	}
+
+	cost = {
+		prestige = 200
+		gold = 500
 	}
 
 	ai_potential = {

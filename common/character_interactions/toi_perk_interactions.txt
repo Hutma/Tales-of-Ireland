@@ -1,0 +1,327 @@
+﻿###################
+# Poison cattle
+###################
+poison_cattle_interaction = {
+	category = interaction_category_hostile
+
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+
+	scheme = poison_cattle
+
+	desc = poison_cattle_interaction_desc
+	
+		is_shown = {
+		scope:actor = {
+			OR = {
+				has_perk = swift_execution_perk
+				AND = {
+					has_trait = vengeful
+					has_relation_rival = scope:recipient
+				}
+			}
+		}
+		NOT = { scope:recipient = scope:actor }
+	}
+
+	is_valid = {
+		scope:actor = {
+			OR = {
+				has_perk = swift_execution_perk # To display that it's available because of the Perk
+				AND = {
+					has_trait = vengeful
+					has_relation_rival = scope:recipient
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_physically_able_adult = yes
+			can_start_scheme = {
+				target = scope:recipient
+				type = poison_cattle
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			stress_impact = {
+				just = medium_stress_impact_gain
+				honest = medium_stress_impact_gain
+				compassionate = minor_stress_impact_gain
+			}
+			hidden_effect = {
+				send_interface_toast = {
+					title = poison_cattle_hook_interaction_toast
+					left_icon = scope:actor
+					right_icon = scope:recipient
+
+					start_scheme = {
+						target = scope:recipient
+						type = poison_cattle
+					}
+					show_as_tooltip = {
+						stress_impact = {
+							just = medium_stress_impact_gain
+							honest = medium_stress_impact_gain
+							compassionate = minor_stress_impact_gain
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 10
+	}
+	
+	ai_targets = {
+		ai_recipients = courtiers
+		max = 5
+	}
+	
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 30
+	}
+	
+	ai_potential = {
+		is_adult = yes
+		ai_greed >= low_positive_ai_value
+		intrigue >= medium_skill_rating
+		NOR = {
+			has_trait = content
+			any_scheme = {
+				OR = {
+					scheme_type = murder
+					scheme_type = abduct
+					scheme_type = claim_throne
+					scheme_type = fabricate_hook
+					scheme_type = poison_cattle
+				}
+			}
+		}
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 36
+
+	ai_will_do = {
+		base = 50
+
+		
+		modifier = {
+			add = -50
+			
+			opinion = {
+				target = scope:recipient
+				value >= high_positive_opinion
+			}
+		}
+		
+		modifier = {
+			add = -40
+			
+			scope:recipient = {
+				is_landed = yes
+			}
+		}
+		
+		modifier = {
+			add = 50
+			
+			scope:recipient = {
+				is_landed = no
+				OR = {
+					liege = scope:actor.liege
+					liege = {
+						OR = {
+							has_relation_rival = scope:actor
+							has_relation_nemesis = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			
+			scope:recipient = {
+				has_council_position = councillor_spymaster
+			}
+		}
+		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
+	}
+}
+
+
+froce_cattle_trade_interaction = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	send_name = START_SCHEME
+
+	interface_priority = 120
+	scheme = force_cattle_trade
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = { has_perk = embassies_perk }
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		scope:actor = {
+			can_start_scheme = {
+				type = force_cattle_trade
+				target = scope:recipient
+			}
+		}
+	}
+
+	desc = scheme_interaction_tt_sway_approved
+
+	on_accept = {
+		hidden_effect = {
+			scope:actor = {
+				send_interface_toast = {
+					title = sway_interaction_notification
+
+					left_icon = scope:actor					
+					right_icon = scope:recipient
+
+					start_scheme = {
+						type = force_cattle_trade
+						target = scope:recipient
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		primary_title.tier >= tier_county
+		NOR = {
+			has_trait = shy
+			has_trait = callous
+			any_scheme = {
+				OR = {
+					scheme_type = befriend
+					scheme_type = sway
+					scheme_type = seduce
+					scheme_type = courting
+					scheme_type = elope
+					scheme_type = force_cattle_trade
+				}
+			}
+			primary_title = {
+				is_mercenary_company = yes
+			}
+		}
+	}
+	
+	auto_accept = yes
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 10
+	}
+	
+	ai_targets = {
+		ai_recipients = courtiers
+		max = 5
+	}
+	
+	ai_targets = {
+		ai_recipients = realm_characters
+		max = 30
+	}
+	
+	ai_potential = {
+		is_adult = yes
+		ai_greed >= low_positive_ai_value
+		intrigue >= medium_skill_rating
+		NOR = {
+			has_trait = content
+			any_scheme = {
+				OR = {
+					scheme_type = befriend
+					scheme_type = sway
+					scheme_type = seduce
+					scheme_type = courting
+					scheme_type = elope
+					scheme_type = force_cattle_trade
+				}
+			}
+		}
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 36
+
+	ai_will_do = {
+		base = 50
+
+		
+		modifier = {
+			add = -50
+			
+			opinion = {
+				target = scope:recipient
+				value >= high_positive_opinion
+			}
+		}
+		
+		modifier = {
+			add = -40
+			
+			scope:recipient = {
+				is_landed = yes
+			}
+		}
+		
+		modifier = {
+			add = 50
+			
+			scope:recipient = {
+				is_landed = no
+				OR = {
+					liege = scope:actor.liege
+					liege = {
+						OR = {
+							has_relation_rival = scope:actor
+							has_relation_nemesis = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			
+			scope:recipient = {
+				has_council_position = councillor_spymaster
+			}
+		}
+		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
+	}
+}

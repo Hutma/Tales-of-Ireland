@@ -24,10 +24,7 @@ toi_roman_invasion.0001 = {
 	title = toi_roman_invasion.0001.t
 	desc = toi_roman_invasion.0001.desc
 	type = character_event
-	theme = unfriendly
-	override_background = {
-		event_background = round_tower
-	}
+	theme = war
 	
 	right_portrait = {
 		character = root
@@ -63,7 +60,7 @@ toi_roman_invasion.0002 = {
 	title = toi_roman_invasion.0002.t
 	desc = toi_roman_invasion.0002.desc
 	type = character_event
-	theme = unfriendly
+	theme = diplomacy_foreign_affairs_focus
 	override_background = {
 		event_background = round_tower
 	}
@@ -103,9 +100,6 @@ toi_roman_invasion.0003 = {
 	desc = toi_roman_invasion.0003.desc
 	type = character_event
 	theme = war
-	override_background = {
-		event_background = round_tower
-	}
 	
 	right_portrait = {
 		character = root
@@ -141,22 +135,15 @@ toi_roman_invasion.0004 = {
 	title = toi_roman_invasion.0004.t
 	desc = toi_roman_invasion.0004.desc
 	type = character_event
-	theme = crown
+	theme = war
 	
 	right_portrait = {
 		character = root
-		animation = personality_bold
+		animation = personality_rational
 	}
 	
 	option = {
 		name = toi_roman_invasion.0004.a
-		add_character_flag = {
-			flag = paid_the_fianna
-			years = 6
-		}
-	}
-	option = {
-		name = toi_roman_invasion.0004.b
 	}
 }
 
@@ -181,7 +168,7 @@ toi_roman_invasion.0005 = {
 	title = toi_roman_invasion.0005.t
 	desc = toi_roman_invasion.0005.desc
 	type = character_event
-	theme = crown
+	theme = war
 	
 	right_portrait = {
 		character = root

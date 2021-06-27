@@ -1,0 +1,6 @@
+﻿l_english:
+ rule_toi_invasions_rule:0 "Invasions start"
+ setting_default_timing:0 "Default (recommended)"
+ setting_default_timing_desc:0 "Each Invasion will start during their right era."
+ setting_random_invasions:0 "#N Random#!"
+ setting_random_invasions_desc:0 "The Invasions will each start at a random date, usually earlier than they should. This might break the game balance but can also be fun."

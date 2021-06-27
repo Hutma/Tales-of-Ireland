@@ -1,0 +1,26 @@
+﻿l_english:
+ 
+ toi_roman_invasion.0001.t:0 "The Romans have landed"
+ toi_roman_invasion.0001.desc:0 "Traders and travellers bring tales of a distant empire.\n\nThey conquered the continent and have now turned their greedy and lustful eyes towards our isles. Their legions have landed in Britain and entire tribes are being crushed beneath their heels.\n\nThe Brythons are fighting back valiantly, but it's only a matter of time before they're subjugated."
+ toi_roman_invasion.0001.a:0 "Will they land in Ireland as well?"
+ 
+ toi_roman_invasion.0002.t:0 "Pax Romana"
+ toi_roman_invasion.0002.desc:0 "Traders and travellers bring tales of a powerful empire.\n\nAfter years of fighting, these men called Romans have pacified the tribes and created the province of Britannia. They claim they are bringing civilization and order, while plundering the land and enslaving the locals. They are respected and feared in equal measure.\n\nGreat roads, fortresses and infrastructure have been created by their soldier engineers known as Legionnaires, but only for Roman gain. They are satisfied now, but it's only a matter of time before they hunger again.\n\nNeither the east nor the west has been able to satisfy them. Alone among men they covet with equal eagerness poverty and riches. To robbery, slaughter, plunder, they give the lying name of empire..."
+ toi_roman_invasion.0002.a:0 "Every kingdom rises and falls, even those as large as Rome."
+ 
+ toi_roman_invasion.0003.t:0 "Imperial Instability"
+ toi_roman_invasion.0003.desc:0 "Traders and travellers bring tales of an unstable empire. \n\nWith no land left to conquer, no enemy left to vanquish, the Romans are turning on themselves. Roman nobility competes for power and influence, and legion commanders defy orders. \n\nThe situation in Britannia is no different, and it's great distance from the Capital has given it more autonomy. Even now there are whispers of conspiracy and uprisings as the regional governors struggle to maintain order."
+ toi_roman_invasion.0003.a:0 "Every kingdom rises and falls, even those as large as Rome"
+ 
+ toi_roman_invasion.0004.t:0 "Civil War"
+ toi_roman_invasion.0004.desc:0 "Traders and travellers bring tales of a broken empire.\n\nThe Roman Emperor was murdered by his own bodyguards, governors have declared their own independent empires and entire legions have turned into savage warbands.\n\nThis news normally wouldn't trouble us, but two ambitious Legion Commanders; now free from the shackles of their laws, have gathered an army. Two Roman Legions have been spotted on the british coast, preparing to cross the Irish sea.\n\nThis will surely be the greatest invasion our island has ever faced."
+ toi_roman_invasion.0004.a:0 "Will we become the province of Hibernia?"
+ 
+ toi_roman_invasion.0005.t:0 "Legionnaires in Ireland"
+ toi_roman_invasion.0005.desc:0 "Traders and travellers bring tales of new invasions. \n\nThe two rogue Legions have landed in Ireland, their equipment and tactics are unlike any we've ever seen. Now it's clear how they brought the whole world to heel. Alongside their bloodshed and lust for gold, they bring new cultures, rites and ideas to our shores.\n\nStill, these are mere people like any other. We have lived in Ireland for millenia, and we will survive against them like we always have!"
+ toi_roman_invasion.0005.a:0 "They may take this land, but they will never hold it!"
+ 
+ 
+ ROMAN_ARMY:0 "Roman Invasion Army"
+ 
+ roman_army_event_troops:0 "Roman invading army"

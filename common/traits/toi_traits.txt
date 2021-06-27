@@ -1619,9 +1619,9 @@ latin_human = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_hy_brazylian_desc
+				desc = trait_latin_human_desc
 			}
-			desc = trait_hy_brazylian_character_desc
+			desc = trait_latin_human_character_desc
 		}
 	}
 }

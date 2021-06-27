@@ -52,6 +52,11 @@ hy_brasylians = {
 	alias = {hy_brasylian}
 }
 
+latin_humans = {
+	texture = "gfx/interface/icons/message_feed/trait.dds"
+	alias = {latin_human}
+}
+
 surface_world = {
 	texture = "gfx/interface/icons/icon_domain.dds"
 }

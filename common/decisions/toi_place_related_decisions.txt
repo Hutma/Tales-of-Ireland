@@ -362,7 +362,7 @@ investigate_on_wolfwalkers_decision = {
 		}
 		NOT = {
 			OR = {
-				has_trait = wolfwolker
+				has_trait = wolfwalker
 				has_character_flag = has_peace_with_the_wolves
 				has_character_flag = destroyed_the_wolves
 			}

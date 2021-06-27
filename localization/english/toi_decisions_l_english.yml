@@ -29,6 +29,7 @@
  celtic_troops_decision_desc:0 "We are the new lords of Ireland and bring with us armies dedicated to our faith. Might our devotion crush our enemies."
  celtic_troops_decision_tooltip:0 "Send for the Warband"
  celtic_troops_decision_confirm:0 "Send for the Warband"
+ celtic_warband:0 "Celtic Warband"
  
  #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
@@ -110,6 +111,7 @@
  high_king_protection_decision_desc:0 "The [high_king|E] is a Milesian, and his influence can be used to aid any [milesian|E] who requires it. We are at war and need more men. It is time to use the influence the High King gives to our people to muster more troops."
  high_king_protection_decision_tooltip:0 "Call for aid"
  high_king_protection_decision_confirm:0 "Rally the men!"
+ high_king_protection_decision_troops:0 "High King delegation"
  
  establish_sean_bar_decision:0 "Establish Sean's Bar"
  establish_sean_bar_decision_desc:0 "The only thing better than enjoying a bit of ale in the evening is having good company to enjoy it with. Maybe I could build some sort of establishment where people could gather and share a pint (or two). Some sort of public house? \n\nHistorically, Athlone's Sean's Bar is known as the oldest pub in Europe."
@@ -142,3 +144,10 @@
  wolfwalker_resilience_decision_desc:0 "Wolfwalkers have a powerful and mystical body that can easily heal itself when the wolf takes control."
  wolfwalker_resilience_decision_tooltip:0 "I'm healed"
  wolfwalker_resilience_decision_confirm:0 "I'm healed"
+ 
+ #Building decisions
+ call_gladiators_decision:0 "Hire gladiators"
+ call_gladiators_decision_desc:0 "The gladiators fighting in the Coliseum could be used as warriors on the battlefield. I will try to hire some of them to fight for me."
+ call_gladiators_decision_tooltip:0 "Pay them"
+ call_gladiators_decision_confirm:0 "Pay them"
+ gladiators_army:0 "Gladiators"

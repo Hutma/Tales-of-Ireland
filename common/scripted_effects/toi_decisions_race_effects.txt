@@ -161,7 +161,6 @@ celtic_troops_decision_scripted_effect = {
 	spawn_army = {
 		uses_supply = no
 		inheritable = no
-		name = celtic_warband
 		levies = {
 			add = {
 				#Base of 200.
@@ -186,6 +185,7 @@ celtic_troops_decision_scripted_effect = {
 				value = 1
 			}
 		}
-		location = capital_province
+		location = root.capital_province
+		name = celtic_warband
 	}
 }

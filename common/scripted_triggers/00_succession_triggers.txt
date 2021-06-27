@@ -16,9 +16,6 @@ special_succession_city_confederation_trigger = {
 		special_succession_dynastic_elective_trigger = yes
 		special_succession_sumerian_trigger = yes
 	}
-	culture = {
-		NOT = { has_innovation = innovation_kingship }
-	}
 }
 
 special_succession_dynastic_elective_trigger = {
@@ -26,12 +23,7 @@ special_succession_dynastic_elective_trigger = {
 }
 
 historical_succession_access_single_heir_succession_law_trigger = {
-	OR = {
-		has_government = feudal_government
-	}
-	culture = {
-		has_innovation = innovation_kingship
-	}
+	always = no
 }
 
 historical_succession_access_single_heir_succession_law_youngest_trigger = {

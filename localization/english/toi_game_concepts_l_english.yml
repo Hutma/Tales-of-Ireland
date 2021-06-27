@@ -41,6 +41,10 @@
  game_concept_hy_brasylian:0 "Hy-Brasylian"
  game_concept_hy_brasylians:0 "Hy-Brasylians"
  game_concept_hy_brasylians_desc:0 "The [hy_brasylians|E] come from Hy-Brasil, a mysterious island that can only be spotted and reached for a few days every seven years. Their land is said to be fair and bountiful, but overcrowded. Looking for new homes, many Hy-Brasylians have left their island looking for better prospects in Ireland. \n\nThe Hy-Brasylians must fight to establish a foothold on the island which they seek to make their home. Fortunately, they hold special knowledge learned in their homeland that they use to their advantage during battle."
+ 
+ game_concept_latin_human:0 "Latin"
+ game_concept_latin_humans:0 "Latins"
+ game_concept_latin_humans_desc:0 "The [latin_humans|E] come from the continent, around the Mediterranean Sea, they come from a Great Empire known as the Roman Empire. This empire is said to be the greatest of all, of unmatched power."
 
  game_concept_surface_world:0 "Surface World"
  game_concept_surface_world_desc:0 "The [surface_world|E] is Earth, where mortals and non-magical beings live. It is the opposite of the [otherworlds|E], which are mythical and magical places. Sometimes beings of the [otherworlds|E] like to visit the [surface_world|E] and interact with mortals."
