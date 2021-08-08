@@ -226,6 +226,34 @@
 			doctrine = tenet_pacifism
 			doctrine = tenet_animal_worship
 		}
+		iabhism = {
+			color = { 173 255 239 }
+			icon = cainitism
+			
+			doctrine = doctrine_gender_equal
+			
+			holy_site = newgrange
+			holy_site = bere
+			holy_site = first_arrival_bay
+			
+			doctrine = tenet_sanctity_of_nature
+			doctrine = tenet_pacifism
+			doctrine = tenet_unreformed_syncretism
+			
+			
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_pluralism_righteous
+
+
+			doctrine = doctrine_consanguinity_unrestricted
+
+			doctrine = doctrine_homosexuality_crime
+			doctrine = doctrine_adultery_men_crime
+
+			doctrine = doctrine_clerical_function_taxation
+			doctrine = doctrine_clerical_marriage_disallowed
+			doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+		}
 		manx_builders = {
 			color = { 125 90 80 }
 			icon = manx_builders

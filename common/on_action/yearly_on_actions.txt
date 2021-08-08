@@ -585,8 +585,17 @@ on_yearly_events = {
 		200 = 0
 		
 		#TALES OF IRELAND EVENTS
-		50 = sidhe_belief.0001 #Maiden of the Spring
-		50 = sidhe_belief.0003 #A dry spell
+		100 = sidhe_belief.0001 #Maiden of the Spring
+		100 = sidhe_belief.0003 #A dry spell
+		
+		100 = toi_cessarian_event.0001 #Strange boat remains
+		100 = toi_cessarian_event.0003 #Fintán's knowledge
+		100 = toi_cessarian_event.0005 #Vassals efforts for peace
+		100 = toi_cessarian_event.0006 #Dark Days
+		100 = toi_cessarian_event.0007 #A Traditional Gathering
+		100 = toi_cessarian_event.0011 #First Animals
+		
+		100 = toi_fomorian_event.001 #Weak child
 		
 		50 = yearly.0001 	#Skill Tutoring
 		100 = yearly.0002	#Indiscreet Councillor

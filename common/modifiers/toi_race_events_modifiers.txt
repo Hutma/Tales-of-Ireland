@@ -1,0 +1,71 @@
+﻿blessed_cessarian = {
+	icon = piety_positive
+	diplomacy = 2
+	learning = 2
+	religious_vassal_opinion = 15
+}
+
+the_blessed_fleet = {
+	icon = piety_positive
+	embarkation_cost_mult = -0.8
+	naval_movement_speed_mult = 0.6
+	monthly_piety = 0.5
+}
+
+salmon_shape_shift = {
+	icon = magic_positive
+	movement_speed = 0.15
+	naval_movement_speed_mult = 0.15
+	monthly_piety = 0.5
+	diplomacy_per_piety_level = 1
+	martial_per_piety_level = 1
+	stewardship_per_piety_level = 1
+	intrigue_per_piety_level = 1
+	learning_per_piety_level = 1
+	hostile_scheme_resistance_mult = 0.25
+}
+
+peace_effort_1_liege = {
+	icon = prestige_positive
+	vassal_tax_contribution_mult = -0.1
+	vassal_levy_contribution_mult = 0.25
+	monthly_piety = 0.5
+}
+
+peace_effort_2_liege = {
+	icon = prestige_positive
+	levy_size = -0.15
+}
+
+peace_effort_2_vassal = {
+	icon = prestige_positive
+	tax_mult = 0.2
+}
+
+fear_of_flood = {
+	icon = stress_negative
+	stress_gain_mult = 0.5
+	diplomacy_per_stress_level = 1
+	martial_per_stress_level = 1
+	stewardship_per_stress_level = 1
+	intrigue_per_stress_level = 1
+	learning_per_stress_level = 1
+}
+
+cessarian_gathering = {
+	icon = outdoors_positive
+	county_opinion_add = 15
+	general_opinion = 5
+	monthly_prestige = 0.35
+}
+
+prayer_to_balor = {
+	icon = piety_positive
+	martial = 5
+	prowess = 5
+}
+
+prayer_to_balor_root = {
+	icon = martial_positive
+	enemy_hard_casualty_modifier = 0.1
+}

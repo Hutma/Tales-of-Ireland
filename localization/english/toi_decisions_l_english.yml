@@ -151,3 +151,24 @@
  call_gladiators_decision_tooltip:0 "Pay them"
  call_gladiators_decision_confirm:0 "Pay them"
  gladiators_army:0 "Gladiators"
+ 
+ #Ancient kingdoms decisions
+ found_ossory_decision:0 "Found Ossory"
+ found_ossory_decision_desc:0 "I have a strong enough position to found the kingdom of Ossory. Ossory will rise and prosper under my reign."
+ found_ossory_decision_tooltip:0 "Found Ossory"
+ found_ossory_decision_confirm:0 "Found Ossory"
+ 
+ found_breifne_decision:0 "Found Bréifne"
+ found_breifne_decision_desc:0 "I have a strong enough position to found the kingdom of Bréifne. Bréifne will rise and prosper under my reign."
+ found_breifne_decision_tooltip:0 "Found Bréifne"
+ found_breifne_decision_confirm:0 "Found Bréifne"
+ 
+ found_iarmuman_decision:0 "Found Iarmuman"
+ found_iarmuman_decision_desc:0 "I have a strong enough position to found the kingdom of Iarmuman. Iarmuman will rise and prosper under my reign."
+ found_iarmuman_decision_tooltip:0 "Found Iarmuman"
+ found_iarmuman_decision_confirm:0 "Found Iarmuman"
+ 
+ found_airgialla_decision:0 "Found Airgíalla"
+ found_airgialla_decision_desc:0 "I have a strong enough position to found the kingdom of Airgíalla. Airgíalla will rise and prosper under my reign."
+ found_airgialla_decision_tooltip:0 "Found Airgíalla"
+ found_airgialla_decision_confirm:0 "Found Airgíalla"

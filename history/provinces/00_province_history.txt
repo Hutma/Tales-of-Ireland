@@ -86,31 +86,31 @@
 
 5 = {         #Ballylickey (b_ballylickey)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 178 = {       #Glengarriff (b_glengarriff)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 179 = {       #Derrycreha (b_derrycreha)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 180 = {       #Coomhola (b_coomhola)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 181 = {       #Glanbeg (b_glanbeg)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
@@ -118,25 +118,25 @@
 
 7 = {         #Kealkill (b_kealkill)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 182 = {       #Treanamadree (b_treanamadree)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 183 = {       #Dromlickarue (b_dromlickarue)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 184 = {       #Leenane (b_leenane)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
@@ -144,13 +144,13 @@
 
 6 = {         #Bantry (b_bantry)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 185 = {       #Dromsullivan (b_dromsullivan)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
@@ -159,25 +159,25 @@
 
 8 = {         #Ahakista (b_ahakista)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 186 = {       #Coomacullen (b_coomacullen)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 187 = {       #Kilcrohane (b_kilcrohane)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 188 = {       #Rooska (b_rooska)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
@@ -185,31 +185,31 @@
 
 9 = {         #Ballydehob (b_ballydehob)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 189 = {       #Rathruane (b_rathruane)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 190 = {       #Gloun (b_gloun)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 191 = {       #Fortview (b_fortview)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 192 = {       #Ballinvrina (b_ballinvrina)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
@@ -217,31 +217,31 @@
 
 10 = {        #Schull (b_schull)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 193 = {       #Colla (b_colla)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 194 = {       #Corthna (b_corthna)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 195 = {       #Rathoora (b_rathoora)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 196 = {       #Kilbronogue (b_kilbronogue)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
@@ -249,25 +249,25 @@
 
 11 = {        #Goleen (b_goleen)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = castle_holding
 }
 
 197 = {       #Shiplake (b_shiplake)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = church_holding
 }
 
 198 = {       #Durod (b_durod)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 
 199 = {       #Toormore (b_toormore)
               culture = cessair_descendants
-              religion = first_men
+              religion = iabhism
               holding = none
 }
 

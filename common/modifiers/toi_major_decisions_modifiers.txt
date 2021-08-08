@@ -68,3 +68,10 @@ roman_road_modifier = {
 	development_growth_factor = 0.2
 	supply_capacity_mult = 0.5
 }
+
+ancient_kingdom_founder = {
+icon = prestige_positive
+	monthly_dynasty_prestige_mult = 0.15
+	powerful_vassal_opinion = 10
+	monthly_county_control_change_add = 0.2
+}

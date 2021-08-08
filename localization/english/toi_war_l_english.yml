@@ -4,7 +4,7 @@
  TO_NEW_LAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  UNITE_IRELAND_CB_NAME:0 "Impose your law on [DEFENDER.GetShortUIName]"
- UNITE_IRELAND_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Impose your law on [DEFENDER.GetShortUIName]"
+ UNITE_IRELAND_WAR_NAME:0 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] war to impose its law on [DEFENDER.GetShortUIName]"
  UNITE_IRELAND_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  cattle_raiding_cb_desc:0 "We can declare war on our neighbour to seize their wealth and cattle. If we win we will take one third of the cattle from the counties directly directly under this ruler's control."
@@ -30,7 +30,7 @@
  
  land_for_son_cb_victory_desc_attacker:0 "If you win the war an event will allow you to chose which son gets the land and the titles."
  LAND_SON_CB_NAME:0 "Get land for Son"
- LAND_SON_WAR_NAME:0 "$ORDER$ [attacker.GetShortUIName|U]'s land conquest for his son in [DEFENDER.GetShortUIName]"
+ LAND_SON_WAR_NAME:0 "$ORDER$ [ATTACKER.GetShortUIName|U]'s land conquest for his son in [DEFENDER.GetShortUIName]"
  LAND_SON_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  PURIFICATION_CB_NAME:0 "Purify County"

@@ -341,3 +341,35 @@ e_meath = {
 		texture = "e_meath_coa.dds"
 	}
 }
+
+k_ossory = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_ossory.dds"
+	}
+}
+
+k_breifne = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_breifne.dds"
+	}
+}
+
+k_iarmuman = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_iarmuman.dds"
+	}
+}
+
+k_airgialla = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_airgialla.dds"
+	}
+}

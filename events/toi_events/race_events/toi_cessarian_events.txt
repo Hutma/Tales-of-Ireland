@@ -1,0 +1,537 @@
+﻿namespace = toi_cessarian_event
+
+toi_cessarian_event.0001 = {
+	title = toi_cessarian_event.0001.t
+	desc = toi_cessarian_event.0001.desc
+	theme = faith
+	override_background = {
+		event_background = fp1_beached_longships
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		AND = {
+			OR = {
+				has_trait = cessarian
+				faith = faith:first_men
+				faith = faith:cult_of_life
+				faith = faith:iabhism
+			}
+			highest_held_title_tier >= 2
+			any_sub_realm_county = {
+				is_coastal_county = yes
+			}
+			NOT = {
+				OR = {
+					has_character_modifier = the_blessed_fleet
+					has_character_modifier = blessed_cessarian
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0001.a
+		random_list = {
+			60 = {
+				trigger_event = {
+					id = toi_cessarian_event.0002
+					days = 5
+				}
+			}
+			40 = {
+				add_character_modifier = {
+					modifier = blessed_cessarian
+					years = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0001.b
+		add_gold = 50
+	}
+}
+
+toi_cessarian_event.0002 = {
+	title = toi_cessarian_event.0002.t
+	desc = toi_cessarian_event.0002.desc
+	theme = faith
+	override_background = {
+		event_background = fp1_beached_longships
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = {
+		root.realm_priest = {
+			save_scope_as = realm_priest
+		}
+		root.capital_county = {
+			save_scope_as = capital_county_loc
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0002.a
+		every_county_in_region = {
+			region = ireland_region
+			limit = {
+				is_coastal_county = yes
+			}
+			add_to_list = coastal_counties
+		}
+		random_in_list = {
+			list = coastal_counties
+			save_scope_as = claimed_county
+		}
+		scope:claimed_county.duchy = {
+			save_scope_as = claimed_duchy
+		}
+		add_pressed_claim = scope:claimed_county
+		add_pressed_claim = scope:claimed_duchy
+		add_character_modifier = {
+			modifier = the_blessed_fleet
+			years = 7
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0002.b
+		add_gold = 150
+		add_piety = -75
+		add_opinion = {
+			target = root.realm_priest
+			modifier = insulted_opinion
+		}
+	}
+}
+
+toi_cessarian_event.0003 = {
+	title = toi_cessarian_event.0003.t
+	desc = toi_cessarian_event.0003.desc
+	theme = faith
+	override_background = {
+		event_background = wilderness
+	}
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		AND = {
+			has_trait = cessarian
+			highest_held_title_tier >= 2
+			NOT = {
+				has_character_modifier = fear_of_flood
+			}
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0003.a
+		duel = {
+			skill = learning
+			value = decent_skill_rating
+			10 = {
+				desc = toi_cessarian_event.0003.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_cessarian_event.0003.a.success
+					trigger_event = {
+						id = toi_cessarian_event.0004
+						days = { 5 10 }
+					}
+				}
+			}
+			5 = {
+				desc = toi_cessarian_event.0003.a.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_cessarian_event.0003.a.failure
+				}
+			}
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0003.b
+		trigger = {
+			piety_level >= 3
+		}
+		trigger_event = {
+			id = toi_cessarian_event.0004
+			days = { 5 10 }
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0003.c
+	}
+}
+
+toi_cessarian_event.0004 = {
+	title = toi_cessarian_event.0004.t
+	desc = toi_cessarian_event.0004.desc
+	theme = faith
+	override_background = {
+		event_background = wilderness
+	}
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	option = {
+		name = toi_cessarian_event.0004.a
+		add_character_modifier = {
+			modifier = salmon_shape_shift
+		}
+	}
+}
+
+toi_cessarian_event.0005 = {
+	title = toi_cessarian_event.0005.t
+	desc = toi_cessarian_event.0005.desc
+	theme = vassal
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	lower_left_portrait = {
+		character = scope:vassal_01
+		animation = personality_rational
+	}
+	
+	lower_right_portrait = {
+		character = scope:vassal_02
+		animation = personality_rational
+	}
+	
+	trigger  = {
+		OR = { 
+			has_trait = cessarian
+			has_culture_group = culture_group:toi_cessarian_group
+		}
+		is_independent = yes
+		highest_held_title_tier >= 3
+		any_vassal = {
+			count >= 2
+		}
+		NOT = {
+			OR = {
+				has_character_modifier = peace_effort_1_liege
+				has_character_modifier = peace_effort_2_liege
+			}
+		}
+	}
+	
+	immediate = {
+		every_vassal = {
+			limit = {
+				is_powerful_vassal = yes
+			}
+			add_to_list = powerful_vassals
+		}
+		random_in_list = {
+			list = powerful_vassals
+			save_scope_as = vassal_01
+		}
+		scope:vassal_01 = {
+			remove_from_list = powerful_vassals
+		}
+		random_in_list = {
+			list = powerful_vassals
+			save_scope_as = vassal_02
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0005.a
+		add_opinion = {
+			modifier = refusal_opinion
+			target = scope:vassal_02
+			opinion = -20
+		}
+		add_character_modifier = {
+			modifier = peace_effort_1_liege
+			years = 15
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0005.b
+		add_opinion = {
+			modifier = refusal_opinion
+			target = scope:vassal_01
+			opinion = -20
+		}
+		add_character_modifier = {
+			modifier = peace_effort_2_liege
+			years = 15
+		}
+		every_vassal = {
+			add_character_modifier = {
+				modifier = peace_effort_2_vassal
+				years = 15
+			}
+		}
+	}
+	option = {
+		name = toi_cessarian_event.0005.c	
+		add_prestige = -75
+	}
+}
+
+toi_cessarian_event.0006 = {
+	title = toi_cessarian_event.0006.t
+	desc = toi_cessarian_event.0006.desc
+	theme = intrigue
+
+	left_portrait = {
+		character = root
+		animation = stress
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = cessarian
+			faith = faith:iabhism
+			faith = faith:first_men
+			faith = faith:cult_of_life
+		}
+		NOT = {
+			has_character_modifier = fear_of_flood
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0006.a
+		add_stress = 45
+		add_character_modifier = {
+			modifier = fear_of_flood
+			years = 2
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0006.b
+		add_piety = -100
+		add_character_modifier = {
+			modifier = fear_of_flood
+			years = 2
+		}
+	}
+}
+
+toi_cessarian_event.0007 = {
+	title = toi_cessarian_event.0007.t
+	desc = toi_cessarian_event.0007.desc
+	theme = stewardship_domain_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = cessarian
+			culture_group = culture_group:toi_cessarian_group
+		}
+		NOT = {
+			has_character_flag = recent_gathering
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0007.a
+		add_gold = -25
+		capital_county = {
+			change_development_level = -5
+		}
+		add_character_flag = {
+			flag = recent_gathering
+			years = 20
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						add = 40
+						AND = {
+							diplomacy > 10
+							stewardship > 10
+						}
+					}
+					modifier = {
+						add = 35
+						diplomacy > 12
+					}
+					modifier = {
+						add = 35
+						stewardship > 12
+					}
+					trigger_event = {
+						id = toi_cessarian_event.0008
+						days = { 2 7 }
+					}
+				}
+				50 = {
+					modifier = {
+						add = 20
+						AND = {
+							diplomacy > 5
+							stewardship > 5
+						}
+					}
+					modifier = {
+						add = 20
+						diplomacy > 8
+					}
+					modifier = {
+						add = 20
+						stewardship > 8
+					}
+					trigger_event = {
+						id = toi_cessarian_event.0009
+						days = { 2 7 }
+					}
+				}
+				50 = {
+					trigger_event = {
+						id = toi_cessarian_event.0010
+						days = { 2 7 }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0007.b
+		add_piety = -100
+	}
+}
+
+toi_cessarian_event.0008 = {
+	title = toi_cessarian_event.0008.t
+	desc = toi_cessarian_event.0008.desc
+	theme = feast_activity
+
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+	
+	option = {
+		name = toi_cessarian_event.0008.a
+		every_independent_ruler = {
+			limit = {
+				highest_held_title_tier >= 4
+			}
+			add_opinion = {
+				modifier = feast_hosted_successful_feast
+			}
+		}
+		add_prestige = 300
+		add_character_modifier = {
+			modifier = cessarian_gathering
+			years = 15
+		}
+	}
+}
+
+toi_cessarian_event.0009 = {
+	title = toi_cessarian_event.0009.t
+	desc = toi_cessarian_event.0009.desc
+	theme = feast_activity
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	option = {
+		name = toi_cessarian_event.0009.a
+		every_independent_ruler = {
+			limit = {
+				highest_held_title_tier >= 4
+			}
+			add_opinion = {
+				modifier = feast_hosted_successful_feast
+			}
+		}
+		add_prestige = 200
+		add_character_modifier = {
+			modifier = cessarian_gathering
+			years = 5
+		}
+	}
+}
+
+toi_cessarian_event.0010 = {
+	title = toi_cessarian_event.0010.t
+	desc = toi_cessarian_event.0010.desc
+	theme = feast_activity
+
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	
+	option = {
+		name = toi_cessarian_event.0010.a
+		every_independent_ruler = {
+			limit = {
+				highest_held_title_tier >= 4
+			}
+			add_opinion = {
+				modifier = disorganized_feast_opinion
+			}
+		}
+		add_prestige = -100
+		add_piety = -100
+	}
+}
+
+toi_cessarian_event.0011 = {
+	title = toi_cessarian_event.0011.t
+	desc = toi_cessarian_event.0011.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = cessarian
+			culture_group = culture_group:toi_cessarian_group
+			highest_held_title_tier >= 3
+		}
+	}
+	
+	option = {
+		name = toi_cessarian_event.0011.a
+		capital_county = {
+			change_development_level = 8
+		}
+		add_piety = 100
+	}
+	
+	option = {
+		name = toi_cessarian_event.0011.b
+		add_gold = 125
+		add_piety = -100
+	}
+}

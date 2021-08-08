@@ -25,7 +25,7 @@
 100001 = {
     name = "Bith"
     dynasty =  2 
-    religion = first_men
+    religion = iabhism
     culture = cessair_descendants
 
     diplomacy =  10 
@@ -49,7 +49,7 @@
 100002 = {
     name = "Ladra"
     dynasty =  3 
-    religion = first_men
+    religion = iabhism
     culture = cessair_descendants
 
     diplomacy =  1 
@@ -73,7 +73,7 @@
 100003 = {
     name = "Cessair"
     dynasty =  4 
-    religion = first_men
+    religion = iabhism
     culture = cessair_descendants
     female = yes
 
@@ -122,7 +122,7 @@
 100005 = {
     name = "Congal"
     dynasty =  6 
-    religion = first_men
+    religion = iabhism
     culture = cessair_descendants
 
     diplomacy =  9 

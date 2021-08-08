@@ -1,0 +1,174 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+#save_var_scope_effect - To check for a variable saved scope and save it as a scope
+
+#####################################################################
+# EFFECTS
+#####################################################################
+
+founded_ossory_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_ossory = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+
+	hidden_effect = {
+		title:d_iverk = { set_de_jure_liege_title = title:k_ossory }
+		title:d_knocktopher = { set_de_jure_liege_title = title:k_ossory }
+		title:d_callan = { set_de_jure_liege_title = title:k_ossory }
+		title:d_crannagh = { set_de_jure_liege_title = title:k_ossory }
+		title:d_galmoy = { set_de_jure_liege_title = title:k_ossory }
+		title:d_clarmallagh = { set_de_jure_liege_title = title:k_ossory }
+		title:d_clandonagh = { set_de_jure_liege_title = title:k_ossory }
+		if = {	#If owned, annex ida
+			limit = {
+				OR = {
+					title:d_ida = { holder = root }
+					title:d_ida = { holder.liege = root }
+				}
+			}
+			title:d_ida = { set_de_jure_liege_title = title:k_ossory }
+		}
+		if = {	
+			limit = {
+				OR = {
+					title:d_upper_woods = { holder = root }
+					title:d_upper_woods = { holder.liege = root }
+				}
+			}
+			title:d_upper_woods = { set_de_jure_liege_title = title:k_ossory }
+		}
+		if = {	
+			limit = {
+				OR = {
+					title:d_portlaoise = { holder = root }
+					title:d_portlaoise = { holder.liege = root }
+				}
+			}
+			title:d_portlaoise = { set_de_jure_liege_title = title:k_ossory }
+		}
+	}
+	
+	title:c_kilkenny = {
+		# Give it an extra building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = medium_development_level_gain
+	}
+}
+
+founded_breifne_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_breifne = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	
+	title:k_leitrim = {
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_duchy
+			}
+			set_de_jure_liege_title = title:k_breifne
+		}
+	}
+	title:k_cavan = {
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_duchy
+			}
+			set_de_jure_liege_title = title:k_breifne
+		}
+	}
+	
+	destroy_title = title:k_leitrim
+	destroy_title = title:k_cavan
+	
+	root.capital_county = {
+		# Give it an extra building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = medium_development_level_gain
+	}
+}
+
+founded_iarmuman_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_iarmuman = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+
+	hidden_effect = {
+		title:d_clangibbon = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_iffa = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_coshmore = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_kinnatallon = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_omkilly = { set_de_jure_liege_title = title:k_iarmuman }
+	}
+	
+	title:c_monatrim = {
+		# Give it an extra building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = medium_development_level_gain
+	}
+}
+
+founded_airgialla_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_airgialla = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+
+	hidden_effect = {
+		title:d_oneilland = { set_de_jure_liege_title = title:k_airgialla }
+		title:d_dungannon = { set_de_jure_liege_title = title:k_airgialla }
+		title:d_moira = { set_de_jure_liege_title = title:k_airgialla }
+	}
+	
+	title:c_portadown = {
+		# Give it an extra building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = medium_development_level_gain
+	}
+}

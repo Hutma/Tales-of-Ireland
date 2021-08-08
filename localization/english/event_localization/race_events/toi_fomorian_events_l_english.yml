@@ -1,0 +1,13 @@
+﻿l_english:
+ toi_fomorian_event.0001.t: "A Weak-hearted Child"
+ toi_fomorian_event.0001.desc: "My child has grown into an embarrassment. [weak_child.GetFirstName] has proven [weak_child.GetHerselfHimself] to be soft and weak-hearted, a disgrace to our proud line. A few days ago, I caught [weak_child.GetHerHim] sharing [weak_child.GetHerHis] food with a filthy slave, mindless of [weak_child.GetHerHis] superior station. When [weak_child.GetSheHe] attended last week’s council, my decision to soon extract the Fomorian tribute from our heathen vassals did not please [weak_child.GetHerHim] as it should either. [weak_child.GetSheHe] loudly opposed me, and called this ancient tradition a disgusting and barbaric practice in front of all the council members. \n\nPunishment was of course swift after this humiliating display, but I will need to find a more lasting solution. [weak_child.GetFirstName] is tarnishing our family name, and this cannot be allowed to continue."
+ toi_fomorian_event.0001.a: "I will make him see the true ways of our ancestors."
+ toi_fomorian_event.0001.b: "He doesn't belong here..."
+ toi_fomorian_event.0001.c: "It’s just a phase. It will pass."
+ toi_fomorian_event.0001.d: "I will end this. Permanently."
+ 
+ toi_fomorian_event.0002.t: "Gathering of Balor"
+ toi_fomorian_event.0002.desc: "Our mighty ancestors are revered by our people, and the great Balor was among the mightiest of them all. He led his conquering armies through Ireland, dominating all the weaker peoples he came across. Only through cowardice was he eventually defeated, shot in his burning eye by the accursed heathen Lugh. No one could withstand Balor in direct combat, and so we pray to him for strength in battle.\n\nToday, Balor heard our pleas. When our druid lifted his voice to begin the communal prayer, a strange air seemed to come over him. Halting mid-word, his eyes suddenly rolled back, and his body started shaking violently. When his sight at last returned, he looked at us with the red eyes of Balor. Our ancestor had whispered words of war and glory into his mind, and the druid eagerly shared them with us."
+ toi_fomorian_event.0002.a: "To battle!"
+ toi_fomorian_event.0002.b: "If we sacrifice our best cattle, Balor might visit us again."
+ toi_fomorian_event.0002.b.fail: "It did not work"

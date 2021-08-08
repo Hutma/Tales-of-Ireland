@@ -1,4 +1,16 @@
 ﻿l_english:
- befriend_ongoing.0901.t:0 ": What Could Have Been"
- befriend_ongoing.0901.desc:0 "I have received some shocking news. [target.Custom2('MyCharacterIntroductionNoComma', ROOT.Char)|U] has passed away.\n\nAs fate would have it, I will never get to enjoy [target.GetHerHis] friendship."
- befriend_ongoing.0901.a:0 "The world is harsh and sudden."
+ force_cattle_trade.0001.t:0 ""
+ force_cattle_trade.0001.desc:0 "What a beautiful day. Just as I planned, my target and I spent the afternoon discussing a potential trade of his cattle in exchange for my gold. We both had a very enjoyable time together, and I successfully convinced [name of target] that trading his cattle would be advantageous to us both. I manipulated him flawlessly, so when we went out to his farms and pastures at the end of the day, he had only one question: ‘How many of them would you like to buy?’"
+ force_cattle_trade.0001.a:0 ""
+ 
+ force_cattle_trade.0002.t:0 ""
+ force_cattle_trade.0002.desc:0 "Everything went wrong! I met [name of target] today to make him consider my cattle trade proposition. He seemed very receptive to the idea, and I was tricked into thinking that all would go according to plan. However, when the day came to an end and I offered to settle matters, it appeared that I had been fooled. [name of target] mocked me, and said: ‘Do you really think I would be so stupid as to trade even one cow from my magnificent herd to you?’"
+ force_cattle_trade.0002.a:0 ""
+ 
+ force_cattle_trade.0003.t:0 ""
+ force_cattle_trade.0003.desc:0 "What a beautiful day. My guest and I spent all our time in pleasant conversation, getting along splendidly. I was in dire need of a peaceful day like this, and [name of guest] made it even better by coming up with a great arrangement. He proposed to trade some of my cattle in exchange for his gold, which would benefit us both. We bartered, and then drank to a successful trade. After exchanging cattle for gold, I bade my guest a safe journey and he went on his way again."
+ force_cattle_trade.0003.a:0 ""
+ 
+ force_cattle_trade.0004.t:0 ""
+ force_cattle_trade.0004.desc:0 "The filthy rat [name of schemer] tried to convince me to trade some of my most prized and productive cattle for gold. With flattering words and false compliments, he tried to wheedle a deal out of me. The miserable sycophant must have thought me too stupid to see through his fawning. I sent [name of schemer] on his way, and warned him not to come back."
+ force_cattle_trade.0004.a:0 ""

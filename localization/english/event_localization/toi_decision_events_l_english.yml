@@ -60,3 +60,12 @@
  toi_decisions.018.t:0 "Bad Omen"
  toi_decisions.018.desc:0 "The offering is complete. We waited… and waited… and it became clear nothing would happen. There are no Sidhe to heed our call, and no blessing for us to receive. Some cry out in anguish. Have the Sidhe abandoned us, or were they insulted by my offering?\n\nOur bond with the spirits broken, we return to our homes in despair.\n\nOur livestock are sick, our buildings crumble, and the druids see only ruin in the future."
  toi_decisions.018.a:0 "A large sacrifice will show my devotion."
+ 
+ #Found kingdom
+ toi_ancient_kingdom_formed.0001.t:0 "The Founder of [kingdom_founded.GetName]"
+ toi_ancient_kingdom_formed.0001.desc:0 "The work of many years has finally been rewarded. I have founded the kingdom of [kingdom_founded.GetName], uniting my formerly divided subjects under a single banner. This achievement will lend its radiance to my dynasty for generations to come, and ensure its bright and glorious future.\n\nThe news has travelled far beyond our borders, reaching ears both high and low. Many new allies have sent their envoys to treat with us, and existing ones have sought to strengthen our bonds of friendship. Still, our vigilance cannot waver. Many new rivals and would-be usurpers have also risen from the shadows, ready to strike at the first sign of weakness. I will stand ready to defend my realm against any who would threaten it, and will lead my newly united people to greatness and prosperity."
+ toi_ancient_kingdom_formed.0001.a:0 "I have carved out my place, both in this world, and in the tales of history."
+ 
+ toi_ancient_kingdom_formed.0002.t:0 "[kingdom_founded.GetName] Rises"
+ toi_ancient_kingdom_formed.0002.desc:0 "[founder.GetFullName] has succeeded where many others have failed. Exerting his great power and influence, he founded the kingdom of [kingdom_founded.GetName], where its formerly divided inhabitants will now live united under his rule. This monumental achievement will attract many new allies to his side, but jealous rivals will be lurking in the shadows as well. Will this new kingdom endure and its people thrive? Or will it fall into the hands of those who would destroy it?"
+ toi_ancient_kingdom_formed.0002.a:0 "A new kingdom has emerged. For now."

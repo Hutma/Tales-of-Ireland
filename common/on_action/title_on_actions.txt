@@ -233,9 +233,6 @@ on_title_gain_inheritance = {
 		if = {
 			limit = {
 				AND = {
-					scope:title = {
-						has_law = ancient_partition_succession_law
-					}
 					root = {
 						has_character_flag = independent_when_died
 					}
@@ -256,9 +253,6 @@ on_title_gain_inheritance = {
 		if = {
 			limit = {
 				AND = {
-					scope:title = {
-						has_law = ancient_partition_succession_law
-					}
 					root = {
 						has_character_flag = not_independent_when_died
 					}

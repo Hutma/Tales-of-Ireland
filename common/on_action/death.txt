@@ -7,7 +7,10 @@ on_death = {
 ##TALES OF IRELAND
 		if = {
 			limit = {
-				is_independent_ruler = yes
+				AND = {
+					is_independent_ruler = yes
+					has_realm_law = ancient_partition_succession_law
+				}
 			}
 			every_heir = {
 				add_character_flag = {
@@ -17,17 +20,25 @@ on_death = {
 			}
 		}
 		else = {
-			every_heir = {
-				add_character_flag = {
-					flag = not_independent_when_died
-					days = 25
+			if = {
+				limit = {
+					has_realm_law = ancient_partition_succession_law
+				}
+				every_heir = {
+					add_character_flag = {
+						flag = not_independent_when_died
+						days = 25
+					}
 				}
 			}
 			if = {
 				limit = {
-					any_held_title = {
-						count > 1
-						this.tier = root.highest_held_title_tier
+					AND = {
+						any_held_title = {
+							count > 1
+							this.tier = root.highest_held_title_tier
+						}
+						has_realm_law = ancient_partition_succession_law
 					}
 				}
 				every_heir = {

@@ -70,7 +70,18 @@ e_munster = {
 			}
 		}
 
-		capital = c_cork
+		capital = c_bantry
+	}
+	
+	k_iarmuman = {
+		color = { 233 87 126 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+
+		}
+
+		capital = c_monatrim
 	}
 	
 	k_cork = {
@@ -14244,6 +14255,28 @@ e_ulster = {
 
 	}
 	
+	k_breifne = {
+		color = { 194 233 87 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			
+		}
+
+		capital = c_leitrim
+	}
+	
+	k_airgialla = {
+		color = { 116 87 233 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+
+		}
+
+		capital = c_portadown
+	}
+	
 	k_donegal = {
 		color = { 5 5 100 }
 		color2 = { 255 255 255 }
@@ -23646,6 +23679,17 @@ e_leinster = {
 		}
 
 		capital = c_castlepollard
+	}
+	
+	k_ossory = {
+		color = { 61 76 88 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+
+		}
+
+		capital = c_kilkenny
 	}
 	
 	k_louth = {

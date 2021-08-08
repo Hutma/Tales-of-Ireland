@@ -1,0 +1,57 @@
+﻿l_english:
+ toi_cessarian_event.0001.t: "Strange boat remains"
+ toi_cessarian_event.0001.desc: "Today, I took a walk on the beach to calm my nerves, as governing has gotten difficult lately. As I was walking, a piece of wood , visibly dry, washes up on shore. As I investigate, I notice that a water line appears perfectly where the wood touched the ocean. As I heft it, it seems much lighter than any wood I have felt before. An odd material indeed."
+ toi_cessarian_event.0001.a: "This is clearly a sign from [ROOT.Char.GetFaith.HighGodName], I shall pray for his blessings."
+ toi_cessarian_event.0001.b: "Sounds like a material merchants would pay well for!"
+ 
+ toi_cessarian_event.0002.t: "The blessed fleet"
+ toi_cessarian_event.0002.desc: "Not long after prayer, another plank washes ashore. As I inspect it, finding it the same mysterious wood as before, something touches my feet. I look out towards the ocean to find the blue seas turned a light brown, as thousands of planks wash ashore, each with the same qualities. I call for [realm_priest.GetFirstName], as another opinion is vita when determining divine intent. He inspects the wood for hours, cutting it, hammering nails into it, sanding the wood down, and every other test imaginable to the wood. He determines that this wood had been granted by [ROOT.Char.GetFaith.HighGodName], and would be perfect for a blessed fleet."
+ toi_cessarian_event.0002.a: "[ROOT.Char.GetFaith.HighGodName] has my faith, and I will heed his call."
+ toi_cessarian_event.0002.b: "This would bring a massive profit in [capital_county_loc.GetBaseName] square."
+ 
+ toi_cessarian_event.0003.t: "Fintán's knowledge"
+ toi_cessarian_event.0003.desc: "It is vital to ensure a continuous supply of fish to my domain, and I personally visit the fishermen to inspect their catch each month. This time, however, something strange interrupts the ride to the coast. As I travel along the riverbank, my attention is suddenly caught by the sound of a voice calling out, bidding me to come closer. I halt and look around warily for its source, instantly prepared to either fight or flee the area. \n\n“Come, come closer to the river” the voice repeats. Without truly knowing why, I follow its command and approach the river. There, I find a truly magnificent salmon of enormous size, looking at me from the water. It immediately brings the old myths to mind, which tell of how our ancestors survived the Great Flood by assuming the shape of a salmon. The truth in these old tales is confirmed to me at once when the salmon reveals its true form, turning into a woman before my eyes. Could this power perhaps be learned? Or better yet, controlled?"
+ toi_cessarian_event.0003.a: "I will attempt to learn the secrets of our ancestors."
+ toi_cessarian_event.0003.b: "My vast knowledge of the old myths will surely help me learn this skill."
+ toi_cessarian_event.0003.c: "I should not dabble in ancient magic."
+ toi_cessarian_event.0003.a.success: "I learn how to turn into a salmon"
+ tooltip.toi_cessarian_event.0003.a.success: "I learn how to turn into a salmon"
+ toi_cessarian_event.0003.a.failure: "I fail to learn this power"
+ tooltip.toi_cessarian_event.0003.a.failure: "I have failed to learn"
+ 
+ toi_cessarian_event.0004.t: "The Power of Fintán the Cessarian"
+ toi_cessarian_event.0004.desc: "Weeks have passed since I first started to study the secrets of Fintan the Wise, guided by the mysterious woman from the river. Now, the time has finally come to make a first attempt at changing my shape into that of a salmon. The dangers are great and many, but my mentor will be watching me closely during this process.\n\nClosing my eyes, I try to focus my mind like my mentor has taught me, and slowly but surely I feel...something in my body change. But as soon as I open my eyes slightly to see the effects at work, my focus is lost and everything snaps back. \n\nI do not have any success again that day, nor in the days after. As my frustration grows, I start praying fervently to the spirits of nature for their support. Their aid is what enables me to complete the full transformation at last, and I rejoice in the feeling of liberty that moving through the water grants me. In this new shape, my increased closeness to nature allows me to commune with the spirits that inhabit it, and to receive their counsel. As time seems to pass far slower while transformed, this ability also allows me to think more deeply about the challenges my domain faces, and come to wiser decisions."
+ toi_cessarian_event.0004.a: "What a great accomplishment"
+ 
+ toi_cessarian_event.0005.t: "Vassals efforts for peace"
+ toi_cessarian_event.0005.desc: "I have called my most influential vassals to gather at my ringfort, intending to discuss improvements to the stability of the realm and the safeguarding of our peace. Their domains are the largest in my territory, and their voices therefore carry weight. Our council lasts long into the night, at times growing heated, but two different proposals eventually take shape. As their liege, it falls to me to make the final decision."
+ toi_cessarian_event.0005.a: "[vassal_01.GetFullName]'s suggestions have always proven wise"
+ toi_cessarian_event.0005.b: "[vassal_02.GetFullName]'s proposal is clearly superior "
+ toi_cessarian_event.0005.c: " This council has evidently been a mistake"
+ 
+ toi_cessarian_event.0006.t: "Dark Days"
+ toi_cessarian_event.0006.desc: "What time is it? It's difficult to tell, endless rain and dark clouds have blurred the line between day and night. I'm unable to sleep with the howling wind, constant lightning is frightening both child and adult, and coastal settlements have been battered by tides.\n\nThe elders told me how Cessair, mother of us all, came to this land to escape a great flood, and her followers turned into salmons to survive. Could another deluge be coming for us?"
+ toi_cessarian_event.0006.a: "Will these dark days ever end?"
+ toi_cessarian_event.0006.b: "Are we being punished for our sins?"
+ 
+ toi_cessarian_event.0007.t: "A Traditional Gathering"
+ toi_cessarian_event.0007.desc: "Conforming to traditional Cessarian culture, it would be expected to hold hospitable gatherings every so often. Solely monarchs following our ways will receive an invitation to our capitals ringfort, spending a noctidial period within our walls. An event to both impress and, if possible, hold the fragile peace between our realms."
+ toi_cessarian_event.0007.a: " Let us send the invitations, tidy the ringfort, make it spotless."
+ toi_cessarian_event.0007.b: "Such antiquated traditions are entirely pointless."
+ 
+ toi_cessarian_event.0008.t: "A Great Gathering"
+ toi_cessarian_event.0008.desc: "After the invitation was sent out, numerous Rí sent back letters of joy regarding the holding of the ceremony. During the event, our traditions were observed without fail, and all grudges were left behind. With the best musicians playing, cultural games won and lost, food deliciously prepared, the guests were joyous and celebratory. This event will be lauded for years to come."
+ toi_cessarian_event.0008.a: "Our nation rejoices at this event!"
+ 
+ toi_cessarian_event.0009.t: "A Good Gathering"
+ toi_cessarian_event.0009.desc: "Since the dawn of time, we have been squabbling and warring amongst each other over every triviality and difference that sets us apart from our neighbors, content in our eternal feuds and grudges. Thankfully, by every grace, our feast has calmed passions and soothed angers across Ireland – though not quite perfectly. While a real peace failed to materialize, rivals and allies alike kept decorum and delighted in our impressive hospitality; perhaps this gathering will serve as a stepping stone towards that same harmony that as of yet remains barely out of reach. Indeed, two of the Rí have even become friends – a grand outcome!"
+ toi_cessarian_event.0009.a: "Next time, hopefully, we can go even further."
+ 
+ toi_cessarian_event.0010.t: "A Failed Gathering"
+ toi_cessarian_event.0010.desc: "This gathering should have let us forget our troubles, if only for a while. Yet no later than the guests arrived did old tensions flare up. The conversations were plagued by disputes, claimants and rivalries. Even the games quickly became an excuse to show off.\n\nHalfway through the gathering, a fight broke out. We had all left our weapons outside, but the rivals are going home with injury and animosity. The other guests quickly left too, before any new wars could start.\n\nThis was no gathering, merely a cruel mockery of our traditions..."
+ toi_cessarian_event.0010.a: "Have they forgotten the value of peace brought by Cessair?"
+ 
+ toi_cessarian_event.0011.t: "First Animals"
+ toi_cessarian_event.0011.desc: "Wandering around my ringfort's interior, I suddenly hear a thumping sound resonate through the large oaken front door, followed by a loud voice “Rí, Rí! We need you out here!”. Fearing the worst, I hastily move towards the front of the fort.\n\nGasping as I swing the front door open, a farmer leading a small group addresses me directly. “My Rí, come with us; there's a large number of animals in the woods, it's a sign from the [ROOT.Char.GetFaith.HighGodName], it's a blessing for our pious acts”.\n\nArriving at the nearby woodlands we see small groups of animals primarily in pairs, with young calves and lambs by their side. \n\nAre these the last remaining creatures from Noah's Arc, is it a blessing by our ancestors?"
+ toi_cessarian_event.0011.a: "They'll be added to our herds, and our lands will prosper!"
+ toi_cessarian_event.0011.b: "A blessing or not, they're worth far more in gold!"

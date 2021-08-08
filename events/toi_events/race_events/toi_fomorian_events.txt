@@ -1,0 +1,183 @@
+﻿namespace = toi_fomorian_event
+
+toi_fomorian_event.0001 = {
+	title = toi_fomorian_event.0001.t
+	desc = toi_fomorian_event.0001.desc
+	theme = dread
+
+	left_portrait = {
+		character = root
+		animation = dismissal
+	}
+	
+	right_portrait = {
+		character = scope:weak_child
+		animation = shame
+	}
+	
+	immediate = {
+		any_child = {
+			is_courtier_of = root
+			has_trait = compassionate
+			save_scope_as = weak_child
+		}
+	}
+	
+	trigger = {
+		AND = {
+			OR = {
+				has_trait = fomorian
+				religion = religion:dark_knowledge_legacy_religion
+			}
+			highest_held_title_tier >= 2
+			any_child = {
+				is_courtier_of = root
+				has_trait = compassionate
+			}
+			OR = {
+				NOT = {
+					OR = {
+						has_trait = compassionate
+						has_trait = calm
+						has_trait = content
+						has_trait = forgiving
+					}
+				}
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = zealous
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_fomorian_event.0001.a
+		scope:weak_child = {
+			remove_trait = compassionate
+			random_list = {
+				50 = {
+					add_trait = callous
+				}
+				50 = {
+					add_trait = sadistic
+				}
+			}
+			add_stress = 75
+		}
+		add_piety = 100
+		ai_chance = {
+			base = 40
+		}
+	}
+	option = {
+		name = toi_fomorian_event.0001.b
+		scope:weak_child = { move_to_pool = yes }
+		scope:weak_child = { add_trait = disinherited }
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		name = toi_fomorian_event.0001.c
+		add_piety = -150
+		add_prestige = -50
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = toi_fomorian_event.0001.d
+		death = {
+			killer = root
+			death_reason = death_vanished
+		}
+		add_piety = 50
+		if = {
+			NOT = {
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			add_stress = 75
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+toi_fomorian_event.0002 = {
+	title = toi_fomorian_event.0002.t
+	desc = toi_fomorian_event.0002.desc
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	trigger = {
+		has_trait = fomorian
+		is_independent_ruler = yes
+	}
+	
+	option = {
+		name = toi_fomorian_event.0002.a
+		add_character_modifier = {
+			modifier = prayer_to_balor_root
+			years = 15
+		}
+		root.realm_priest = {
+			add_character_modifier = {
+				modifier = prayer_to_balor
+				years = 15
+			}
+		}
+	}
+	option = {
+		name = toi_fomorian_event.0002.b
+		root.realm_priest = {
+			add_character_modifier = {
+				modifier = prayer_to_balor
+				years = 15
+			}
+		}
+		random_list = {
+			50 = {
+				capital_county = {
+					change_development_level = -3
+				}
+			}
+			50 = {
+				capital_county = {
+					change_development_level = -4
+				}
+			}
+		}
+		random_list = {
+			50 = {
+				modifier = {
+					value = 10
+					mult = root.piety_level
+				}
+				trigger_event = {
+					id = toi_fomorian_event.0003
+					days = { 10 50 }
+				}
+			}
+			50 = {
+				modifier = {
+					value = -10 
+					mult = root.piety_level
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = toi_fomorian_event.0002.b.fail
+				}
+			}
+		}
+	}
+}

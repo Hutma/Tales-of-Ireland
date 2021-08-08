@@ -359,6 +359,9 @@ investigate_on_wolfwalkers_decision = {
 			capital_county = {
 				kingdom = title:k_offaly
 			}
+			capital_county = {
+				kingdom = title:k_ossory
+			}
 		}
 		NOT = {
 			OR = {
@@ -396,6 +399,393 @@ investigate_on_wolfwalkers_decision = {
 
 	cost = {
 		piety = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_ossory_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+
+	desc = found_ossory_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_kilkenny
+			}
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_laois
+			}
+		}
+		NOT = { has_trait = fomorian }
+		NOT = { 
+			has_title = title:k_kilkenny
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_ossory
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		completely_controls = title:d_iverk
+		completely_controls = title:d_knocktopher
+		completely_controls = title:d_callan
+		completely_controls = title:d_crannagh
+		completely_controls = title:d_galmoy
+		completely_controls = title:d_clarmallagh
+		completely_controls = title:d_clandonagh
+		NOT = { 
+			has_title = title:k_kilkenny
+		}
+		prestige_level >= title:k_kilkenny.holder.prestige_level
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		founded_ossory_decision_scripted_effect = yes
+		
+		save_scope_as = founder
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_ossory
+			}
+		}
+		
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = ancient_kingdom_founder
+			}
+		}
+		
+		title:k_ossory = {
+			save_scope_as = kingdom_founded
+		}
+		trigger_event = {
+			id = toi_ancient_kingdom_formed.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_ancient_kingdom_formed.0002
+		}
+	}
+
+	cost = {
+		prestige = 750
+		gold = 150
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_breifne_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+
+	desc = found_breifne_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_leitrim
+			}
+			any_held_title = {
+				tier = tier_county
+				kingdom = title:k_cavan
+			}
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_breifne
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		completely_controls = title:k_leitrim
+		completely_controls = title:k_cavan
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		founded_breifne_decision_scripted_effect = yes
+		
+		save_scope_as = founder
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_breifne
+			}
+		}
+		
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = ancient_kingdom_founder
+			}
+		}
+		
+		title:k_breifne = {
+			save_scope_as = kingdom_founded
+		}
+		trigger_event = {
+			id = toi_ancient_kingdom_formed.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_ancient_kingdom_formed.0002
+		}
+	}
+
+	cost = {
+		prestige = 750
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_iarmuman_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+
+	desc = found_iarmuman_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_kinnatallon
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_omkilly
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_coshmore
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_iffa
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_clangibbon
+			}
+		}
+		highest_held_title_tier < 4
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_iarmuman
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		highest_held_title_tier < 4
+		has_title = title:d_clangibbon
+		has_title = title:d_iffa
+		has_title = title:d_coshmore
+		OR = {
+			has_title = title:d_omkilly
+			has_title = title:d_kinnatallon
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		founded_iarmuman_decision_scripted_effect = yes
+		
+		save_scope_as = founder
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_iarmuman
+			}
+		}
+		
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = ancient_kingdom_founder
+			}
+		}
+		
+		title:k_iarmuman = {
+			save_scope_as = kingdom_founded
+		}
+		trigger_event = {
+			id = toi_ancient_kingdom_formed.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_ancient_kingdom_formed.0002
+		}
+	}
+
+	cost = {
+		prestige = 500
+		gold = 100
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_airgialla_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	major = yes
+	ai_goal = yes
+
+	desc = found_airgialla_decision_desc
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_moira
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_dungannon
+			}
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_oneilland
+			}
+		}
+		highest_held_title_tier < 4
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_airgialla
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		highest_held_title_tier < 4
+		has_title = title:d_moira
+		has_title = title:d_dungannon
+		completely_controls = title:d_oneilland
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		founded_airgialla_decision_scripted_effect = yes
+		
+		save_scope_as = founder
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_airgialla
+			}
+		}
+		
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = ancient_kingdom_founder
+			}
+		}
+		
+		title:k_airgialla = {
+			save_scope_as = kingdom_founded
+		}
+		trigger_event = {
+			id = toi_ancient_kingdom_formed.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_ancient_kingdom_formed.0002
+		}
+	}
+
+	cost = {
+		prestige = 500
+		gold = 100
 	}
 
 	ai_potential = {

@@ -40,7 +40,7 @@
 			create_primary_tier_titles = yes
 			primary_heir_minimum_share = 0.20
 		}
-		flag = partition_succession_law
+		flag = ancient_partition_succession_law_flag
 		modifier = {
 			direct_vassal_opinion = 5
 			player_heir_opinion = 15
@@ -98,7 +98,7 @@
 			eligible_child_opinion = 10
 		}
 		pass_cost = {
-			prestige = change_succession_law_prestige_cost
+			prestige = 2000
 		}
 	}
 	
@@ -143,7 +143,7 @@
 			eligible_child_except_player_heir_opinion = 5
 		}
 		pass_cost = {
-			prestige = change_succession_law_prestige_cost
+			prestige = 4000
 		}
 		ai_will_do = {
 			if = {
