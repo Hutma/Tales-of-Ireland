@@ -45,7 +45,7 @@ call_the_pack_decision = {
 
 	ai_check_interval = 80
 	
-	cooldown = { years = 20 }
+	cooldown = { years = 5 }
 	
 	desc = call_the_pack_decision_desc
 

@@ -1,0 +1,17 @@
+﻿l_english:
+
+toi_nemedian_event.0001.t: "Stranger visits"
+toi_nemedian_event.0001.desc: "A man entered my Ringfort, donning strange clothes and a stranger presence. His eyes are as dark as night, and his distinctive voice isn't entirely human. \n\n“Blessings upon you, [ROOT.Char.GetFirstName]. I bring good tidings and wisdom from the gods. But I am so weary and famished from my travels, won't you spare a poor traveller some food?” \n\nThis man doesn't seem to be from Ireland, or anywhere in this world for that matter. He doesn't even seem to be a Sidhe, according to my Druid. I can sense this man won't leave empty-handed, should I welcome him to dinner?"
+toi_nemedian_event.0001.a: "Yes. Human, Spirit or otherwise, you are my guest."
+toi_nemedian_event.0001.b: "No. Take this gold and leave."
+
+toi_nemedian_event.0002.t: "Stranger needs for more"
+toi_nemedian_event.0002.desc: "I can now confirm my guest isn't human, for his appetite if nothing else. He alone ate half of the feast, and now he comes to demand more!? \n\n“Blessings upon you, [ROOT.Char.GetFirstName]. Your immense generosity has not gone unheeded, yet communing with the gods is no easy task. Bring me more Cattle, give me strength, and divine wisdom will be yours.” \n\nIf this man didn't have an otherworldy hunger I'd assume he was a thief. He has shown himself to have contact with something greater, but will I have any Cattle left by the end?"
+toi_nemedian_event.0002.a: "Fine, have some more Cattle!"
+toi_nemedian_event.0002.a.fail: "The stranger didn't come out from his dining chamber. Tired of waiting, we marched in only to find he was gone, alongside the Cattle we served to him. No-one in my Ringfort saw him leave. That malevolent trickster!"
+toi_nemedian_event.0002.b: "No, in this land, Cattle is more precious than any divine wisdom!"
+
+
+toi_nemedian_event.0003.t: "Satisfied Stranger"
+toi_nemedian_event.0003.desc: "The one-man feast of the stranger lasted for a week, his belly never growing, yet my herds diminished all the same. The few times he wasn't eating, voices could be heard from his chamber, strange voices uttered from both him and his divine connections. Today he came to see my one last time, his once-alien voice is now like soft music to my ears... \n\n“Blessings upon you, [ROOT.Char.GetFirstName], ten thousand blessings. The gods have witnessed your generosity to me, funded by your wise rule of this land. They sing praises upon you, and tasked me to deliver their message. Oh [ROOT.Char.GetFirstName], the years to come will be prosperous for both your kingdom and yourself, but stay vigilant, as those with envious hearts will try to steal your blessing.” \n\nI barely have time to comprehend these words before he leaves my hall. I try to chase him, but no-one saw him leave. He seemingly vanished into thin air the moment he left."
+toi_nemedian_event.0003.a: "Am I truly blessed?"

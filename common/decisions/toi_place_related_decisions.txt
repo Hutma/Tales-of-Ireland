@@ -376,6 +376,8 @@ investigate_on_wolfwalkers_decision = {
 		NOT = { has_trait = fomorian }
 		NOT = { has_trait = tuatha_de_danann }
 		OR = {
+			has_trait = education_learning_1
+			has_trait = education_learning_2
 			has_trait = education_learning_3
 			has_trait = education_learning_4
 			has_trait = hunter_1

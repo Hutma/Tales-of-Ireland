@@ -203,6 +203,37 @@ yearly_global_pulse = {
 			}
 			
 		}
+		
+		
+		if = {
+			limit = { 
+				NOT = { has_global_variable = sea_fomorian_resurgence_happenned }
+				NOT = {
+					any_independent_ruler = {
+						count >= 1
+						AND = {
+							highest_held_title_tier >= 4
+							has_culture = culture:sea_fomorians
+						}
+					}
+				}
+			}
+			random = {
+				chance = 10
+				modifier = {
+					factor = 0.1
+					current_date < 4900.1.1
+				}
+				set_global_variable = {
+					name = sea_fomorian_resurgence_happenned
+					value = yes
+				}
+				trigger_event = {
+					id = toi_fomorian_event.0005
+					days = { 1 7 }
+				}
+			}
+		}
 	}
 #TALES OF IRELAND HY BRAZIL
 }
@@ -239,16 +270,14 @@ three_year_playable_pulse = {
 				limit = {
 					AND = {
 						is_independent_ruler = yes
+						is_landed = yes
 						OR = {
 							highest_held_title_tier = 3
 							highest_held_title_tier = 4
 							highest_held_title_tier = 5
 						}
-						NOT = {
-							has_government = mercenary_government
-							has_government = holy_order_government
-						}
-						capital_county.title_province = { geographical_region = ireland_region }
+						has_government = feudal_government
+						capital_province = { geographical_region = ireland_region }
 					}
 				}
 			add_pressed_claim = title:k_high_kingship
@@ -595,7 +624,29 @@ on_yearly_events = {
 		100 = toi_cessarian_event.0007 #A Traditional Gathering
 		100 = toi_cessarian_event.0011 #First Animals
 		
-		100 = toi_fomorian_event.001 #Weak child
+		100 = toi_fomorian_event.0001 #Weak child
+		100 = toi_fomorian_event.0002 #Gathering of Balor
+		100 = toi_fomorian_event.0004 #Chosen Blood
+
+		100 = toi_highking_event.0001 #Respected high king
+		
+		100 = toi_lifestyle_event.0001 #Spear training
+		100 = toi_lifestyle_event.0002 #Samhain
+		100 = toi_lifestyle_event.0008 #Spring Festival
+		100 = toi_lifestyle_event.0009 #Starfalling night prayer
+		100 = toi_lifestyle_event.0010 #Lessons of the past
+		100 = toi_lifestyle_event.0011 #Forging my legend
+		
+		100 = toi_nemedian_event.0001 #Stranger visits
+		
+		100 = toi_place_event.0001 #Carrick-a-Rede Rope Bridge
+		100 = toi_place_event.0002 #The Cliffs of Moher
+		100 = toi_place_event.0003 #The Gap of Dunloe
+		100 = toi_place_event.0004 #The Connemara
+		
+		100 = toi_partholonians_event.0001 #The sea ambitions
+		100 = toi_partholonians_event.0002 #Weak, cursed body
+		
 		
 		50 = yearly.0001 	#Skill Tutoring
 		100 = yearly.0002	#Indiscreet Councillor

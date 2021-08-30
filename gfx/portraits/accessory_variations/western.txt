@@ -149,7 +149,7 @@ pattern_textures = {
 ##Tales of Ireland##
 pattern_textures = {
     name = "irish_tartan_01"
-    colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_masks.dds"
+    colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_mask.dds"
     normal        = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_normal.dds"
     properties    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_properties.dds"
 }

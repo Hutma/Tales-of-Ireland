@@ -24,7 +24,7 @@ fomorian = {
 	
 	physical = yes
 	prowess = 4
-	health = 1.2
+	life_expectancy = 20
 	intrigue = 2
 	stress_gain_mult = -0.2
 	tax_mult = 0.1
@@ -81,7 +81,7 @@ half_fomorian = {
 	
 	physical = yes
 	prowess = 2
-	health = 0.6
+	life_expectancy = 10
 	intrigue = 1
 	stress_gain_mult = -0.1
 	tax_mult = 0.05
@@ -141,7 +141,7 @@ three_quarter_fomorian = {
 	
 	physical = yes
 	prowess = 2
-	health = 0.6
+	life_expectancy = 10
 	intrigue = 1
 	stress_gain_mult = -0.1
 	tax_mult = 0.05
@@ -187,7 +187,8 @@ cessarian = {
 	
 	physical = yes
 	prowess = -2
-	health = 2.0
+	health = 1
+	life_expectancy = 12
 	negate_health_penalty_add = 0.25
 	diplomacy = 2
 	
@@ -241,7 +242,8 @@ half_cessarian = {
 	
 	physical = yes
 	prowess = -1
-	health = 1.1
+	health = 0.5
+	life_expectancy = 6
 	negate_health_penalty_add = 0.1
 	diplomacy = 1
 	
@@ -295,7 +297,8 @@ three_quarter_cessarian = {
 	
 	physical = yes
 	prowess = -1
-	health = 1.1
+	health = 0.5
+	life_expectancy = 6
 	negate_health_penalty_add = 0.1
 	diplomacy = 1
 	
@@ -788,7 +791,8 @@ tuatha_de_danann = {
 	stewardship = -3
 	learning = 4
 	fertility = -0.25
-	health = 11.2
+	health = 1.5
+	life_expectancy = 100
 	levy_reinforcement_rate = 0.1
 	monthly_lifestyle_xp_gain_mult = -0.25
 	
@@ -845,7 +849,8 @@ half_tuatha_de_danann = {
 	stewardship = -2
 	learning = 2
 	fertility = -0.12
-	health = 3.5
+	health = 0.75
+	life_expectancy = 50
 	levy_reinforcement_rate = 0.05
 	monthly_lifestyle_xp_gain_mult = -0.1
 	
@@ -903,7 +908,8 @@ three_quarter_tuatha_de_danann = {
 	stewardship = -2
 	learning = 2
 	fertility = -0.12
-	health = 5
+	health = 0.75
+	life_expectancy = 50
 	levy_reinforcement_rate = 0.05
 	monthly_lifestyle_xp_gain_mult = -0.15
 	
@@ -1459,7 +1465,7 @@ hy_brazylian = {
 	enemy_hard_casualty_modifier = 0.2
 	hostile_scheme_resistance_mult = 0.3
 	supply_capacity_add = 20
-	health = -0.5
+	life_expectancy = -10
 	
 	ruler_designer_cost = 5
 
@@ -1512,7 +1518,7 @@ half_hy_brazylian = {
 	enemy_hard_casualty_modifier = 0.1
 	hostile_scheme_resistance_mult = 0.15
 	supply_capacity_add = 10
-	health = -0.25
+	life_expectancy = -5
 	
 	ruler_designer_cost = 5
 
@@ -1565,7 +1571,7 @@ three_quarter_hy_brazylian = {
 	enemy_hard_casualty_modifier = 0.1
 	hostile_scheme_resistance_mult = 0.15
 	supply_capacity_add = 10
-	health = -0.25
+	life_expectancy = -5
 	
 	ruler_designer_cost = 5
 
@@ -1808,12 +1814,12 @@ wolfwalker = {
 	index = 1035
 	icon = wolfwalker.dds
 	
-	enemy_hard_casualty_modifier = 0.1
-	prowess = 4
-	levy_size = 0.35
+	enemy_hard_casualty_modifier = 0.15
+	prowess = 8
+	levy_size = 0.5
 	men_at_arms_maintenance = -0.2
-	development_growth = -3
-	health = 1
+	development_growth = -2
+	health = 3
 	
 	ruler_designer_cost = 30
 	

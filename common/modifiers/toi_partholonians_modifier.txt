@@ -1,0 +1,8 @@
+no_more_land = {
+    stewardship = 3
+}
+
+weak_body = {
+    icon = health_negative
+    health = 0.5
+}

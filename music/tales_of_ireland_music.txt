@@ -160,6 +160,23 @@ Wanderer = {
 	
 }
 
+As_we_March = {
+	music = "file:/music/Vindsvept/As_we_March.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
+
+Veiled_in_Light = {
+	music = "file:/music/Vindsvept/Veiled_in_Light.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes 
+	is_prioritized_mood = yes
+	
+}
 ###FIR BOLGS
 Tales_of_Ireland_fir_bolg_one = {
 	music = "file:/music/Tales_of_Ireland_fir_bolg_one.mp3"

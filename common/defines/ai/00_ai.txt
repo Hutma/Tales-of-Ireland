@@ -329,8 +329,8 @@
 	STAND_AND_FIGHT_COOLDOWN_DAYS = 90					# If the AI abandons "stand and fight" due to the above, it'll avoid "stand and fight" for this many days
 	DISCARD_UNIT_GOALS_UNDER_TRESHOLD = 0.5				# The AI will discard potential targets scored at this threshold or lower compared to the best target, even if the best target is unsafe
 	MIN_GOALS_PER_STACK = 5								# However, it will ensure it always evaluates at least this many goals per stack, even if they're below the threshold
-	ARMY_SIZE_COMPARED_TO_SUPPLY = 4.0					# How much larger than the supply are we willing to make a stack? "Supply" here refers to the same number as MIN_SUPPLY_COMPARED_TO_AVERAGE_SUPPLY_FACTOR does
 	MIN_SUPPLY_COMPARED_TO_AVERAGE_SUPPLY_FACTOR = 0.7	# For the purpose of army sizes, the AI uses the highest of this factor times the average supply in the war area, and the lowest supply in the war area. E.G., if average supply is 2k, and lowest supply is 1k, the AI will act as if available supply is 0.7 * 2k = 1.4k. But if the lowest supply was 1.5k, it'd be using that instead
+	ARMY_SIZE_COMPARED_TO_SUPPLY = 4.0					# How much larger than the supply are we willing to make a stack? "Supply" here refers to the same number as MIN_SUPPLY_COMPARED_TO_AVERAGE_SUPPLY_FACTOR does
 	RESUPPLY_MAX_DISTANCE = 3							# How far out can splinters of the army spread when trying to resupply? In # of provinces. AI will try to keep it lower if possible
 	RESUPPLY_COOLDOWN_DAYS = 250						# If supplying is interrupted due to insufficient supply, wait for this long before trying to resupply again
 

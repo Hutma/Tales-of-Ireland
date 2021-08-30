@@ -1,0 +1,10 @@
+﻿l_english:
+ toi_partholonians_event.0001.t: "Return to the Sea"
+ toi_partholonians_event.0001.desc: "We have conquered new lands for my people to settle, and they have been busy building their new homes and tending to their fields. Still, it is not in our nature to be easily satisfied. Now that construction has mostly finished, some influential families have been making noise about the new lands feeling a little cramped already, and the yield being a little meager.\n\nThat same feeling has found a stronger voice in my war council, who presented their plans for possible new conquests to me this morning. And are we not the sons of the sea? Our ships are our pride and joy, and it would not take much time to ready the fleet again. The councilors’ arguments are certainly convincing..."
+ toi_partholonians_event.0001.a: "Hoist the sails! Wide new lands await us!"
+ toi_partholonians_event.0001.b: "We should focus on improving the land we have."
+ 
+ toi_partholonians_event.0002.t: "Weak, cursed body"
+ toi_partholonians_event.0002.desc: "The sickness that runs in our blood, the blood of Partholon is our curse.\nAs I woke up this morning I can feel my head aching, I feel numb and lost. I can hear the screams of dying Partholonians in my head, I can feel their sickness and presence.\n\nAm I cursed again? Cursed by the gods because of the kind I belong to?"
+ toi_partholonians_event.0002.a: "I accept my fate."
+ toi_partholonians_event.0002.b: "I'll fight the cursed, fight the gods."

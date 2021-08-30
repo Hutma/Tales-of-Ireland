@@ -420,7 +420,7 @@ NCharacterOpinion = {
 
 	DEFENDING_ME_IN_CLAIM_WAR = 100
 
-	POWERFUL_VASSAL_WITHOUT_COUNCIL_POSITION = -40
+	POWERFUL_VASSAL_WITHOUT_COUNCIL_POSITION = -35
 
 	IS_ON_THE_COUNCIL = 10
 
@@ -634,7 +634,7 @@ NPowerfulVassal = {
 	# To calculate the value (rank):
 	VALUE_FACTOR = 1.25					# Rubber banding value for current powerful vassals
 	VALUE_MILITARY_MULT = 1				# Multiplier applied to the military strength of the vassal
-	VALUE_TIER_MULT = 100				# Multiplier applied to the tier of the vassal
+	VALUE_TIER_MULT = 10				# Multiplier applied to the tier of the vassal
 	VALUE_INCOME_MULT = 50				# Multiplier applied to the income of the vassal
 }
 

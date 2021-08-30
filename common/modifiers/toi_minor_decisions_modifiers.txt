@@ -111,14 +111,14 @@ oldest_pub = {
 
 unleashed_wolf = {
 	icon = dog_negative
-	stress_gain_mult = 0.5
+	stress_gain_mult = 0.4
 	stress_loss_mult = -0.25
 	county_opinion_add = -5
 	diplomacy_per_stress_level = -1
-	martial_per_stress_level = 3
+	martial_per_stress_level = 4
 	stewardship_per_stress_level = -1
-	intrigue_per_stress_level = 2
-	learning_per_stress_level = 2
+	intrigue_per_stress_level = 3
+	learning_per_stress_level = 3
 	prowess_per_stress_level = 4
 }
 
@@ -126,19 +126,19 @@ balanced_wolf = {
 	icon = dog_positive
 	stress_gain_mult = 0.2
 	stress_loss_mult = 0.2
-	martial_per_stress_level = 1
-	intrigue_per_stress_level = 1
-	learning_per_stress_level = 1
-	prowess_per_stress_level = 1
+	martial_per_stress_level = 2
+	intrigue_per_stress_level = 2
+	learning_per_stress_level = 2
+	prowess_per_stress_level = 2
 }
 
 humanity_focused_wolf = {
 	icon = dog_positive
 	stress_gain_mult = -0.1
 	stress_loss_mult = 0.35
-	diplomacy_per_stress_level = 1
+	diplomacy_per_stress_level = 3
 	martial_per_stress_level = -2
-	stewardship_per_stress_level = 1
+	stewardship_per_stress_level = 3
 	intrigue_per_stress_level = -2
 	learning_per_stress_level = -2
 	prowess_per_stress_level = -2

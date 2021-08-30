@@ -244,6 +244,8 @@ can_use_conquest_cbs_trigger = { #Tales of Ireland TOI
 		}
 		
 		has_character_flag = roman_invader
+		
+		has_character_flag = can_use_conquest_cbs
 	}
 }
 

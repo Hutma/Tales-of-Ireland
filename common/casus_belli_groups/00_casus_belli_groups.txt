@@ -39,42 +39,6 @@ religious_script_only = {
 
 de_jure = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -84,42 +48,6 @@ testing = {
 
 claim = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -130,165 +58,24 @@ civil_war = {
 
 invasion = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
 	}
 }
 
 vassalization = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
+
 	}
 }
 
 conquest = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
+
 	}
 }
 
 subjugation = {
 	allowed_for_character = {
-		NOT = {
-			OR = {
-				AND = {
-					scope:attacker = {
-						has_trait = tuatha_de_danann
-					}
-					scope:defender = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:attacker = {
-						has_trait = fomorian
-					}
-					scope:defender = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = tuatha_de_danann
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_de_dannan
-					}
-				}
-				AND = {
-					scope:defender = {
-						has_trait = fomorian
-					}
-					scope:attacker = {
-						has_character_flag = truce_with_fomorian
-					}
-				}
-			}
-		}
+
 	}
 }
 

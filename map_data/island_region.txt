@@ -7,3 +7,23 @@
 #	duchies = { }, takes county title names declared in landed_titles.txt
 #	counties = { }, takes county title names declared in landed_titles.txt
 #	provinces = { }, takes province id numbers declared in /history/provinces
+
+island_region_mann = {
+	duchies = {
+		d_rosien
+		d_glion_faba
+		d_inver_ayre
+		d_medall
+		d_maayl
+		d_garff
+	}
+}
+
+island_region_irish_isles = {
+	duchies = {
+		d_aran
+		d_toremoreislands
+	}
+	
+	counties = { c_bere }
+}

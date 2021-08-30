@@ -1,0 +1,213 @@
+﻿namespace = toi_place_event
+
+#Carrick-a-Rede Rope Bridge
+
+toi_place_event.0001 = {
+    type = place_event
+    title = toi_place_event.0001.t
+    desc = toi_place_event.0001.desc
+    theme = witchcraft
+    override_background = {
+        event_background = carrick_a_rede
+    }
+    
+    left_portrait = {
+        character = root
+        animation = happiness
+    }
+    
+    trigger = {
+        any_held_title = {
+            tier = tier_county
+            kingdom = title:k_antrim
+        }
+    }
+    
+    option = { #A fine adventure
+        name = toi_place_event.0001.a
+        add_character_modifier = {
+            modifier = rope_bridge
+            years = 10
+        }
+        add_stress = -35
+    }
+
+    option = { #I tried to be brave, and led the crossing
+        name = toi_place_event.0001.b
+        random_list = {
+            50 = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = brave
+                        }
+                    }
+                    add_trait = brave
+                }
+                if = {
+                    limit = {
+                        has_trait = craven
+                    }
+                    remove_trait = craven
+                }
+            }
+            50 = { 
+                add_stress = 20
+            }
+        }
+    }
+} 
+    
+# The Cliffs of Moher
+
+toi_place_event.0002 = {
+    type = place_event
+    title = toi_place_event.0002.t
+    desc = toi_place_event.0002.desc
+    theme = witchcraft
+    override_background =  {
+        event_background = cliffs_of_moher
+    }
+
+    left_portrait = {
+        character = root 
+        animation = personality_content
+    }
+
+    trigger = { 
+		any_held_title = {
+            tier = tier_county
+            kingdom = title:k_clare
+        }
+    }
+
+    option = { #A good journey
+        name = toi_place_event.0002.a
+        add_character_modifier = {
+            modifier = cliff_of_moher
+            years = 10
+        }
+    }
+	
+	option = { #I tried to be brave, and carried much of our supplies
+        name = toi_place_event.0002.b
+        random_list = {
+            50 = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = physique_good_1
+                        }
+                    }
+                    add_trait = physique_good_1
+                }
+                if = {
+                    limit = {
+                        has_trait = physique_bad_1
+                    }
+                    remove_trait = physique_bad_1
+                }
+				if = {
+                    limit = {
+                        has_trait = physique_bad_2
+                    }
+                    remove_trait = physique_bad_2
+                }
+            }
+            50 = { 
+                add_trait = wounded_01
+            }
+        }
+    }
+}
+
+# Gap of Dunloe
+
+toi_place_event.0003 = {
+    type = place_event
+    title = toi_place_event.0003.t
+    desc = toi_place_event.0003.desc 
+    theme = witchcraft
+    override_background = {
+        event_background = gap_of_dunloe
+    }
+
+    left_portrait = {
+        character = root 
+        animation = personality_content
+    }
+
+    trigger = {
+        any_held_title = {
+            tier = tier_county 
+            kingdom = title:k_kerry 
+        }
+    }
+
+    option = { #I feel rested
+        name = toi_place_event.0003.a
+        add_character_modifier = {
+            modifier = gap_of_dunloe
+            years = 10
+        }
+    }
+	
+	option = { #I tried to be more pious than the rest of my family
+        name = toi_place_event.0003.b
+        random_list = {
+            50 = {
+                add_piety = 250
+            }
+            50 = { 
+                every_close_family_member = {
+					add_piety = -150
+				}
+            }
+        }
+    }
+}
+
+# The Connemara 
+
+toi_place_event.0004 = {
+    type = place_event
+    title = toi_place_event.0004.t
+    desc = toi_place_event.0004.desc
+    theme = witchcraft
+    override_background = { 
+        event_background = connemara
+    }
+
+    left_portrait = {
+        character = root 
+        animation = personality_content
+    }
+
+    trigger = {
+        any_held_title = {
+            tier = tier_county
+            kingdom = title:k_galway
+        }
+    }
+
+    option = { #I should do that more often
+        name = toi_place_event.0004.a
+        add_character_modifier = {
+            modifier = connemara_adventure
+            years = 15
+        }
+    }
+	
+	option = { #I was inspired to try some new, drastic ideas
+        name = toi_place_event.0004.b
+        random_list = {
+            50 = {
+                add_stewardship_skill = 3
+            }
+            50 = { 
+                add_stewardship_skill = -1
+            }
+        }
+    }
+}
+

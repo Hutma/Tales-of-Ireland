@@ -1,0 +1,6 @@
+stranger_success = { 
+    icon = stewardship_positive
+    fertility = 0.2
+    stewardship = 2
+    build_speed = 0.25
+}

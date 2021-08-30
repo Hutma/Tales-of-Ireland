@@ -1,0 +1,27 @@
+rope_bridge = {
+    icon = outdoors_positive
+    health = 0.25
+    monthly_prestige = 0.2
+    diplomacy = 1
+}
+
+cliff_of_moher = {
+    icon = outdoors_positive
+    health = 0.25
+    monthly_prestige = 0.2
+}
+
+gap_of_dunloe = {
+    icon = outdoors_positive
+    health = 0.25
+    monthly_prestige = 0.2  
+    stress_loss_mult = 0.2 
+}
+
+connemara_adventure = {
+    icon = outdoors_positive
+    health = 0.25
+    monthly_prestige = 0.2  
+    stress_loss_mult = 0.2
+    stewardship = 1
+}

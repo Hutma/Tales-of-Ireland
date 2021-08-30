@@ -58,6 +58,13 @@ toi_hybrazil.1002 = {
 			id = toi_hybrazil.1003
 			years = 7
 		}
+		every_independent_ruler = {
+			add_to_list = hy_brasil_visiter_list
+		}
+		random_in_list = {
+			list = hy_brasil_visiter_list
+			save_scope_as = visitor_employer
+		}
 	}
 }
 
@@ -77,13 +84,6 @@ toi_hybrazil.0002 = {
 	}
 	
 	immediate = {
-		every_independent_ruler = {
-			add_to_list = hy_brasil_visiter_list
-		}
-		random_in_list = {
-			list = hy_brasil_visiter_list
-			save_scope_as = visitor_employer
-		}
 		create_character = {
 			age = { 20 40 }
 			trait = hy_brazylian
@@ -94,13 +94,24 @@ toi_hybrazil.0002 = {
 			faith = faith:hy_brazil_sidhe
 			culture = culture:hy_brazylian_culture
 		}
-		scope:visitor_employer = {
-			add_gold = 200
-			add_prestige = 200
+	}
+	option = {
+		name = toi_hybrazil.0002.a
+		trigger = {
+			NOT = {
+				root = scope:visitor_employer
+			}
 		}
 	}
 	option = {
 		name = toi_hybrazil.0002.a
+		trigger = {
+			root = scope:visitor_employer
+		}
+		scope:visitor_employer = {
+			add_gold = 200
+			add_prestige = 200
+		}
 	}
 }
 

@@ -1,0 +1,63 @@
+intensive_training = {
+    icon = prowess_positive	
+    prowess = 1 
+    stewardship = -2
+    diplomacy = -1
+}
+
+celebrating_samhain= {
+    icon = feast_positive
+    monthly_prestige = 0.2
+    diplomacy = 3
+}
+
+war_future_modif = { 
+    icon = martial_positive
+    martial = 2 
+    prowess = 2
+    levy_size = 0.1 
+}
+
+peace_future = {
+    icon = letter_positive
+    stewardship = 2
+    diplomacy = 2
+    tax_mult = 0.1
+}
+
+dark_future = {
+    icon = piety_negative
+    health = -0.25
+    stress_gain_mult = 0.2
+    general_opinion = -5
+    monthly_piety = -0.5
+}
+
+spring_festival = {
+    icon = feast_positive
+    monthly_prestige = 0.5
+    county_opinion_add = 5
+}
+
+war_ressource = {
+    icon = martial_positive
+    general_opinion = -5
+}
+
+useless_festival = {
+    icon = fest_negative
+    monthly_prestige = -50
+    county_opinion_add = -5
+}
+
+pray_wargod = {
+    icon = martial_positive
+    martial = 1
+    prowess = 1
+}
+
+pray_god_of_fertility = {
+    icon = fertility_positive
+    diplomacy = 1
+    stewardship = 1
+}

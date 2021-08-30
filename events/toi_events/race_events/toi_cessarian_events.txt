@@ -354,7 +354,7 @@ toi_cessarian_event.0007 = {
 	
 	option = {
 		name = toi_cessarian_event.0007.a
-		add_gold = -25
+		remove_short_term_gold = 25
 		capital_county = {
 			change_development_level = -5
 		}

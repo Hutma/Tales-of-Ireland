@@ -13,7 +13,7 @@
     learning =  12 
     prowess =  12 
 
-    health =  185 
+    health = 10 
 
     trait = education_martial_4
     trait = brave
@@ -47,7 +47,7 @@
     learning =  5 
     prowess =  5 
 
-    health =  184 
+    health = 10 
 
     trait = education_learning_4
     trait = fickle
@@ -76,7 +76,7 @@
     learning =  10 
     prowess =  16 
 
-    health =  183 
+    health = 10
 
     trait = education_martial_4
     trait = brave
@@ -110,7 +110,7 @@
     learning =  7 
     prowess =  10 
 
-    health =  182 
+    health = 10
 
     trait = education_diplomacy_2
     trait = cynical
@@ -139,7 +139,7 @@
     learning =  12 
     prowess =  6 
 
-    health =  177 
+    health = 10
 
     trait = education_stewardship_4
     trait = diligent
@@ -175,7 +175,7 @@
     learning =  5 
     prowess =  2 
 
-    health =  176 
+    health = 10
 
     trait = education_intrigue_1
     trait = gregarious
@@ -204,7 +204,7 @@
     learning =  10 
     prowess =  25
 
-    health =  176 
+    health = 10
 
     trait = education_martial_4
     trait = trusting
@@ -237,7 +237,7 @@
     learning =  2 
     prowess =  1 
 
-    health =  176 
+    health = 10
 
     trait = education_learning_1
     trait = greedy
@@ -266,7 +266,7 @@
     learning =  7 
     prowess =  10 
 
-    health =  168 
+    health = 10
 
     trait = education_martial_3
     trait = trusting
@@ -298,7 +298,7 @@
     learning =  3 
     prowess =  10 
 
-    health =  167 
+    health = 10
 
     trait = education_stewardship_2
     trait = wrathful
@@ -333,7 +333,7 @@
     learning =  8 
     prowess =  10 
 
-    health =  167 
+    health = 10 
 
     trait = education_martial_4
     trait = ambitious
@@ -366,7 +366,7 @@
     learning =  5 
     prowess =  3 
 
-    health =  165 
+    health = 10 
 
     trait = education_learning_4
     trait = wrathful
@@ -394,7 +394,7 @@
     learning =  10 
     prowess =  8 
 
-    health =  165 
+    health = 10
 
     trait = education_stewardship_4
     trait = chaste
@@ -422,7 +422,7 @@
     learning =  12 
     prowess =  9 
 
-    health =  165 
+    health = 10
 
     trait = education_intrigue_4
     trait = lustful

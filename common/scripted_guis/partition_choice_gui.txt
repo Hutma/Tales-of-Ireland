@@ -1,4 +1,4 @@
-partition_choice_select_character_button = {
+﻿partition_choice_select_character_button = {
     scope = character
     saved_scopes = {player_char}
     is_shown = {
