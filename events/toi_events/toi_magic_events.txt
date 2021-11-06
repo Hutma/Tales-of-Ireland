@@ -1,0 +1,142 @@
+﻿namespace = toi_magic_event
+
+#Summon child spell
+toi_magic_event.0001 = {
+	title = toi_magic_event.0001.t
+	desc = toi_magic_event.0001.desc
+	type = character_event
+	theme = family
+	
+	left_portrait = {
+		character = root
+		animation = admiration
+	}
+	
+	right_portrait = {
+		character = scope:sidhe_child
+		animation = personality_rational
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_female = yes
+			}
+			create_character = {
+				age = 1
+				trait = magician_good_1
+				random_traits = yes
+				mother = root
+				gender_female_chance = 50
+				dynasty = root.dynasty
+				faith = root.faith
+				culture = root.culture
+				employer = root
+				save_scope_as = sidhe_child
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 1
+				trait = magician_good_1
+				random_traits = yes
+				father = root
+				gender_female_chance = 50
+				dynasty = root.dynasty
+				faith = root.faith
+				culture = root.culture
+				employer = root
+				save_scope_as = sidhe_child
+			}
+		}
+	}
+	option = {
+		name = toi_magic_event.0001.a
+		remove_character_modifier = asked_sidhe_for_child
+	}
+}	
+
+#Exchange talents
+toi_magic_event.0002 = {
+	title = toi_magic_event.0002.t
+	desc = toi_magic_event.0002.desc
+	type = character_event
+	theme = witchcraft
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = toi_magic_event.0002.a
+		add_character_modifier = {
+			modifier = exchanged_skills_diplo
+			years = 15
+		}
+	}
+	
+	option = {
+		name = toi_magic_event.0002.b
+		add_character_modifier = {
+			modifier = exchanged_skills_learning
+			years = 15
+		}
+	}
+	
+	option = {
+		name = toi_magic_event.0002.c
+		add_character_modifier = {
+			modifier = exchanged_skills_martial
+			years = 15
+		}
+	}
+	
+	option = {
+		name = toi_magic_event.0002.d
+		add_character_modifier = {
+			modifier = exchanged_skills_stewardship
+			years = 15
+		}
+	}
+	
+	option = {
+		name = toi_magic_event.0002.e
+		add_character_modifier = {
+			modifier = exchanged_skills_intrigue
+			years = 15
+		}
+	}
+	
+	option = { #No
+		name = toi_magic_event.0002.f
+	}
+}
+
+#Deaht to counter GUI
+toi_magic_event.0003 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		death = {
+			death_reason = death_sacrificed_to_gods
+			killer = scope:killer_magic
+		}
+	}
+}	
+#Deaht to counter GUI
+toi_magic_event.0004 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		death = {
+			killer = scope:killer_magic
+			death_reason = death_disappearance
+		}
+	}
+}	

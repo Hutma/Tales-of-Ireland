@@ -18,6 +18,24 @@ k_high_kingship = {
 	de_jure_drift_disabled = yes
 }
 
+d_hero_trainer = {
+	color = { 35 35 35 }
+	color2 = { 255 255 255 }
+	ruler_uses_title_name = no
+	can_be_named_after_dynasty = no
+	
+	capital = c_antrim
+	
+	landless = yes
+	no_automatic_claims = yes
+	
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+	
+	de_jure_drift_disabled = yes
+}
+
 e_ireland = {
 	color = { 6 127 2 }
 	color2 = { 255 255 255 }
@@ -44,7 +62,7 @@ e_munster = {
 	color =  { 150 10 10 }
 	color2 = { 255 255 255 }
 	
-	capital = c_bantry
+	capital = c_cork
 	
 	definite_form = yes
 	
@@ -197,7 +215,7 @@ e_munster = {
 			color = { 101 8 34 }
 			color2 = { 255 255 255 }
 			
-			capital = c_ballylickey
+			capital = c_bantry
 			c_ballylickey = {
 				color = { 81 8 14 }
 				color2 = { 255 255 255 }

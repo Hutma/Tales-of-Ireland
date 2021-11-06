@@ -65,9 +65,9 @@
 		#HealthGod
 		HealthGodName = real_gods_health_god_name
 		HealthGodNamePossessive = real_gods_health_god_name_possessive
-		HealthGodSheHe = CHARACTER_SHEHE_SHE
-		HealthGodHerHis = CHARACTER_HERHIS_HER
-		HealthGodHerHim = CHARACTER_HERHIM_HER
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
 		
 		#FertilityGod
 		FertilityGodName = real_gods_fertility_god_name
@@ -79,51 +79,51 @@
 		#WealthGod
 		WealthGodName = real_gods_wealth_god_name
 		WealthGodNamePossessive = real_gods_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_SHE
-		WealthGodHerHis = CHARACTER_HERHIS_HER
-		WealthGodHerHim = CHARACTER_HERHIM_HER
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
 
 		#HouseholdGod
 		HouseholdGodName = real_gods_household_god_name
 		HouseholdGodNamePossessive = real_gods_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HER
-		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
 		#FateGod
 		FateGodName = real_gods_fate_god_name
 		FateGodNamePossessive = real_gods_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		#KnowledgeGod
 		KnowledgeGodName = real_gods_knowledge_god_name
 		KnowledgeGodNamePossessive = real_gods_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WarGod
 		WarGodName = real_gods_war_god_name
 		WarGodNamePossessive = real_gods_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_SHE
-		WarGodHerHis = CHARACTER_HERHIS_HER
-		WarGodHerHim = CHARACTER_HERHIM_HER
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
 
 		#TricksterGod
 		TricksterGodName = real_gods_trickster_god_name
 		TricksterGodNamePossessive = real_gods_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_HE
-		TricksterGodHerHis = CHARACTER_HERHIS_HIS
-		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		TricksterGodSheHe = CHARACTER_SHEHE_SHE
+		TricksterGodHerHis = CHARACTER_HERHIS_HER
+		TricksterGodHerHim = CHARACTER_HERHIM_HER
 
 		#NightGod
 		NightGodName = real_gods_night_god_name
 		NightGodNamePossessive = real_gods_night_god_name_possessive
-		NightGodSheHe = CHARACTER_SHEHE_HE
-		NightGodHerHis = CHARACTER_HERHIS_HIS
-		NightGodHerHim = CHARACTER_HERHIM_HIM
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
 
 		#WaterGod
 		WaterGodName = real_gods_water_god_name
@@ -133,9 +133,9 @@
 		WaterGodHerHim = CHARACTER_HERHIM_HER
 
 
-		PantheonTerm = real_gods_mother_earth_father_sky
+		PantheonTerm = real_gods_the_gods
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { real_gods_high_god_name real_gods_good_god_father_sky real_gods_good_god_ancestors }
+		GoodGodNames = { real_gods_high_god_name real_gods_mother_earth_father_sky real_gods_good_god_ancestors }
 		DevilName = real_gods_devil_name
 		DevilNamePossessive = real_gods_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = real_gods_religious_text
 		ReligiousHeadName = real_gods_religious_head_title
 		ReligiousHeadTitleName = real_gods_religious_head_title_name
-		DevoteeMale = real_gods_devotee
-		DevoteeMalePlural = real_gods_devoteeplural
-		DevoteeFemale = real_gods_devotee
-		DevoteeFemalePlural = real_gods_devoteeplural
-		DevoteeNeuter = real_gods_devotee
-		DevoteeNeuterPlural = real_gods_devoteeplural
-		PriestMale = real_gods_priest
-		PriestMalePlural = real_gods_priest_plural
-		PriestFemale = real_gods_priest
-		PriestFemalePlural = real_gods_priest_plural
-		PriestNeuter = real_gods_priest
-		PriestNeuterPlural = real_gods_priest_plural
+		DevoteeMale = real_gods_devotee_male
+		DevoteeMalePlural = real_gods_devotee_male_plural
+		DevoteeFemale = real_gods_devotee_female
+		DevoteeFemalePlural = real_gods_devotee_female_plural
+		DevoteeNeuter = real_gods_devotee_male
+		DevoteeNeuterPlural = real_gods_devotee_male_plural
+		PriestMale = real_gods_priest_male
+		PriestMalePlural = real_gods_priest_male_plural
+		PriestFemale = real_gods_priest_female
+		PriestFemalePlural = real_gods_priest_female_plural
+		PriestNeuter = real_gods_priest_male
+		PriestNeuterPlural = real_gods_priest_male_plural
 		AltPriestTermPlural = real_gods_priest_alternate_plural
-		BishopMale = real_gods_priest
-		BishopMalePlural = real_gods_priest_plural
-		BishopFemale = real_gods_priest
-		BishopFemalePlural = real_gods_priest_plural
-		BishopNeuter = real_gods_priest
-		BishopNeuterPlural = real_gods_priest_plural
+		BishopMale = real_gods_bishop_male
+		BishopMalePlural = real_gods_bishop_male_plural
+		BishopFemale = real_gods_bishop_female
+		BishopFemalePlural = real_gods_bishop_female_plural
+		BishopNeuter = real_gods_bishop_male
+		BishopNeuterPlural = real_gods_bishop_male_plural
 		DivineRealm = real_gods_divine_realm
 		PositiveAfterLife = real_gods_divine_realm
 		NegativeAfterLife = real_gods_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = real_gods_death_deity_name_possessive
 		DeathDeitySheHe = real_gods_devil_shehe
 		DeathDeityHerHis = real_gods_death_deity_herhis
-		WitchGodName = witchgodname_real_gods_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_real_gods_the_morrigan
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+ 		WitchGodMotherFather = mother
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars

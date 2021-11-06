@@ -31,6 +31,8 @@ fomorian = {
 	development_growth_factor = -0.2
 	different_faith_county_opinion_mult = 0.25
 	
+	opposite_opinion = -15
+	
 	ruler_designer_cost = 5
 
 	desc = {
@@ -192,6 +194,9 @@ cessarian = {
 	negate_health_penalty_add = 0.25
 	diplomacy = 2
 	
+	opposite_opinion = -5
+	same_opinion = 5
+	
 	ruler_designer_cost = 5
 
 	desc = {
@@ -319,7 +324,7 @@ three_quarter_cessarian = {
 
 partholonian = {
 	index = 1006
-	icon = partholonain.dds
+	icon = partholonian.dds
 	
 	opposites = {
 		fomorian
@@ -343,6 +348,9 @@ partholonian = {
 	negate_health_penalty_add = -0.25
 	stewardship = 2
 	development_growth_factor = 0.1
+	
+	opposite_opinion = -10
+	same_opinion = 5
 	
 	ruler_designer_cost = 5
 
@@ -493,6 +501,9 @@ nemedian = {
 	monthly_county_control_change_factor = 1
 	controlled_province_advantage = 5
 	
+	opposite_opinion = -10
+	same_opinion = 5
+	
 	ruler_designer_cost = 5
 
 	desc = {
@@ -642,6 +653,8 @@ fir_bolg = {
 	prowess = 4
 	martial = 2
 	monthly_prestige = 1
+	
+	opposite_opinion = -10
 	
 	ruler_designer_cost = 5
 
@@ -795,6 +808,8 @@ tuatha_de_danann = {
 	life_expectancy = 100
 	levy_reinforcement_rate = 0.1
 	monthly_lifestyle_xp_gain_mult = -0.25
+	
+	opposite_opinion = -10
 	
 	ruler_designer_cost = 5
 
@@ -956,6 +971,7 @@ milesian = {
 	monthly_dynasty_prestige_mult = 0.05
 	stress_gain_mult = 0.1
 	
+	opposite_opinion = -10
 	
 	ruler_designer_cost = 5
 
@@ -1105,6 +1121,8 @@ celtic_human = {
 	physical = yes
 	monthly_piety_gain_mult = 0.1
 	
+	opposite_opinion = -15
+	same_opinion = 5
 	
 	ruler_designer_cost = 5
 
@@ -1250,6 +1268,9 @@ megalith_human = {
 	physical = yes
 	negate_health_penalty_add = 0.25
 	stress_gain_mult = 0.1
+	
+	same_opinion = 10
+	opposite_opinion = -15
 	
 	ruler_designer_cost = 5
 
@@ -1467,6 +1488,8 @@ hy_brazylian = {
 	supply_capacity_add = 20
 	life_expectancy = -10
 	
+	opposite_opinion = -15
+	
 	ruler_designer_cost = 5
 
 	desc = {
@@ -1617,6 +1640,9 @@ latin_human = {
 	diplomacy = 2
 	build_gold_cost = -0.3
 	
+	opposite_opinion = -15
+	same_opinion = 10
+	
 	ruler_designer_cost = 5
 
 	desc = {
@@ -1748,6 +1774,9 @@ aggresive_fighter = {
 		cunning_fighter
 	}
 	
+	prowess = 4
+	army_damage_mult = 0.05
+	
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -1769,6 +1798,9 @@ defensive_fighter = {
 		aggresive_fighter
 		cunning_fighter
 	}
+	
+	prowess = 4
+	army_toughness_mult = 0.05
 	
 	shown_in_ruler_designer = no
 
@@ -1793,6 +1825,10 @@ cunning_fighter = {
 		aggresive_fighter
 		defensive_fighter
 	}
+	
+	prowess = 4
+	army_screen_mult = 0.05
+	army_pursuit_mult = 0.05
 	
 	shown_in_ruler_designer = no
 
@@ -1832,6 +1868,27 @@ wolfwalker = {
 				desc = trait_wolfwalker_desc
 			}
 			desc = trait_wolfwalker_character_desc
+		}
+	}
+}
+
+outlaw = {
+	index = 1036
+	icon = outlaw.dds
+	
+	general_opinion = -15
+	
+	shown_in_ruler_designer = no
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_outlaw_desc
+			}
+			desc = trait_outlaw_character_desc
 		}
 	}
 }

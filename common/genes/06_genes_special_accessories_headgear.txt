@@ -335,8 +335,8 @@ accessory_genes = {
 				#1 = male_headgear_secular_dde_hre_nobility_02
             }
             female = {
-#                20 = empty
-#                1 = female_headgear_secular_dde_hre_nobility_01
+			#20 = empty
+			#1 = female_headgear_secular_dde_hre_nobility_01
             }
             boy = male
             girl = female
@@ -820,21 +820,6 @@ accessory_genes = {
             girl = female
 		}
 
-
-		#religious_dde_catholic = {
-		#	index = 57
-		#	male = {
-		#		1 = male_headgear_religious_dde_catholic_high_01
-		#		
-		#	}
-		#	female = {
-		#	#	1 = female_headgear_religious_dde_catholic_high_01
-		#		
-		#	}
-		#	boy = male
-        #    girl = female
-		#}
-
 		religious_catholic_devoted = {
 			index = 58
 			male = {
@@ -946,20 +931,6 @@ accessory_genes = {
 			boy = male
             girl = female
 		}
-
-		#religious_dde_muslim_high = {
-		#	index = 66
-		#	male = {
-		#		1 = male_headgear_religious_dde_muslim_high_01
-		#		
-		#	}
-		#	female = {
-		#		1 = female_headgear_secular_mena_royalty_01
-		#		
-		#	}
-		#	boy = male
-        #    girl = female
-		#}
 
 		religious_african_high = {
 			index = 67
@@ -1106,6 +1077,16 @@ accessory_genes = {
 			}
 			boy = male
             girl = female
+		}
+		#Tales of ireland
+		Corinthian_mesh = { # For commoners to use, non-gilded version only
+			index = 78
+			male = {
+				1 = Corinthian_entity
+			}
+			female = {
+				1 = Corinthian_entity
+			}
 		}
 
 	}

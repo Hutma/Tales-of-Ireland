@@ -1,0 +1,414 @@
+﻿#Declare someone outlaw (by the high king)
+declare_outlaw_interaction = {
+	category = interaction_category_hostile
+	interface_priority = 60
+
+	desc = declare_outlaw_interaction_desc
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+
+		scope:actor = {
+			has_title = title:k_high_kingship
+		}
+		scope:recipient = {
+			NOT = {
+				has_trait = outlaw
+			}
+			is_landed = yes
+			is_independent_ruler = yes
+			capital_province = { geographical_region = ireland_region }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = need_greater_prestige_than_target
+			scope:actor.prestige_level >= scope:recipient.prestige_level
+		}
+		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		scope:recipient = {
+			is_adult = yes
+		}
+		scope:recipient = {
+			NOT = {
+				has_character_modifier = repented_outlaw
+			}
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = {
+			hidden_effect = {
+				send_interface_toast = {	
+					title = declare_outlaw_interaction_desc.tt
+					left_icon = scope:recipient
+					scope:recipient = {
+						show_as_tooltip = { add_trait = outlaw }
+					}
+				}
+			}
+			stress_impact = {
+				forgiving = minor_stress_impact_gain
+				compassionate = minor_stress_impact_gain
+				vengeful = minor_stress_impact_loss
+			}
+		}
+		scope:recipient = {
+			add_trait = outlaw
+			hidden_effect = { #Nudge towards rivalry
+				if = {
+					limit = {
+						NOR = {
+							has_relation_rival = scope:actor
+							has_relation_potential_rival = scope:actor
+						}
+					}
+					set_relation_potential_rival = scope:actor
+				}
+				send_interface_toast = {	
+					title = you_are_declare_outlaw_interaction_desc.tt
+					left_icon = scope:recipient
+					scope:recipient = {
+						show_as_tooltip = { add_trait = outlaw }
+					}
+				}
+			}
+			add_opinion = {
+				modifier = hate_opinion
+				opinion = -80
+				target = scope:actor
+			}
+		}
+	}
+
+	cost = {
+		prestige = {
+			value = {
+				min = 200
+				add = 800
+				if = {
+					limit = {
+						scope:recipient = {
+							highest_held_title_tier = 4
+						}
+					}
+					add = 500
+				}
+				if = {
+					limit = {
+						scope:actor = {
+							max_military_strength >= scope:recipient.max_military_strength
+						}
+					}
+					add = -200
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							is_at_war_with = scope:actor
+						}
+					}
+					add = -500
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							has_truce = scope:actor
+						}
+					}
+					add = -200
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							prestige_level < 2
+						}
+					}
+					add = -200
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							piety_level < 1
+						}
+					}
+					add = -100
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							piety_level < 1
+						}
+					}
+					add = -100
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							OR = {
+								has_trait = deviant 
+								has_trait = adulterer
+								has_trait = fornicator
+								has_trait = kinslayer_1
+								has_trait = kinslayer_2
+								has_trait = kinslayer_3
+								has_trait = incestuous
+								has_trait = sodomite
+								has_trait = witch
+								has_trait = cannibal
+								has_trait = murderer
+							}
+						}
+					}
+					add = -200
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_targets = {
+		ai_recipients = scripted_relations
+		ai_recipients = primary_war_enemies
+	}
+	
+	ai_frequency = 36
+
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+		
+		modifier = {
+			add = 60
+			scope:recipient = {
+				is_at_war_with = scope:actor
+			}
+		}
+		
+		modifier = {
+			add = 5
+			ai_vengefulness >= medium_positive_ai_value
+			OR = {
+				AND = {
+					scope:recipient = {
+						has_trait = incestuous
+					}
+					NOT = { is_incestuous_trigger = yes }
+					trait_is_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = kinslayer
+					}
+					NOT = { has_trait = kinslayer }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = adulterer
+					}
+					NOR = {
+						has_trait = adulterer
+						has_trait = fornicator
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = fornicator
+					}
+					NOR = {
+						has_trait = adulterer
+						has_trait = fornicator
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = deviant
+					}
+					NOT = {
+						is_deviant_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = deviant FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = witch
+					}
+					NOT = {
+						is_witch_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = witch FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = sodomite
+					}
+					NOR = {
+						has_trait = sodomite
+						any_secret = {
+							secret_type = secret_homosexual
+						}
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = cannibal
+					}
+					NOT = {
+						is_cannibal_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+	}
+}
+
+repented_outlaw_interaction = {
+	category = interaction_category_friendly
+	interface_priority = 60
+
+	desc = repented_outlaw_interaction_desc
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+
+		scope:recipient = {
+			has_title = title:k_high_kingship
+		}
+		scope:actor = {
+			has_trait = outlaw
+			is_landed = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = repented_outlaw_requirements
+			OR = {
+				scope:actor.prestige_level > scope:recipient.prestige_level
+				scope:actor.piety_level > 1
+				scope:actor.prestige_level > 2
+			}
+			scope:actor.capital_county.development_level > 10
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			add_character_modifier = {
+				modifier = repented_outlaw
+				years = 25
+			}
+			remove_trait = outlaw
+			capital_county = {
+				change_development_level = -10
+			}
+			hidden_effect = {
+				send_interface_toast = {	
+					title = you_repented_outlaw_interaction_desc.tt
+					left_icon = scope:actor
+					scope:actor = {
+						show_as_tooltip = { 
+							remove_trait = outlaw
+							capital_county = {
+								change_development_level = -10
+							}
+						}
+					}
+				}
+			}
+		}
+
+		scope:recipient = {
+			capital_county = {
+				change_development_level = 10
+			}
+			send_interface_toast = {	
+				title = repented_outlaw_interaction_desc.tt
+				left_icon = scope:actor
+			}
+		}
+	}
+
+	cost = {
+		prestige = {
+			value = 200
+			
+			if = {
+				limit = {
+					scope:recipient = {
+						prestige_level > 1
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						prestige_level > 2
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						prestige_level > 3
+					}
+				}
+				add = 100
+			}
+		}
+	}
+	
+	auto_accept = yes
+	
+	ai_potential = {
+		is_adult = yes
+	}
+
+	ai_targets = {
+		ai_recipients = scripted_relations
+		ai_recipients = primary_war_enemies
+		ai_recipients = neighboring_rulers
+	}
+	
+	ai_frequency = 36
+
+	ai_will_do = {
+		base = 80
+	}
+}

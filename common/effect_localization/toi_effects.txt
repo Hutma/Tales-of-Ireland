@@ -24,3 +24,21 @@ a_claim_in_manx_decision_random_manx_county = {
 	third = A_CLAIM_IN_MANX_DECISION_RANDOM_MANX_COUNTY_GLOB
 	third_past = A_CLAIM_IN_MANX_DECISION_RANDOM_MANX_COUNTY_GLOB
 }
+
+something_bad_happens_magic = {
+	global = SOMETHING_BAD_HAPPENS_MAGIC
+	global_past = SOMETHING_BAD_HAPPENS_MAGIC
+	first = SOMETHING_BAD_HAPPENS_MAGIC
+	first_past = SOMETHING_BAD_HAPPENS_MAGIC
+	third = SOMETHING_BAD_HAPPENS_MAGIC
+	third_past = SOMETHING_BAD_HAPPENS_MAGIC	
+}
+
+you_ask_the_sidhe_to_change_you = {
+	global = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU
+	global_past = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU
+	first = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU
+	first_past = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU
+	third = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU
+	third_past = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU	
+}

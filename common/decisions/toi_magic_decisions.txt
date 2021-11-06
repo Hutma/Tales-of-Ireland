@@ -1,0 +1,38 @@
+﻿leave_fintan_form_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	major = yes
+	ai_check_interval = 150
+	
+	desc = leave_fintan_form_decision_desc
+
+
+	is_shown = {
+		has_character_modifier = fintan_form
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		always = yes
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		remove_character_modifier = fintan_form
+		add_stress = 45
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}

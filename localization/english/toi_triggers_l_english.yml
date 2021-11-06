@@ -1,2 +1,8 @@
 ﻿l_english:
  NOT_IS_PRIMARY_HEIR_OF_CHARACTER_TRIGGER:0 "Not the primary heir"
+ BE_IN_FEAST_TRIGGER:0 "Must be in a feast"
+ HAVE_NO_CHILD_TRIGGER:0 "Must not have any child"
+ TWO_YEARS_BETWEEN_CAST_TRIGGER:0 "Two years cooldown"
+ NOT_MY_STRESS_LEVEL_IS_LESS_THAN: "Less than 1 stress level"
+ NOT_HAS_BLESSED_CATTLE_ALREADY: "This county is alrady blessed"
+ YOU_ARE_NOT_WOUNDED: "You are not wounded"

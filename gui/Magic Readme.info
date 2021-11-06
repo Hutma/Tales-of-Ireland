@@ -1,0 +1,46 @@
+####################################
+###     Implementing Magic       ###
+###          README              ###
+###        by Caden335           ###
+####################################
+
+##### INDEX OF THIS FILE #####
+Implementation:
+1. How to implement this
+2. Finishing the system
+
+Additions:
+3. How to add a new spell to the system
+
+File References:
+4. Files
+
+##### Implementation ######
+### 1. How to implement this
+# You should just be able to copy the contents of the folder into your mod folder. There may be some files that you will have to overwrite but they will all be edited versions of what you already have, and you should be able to replace all files.
+
+### 2. Finalizing the system
+# You will need to add the effects of the spells to 'common/scripted_guis/magic_scripted_gui.txt' and the requirements in 'common/scripted_triggers/magic_base_triggers.txt'
+# You will also need to add the specific magic usage for said spells in 'common/script_values/magic_cost_values.txt'
+# I would edit the magician traits
+# There are three categories per spells: those which target you, those which target other people, and those which target titles. If you want to change what's in each category, it's in scripted_effects. Just change the list it's added to.
+
+##### Additions #####
+### 3. How to add a new spell to the system
+# In 'common/scripted_effects/magic_base_effects.txt' add an entry to one of the category lists
+# Add a name for said spell in 'localization/english/magic_gui_|_english.yml'
+# In 'common/script_values/magic_cost_values.txt' add an entry for the magic usage of the spell
+# Add the requirements for the spell in 'common/scripted_triggers/magic_base_triggers.txt'
+# Finally, in 'common/scripted_guis/magic_scripted_gui.txt' add an entry for your new spell. I suggest just copy an existing one and edit as needed
+
+##### File References #####
+### 4. Files
+# common/on_action/magic_on_actions.txt: Initializes the spell lists on start, deals with magic decay, and has the unique gain chances for the magician traits
+# common/script_values/magic_cost_values.txt: The magic usage for all spells
+# common/scripted_guis/magic_scripted_gui.txt: Contains a few selection scripted guis as well as the unique effects for each spell
+# common/scripted_effects/magic_base_effects.txt: Holds the location for the base lists of spells and spell categories
+# common/scripted_triggers/magic_base_triggers.txt: Tests for if spells are learned/valid
+# common/traits/toi_magician_traits.txt: Holds the magician traits.
+# gui/hud.gui: Contains the button to open the window
+# gui/window_magic.gui: The window UI. Be warned, I did abuse Concatenate and variable systems in here
+# localization/english/magic_gui_|_english.yml: Stores all the loc

@@ -177,6 +177,13 @@ Veiled_in_Light = {
 	is_prioritized_mood = yes
 	
 }
+
+mx_cue_uniting_ireland = {
+	music = "file:/music/mx_cue_uniting_ireland.mp3"
+	weight = 25
+	# play every time
+}
+
 ###FIR BOLGS
 Tales_of_Ireland_fir_bolg_one = {
 	music = "file:/music/Tales_of_Ireland_fir_bolg_one.mp3"
@@ -192,6 +199,12 @@ Tales_of_Ireland_fir_bolg_one = {
 			faith = faith:ancient_greek_slave
 		}
 	}
+}
+
+mx_cue_magic = {
+	music = "file:/music/mx_cue_magic.mp3"
+	weight = 25
+	# play every time
 }
 
 ###end TALES OF IRELAND mod ###

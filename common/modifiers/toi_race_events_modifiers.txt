@@ -80,3 +80,10 @@ fomorian_chosen_modifier = {
 	max_combat_roll = 5
 	prowess = 2
 }
+
+invader_modifier = {
+	icon = prowess_positive
+	ai_war_chance = 1
+	ai_zeal = 1
+	monthly_prestige = 0.2
+}

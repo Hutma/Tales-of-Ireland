@@ -1,5 +1,5 @@
 ﻿260000 = {
-    name = "Lóegaire"
+    name = "LO_egaire"
     dynasty =  70 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -180,7 +180,7 @@
     }
 }
 260007 = {
-    name = "Óengus"
+    name = "O_engus"
     dynasty =  63 
     religion = milesian_paganism
     culture = eremon_milesians
@@ -408,7 +408,7 @@
     }
 }
 265001 = {
-    name = "Énna"
+    name = "E_nna"
     dynasty =  61 
     religion = milesian_paganism
     culture = eremon_milesians

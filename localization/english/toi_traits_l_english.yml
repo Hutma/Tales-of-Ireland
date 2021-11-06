@@ -133,3 +133,6 @@
  trait_wolfwalker_desc:0 "The wolfwalkers are mythological half-wolf people, the wolfwalkers have an inner wolf that appears when they fall asleep. They can easily heal their wounds and command the other wolves."
  trait_wolfwalker_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Wolfwalker. The wolfwalkers are mythological half-wolf people, the wolfwalkers have an inner wolf that appears when they fall asleep. They can easily heal their wounds and command the other wolves."
  
+ trait_outlaw:0 "Outlaw"
+ trait_outlaw_desc:0 "This character has been declared Outlaw by the [high_king|E]."
+ trait_outlaw_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been declared Outlaw by the [high_king|E]. Because of this any neighboring ruler can attack [ROOT.GetCharacter.GetGetHerHim] and conquer [ROOT.GetCharacter.GetGetHerHim] lands."

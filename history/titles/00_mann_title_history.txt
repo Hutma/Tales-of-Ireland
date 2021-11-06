@@ -57,7 +57,8 @@ c_doolish  = {
 c_kione_droghad  = {
               1.1.1 = { change_development_level = 13 }
               4799.1.1 = {
-                            holder = 2000004
+                            liege = d_medall
+							holder = 2000010
               }
 }
 

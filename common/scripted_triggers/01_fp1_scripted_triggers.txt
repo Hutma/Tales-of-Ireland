@@ -6,15 +6,15 @@ eligible_for_fp1_dynasty_legacies_trigger = {
 	has_fp1_dlc_trigger = yes
 	OR = {
 		# Technically, we could hardscript this to North Germanics/Normans/Estonians, but eh.
-		culture = { has_innovation = innovation_longboats }
+		#culture = { has_innovation = innovation_longboats }
 		# Converts should also get a chance to get in on the fun.
-		religion = religion:germanic_religion
+		religion = religion:northern_legacy_religion
 	}
 }
 
 fp1_can_raise_stele_trigger = {
 	OR = {
-		culture_group = culture_group:north_germanic_group
+		culture_group = culture_group:toi_partholonian_group
 		has_character_modifier = embraced_local_traditions_modifier
 	}
 	culture = {
@@ -23,7 +23,7 @@ fp1_can_raise_stele_trigger = {
 }
 
 fp1_can_raise_stele_title_scope_trigger = {
-	culture_group = culture_group:north_germanic_group
+	culture_group = culture_group:toi_partholonian_group
 	culture = {
 		NOT = { has_cultural_era_or_later = culture_era_high_medieval }
 	}
@@ -188,21 +188,15 @@ fp1_valid_county_for_jomsvikings_trigger = {
 # Achievement Triggers
 
 fp1_achievement_culture_norse_trigger = {
-	OR = {
-		culture_group = culture_group:north_germanic_group
-		culture = culture:norman
-	}
+	always = no
 }
 
 fp1_achievement_culture_norse_or_rus_trigger = {
-	OR = {
-		fp1_achievement_culture_norse_trigger = yes
-		culture = culture:russian
-	}
+	always = no
 }
 
 fp1_achievement_religious_norse_trigger = {
-	religion = religion:germanic_religion
+	always = no
 }
 
 fp1_achievement_culture_plus_religion_norse_trigger = {

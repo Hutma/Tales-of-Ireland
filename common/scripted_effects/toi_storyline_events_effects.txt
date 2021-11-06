@@ -59,6 +59,9 @@ hy_brasylian_invasion_effect = {
 	}
 	scope:hy_brazilan_invader = {
 		add_gold = 100
+		add_character_modifier = {
+			modifier = invader_modifier
+		}
 	}
 	#Find a target
 	every_county_in_region = {
@@ -105,6 +108,13 @@ hy_brasylian_invasion_effect = {
 		list = hy_brasil_targets_list
 		save_scope_as = adventurer_target
 	}
+	
+	#Give the adventurer culture the innovations of the target
+	scope:adventurer_target.culture = { save_scope_as = target_culture }
+	culture:hy_brazylian_culture = {
+		get_all_innovations_from = scope:target_culture
+	}
+	
 	#Give the adventurer a dynamic title to tide them over.
 	create_dynamic_title = {
 		tier = duchy
@@ -173,7 +183,6 @@ hy_brasylian_invasion_effect = {
 					add = scope:adventurer_target.holder.top_liege.primary_title.tier
 				}
 			}
-			inheritable = no
 			uses_supply = no
 			location = title:b_kilronan.title_province
 			name = hy_brasil_adventurers_event_troops
@@ -239,6 +248,9 @@ fianna_invasion_effect = {
 	scope:fianna_invader = {
 		add_gold = 300
 		add_prestige = 5000
+		add_character_modifier = {
+			modifier = invader_modifier
+		}
 	}
 	#Give the adventurer a dynamic title to tide them over.
 	create_dynamic_title = {
@@ -321,7 +333,6 @@ fianna_invasion_effect = {
 					value = 2
 				}
 			}
-			inheritable = no
 			uses_supply = no
 			location = scope:starting_location.title_province
 			name = fianna_army_event_troops
@@ -335,6 +346,7 @@ fianna_invasion_effect = {
 }
 
 fianna_minor_invasion_effect = {
+	#find target
 	every_independent_ruler = {
 		limit = {
 			AND = {
@@ -374,6 +386,7 @@ fianna_minor_invasion_effect = {
 	scope:starting_location.kingdom = {
 		save_scope_as = kingdom_target
 	}
+	
 	#Create invader
 	create_character = {
 		age = { 20 40 }
@@ -391,6 +404,9 @@ fianna_minor_invasion_effect = {
 	scope:fianna_invader = {
 		add_gold = 150
 		add_prestige = 3000
+		add_character_modifier = {
+			modifier = invader_modifier
+		}
 	}
 	#Give the adventurer a dynamic title to tide them over.
 	create_dynamic_title = {
@@ -473,7 +489,6 @@ fianna_minor_invasion_effect = {
 					value = 1
 				}
 			}
-			inheritable = no
 			uses_supply = no
 			location = scope:starting_location.title_province
 			name = hy_brasil_adventurers_event_troops
@@ -510,6 +525,13 @@ roman_invasion_scripted_effect = {
 	scope:starting_location.kingdom = {
 		save_scope_as = kingdom_target
 	}
+	
+	#Give the adventurer culture the innovations of the target
+	scope:selected_county.culture = { save_scope_as = target_culture }
+	culture:roman = {
+		get_all_innovations_from = scope:target_culture
+	}
+	
 	#Create invaders
 	create_character = {
 		name = "Gnaeus"
@@ -529,6 +551,9 @@ roman_invasion_scripted_effect = {
 	scope:martial_roman = {
 		add_gold = 800
 		add_prestige = 10000
+		add_character_modifier = {
+			modifier = invader_modifier
+		}
 	}
 	#Give the adventurer a dynamic title to tide them over.
 	create_dynamic_title = {
@@ -611,7 +636,6 @@ roman_invasion_scripted_effect = {
 					value = 6
 				}
 			}
-			inheritable = no
 			uses_supply = no
 			location = scope:starting_location.title_province
 			name = roman_army_event_troops
@@ -671,6 +695,9 @@ roman_invasion_scripted_effect = {
 	scope:diplo_roman = {
 		add_gold = 800
 		add_prestige = 10000
+		add_character_modifier = {
+			modifier = invader_modifier
+		}
 	}
 	#Give the adventurer a dynamic title to tide them over.
 	create_dynamic_title = {
@@ -753,7 +780,6 @@ roman_invasion_scripted_effect = {
 					value = 4
 				}
 			}
-			inheritable = no
 			uses_supply = no
 			location = scope:starting_location.title_province
 			name = roman_army_event_troops

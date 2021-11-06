@@ -58,7 +58,7 @@ toi_lifestyle_event.0002 = {
     }
     option = { #Collect our harvest and prepare the fire
         name = toi_lifestyle_event.0002.a
-        add_gold = 50
+        remove_short_term_gold = 25
         capital_county = {
             change_development_level = { 4 8 }
         }

@@ -1,0 +1,17 @@
+﻿need_greater_prestige_than_target = {
+	first = need_greater_prestige_than_target
+	first_not = need_greater_prestige_than_target
+	global = need_greater_prestige_than_target
+	global_not = need_greater_prestige_than_target
+	third = need_greater_prestige_than_target
+	third_not = need_greater_prestige_than_target
+}
+
+repented_outlaw_requirements = {
+	first = repented_outlaw_requirements
+	first_not = repented_outlaw_requirements
+	global = repented_outlaw_requirements
+	global_not = repented_outlaw_requirements
+	third = repented_outlaw_requirements
+	third_not = repented_outlaw_requirements
+}

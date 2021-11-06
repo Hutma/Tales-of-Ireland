@@ -1,0 +1,473 @@
+﻿# Valid scopes: root is the spellcaster, var:spell_target the target
+summon_sidhe_child_requirements = {
+	custom_description = {
+		text = have_no_child_trigger
+		any_child = {
+			count = 0
+		}
+	}
+	NOT = {
+		has_character_modifier = asked_sidhe_for_child
+	}
+}
+summon_sidhe_advisor_requirements = {
+	custom_description = {
+		text = two_years_between_cast_trigger
+		NOT = {
+			has_character_flag = called_sidhe_advisor
+		}
+	}
+}
+summon_sidhe_feast_requirements = {
+	custom_description = {
+		text = be_in_feast_trigger
+		in_activity_type = activity_feast
+	}
+	piety_level >= 2
+}
+summon_magical_army_requirements = {
+	NOT = {
+		has_character_modifier = slow_magic_troops
+	}
+}
+summon_magical_siege_engine_requirements = {
+	always = yes
+}
+command_the_wind_requirements = {
+	piety_level >= 2
+}
+hidden_blade_requirements = {
+	dread >= 10
+}
+hidden_eye_requirements = {
+	stress_level < 1
+}
+hidden_aura_requirements = {
+	piety_level >= 2
+}
+extend_lifespan_requirements = {
+	NOT = {
+		has_character_modifier = extended_life
+	}
+}
+channel_giant_strength_requirements = {
+	NOT = {
+		has_character_modifier = giant_strenght
+	}
+}
+exchange_your_talents_requirements = {
+	NOT = {
+		OR = {
+			has_character_modifier = exchanged_skills_learning
+			has_character_modifier = exchanged_skills_martial
+			has_character_modifier = exchanged_skills_stewardship
+			has_character_modifier = exchanged_skills_intrigue
+			has_character_modifier = exchanged_skills_diplo
+			has_character_flag = cast_exchange_recently
+		}
+	}
+}
+sidhe_speechcraft_requirements = {
+	NOT = {
+		has_character_modifier = sidhe_speechcraft_modifier
+	}
+}
+heal_wounds_requirements = {
+	custom_description = {
+		text = you_are_not_wounded
+		OR = {
+			has_trait = wounded_1
+			has_trait = wounded_2
+			has_trait = wounded_3		
+		}
+	}
+}
+inflict_wounds_requirements = {
+	AND = {
+		piety_level >= var:spell_target.piety_level
+	
+		var:spell_target = {
+			NOT = {
+				OR = {
+					has_trait = wounded_1
+					has_trait = wounded_2
+					has_trait = wounded_3	
+				}
+			}
+		}
+	}
+}
+inflict_terror_requirements = {
+	OR = {
+		var:spell_target = {
+			NOT = {
+				has_character_flag = has_been_terrified
+			}
+		}
+		var:spell_target = {
+			stress_level < 1
+		}
+		AND = {
+			var:spell_target = {
+				stress_level > 1
+			}
+			OR = {
+				piety_level >= var:spell_target.piety_level
+				piety_level >= 2
+			}
+		}
+		AND = {
+			var:spell_target = {
+				stress_level > 2
+			}
+			piety_level >= 4
+		}
+	}
+}
+inflict_pestilence_requirements = {
+	NOT = {
+		has_character_flag = has_been_pestilenced
+	}
+}
+hostile_whispers_requirements = {
+	NOT = {
+		has_character_modifier = bad_wishpers
+	}
+}
+captivate_mind_requirements = {
+	OR = {
+		root = var:spell_target
+		AND = {
+			OR = {
+				piety_level >= var:spell_target.piety_level
+				piety_level >= 3
+			}
+			NOT = {
+				var:spell_target = {
+					OR = {
+						has_trait = magician_good_1
+						has_trait = magician_good_2
+						has_trait = magician_good_3
+					}
+				}
+			}
+		}
+	}
+}
+bless_the_cattle_requirements = {
+	custom_description = {
+		text = not_has_blessed_cattle_already
+		var:spell_target = {
+			NOT = {
+				has_county_modifier = blessed_cattle
+			}
+		}
+	}
+}
+multiply_herds_requirements = {
+	piety_level >= 2
+}
+
+#Cessarian
+fintan_transformation_requirements = {
+	NOT = {
+		has_character_modifier = fintan_form
+	}
+}
+deer_form_requirements = {
+	NOT = {
+		has_character_modifier = deer_form
+	}
+}
+flood_realm_requirements = {
+	piety_level >= 2
+}
+mark_of_cain_requirements = {
+	OR = {
+		root = var:spell_target
+		var:spell_target = {
+			has_relation_rival = root
+		}
+	}
+}
+serpent_bite_requirements = {
+	OR = {
+		root = var:spell_target
+		var:spell_target = {
+			piety_level < 2
+		}
+	}
+}
+garden_eden_requirements = {
+	piety_level >= 3
+}
+
+#Fomorian
+call_sea_armies_requirements = {
+	NOT = {
+		has_character_flag = has_called_sea_armies
+	}
+}
+call_underground_ridri_requirements = {
+	NOT = {
+		has_character_flag = has_called_sea_ridri
+	}
+}
+fomorian_transformation_requirements = {
+	piety_level >= 2
+	var:spell_target = {
+		is_imprisoned_by = root
+		is_adult = no
+		NOT = {
+			has_trait = fomorian
+		}
+	}
+}
+destroy_essence_requirements = {
+	var:spell_target = {
+		OR = {
+			has_trait = magician_good_1
+			has_trait = magician_good_2
+			has_trait = magician_good_3
+		}
+	}
+}
+blood_moon_requirements = {
+	var:spell_target = {
+		is_imprisoned_by = root
+	}
+}
+omen_of_opression_requirements = {
+	var:spell_target = {
+		NOT = {
+			has_character_modifier = omen_of_opression_modifier
+		}
+	}
+}
+
+#Tuatha de danann
+healing_secret_requirements = {
+	always = yes
+}
+silverarmed_requirements = {
+	OR = {
+		has_trait = one_legged
+		has_trait = scarred
+		has_trait = wounded_3
+	}
+}
+dagda_cauldron_requirements = {
+	piety_level >= 2
+}
+lugh_strenght_requirements = {
+	NOT = {
+		has_character_flag = called_lugh_strength
+	}
+}
+call_light_requirements = {
+	NOT = {
+		has_character_flag = called_light_recently
+	}
+}
+lost_knowledge_requirements = {
+	NOT = {
+		has_character_flag = lost_knowledge_modifier
+	}
+}
+summon_new_tribe_requirements = {
+	NOT = {
+		has_character_flag = called_new_tribe_recently
+	}
+	var:spell_target = {
+		is_landed = yes
+		is_independent_ruler = yes
+		NOT = {
+			has_trait = tuatha_de_danann
+		}
+	}
+}
+
+#Megalithic
+sacred_building_requirements = {
+	NOT = {
+		has_character_modifier = sacred_building_modifier
+	}
+}
+suns_chosen_requirements = {
+	NOT = {
+		has_character_modifier = suns_chosen_modifier
+	}
+}
+hunting_spirits_requirements = {
+	NOT = {
+		has_character_flag = recent_hunting_spirit
+	}
+}
+
+#Partholonian
+rune_words_requirements = {
+	always = yes
+}
+protective_amulet_requirements = {
+	NOT = {
+		has_character_modifier = protective_amulet_modifier
+	}
+}
+greek_astrology_requirements = {
+	always = yes
+}
+cursed_tablet_requirements = {
+	NOT = {
+		var:spell_target = {
+			has_character_modifier = cursed_tablet_modifier
+		}
+	}
+}
+partholonian_plague_requirements = {
+	NOT = {
+		var:spell_target = {
+			has_character_modifier = weak_body
+		}
+	}
+}
+
+#Nemedian
+sidhe_agriculture_requirements = {
+	always = yes
+}
+blessed_family_requirements = {
+	NOT = {
+		has_character_modifier = blessed_family_modifier
+	}
+}
+nemedian_union_requirements = {
+	NOT = {
+		has_character_modifier = nemedian_union_modifier
+	}
+}
+nemed_seduction_requirements = {
+	NOT = {
+		has_character_flag = has_nemed_seduced_recently
+	}
+}
+
+#Fir Bolg
+srengs_strenght_requirements = {
+	always = yes
+}
+fir_bolg_endurance_requirements = {
+	NOT = {
+		has_character_modifier = fir_bolg_endurance_modifier
+	}
+}
+men_of_bags_requirements = {
+	NOT = {
+		has_character_modifier = men_of_bags_modifier
+	}
+}
+heavy_lifters_requirements = {
+	NOT = {
+		has_character_modifier = heavy_lifters_modifier
+	}
+}
+united_in_defiance_requirements = {
+	NOT = {
+		has_character_flag = recently_united_in_defiance
+	}
+}
+
+#Milesians
+path_of_destiny_requirements = {
+	highest_held_title_tier <= 3
+	OR = {
+		is_independent_ruler = yes
+		NOT = {
+			liege = {
+				has_trait = milesian
+			}
+		}
+	}
+}
+realm_ceremony_requirements = {
+	always = yes
+}
+enchant_bedroooms_requirements = {
+	NOT = {
+		has_character_modifier = enchant_bedroooms_modifier
+	}
+}
+
+#Celts
+druidic_intersessions_requirements = {
+	NOT = {
+		has_character_modifier = druidic_intersessions_modifier
+	}
+}
+magic_paintings_requirements = {
+	NOT = {
+		has_character_modifier = magic_paintings_modifier
+	}
+}
+befriend_the_morrigan_requirements = {
+	NOT = {
+		has_character_modifier = befriend_the_morrigan_modifier
+	}
+}
+settle_power_requirements = {
+	NOT = {
+		has_character_modifier = settle_power_modifier
+	}
+}
+influence_culture_requirements = {
+	OR = {
+		var:spell_target = {
+			NOT = {
+				this.culture = root.culture
+			}
+		}
+		root = var:spell_target
+	}
+}
+
+#Hy Brasilian
+mystical_craft_requirements = {
+	NOT = {
+		has_character_flag = spell_cooldown_five_years
+	}
+}
+two_worlds_requirements = {
+	NOT = {
+		has_character_flag = spell_cooldown_five_years
+	}
+}
+no_escape_curse_requirements = {
+	var:spell_target = {
+		NOT = {
+			has_character_flag = no_escape_curse_flag
+		}
+	}
+}
+brasil_fog_requirements = {
+	var:spell_target = {
+		NOT = {
+			has_character_flag = basil_fog_flag
+		}
+	}
+}
+magic_mist_requirements = {
+	var:spell_target = {
+		NOT = {
+			has_character_flag = magic_mist_flag
+		}
+	}
+}
+
+#Latin
+burn_incense_requirements = {
+	NOT = {
+		has_character_modifier = burn_incense_modifier
+	}
+}
+roman_astrology_requirements = {
+	always = yes
+}

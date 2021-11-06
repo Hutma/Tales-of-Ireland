@@ -150,8 +150,29 @@ pattern_textures = {
 pattern_textures = {
     name = "irish_tartan_01"
     colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_mask.dds"
-    normal        = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_normal.dds"
-    properties    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_properties.dds"
+    normal       = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_normal.dds"
+    properties   = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_01_properties.dds"
+}
+
+pattern_textures = {
+    name = "irish_tartan_02"
+    colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_02_mask.dds"
+    normal       = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_02_normal.dds"
+    properties   = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_02_properties.dds"
+}
+
+pattern_textures = {
+    name = "irish_tartan_03"
+    colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_03_mask.dds"
+    normal       = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_03_normal.dds"
+    properties   = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_03_properties.dds"
+}
+
+pattern_textures = {
+    name = "irish_tartan_04"
+    colormask    = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_04_mask.dds"
+    normal       = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_04_normal.dds"
+    properties   = "gfx/portraits/accessory_variations/textures/patterns/irish/tartan_04_properties.dds"
 }
 #TOI#
 
@@ -234,9 +255,9 @@ pattern_layout = {
 ##Tales of Ireland##
 pattern_layout = {
     name = "tartan_layout"    
-    scale         = { min = 0.1    max = 0.1 }
+    scale        = { min = 0.1    max = 0.1 }
     rotation     = { min = 0    max = 0 }    
-    offset         = { x = { min = 0    max = 0 }    y = { min = 0    max = 0 } }
+    offset       = { x = { min = 0    max = 0 }    y = { min = 0    max = 0 } }
 }
 ##TOI##
 
@@ -1350,6 +1371,45 @@ variation = {
     pattern = { 
         weight = 1
         r = { textures = "irish_tartan_01" layout = "tartan_layout" }
+        g = { textures = "western_linen_trim_02" layout = "edge_trim_layout" }
+        b = { textures = "western_silk_trim_04" layout = "small_trim_layout" }
+        a = { textures = "western_wool_belt_01"    layout = "small_trim_layout" }
+    }    
+
+    color_palette = { weight = 1        texture = "gfx/portraits/accessory_variations/textures/color_palette_western_nobility_high_01.dds" }    
+}
+
+variation = {
+    name = "tartan_set_02"
+    pattern = { 
+        weight = 1
+        r = { textures = "irish_tartan_02" layout = "tartan_layout" }
+        g = { textures = "western_linen_trim_02" layout = "edge_trim_layout" }
+        b = { textures = "western_silk_trim_04" layout = "small_trim_layout" }
+        a = { textures = "western_wool_belt_01"    layout = "small_trim_layout" }
+    }    
+
+    color_palette = { weight = 1        texture = "gfx/portraits/accessory_variations/textures/color_palette_western_nobility_high_01.dds" }    
+}
+
+variation = {
+    name = "tartan_set_03"
+    pattern = { 
+        weight = 1
+        r = { textures = "irish_tartan_03" layout = "tartan_layout" }
+        g = { textures = "western_linen_trim_02" layout = "edge_trim_layout" }
+        b = { textures = "western_silk_trim_04" layout = "small_trim_layout" }
+        a = { textures = "western_wool_belt_01"    layout = "small_trim_layout" }
+    }    
+
+    color_palette = { weight = 1        texture = "gfx/portraits/accessory_variations/textures/color_palette_western_nobility_high_01.dds" }    
+}
+
+variation = {
+    name = "tartan_set_04"
+    pattern = { 
+        weight = 1
+        r = { textures = "irish_tartan_04" layout = "tartan_layout" }
         g = { textures = "western_linen_trim_02" layout = "edge_trim_layout" }
         b = { textures = "western_silk_trim_04" layout = "small_trim_layout" }
         a = { textures = "western_wool_belt_01"    layout = "small_trim_layout" }

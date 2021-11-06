@@ -65,9 +65,9 @@
 		#HealthGod
 		HealthGodName = celtic_health_god_name
 		HealthGodNamePossessive = celtic_health_god_name_possessive
-		HealthGodSheHe = CHARACTER_SHEHE_SHE
-		HealthGodHerHis = CHARACTER_HERHIS_HER
-		HealthGodHerHim = CHARACTER_HERHIM_HER
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
 		
 		#FertilityGod
 		FertilityGodName = celtic_fertility_god_name
@@ -79,51 +79,51 @@
 		#WealthGod
 		WealthGodName = celtic_wealth_god_name
 		WealthGodNamePossessive = celtic_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_SHE
-		WealthGodHerHis = CHARACTER_HERHIS_HER
-		WealthGodHerHim = CHARACTER_HERHIM_HER
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIS
 
 		#HouseholdGod
 		HouseholdGodName = celtic_household_god_name
 		HouseholdGodNamePossessive = celtic_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HER
-		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
 		#FateGod
 		FateGodName = celtic_fate_god_name
 		FateGodNamePossessive = celtic_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		#KnowledgeGod
 		KnowledgeGodName = celtic_knowledge_god_name
 		KnowledgeGodNamePossessive = celtic_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WarGod
 		WarGodName = celtic_war_god_name
 		WarGodNamePossessive = celtic_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_SHE
-		WarGodHerHis = CHARACTER_HERHIS_HER
-		WarGodHerHim = CHARACTER_HERHIM_HER
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
 
 		#TricksterGod
 		TricksterGodName = celtic_trickster_god_name
 		TricksterGodNamePossessive = celtic_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_HE
-		TricksterGodHerHis = CHARACTER_HERHIS_HIS
-		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		TricksterGodSheHe = CHARACTER_SHEHE_SHE
+		TricksterGodHerHis = CHARACTER_HERHIS_HER
+		TricksterGodHerHim = CHARACTER_HERHIM_HER
 
 		#NightGod
 		NightGodName = celtic_night_god_name
 		NightGodNamePossessive = celtic_night_god_name_possessive
-		NightGodSheHe = CHARACTER_SHEHE_HE
-		NightGodHerHis = CHARACTER_HERHIS_HIS
-		NightGodHerHim = CHARACTER_HERHIM_HIM
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
 
 		#WaterGod
 		WaterGodName = celtic_water_god_name
@@ -133,9 +133,9 @@
 		WaterGodHerHim = CHARACTER_HERHIM_HER
 
 
-		PantheonTerm = celtic_mother_earth_father_sky
+		PantheonTerm = celtic_the_gods
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { celtic_high_god_name celtic_good_god_father_sky celtic_good_god_ancestors }
+		GoodGodNames = { celtic_high_god_name celtic_good_god_ancestors }
 		DevilName = celtic_devil_name
 		DevilNamePossessive = celtic_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = celtic_religious_text
 		ReligiousHeadName = celtic_religious_head_title
 		ReligiousHeadTitleName = celtic_religious_head_title_name
-		DevoteeMale = celtic_devotee
-		DevoteeMalePlural = celtic_devoteeplural
-		DevoteeFemale = celtic_devotee
-		DevoteeFemalePlural = celtic_devoteeplural
-		DevoteeNeuter = celtic_devotee
-		DevoteeNeuterPlural = celtic_devoteeplural
-		PriestMale = celtic_priest
-		PriestMalePlural = celtic_priest_plural
-		PriestFemale = celtic_priest
-		PriestFemalePlural = celtic_priest_plural
-		PriestNeuter = celtic_priest
-		PriestNeuterPlural = celtic_priest_plural
+		DevoteeMale = celtic_devotee_male
+		DevoteeMalePlural = celtic_devotee_male_plural
+		DevoteeFemale = celtic_devotee_female
+		DevoteeFemalePlural = celtic_devotee_female_plural
+		DevoteeNeuter = celtic_devotee_male
+		DevoteeNeuterPlural = celtic_devotee_male_plural
+		PriestMale = celtic_priest_male
+		PriestMalePlural = celtic_priest_male_plural
+		PriestFemale = celtic_priest_female
+		PriestFemalePlural = celtic_priest_female_plural
+		PriestNeuter = celtic_priest_male
+		PriestNeuterPlural = celtic_priest_male_plural
 		AltPriestTermPlural = celtic_priest_alternate_plural
-		BishopMale = celtic_priest
-		BishopMalePlural = celtic_priest_plural
-		BishopFemale = celtic_priest
-		BishopFemalePlural = celtic_priest_plural
-		BishopNeuter = celtic_priest
-		BishopNeuterPlural = celtic_priest_plural
+		BishopMale = celtic_bishop_male
+		BishopMalePlural = celtic_bishop_male_plural
+		BishopFemale = celtic_bishop_female
+		BishopFemalePlural = celtic_bishop_female_plural
+		BishopNeuter = celtic_bishop_male
+		BishopNeuterPlural = celtic_bishop_male_plural
 		DivineRealm = celtic_divine_realm
 		PositiveAfterLife = celtic_divine_realm
 		NegativeAfterLife = celtic_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = celtic_death_deity_name_possessive
 		DeathDeitySheHe = celtic_devil_shehe
 		DeathDeityHerHis = celtic_death_deity_herhis
-		WitchGodName = witchgodname_celtic_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_celtic_the_morrigan
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+ 		WitchGodMotherFather = mother
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
@@ -188,7 +188,7 @@
 	faiths = {
 		the_old_gods = {
 			color = { 100 200 50 }
-			icon = custom_faith_3
+			icon = the_old_gods
 
 			holy_site = newgrange
 			holy_site = connemara

@@ -1,0 +1,72 @@
+﻿get_clan_derbfine = {
+	effect = {
+		root = {
+			clear_variable_list = clan_derbfine
+		}
+		dynasty.dynast = {
+			save_scope_as = clan_leader
+		}
+		scope:clan_leader = {
+			every_close_or_extended_family_member = {
+				limit = { this.dynasty = scope:clan_leader.dynasty }
+				save_scope_as = family_guy # Why not
+				root = {
+					add_to_variable_list = {
+						name = clan_derbfine
+						target = scope:family_guy
+					}
+				}
+			}
+		}	
+	}
+}
+
+get_clan_dynast_and_heir = {
+	effect = {
+		root = {
+			clear_variable_list = clan_dynast_and_heir
+		}
+		root = {
+			add_to_variable_list = {
+				name = clan_dynast_and_heir
+				target = root.dynasty.dynast
+			}
+		}
+		root = {
+			add_to_variable_list = {
+				name = clan_dynast_and_heir
+				target = root.dynasty.dynast.player_heir
+			}
+		}
+	}	
+}
+
+get_clan_rulers = {
+	effect = {
+		root = {
+			clear_variable_list = clan_rulers
+		}
+		dynasty.dynast = {
+			save_scope_as = clan_leader
+		}
+		root.dynasty = {
+			every_dynasty_member = {
+				limit = {
+					NOT = {
+						this = scope:clan_leader
+					}
+					this = {
+						is_landed = yes
+					}
+				}
+				save_scope_as = family_guy # Why not
+				root = {
+					add_to_variable_list = {
+						name = clan_rulers
+						target = scope:family_guy
+					}
+				}
+			}
+		}
+	}
+}

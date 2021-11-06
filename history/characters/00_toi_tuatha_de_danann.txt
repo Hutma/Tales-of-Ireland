@@ -97,7 +97,7 @@
     }
 }
 1000003 = {
-    name = "Buí"
+    name = "BuI_"
     dynasty =  203 
     religion = sidhe_beliefs
     culture = de_danann
@@ -254,7 +254,7 @@
     }
 }
 1000008 = {
-    name = "Delbáeth"
+    name = "DelbA_eth"
     dynasty =  201 
     religion = sidhe_beliefs
     culture = de_danann
@@ -382,7 +382,7 @@
     }
 }
 1000012 = {
-    name = "Mac Cecht"
+    name = "Mac_Cecht"
     dynasty =  201 
     religion = sidhe_beliefs
     culture = de_danann
@@ -410,7 +410,7 @@
     }
 }
 1000013 = {
-    name = "Mac Gréine"
+    name = "Mac_GrE_ine"
     dynasty =  201 
     religion = sidhe_beliefs
     culture = de_danann
@@ -522,7 +522,7 @@
     learning =  8 
     prowess =  12 
 
-    health =  170 
+    health =  10
 
     trait = education_martial_4
     trait = brave

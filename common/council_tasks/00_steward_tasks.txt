@@ -178,7 +178,7 @@ task_develop_county = {
 		# Add all new progress values to the script value steward_develop_county_total
 		# Note that for Develop County, the County Modifiers apply the actual values, while progress is for player info only
 	progress = {
-		value = 0
+		value = 2
 		add = {
 			value = steward_develop_county_base
 			desc = STEWARD_PROGRESS_BASE

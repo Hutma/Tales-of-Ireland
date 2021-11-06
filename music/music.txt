@@ -419,7 +419,7 @@ mx_cue_secret = {
 ##### MAINTHEME
 
 main_theme_track = {
-	music = "event:/MUSIC/MainTheme/Maintheme"
+	music = "file:/music/toi_opening_theme.mp3"
 	can_be_interrupted = yes
 }
 

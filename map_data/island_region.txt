@@ -25,5 +25,8 @@ island_region_irish_isles = {
 		d_toremoreislands
 	}
 	
-	counties = { c_bere }
+	counties = { 
+		c_bere 
+		c_leabgarrow
+	}
 }

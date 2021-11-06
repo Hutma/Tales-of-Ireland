@@ -1,0 +1,357 @@
+﻿asked_sidhe_for_child = {
+	icon = magic_positive
+}
+
+sidhe_advisor_martial = {
+	icon = magic_positive
+	martial = 5
+}
+
+sidhe_advisor_stewardship = {
+	icon = magic_positive
+	stewardship = 5
+}
+
+sidhe_advisor_intrigue = {
+	icon = magic_positive
+	intrigue = 5
+}
+
+sidhe_advisor_learning = {
+	icon = magic_positive
+	learning = 5
+}
+
+sidhe_advisor_diplomacy = {
+	icon = magic_positive
+	diplomacy = 5
+}
+
+sidhe_in_feast = {
+	icon = magic_positive
+	direct_vassal_opinion = 10
+}
+
+slow_magic_troops = {
+	icon = magic_negative
+	movement_speed = -0.1
+}
+
+magical_siege_engines = {
+	icon = magic_positive
+	siege_morale_loss = 3
+}
+
+command_the_wind_modifier = {
+	icon = magic_positive
+	naval_movement_speed_mult = 1
+}
+
+hidden_blade_modifier = {
+	icon = magic_positive
+	owned_hostile_scheme_success_chance_add = 25
+}	
+
+hidden_eye_modifier = {
+	icon = magic_positive
+	scheme_discovery_chance_mult = 2
+}
+
+hidden_aura_modifier = {
+	icon = magic_positive
+	enemy_hostile_scheme_success_chance_add = -25
+}
+
+extended_life = {
+	icon = health_positive
+	life_expectancy = 50
+	health = 1
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	prowess = -1
+}
+
+giant_strenght = {
+	icon = rock_positive
+	prowess = 6
+}
+
+exchanged_skills_diplo = {
+	icon = diplomacy_positive
+	diplomacy = 6
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+}
+
+exchanged_skills_martial = {
+	icon = martial_positive
+	diplomacy = -1
+	martial = 6
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+}
+
+exchanged_skills_stewardship = {
+	icon = stewardship_positive
+	diplomacy = -1
+	martial = -1
+	stewardship = 6
+	intrigue = -1
+	learning = -1
+}
+
+exchanged_skills_intrigue = {
+	icon = intrigue_positive
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = 6
+	learning = -1
+}
+
+exchanged_skills_learning = {
+	icon = learning_positive
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	learning = 6
+}
+
+sidhe_speechcraft_modifier = {
+	icon = diplomacy_positive
+	general_opinion = 20	
+}
+
+bad_wishpers = {
+	icon = magic_negative
+	general_opinion = -5
+}
+
+blessed_cattle = {
+	icon = magic_positive
+	development_growth_factor = 1
+	development_growth = 0.3
+}
+
+mark_of_cain_modifier = {
+	icon = magic_negative
+	general_opinion = -40
+}
+
+fintan_form = {
+	icon = outdoors_positive
+	negate_health_penalty_add = 3
+	health = 5
+	fertility = -500
+	stress_gain_mult = -0.5
+	learning = 2
+	martial = -5
+	stewardship = -5
+	intrigue = -5
+	prowess = -5
+}
+
+deer_form = {
+	icon = outdoors_positive
+	prowess = 5
+	forest_advantage = 15
+	forest_min_combat_roll = 2
+	forest_max_combat_roll = 4
+	diplomacy = -2
+	stewardship = -2
+	fertility = -20
+}
+
+painful_transformation = {
+	icon = magic_negative
+	health = -1
+}
+
+blood_moon_sacrifice = {
+	icon = magic_positive
+	prowess = 4
+	monthly_piety = 0.25
+	monthly_prestige = 0.25
+}
+
+omen_of_opression_modifier = {
+	icon = magic_negative
+	levy_size = -0.15
+}
+
+healing_secret_modifier = {
+	icon = magic_positive
+	levy_reinforcement_rate = 5
+}
+
+silverarmed_modifier = {
+	icon = dread_positive
+	prowess = 5
+	attraction_opinion = 25
+	monthly_prestige_gain_mult = 0.05
+}
+
+dagda_cauldron_modifier = {
+	icon = magic_positive
+	domain_tax_mult = 0.2
+	character_capital_county_monthly_development_growth_add = 0.3
+}
+
+lugh_strenght_modifier = {
+	icon = magic_positive
+	martial_per_piety_level = 2
+	prowess_per_piety_level = 2
+	enemy_hard_casualty_modifier = 0.15
+}
+
+call_light_modifier = {
+	icon = magic_positive
+	no_prowess_loss_from_age = yes
+}
+
+lost_knowledge_modifier = {
+	icon = magic_positive
+	cultural_head_fascination_mult = 0.3
+	learning = 4
+}
+
+sacred_building_modifier = {
+	icon = magic_positive
+	build_gold_cost = -0.2
+	build_speed = 0.2
+	holding_build_gold_cost = -0.4
+}
+
+suns_chosen_modifier = {
+	icon = magic_positive
+	prowess = 4
+	negate_health_penalty_add = 0.5
+}
+
+hunting_spirits_modifier = {
+	icon = hunt_positive
+	archers_damage_add = 4
+	skirmishers_damage_add = 4
+}
+
+rune_words_modifier = {
+	icon = magic_positive
+	prowess = 2
+}
+
+protective_amulet_modifier = {
+	icon = magic_positive
+	health = 0.25
+	prowess = 1
+	monthly_prestige = 0.1
+}
+
+cursed_tablet_modifier = {
+	icon = magic_negative
+	health = -0.25
+	prowess = -1
+	monthly_prestige = -0.1
+}
+
+sidhe_agriculture_modifier = {
+	icon = magic_positive
+	development_growth = 1
+}
+
+blessed_family_modifier = {
+	icon = magic_positive
+	fertility = 1
+	close_relative_opinion = 20
+	attraction_opinion = 20
+	spouse_opinion = 20
+}
+
+nemedian_union_modifier = {
+	icon = magic_positive
+	dynasty_opinion = 15
+	monthly_prestige = 0.1
+}
+
+srengs_strenght_modifier = {
+	icon = magic_positive
+	prowess = 8
+}
+
+fir_bolg_endurance_modifier = {
+	icon = magic_positive
+	movement_speed = 0.3
+	retreat_losses = -0.75
+}
+
+men_of_bags_modifier = {
+	icon = magic_positive
+	supply_duration = 0.5
+	supply_capacity_mult = 0.2
+}
+
+heavy_lifters_modifier = {
+	icon = magic_positive
+	build_speed = 2
+}
+
+realm_ceremony_modifier = {
+	icon = magic_positive
+	vassal_opinion = 15
+}
+
+enchant_bedroooms_modifier = {
+	icon = magic_positive
+	mercenary_hire_cost_mult = -0.2
+	guest_opinion = 20
+	courtier_opinion = 5
+}
+
+druidic_intersessions_modifier = {
+	icon = magic_positive
+	learning = 2
+	monthly_piety = 0.5
+}
+
+magic_paintings_modifier = {
+	icon = magic_positive
+	prowess = 2
+	monthly_prestige = 0.1
+}
+
+befriend_the_morrigan_modifier = {
+	icon = magic_positive
+	monthly_prestige_gain_mult = 0.15
+	monthly_prestige = 1
+}
+
+settle_power_modifier = {
+	icon = magic_positive
+	title_creation_cost_mult = -0.5
+}
+
+no_escape_curse_modifier = {
+	icon = magic_negative
+	garrison_size = -0.5
+	fort_level = -1
+}
+
+magic_mist_modifier = {
+	icon = magic_negative
+	levy_size = -0.25
+	levy_reinforcement_rate = -0.15
+}
+
+burn_incense_modifier = {
+	icon = magic_positive
+	health = 0.25
+	monthly_piety = 0.25
+	courtier_opinion = 5
+	realm_priest_opinion = 10
+}

@@ -1,0 +1,125 @@
+﻿# Magician (+1) - Magician
+magician_good_1 = {
+	index = 1040
+	opposites = {
+		magician_good_2 #To prevent multiple tiers of the same congenital trait
+		magician_good_3
+	}
+	
+	learning = 2
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	
+	group = magician_good
+	level = 1
+	
+	birth = 0
+	random_creation = 0
+
+	genetic = yes
+	good = yes
+	
+	ruler_designer_cost = 120
+	
+	compatibility = {
+		magician_good_1 = @pos_compat_medium
+		magician_good_2 = @pos_compat_medium
+		magician_good_3 = @pos_compat_medium
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magician_good_1_desc
+			}
+			desc = trait_magician_good_1_character_desc
+		}
+	}
+}
+
+# Magician (+2) - Great Magician
+magician_good_2 = {
+	index = 1041
+	opposites = {
+		magician_good_3 #To prevent multiple tiers of the same congenital trait
+		magician_good_1
+	}
+	
+	learning = 4
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.2
+	
+	group = magician_good
+	level = 2
+
+	birth = 0
+	random_creation = 0
+	
+	genetic = yes
+	good = yes
+	
+	ruler_designer_cost = 200
+	
+	compatibility = {
+		magician_good_1 = @pos_compat_medium
+		magician_good_2 = @pos_compat_medium
+		magician_good_3 = @pos_compat_medium
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magician_good_2_desc
+			}
+			desc = trait_magician_good_2_character_desc
+		}
+	}
+}
+
+# Magician (+3) - God Blessed
+magician_good_3 = {
+	index = 1042
+	opposites = {
+		magician_good_2 #To prevent multiple tiers of the same congenital trait
+		magician_good_1
+	}
+	
+	learning = 6
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.3
+
+	group = magician_good
+	level = 3
+	
+	birth = 0
+	random_creation = 0
+	
+	genetic = yes
+	good = yes
+	
+	ruler_designer_cost = 300
+	
+	compatibility = {
+		magician_good_1 = @pos_compat_medium
+		magician_good_2 = @pos_compat_medium
+		magician_good_3 = @pos_compat_medium
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magician_good_3_desc
+			}
+			desc = trait_magician_good_3_character_desc
+		}
+	}
+}

@@ -70,7 +70,7 @@
     }
 }
 300003 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  13 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -228,7 +228,7 @@
     }
 }
 305000 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  10 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -333,7 +333,7 @@
     }
 }
 350000 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  58 
     religion = sons_of_the_ocean
     culture = the_plagued

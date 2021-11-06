@@ -8,3 +8,10 @@ k_high_kingship = {
 							}
               }
 }
+
+#Trainers
+d_hero_trainer = {
+              4799.1.1 = {
+				   holder = 3000004
+              }
+}

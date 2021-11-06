@@ -186,3 +186,7 @@ wolves_small_revenge = {
 	tax_mult = -0.2
 	levy_reinforcement_rate = -0.2
 }
+
+repented_outlaw = {
+	icon = prestige_positive
+}

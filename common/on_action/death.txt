@@ -48,6 +48,16 @@ on_death = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					exists = top_liege
+					root.top_liege = {
+						highest_held_title_tier = 5
+					}
+				}
+				remove_character_flag = not_independent_when_died
+				remove_character_flag = not_independent_when_died_multiple_titles
+			}
 		}
 ###TALES OF IRELAND END
 		play_music_cue = "mx_cue_death"

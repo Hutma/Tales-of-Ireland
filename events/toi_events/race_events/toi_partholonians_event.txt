@@ -50,6 +50,13 @@ toi_partholonians_event.0002 = {
         character = root
         animation = personality_irrational
     }
+	
+	trigger = {
+		OR = {
+			has_trait = partholonian
+			has_trait = three_quarter_partholonian
+		}
+	}
 
     option = { # I accept my fate
 		name = toi_partholonians_event.0002.a

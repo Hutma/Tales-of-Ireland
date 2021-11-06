@@ -1,0 +1,11 @@
+﻿l_english:
+
+ declare_outlaw_interaction:0 "Declare Outlaw"
+ declare_outlaw_interaction_desc:0 "Declaring someone as an outlaw. An outlaw is unliked by the other rulers and any other ruler can attack him to conquer his lands."
+ declare_outlaw_interaction_desc.tt: "[recipient.GetShortUINameNoTooltip] is declared as an outlaw"
+ you_are_declare_outlaw_interaction_desc.tt: "You are declared as an outlaw by the High King"
+ 
+ repented_outlaw_interaction:0 "End Outlawry"
+ repented_outlaw_interaction_desc:0 "Repent and pay a Cattle tribute to the High King to stop being an Outlaw."
+ repented_outlaw_interaction_desc.tt: "[recipient.GetShortUINameNoTooltip] is no longer an Outlaw"
+ you_repented_outlaw_interaction_desc.tt: "You are no longer an Outlaw"

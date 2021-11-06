@@ -2341,7 +2341,7 @@
 	tenet_animal_worship = {
 		icon = core_tenet_holytree
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2369,10 +2369,17 @@
 	tenet_pure_island = {
 		icon = core_tenet_flagellant
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
-			always = yes
+			custom_description = {
+				text = incompatible_tenet_pacifism_trigger
+				NOT = { flag:tenet_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_dharmic_pacifism_trigger
+				NOT = { flag:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+			}
 		}
 
 		piety_cost = {
@@ -2398,7 +2405,7 @@
 	tenet_seafarers = {
 		icon = core_tenet_sword
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2425,7 +2432,7 @@
 	tenet_divine_agriculture = {
 		icon = core_tenet_holytree
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2491,7 +2498,7 @@
 	tenet_masters_of_ireland = {
 		icon = core_tenet_handcoin
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2572,7 +2579,7 @@
 	tenet_old_gods = {
 		icon = core_tenet_adorcism
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2599,7 +2606,7 @@
 	tenet_underground_sidhe = {
 		icon = core_tenet_festivities
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2625,7 +2632,7 @@
 	tenet_great_barrows = {
 		icon = core_tenet_cabal
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2653,7 +2660,7 @@
 	tenet_sea_dwellers = {
 		icon = core_tenet_scimitars
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2681,7 +2688,7 @@
 	tenet_newgrange_splendor = {
 		icon = core_tenet_followers
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2708,7 +2715,7 @@
 	tenet_manx_legacy = {
 		icon = core_tenet_shadyfigure
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2736,7 +2743,7 @@
 	tenet_le_cheile = {
 		icon = core_tenet_festivities
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes

@@ -49,18 +49,18 @@
 	localization = {
 		HighGodName = northern_legacy_high_god_name
 		HighGodNamePossessive = northern_legacy_high_god_name_possessive
-		HighGodNameSheHe = CHARACTER_SHEHE_SHE
-		HighGodHerselfHimself = CHARACTER_HERSELF
-		HighGodHerHis = CHARACTER_HERHIS_HER
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
 		HighGodNameAlternate = northern_legacy_high_god_name_alternate
 		HighGodNameAlternatePossessive = northern_legacy_high_god_name_alternate_possessive
 
 		#Creator
 		CreatorName = northern_legacy_creator_god_name
 		CreatorNamePossessive = northern_legacy_creator_god_name_possessive
-		CreatorSheHe = CHARACTER_SHEHE_SHE
-		CreatorHerHis = CHARACTER_HERHIS_HER
-		CreatorHerHim = CHARACTER_HERHIM_HER
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
 
 		#HealthGod
 		HealthGodName = northern_legacy_health_god_name
@@ -93,23 +93,23 @@
 		#FateGod
 		FateGodName = northern_legacy_fate_god_name
 		FateGodNamePossessive = northern_legacy_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_SHE
+		FateGodHerHis = CHARACTER_HERHIS_HER
+		FateGodHerHim = CHARACTER_HERHIM_HER
 
 		#KnowledgeGod
 		KnowledgeGodName = northern_legacy_knowledge_god_name
 		KnowledgeGodNamePossessive = northern_legacy_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WarGod
 		WarGodName = northern_legacy_war_god_name
 		WarGodNamePossessive = northern_legacy_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_SHE
-		WarGodHerHis = CHARACTER_HERHIS_HER
-		WarGodHerHim = CHARACTER_HERHIM_HER
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
 
 		#TricksterGod
 		TricksterGodName = northern_legacy_trickster_god_name
@@ -128,45 +128,45 @@
 		#WaterGod
 		WaterGodName = northern_legacy_water_god_name
 		WaterGodNamePossessive = northern_legacy_water_god_name_possessive
-		WaterGodSheHe = CHARACTER_SHEHE_SHE
-		WaterGodHerHis = CHARACTER_HERHIS_HER
-		WaterGodHerHim = CHARACTER_HERHIM_HER
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
 
 
-		PantheonTerm = northern_legacy_mother_earth_father_sky
+		PantheonTerm = northern_legacy_the_gods
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { northern_legacy_high_god_name northern_legacy_good_god_father_sky northern_legacy_good_god_ancestors }
+		GoodGodNames = { northern_legacy_high_god_name northern_legacy_good_god_perkunas northern_legacy_good_god_laima northern_legacy_good_god_gabija northern_legacy_good_god_patrimpas northern_legacy_good_god_ancestors }
 		DevilName = northern_legacy_devil_name
 		DevilNamePossessive = northern_legacy_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
 		DevilHerHis = CHARACTER_HERHIS_ITS
 		DevilHerselfHimself = northern_legacy_devil_herselfhimself
-		EvilGodNames = { northern_legacy_devil_name northern_legacy_evil_god_decay }
+		EvilGodNames = { northern_legacy_devil_name northern_legacy_evil_god_ragana northern_legacy_evil_god_slogutis northern_legacy_evil_god_ziburinis northern_legacy_evil_god_decay }
 		HouseOfWorship = northern_legacy_house_of_worship
 		HouseOfWorshipPlural = northern_legacy_house_of_worship_plural
 		ReligiousSymbol = northern_legacy_religious_symbol
 		ReligiousText = northern_legacy_religious_text
 		ReligiousHeadName = northern_legacy_religious_head_title
 		ReligiousHeadTitleName = northern_legacy_religious_head_title_name
-		DevoteeMale = northern_legacy_devotee
-		DevoteeMalePlural = northern_legacy_devoteeplural
-		DevoteeFemale = northern_legacy_devotee
-		DevoteeFemalePlural = northern_legacy_devoteeplural
-		DevoteeNeuter = northern_legacy_devotee
-		DevoteeNeuterPlural = northern_legacy_devoteeplural
-		PriestMale = northern_legacy_priest
-		PriestMalePlural = northern_legacy_priest_plural
-		PriestFemale = northern_legacy_priest
-		PriestFemalePlural = northern_legacy_priest_plural
-		PriestNeuter = northern_legacy_priest
-		PriestNeuterPlural = northern_legacy_priest_plural
+		DevoteeMale = northern_legacy_devotee_male
+		DevoteeMalePlural = northern_legacy_devotee_male_plural
+		DevoteeFemale = northern_legacy_devotee_female
+		DevoteeFemalePlural = northern_legacy_devotee_female_plural
+		DevoteeNeuter = northern_legacy_devotee_male
+		DevoteeNeuterPlural = northern_legacy_devotee_male_plural
+		PriestMale = northern_legacy_priest_male
+		PriestMalePlural = northern_legacy_priest_male_plural
+		PriestFemale = northern_legacy_priest_female
+		PriestFemalePlural = northern_legacy_priest_female_plural
+		PriestNeuter = northern_legacy_priest_male
+		PriestNeuterPlural = northern_legacy_priest_male_plural
 		AltPriestTermPlural = northern_legacy_priest_alternate_plural
-		BishopMale = northern_legacy_priest
-		BishopMalePlural = northern_legacy_priest_plural
-		BishopFemale = northern_legacy_priest
-		BishopFemalePlural = northern_legacy_priest_plural
-		BishopNeuter = northern_legacy_priest
-		BishopNeuterPlural = northern_legacy_priest_plural
+		BishopMale = northern_legacy_priest_male
+		BishopMalePlural = northern_legacy_priest_male_plural
+		BishopFemale = northern_legacy_priest_female
+		BishopFemalePlural = northern_legacy_priest_female_plural
+		BishopNeuter = northern_legacy_priest_male
+		BishopNeuterPlural = northern_legacy_priest_male_plural
 		DivineRealm = northern_legacy_divine_realm
 		PositiveAfterLife = northern_legacy_divine_realm
 		NegativeAfterLife = northern_legacy_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = northern_legacy_death_deity_name_possessive
 		DeathDeitySheHe = northern_legacy_devil_shehe
 		DeathDeityHerHis = northern_legacy_death_deity_herhis
-		WitchGodName = witchgodname_northern_legacy_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_northern_legacy_dievas_senelis
+		WitchGodSheHe = CHARACTER_SHEHE_HE
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+		WitchGodHerHim = CHARACTER_HERHIM_HIM
+		WitchGodMistressMaster = master
+ 		WitchGodMotherFather = father
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars

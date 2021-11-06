@@ -53,7 +53,7 @@
     }
 }
 540002 = {
-    name = "Gann "
+    name = "Gann"
     dynasty =  72 
     religion = ancient_greek_slave
     culture = fir_bolg
@@ -77,7 +77,7 @@
     }
 }
 540003 = {
-    name = "Sláine"
+    name = "SlA_ine"
     dynasty =  74 
     religion = ancient_greek_slave
     culture = fir_bolg
@@ -420,7 +420,7 @@
     }
 }
 540017 = {
-    name = "Sláine "
+    name = "SlA_ine"
     dynasty =  81 
     religion = ancient_greek_slave
     culture = fir_bolg
@@ -444,7 +444,7 @@
     }
 }
 580000 = {
-    name = "Gann "
+    name = "Gann"
     dynasty =  74 
     religion = ancient_greek_slave
     culture = fir_gailioin

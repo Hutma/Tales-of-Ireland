@@ -237,9 +237,7 @@ call_gladiators_decision = {
 	}
 
 	effect = {
-		show_as_tooltip = {
-			gladiator_hired_decision_scripted_effect = yes
-		}
+		gladiator_hired_decision_scripted_effect = yes
 	}
 
 	ai_potential = {

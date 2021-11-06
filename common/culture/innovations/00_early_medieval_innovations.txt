@@ -53,6 +53,10 @@ innovation_ram = {
 	icon = @siege_weapons
 
 	unlock_maa = ram
+	
+	potential = {
+		has_game_rule = second_era
+	}
 
 	flag = global_regular
 	flag = early_medieval_era_regular

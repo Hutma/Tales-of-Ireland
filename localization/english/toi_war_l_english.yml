@@ -59,3 +59,7 @@
  humiliate_candidate_cb_defeat_desc_defender:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
  humiliate_candidate_cb_defeat_desc_attacker:1 "You are humiliated and will lose candidate score for the High Kingship election."
  humiliate_candidate_cb_defeat_desc:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
+ 
+ OUTLAW_CONQUEST_COUNTY_CB_NAME:1 "Conquer outlaw's [county|E]"
+ OUTLAW_CONQUEST_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquest of the outlaw's [TITLE.GetBaseName]"
+ OUTLAW_CONQUEST_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

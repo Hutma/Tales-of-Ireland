@@ -49,25 +49,25 @@
 	localization = {
 		HighGodName = dark_knowledge_legacy_high_god_name
 		HighGodNamePossessive = dark_knowledge_legacy_high_god_name_possessive
-		HighGodNameSheHe = CHARACTER_SHEHE_SHE
-		HighGodHerselfHimself = CHARACTER_HERSELF
-		HighGodHerHis = CHARACTER_HERHIS_HER
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
 		HighGodNameAlternate = dark_knowledge_legacy_high_god_name_alternate
 		HighGodNameAlternatePossessive = dark_knowledge_legacy_high_god_name_alternate_possessive
 
 		#Creator
 		CreatorName = dark_knowledge_legacy_creator_god_name
 		CreatorNamePossessive = dark_knowledge_legacy_creator_god_name_possessive
-		CreatorSheHe = CHARACTER_SHEHE_SHE
-		CreatorHerHis = CHARACTER_HERHIS_HER
-		CreatorHerHim = CHARACTER_HERHIM_HER
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
 
 		#HealthGod
 		HealthGodName = dark_knowledge_legacy_health_god_name
 		HealthGodNamePossessive = dark_knowledge_legacy_health_god_name_possessive
-		HealthGodSheHe = CHARACTER_SHEHE_SHE
-		HealthGodHerHis = CHARACTER_HERHIS_HER
-		HealthGodHerHim = CHARACTER_HERHIM_HER
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
 		
 		#FertilityGod
 		FertilityGodName = dark_knowledge_legacy_fertility_god_name
@@ -79,44 +79,44 @@
 		#WealthGod
 		WealthGodName = dark_knowledge_legacy_wealth_god_name
 		WealthGodNamePossessive = dark_knowledge_legacy_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_SHE
-		WealthGodHerHis = CHARACTER_HERHIS_HER
-		WealthGodHerHim = CHARACTER_HERHIM_HER
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
 
 		#HouseholdGod
 		HouseholdGodName = dark_knowledge_legacy_household_god_name
 		HouseholdGodNamePossessive = dark_knowledge_legacy_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HER
-		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
 		#FateGod
 		FateGodName = dark_knowledge_legacy_fate_god_name
 		FateGodNamePossessive = dark_knowledge_legacy_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		#KnowledgeGod
 		KnowledgeGodName = dark_knowledge_legacy_knowledge_god_name
 		KnowledgeGodNamePossessive = dark_knowledge_legacy_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WarGod
 		WarGodName = dark_knowledge_legacy_war_god_name
 		WarGodNamePossessive = dark_knowledge_legacy_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_SHE
-		WarGodHerHis = CHARACTER_HERHIS_HER
-		WarGodHerHim = CHARACTER_HERHIM_HER
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
 
 		#TricksterGod
 		TricksterGodName = dark_knowledge_legacy_trickster_god_name
 		TricksterGodNamePossessive = dark_knowledge_legacy_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_HE
-		TricksterGodHerHis = CHARACTER_HERHIS_HIS
-		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		TricksterGodSheHe = CHARACTER_SHEHE_SHE
+		TricksterGodHerHis = CHARACTER_HERHIS_HER
+		TricksterGodHerHim = CHARACTER_HERHIM_HER
 
 		#NightGod
 		NightGodName = dark_knowledge_legacy_night_god_name
@@ -128,14 +128,14 @@
 		#WaterGod
 		WaterGodName = dark_knowledge_legacy_water_god_name
 		WaterGodNamePossessive = dark_knowledge_legacy_water_god_name_possessive
-		WaterGodSheHe = CHARACTER_SHEHE_SHE
-		WaterGodHerHis = CHARACTER_HERHIS_HER
-		WaterGodHerHim = CHARACTER_HERHIM_HER
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
 
 
 		PantheonTerm = dark_knowledge_legacy_mother_earth_father_sky
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { dark_knowledge_legacy_high_god_name dark_knowledge_legacy_good_god_father_sky dark_knowledge_legacy_good_god_ancestors }
+		GoodGodNames = { dark_knowledge_legacy_high_god_name dark_knowledge_legacy_mother_earth_father_sky dark_knowledge_legacy_good_god_ancestors }
 		DevilName = dark_knowledge_legacy_devil_name
 		DevilNamePossessive = dark_knowledge_legacy_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = dark_knowledge_legacy_religious_text
 		ReligiousHeadName = dark_knowledge_legacy_religious_head_title
 		ReligiousHeadTitleName = dark_knowledge_legacy_religious_head_title_name
-		DevoteeMale = dark_knowledge_legacy_devotee
-		DevoteeMalePlural = dark_knowledge_legacy_devoteeplural
-		DevoteeFemale = dark_knowledge_legacy_devotee
-		DevoteeFemalePlural = dark_knowledge_legacy_devoteeplural
-		DevoteeNeuter = dark_knowledge_legacy_devotee
-		DevoteeNeuterPlural = dark_knowledge_legacy_devoteeplural
-		PriestMale = dark_knowledge_legacy_priest
-		PriestMalePlural = dark_knowledge_legacy_priest_plural
-		PriestFemale = dark_knowledge_legacy_priest
-		PriestFemalePlural = dark_knowledge_legacy_priest_plural
-		PriestNeuter = dark_knowledge_legacy_priest
-		PriestNeuterPlural = dark_knowledge_legacy_priest_plural
+		DevoteeMale = dark_knowledge_legacy_devotee_male
+		DevoteeMalePlural = dark_knowledge_legacy_devotee_male_plural
+		DevoteeFemale = dark_knowledge_legacy_devotee_female
+		DevoteeFemalePlural = dark_knowledge_legacy_devotee_female_plural
+		DevoteeNeuter = dark_knowledge_legacy_devotee_male
+		DevoteeNeuterPlural = dark_knowledge_legacy_devotee_male_plural
+		PriestMale = dark_knowledge_legacy_priest_male
+		PriestMalePlural = dark_knowledge_legacy_priest_male_plural
+		PriestFemale = dark_knowledge_legacy_priest_female
+		PriestFemalePlural = dark_knowledge_legacy_priest_female_plural
+		PriestNeuter = dark_knowledge_legacy_priest_male
+		PriestNeuterPlural = dark_knowledge_legacy_priest_male_plural
 		AltPriestTermPlural = dark_knowledge_legacy_priest_alternate_plural
-		BishopMale = dark_knowledge_legacy_priest
-		BishopMalePlural = dark_knowledge_legacy_priest_plural
-		BishopFemale = dark_knowledge_legacy_priest
-		BishopFemalePlural = dark_knowledge_legacy_priest_plural
-		BishopNeuter = dark_knowledge_legacy_priest
-		BishopNeuterPlural = dark_knowledge_legacy_priest_plural
+		BishopMale = dark_knowledge_legacy_bishop_male
+		BishopMalePlural = dark_knowledge_legacy_bishop_male_plural
+		BishopFemale = dark_knowledge_legacy_bishop_female
+		BishopFemalePlural = dark_knowledge_legacy_bishop_female_plural
+		BishopNeuter = dark_knowledge_legacy_bishop_male
+		BishopNeuterPlural = dark_knowledge_legacy_bishop_male_plural
 		DivineRealm = dark_knowledge_legacy_divine_realm
 		PositiveAfterLife = dark_knowledge_legacy_divine_realm
 		NegativeAfterLife = dark_knowledge_legacy_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = dark_knowledge_legacy_death_deity_name_possessive
 		DeathDeitySheHe = dark_knowledge_legacy_devil_shehe
 		DeathDeityHerHis = dark_knowledge_legacy_death_deity_herhis
-		WitchGodName = witchgodname_dark_knowledge_legacy_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_dark_knowledge_legacy_iohan
+		WitchGodSheHe = CHARACTER_SHEHE_HE
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+		WitchGodHerHim = CHARACTER_HERHIM_HIM
+		WitchGodMistressMaster = master
+ 		WitchGodMotherFather = father
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars

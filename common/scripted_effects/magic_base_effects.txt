@@ -1,0 +1,174 @@
+﻿set_up_spells = {
+	# Spell Categories
+	add_to_global_variable_list = { name = spell_categories_list target = flag:self }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:character }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:title }
+	
+	##GENERIC SPELLS##
+	# Self
+	add_to_global_variable_list = { name = self_spells_list target = flag:summon_sidhe_child }
+	add_to_global_variable_list = { name = self_spells_list target = flag:summon_sidhe_advisor }
+	add_to_global_variable_list = { name = self_spells_list target = flag:summon_sidhe_feast }
+	add_to_global_variable_list = { name = self_spells_list target = flag:summon_magical_army }
+	add_to_global_variable_list = { name = self_spells_list target = flag:summon_magical_siege_engine }
+	add_to_global_variable_list = { name = self_spells_list target = flag:command_the_wind }
+	add_to_global_variable_list = { name = self_spells_list target = flag:hidden_blade }
+	add_to_global_variable_list = { name = self_spells_list target = flag:hidden_eye }
+	add_to_global_variable_list = { name = self_spells_list target = flag:hidden_aura }
+	add_to_global_variable_list = { name = self_spells_list target = flag:extend_lifespan }
+	add_to_global_variable_list = { name = self_spells_list target = flag:channel_giant_strength }
+	add_to_global_variable_list = { name = self_spells_list target = flag:exchange_your_talents }
+	add_to_global_variable_list = { name = self_spells_list target = flag:sidhe_speechcraft }
+	add_to_global_variable_list = { name = self_spells_list target = flag:heal_wounds }
+
+	# Character Targets
+	add_to_global_variable_list = { name = character_spells_list target = flag:inflict_wounds }
+	add_to_global_variable_list = { name = character_spells_list target = flag:inflict_terror }
+	add_to_global_variable_list = { name = character_spells_list target = flag:inflict_pestilence }
+	add_to_global_variable_list = { name = character_spells_list target = flag:hostile_whispers }
+	add_to_global_variable_list = { name = character_spells_list target = flag:captivate_mind }
+
+	# Titles
+	add_to_global_variable_list = { name = title_spells_list target = flag:bless_the_cattle }
+	add_to_global_variable_list = { name = title_spells_list target = flag:multiply_herds }
+	
+	##CESSARIAN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:fintan_transformation }
+	add_to_global_variable_list = { name = self_spells_list target = flag:deer_form }
+	add_to_global_variable_list = { name = character_spells_list target = flag:flood_realm } #iabhism only
+	add_to_global_variable_list = { name = character_spells_list target = flag:mark_of_cain } #iabhism only
+	add_to_global_variable_list = { name = character_spells_list target = flag:serpent_bite } #iabhism only
+	add_to_global_variable_list = { name = title_spells_list target = flag:garden_eden } #iabhism only
+	
+	##FOMORIAN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:call_sea_armies }
+	add_to_global_variable_list = { name = self_spells_list target = flag:call_underground_ridri }
+	add_to_global_variable_list = { name = character_spells_list target = flag:fomorian_transformation }
+	add_to_global_variable_list = { name = character_spells_list target = flag:destroy_essence }
+	add_to_global_variable_list = { name = character_spells_list target = flag:blood_moon }
+	add_to_global_variable_list = { name = character_spells_list target = flag:omen_of_opression }
+	
+	##TUATHA DE DANANN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:healing_secret }
+	add_to_global_variable_list = { name = self_spells_list target = flag:silverarmed }
+	add_to_global_variable_list = { name = self_spells_list target = flag:dagda_cauldron }
+	add_to_global_variable_list = { name = self_spells_list target = flag:lugh_strenght }
+	add_to_global_variable_list = { name = self_spells_list target = flag:call_light }
+	add_to_global_variable_list = { name = self_spells_list target = flag:lost_knowledge }
+	add_to_global_variable_list = { name = character_spells_list target = flag:summon_new_tribe }
+	
+	##MEGALITHIC ANCIENT HUMANS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:sacred_building }
+	add_to_global_variable_list = { name = self_spells_list target = flag:suns_chosen }
+	add_to_global_variable_list = { name = self_spells_list target = flag:hunting_spirits }
+	
+	##PARTHOLONIAN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:rune_words }
+	add_to_global_variable_list = { name = self_spells_list target = flag:protective_amulet }
+	add_to_global_variable_list = { name = self_spells_list target = flag:greek_astrology }
+	add_to_global_variable_list = { name = character_spells_list target = flag:cursed_tablet }
+	add_to_global_variable_list = { name = character_spells_list target = flag:partholonian_plague }
+	
+	##NEMEDIAN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:sidhe_agriculture }
+	add_to_global_variable_list = { name = self_spells_list target = flag:blessed_family }
+	add_to_global_variable_list = { name = self_spells_list target = flag:nemedian_union }
+	add_to_global_variable_list = { name = character_spells_list target = flag:nemed_seduction }
+	
+	##FIR BOLG SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:srengs_strenght }
+	add_to_global_variable_list = { name = self_spells_list target = flag:fir_bolg_endurance }
+	add_to_global_variable_list = { name = self_spells_list target = flag:men_of_bags }
+	add_to_global_variable_list = { name = self_spells_list target = flag:heavy_lifters }
+	add_to_global_variable_list = { name = self_spells_list target = flag:united_in_defiance }
+	
+	#MILESIAN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:path_of_destiny }
+	add_to_global_variable_list = { name = self_spells_list target = flag:realm_ceremony }
+	add_to_global_variable_list = { name = self_spells_list target = flag:enchant_bedroooms }
+	
+	#HUMANS SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:druidic_intersessions }
+	add_to_global_variable_list = { name = self_spells_list target = flag:magic_paintings }
+	add_to_global_variable_list = { name = self_spells_list target = flag:befriend_the_morrigan }
+	add_to_global_variable_list = { name = self_spells_list target = flag:settle_power }
+	add_to_global_variable_list = { name = title_spells_list target = flag:influence_culture }
+	
+	#HY BRASILIANS SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:mystical_craft }
+	add_to_global_variable_list = { name = self_spells_list target = flag:two_worlds }
+	add_to_global_variable_list = { name = character_spells_list target = flag:no_escape_curse }
+	add_to_global_variable_list = { name = character_spells_list target = flag:brasil_fog }
+	add_to_global_variable_list = { name = character_spells_list target = flag:magic_mist }
+	
+	#LATIN SPELLS##
+	add_to_global_variable_list = { name = self_spells_list target = flag:burn_incense }
+	add_to_global_variable_list = { name = self_spells_list target = flag:roman_astrology }
+}
+
+run_bad_effects_spell = {
+	if = {
+		limit = { failure_chance_for_spells > 15 }
+		random_list = {
+			100 = {
+				modifier = {
+					add = negative_failure_chance_for_spells
+				}
+			}
+			0 = {
+				modifier = {
+					add = failure_chance_for_spells
+				}
+				set_variable = spell_fails
+				custom_description = {
+					text = something_bad_happens_magic
+					random_list = {
+						50 = {
+							add_stress = 100
+						}
+						20 = {
+							random_list = {
+								50 = {
+									contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+								}
+								30 = {
+									contract_disease_effect = { DISEASE = pneumonic TREATMENT_EVENT = no }
+								}
+								15 = {
+									contract_disease_effect = { DISEASE = leper TREATMENT_EVENT = no }
+								}
+								5 = {
+									contract_disease_effect = { DISEASE = great_pox TREATMENT_EVENT = no }
+								}
+							}
+						}
+						20 = {
+							change_variable = {
+								name = your_magic_usage
+								add = 1
+							}
+						}
+						1 = {
+							death = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+gain_magician_trait = {
+	random_list = {
+		89 = {
+			add_trait = magician_good_1
+		}
+		10 = {
+			add_trait = magician_good_2
+		}
+		1 = {
+			add_trait = magician_good_3
+		}
+	}
+	set_variable = magic_usage
+}

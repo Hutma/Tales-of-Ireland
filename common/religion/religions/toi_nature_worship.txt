@@ -135,7 +135,7 @@
 
 		PantheonTerm = nature_worship_mother_earth_father_sky
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { nature_worship_high_god_name nature_worship_good_god_father_sky nature_worship_good_god_ancestors }
+		GoodGodNames = { nature_worship_high_god_name nature_worship_the_gods nature_worship_mother_earth_father_sky nature_worship_good_god_ancestors }
 		DevilName = nature_worship_devil_name
 		DevilNamePossessive = nature_worship_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = nature_worship_religious_text
 		ReligiousHeadName = nature_worship_religious_head_title
 		ReligiousHeadTitleName = nature_worship_religious_head_title_name
-		DevoteeMale = nature_worship_devotee
-		DevoteeMalePlural = nature_worship_devoteeplural
-		DevoteeFemale = nature_worship_devotee
-		DevoteeFemalePlural = nature_worship_devoteeplural
-		DevoteeNeuter = nature_worship_devotee
-		DevoteeNeuterPlural = nature_worship_devoteeplural
-		PriestMale = nature_worship_priest
-		PriestMalePlural = nature_worship_priest_plural
-		PriestFemale = nature_worship_priest
-		PriestFemalePlural = nature_worship_priest_plural
-		PriestNeuter = nature_worship_priest
-		PriestNeuterPlural = nature_worship_priest_plural
+		DevoteeMale = nature_worship_devotee_male
+		DevoteeMalePlural = nature_worship_devotee_male_plural
+		DevoteeFemale = nature_worship_devotee_female
+		DevoteeFemalePlural = nature_worship_devotee_female_plural
+		DevoteeNeuter = nature_worship_devotee_male
+		DevoteeNeuterPlural = nature_worship_devotee_male_plural
+		PriestMale = nature_worship_priest_male
+		PriestMalePlural = nature_worship_priest_male_plural
+		PriestFemale = nature_worship_priest_female
+		PriestFemalePlural = nature_worship_priest_female_plural
+		PriestNeuter = nature_worship_priest_male
+		PriestNeuterPlural = nature_worship_priest_male_plural
 		AltPriestTermPlural = nature_worship_priest_alternate_plural
-		BishopMale = nature_worship_priest
-		BishopMalePlural = nature_worship_priest_plural
-		BishopFemale = nature_worship_priest
-		BishopFemalePlural = nature_worship_priest_plural
-		BishopNeuter = nature_worship_priest
-		BishopNeuterPlural = nature_worship_priest_plural
+		BishopMale = nature_worship_bishop_male
+		BishopMalePlural = nature_worship_bishop_male_plural
+		BishopFemale = nature_worship_bishop_female
+		BishopFemalePlural = nature_worship_bishop_female_plural
+		BishopNeuter = nature_worship_bishop_male
+		BishopNeuterPlural = nature_worship_bishop_male_plural
 		DivineRealm = nature_worship_divine_realm
 		PositiveAfterLife = nature_worship_divine_realm
 		NegativeAfterLife = nature_worship_afterlife
@@ -175,9 +175,9 @@
 		DeathDeitySheHe = nature_worship_devil_shehe
 		DeathDeityHerHis = nature_worship_death_deity_herhis
 		WitchGodName = witchgodname_nature_worship_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
 		WitchGodMistressMaster = witch_spirit
  		WitchGodMotherFather = witch_source
 		
@@ -253,6 +253,155 @@
 			doctrine = doctrine_clerical_function_taxation
 			doctrine = doctrine_clerical_marriage_disallowed
 			doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+			
+			doctrine = doctrine_witchcraft_accepted
+			
+			reserved_male_names = {
+				Cain Abel Seth Enosh Enoch Lamech Irad Mehujael Methushael Jabal Kenan Mahalalel Jared Methuselah Noah Shem Ham Japheth Bith Fintan Ladra
+			}
+	
+			reserved_female_names = {
+				Adah Adinah Alte Asnat Batya Bilha Chana Chava Devorah Esther Gisse Hadassah Leah Machla Miriam Puah Peninah Rachel Rivkah Ruth Sarah Tamar Tirtzah Tzipporah Tziviah Yael Yehudit Yiska Yocheved Yonah
+			}
+	
+			localization = {
+
+				#High God Name
+				HighGodName = iabhism_high_god_name
+				HighGodNamePossessive = iabhism_high_god_name_possessive
+				HighGodNameSheHe = CHARACTER_SHEHE_HE
+				HighGodHerselfHimself = CHARACTER_HIMSELF
+				HighGodHerHis = CHARACTER_HERHIS_HIS
+				HighGodNameAlternate = iabhism_high_god_name_alternate
+				HighGodNameAlternatePossessive = iabhism_high_god_name_alternate_possessive
+
+				#Creator
+				CreatorName = iabhism_creator_god_name
+				CreatorNamePossessive = iabhism_creator_god_name_possessive
+				CreatorSheHe = CHARACTER_SHEHE_HE
+				CreatorHerHis = CHARACTER_HERHIS_HIS
+				CreatorHerHim = CHARACTER_HERHIM_HIM
+
+				#HealthGod
+				HealthGodName = iabhism_health_god_name
+				HealthGodNamePossessive = iabhism_health_god_name_possessive
+				HealthGodSheHe = CHARACTER_SHEHE_HE
+				HealthGodHerHis = CHARACTER_HERHIS_HIS
+				HealthGodHerHim = CHARACTER_HERHIM_HIM
+		
+				#FertilityGod
+				FertilityGodName = iabhism_fertility_god_name
+				FertilityGodNamePossessive = iabhism_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_HE
+				FertilityGodHerHis = CHARACTER_HERHIS_HIS
+				FertilityGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WealthGod
+				WealthGodName = iabhism_wealth_god_name
+				WealthGodNamePossessive = iabhism_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = iabhism_household_god_name
+				HouseholdGodNamePossessive = iabhism_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#FateGod
+				FateGodName = iabhism_fate_god_name
+				FateGodNamePossessive = iabhism_fate_god_name_possessive
+				FateGodSheHe = CHARACTER_SHEHE_HE
+				FateGodHerHis = CHARACTER_HERHIS_HIS
+				FateGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = iabhism_knowledge_god_name
+				KnowledgeGodNamePossessive = iabhism_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WarGod
+				WarGodName = iabhism_war_god_name
+				WarGodNamePossessive = iabhism_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#TricksterGod
+				TricksterGodName = iabhism_trickster_god_name
+				TricksterGodNamePossessive = iabhism_trickster_god_name_possessive
+				TricksterGodSheHe = CHARACTER_SHEHE_HE
+				TricksterGodHerHis = CHARACTER_HERHIS_HIS
+				TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+				#NightGod
+				NightGodName = iabhism_night_god_name
+				NightGodNamePossessive = iabhism_night_god_name_possessive
+				NightGodSheHe = CHARACTER_SHEHE_HE
+				NightGodHerHis = CHARACTER_HERHIS_HIS
+				NightGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = iabhism_water_god_name
+				WaterGodNamePossessive = iabhism_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+
+				PantheonTerm = iabhism_high_god_name
+				PantheonTermHasHave = pantheon_term_has
+				GoodGodNames = { iabhism_high_god_name iabhism_high_god_name_alternate }
+				DevilName = iabhism_devil_name
+				DevilNamePossessive = iabhism_devil_name_possessive
+				DevilSheHe = CHARACTER_SHEHE_HE
+				DevilHerHis = CHARACTER_HERHIS_HIS
+				DevilHerselfHimself = CHARACTER_HIMSELF
+				EvilGodNames = { iabhism_devil_name iabhism_evil_god_decay }
+				HouseOfWorship = iabhism_house_of_worship
+				HouseOfWorshipPlural = iabhism_house_of_worship_plural
+				ReligiousSymbol = iabhism_religious_symbol
+				ReligiousText = iabhism_religious_text
+				ReligiousHeadName = iabhism_religious_head_title
+				ReligiousHeadTitleName = iabhism_religious_head_title_name
+				DevoteeMale = iabhism_devotee_male
+				DevoteeMalePlural = iabhism_devotee_male_plural
+				DevoteeFemale = iabhism_devotee_female
+				DevoteeFemalePlural = iabhism_devotee_female_plural
+				DevoteeNeuter = iabhism_devotee_male
+				DevoteeNeuterPlural = iabhism_devotee_male_plural
+				PriestMale = iabhism_priest_male
+				PriestMalePlural = iabhism_priest_male_plural
+				PriestFemale = iabhism_priest_female
+				PriestFemalePlural = iabhism_priest_female_plural
+				PriestNeuter = iabhism_priest_male
+				PriestNeuterPlural = iabhism_priest_male_plural
+				AltPriestTermPlural = iabhism_priest_alternate_plural
+				BishopMale = iabhism_bishop_male
+				BishopMalePlural = iabhism_bishop_male_plural
+				BishopFemale = iabhism_bishop_female
+				BishopFemalePlural = iabhism_bishop_female_plural
+				BishopNeuter = iabhism_bishop_male
+				BishopNeuterPlural = iabhism_bishop_male_plural
+				DivineRealm = iabhism_divine_realm
+				PositiveAfterLife = iabhism_divine_realm
+				NegativeAfterLife = iabhism_afterlife
+				DeathDeityName = iabhism_death_deity_name
+				DeathDeityNamePossessive = iabhism_death_deity_name_possessive
+				DeathDeitySheHe = CHARACTER_SHEHE_HE
+				DeathDeityHerHis = CHARACTER_HERHIS_HIS
+				WitchGodName = witchgodname_iabhism_the_shadow
+				WitchGodHerHis = CHARACTER_HERHIS_HER
+				WitchGodSheHe = CHARACTER_SHEHE_SHE
+				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodMistressMaster = witch_spirit
+				WitchGodMotherFather = witch_source
+		
+			}
 		}
 		manx_builders = {
 			color = { 125 90 80 }

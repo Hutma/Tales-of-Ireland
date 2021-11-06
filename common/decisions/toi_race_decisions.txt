@@ -377,7 +377,10 @@ celtic_troops_decision = {
 	is_valid = {
 		OR = {
 			is_independent_ruler = yes
-			highest_held_title_tier > 2
+			AND = {
+				highest_held_title_tier > 2
+				prestige_level > 2
+			}
 		}
 		piety_level >= 2
 	}

@@ -503,7 +503,7 @@
 
  rf_overworld:0 "Otherworld"
  rf_pagan:0 "Pagan"
- rf_travelers:0 "Traverlers"
+ rf_travelers:0 "Travelers"
 
  sinful_theocrat_exposed_title:0 "Sinful [sinful_theocrat.Custom('GetActualBishopTitle')] Exposed"
  virtuous_theocrat_celebrated_title:0 "Virtuous [virtuous_theocrat.Custom('GetActualBishopTitle')] Celebrated"

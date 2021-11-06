@@ -1,7 +1,9 @@
 ﻿l_english:
  #Siege
  innovation_ram:0 "Ram"
- innovation_ram:0 "Using Ram will help us breaking through the walls of Ringforts."
+ innovation_ram_tribal:0 "Ram"
+ innovation_ram_desc:0 "Using Ram will help us breaking through the walls of Ringforts."
+ innovation_ram_tribal_desc:0 "Using Ram will help us breaking through the walls of Ringforts."
  #Military
  innovation_maa_leinster:0 "Warriors of Leinster"
  innovation_maa_leinster_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."

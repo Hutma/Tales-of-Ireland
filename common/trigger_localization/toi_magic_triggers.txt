@@ -1,0 +1,44 @@
+﻿be_in_feast_trigger = {
+	first = BE_IN_FEAST_TRIGGER
+	first_not = BE_IN_FEAST_TRIGGER
+	global = BE_IN_FEAST_TRIGGER
+	global_not = BE_IN_FEAST_TRIGGER
+	third = BE_IN_FEAST_TRIGGER
+	third_not = BE_IN_FEAST_TRIGGER
+}
+
+have_no_child_trigger = {
+	first = HAVE_NO_CHILD_TRIGGER
+	first_not = HAVE_NO_CHILD_TRIGGER
+	global = HAVE_NO_CHILD_TRIGGER
+	global_not = HAVE_NO_CHILD_TRIGGER
+	third = HAVE_NO_CHILD_TRIGGER
+	third_not = HAVE_NO_CHILD_TRIGGER
+}
+
+two_years_between_cast_trigger = {
+	first = TWO_YEARS_BETWEEN_CAST_TRIGGER
+	first_not = TWO_YEARS_BETWEEN_CAST_TRIGGER
+	global = TWO_YEARS_BETWEEN_CAST_TRIGGER
+	global_not = TWO_YEARS_BETWEEN_CAST_TRIGGER
+	third = TWO_YEARS_BETWEEN_CAST_TRIGGER
+	third_not = TWO_YEARS_BETWEEN_CAST_TRIGGER
+}
+
+not_has_blessed_cattle_already = {
+	first = NOT_HAS_BLESSED_CATTLE_ALREADY
+	first_not = NOT_HAS_BLESSED_CATTLE_ALREADY
+	global = NOT_HAS_BLESSED_CATTLE_ALREADY
+	global_not = NOT_HAS_BLESSED_CATTLE_ALREADY
+	third = NOT_HAS_BLESSED_CATTLE_ALREADY
+	third_not = NOT_HAS_BLESSED_CATTLE_ALREADY
+}
+
+you_are_not_wounded = {
+	first = YOU_ARE_NOT_WOUNDED
+	first_not = YOU_ARE_NOT_WOUNDED
+	global = YOU_ARE_NOT_WOUNDED
+	global_not = YOU_ARE_NOT_WOUNDED
+	third = YOU_ARE_NOT_WOUNDED
+	third_not = YOU_ARE_NOT_WOUNDED
+}

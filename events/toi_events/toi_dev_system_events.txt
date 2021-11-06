@@ -2699,6 +2699,7 @@ cattle.0504 = {
 			NOT = { this = root.capital_county }
 			tier = tier_county
 			this.development_level > capital_county.development_level
+			this.development_level > 9
 		}
 	}
 	
@@ -2713,6 +2714,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_1
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_1
@@ -2722,6 +2724,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_2
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_2
@@ -2731,6 +2734,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_3
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_3
@@ -2740,6 +2744,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_4
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_4
@@ -2749,6 +2754,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_5
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_5
@@ -2758,6 +2764,7 @@ cattle.0504 = {
 					NOT = {
 						exists = scope:county_6
 						this.development_level < capital_county.development_level
+						this.development_level < 10
 					}
 				}
 				save_scope_as = county_6
@@ -2866,6 +2873,9 @@ cattle.0505 = {
 				development_level > 20
 			}
 		}
+		NOT = {
+			has_character_flag = have_had_event_0505_flag
+		}
 	}
 	
 	immediate = {
@@ -2886,6 +2896,10 @@ cattle.0505 = {
 				value = this.development_level
 				multiply = -0.3
 			}
+		}
+		add_character_flag = {
+			flag = have_had_event_0505_flag
+			years = 5
 		}
 	}
 
@@ -2948,6 +2962,9 @@ cattle.0506 = {
 				development_level > 25
 			}
 		}
+		NOT = {
+			has_character_flag = have_had_event_0506_flag
+		}
 	}
 	
 	option = { #these things happen
@@ -2962,6 +2979,10 @@ cattle.0506 = {
 				value = this.development_level
 				multiply = -0.2
 			}
+		}
+		add_character_flag = {
+			flag = have_had_event_0506_flag
+			years = 5
 		}
 	}
 }
@@ -2982,6 +3003,12 @@ cattle.0601 = {
 		animation = happiness 
 	}
 	
+	trigger = {
+		NOT = {
+			has_character_flag = have_had_event_0601_flag
+		}
+	}
+	
 	option = {
 		name = cattle.0601.a
 		trigger = {
@@ -2999,6 +3026,10 @@ cattle.0601 = {
 			change_development_level = 5
 		}
 		add_prestige = 100
+		add_character_flag = {
+			flag = have_had_event_0601_flag
+			years = 4
+		}
 	}
 	option = {
 		name = cattle.0601.b
@@ -3010,6 +3041,10 @@ cattle.0601 = {
 		}
 		add_prestige = 50
 		add_gold = 100
+		add_character_flag = {
+			flag = have_had_event_0601_flag
+			years = 4
+		}
 	}
 }
 
@@ -3029,6 +3064,12 @@ cattle.0602 = {
 		animation = sadness 
 	}
 	
+	trigger = {
+		NOT = {
+			has_character_flag = have_had_event_0602_flag
+		}
+	}
+	
 	option = {
 		name = cattle.0602.a
 		trigger = {
@@ -3045,6 +3086,10 @@ cattle.0602 = {
 			}
 			change_development_level = -2
 		}
+		add_character_flag = {
+			flag = have_had_event_0602_flag
+			years = 5
+		}
 	}
 	option = {
 		name = cattle.0602.b
@@ -3060,6 +3105,10 @@ cattle.0602 = {
 				modifier = fasting_bad_modifier
 				years = 1
 			}
+		}
+		add_character_flag = {
+			flag = have_had_event_0602_flag
+			years = 5
 		}
 	}
 }
@@ -3078,6 +3127,12 @@ cattle.0603 = {
 	left_portrait = {
 		character = root
 		animation = happiness	 
+	}
+	
+	trigger = {
+		NOT = {
+			has_character_flag = have_had_event_0603_flag
+		}
 	}
 	
 	option = {
@@ -3099,6 +3154,10 @@ cattle.0603 = {
 		capital_county = {
 			change_development_level = 4
 		}
+		add_character_flag = {
+			flag = have_had_event_0603_flag
+			years = 4
+		}
 	}
 	option = {
 		name = cattle.0603.b
@@ -3110,6 +3169,10 @@ cattle.0603 = {
 		}
 		capital_county = {
 			change_development_level = 2
+		}
+		add_character_flag = {
+			flag = have_had_event_0603_flag
+			years = 4
 		}
 	}
 }
@@ -3130,6 +3193,12 @@ cattle.0604 = {
 		animation = sadness 
 	}
 	
+	trigger = {
+		NOT = {
+			has_character_flag = have_had_event_0604_flag
+		}
+	}
+	
 	option = {
 		name = cattle.0604.a
 		trigger = {
@@ -3146,6 +3215,10 @@ cattle.0604 = {
 			}
 			change_development_level = -3
 		}
+		add_character_flag = {
+			flag = have_had_event_0604_flag
+			years = 5
+		}
 	}
 	option = {
 		name = cattle.0604.b
@@ -3156,6 +3229,10 @@ cattle.0604 = {
 			change_development_level = -5
 		}
 		add_piety = -100
+		add_character_flag = {
+			flag = have_had_event_0604_flag
+			years = 5
+		}
 	}
 }
 

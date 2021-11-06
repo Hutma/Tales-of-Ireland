@@ -118,6 +118,21 @@ innovation_quilted_armor = {
 	flag = tribal_era_regular
 }
 
+innovation_ram_tribal = {
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	icon = @siege_weapons
+
+	unlock_maa = ram
+
+	potential = {
+		has_game_rule = first_era
+	}
+	
+	flag = global_regular
+	flag = tribal_era_regular
+}
+
 #culture_group_civic
 innovation_gavelkind = {
 	group = culture_group_civic

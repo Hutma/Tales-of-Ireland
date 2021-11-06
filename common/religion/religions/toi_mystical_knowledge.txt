@@ -93,9 +93,9 @@
 		#FateGod
 		FateGodName = mystical_knowledge_legacy_fate_god_name
 		FateGodNamePossessive = mystical_knowledge_legacy_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		#KnowledgeGod
 		KnowledgeGodName = mystical_knowledge_legacy_knowledge_god_name
@@ -133,9 +133,9 @@
 		WaterGodHerHim = CHARACTER_HERHIM_HER
 
 
-		PantheonTerm = mystical_knowledge_legacy_mother_earth_father_sky
+		PantheonTerm = mystical_knowledge_legacy_the_gods
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { mystical_knowledge_legacy_high_god_name mystical_knowledge_legacy_good_god_father_sky mystical_knowledge_legacy_good_god_ancestors }
+		GoodGodNames = { mystical_knowledge_legacy_high_god_name mystical_knowledge_legacy_mother_earth_father_sky mystical_knowledge_legacy_good_god_ancestors }
 		DevilName = mystical_knowledge_legacy_devil_name
 		DevilNamePossessive = mystical_knowledge_legacy_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = mystical_knowledge_legacy_religious_text
 		ReligiousHeadName = mystical_knowledge_legacy_religious_head_title
 		ReligiousHeadTitleName = mystical_knowledge_legacy_religious_head_title_name
-		DevoteeMale = mystical_knowledge_legacy_devotee
-		DevoteeMalePlural = mystical_knowledge_legacy_devoteeplural
-		DevoteeFemale = mystical_knowledge_legacy_devotee
-		DevoteeFemalePlural = mystical_knowledge_legacy_devoteeplural
-		DevoteeNeuter = mystical_knowledge_legacy_devotee
-		DevoteeNeuterPlural = mystical_knowledge_legacy_devoteeplural
-		PriestMale = mystical_knowledge_legacy_priest
-		PriestMalePlural = mystical_knowledge_legacy_priest_plural
-		PriestFemale = mystical_knowledge_legacy_priest
-		PriestFemalePlural = mystical_knowledge_legacy_priest_plural
-		PriestNeuter = mystical_knowledge_legacy_priest
-		PriestNeuterPlural = mystical_knowledge_legacy_priest_plural
+		DevoteeMale = mystical_knowledge_legacy_devotee_male
+		DevoteeMalePlural = mystical_knowledge_legacy_devotee_male_plural
+		DevoteeFemale = mystical_knowledge_legacy_devotee_female
+		DevoteeFemalePlural = mystical_knowledge_legacy_devotee_female_plural
+		DevoteeNeuter = mystical_knowledge_legacy_devotee_male
+		DevoteeNeuterPlural = mystical_knowledge_legacy_devotee_male_plural
+		PriestMale = mystical_knowledge_legacy_priest_male
+		PriestMalePlural = mystical_knowledge_legacy_priest_male_plural
+		PriestFemale = mystical_knowledge_legacy_priest_female
+		PriestFemalePlural = mystical_knowledge_legacy_priest_female_plural
+		PriestNeuter = mystical_knowledge_legacy_priest_male
+		PriestNeuterPlural = mystical_knowledge_legacy_priest_male_plural
 		AltPriestTermPlural = mystical_knowledge_legacy_priest_alternate_plural
-		BishopMale = mystical_knowledge_legacy_priest
-		BishopMalePlural = mystical_knowledge_legacy_priest_plural
-		BishopFemale = mystical_knowledge_legacy_priest
-		BishopFemalePlural = mystical_knowledge_legacy_priest_plural
-		BishopNeuter = mystical_knowledge_legacy_priest
-		BishopNeuterPlural = mystical_knowledge_legacy_priest_plural
+		BishopMale = mystical_knowledge_legacy_bishop_male
+		BishopMalePlural = mystical_knowledge_legacy_bishop_male_plural
+		BishopFemale = mystical_knowledge_legacy_bishop_female
+		BishopFemalePlural = mystical_knowledge_legacy_bishop_female_plural
+		BishopNeuter = mystical_knowledge_legacy_bishop_male
+		BishopNeuterPlural = mystical_knowledge_legacy_bishop_male_plural
 		DivineRealm = mystical_knowledge_legacy_divine_realm
 		PositiveAfterLife = mystical_knowledge_legacy_divine_realm
 		NegativeAfterLife = mystical_knowledge_legacy_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = mystical_knowledge_legacy_death_deity_name_possessive
 		DeathDeitySheHe = mystical_knowledge_legacy_devil_shehe
 		DeathDeityHerHis = mystical_knowledge_legacy_death_deity_herhis
-		WitchGodName = witchgodname_mystical_knowledge_legacy_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_mystical_knowledge_legacy_the_morrigan
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+ 		WitchGodMotherFather = mother
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars

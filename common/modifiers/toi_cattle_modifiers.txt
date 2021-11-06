@@ -35,14 +35,6 @@ unhappy_about_the_judgement = {
 	icon =  stewardship_negative
 	county_opinion_add = -5
 }
-returned_calf = {
-	years = 2
-	opinion = 25
-}
-returned_calf2 = {
-	years = 2
-	opinion = -25
-}
 five_opinion_general = {
 	icon = letter_positive
 	general_opinion = 5

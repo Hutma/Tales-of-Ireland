@@ -147,6 +147,7 @@ unite_all_ireland_decision = {
 	}
 
 	effect = {
+		play_music_cue = mx_cue_uniting_ireland
 		show_as_tooltip = {
 			unite_all_ireland_decision_scripted_effect = yes
 		}

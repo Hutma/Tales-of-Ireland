@@ -1,0 +1,158 @@
+﻿l_english:
+ ## GUI
+ MAGIC_BUTTON: "Open Magic"
+ MAGIC_VIEW: "Magic"
+ CURRENT_MANA: "#high #bold Current Mana:#!#!\n[GetPlayer.MakeScope.Var('mana').GetValue|0]/[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|0]"
+ NO_DESCRIPTION: "Select a spell for there to be a description"
+ SELECT_SPELL_TARGET: "Select Target"
+ CAST_SPELL: "Cast Spell"
+ SELECT_THIS: "Select"
+ REPEAT_X_TIMES: "#high #bold Repeat Spell#!#!\n[GetPlayer.MakeScope.Var('repeat_spell').GetValue|0] Times"
+ SPELL_PARAMETERS: "Spell Parameters"
+ MAGIC_USAGE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_usage'))|0]+[GetPlayer.MakeScope.ScriptValue('total_magic_usage')|0]#!#!"
+ MAGIC_USAGE: "#high #bold Magic Usage#!#!"
+ FAILURE_CHANCE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('failure_chance_for_spells')|0]%#!#!"
+ FAILURE_CHANCE: "#high #bold Failure Chance#!#!"
+ usage_value_meaning: "#high Selected Spell Magic Usage\n#bold +#!\nTotal Magic Usage#!"
+
+ ## Spell Categories
+ self_category:0 "#bold #italic Targets:#!#! Self"
+ character_category:0 "#bold #italic Targets:#!#! Other Characters"
+ title_category:0 "#bold #italic Targets:#!#! Titles"
+
+ ### Spells
+ ## Spell Names
+ # Self
+ summon_sidhe_child_name:0 "Summon the Sidhe for a Child"
+ summon_sidhe_advisor_name:0 "Summon a Sidhe Advisor"
+ summon_sidhe_feast_name:0 "Summon Sidhe to Feast"
+ summon_magical_army_name:0 "Summon Magical Army"
+ summon_magical_siege_engine_name:0 "Summon a Magical Siege Engine"
+ command_the_wind_name:0 "Command the Wind"
+ hidden_blade_name:0 "Hidden Blade"
+ hidden_eye_name:0 "Hidden Eye"
+ hidden_aura_name:0 "Hidden Aura"
+ extend_lifespan_name:0 "Extend Lifespan"
+ channel_giant_strength_name:0 "Channel the Strength of Giants"
+ exchange_your_talents_name:0 "Exchange your Talents"
+ sidhe_speechcraft_name:0 "Sidhe Speechcraft"
+ heal_wounds_name:0 "Heal Wounds"
+
+ # Character 
+ inflict_wounds_name:0 "Inflict Wounds"
+ inflict_terror_name:0 "Inflict Terror"
+ inflict_pestilence_name:0 "Inflict Pestilence"
+ hostile_whispers_name:0 "Hostile Whispers"
+ captivate_mind_name:0 "Captivate Mind"
+
+ # Titles
+ bless_the_cattle_name:0 "Bless the Cattle"
+ multiply_herds_name:0 "Multiply Herds"
+ 
+ #Cessarian
+ deer_form_name: "Deer Form"
+ fintan_transformation_name: "Fintan Transformation"
+ flood_realm_name: "Flood Realm"
+ mark_of_cain_name: "The Mark of Cain"
+ serpent_bite_name: "The Serpent Bite"
+ garden_eden_name: "Bring the Eden Springs"
+ 
+ #Fomorian
+ call_sea_armies_name: "Call Sea Armies"
+ call_underground_ridri_name: "Call Underground Ridri"
+ fomorian_transformation_name: "Fomorian Mutation"
+ destroy_essence_name: "Destroy Essence"
+ blood_moon_name: "Blood Moon"
+ omen_of_opression_name: "Oppresing Omen"
+ 
+ #Tutha de danann
+ healing_secret_name: "Healing Secret"
+ silverarmed_name: "Silverarmed"
+ dagda_cauldron_name: "Dagda's Cauldron"
+ lugh_strenght_name: "Lugh's Strenght"
+ call_light_name: "Call Light"
+ lost_knowledge_name: "Retrive Lost Knowledge"
+ summon_new_tribe_name: "Summon a New Tribe"
+ 
+ #Megalithic
+ sacred_building_name: "Sacred Building"
+ suns_chosen_name: "Sun's Chosen"
+ hunting_spirits_name: "Hunting with Spirits"
+
+ #Partholonian
+ rune_words_name: "Rune Words"
+ protective_amulet_name: "Protective Amulet"
+ greek_astrology_name: "Astrology from Greece"
+ cursed_tablet_name: "Cursed Tablet"
+ partholonian_plague_name: "Partholon's Plague"
+ 
+ #Nemedian
+ sidhe_agriculture_name: "Sidhe Agriculture"
+ blessed_family_name: "Blessed Family"
+ nemedian_union_name: "Nemedian Unity"
+ nemed_seduction_name: "Nemed's Seduction"
+ 
+ #Fir Bolg
+ srengs_strenght_name: "Sreng's Strenght"
+ fir_bolg_endurance_name: "Fir Bolgs' Endurance"
+ men_of_bags_name: "Men of bags"
+ heavy_lifters_name: "Heavy Lifters"
+ united_in_defiance_name: "United in Defiance"
+ 
+ #Milesian
+ path_of_destiny_name: "Path of Destiny"
+ realm_ceremony_name: "Realm Ceremony"
+ enchant_bedroooms_name: "Enchant Bedrooms"
+ 
+ #Celts
+ druidic_intersessions_name: "Druidic Intersessions"
+ magic_paintings_name: "Magic Paintings"
+ befriend_the_morrigan_name: "Befriend the Morrigan"
+ settle_power_name: "Settle Power"
+ influence_culture_name: "Influence Culture"
+ 
+ #Hy Brasilian
+ mystical_craft_name: "Mystical Craft"
+ two_worlds_name: "Two Worlds Trade"
+ no_escape_curse_name: "No Escape Curse"
+ brasil_fog_name: "Brasil Poisonous Fog"
+ magic_mist_name: "Magic Mist"
+ 
+ #Latin
+ burn_incense_name: "Burn Insence"
+ roman_astrology_name: "Roman Astrology"
+ 
+ ## Traits
+ trait_magician_good_1:0 "Magician"
+ trait_magician_good_1_desc:0 "Magicians are born with the innate capacity for magic."
+ trait_magician_good_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was born with the innate capacity for magic."
+
+ trait_magician_good_2:0 "Great Magician"
+ trait_magician_good_2_desc:0 "Great magicians are born with the innate capacity for magic, stronger than most."
+ trait_magician_good_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was born with the innate capacity for magic, stronger than most."
+
+ trait_magician_good_3:0 "Sidhe-touched"
+ trait_magician_good_3_desc:0 "Sidhe-touched Magicians are given great gifts with magic from the gods."
+ trait_magician_good_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was given great gifts with magic from the gods."
+ 
+ #Custom desc
+ SOMETHING_BAD_HAPPENS_MAGIC: "#X Something bad happens! #!"
+ YOU_ASK_THE_SIDHE_TO_CHANGE_YOU: "You ask the Sidhe for guidance"
+ TUATHA_ARMY: "Tuatha invasion Army"
+ 
+ #Armies
+ magic_soldiers_troops: "Magical Troops"
+ 
+ #Interface toasts
+ tooltip.magic.inflict_wounds.target: "You have been magically wounded!"
+ tooltip.magic.inflict_terror.target: "You have been magically terrified!"
+ tooltip.magic.inflict_pestilence.target: "You are magically getting ill!"
+ tooltip.magic.hostile_whispers.target: "You are the target of dark magical rumors!"
+ tooltip.magic.flood_realm.target: "You realm has been flooded!"
+ tooltip.magic.serpent_bite.target: "You suffer from a magical serpent bite!"
+ tooltip.magic.omen_of_opression.target: "You are cursed with a bad omen!"
+ tooltip.magic.destroy_essence.target: "Someone is draining your magical essence!"
+ tooltip.magic.cursed_tablet.target: "You have been magically cursed!"
+ tooltip.magic.nemed_seduction.target: "You are magically falling in love!"
+ tooltip.magic.no_escape_curse.target: "A dark magic is killing your garrisons!"
+ tooltip.magic.magic_mist.target: "A magic mist is killing your people!"

@@ -1,0 +1,199 @@
+### DYNASTY HOUSE WINDOW
+window = {
+	name = "window_clan"
+	widgetid = "window_clan"
+	datacontext = "[DynastyHouseView.GetDynastyHouse]"
+	datacontext = "[DynastyHouse.GetDynasty]"
+	movable = no
+	allow_outside = yes
+	layer = windows_layer
+	
+	parentanchor = top|right
+	
+	using = Window_Size_MainTab
+	
+	blockoverride "button_close"
+	{
+		onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets window_clan')]"
+	}
+	
+	state = {
+		name = initialize
+		trigger_on_create = yes
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('my_realm'), 'my_realm', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('military'), 'military', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('council_window'), 'council_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('court_window'), 'court_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('intrigue_window'), 'intrigue_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('factions_window'), 'factions_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('decisions'), 'decisions', '' ) )]"
+		on_start = "[GetScriptedGui('get_clan_derbfine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		on_start = "[GetScriptedGui('get_clan_dynast_and_heir').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		on_start = "[GetScriptedGui('get_clan_rulers').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+	}
+	
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+		trigger_when = "[IsRightWindowOpen]"
+		alpha = 0
+	}
+	
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+		alpha = 1
+		on_start = "[GetScriptedGui('close_other_views').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	}
+	
+	background = {
+		texture = "gfx/interface/component_tiles/background_area_light.dds"
+		margin_left = -35
+		fittype = centercrop
+	}
+	
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 26 }
+		margin_right = 20
+
+		widget = {
+			size = { 100% 100% }
+
+			vbox = {
+				using = Window_Margins
+
+				header_pattern = {
+					layoutpolicy_horizontal = expanding
+
+					blockoverride "header_text"
+					{
+						text = "CLAN"
+					}
+
+					blockoverride "button_close"
+					{
+						onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets window_clan')]"
+					}
+				}
+				
+				vbox = {
+					name = "clan_head_container"
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+
+					text_label_center = {
+						text = "Clan leader"
+					}
+					
+				}
+				
+				spacer = { size = { 0 20 } }
+				
+				dynamicgridbox = {
+					datamodel = "[GetPlayer.MakeScope.GetList('clan_dynast_and_heir')]"
+					
+					flipdirection = yes
+					
+					item = {
+						flowcontainer = {
+							datacontext = "[Scope.GetCharacter]"
+
+							portrait_head = {}
+							
+							text_single = {
+								text = "[Character.GetFirstNameOrMeNoTooltip]"
+							}
+						}
+					}
+				}
+				
+				spacer = { size = { 0 50 } }
+				
+				vbox = {
+					name = "core_clan_container"
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+
+					text_label_center = {
+						text = "Derbfine"
+					}
+				}
+				
+				spacer = { size = { 0 20 } }
+				
+				dynamicgridbox = {
+					datamodel = "[GetPlayer.MakeScope.GetList('clan_derbfine')]"
+					
+					flipdirection = yes
+					
+					item = {
+						flowcontainer = {
+							datacontext = "[Scope.GetCharacter]"
+
+							portrait_head = {}
+						}
+					}
+				}
+				
+				spacer = { size = { 0 50 } }
+
+				vbox = {
+					name = "wide_clan_container"
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+
+					text_label_center = {
+						text = "Clan Rulers"
+					}
+				}
+				
+				spacer = { size = { 0 20 } }
+				
+				dynamicgridbox = {
+					datamodel = "[GetPlayer.MakeScope.GetList('clan_rulers')]"
+					
+					flipdirection = yes
+					
+					item = {
+						flowcontainer = {
+							datacontext = "[Scope.GetCharacter]"
+
+							portrait_head = {}
+						}
+					}
+				}
+				
+				spacer = { size = { 0 50 } }
+				
+				vbox = {
+					name = "unity_clan_container"
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+
+					text_label_center = {
+						text = "Clannic Unity"
+					}
+				}
+				
+				spacer = { size = { 0 50 } }
+				
+				vbox = {
+					name = "decisions_clan_container"
+					layoutpolicy_horizontal = expanding
+					spacing = 10
+
+					text_label_center = {
+						text = "Clannic Decisions"
+					}
+				}
+				
+				expand = {}
+			}
+		}
+	}
+}

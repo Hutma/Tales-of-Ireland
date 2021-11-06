@@ -1,0 +1,719 @@
+﻿types MagicWindow  {
+    type magic_window_view = window {
+        size = { 670 950 }
+		position = {-600 75}
+		parentanchor = top|right
+		layer = windows_layer
+        allow_outside = yes
+        select_spell_target_view = {}
+        visible = "[GetVariableSystem.Exists('window_magic_view')]"
+    
+        using = Window_Background
+        using = Window_Decoration
+        using = Animation_ShowHide_Standard
+        
+        vbox = {
+            using = Window_Margins
+            restrictparent_min = yes
+    
+            header_pattern = {
+                layoutpolicy_horizontal = expanding
+    
+                blockoverride "header_text"
+                {
+                    text = "MAGIC_VIEW"
+                }
+    
+                blockoverride "button_close"
+                {
+                    onclick = "[GetVariableSystem.Clear( 'window_magic_view' )]"
+                    onclick = "[GetVariableSystem.Clear( 'select_spell_target' )]"
+                }
+            }
+    
+            vbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                hbox = {
+                    vbox = {
+                        text_single = {
+                            text = "MAGIC_USAGE"
+                            fontsize = 24
+                            align = center
+                        }
+                        spacer = { size = { 0 5 } }
+                        hbox = {
+                            background = {
+                                texture = "gfx/interface/component_tiles/solid_black_label.dds"
+                                margin = { 50 10 }
+                                margin_top = 0
+                                modify_texture = {
+                                    name = "mask"
+                                    texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 0 0 }
+                                    blend_mode = alphamultiply
+                                }
+                            }
+                            text_single = {
+                                text = "MAGIC_USAGE_VALUE"
+                                fontsize = 48
+                                align = center
+                                minimumsize = { 100 -1 }
+                                tooltip = usage_value_meaning
+                            }
+                        }
+                    }
+                    spacer = { size = { 100 0 } }
+                    vbox = {
+                        text_single = {
+                            text = "FAILURE_CHANCE"
+                            fontsize = 24
+                            align = center
+                        }
+                        spacer = { size = { 0 5 } }
+                        hbox = {
+                            background = {
+                                texture = "gfx/interface/component_tiles/solid_black_label.dds"
+                                margin = { 50 10 }
+                                margin_top = 0
+                                modify_texture = {
+                                    name = "mask"
+                                    texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 0 0 }
+                                    blend_mode = alphamultiply
+                                }
+                            }
+                            text_single = {
+                                text = "FAILURE_CHANCE_VALUE"
+                                fontsize = 48
+                                align = center
+                                minimumsize = { 100 -1 }
+                            }
+                        }
+                    }
+                }
+
+                spacer = { size = { 0 40 } }
+
+                text_single = {
+                    visible = "[GetVariableSystem.Exists('current_spell_selected')]"
+                    text = "[Localize(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_name'))]"
+                    fontsize = 18
+                    default_format = "#high"
+                    align = center
+                    background = {
+                        texture = "gfx/interface/component_tiles/solid_black_label.dds"
+                        margin = { 50 10 }
+                        margin_top = 0
+                        modify_texture = {
+                            name = "mask"
+                            texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                }
+
+                spacer = { size = { 0 10 } }
+
+                hbox = {
+                    layoutpolicy_horizontal = expanding
+                    spacer = { size = { 20 0 } }
+                    vbox = {
+                        hbox = {
+                            visible = "[GetVariableSystem.HasValue('targets_people','true')]"
+                            datacontext = "[GetPlayer.MakeScope.Var('spell_target').GetCharacter]"
+                            portrait_shoulders_magic = {}
+                        }
+                        hbox = {
+                            visible = "[GetVariableSystem.HasValue('targets_people','false')]"
+                            vbox = {
+                                datacontext = "[GetPlayer.MakeScope.Var('spell_target').Title]"
+                                button_tertiary_magic_small = {
+                                    minimumsize = { 100 40 }
+                                    visible = "[GetVariableSystem.HasValue('cant_switch_targets','false')]"
+                                    onclick = "[GetVariableSystem.Toggle( 'select_spell_target' )]"
+                                    text = "SELECT_SPELL_TARGET"
+                                }
+                                coa_title_big_magic = {}
+                            }
+                        }
+                    }
+                    spacer = { size = { 20 0 } }
+                    vbox = {
+                        layoutpolicy_vertical = expanding
+                        text_multi = {
+                            margin = { 20 20 }
+                            visible = "[GetVariableSystem.Exists('current_spell_selected')]"
+                            text = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target_character',GetPlayer.MakeScope.Var('spell_target').GetCharacter.MakeScope).End)]"
+                            minimumsize = { 400 -1 }
+                            maximumsize = { 400 -1 }
+                            autoresize = yes
+                            align = center
+                            using = Background_Area_Dark
+                        }
+                        expand = {}
+                    }
+                    expand = {}
+                }
+                spacer = { size = { 0 20 } }
+                button_tertiary_magic = {
+                    text = "CAST_SPELL"
+                    onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    enabled = "[GetScriptedGui('valid_cast_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magic_view' )]"
+                }
+                spacer = { size = { 0 20 } }
+                scrollbox = {
+                    name = "get_all_spells"
+                    size = { 630 300 }
+                    layoutpolicy_vertical = expanding
+                    layoutpolicy_horizontal = expanding
+                    background = {
+                        texture = "gfx/interface/illustrations/event_scenes/connemara_background.dds"
+                        alpha = 0.5
+                        modify_texture = {
+                            name = "mask"
+                            texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+                            spriteType = Corneredstretched
+                            spriteborder = { 0 0 }
+                            blend_mode = alphamultiply
+                        }
+                    }
+                    blockoverride "scrollbox_content"
+                    {
+                        dynamicgridbox = {
+                            datacontext = "[GetPlayer]"
+                            layoutpolicy_vertical = expanding
+                            allow_outside = yes
+                            ignoreinvisible = yes
+                            maxhorizontalslots = 1
+                            maxverticalslots = 100
+                            block "datamodel" {
+                                datamodel = "[GetGlobalList('self_spells_list'))]"
+                            }
+                            item = {
+                                widget = {
+                                    block "size" {
+                                        size = { 310 80 }
+                                    }
+                                    button_tertiary = {
+                                        onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+                                        onclick = "[GetVariableSystem.Set('cant_switch_targets','true')]"
+                                        onclick = "[GetVariableSystem.Set('targets_people','true')]"
+                                        onclick = "[GetScriptedGui('select_self_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										tooltip = "[GetScriptedGui(Scope.GetFlagName).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        enabled = "[GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+                                        flowcontainer = {
+                                            resizeparent = yes
+                                            margin = { 10 10 }
+                                            icon = {
+                                                texture = "gfx/interface/icons/focuses/diplomacy_majesty_focus.dds"
+                                                size = { 50 50 }
+                                                using = Color_Blue
+                                                modify_texture = {
+                                                    texture = "gfx/interface/colors/colors_textured.dds"
+                                                    blend_mode = add
+                                                    framesize = { 96 96 }
+                                        
+                                                    block "master_color_frame" {
+                                                        frame = 5
+                                                    }
+                                                }
+                                                tooltip = self_category
+                                            }
+                                            spacer = { size = { 15 0 } }
+                                            text_single = {
+                                                text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+                                                minimumsize = { 250 -1 }
+                                                default_format = "#bold"
+                                            }
+                                        }
+                                        expand = {}
+                                    }
+                                }
+                            }
+                        }
+                        dynamicgridbox = {
+                            datacontext = "[GetPlayer]"
+                            layoutpolicy_vertical = expanding
+                            allow_outside = yes
+                            ignoreinvisible = yes
+                            maxhorizontalslots = 1
+                            maxverticalslots = 100
+                            block "datamodel" {
+                                datamodel = "[GetGlobalList('character_spells_list'))]"
+                            }
+                            item = {
+                                widget = {
+                                    block "size" {
+                                        size = { 310 80 }
+                                    }
+                                    button_tertiary = {
+                                        onclick = "[GetVariableSystem.Set('cant_switch_targets','false')]"
+                                        onclick = "[GetVariableSystem.Set('targets_people','true')]"
+                                        onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+										tooltip = "[GetScriptedGui(Scope.GetFlagName).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        enabled = "[GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+                                        onclick = "[GetScriptedGui('get_first_option_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        flowcontainer = {
+                                            resizeparent = yes
+                                            margin = { 10 10 }
+                                            icon = {
+                                                texture = "gfx/interface/icons/focuses/diplomacy_family_focus.dds"
+                                                size = { 50 50 }
+                                                using = Color_Blue
+                                                modify_texture = {
+                                                    texture = "gfx/interface/colors/colors_textured.dds"
+                                                    blend_mode = add
+                                                    framesize = { 96 96 }
+                                        
+                                                    block "master_color_frame" {
+                                                        frame = 5
+                                                    }
+                                                }
+                                                tooltip = character_category
+                                            }
+                                            spacer = { size = { 15 0 } }
+                                            text_single = {
+                                                text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+                                                minimumsize = { 250 -1 }
+                                                default_format = "#bold"
+                                            }
+                                        }
+                                        expand = {}
+                                    }
+                                }
+                            }
+                        }
+                        dynamicgridbox = {
+                            datacontext = "[GetPlayer]"
+                            layoutpolicy_vertical = expanding
+                            allow_outside = yes
+                            ignoreinvisible = yes
+                            maxhorizontalslots = 1
+                            maxverticalslots = 100
+                            block "datamodel" {
+                                datamodel = "[GetGlobalList('title_spells_list'))]"
+                            }
+                            item = {
+                                widget = {
+                                    block "size" {
+                                        size = { 310 80 }
+                                    }
+                                    button_tertiary = {
+                                        onclick = "[GetVariableSystem.Set('cant_switch_targets','false')]"
+                                        onclick = "[GetVariableSystem.Set('targets_people','false')]"
+                                        onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+										tooltip = "[GetScriptedGui(Scope.GetFlagName).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        enabled = "[GetScriptedGui(Scope.GetFlagName).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+                                        onclick = "[GetScriptedGui('get_first_option_target_title').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                        flowcontainer = {
+                                            resizeparent = yes
+                                            margin = { 10 10 }
+                                            icon = {
+                                                texture = "gfx/interface/icons/focuses/stewardship_domain_focus.dds"
+                                                size = { 50 50 }
+                                                using = Color_Blue
+                                                modify_texture = {
+                                                    texture = "gfx/interface/colors/colors_textured.dds"
+                                                    blend_mode = add
+                                                    framesize = { 96 96 }
+                                        
+                                                    block "master_color_frame" {
+                                                        frame = 5
+                                                    }
+                                                }
+                                                tooltip = title_category
+                                            }
+                                            spacer = { size = { 15 0 } }
+                                            text_single = {
+                                                text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+                                                minimumsize = { 250 -1 }
+                                                default_format = "#bold"
+                                            }
+                                        }
+                                        expand = {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                expand = {}
+            }
+        }
+    }
+
+    type select_spell_target_view = window {
+        size = { 350 500 }
+		position = {-680 460}
+		parentanchor = top|right
+		layer = windows_layer
+        allow_outside = yes
+        visible = "[GetVariableSystem.Exists('select_spell_target')]"
+    
+        using = Window_Background
+        using = Window_Decoration
+        using = Animation_ShowHide_Standard
+        
+        vbox = {
+            using = Window_Margins
+            restrictparent_min = yes
+    
+            header_pattern = {
+                layoutpolicy_horizontal = expanding
+    
+                blockoverride "header_text"
+                {
+                    text = "SELECT_SPELL_TARGET"
+                }
+    
+                blockoverride "button_close"
+                {
+                    onclick = "[GetVariableSystem.Clear( 'select_spell_target' )]"
+                }
+            }
+    
+            scrollbox = {
+                name = "get_targets"
+                size = { 300 400 }
+
+                blockoverride "scrollbox_content"
+                {
+                    dynamicgridbox = {
+                        datacontext = "[GetPlayer]"
+                        layoutpolicy_vertical = expanding
+                        allow_outside = yes
+                        ignoreinvisible = yes
+                        maxhorizontalslots = 1
+                        maxverticalslots = 100
+                        visible = "[GetVariableSystem.HasValue('targets_people','true')]"
+                        block "datamodel" {
+                            datamodel = "[GetPlayer.MakeScope.GetList('spell_candidates')]"
+                        }
+                        item = {
+                            widget = {
+                                datacontext = "[Scope.GetCharacter]"
+                                visible = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(Scope.GetCharacter.MakeScope).AddScope('main_player',GetPlayer.MakeScope).End)]"
+                                block "size" {
+                                    size = { 300 90 }
+                                }
+                                button_tertiary = {
+                                    onclick = "[GetScriptedGui('select_character_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target_char',Scope.GetCharacter.MakeScope).End)]"
+                                    onclick = "[GetVariableSystem.Clear( 'select_spell_target' )]"
+                                    flowcontainer = {
+                                        resizeparent = yes
+                                        spacer = { size = { 15 0 } }
+                                        portrait_head_small = {}
+                                        spacer = { size = { 15 0 } }
+                                        flowcontainer = {
+                                            ignoreinvisible = yes
+                                            direction = vertical
+                                            spacer = {
+                                                size = { 0 14 }
+                                            }
+                                            text_single = {
+                                                fontsize = 16
+                                                text = "SELECT_THIS"
+                                                default_format = "#italic"
+                                            }
+                                            text_single = {
+                                                text = "[Character.GetTitleAsNameNoTooltip]"
+                                                fontsize = 16
+                                                default_format = "#F"
+                                                minimumsize = { 150 -1 }
+                                                visible = "[Character.HasLandedTitles]"
+                                            }
+                                            text_single = {
+                                                text = "[Character.GetFirstName]"
+                                                fontsize = 18
+                                                default_format = "#high"
+                                                minimumsize = { 150 -1 }
+                                            }
+                                        }
+                                    }
+                                    expand = {}
+                                }
+                            }
+                        }
+                    }
+                    dynamicgridbox = {
+                        datacontext = "[GetPlayer]"
+                        layoutpolicy_vertical = expanding
+                        allow_outside = yes
+                        ignoreinvisible = yes
+                        maxhorizontalslots = 1
+                        maxverticalslots = 100
+                        visible = "[GetVariableSystem.HasValue('targets_people','false')]"
+                        block "datamodel" {
+                            datamodel = "[GetPlayer.MakeScope.GetList('realm_candidates')]"
+                        }
+                        item = {
+                            widget = {
+                                datacontext = "[Scope.Title]"
+                                block "size" {
+                                    size = { 300 90 }
+                                }
+                                button_tertiary = {
+                                    onclick = "[GetScriptedGui('select_spell_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target_title',Title.MakeScope).End)]"
+                                    onclick = "[GetVariableSystem.Clear( 'select_spell_target' )]"
+                                    size = { 300 80 }
+                                    flowcontainer = {
+                                        resizeparent = yes
+                                        spacer = { size = { 15 0 } }
+                                        coa_title_medium = {}
+                                        spacer = { size = { 15 0 } }
+                                        flowcontainer = {
+                                            ignoreinvisible = yes
+                                            direction = vertical
+                                            spacer = {
+                                                size = { 0 14 }
+                                            }
+                                            text_single = {
+                                                fontsize = 16
+                                                text = "SELECT_THIS"
+                                                default_format = "#italic"
+                                            }
+                                            text_single = {
+                                                text = "[Title.GetName]"
+                                                fontsize = 16
+                                                default_format = "#F"
+                                                minimumsize = { 160 -1 }
+                                            }
+                                        }
+                                    }
+                                    expand = {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            expand = {}
+        }
+    }
+
+    type button_tertiary_magic = button_frontend
+    {
+        size = { 300 40 }
+        texture = "gfx/interface/buttons/button_tertiary.dds"
+
+        gfxtype = framedbuttongfx
+        effectname = "NoHighlight"
+        upframe = 1
+        overframe = 2
+        downframe = 3
+        framesize = { 210 36 }
+
+
+        spriteType = Corneredtiled
+        spriteborder = { 22 20 }
+
+        buttonText = {
+            text_single = {
+                size = { 100% 100% }
+                autoresize = no
+                margin = { 10 0 }
+                align = center|nobaseline
+                default_format = "#high"
+                using = Font_Size_Small
+            }
+        }
+    }
+
+    type button_tertiary_magic_small = button_frontend
+    {
+        size = { 120 40 }
+        texture = "gfx/interface/buttons/button_tertiary.dds"
+
+        gfxtype = framedbuttongfx
+        effectname = "NoHighlight"
+        upframe = 1
+        overframe = 2
+        downframe = 3
+        framesize = { 210 36 }
+
+
+        spriteType = Corneredtiled
+        spriteborder = { 22 20 }
+
+        buttonText = {
+            text_single = {
+                size = { 100% 100% }
+                autoresize = no
+                margin = { 10 0 }
+                align = center|nobaseline
+                default_format = "#bold"
+                using = Font_Size_Small
+            }
+        }
+    }
+
+    type portrait_shoulders_magic = widget {
+        size = { 125 160 }
+        widget = {
+            size = { 100% 100% }
+            block "portrait_glows"
+            {
+                using = Portrait_Background_Glows
+            }
+        }
+
+        portrait_button = {
+            parentanchor = bottom|hcenter
+            size = { 145 175 }
+            using = portrait_base
+            block "portrait_texture"
+            {
+                portrait_texture = "[Character.GetPortrait('environment_shoulders', 'camera_shoulders', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+            }
+
+            mask = "gfx/portraits/portrait_mask_shoulders.dds"
+            effectname = "NoHighlight"
+
+            highlight_icon = {
+                name = "prison_bars"
+                visible = "[Character.IsImprisoned]"
+                size = { 100% 100% }
+                effectname = "NoHighlight"
+                texture = "gfx/portraits/portrait_prison_shoulders.dds"
+
+                modify_texture = {
+                    name = "mask"
+                    texture = "gfx/portraits/portrait_mask_shoulders.dds"
+                    spriteType = Corneredstretched
+                    blend_mode = alphamultiply
+                }
+            }
+
+            block "portrait_button" {}
+        }
+
+        portrait_status_icons = {
+            parentanchor = bottom|right
+            position = { 0 -3 }
+            scale = 0.85
+
+            background = {
+                using = Background_Area_Dark
+                margin = { 2 3 }
+                alpha = 0.8
+            }
+        }
+
+        block "coa" {
+            coa_realm_small_crown = {
+                visible = "[Character.HasLandedTitles]"
+                parentanchor = bottom|left
+                position = { -5 3 }
+            }
+        }
+
+        button_round = {
+            parentanchor = top|right
+            visible = "[GetVariableSystem.HasValue('cant_switch_targets','false')]"
+            onclick = "[GetVariableSystem.Toggle( 'select_spell_target' )]"
+            tooltip = SELECT_SPELL_TARGET
+            icon = {
+                texture = "gfx/interface/icons/flat_icons/replace.dds"
+                size = { 30 30 }
+                modify_texture = {
+                    texture = "gfx/interface/colors/colors_textured.dds"
+                    blend_mode = add
+                    framesize = { 96 96 }
+        
+                    block "master_color_frame" {
+                        frame = 1
+                    }
+                }
+                parentanchor = hcenter|vcenter
+            }
+        }
+
+        portrait_opinion = {
+            parentanchor = bottom|hcenter
+            position = { 0 -2 }
+        }
+
+        #portrait unknown glow
+        button = {
+            position = { -8 -14 }
+            size = { 141 174 }
+            texture = "gfx/portraits/unknown_portraits/button_unknown_shoulders.dds"
+            framesize = { 471 589 }
+            gfxtype = framedbuttongfx
+            effectname = "NoHighlight"
+            upframe = 1
+            overframe = 2
+            onclick = "[GetVariableSystem.Toggle( 'select_spell_target' )]"
+
+            block "glow_visible" {
+
+                visible = "[Not(Character.IsValid)]"
+
+            }
+
+            block "glow_flip" {}
+
+            block "onclick" {}
+        }
+    }
+
+    type coa_title_big_magic = button_group {
+		using = CoA_Title_Defaults
+
+		flowcontainer = {
+			margin = { 3 7 }
+			direction = vertical
+			spacing = -3
+			ignoreinvisible = yes
+
+			icon = {
+				name = "crown"
+				parentanchor = hcenter
+				texture = "gfx/interface/coat_of_arms/crown_strip_115.dds"
+				frame = "[Title.GetTierFrame]"
+				framesize = { 80 56 }
+
+				block "crown" {
+					visible = no
+				}
+			}
+
+			widget = {
+				parentanchor = hcenter
+				size = { 120 120 }
+
+				coat_of_arms_icon = {
+					parentanchor = center
+					size = { 110 110 }
+					coat_of_arms = "[Title.GetTitleCoA.GetTexture('(int32)172','(int32)172')]"
+					coat_of_arms_slot = "[Title.GetTitleCoA.GetSlot('(int32)172','(int32)172')]"
+					coat_of_arms_mask = "gfx/interface/coat_of_arms/title_mask.dds"
+
+					using = CoA_Title_Hover_Glow
+
+
+					coa_title_frame = {
+						texture = "gfx/interface/coat_of_arms/title_86.dds"
+						size = { 120 120 }
+					}
+
+					coa_title_frame_no_holder = {
+						texture = "gfx/interface/coat_of_arms/title_no_holder_86.dds"
+						size = { 120 120 }
+					}
+				}
+			}
+		}
+	}
+}
