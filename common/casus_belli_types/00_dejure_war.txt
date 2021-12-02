@@ -1298,13 +1298,7 @@ imperial_reconquest_cb = {
 	ai_only_against_neighbors = yes
 	
 	valid_to_start = {
-		scope:target = {
-			tier = tier_duchy
-			any_in_de_jure_hierarchy = {
-				tier = tier_county
-				title_province = { geographical_region = custom_roman_full_borders }
-			}
-		}
+		always = no
 	}
 
 	on_declaration = {

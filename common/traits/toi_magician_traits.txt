@@ -1,6 +1,6 @@
 ﻿# Magician (+1) - Magician
 magician_good_1 = {
-	index = 1040
+	index = 500
 	opposites = {
 		magician_good_2 #To prevent multiple tiers of the same congenital trait
 		magician_good_3
@@ -42,7 +42,7 @@ magician_good_1 = {
 
 # Magician (+2) - Great Magician
 magician_good_2 = {
-	index = 1041
+	index = 501
 	opposites = {
 		magician_good_3 #To prevent multiple tiers of the same congenital trait
 		magician_good_1
@@ -84,7 +84,7 @@ magician_good_2 = {
 
 # Magician (+3) - God Blessed
 magician_good_3 = {
-	index = 1042
+	index = 502
 	opposites = {
 		magician_good_2 #To prevent multiple tiers of the same congenital trait
 		magician_good_1

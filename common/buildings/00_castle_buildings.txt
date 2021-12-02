@@ -139,10 +139,10 @@ castle_02 = {
 castle_03 = {
 	construction_time = slow_construction_time
 	
-	### Hillfort 2 ###
+	### Hillfort 3 ###
 	asset = {
 		type = pdxmesh
-		name = "building_celtic_hillfort_02_mesh"
+		name = "building_celtic_hillfort_03_mesh"
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 2 } }
 		graphical_cultures = { irelander_building_gfx }
@@ -198,10 +198,10 @@ castle_03 = {
 castle_04 = {
 	construction_time = slow_construction_time
 	
-	### Hillfort 2 ###
+	### Hillfort 4 ###
 	asset = {
 		type = pdxmesh
-		name = "building_celtic_hillfort_02_mesh"
+		name = "building_celtic_hillfort_04_mesh"
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 3 } }
 		graphical_cultures = { irelander_building_gfx }

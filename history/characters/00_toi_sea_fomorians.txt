@@ -43,6 +43,7 @@
     trait = forgiving
     trait = compassionate
     trait = fomorian
+	trait = magician_good_1
 
     father=  401000 
 
@@ -215,6 +216,7 @@
     trait = lustful
     trait = diligent
     trait = fomorian
+	trait = magician_good_2
 
     mother=  400001 
 
@@ -408,7 +410,7 @@
     father=  400006 
 
     disallow_random_traits = yes
-    .1.1 = {
+    4782.1.1 = {
         birth = yes
     }
 }

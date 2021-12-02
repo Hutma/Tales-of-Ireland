@@ -50,7 +50,7 @@ meath_empire_founded = {
 	icon = prestige_positive
 	diplomacy_per_prestige_level = 1
 	learning_per_prestige_level = 1
-	monthly_dynasty_prestige_mult = 0.2
+	monthly_prestige = 0.4
 }
 
 roman_road_foundator = {
@@ -58,7 +58,7 @@ roman_road_foundator = {
 	movement_speed = 0.2
 	retreat_losses = -0.2
 	supply_limit = 25
-	monthly_dynasty_prestige_mult = 0.1
+	monthly_prestige = 0.5
 }
 
 roman_road_modifier = {
@@ -70,8 +70,13 @@ roman_road_modifier = {
 }
 
 ancient_kingdom_founder = {
-icon = prestige_positive
-	monthly_dynasty_prestige_mult = 0.15
+	icon = prestige_positive
+	monthly_prestige = 0.5
 	powerful_vassal_opinion = 10
 	monthly_county_control_change_add = 0.2
+}
+
+clannic_dynasty = {
+	icon = family_positive
+	monthly_prestige = 0.1
 }

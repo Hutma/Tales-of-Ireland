@@ -252,28 +252,6 @@ froce_cattle_trade_interaction = {
 		max = 30
 	}
 	
-	ai_potential = {
-		is_adult = yes
-		ai_greed >= low_positive_ai_value
-		intrigue >= medium_skill_rating
-		NOR = {
-			has_trait = content
-			any_scheme = {
-				OR = {
-					scheme_type = befriend
-					scheme_type = sway
-					scheme_type = seduce
-					scheme_type = courting
-					scheme_type = elope
-					scheme_type = force_cattle_trade
-				}
-			}
-		}
-	}
-	
-	ai_target_quick_trigger = {
-		adult = yes
-	}
 
 	ai_frequency = 36
 

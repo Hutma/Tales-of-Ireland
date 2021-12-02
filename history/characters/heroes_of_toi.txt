@@ -9,7 +9,7 @@
 	trait = education_martial_4
 	disallow_random_traits = yes
 	
-	life_expectancy = 1000
+	#life_expectancy = 1000
 	health = 50
 	
 	portrait_override ={
@@ -92,7 +92,7 @@
 	trait = education_martial_4
 	disallow_random_traits = yes
 	
-	life_expectancy = 1000
+	#life_expectancy = 1000
 	health = 50
 	
 	portrait_override ={
@@ -164,7 +164,7 @@
 	trait = education_martial_4
 	disallow_random_traits = yes
 	
-	life_expectancy = 1000
+	#life_expectancy = 1000
 	health = 50
 	
 	portrait_override ={
@@ -247,7 +247,7 @@
 	trait = education_martial_4
 	disallow_random_traits = yes
 	
-	life_expectancy = 1000
+	#life_expectancy = 1000
 	health = 50
 	
 	portrait_override ={
@@ -323,7 +323,7 @@
 	trait = education_martial_4
 	disallow_random_traits = yes
 	
-	life_expectancy = 1000
+	#life_expectancy = 1000
 	health = 50
 	
     4763.1.1 = {

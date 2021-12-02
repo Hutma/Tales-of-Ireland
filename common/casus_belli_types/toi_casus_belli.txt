@@ -991,7 +991,6 @@ cattle_raiding_cb = {
 				set_variable = { 
 					name = cattle_number_total
 					value = 0
-					days = 10
 				}
 				every_held_title = {
 					limit = {
@@ -1015,7 +1014,7 @@ cattle_raiding_cb = {
 						value = var:cattle_number
 						multiply = -1.0
 					}
-					remove_variable = var:cattle_number
+					remove_variable = cattle_number
 				}
 			#Money gained
 				set_variable = {
@@ -1044,7 +1043,6 @@ cattle_raiding_cb = {
 				set_variable = {
 					name = cattle_number_total
 					value = scope:defender.var:cattle_number_total
-					days = 10
 				}
 				capital_county = {
 					change_development_level = {
@@ -1059,7 +1057,6 @@ cattle_raiding_cb = {
 				set_variable = {
 					name = number_of_counties
 					value = 0
-					days = 10
 				}
 				every_held_title = {
 					limit = {
@@ -1076,6 +1073,7 @@ cattle_raiding_cb = {
 					name = cattle_number_total
 					divide = var:number_of_counties
 				}
+				remove_variable = number_of_counties
 				every_held_title = {
 					limit = {
 						tier = tier_county
@@ -1084,6 +1082,11 @@ cattle_raiding_cb = {
 						value = scope:attacker.var:cattle_number_total
 					}
 				}
+				remove_variable = cattle_number_total
+			}
+			
+			scope:defender = {
+				remove_variable = cattle_number_total
 			}
 		}
 		
@@ -1193,7 +1196,6 @@ cattle_raiding_cb = {
 					set_variable = {
 						name = cattle_number_total
 						value = 0
-						days = 10
 					}
 					change_variable = {
 						name = cattle_number_total
@@ -1217,12 +1219,15 @@ cattle_raiding_cb = {
 					set_variable = {
 						name = cattle_number_total
 						value = scope:cattle_count.var:cattle_number_total
-						days = 10
 					}
 					change_development_level = {
 						value = var:cattle_number_total
 					}
+					remove_variable = cattle_number_total
 				}
+			}
+			scope:attacker = {
+				remove_variable = cattle_number_total
 			}
 		}
 		# Prestige loss for the attacker
@@ -1418,7 +1423,7 @@ lure_to_cattle_raid_cb = {
 				flag = is_target_raid
 			}
 		}
-		desc = cattle_luring_explaination_desc
+		#desc = cattle_luring_explaination_desc
 	}
 
 	on_victory_desc = {

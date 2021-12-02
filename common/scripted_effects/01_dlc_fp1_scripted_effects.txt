@@ -311,6 +311,15 @@ try_create_challenge_to_single_combat = {
 	}
 }
 
+fp1_remove_humsac_offended_counties_effect = {
+	every_sub_realm_county = {
+		if = {
+			limit = { has_county_modifier = held_human_sacrifice_fp1_modifier }
+			remove_county_modifier = held_human_sacrifice_fp1_modifier
+		}
+	}
+}
+
 ##################################################
 # CBs
 ##################################################

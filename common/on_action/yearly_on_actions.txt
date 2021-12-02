@@ -258,10 +258,6 @@ yearly_playable_pulse = {
 # Called from code once every three years for "playable" (count+) characters.
 # Root is the character
 three_year_playable_pulse = {
-	on_actions = {
-		delay = { days = { 25 85 } }
-		on_cattle_wolfwalker
-	}
 ###TALES OF IRELAND
 	#High kingship
 	effect = {
@@ -351,7 +347,7 @@ random_yearly_playable_pulse = {
 		bishop_ongoing
 	}
 	random_events = {
-		delay = { days = { 15 30 } }
+		delay = { days = { 30 60 } }
 		chance_to_happen = 100
 		chance_of_no_event = 20
 		1 = 0

@@ -583,6 +583,7 @@
     trait = shy
     trait = compassionate
     trait = celtic_human
+	trait = magician_good_3
 
     father=  641000 
 
@@ -1117,6 +1118,7 @@
     trait = temperate
     trait = craven
     trait = celtic_human
+	trait = magician_good_2
 
     disallow_random_traits = yes
     4774.1.1 = {

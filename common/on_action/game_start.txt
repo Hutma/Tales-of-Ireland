@@ -106,6 +106,40 @@ on_game_start = {
 			}
 			add_trait = celtic_human
 		}
+		
+		every_ruler = {
+			limit = {
+				exists = dynasty 
+				dynasty.dynasty_prestige_level < 2
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 4
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 3
+				}
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 3
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 2
+				}
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 2
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
 #### TALES OF IRELAND ####
 	}
 	on_actions = {

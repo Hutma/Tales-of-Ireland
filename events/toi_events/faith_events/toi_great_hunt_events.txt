@@ -19,15 +19,6 @@ great_hunt.0001 = {
 			days = 7
 		}
 	}
-#	option = { Second option for later
-#		name = great_hunt.0001.b #"We'll go beyond our borders to find the most impressive prey"
-#		add_prestige = 50
-#		remove_short_term_gold = 50
-#		trigger_event = {
-#			id = great_hunt.0003
-#			days = 7
-#		}
-#	}
 }
 
 great_hunt.0002 = {
@@ -279,13 +270,8 @@ great_hunt.0024 = { #Catastrophic
 				}
 				desc = great_hunt.0024.c.success
 				add_prestige = 100
-				show_as_tooltip = {
-					add_character_modifier = {
-						general_opinion = 5
-						years = 5
-					}
-					add_diplomacy_lifestyle_xp = medium_lifestyle_xp
-				}
+
+				add_diplomacy_lifestyle_xp = medium_lifestyle_xp
 			}
 			50 = {		
 				compare_modifier = {
@@ -295,15 +281,9 @@ great_hunt.0024 = { #Catastrophic
 				}
 				add_prestige = -100
 				desc = great_hunt.0024.c.failure
-				show_as_tooltip = {
-					add_character_modifier = {
-						general_opinion = -5
-						years = 5
-					}
-					stress_impact = {
-						base = minor_stress_impact_gain
-						arrogant = minor_stress_impact_gain
-					}
+				stress_impact = {
+					base = minor_stress_impact_gain
+					arrogant = minor_stress_impact_gain
 				}
 			}
 		}

@@ -1,0 +1,104 @@
+﻿l_english:
+ ## GUI
+ CLAN_MENU: "#bold #highClan Menu#!#!"
+ UNITY_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('clan_unity')|0]#!#!"
+ VERY_HIGH_CLAN_UNITY: "#bold #high #P VERY HIGH #!#!#!"
+ HIGH_CLAN_UNITY: "#bold #high #P HIGH #!#!#!"
+ MEDIUM_CLAN_UNITY: "#bold #high MEDIUM #!#!"
+ LOW_CLAN_UNITY: "#bold #high #N LOW #!#!#!"
+ VERY_LOW_CLAN_UNITY: "#bold #high #N VERY LOW #!#!#!"
+ VERY_HIGH_CLAN_UNITY_EFFECTS: "All Clan members: #P +10% tax income, +5 powerful vassals opinion #! \n Clan Rulers: #N -20% levy size #! \n Clan Leader: #P +30% levy size, +1 monthly prestige #! \n #bold Clan Leader can subjugate a clan Ruler #!"
+ HIGH_CLAN_UNITY_EFFECTS: "All Clan members: #P +5% tax income, +5 powerful vassals opinion #! \n Clan Rulers: #N -10% levy size #! \n Clan Leader: #P +20% levy size, +0.5 monthly prestige #!"
+ MEDIUM_CLAN_UNITY_EFFECTS: "All Clan members: #P +5% tax income #! \n Clan Rulers: #N -10% levy size #! \n Clan Leader: #P +20% levy size #!"
+ LOW_CLAN_UNITY_EFFECTS: "Clan Rulers: #P +10% levy size #! \n Clan Leader: #N -15% levy size #!"
+ VERY_LOW_CLAN_UNITY_EFFECTS: "All Clan members: #N -15% monthly prestige #! \n Clan Rulers: #P +10% levy size #! \n Clan Leader: #N -20% levy size, -5 powerful vassals opinion #! \n #bold Clan Rulers can dismantle the Clan Leader #!"
+ CLAN_DECISIONS: "#bold #high Clan Actions #!#!"
+ EFFECTS_CLAN: "#bold #high Effects #!#!"
+ CLAN_UNITY: "#bold #high Clan Unity #!#!"
+ CLAN_RULERS: "#bold #high Clan Rulers #!#!"
+ DERBFINE: "#bold #high Derbfine #!#!"
+ CLAN_LEADER: "     #bold #high Clan Leader #!#!        and [clan|E]'s heir     "
+ TAKE_ACTION: "#bold Take Action #!"
+ 
+ #Decisions
+ collect_clan_tax_decision: "Collect Clan Tax"
+ collect_clan_cattle_decision: "Collect Clan Cattle"
+ force_clan_leader_decision: "Force Clan Leader"
+ leader_call_in_war_decision: "Call Clan into defensive war"
+ force_leader_into_war_decision: "Force leader into war"
+ clan_decision_generic_name: "Clan Action"
+ 
+ #AI decisions
+ ai_collect_clan_tax_decision: "Collect Clan Tax"
+ ai_collect_clan_tax_decision_desc: "Collect Clan Tax"
+ ai_collect_clan_tax_decision_tooltip: "Collect Clan Tax"
+ ai_collect_clan_tax_decision_confirm: "Collect Clan Tax"
+ ai_collect_clan_cattle_decision: "Collect Clan Cattle"
+ ai_collect_clan_cattle_decision_desc: "Collect Clan Cattle"
+ ai_collect_clan_cattle_decision_tooltip: "Collect Clan Cattle"
+ ai_collect_clan_cattle_decision_confirm: "Collect Clan Cattle"
+ ai_force_clan_ruler_decision: "Force Clan Leader"
+ ai_force_clan_ruler_decision_desc: "Force Clan Leader"
+ ai_force_clan_ruler_decision_tooltip: "Force Clan Leader"
+ ai_force_clan_ruler_decision_confirm: "Force Clan Leader"
+ ai_call_clan_rulers_into_war_decision: "Call Clan into defensive war"
+ ai_call_clan_rulers_into_war_decision_desc: "Call Clan into defensive war"
+ ai_call_clan_rulers_into_war_decision_tooltip: "Call Clan into defensive war"
+ ai_call_clan_rulers_into_war_decision_confirm: "Call Clan into defensive war"
+ ai_call_clan_leader_into_war_decision: "Force leader into war"
+ ai_call_clan_leader_into_war_decision_desc: "Force leader into war"
+ ai_call_clan_leader_into_war_decision_tooltip: "Force leader into war"
+ ai_call_clan_leader_into_war_decision_confirm: "Force leader into war"
+ 
+ #Custom effects loc
+ DIMINISH_CLAN_VALUE_BY_FIVE: "Loose #N 5 #!Clan Unity"
+ USED_CLAN_ACTION_FIVE_COOLDOWN: "#N Won't be able to take clan action for 5 years#!"
+ INCREASE_CATTLE_CLAN_LEADER: "#P Gain cattle in your capital, 3 times the number of Clan Rulers #!"
+ UP_CLAN_VALUE_BY_THREE: "#P Clan gains 3 Clan Unity #!"
+ DOWN_CLAN_VALUE_BY_TWO: "Loose #N 3 #!Clan Unity"
+ CALL_CLAN_TO_WAR_EFFECT_DESC: "#bold Call all Clan rulers in one of your defensive war #!"
+ CALL_LEADER_TO_WAR_EFFECT_DESC: "#bold Call your Clan Leader into a war #!"
+ DOWN_CLAN_VALUE_BY_FIFTEEN: "Loose #N 15 #!Clan Unity when you declare the war"
+ UP_CLAN_VALUE_BY_TEN: "#P Clan gains 10 Clan Unity #!"
+ ALL_CLAN_MEMBERS_ARE_CALLED_INTO_WAR: "#bold All clan members will be called to arms! #!"
+ 
+ #Custom triggers loc
+ WAIT_FIVE_YEARS_BETWEEN_USE: "#N You can only take action once every 5 years#!"
+ AT_LEAST_MEDIUM_UNITY: "Requires at least MEDIUM unity level"
+ AT_LEAST_HIGH_UNITY: "Requires at least #P HIGH #!unity level"
+ LOW_UNITY_OR_LOWER: "Requires a #N LOW #! unity level or lower"
+ DYNAST_EQUAL_NOT: "You must be the Clan Leader"
+ DYNAST_EQUAL: "You musn't be the Clan Leader"
+ NOT_IS_AT_WAR_AS_DEFENDER: "Must be in defensive war"
+ MEDIUM_UNITY_OR_LOWER: "MEDIUM unity level or lower"
+ 
+ #interface toasts
+ tooltip.clan.tax_clan.target: "Your Clan Leader has taken the Clan tax"
+ tooltip.clan.cattle_clan.target: "Your Clan Leader has taken the Clan cattle tax"
+ tooltip.clan.clan_invasion.target: "Your Clan leader has called you into an invasion!"
+ 
+ #casus belli
+ clan_invasion_war_warning_desc: "#P \n Titles will be divided between all clan members #!"
+ 
+ #found clan decision
+ found_clan_decision: "Found Clan"
+ found_clan_decision_desc: "It's time for our dynasty to get more organized and form a [clan|E], all members should collaborate and this way, bring us to greatness"
+ found_clan_decision_confirm: "Rally the Clan"
+ found_clan_decision_tooltip: "Found your Clan"
+ 
+ #Modifier
+ clannic_dynasty: "Clannic Dynasty"
+ very_high_clan_rulers: "Clan Ruler"
+ very_high_clan_leader: "Clan Leader"
+ high_clan_rulers: "Clan Ruler"
+ high_clan_leader: "Clan Leader"
+ medium_clan_rulers: "Clan Ruler"
+ medium_clan_leader: "Clan Leader"
+ low_clan_rulers: "Clan Ruler"
+ low_clan_leader: "Clan Leader"
+ very_low_clan_rulers: "Clan Ruler"
+ very_low_clan_leader: "Clan Leader"
+ 
+ #tooltip of unity
+ unity_value_meaning: "The Unity value of a [clan|E] represents the control that the Leader of the clan has over the clan Rulers. There are ways to increase and decrease the clan unity: \n\n #bold #P +2 #!#! when the Leader wins a war, #bold #N -4#!#! when the Leader loses a war \n #bold #P +5 #!#! when the Leader gains a level of fame, #bold #N -10 #!#! when the leader loses a level of fame \n #bold #P +10 #!#! if the leader has the highest level of fame of all landed clan members, #bold #N -5 #!#! if a landed clan member has a highest level of fame \n\n Every three years the clan will get #bold #P +1 #!#! for every clan Ruler that has more than #P 50 #! opinion of the Leader, #bold #N -1 #!#! if opinion is between #N -80 and -10#!, #bold #N -2 #!#! of opinion is under #N -80#! \n\n On the Leader's death #bold #P +4 #!#! for every independent landed child of dominant gender, #bold #N -1 #!#! for every landed not independent child of dominant gender, #bold #N -5 #!#! for every unlanded adult child of dominant gender, #bold #N -8 #!#! if the heir has a level of fame less than Distinguished"
+ unity_level_meaning: "At #bold #high #N VERY LOW #!#!#! unity level: \n All Clan members: #N -15% monthly prestige #! \n Clan Rulers: #P +10% levy size #! \n Clan Leader: #N -20% levy size, -5 powerful vassals opinion #! \n #bold Clan Rulers can dismantle the Clan Leader #! \n\n At #bold #high #N LOW #!#!#! unity level: \n Clan Rulers: #P +10% levy size #! \n Clan Leader: #N -15% levy size #! \n\n At #bold #high MEDIUM #!#! unity level: \n All Clan members: #P +5% tax income #! \n Clan Rulers: #N -10% levy size #! \n Clan Leader: #P +20% levy size #! \n\n At bold #high #P HIGH #!#!#! unity level: \n All Clan members: #P +5% tax income, +5 powerful vassals opinion #! \n Clan Rulers: #N -10% levy size #! \n Clan Leader: #P +20% levy size, +0.5 monthly prestige #! \n\n At #bold #high #P VERY HIGH #!#!#! unity level: \n All Clan members: #P +10% tax income, +5 powerful vassals opinion #! \n Clan Rulers: #N -20% levy size #! \n Clan Leader: #P +30% levy size, +1 monthly prestige #! \n #bold Clan Leader can subjugate a clan Ruler#!"

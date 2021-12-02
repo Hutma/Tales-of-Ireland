@@ -42,6 +42,8 @@
  
  fintan_form: "Fintan Salmon form"
  
+ deer_form_modifier: "Deer form"
+ 
  painful_transformation: "Painful Transformation"
  
  blood_moon_sacrifice: "Blood Moon sacrifice"
@@ -53,6 +55,12 @@
  silverarmed_modifier: "Silverarmed"
  
  dagda_cauldron_modifier: "Dagda's Cauldron"
+ 
+ lugh_strenght_modifier: "Lugh's Strength"
+ 
+ call_light_modifier: "Light-Touched"
+ 
+ lost_knowledge_modifier: "Lost Knowledge"
  
  sacred_building_modifier: "Sacred Building Spirits"
  
@@ -72,7 +80,7 @@
  
  nemedian_union_modifier: "Nemedian Union"
  
- srengs_strenght_modifier: "Sreng's Strenght"
+ srengs_strenght_modifier: "Sreng's Strength"
  
  fir_bolg_endurance_modifier: "Fir Bolg Endurance"
  

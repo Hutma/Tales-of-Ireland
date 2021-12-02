@@ -902,9 +902,6 @@ toi_wolfwalker.1500 = {
 	
 	trigger = {
 		has_trait = wolfwalker
-		capital_county = {
-			development_level > 10
-		}
 	}
 	
 	option = { #yummy
@@ -914,6 +911,10 @@ toi_wolfwalker.1500 = {
 				tier = tier_county
 			}
 			change_development_level = -15
+		}
+		trigger_event = {
+			id = toi_wolfwalker
+			days = { 2222 9999}
 		}
 	}
 }

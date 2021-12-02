@@ -140,3 +140,14 @@ toi_magic_event.0004 = {
 		}
 	}
 }	
+
+#Summon new tribe spell
+toi_magic_event.0005 = {
+	hidden = yes
+	type = character_event
+	
+	immediate = {
+		save_scope_as = war_target_ruler
+		summon_new_tribe_scripted_effect = yes
+	}
+}

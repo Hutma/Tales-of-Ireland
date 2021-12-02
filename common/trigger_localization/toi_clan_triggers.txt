@@ -1,0 +1,59 @@
+﻿wait_five_years_between_use = {
+	first = WAIT_FIVE_YEARS_BETWEEN_USE
+	first_not = WAIT_FIVE_YEARS_BETWEEN_USE
+	global = WAIT_FIVE_YEARS_BETWEEN_USE
+	global_not = WAIT_FIVE_YEARS_BETWEEN_USE
+	third = WAIT_FIVE_YEARS_BETWEEN_USE
+	third_not = WAIT_FIVE_YEARS_BETWEEN_USE
+}
+
+at_least_medium_unity = {
+	first = AT_LEAST_MEDIUM_UNITY
+	first_not = AT_LEAST_MEDIUM_UNITY
+	global = AT_LEAST_MEDIUM_UNITY
+	global_not = AT_LEAST_MEDIUM_UNITY
+	third = AT_LEAST_MEDIUM_UNITY
+	third_not = AT_LEAST_MEDIUM_UNITY
+}
+
+at_least_high_unity = {
+	first = AT_LEAST_HIGH_UNITY
+	first_not = AT_LEAST_HIGH_UNITY
+	global = AT_LEAST_HIGH_UNITY
+	global_not = AT_LEAST_HIGH_UNITY
+	third = AT_LEAST_HIGH_UNITY
+	third_not = AT_LEAST_HIGH_UNITY
+}
+
+low_unity_or_lower = {
+	first = LOW_UNITY_OR_LOWER
+	first_not = LOW_UNITY_OR_LOWER
+	global = LOW_UNITY_OR_LOWER
+	global_not = LOW_UNITY_OR_LOWER
+	third = LOW_UNITY_OR_LOWER
+	third_not = LOW_UNITY_OR_LOWER
+}
+
+dynast_equal = {
+	first = DYNAST_EQUAL
+	first_not = DYNAST_EQUAL_NOT
+	global = DYNAST_EQUAL
+	global_not = DYNAST_EQUAL_NOT
+	third = DYNAST_EQUAL
+	third_not = DYNAST_EQUAL_NOT
+}
+
+is_at_war_as_defender = {
+	first_not = NOT_IS_AT_WAR_AS_DEFENDER
+	global_not = NOT_IS_AT_WAR_AS_DEFENDER
+	third_not = NOT_IS_AT_WAR_AS_DEFENDER
+}
+
+medium_unity_or_lower = {
+	first = MEDIUM_UNITY_OR_LOWER
+	first_not = MEDIUM_UNITY_OR_LOWER
+	global = MEDIUM_UNITY_OR_LOWER
+	global_not = MEDIUM_UNITY_OR_LOWER
+	third = MEDIUM_UNITY_OR_LOWER
+	third_not = MEDIUM_UNITY_OR_LOWER
+}

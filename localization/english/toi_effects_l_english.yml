@@ -11,3 +11,16 @@
  I_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
  TARGET_GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
  TARGET_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+ 
+ GAINS_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "Gains $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "Gained $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ I_GAIN_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "You gain $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ I_GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "You gained $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ TARGET_GAINS_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ TARGET_GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_war|E] [perk|E] Unlock"
+ 
+ ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP:2 "You gained $VALUE|V0$ [tales_of_abundance|E] experience"
+ TARGET_ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_abundance|E] experience"
+ 
+ ADD_TALES_OF_WAR_LIFESTYLE_XP:2 "You gained $VALUE|V0$ [tales_of_war|E] experience"
+ TARGET_ADD_TALES_OF_WAR_LIFESTYLE_XP:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_war|E] experience"

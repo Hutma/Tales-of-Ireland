@@ -9,11 +9,12 @@
  SELECT_THIS: "Select"
  REPEAT_X_TIMES: "#high #bold Repeat Spell#!#!\n[GetPlayer.MakeScope.Var('repeat_spell').GetValue|0] Times"
  SPELL_PARAMETERS: "Spell Parameters"
- MAGIC_USAGE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_usage'))|0]+[GetPlayer.MakeScope.ScriptValue('total_magic_usage')|0]#!#!"
- MAGIC_USAGE: "#high #bold Magic Usage#!#!"
+ MAGIC_USAGE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('total_magic_usage')|0]+[GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_usage'))|0]#!#!"
+ MAGIC_USAGE: "#high #bold Magic Stress#!#!"
  FAILURE_CHANCE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('failure_chance_for_spells')|0]%#!#!"
  FAILURE_CHANCE: "#high #bold Failure Chance#!#!"
- usage_value_meaning: "#high Selected Spell Magic Usage\n#bold +#!\nTotal Magic Usage#!"
+ usage_value_meaning: "#high         Total Magic Stress\n#bold                              +#!\n Selected Spell Magic Stress#!"
+ failure_chance_meaning: "#high Calculated by your #bold Magic Stress#! divided by your [learning|E] (in percentage) \n\nAs long as it is less than #bold 15% #!nothing bad can happen when casting a spell#!"
 
  ## Spell Categories
  self_category:0 "#bold #italic Targets:#!#! Self"
@@ -123,6 +124,7 @@
  roman_astrology_name: "Roman Astrology"
  
  ## Traits
+ trait_magician_good:0 "Magical Characters"
  trait_magician_good_1:0 "Magician"
  trait_magician_good_1_desc:0 "Magicians are born with the innate capacity for magic."
  trait_magician_good_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was born with the innate capacity for magic."
@@ -140,6 +142,27 @@
  YOU_ASK_THE_SIDHE_TO_CHANGE_YOU: "You ask the Sidhe for guidance"
  TUATHA_ARMY: "Tuatha invasion Army"
  
+ #Triggers
+ FIVE_YEARS_COOLDOWN_SPELL: "Five years cooldown"
+ SEVEN_YEARS_COOLDOWN_SPELL: "Seven years cooldown"
+ TARGET_REQUIREMENT_FOMORIAN_TRANSFORMATION: "Target must be imprisonned and be a child \n Target must not have the Fomorian trait"
+ TEN_YEARS_COOLDOWN_SPELL: "Ten years cooldown"
+ FIFTEEN_YEARS_BEFORE_TARGETING_AGAIN: "Can only be targeted by this spell once every 15 years"
+ TEN_YEARS_BEFORE_TARGETING_AGAIN: "Can only be targeted by this spell once every 10 years"
+ DESTROY_ESSENCE_REQUIREMENTS_DESC: "Target must be a Magician"
+ BLOOD_MOON_REQUIREMENTS_DESC: "Target must be in your prison"
+ CURSED_TABLET_REQUIREMENTS_DESC: "Target must not be already crused"
+ 
+ #Effects
+ A_KNIGHT_APPEARS_SPELL: "A Fomorian knight appears in your court!"
+ TARGET_WILL_DIE_SPELL: "#N Target will die#!"
+ SUMMON_NEW_TRIBE_SPELL_EFFECT_DESC: "A new Tuatha De Danann tribe comes out of the Otherworld to invade the target!"
+ GREEK_ASTROLOGY_SPELL_DESC: "You gain #P 1#! in a random skill and lose #N 1#! in another random skill, you have 6% chance to not lose anything and only gain #P 1#! in a skill"
+ ROMAN_ASTROLOGY_SPELL_DESC: "You gain #P 2#! in a random skill and lose #N 2#! in another random skill, you have 3% chance to not lose anything and only gain #P 2#! in a skill"
+ UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC: "Every vassal with the [fir_bolg|E] trait gain #P 40#! opinion of you"
+ THE_SPELL_IS_CAST_MESSAGE: "#P The spell is cast#!"
+ LEARN_A_NEW_SPELL_EFFECT_DESC: "You learn a new spell"
+ 
  #Armies
  magic_soldiers_troops: "Magical Troops"
  
@@ -153,6 +176,9 @@
  tooltip.magic.omen_of_opression.target: "You are cursed with a bad omen!"
  tooltip.magic.destroy_essence.target: "Someone is draining your magical essence!"
  tooltip.magic.cursed_tablet.target: "You have been magically cursed!"
+ tooltip.magic.partholonian_plague.target: "A dark magic is making your body weaker!"
  tooltip.magic.nemed_seduction.target: "You are magically falling in love!"
  tooltip.magic.no_escape_curse.target: "A dark magic is killing your garrisons!"
  tooltip.magic.magic_mist.target: "A magic mist is killing your people!"
+ tooltip.magic.brasil_fog.target: "A fog is making your children sick!"
+ tooltip.magic.summon_new_tribe.target: "A Tuatha magician has called an army from the Otherworld upon you!"

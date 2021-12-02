@@ -1,7 +1,7 @@
 ﻿###RACE TRAITS###
 
 fomorian = {
-	index = 1000
+	index = 400
 	icon = fomorian.dds
 	
 	opposites = {
@@ -31,6 +31,7 @@ fomorian = {
 	development_growth_factor = -0.2
 	different_faith_county_opinion_mult = 0.25
 	
+	same_opinion = 15
 	opposite_opinion = -15
 	
 	ruler_designer_cost = 5
@@ -49,7 +50,7 @@ fomorian = {
 }
 
 half_fomorian = {
-	index = 1001
+	index = 401
 	icon = half_fomorian.dds
 	
 	opposites = {
@@ -109,7 +110,7 @@ half_fomorian = {
 }
 
 three_quarter_fomorian = {
-	index = 1002
+	index = 402
 	icon = three_quarter_fomorian.dds
 	
 	opposites = {
@@ -166,7 +167,7 @@ three_quarter_fomorian = {
 }
 
 cessarian = {
-	index = 1003
+	index = 403
 	icon = cessarian.dds
 	
 	opposites = {
@@ -213,7 +214,7 @@ cessarian = {
 }
 
 half_cessarian = {
-	index = 1004
+	index = 404
 	icon = half_cessarian.dds
 	
 	opposites = {
@@ -268,7 +269,7 @@ half_cessarian = {
 }
 
 three_quarter_cessarian = {
-	index = 1005
+	index = 405
 	icon = three_quarter_cessarian.dds
 	
 	opposites = {
@@ -323,7 +324,7 @@ three_quarter_cessarian = {
 }
 
 partholonian = {
-	index = 1006
+	index = 406
 	icon = partholonian.dds
 	
 	opposites = {
@@ -368,7 +369,7 @@ partholonian = {
 }
 
 half_partholonian = {
-	index = 1007
+	index = 407
 	icon = half_partholonian.dds
 	
 	opposites = {
@@ -421,7 +422,7 @@ half_partholonian = {
 }
 
 three_quarter_partholonian = {
-	index = 1008
+	index = 408
 	icon = three_quarter_partholonian.dds
 	
 	opposites = {
@@ -474,7 +475,7 @@ three_quarter_partholonian = {
 }
 
 nemedian = {
-	index = 1009
+	index = 409
 	icon = nemedian.dds
 	
 	opposites = {
@@ -520,7 +521,7 @@ nemedian = {
 }
 
 half_nemedian = {
-	index = 1010
+	index = 410
 	icon = half_nemedian.dds
 	
 	opposites = {
@@ -574,7 +575,7 @@ half_nemedian = {
 }
 
 three_quarter_nemedian = {
-	index = 1011
+	index = 411
 	icon = three_quarter_nemedian.dds
 	
 	opposites = {
@@ -628,7 +629,7 @@ three_quarter_nemedian = {
 }
 
 fir_bolg = {
-	index = 1012
+	index = 412
 	icon = fir_bolg.dds
 	
 	opposites = {
@@ -672,7 +673,7 @@ fir_bolg = {
 }
 
 half_fir_bolg = {
-	index = 1013
+	index = 413
 	icon = half_fir_bolg.dds
 	
 	opposites = {
@@ -725,7 +726,7 @@ half_fir_bolg = {
 }
 
 three_quarter_fir_bolg = {
-	index = 1014
+	index = 414
 	icon = three_quarter_fir_bolg.dds
 	
 	opposites = {
@@ -778,7 +779,7 @@ three_quarter_fir_bolg = {
 }
 
 tuatha_de_danann = {
-	index = 1015
+	index = 415
 	icon = tuatha_de_danann.dds
 	
 	opposites = {
@@ -805,7 +806,7 @@ tuatha_de_danann = {
 	learning = 4
 	fertility = -0.25
 	health = 1.5
-	life_expectancy = 100
+	life_expectancy = 40
 	levy_reinforcement_rate = 0.1
 	monthly_lifestyle_xp_gain_mult = -0.25
 	
@@ -827,7 +828,7 @@ tuatha_de_danann = {
 }
 
 half_tuatha_de_danann = {
-	index = 1016
+	index = 416
 	icon = half_tuatha_de_danann.dds
 	
 	opposites = {
@@ -886,7 +887,7 @@ half_tuatha_de_danann = {
 }
 
 three_quarter_tuatha_de_danann = {
-	index = 1017
+	index = 417
 	icon = three_quarter_tuatha_de_danann.dds
 	
 	opposites = {
@@ -945,7 +946,7 @@ three_quarter_tuatha_de_danann = {
 }
 
 milesian = {
-	index = 1018
+	index = 418
 	icon = milesian.dds
 	
 	opposites = {
@@ -989,7 +990,7 @@ milesian = {
 }
 
 half_milesian = {
-	index = 1019
+	index = 419
 	icon = half_milesian.dds
 	
 	opposites = {
@@ -1043,7 +1044,7 @@ half_milesian = {
 }
 
 three_quarter_milesian = {
-	index = 1020
+	index = 420
 	icon = three_quarter_milesian.dds
 	
 	opposites = {
@@ -1097,7 +1098,7 @@ three_quarter_milesian = {
 }
 
 celtic_human = {
-	index = 1021
+	index = 421
 	icon = human.dds
 	
 	opposites = {
@@ -1140,7 +1141,7 @@ celtic_human = {
 }
 
 half_celtic_human = {
-	index = 1022
+	index = 422
 	icon = half_human.dds
 	
 	opposites = {
@@ -1192,7 +1193,7 @@ half_celtic_human = {
 }
 
 three_quarter_celtic_human = {
-	index = 1023
+	index = 423
 	icon = three_quarter_human.dds
 	
 	opposites = {
@@ -1244,7 +1245,7 @@ three_quarter_celtic_human = {
 }
 
 megalith_human = {
-	index = 1024
+	index = 424
 	icon = megalithic.dds
 	
 	opposites = {
@@ -1288,7 +1289,7 @@ megalith_human = {
 }
 
 half_megalith_human = {
-	index = 1025
+	index = 425
 	icon = half_megalithic.dds
 	
 	opposites = {
@@ -1340,7 +1341,7 @@ half_megalith_human = {
 }
 
 three_quarter_megalith_human = {
-	index = 1026
+	index = 426
 	icon = three_quarter_megalithic.dds
 	
 	opposites = {
@@ -1392,7 +1393,7 @@ three_quarter_megalith_human = {
 }
 
 gaelic_giant = {
-	index = 1027
+	index = 427
 	icon = gaelic_giant.dds
 	
 	shown_in_ruler_designer = no
@@ -1461,7 +1462,7 @@ gaelic_giant = {
 }
 
 hy_brazylian = {
-	index = 1070
+	index = 470
 	icon = hybrazylian.dds
 	
 	opposites = {
@@ -1506,7 +1507,7 @@ hy_brazylian = {
 }
 
 half_hy_brazylian = {
-	index = 1071
+	index = 471
 	icon = half_hybrazylian.dds
 	
 	opposites = {
@@ -1559,7 +1560,7 @@ half_hy_brazylian = {
 }
 
 three_quarter_hy_brazylian = {
-	index = 1072
+	index = 472
 	icon = three_quarter_hybrazylian.dds
 	
 	opposites = {
@@ -1612,7 +1613,7 @@ three_quarter_hy_brazylian = {
 }
 
 latin_human = {
-	index = 1073
+	index = 473
 	icon = latin_human.dds
 	
 	opposites = {
@@ -1659,7 +1660,7 @@ latin_human = {
 }
 
 half_latin_human = {
-	index = 1074
+	index = 474
 	icon = half_latin_human.dds
 	
 	opposites = {
@@ -1711,7 +1712,7 @@ half_latin_human = {
 }
 
 three_quarter_latin_human = {
-	index = 1075
+	index = 475
 	icon = three_quarter_latin_human.dds
 	
 	opposites = {
@@ -1764,7 +1765,7 @@ three_quarter_latin_human = {
 
 ###DUEL TRAITS###
 aggresive_fighter = {
-	index = 1030
+	index = 430
 	icon = aggressive_attacker.dds
 	
 	shown_in_ruler_designer = no
@@ -1791,7 +1792,7 @@ aggresive_fighter = {
 }
 
 defensive_fighter = {
-	index = 1031
+	index = 431
 	icon = unyielding_defender.dds
 	
 	opposites = {
@@ -1818,7 +1819,7 @@ defensive_fighter = {
 }
 
 cunning_fighter = {
-	index = 1032
+	index = 432
 	icon = flexible_leader.dds
 	
 	opposites = {
@@ -1847,7 +1848,7 @@ cunning_fighter = {
 
 ###OTHER TRAITS###
 wolfwalker = {
-	index = 1035
+	index = 435
 	icon = wolfwalker.dds
 	
 	enemy_hard_casualty_modifier = 0.15
@@ -1873,7 +1874,7 @@ wolfwalker = {
 }
 
 outlaw = {
-	index = 1036
+	index = 436
 	icon = outlaw.dds
 	
 	general_opinion = -15

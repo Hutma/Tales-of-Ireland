@@ -102,3 +102,7 @@ tales_of_abundance = {
 	framesize = { 144 144 }
 	frame = 2
 }
+
+clan = {
+	texture = "gfx/interface/icons/message_feed/dynasty.dds"
+}

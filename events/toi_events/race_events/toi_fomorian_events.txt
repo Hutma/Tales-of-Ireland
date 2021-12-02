@@ -17,9 +17,11 @@ toi_fomorian_event.0001 = {
 	
 	immediate = {
 		every_child = {
-			AND = {
-				is_courtier_of = root
-				has_trait = compassionate
+			limit = {
+				AND = {
+					is_courtier_of = root
+					has_trait = compassionate
+				}
 			}
 			add_to_list = compassionate_children
 		}
@@ -101,10 +103,12 @@ toi_fomorian_event.0001 = {
 		}
 		add_piety = 50
 		if = {
-			NOT = {
-				OR = {
-					has_trait = callous
-					has_trait = sadistic
+			limit = {
+				NOT = {
+					OR = {
+						has_trait = callous
+						has_trait = sadistic
+					}
 				}
 			}
 			add_stress = 75
@@ -161,7 +165,7 @@ toi_fomorian_event.0002 = {
 				50 = {
 					modifier = {
 						value = 10
-						mult = root.piety_level
+						multiply = root.piety_level
 					}
 					trigger_event = {
 						id = toi_fomorian_event.0003
@@ -171,7 +175,7 @@ toi_fomorian_event.0002 = {
 				50 = {
 					modifier = {
 						value = -10 
-						mult = root.piety_level
+						multiply = root.piety_level
 					}
 					send_interface_toast = {
 						left_icon = root

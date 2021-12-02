@@ -3,9 +3,7 @@ Castle_in_the_Sky = {
 	music = "file:/music/Vindsvept/Castle_in_the_Sky.mp3"
 	weight = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
-	
+	can_be_interrupted = yes	
 }
 
 Into_Silence_two = {
@@ -13,7 +11,6 @@ Into_Silence_two = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -22,7 +19,6 @@ Into_the_Unknown = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -31,7 +27,6 @@ Keeper_of_the_Forest = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -40,7 +35,6 @@ Leaving_the_Dream = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -49,7 +43,6 @@ Night_of_the_Fae = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -58,7 +51,6 @@ Nightfall = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -67,7 +59,6 @@ Riversong = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -76,7 +67,6 @@ Spirit_Bond = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -93,7 +83,6 @@ Windsong_Cavern = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -102,7 +91,6 @@ A_World_Unbound = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -111,7 +99,6 @@ Frozen_in_Time = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -120,7 +107,6 @@ Heart_of_Thunder = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -129,7 +115,6 @@ Hideaway = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -138,7 +123,6 @@ Through_The_Fog = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -147,7 +131,6 @@ Voyage_to_Nowhere = {
 	weight = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
@@ -155,8 +138,7 @@ Wanderer = {
 	music = "file:/music/Vindsvept/Wanderer.mp3"
 	weight = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
+	can_be_interrupted = yes
 	
 }
 
@@ -164,8 +146,7 @@ As_we_March = {
 	music = "file:/music/Vindsvept/As_we_March.mp3"
 	weight = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
+	can_be_interrupted = yes
 	
 }
 
@@ -173,8 +154,15 @@ Veiled_in_Light = {
 	music = "file:/music/Vindsvept/Veiled_in_Light.mp3"
 	weight = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
+	can_be_interrupted = yes
+	
+}
+
+tales_of_ireland_main_theme = {
+	music = "file:/music/toi_opening_theme.mp3"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
 	
 }
 
@@ -207,4 +195,9 @@ mx_cue_magic = {
 	# play every time
 }
 
+mx_cue_clan_founding = {
+	music = "file:/music/clan_founding_music.mp3"
+	weight = 25
+	# play every time
+}
 ###end TALES OF IRELAND mod ###

@@ -13,6 +13,7 @@
 	scope:tuatha_de_danann_invader = {
 		add_gold = 300
 		add_trait = tuatha_de_danann
+		add_trait = magician_good_2
 	}
 	
 	#Give the adventurer a dynamic title to tide them over.
@@ -50,7 +51,7 @@
 	#Select title target
 	scope:war_target_ruler = {
 		every_held_title = {
-			tier = county
+			limit = { tier = tier_county }
 			add_to_list = possible_targets
 		}
 	}
@@ -58,15 +59,17 @@
 		list = possible_targets
 		save_scope_as = invasion_county_target
 	}
-	invasion_county_target.duchy = {
-		save_scope_as = target_of_invasion
+	scope:invasion_county_target = {
+		this.duchy = {
+			save_scope_as = target_of_invasion
+		}
 	}
 	#Declare the war.
 	scope:tuatha_de_danann_invader = {
 		start_war = {
 			casus_belli = fp1_scandi_adventurer_conquest
 			target = scope:war_target_ruler
-			target_title = target_of_invasion
+			target_title = scope:target_of_invasion
 		}
 	}
 	# Setup event troops.

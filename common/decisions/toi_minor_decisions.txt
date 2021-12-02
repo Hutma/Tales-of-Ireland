@@ -21,7 +21,7 @@
 
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
-		is_at_war = now
+		is_at_war = no
 	}
 
 	cost = {
@@ -73,7 +73,7 @@ hail_high_king_decision = {
 
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
-		is_at_war = now
+		is_at_war = no
 	}
 
 	cost = {

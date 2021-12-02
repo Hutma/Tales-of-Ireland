@@ -14299,7 +14299,7 @@ e_ulster = {
 		color = { 5 5 100 }
 		color2 = { 255 255 255 }
 		
-		capital = c_galway
+		capital = c_letterkenny
 		
 		ai_primary_priority = {
 

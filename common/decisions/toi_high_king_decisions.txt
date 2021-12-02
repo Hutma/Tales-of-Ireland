@@ -41,45 +41,6 @@
 	}
 }
 
-high_king_tax_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
-	ai_check_interval = 60
-	cooldown = { days = 7200 }
-	desc = high_king_tax_decision_desc
-
-	is_shown = {
-		always = no
-		has_title = title:k_high_kingship
-	}
-
-	is_valid = {
-		prestige_level >= 2
-		is_independent_ruler = yes
-		has_title = title:k_high_kingship
-	}
-
-	is_valid_showing_failures_only = {
-		
-	}
-
-	cost = {
-		prestige = 200
-	}
-
-	effect = {
-		high_king_tax_decision_effect = yes
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 100
-	}
-}
-
 high_king_reclaim_tara_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
@@ -131,7 +92,7 @@ high_king_reclaim_tara_decision = {
 reform_high_kingship_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
-	ai_check_interval = 60
+	ai_goal = yes
 	desc = reform_high_kingship_decision_desc
 
 	is_shown = {
@@ -154,6 +115,7 @@ reform_high_kingship_decision = {
 		prestige_level >= 2
 		is_independent_ruler = yes
 		OR = {
+			highest_held_title_tier = 3
 			highest_held_title_tier = 4
 			highest_held_title_tier = 5
 		}

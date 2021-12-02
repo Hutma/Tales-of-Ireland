@@ -38,7 +38,6 @@ beards = {
                 add = -50
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
             portrait_clean_shaven_clothing_modifier = yes
@@ -110,7 +109,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -149,7 +147,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -188,7 +185,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -224,7 +220,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -260,7 +255,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -289,7 +283,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -325,7 +318,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -361,7 +353,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -397,7 +388,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -433,7 +423,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -462,7 +451,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -498,7 +486,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }
@@ -534,7 +521,6 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
                 }
             }
         }

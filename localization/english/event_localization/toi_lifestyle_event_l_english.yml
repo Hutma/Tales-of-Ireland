@@ -40,7 +40,7 @@
  toi_lifestyle_event.0009.c:0 "I pray [ROOT.Char.GetFaith.HighGodName] to grant me a prestigious reign."
 
  toi_lifestyle_event.0010.t:0 "Lessons of the Past"
- toi_lifestyle_event.0010.desc:0 "What are we without our past? Nothing. [realm_priest.GetFirstName] was all too happy to remind us of that as he spoke of the great warriors and rulers that brought us where we are today. I was completely enthralled by these tales of wisdom and bravery. If I knew more, perhaps I can emulate their achievements? I turned to [realm_priest.GetFirstName] and asked..."
+ toi_lifestyle_event.0010.desc:0 "What are we without our past? Nothing. [your_druid.GetFirstName] was all too happy to remind us of that as he spoke of the great warriors and rulers that brought us where we are today. I was completely enthralled by these tales of wisdom and bravery. If I knew more, perhaps I can emulate their achievements? I turned to [your_druid.GetFirstName] and asked..."
  toi_lifestyle_event.0010.a:0 "Tell me about one of our wisest rulers."
  toi_lifestyle_event.0010.b:0 "Tell me about one of our bravest Warriors."
  toi_lifestyle_event.0010.c:0 "I know the histories, and will tell a story of my own!"

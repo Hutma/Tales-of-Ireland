@@ -91,6 +91,7 @@
                                 fontsize = 48
                                 align = center
                                 minimumsize = { 100 -1 }
+								tooltip = failure_chance_meaning
                             }
                         }
                     }
@@ -198,6 +199,7 @@
                             }
                             item = {
                                 widget = {
+									visible = "[GetScriptedGui(Scope.GetFlagName).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                     block "size" {
                                         size = { 310 80 }
                                     }
@@ -251,6 +253,7 @@
                             }
                             item = {
                                 widget = {
+									visible = "[GetScriptedGui(Scope.GetFlagName).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                     block "size" {
                                         size = { 310 80 }
                                     }
@@ -304,6 +307,7 @@
                             }
                             item = {
                                 widget = {
+									visible = "[GetScriptedGui(Scope.GetFlagName).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                     block "size" {
                                         size = { 310 80 }
                                     }

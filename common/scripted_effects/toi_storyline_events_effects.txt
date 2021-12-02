@@ -49,6 +49,7 @@ hy_brasylian_invasion_effect = {
 	create_character = {
 		age = { 20 40 }
 		trait = hy_brazylian
+		trait = magician_good_2
 		random_traits = yes
 		gender_female_chance = 0
 		location = title:b_kilronan.title_province

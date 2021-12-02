@@ -67,12 +67,12 @@ toi_nemedian_event.0002 = {
 		random_list = {
 			30 = { 
 				modifier = {
-					value = 10
-					mult = root.piety_level
+					add = 10
+					multiply = root.piety_level
 				}
 				modifier = {
-					value = 10 
-					mult = root.realm_druid.piety_level
+					add = 10 
+					multiply = root.realm_druid.piety_level
 				}
 				trigger_event = {
 					id = toi_nemedian_event.0004
@@ -81,12 +81,12 @@ toi_nemedian_event.0002 = {
 			}
 			70 = {
 				modifier = {
-					value = -10
-					mult = root.piety_level
+					add = -10
+					multiply = root.piety_level
 				}
 				modifier = {
-					value = -10 
-					mult = root.realm_druid.piety_level
+					add = -10 
+					multiply = root.realm_druid.piety_level
 				}
 				send_interface_toast = {
 					left_icon = root

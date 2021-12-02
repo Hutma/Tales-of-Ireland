@@ -1,0 +1,174 @@
+﻿clan_unity_level_custom_loc = {
+	type = character
+	text = {
+		localization_key = VERY_HIGH_CLAN_UNITY
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value > 85 }
+			}
+		}
+	}
+	
+	text = {
+		localization_key = HIGH_CLAN_UNITY
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value <= 85 }
+					var:clan_unity_value = { compare_value > 60 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = MEDIUM_CLAN_UNITY
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value <= 60 }
+					var:clan_unity_value = { compare_value >= 30 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = LOW_CLAN_UNITY
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value < 30 }
+					var:clan_unity_value = { compare_value >= 15 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = VERY_LOW_CLAN_UNITY
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value < 15 }
+			}
+		}
+	}
+}
+
+clan_unity_level_effect_custom_loc = {
+	type = character
+	text = {
+		localization_key = VERY_HIGH_CLAN_UNITY_EFFECTS
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value > 85 }
+			}
+		}
+	}
+	
+	text = {
+		localization_key = HIGH_CLAN_UNITY_EFFECTS
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value <= 85 }
+					var:clan_unity_value = { compare_value > 60 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = MEDIUM_CLAN_UNITY_EFFECTS
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value <= 60 }
+					var:clan_unity_value = { compare_value >= 30 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = LOW_CLAN_UNITY_EFFECTS
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				AND = {
+					var:clan_unity_value = { compare_value < 30 }
+					var:clan_unity_value = { compare_value >= 15 }
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = VERY_LOW_CLAN_UNITY_EFFECTS
+		trigger = {
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value < 15 }
+			}
+		}
+	}
+}
+
+clan_decision_selected_custom_loc = {
+	type = character
+	text = {
+		localization_key = collect_clan_tax_decision
+		trigger = {
+			root = { exists = var:decision_selected_value }
+			var:decision_selected_value = { compare_value = 1  }
+		}
+	}
+	
+	text = {
+		localization_key = collect_clan_cattle_decision
+		trigger = {
+			root = { exists = var:decision_selected_value }
+			var:decision_selected_value = { compare_value = 2 }
+		}
+	}
+	
+	text = {
+		localization_key = force_clan_leader_decision
+		trigger = {
+			root = { exists = var:decision_selected_value }
+			var:decision_selected_value = { compare_value = 3 }
+		}
+	}
+	
+	text = {
+		localization_key = leader_call_in_war_decision
+		trigger = {
+			root = { exists = var:decision_selected_value }
+			var:decision_selected_value = { compare_value = 4 }
+		}
+	}
+	
+	text = {
+		localization_key = force_leader_into_war_decision
+		trigger = {
+			root = { exists = var:decision_selected_value }
+			var:decision_selected_value = { compare_value = 5 }
+		}
+	}
+	
+	text = {
+		localization_key = clan_decision_generic_name
+		trigger = {
+			always = no
+		}
+		fallback = yes
+	}
+}

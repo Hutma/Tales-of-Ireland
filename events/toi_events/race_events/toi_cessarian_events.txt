@@ -222,7 +222,7 @@ toi_cessarian_event.0005 = {
 			has_trait = cessarian
 			has_culture_group = culture_group:toi_cessarian_group
 		}
-		is_independent = yes
+		is_independent_ruler = yes
 		highest_held_title_tier >= 3
 		any_vassal = {
 			count >= 2

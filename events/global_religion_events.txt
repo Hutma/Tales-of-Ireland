@@ -23,7 +23,6 @@ global_religion.0001 = {
 						OR = {
 							has_government = clan_government
 							has_government = feudal_government
-							has_government = tributary_government
 						}
 					}
 				}
@@ -32,7 +31,6 @@ global_religion.0001 = {
 						OR = {
 							has_government = clan_government
 							has_government = feudal_government
-							has_government = tributary_government
 						}
 					}
 					save_scope_as = actor #for the effect to work properly

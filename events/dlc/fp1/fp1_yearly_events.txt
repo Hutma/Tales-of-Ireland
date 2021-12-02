@@ -1573,30 +1573,7 @@ fp1_yearly.0031 = {
 ##################################################
 
 scripted_trigger suitable_islamic_realm_trigger = {
-	#First off, we need people who will consider root a savage.
-	NOT = { has_government = tribal_government }
-	#Next, filter down to the correct religion.
-	religion = religion:islam_religion
-	#Making sure to only grab rulers from the Middle East.
-	capital_province = {
-		OR = {
-			always = no
-		}
-	}
-	#And then misc checks to make sure that the tone is correct.
-	top_liege = {
-		NOR = {
-			#Such as the liege not having much contact with Germanic Paganism.
-			religion = religion:northern_legacy_religion
-			any_vassal_or_below = { religion = religion:northern_legacy_religion }
-			#The realm not being positioned next door to root.
-			character_is_realm_neighbor = root.top_liege
-			#And the realm generally not being inside the same (admittedly large) area.
-			any_realm_county = {
-				title_province = { always = no }
-			}
-		}
-	}
+	always = no
 }
 
 #	Clean up unused explorer.

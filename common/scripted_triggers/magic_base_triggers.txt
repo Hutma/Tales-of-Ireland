@@ -1,4 +1,4 @@
-﻿# Valid scopes: root is the spellcaster, var:spell_target the target
+﻿# Valid scopes: root is the spellcaster, var:dummy_char_target the target
 summon_sidhe_child_requirements = {
 	custom_description = {
 		text = have_no_child_trigger
@@ -84,9 +84,9 @@ heal_wounds_requirements = {
 }
 inflict_wounds_requirements = {
 	AND = {
-		piety_level >= var:spell_target.piety_level
+		piety_level >= var:dummy_char_target.piety_level
 	
-		var:spell_target = {
+		var:dummy_char_target = {
 			NOT = {
 				OR = {
 					has_trait = wounded_1
@@ -99,25 +99,25 @@ inflict_wounds_requirements = {
 }
 inflict_terror_requirements = {
 	OR = {
-		var:spell_target = {
+		var:dummy_char_target = {
 			NOT = {
 				has_character_flag = has_been_terrified
 			}
 		}
-		var:spell_target = {
+		var:dummy_char_target = {
 			stress_level < 1
 		}
 		AND = {
-			var:spell_target = {
+			var:dummy_char_target = {
 				stress_level > 1
 			}
 			OR = {
-				piety_level >= var:spell_target.piety_level
+				piety_level >= var:dummy_char_target.piety_level
 				piety_level >= 2
 			}
 		}
 		AND = {
-			var:spell_target = {
+			var:dummy_char_target = {
 				stress_level > 2
 			}
 			piety_level >= 4
@@ -136,14 +136,14 @@ hostile_whispers_requirements = {
 }
 captivate_mind_requirements = {
 	OR = {
-		root = var:spell_target
+		root = var:dummy_char_target
 		AND = {
 			OR = {
-				piety_level >= var:spell_target.piety_level
+				piety_level >= var:dummy_char_target.piety_level
 				piety_level >= 3
 			}
 			NOT = {
-				var:spell_target = {
+				var:dummy_char_target = {
 					OR = {
 						has_trait = magician_good_1
 						has_trait = magician_good_2
@@ -155,14 +155,7 @@ captivate_mind_requirements = {
 	}
 }
 bless_the_cattle_requirements = {
-	custom_description = {
-		text = not_has_blessed_cattle_already
-		var:spell_target = {
-			NOT = {
-				has_county_modifier = blessed_cattle
-			}
-		}
-	}
+	always = yes
 }
 multiply_herds_requirements = {
 	piety_level >= 2
@@ -176,7 +169,7 @@ fintan_transformation_requirements = {
 }
 deer_form_requirements = {
 	NOT = {
-		has_character_modifier = deer_form
+		has_character_modifier = deer_form_modifier
 	}
 }
 flood_realm_requirements = {
@@ -184,16 +177,16 @@ flood_realm_requirements = {
 }
 mark_of_cain_requirements = {
 	OR = {
-		root = var:spell_target
-		var:spell_target = {
+		root = var:dummy_char_target
+		var:dummy_char_target = {
 			has_relation_rival = root
 		}
 	}
 }
 serpent_bite_requirements = {
 	OR = {
-		root = var:spell_target
-		var:spell_target = {
+		root = var:dummy_char_target
+		var:dummy_char_target = {
 			piety_level < 2
 		}
 	}
@@ -204,43 +197,68 @@ garden_eden_requirements = {
 
 #Fomorian
 call_sea_armies_requirements = {
-	NOT = {
-		has_character_flag = has_called_sea_armies
+	custom_description = {
+		text = five_years_cooldown_spell
+		NOT = {
+			has_character_flag = has_called_sea_armies
+		}
 	}
 }
 call_underground_ridri_requirements = {
-	NOT = {
-		has_character_flag = has_called_sea_ridri
+	custom_description = {
+		text = seven_years_cooldown_spell
+		NOT = {
+			has_character_flag = has_called_sea_ridri
+		}
 	}
 }
 fomorian_transformation_requirements = {
 	piety_level >= 2
-	var:spell_target = {
-		is_imprisoned_by = root
-		is_adult = no
-		NOT = {
-			has_trait = fomorian
+	custom_description = {
+		text = target_requirement_fomorian_transformation
+		OR = {		
+			var:dummy_char_target = {
+				is_imprisoned_by = root
+				is_adult = no
+				NOT = {
+					has_trait = fomorian
+				}
+			}
+			
+			root = var:dummy_char_target
 		}
 	}
 }
 destroy_essence_requirements = {
-	var:spell_target = {
-		OR = {
-			has_trait = magician_good_1
-			has_trait = magician_good_2
-			has_trait = magician_good_3
+	custom_description = {
+		text = destroy_essence_requirements_desc
+		var:dummy_char_target = {
+			OR = {
+				has_trait = magician_good_1
+				has_trait = magician_good_2
+				has_trait = magician_good_3
+			}
 		}
 	}
 }
 blood_moon_requirements = {
-	var:spell_target = {
-		is_imprisoned_by = root
+	custom_description = {
+		text = blood_moon_requirements_desc
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				is_imprisoned_by = root
+			}
+		}
 	}
 }
 omen_of_opression_requirements = {
-	var:spell_target = {
-		NOT = {
-			has_character_modifier = omen_of_opression_modifier
+	OR = {
+		root = var:dummy_char_target
+		var:dummy_char_target = {
+			NOT = {
+				has_character_modifier = omen_of_opression_modifier
+			}
 		}
 	}
 }
@@ -261,28 +279,33 @@ dagda_cauldron_requirements = {
 }
 lugh_strenght_requirements = {
 	NOT = {
-		has_character_flag = called_lugh_strength
+		has_character_modifier = lugh_strenght_modifier
 	}
 }
 call_light_requirements = {
 	NOT = {
-		has_character_flag = called_light_recently
+		has_character_modifier = call_light_modifier
 	}
 }
 lost_knowledge_requirements = {
 	NOT = {
-		has_character_flag = lost_knowledge_modifier
+		has_character_modifier = lost_knowledge_modifier
 	}
 }
 summon_new_tribe_requirements = {
-	NOT = {
-		has_character_flag = called_new_tribe_recently
-	}
-	var:spell_target = {
-		is_landed = yes
-		is_independent_ruler = yes
-		NOT = {
-			has_trait = tuatha_de_danann
+	OR = {
+		root = var:dummy_char_target
+		AND = {
+			NOT = {
+				has_character_flag = called_new_tribe_recently
+			}
+			var:dummy_char_target = {
+				is_landed = yes
+				is_independent_ruler = yes
+				NOT = {
+					has_trait = tuatha_de_danann
+				}
+			}
 		}
 	}
 }
@@ -317,16 +340,28 @@ greek_astrology_requirements = {
 	always = yes
 }
 cursed_tablet_requirements = {
-	NOT = {
-		var:spell_target = {
-			has_character_modifier = cursed_tablet_modifier
+	custom_description = {
+		text = cursed_tablet_requirements_desc
+		OR = {
+			root = var:dummy_char_target
+			NOT = {
+				var:dummy_char_target = {
+					has_character_modifier = cursed_tablet_modifier
+				}
+			}
 		}
 	}
 }
 partholonian_plague_requirements = {
-	NOT = {
-		var:spell_target = {
-			has_character_modifier = weak_body
+	custom_description = {
+		text = cursed_tablet_requirements_desc
+		OR = {
+			root = var:dummy_char_target
+			NOT = {
+				var:dummy_char_target = {
+					has_character_modifier = weak_body
+				}
+			}
 		}
 	}
 }
@@ -346,8 +381,11 @@ nemedian_union_requirements = {
 	}
 }
 nemed_seduction_requirements = {
-	NOT = {
-		has_character_flag = has_nemed_seduced_recently
+	custom_description = {
+		text = ten_years_cooldown_spell
+		NOT = {
+			has_character_flag = has_nemed_seduced_recently
+		}
 	}
 }
 
@@ -371,8 +409,11 @@ heavy_lifters_requirements = {
 	}
 }
 united_in_defiance_requirements = {
-	NOT = {
-		has_character_flag = recently_united_in_defiance
+	custom_description = {
+		text = two_years_between_cast_trigger
+		NOT = {
+			has_character_flag = recently_united_in_defiance
+		}
 	}
 }
 
@@ -419,45 +460,62 @@ settle_power_requirements = {
 	}
 }
 influence_culture_requirements = {
-	OR = {
-		var:spell_target = {
-			NOT = {
-				this.culture = root.culture
-			}
-		}
-		root = var:spell_target
-	}
+	always = yes
 }
 
 #Hy Brasilian
 mystical_craft_requirements = {
-	NOT = {
-		has_character_flag = spell_cooldown_five_years
+	custom_description = {
+		text = five_years_cooldown_spell
+		NOT = {
+			has_character_flag = spell_mystical_craft_five_years
+		}
 	}
 }
 two_worlds_requirements = {
-	NOT = {
-		has_character_flag = spell_cooldown_five_years
+	custom_description = {
+		text = five_years_cooldown_spell
+		NOT = {
+			has_character_flag = spell_two_world_five_years
+		}
 	}
 }
 no_escape_curse_requirements = {
-	var:spell_target = {
-		NOT = {
-			has_character_flag = no_escape_curse_flag
+	custom_description = {
+		text = fifteen_years_before_targeting_again
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				NOT = {
+					has_character_flag = no_escape_curse_flag
+				}
+			}
 		}
 	}
 }
 brasil_fog_requirements = {
-	var:spell_target = {
-		NOT = {
-			has_character_flag = basil_fog_flag
+	custom_description = {
+		text = ten_years_before_targeting_again
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				NOT = {
+					has_character_flag = brasil_fog_flag
+				}
+			}
 		}
 	}
 }
 magic_mist_requirements = {
-	var:spell_target = {
-		NOT = {
-			has_character_flag = magic_mist_flag
+	custom_description = {
+		text = ten_years_before_targeting_again
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				NOT = {
+					has_character_flag = magic_mist_flag
+				}
+			}
 		}
 	}
 }

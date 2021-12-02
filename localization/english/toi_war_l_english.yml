@@ -63,3 +63,9 @@
  OUTLAW_CONQUEST_COUNTY_CB_NAME:1 "Conquer outlaw's [county|E]"
  OUTLAW_CONQUEST_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquest of the outlaw's [TITLE.GetBaseName]"
  OUTLAW_CONQUEST_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ CLAN_SUBJUGATION_CB_NAME: "Clan Subjugation"
+ 
+ DISMANTLE_CLAN_LEADER_CB: "Dismantle Clan Leader"
+ DISMANTLE_CLAN_LEADER_WAR_NAME: "[ATTACKER.GetName] war to dismantle leader [DEFENDER.GetName]"
+ DISMANTLE_CLAN_LEADER_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

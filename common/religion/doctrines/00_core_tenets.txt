@@ -495,6 +495,7 @@
 		}
 
 		parameters = {
+			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
 			piety_from_long_peace = 1
@@ -1148,6 +1149,7 @@
 		}
 		
 		parameters = {
+			holy_wars_forbidden = yes
 			reincarnation_resistance_to_conversion = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
@@ -1695,10 +1697,6 @@
 	tenet_gruesome_festivals = {
 		name = {
 			first_valid = {
-				triggered_desc = {
-					trigger = { religion_tag = germanic_religion }
-					desc = tenet_gruesome_festivals_blot_name
-				}
 				desc = tenet_gruesome_festivals_name
 			}
 		}

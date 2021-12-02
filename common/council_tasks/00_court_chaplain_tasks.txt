@@ -245,7 +245,7 @@ task_conversion = {
 	}
 
 	progress = {
-		value = 0
+		value = 0.25
 		#Base conversion speed
 		add = {
 			value = court_chaplain_conversion_base

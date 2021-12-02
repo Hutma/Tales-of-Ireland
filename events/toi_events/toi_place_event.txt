@@ -3,7 +3,7 @@
 #Carrick-a-Rede Rope Bridge
 
 toi_place_event.0001 = {
-    type = place_event
+    type = character_event
     title = toi_place_event.0001.t
     desc = toi_place_event.0001.desc
     theme = witchcraft
@@ -61,7 +61,7 @@ toi_place_event.0001 = {
 # The Cliffs of Moher
 
 toi_place_event.0002 = {
-    type = place_event
+    type = character_event
     title = toi_place_event.0002.t
     desc = toi_place_event.0002.desc
     theme = witchcraft
@@ -124,7 +124,7 @@ toi_place_event.0002 = {
 # Gap of Dunloe
 
 toi_place_event.0003 = {
-    type = place_event
+    type = character_event
     title = toi_place_event.0003.t
     desc = toi_place_event.0003.desc 
     theme = witchcraft
@@ -170,7 +170,7 @@ toi_place_event.0003 = {
 # The Connemara 
 
 toi_place_event.0004 = {
-    type = place_event
+    type = character_event
     title = toi_place_event.0004.t
     desc = toi_place_event.0004.desc
     theme = witchcraft

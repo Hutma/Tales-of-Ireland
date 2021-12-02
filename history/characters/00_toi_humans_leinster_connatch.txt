@@ -16,6 +16,7 @@
     trait = trusting
     trait = just
     trait = celtic_human
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4782.1.1 = {
@@ -834,6 +835,7 @@
     trait = arrogant
     trait = ambitious
     trait = celtic_human
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4757.1.1 = {
@@ -1227,11 +1229,12 @@
     trait = impatient
     trait = vengeful
     trait = celtic_human
+	trait = magician_good_2
 
     father=  911001 
 
     disallow_random_traits = yes
-    4758.1.1 = {
+    4768.1.1 = {
         birth = yes
         add_pressed_claim = k_offaly
     }
@@ -1649,6 +1652,7 @@
     trait = temperate
     trait = craven
     trait = celtic_human
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4774.1.1 = {
@@ -2060,6 +2064,7 @@
     trait = diligent
     trait = paranoid
     trait = celtic_human
+	trait = wolfwalker
 
     disallow_random_traits = yes
     4781.1.1 = {

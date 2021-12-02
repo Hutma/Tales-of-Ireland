@@ -194,7 +194,7 @@ religious_interaction.3 = { # Ask for Gold accepted letter event (hof_ask_for_go
 							is_attacker = scope:actor
 							OR = {
 								using_holy_war_cb_trigger = yes
-								using_cb = excommunication_war
+								#using_cb = excommunication_war
 							}
 						}
 					}
@@ -236,7 +236,7 @@ religious_interaction.3 = { # Ask for Gold accepted letter event (hof_ask_for_go
 							is_attacker = scope:actor
 							OR = {
 								using_holy_war_cb_trigger = yes
-								using_cb = excommunication_war
+								#using_cb = excommunication_war
 							}
 						}
 					}
@@ -246,7 +246,7 @@ religious_interaction.3 = { # Ask for Gold accepted letter event (hof_ask_for_go
 						is_attacker = scope:actor
 						OR = {
 							using_holy_war_cb_trigger = yes
-							using_cb = excommunication_war
+							#using_cb = excommunication_war
 						}
 					}
 					primary_defender = {

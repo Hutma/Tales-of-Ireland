@@ -20,7 +20,8 @@
     trait = patient
     trait = temperate
     trait = tuatha_de_danann
-
+	trait = magician_good_3
+	
     disallow_random_traits = yes
 	
     3290.1.1 = {
@@ -54,6 +55,7 @@
     trait = forgiving
     trait = compassionate
     trait = tuatha_de_danann
+	trait = magician_good_2
 
     disallow_random_traits = yes
     3300.1.1 = {
@@ -84,6 +86,7 @@
     trait = diligent
     trait = tuatha_de_danann
     trait = half_fomorian
+	trait = magician_good_2
 
     disallow_random_traits = yes
     3310.1.1 = {
@@ -117,6 +120,7 @@
     trait = arrogant
     trait = generous
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     3315.1.1 = {
@@ -147,6 +151,7 @@
     trait = generous
     trait = tuatha_de_danann
     trait = half_fomorian
+	trait = magician_good_2
 
     father=  1000018 
 
@@ -182,6 +187,7 @@
     trait = lustful
     trait = diligent
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     3355.1.1 = {
@@ -212,6 +218,7 @@
     trait = stubborn
     trait = tuatha_de_danann
     trait = half_fomorian
+	trait = magician_good_1
 
     father=  1000018 
 
@@ -244,7 +251,8 @@
     trait = impatient
     trait = humble
     trait = tuatha_de_danann
-
+	trait = magician_good_1
+	
     disallow_random_traits = yes
     3358.1.1 = {
         birth = yes
@@ -273,6 +281,7 @@
     trait = fickle
     trait = forgiving
     trait = tuatha_de_danann
+	trait = magician_good_2
 
     father=  1000017 
 
@@ -305,6 +314,7 @@
     trait = impatient
     trait = vengeful
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     3412.1.1 = {
@@ -340,6 +350,7 @@
     trait = wrathful
     trait = patient
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     mother=  1000009 
 
@@ -373,6 +384,7 @@
     trait = content
     trait = generous
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     father=  1000019 
 
@@ -401,6 +413,7 @@
     trait = shy
     trait = compassionate
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     father=  1000019 
 
@@ -429,6 +442,7 @@
     trait = ambitious
     trait = stubborn
     trait = tuatha_de_danann
+	trait = magician_good_2
 
     father=  1000019 
 
@@ -455,6 +469,7 @@
     trait = forgiving
     trait = compassionate
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4765.1.1 = {
@@ -479,6 +494,7 @@
     trait = arrogant
     trait = diligent
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4788.1.1 = {
@@ -503,6 +519,7 @@
     trait = honest
     trait = wrathful
     trait = tuatha_de_danann
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4747.1.1 = {
@@ -529,6 +546,7 @@
     trait = zealous
     trait = content
     trait = tuatha_de_danann
+	trait = magician_good_2
 
     mother=  1000005 
 
@@ -557,6 +575,7 @@
     trait = wrathful
     trait = gregarious
     trait = fomorian
+	trait = magician_good_2
 
     disallow_random_traits = yes
     3320.1.1 = {
@@ -584,10 +603,11 @@
     trait = chaste
     trait = generous
     trait = tuatha_de_danann
+	trait = magician_good_1
 
-    mother=  1000005 
+    mother = 1000005 
 
-    father=  1000004 
+    father = 1000004 
 
     disallow_random_traits = yes
     3400.1.1 = {

@@ -2477,8 +2477,8 @@ widget = {
 			button_hud_character_bar = {
 				name = "clan_button"
 				datacontext = "[GetPlayer.GetHouse]"
+				enabled = "[GetScriptedGui('can_use_clan_mechanics').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				onclick = "[ExecuteConsoleCommand('gui.createwidget gui/window_clan.gui window_clan')]"
-				onclick = "[ToggleGameView( Select_CString( IsGameViewOpen('intrigue_window'), 'intrigue_window', '' ) )]"
 
 				parentanchor = bottom
 

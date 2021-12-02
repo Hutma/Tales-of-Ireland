@@ -114,6 +114,8 @@ entity = {
 	locator = { name = "pos_11_b" position = { @[gap *  4.5] 000 @[gap * -0.5 ] } }
 	attach = {         "pos_11_a" = "building_celtic_hillfort_01_entity" }
 	attach = {         "pos_11_b" = "building_celtic_hillfort_02_entity" }
+	attach = {         "pos_11_c" = "building_celtic_hillfort_03_entity" }
+	attach = {         "pos_11_d" = "building_celtic_hillfort_04_entity" }
 	
 	locator = { name = "pos_12_a" position = { @[gap *  4.5] 000 @[gap * -1.5 ] } }
 	locator = { name = "pos_12_b" position = { @[gap *  4.5] 000 @[gap * -0.5 ] } }

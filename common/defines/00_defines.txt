@@ -682,7 +682,7 @@ NReligion = {
 	THEOCRATIC_LESSEE_INCOME = 6 # The yearly income that a theocratic lessee has to improve provinces is multiplied with this
 	GHW_DAYS_LIMIT_CAN_CHANGE_TARGET = 30  # is GHW starts sooner than this number, you can no longer change target
 	GHW_COST_PIETY_CHANGE_TARGET = 250  # cost to chagne GHW target. Grows linearly with each change
-	MAX_FERVOR = 80 # Max amount of fervor
+	MAX_FERVOR = 60 # Max amount of fervor
 	HEAD_OF_FAITH_PIETY_GAIN = 1.0 # Monthly piety gain for heads of faith
 	MINIMUM_FAITH_SIZE_FERVOR_MODIFIER = 10 # Adjusts the size modifier for monthly fervor gain for a faith according to the following formula: 1/squareroot(max(define_value, faith_size)/define_value) where define value is the value of MINIMUM_FAITH_SIZE_FERVOR_MODIFIER and faith_size is the current amount of provinces that follows the faith.
 

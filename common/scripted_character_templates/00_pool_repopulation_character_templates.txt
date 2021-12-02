@@ -1542,7 +1542,7 @@ pool_repopulate_local_flavor = {
 	after_creation = {
 		if = {
 			limit = {
-				religion = { is_in_family = rf_all }
+				always = no
 			}
 			random_list = {
 				10 = {

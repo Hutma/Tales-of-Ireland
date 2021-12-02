@@ -386,12 +386,6 @@ on_lost_faction_revolt_war = {
 					TARGET = this
 					IMPRISONER = scope:defender
 				}
-				scope:defender = {
-					add_opinion = {
-						target = prev
-						modifier = vassal_lost_or_wp_faction_revolt_war
-					}
-				}
 			}
 		}
 	}

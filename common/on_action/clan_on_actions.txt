@@ -1,0 +1,840 @@
+﻿three_year_playable_pulse = {
+	on_actions = {
+		dynasty_unity_maintenance
+		delay = { days = { 100 240 } }
+		clan_meeting_on_action
+	}
+}
+
+on_prestige_level_gain = {
+	on_actions = {
+		dynasty_unity_maintenance_prestige_gain
+	}
+}
+
+dynasty_unity_maintenance_prestige_gain = {
+	effect = {
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}	
+			}
+			root.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = 5
+				}
+			}
+		}
+	}
+}
+
+on_prestige_level_loss = {
+	on_actions = {
+		dynasty_unity_maintenance_prestige_lost
+	}
+}
+
+dynasty_unity_maintenance_prestige_lost = {
+	effect = {
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}	
+			}
+			root.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = -10
+				}
+			}
+		}
+	}
+}
+
+on_death = {
+	on_actions = {
+		dynasty_unity_maintenance_death
+	}
+}
+
+dynasty_unity_maintenance_death = {
+	effect = {
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}	
+			}
+			every_child = {
+				limit = {
+					faith = {
+						has_dominant_ruling_gender = prev
+					}
+					is_independent_ruler = yes
+				}
+				dynasty = {
+					change_variable = {
+						name = clan_unity_value
+						add = 4
+					}
+				}
+			}
+			every_child = {
+				limit = {
+					faith = {
+						has_dominant_ruling_gender = prev
+					}
+					is_independent_ruler = no
+					is_landed = yes
+				}
+				dynasty = {
+					change_variable = {
+						name = clan_unity_value
+						add = -1
+					}
+				}
+			}
+			every_child = {
+				limit = {
+					faith = {
+						has_dominant_ruling_gender = prev
+					}
+					is_landed = no
+					is_adult = yes
+				}
+				dynasty = {
+					change_variable = {
+						name = clan_unity_value
+						add = -5
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}
+				player_heir = {
+					prestige_level < 2
+				}
+			}
+			dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = -8
+				}
+			}
+		}
+	}
+}
+
+on_war_won_attacker = {
+	on_actions = {
+		dynasty_unity_maintenance_war_attacker
+	}
+}
+
+dynasty_unity_maintenance_war_attacker = {
+	effect = {
+		if = {
+			limit = {
+				scope:attacker.dynasty.dynast = scope:attacker
+				scope:attacker = {
+					dynasty = {
+						exists = var:clan_unity_value
+					}
+				}
+			}
+			scope:attacker.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:defender.dynasty.dynast = scope:defender
+				scope:defender = {
+					dynasty = {
+						exists = var:clan_unity_value
+					}
+				}
+			}
+			scope:defender.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = -4
+				}
+			}
+		}
+	}
+}
+
+on_war_won_defender = {
+	on_actions = {
+		dynasty_unity_maintenance_war_defender
+	}
+}
+
+dynasty_unity_maintenance_war_defender = {
+	effect = {
+		if = {
+			limit = {
+				scope:attacker.dynasty.dynast = scope:attacker
+				scope:attacker = {
+					dynasty = {
+						exists = var:clan_unity_value
+					}
+				}
+			}
+			scope:attacker.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = -4
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:defender.dynasty.dynast = scope:defender
+				scope:defender = {
+					dynasty = {
+						exists = var:clan_unity_value
+					}
+				}
+			}
+			scope:defender.dynasty = {
+				change_variable = {
+					name = clan_unity_value
+					add = 2
+				}
+			}
+		}
+	}
+}
+
+dynasty_unity_maintenance = {
+	effect = {
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}
+				dynasty = { exists = var:prestige_clan_modifier }
+			}
+			if = { #variate unity based on pretige level compared to others in the clan this is set up in clan_gui
+				limit = {
+					dynasty = {
+						any_dynasty_member = {
+							count = all
+							is_landed = yes
+							this.prestige_level < root.prestige_level
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = 0 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = 10
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = 10
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = -5 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = 15
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = 10
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					dynasty = {
+						any_dynasty_member = {
+							count >= 1
+							is_landed = yes
+							this.prestige_level > root.prestige_level
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = 0 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = -5
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = -5
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = 10 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = -15
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = -5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						NOT = {
+							dynasty = {
+								any_dynasty_member = {
+									count = all
+									is_landed = yes
+									this.prestige_level < root.prestige_level
+								}
+							}
+						}
+						NOT = {
+							dynasty = {
+								any_dynasty_member = {
+									count >= 1
+									is_landed = yes
+									this.prestige_level > root.prestige_level
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = 10 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = -10
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = 0
+						}
+					}
+				}
+				if = {
+					limit = {
+						dynasty = {
+							var:prestige_clan_modifier = { compare_value = -5 }
+						}
+					}
+					dynasty = {
+						change_variable = {
+							name = clan_unity_value
+							add = 5
+						}
+					}
+					dynasty = { 
+						set_variable = {
+							name = prestige_clan_modifier
+							value = 0
+						}
+					}
+				}
+			}
+		}
+		if = { #destroy the clan if not enough rulers
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}
+				dynasty = {
+					any_dynasty_member = {
+						count < 3
+						is_independent_ruler = yes
+					}
+				}
+			}
+			trigger_event = {
+				id = toi_clan.0008
+				days = 35
+			}
+		}
+		if = { #give and update the clan modifiers
+			limit = {
+				root.dynasty.dynast = root
+				dynasty = {
+					exists = var:clan_unity_value
+				}
+			}
+			if = {
+				limit = {
+					root.dynasty = { exists = var:clan_unity_value }
+					root.dynasty = {
+						var:clan_unity_value = { compare_value > 85 }
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = very_high_clan_leader }
+					}
+					remove_character_modifier = high_clan_leader
+					remove_character_modifier = medium_clan_leader
+					remove_character_modifier = low_clan_leader
+					remove_character_modifier = very_low_clan_leader
+					add_character_modifier = very_high_clan_leader
+				}
+				dynasty = {
+					every_dynasty_member = {
+						limit = {
+							NOT = { this = dynasty.dynast }
+							is_landed = yes
+							NOT = { has_character_modifier = very_high_clan_rulers }
+						}
+						remove_character_modifier = high_clan_rulers
+						remove_character_modifier = medium_clan_rulers
+						remove_character_modifier = low_clan_rulers
+						remove_character_modifier = very_low_clan_rulers
+						add_character_modifier = very_high_clan_rulers
+					}
+				}
+			}
+			if = {
+				limit = {
+					root.dynasty = { exists = var:clan_unity_value }
+					root.dynasty = {
+						AND = {
+							var:clan_unity_value = { compare_value <= 85 }
+							var:clan_unity_value = { compare_value > 60 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = high_clan_leader }
+					}
+					remove_character_modifier = very_high_clan_leader
+					remove_character_modifier = medium_clan_leader
+					remove_character_modifier = low_clan_leader
+					remove_character_modifier = very_low_clan_leader
+					add_character_modifier = high_clan_leader
+				}
+				dynasty = {
+					every_dynasty_member = {
+						limit = {
+							NOT = { this = dynasty.dynast }
+							is_landed = yes
+							NOT = { has_character_modifier = high_clan_rulers }
+						}
+						remove_character_modifier = very_high_clan_rulers
+						remove_character_modifier = medium_clan_rulers
+						remove_character_modifier = low_clan_rulers
+						remove_character_modifier = very_low_clan_rulers
+						add_character_modifier = high_clan_rulers
+					}
+				}
+			}
+			if = {
+				limit = {
+					root.dynasty = { exists = var:clan_unity_value }
+					root.dynasty = {
+						AND = {
+							var:clan_unity_value = { compare_value <= 60 }
+							var:clan_unity_value = { compare_value >= 30 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = medium_clan_leader }
+					}
+					remove_character_modifier = very_high_clan_leader
+					remove_character_modifier = high_clan_leader
+					remove_character_modifier = low_clan_leader
+					remove_character_modifier = very_low_clan_leader
+					add_character_modifier = medium_clan_leader
+				}
+				dynasty = {
+					every_dynasty_member = {
+						limit = {
+							NOT = { this = dynasty.dynast }
+							is_landed = yes
+							NOT = { has_character_modifier = medium_clan_rulers }
+						}
+						remove_character_modifier = very_high_clan_rulers
+						remove_character_modifier = high_clan_rulers
+						remove_character_modifier = low_clan_rulers
+						remove_character_modifier = very_low_clan_rulers
+						add_character_modifier = medium_clan_rulers
+					}
+				}
+			}
+			if = {
+				limit = {
+					root.dynasty = { exists = var:clan_unity_value }
+					root.dynasty = {
+						AND = {
+							var:clan_unity_value = { compare_value < 30 }
+							var:clan_unity_value = { compare_value >= 15 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = low_clan_leader }
+					}
+					remove_character_modifier = very_high_clan_leader
+					remove_character_modifier = high_clan_leader
+					remove_character_modifier = medium_clan_leader
+					remove_character_modifier = very_low_clan_leader
+					add_character_modifier = low_clan_leader
+				}
+				dynasty = {
+					every_dynasty_member = {
+						limit = {
+							NOT = { this = dynasty.dynast }
+							is_landed = yes
+							NOT = { has_character_modifier = low_clan_rulers }
+						}
+						remove_character_modifier = very_high_clan_rulers
+						remove_character_modifier = high_clan_rulers
+						remove_character_modifier = medium_clan_rulers
+						remove_character_modifier = very_low_clan_rulers
+						add_character_modifier = low_clan_rulers
+					}
+				}
+			}
+			if = {
+				limit = {
+					root.dynasty = { exists = var:clan_unity_value }
+					root.dynasty = {
+						var:clan_unity_value = { compare_value < 15 }
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_character_modifier = very_low_clan_leader }
+					}
+					remove_character_modifier = very_high_clan_leader
+					remove_character_modifier = high_clan_leader
+					remove_character_modifier = medium_clan_leader
+					remove_character_modifier = low_clan_leader
+					add_character_modifier = very_low_clan_leader
+				}
+				dynasty = {
+					every_dynasty_member = {
+						limit = {
+							NOT = { this = dynasty.dynast }
+							is_landed = yes
+							NOT = { has_character_modifier = very_low_clan_rulers }
+						}
+						remove_character_modifier = very_high_clan_rulers
+						remove_character_modifier = high_clan_rulers
+						remove_character_modifier = medium_clan_rulers
+						remove_character_modifier = low_clan_rulers
+						add_character_modifier = very_low_clan_rulers
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = {
+							root.dynasty = { exists = var:clan_unity_value }
+						}
+						OR = {
+							has_character_modifier = very_high_clan_leader
+							has_character_modifier = high_clan_leader
+							has_character_modifier = medium_clan_leader
+							has_character_modifier = low_clan_leader
+							has_character_modifier = very_low_clan_leader
+							has_character_modifier = very_high_clan_rulers
+							has_character_modifier = high_clan_rulers
+							has_character_modifier = medium_clan_rulers
+							has_character_modifier = low_clan_rulers
+							has_character_modifier = very_low_clan_rulers
+						}
+					}
+				}
+				remove_character_modifier = very_high_clan_leader
+				remove_character_modifier = high_clan_leader
+				remove_character_modifier = medium_clan_leader
+				remove_character_modifier = low_clan_leader
+				remove_character_modifier = very_low_clan_leader
+				remove_character_modifier = very_high_clan_rulers
+				remove_character_modifier = high_clan_rulers
+				remove_character_modifier = medium_clan_rulers
+				remove_character_modifier = low_clan_rulers
+				remove_character_modifier = very_low_clan_rulers
+				
+				dynasty = {
+					every_dynasty_member = {
+						remove_character_modifier = very_high_clan_leader
+						remove_character_modifier = high_clan_leader
+						remove_character_modifier = medium_clan_leader
+						remove_character_modifier = low_clan_leader
+						remove_character_modifier = very_low_clan_leader
+						remove_character_modifier = very_high_clan_rulers
+						remove_character_modifier = high_clan_rulers
+						remove_character_modifier = medium_clan_rulers
+						remove_character_modifier = low_clan_rulers
+						remove_character_modifier = very_low_clan_rulers
+					}
+				}
+			}
+		}
+	}
+}
+
+five_year_playable_pulse = { #remove clan modifiers and reinitialize clan value if it somehow got destroyed
+	effect = {
+		if = { #reinitialize
+			limit = {
+				root.dynasty.dynast = root
+				NOT = {
+					dynasty = {
+						exists = var:clan_unity_value
+					}
+				}
+				dynasty = {
+					has_dynasty_modifier = clannic_dynasty
+				}
+			}
+			dynasty = {
+				if = {
+					limit = { NOT = { exists = var:clan_unity_value } }
+					set_variable = {
+						name = clan_unity_value
+						value = 50
+					}
+				}
+			}
+			dynasty = {
+				if = {
+					limit = { NOT = { exists = var:prestige_clan_modifier } }
+					set_variable = {
+						name = prestige_clan_modifier
+						value = 0
+					}
+				}
+			}
+			trigger_event = {
+				on_action = dynasty_unity_maintenance
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						root.dynasty = { exists = var:clan_unity_value }
+					}
+					OR = {
+						has_character_modifier = very_high_clan_leader
+						has_character_modifier = high_clan_leader
+						has_character_modifier = medium_clan_leader
+						has_character_modifier = low_clan_leader
+						has_character_modifier = very_low_clan_leader
+						has_character_modifier = very_high_clan_rulers
+						has_character_modifier = high_clan_rulers
+						has_character_modifier = medium_clan_rulers
+						has_character_modifier = low_clan_rulers
+						has_character_modifier = very_low_clan_rulers
+					}
+				}
+			}
+			remove_character_modifier = very_high_clan_leader
+			remove_character_modifier = high_clan_leader
+			remove_character_modifier = medium_clan_leader
+			remove_character_modifier = low_clan_leader
+			remove_character_modifier = very_low_clan_leader
+			remove_character_modifier = very_high_clan_rulers
+			remove_character_modifier = high_clan_rulers
+			remove_character_modifier = medium_clan_rulers
+			remove_character_modifier = low_clan_rulers
+			remove_character_modifier = very_low_clan_rulers
+		}
+		if = {
+			limit = {
+				AND = {
+					NOT = { root.dynasty.dynast = root }
+					root.dynasty = { exists = var:clan_unity_value }
+					OR = {
+						has_character_modifier = very_high_clan_leader
+						has_character_modifier = high_clan_leader
+						has_character_modifier = medium_clan_leader
+						has_character_modifier = low_clan_leader
+						has_character_modifier = very_low_clan_leader
+					}
+				}
+			}
+			remove_character_modifier = very_high_clan_leader
+			remove_character_modifier = high_clan_leader
+			remove_character_modifier = medium_clan_leader
+			remove_character_modifier = low_clan_leader
+			remove_character_modifier = very_low_clan_leader
+		}
+		if = {
+			limit = {
+				AND = {
+					root.dynasty.dynast = root
+					root.dynasty = { exists = var:clan_unity_value }
+					OR = {
+						has_character_modifier = very_high_clan_rulers
+						has_character_modifier = high_clan_rulers
+						has_character_modifier = medium_clan_rulers
+						has_character_modifier = low_clan_rulers
+						has_character_modifier = very_low_clan_rulers
+					}
+				}
+			}
+			remove_character_modifier = very_high_clan_rulers
+			remove_character_modifier = high_clan_rulers
+			remove_character_modifier = medium_clan_rulers
+			remove_character_modifier = low_clan_rulers
+			remove_character_modifier = very_low_clan_rulers
+		}
+	}
+}
+
+clan_meeting_on_action = { #changes unity based on how the rulers like the dynast, 5% to trigger a clan feast that will make unity go up
+	effect = {
+		if = {
+			limit = {
+				root.dynasty.dynast = root
+				root.dynasty = { exists = var:clan_unity_value }
+			}
+			random_list = {
+				5 = {
+					trigger_event = {
+						id = toi_clan.0009
+						days = 1
+					}
+				}
+				95 = {
+					dynasty = {
+						every_dynasty_member = {
+							limit = {
+								is_independent_ruler = yes
+								NOT = { this = dynasty.dynast }
+								opinion = {
+									target = this.dynasty.dynast
+									value >= 50
+								}
+							}
+							dynasty = {
+								change_variable = {
+									name = clan_unity_value
+									add = 1
+								}
+							}
+							if = {
+								limit = { highest_held_title_tier = 4 }
+								dynasty = {
+									change_variable = {
+										name = clan_unity_value
+										add = 1
+									}
+								}
+							}
+						}
+						every_dynasty_member = {
+							limit = {
+								is_independent_ruler = yes
+								NOT = { this = dynasty.dynast }
+								opinion = {
+									target = this.dynasty.dynast
+									value = { -80 -10 }
+								}
+							}
+							dynasty = {
+								change_variable = {
+									name = clan_unity_value
+									add = -1
+								}
+							}
+							if = {
+								limit = { highest_held_title_tier = 4 }
+								dynasty = {
+									change_variable = {
+										name = clan_unity_value
+										add = -1
+									}
+								}
+							}
+						}
+						every_dynasty_member = {
+							limit = {
+								is_independent_ruler = yes
+								NOT = { this = dynasty.dynast }
+								opinion = {
+									target = this.dynasty.dynast
+									value = { -100 -79 }
+								}
+							}
+							if = {
+								limit = { highest_held_title_tier = 4 }
+								dynasty = {
+									change_variable = {
+										name = clan_unity_value
+										add = -2
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

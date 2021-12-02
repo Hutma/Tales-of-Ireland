@@ -18,10 +18,8 @@
 		AND = {
 			has_title = title:c_dunseverick
 			NOT = {
-				c_dunseverick = {
-					has_title_flag = {
-						flag = giant_called
-					}
+				has_character_flag = {
+					flag = giant_called
 				}
 			}
 		}
@@ -40,11 +38,9 @@
 			id = toi_decisions.001
 			days = 120
 		}
-		c_dunseverick = {
-			set_title_flag = {
-				flag = giant_called
-				years = 30
-			}
+		add_character_flag = {
+			flag = giant_called
+			years = 30
 		}
 	}
 

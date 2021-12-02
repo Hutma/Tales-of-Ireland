@@ -2,7 +2,7 @@
 	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
 	
 	major = yes
-	ai_check_interval = 150
+	ai_check_interval = 40
 	
 	desc = leave_fintan_form_decision_desc
 
@@ -34,5 +34,592 @@
 
 	ai_will_do = {
 		base = 50
+	}
+}
+
+ai_magic = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	major = yes
+	ai_check_interval = 10
+
+
+	is_shown = {
+		is_ai = yes
+		has_trait = magician_good
+	}
+
+	is_valid = {
+		is_ai = yes
+		is_adult = yes
+		highest_held_title_tier >= 2
+		has_trait = magician_good
+	}
+
+	is_valid_showing_failures_only = {
+		always = yes
+	}
+
+	cost = {
+		
+	}
+
+	effect = {
+		every_independent_ruler = {
+			limit = {
+				in_diplomatic_range = root
+				character_is_realm_neighbor = root 
+				opinion = { target = this  value < 35 }
+			} 
+			add_to_list = possible_targets
+		}
+		every_vassal = {
+			limit = { 
+				opinion = { target = this  value < 20 } 
+			}
+			add_to_list = possible_targets
+		}
+		random_in_list = {
+			list = possible_targets
+			save_scope_as = ai_target
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:ai_target }
+			}
+			every_independent_ruler = {
+				limit = {
+					in_diplomatic_range = root
+					character_is_realm_neighbor = root
+				} 
+				add_to_list = possible_targets
+			}
+			random_in_list = {
+				list = possible_targets
+				save_scope_as = ai_target
+			}
+		}
+		random_list = {
+			1 = {
+				trigger = {
+					age > 30
+					any_child = {
+						count = 0
+					}
+				}
+				summon_sidhe_child_ai_effect = yes
+			}
+			1 = {
+				summon_sidhe_advisor_ai_effect = yes
+			}
+			1 = {
+				summon_magical_army_scripted_effect = yes
+			}
+			1 = {
+				extend_lifespan_ai_effect = yes
+			}
+			1 = {
+				inflict_wounds_ai_effect = yes
+			}
+			1 = {
+				inflict_terror_ai_effect = yes
+			}
+			1 = {
+				inflict_pestilence_ai_effect = yes
+			}
+			1 = {
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				hostile_whispers_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				fintan_transformation_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				deer_form_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				flood_realm_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				serpent_bite_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+				}
+				call_sea_army_scripted_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+				}
+				call_underground_ridri_scripted_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+				}
+				blood_moon_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				omen_of_opression_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				healing_secret_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				dagda_cauldron_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				lugh_strenght_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				call_light_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				scope:ai_target = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.summon_new_tribe.target
+						trigger_event = {
+							id = toi_magic_event.0005
+							days = 1
+						}
+					}
+				}
+			}
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				sacred_building_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				suns_chosen_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				hunting_spirits_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+				}
+				rune_words_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+				}
+				protective_amulet_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				cursed_tablet_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				sidhe_agriculture_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				blessed_family_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				nemedian_union_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				nemed_seduction_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				srengs_strenght_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				fir_bolg_endurance_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				men_of_bags_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				heavy_lifters_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+					path_of_destiny_requirements = yes
+				}
+				path_of_destiny_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+				}
+				realm_ceremony_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+				}
+				enchant_bedroooms_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				druidic_intersessions_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				magic_paintings_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				befriend_the_morrigan_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				settle_power_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				influence_culture_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+				}
+				two_worlds_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				no_escape_curse_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				brasil_fog_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+				}
+				if = {
+					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					clear_saved_scope = ai_target
+					every_independent_ruler = {
+						limit = {
+							in_diplomatic_range = root
+							character_is_realm_neighbor = root 
+							opinion = { target = this  value < 35 }
+						}
+						add_to_list = possible_targets
+					}
+					random_in_list = {
+						list = possible_targets
+						save_scope_as = ai_target
+					}
+					if = {
+						limit = { NOT = { exists = scope:ai_target } }
+						every_independent_ruler = {
+							limit = {
+								in_diplomatic_range = root
+							}
+							add_to_list = possible_targets
+						}
+						random_in_list = {
+							list = possible_targets
+							save_scope_as = ai_target
+						}
+					}
+				}
+				magic_mist_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = latin_human
+				}
+				burn_incense_ai_effect = yes
+			}			
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
 	}
 }

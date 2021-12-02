@@ -17,6 +17,24 @@ get_all_possible_candidates = {
 				value = 0
 			}
 		}
+		if = { #get your spells
+			limit = { NOT = { exists = var:list_of_spells_known } }
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			if = {
+				limit = {has_trait = magician_good_2 }
+				learn_a_spell_magician_effect = yes
+			}
+			if = {
+				limit = {has_trait = magician_good_3 }
+				learn_a_spell_magician_effect = yes
+			}
+		}
 		clear_variable_list = spell_candidates
 		every_independent_ruler = {
 			limit = { in_diplomatic_range = root character_is_realm_neighbor = root }
@@ -48,7 +66,7 @@ get_all_possible_candidates = {
 			root = {
 				add_to_variable_list = {
 					name = spell_candidates
-					target = scope:add_ruler
+					target = scope:add_vassal
 				}
 			}
 		}
@@ -80,6 +98,22 @@ get_all_possible_candidates = {
 				}
 			}
 		}
+		capital_county = {
+			save_scope_as = target_title
+		}
+		set_variable = {
+			name = dummy_title_target
+			value = scope:target_title
+		}
+		ordered_in_list = {
+			variable = spell_candidates
+			position = 0
+			save_scope_as = target_char
+		}
+		set_variable = {
+			name = dummy_char_target
+			value = scope:target_char
+		}
 	}
 }
 
@@ -87,7 +121,15 @@ select_self_target = {
 	scope = character
 	effect = {
 		set_variable = {
+			name = target_types
+			value = 0
+		}
+		set_variable = {
 			name = spell_target
+			value = root
+		}
+		set_variable = {
+			name = dummy_char_target
 			value = root
 		}
 	}
@@ -100,6 +142,10 @@ select_character_target = {
 			name = spell_target
 			value = scope:target_char
 		}
+		set_variable = {
+			name = dummy_char_target
+			value = root
+		}
 	}
 }
 
@@ -109,6 +155,10 @@ select_spell_target = {
 		set_variable = {
 			name = spell_target
 			value = scope:target_title
+		}
+		set_variable = {
+			name = dummy_title_target
+			value = root
 		}
 	}
 }
@@ -122,7 +172,15 @@ get_first_option_target = {
 			save_scope_as = target_char
 		}
 		set_variable = {
+			name = target_types
+			value = 1
+		}
+		set_variable = {
 			name = spell_target
+			value = scope:target_char
+		}
+		set_variable = {
+			name = dummy_char_target
 			value = scope:target_char
 		}
 	}
@@ -135,7 +193,15 @@ get_first_option_target_title = {
 			save_scope_as = target_title
 		}
 		set_variable = {
+			name = target_types
+			value = 2
+		}
+		set_variable = {
 			name = spell_target
+			value = scope:target_title
+		}
+		set_variable = {
+			name = dummy_title_target
 			value = scope:target_title
 		}
 	}
@@ -156,6 +222,12 @@ clear_current_target = {
 
 summon_sidhe_child = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_child_known
+		}
+	}
 	is_valid = {
 		summon_sidhe_child_requirements = yes
 	}
@@ -185,6 +257,12 @@ summon_sidhe_child = {
 }
 summon_sidhe_advisor = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_advisor_known
+		}
+	}
 	is_valid = {
 		summon_sidhe_advisor_requirements = yes
 	}
@@ -242,6 +320,12 @@ summon_sidhe_advisor = {
 }
 summon_sidhe_feast = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_feast_known
+		}
+	}
 	is_valid = {
 		summon_sidhe_feast_requirements = yes
 	}
@@ -267,6 +351,12 @@ summon_sidhe_feast = {
 }
 summon_magical_army = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_magical_army_known
+		}
+	}
 	is_valid = {
 		summon_magical_army_requirements = yes
 	}
@@ -294,6 +384,12 @@ summon_magical_army = {
 }
 summon_magical_siege_engine = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_magical_siege_engine_known
+		}
+	}
 	is_valid = {
 		summon_magical_siege_engine_requirements = yes
 	}
@@ -319,6 +415,12 @@ summon_magical_siege_engine = {
 }
 command_the_wind = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:command_the_wind_known
+		}
+	}
 	is_valid = {
 		command_the_wind_requirements = yes
 	}
@@ -344,6 +446,12 @@ command_the_wind = {
 }
 hidden_blade = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_blade_known
+		}
+	}
 	is_valid = {
 		hidden_blade_requirements = yes
 	}
@@ -369,6 +477,12 @@ hidden_blade = {
 }
 hidden_eye = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_eye_known
+		}
+	}
 	is_valid = {
 		hidden_eye_requirements = yes
 	}
@@ -394,6 +508,12 @@ hidden_eye = {
 }
 hidden_aura = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_aura_known
+		}
+	}
 	is_valid = {
 		hidden_aura_requirements = yes
 	}
@@ -419,6 +539,12 @@ hidden_aura = {
 }
 extend_lifespan = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:extend_lifespan_known
+		}
+	}
 	is_valid = {
 		extend_lifespan_requirements = yes
 	}
@@ -445,6 +571,12 @@ extend_lifespan = {
 }
 channel_giant_strength = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:channel_giant_strength_known
+		}
+	}
 	is_valid = {
 		channel_giant_strength_requirements = yes
 	}
@@ -470,6 +602,12 @@ channel_giant_strength = {
 }
 exchange_your_talents = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:exchange_your_talents_known
+		}
+	}
 	is_valid = {
 		exchange_your_talents_requirements = yes
 	}
@@ -502,6 +640,12 @@ exchange_your_talents = {
 }
 sidhe_speechcraft = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sidhe_speechcraft_known
+		}
+	}
 	is_valid = {
 		sidhe_speechcraft_requirements = yes
 	}
@@ -527,6 +671,12 @@ sidhe_speechcraft = {
 }
 heal_wounds = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:heal_wounds_known
+		}
+	}
 	is_valid = {
 		heal_wounds_requirements = yes
 	}
@@ -551,6 +701,12 @@ heal_wounds = {
 }
 inflict_wounds = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_wounds_known
+		}
+	}
 	is_valid = {
 		inflict_wounds_requirements = yes
 	}
@@ -587,6 +743,12 @@ inflict_wounds = {
 }
 inflict_terror = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_terror_known
+		}
+	}
 	is_valid = {
 		inflict_terror_requirements = yes
 	}
@@ -617,6 +779,12 @@ inflict_terror = {
 }
 inflict_pestilence = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_pestilence_known
+		}
+	}
 	is_valid = {
 		inflict_pestilence_requirements = yes
 	}
@@ -647,6 +815,12 @@ inflict_pestilence = {
 }
 hostile_whispers = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hostile_whispers_known
+		}
+	}
 	is_valid = {
 		hostile_whispers_requirements = yes
 	}
@@ -676,6 +850,12 @@ hostile_whispers = {
 }
 captivate_mind = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:captivate_mind_known
+		}
+	}
 	is_valid = {
 		captivate_mind_requirements = yes
 	}
@@ -701,6 +881,12 @@ captivate_mind = {
 }
 bless_the_cattle = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:bless_the_cattle_known
+		}
+	}
 	is_valid = {
 		bless_the_cattle_requirements = yes
 	}
@@ -726,6 +912,12 @@ bless_the_cattle = {
 }
 multiply_herds = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:multiply_herds_known
+		}
+	}
 	is_valid = {
 		multiply_herds_requirements = yes
 	}
@@ -783,6 +975,12 @@ multiply_herds = {
 #Cessarian
 fintan_transformation = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fintan_transformation_known
+		}
+	}
 	is_valid = {
 		fintan_transformation_requirements = yes
 	}
@@ -807,6 +1005,12 @@ fintan_transformation = {
 }
 deer_form = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:deer_form_known
+		}
+	}
 	is_valid = {
 		deer_form_requirements = yes
 	}
@@ -822,7 +1026,7 @@ deer_form = {
 			var:spell_target = {
 				# Main Effect Here
 				add_character_modifier = {
-					modifier = deer_form
+					modifier = deer_form_modifier
 					years = 2
 				}
 			}
@@ -832,6 +1036,12 @@ deer_form = {
 }
 flood_realm = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:flood_realm_known
+		}
+	}
 	is_valid = {
 		flood_realm_requirements = yes
 	}
@@ -876,6 +1086,12 @@ flood_realm = {
 }
 mark_of_cain = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:mark_of_cain_known
+		}
+	}
 	is_valid = {
 		mark_of_cain_requirements = yes
 	}
@@ -902,6 +1118,12 @@ mark_of_cain = {
 }
 serpent_bite = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:serpent_bite_known
+		}
+	}
 	is_valid = {
 		serpent_bite_requirements = yes
 	}
@@ -938,6 +1160,12 @@ serpent_bite = {
 }
 garden_eden = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:garden_eden_known
+		}
+	}
 	is_valid = {
 		garden_eden_requirements = yes
 	}
@@ -967,6 +1195,12 @@ garden_eden = {
 #Fomorian
 call_sea_armies = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_sea_armies_known
+		}
+	}
 	is_valid = {
 		call_sea_armies_requirements = yes
 	}
@@ -993,6 +1227,12 @@ call_sea_armies = {
 }
 call_underground_ridri = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_underground_ridri_known
+		}
+	}
 	is_valid = {
 		call_underground_ridri_requirements = yes
 	}
@@ -1009,19 +1249,22 @@ call_underground_ridri = {
 				# Main Effect Here
 				call_underground_ridri_scripted_effect = yes
 				
-				create_character = {
-					age = 30
-					random_traits = yes
-					prowess = 18
-					gender_female_chance = 25
-					dynasty = generate
-					faith = faith:dark_gods
-					culture = root.culture
-					employer = root
-					save_scope_as = underground_ridri
-				}
-				scope:underground_ridri = {
-					add_trait = fomorian
+				custom_description = {
+					text = a_knight_appears_spell
+					create_character = {
+						age = 30
+						random_traits = yes
+						prowess = 18
+						gender_female_chance = 25
+						dynasty = generate
+						faith = faith:dark_gods
+						culture = root.culture
+						employer = root
+						save_scope_as = underground_ridri
+					}
+					scope:underground_ridri = {
+						add_trait = fomorian
+					}
 				}
 				add_character_flag = {
 					flag = has_called_sea_ridri
@@ -1034,6 +1277,12 @@ call_underground_ridri = {
 }
 fomorian_transformation = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fomorian_transformation_known
+		}
+	}
 	is_valid = {
 		fomorian_transformation_requirements = yes
 	}
@@ -1076,6 +1325,12 @@ fomorian_transformation = {
 }
 destroy_essence = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:destroy_essence_known
+		}
+	}
 	is_valid = {
 		destroy_essence_requirements = yes
 	}
@@ -1119,6 +1374,12 @@ destroy_essence = {
 }
 blood_moon = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:blood_moon_known
+		}
+	}
 	is_valid = {
 		blood_moon_requirements = yes
 	}
@@ -1177,9 +1438,12 @@ blood_moon = {
 				root = {
 					save_scope_as = killer_magic
 				}
-				trigger_event = {
-					id = toi_magic_event.0003
-					days = 1
+				custom_description = {
+					text = target_will_die_spell
+					trigger_event = {
+						id = toi_magic_event.0003
+						days = 1
+					}
 				}
 			}
 		}
@@ -1188,6 +1452,12 @@ blood_moon = {
 }
 omen_of_opression = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:omen_of_opression_known
+		}
+	}
 	is_valid = {
 		omen_of_opression_requirements = yes
 	}
@@ -1220,6 +1490,12 @@ omen_of_opression = {
 #Tuatha De danann
 healing_secret = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:healing_secret_known
+		}
+	}
 	is_valid = {
 		healing_secret_requirements = yes
 	}
@@ -1245,6 +1521,12 @@ healing_secret = {
 }
 silverarmed = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:silverarmed_known
+		}
+	}
 	is_valid = {
 		silverarmed_requirements = yes
 	}
@@ -1272,6 +1554,12 @@ silverarmed = {
 }
 dagda_cauldron = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:dagda_cauldron_known
+		}
+	}
 	is_valid = {
 		dagda_cauldron_requirements = yes
 	}
@@ -1297,6 +1585,12 @@ dagda_cauldron = {
 }
 lugh_strenght = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:lugh_strenght_known
+		}
+	}
 	is_valid = {
 		lugh_strenght_requirements = yes
 	}
@@ -1322,6 +1616,12 @@ lugh_strenght = {
 }
 call_light = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_light_known
+		}
+	}
 	is_valid = {
 		call_light_requirements = yes
 	}
@@ -1348,6 +1648,12 @@ call_light = {
 }
 lost_knowledge = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:lost_knowledge_known
+		}
+	}
 	is_valid = {
 		lost_knowledge_requirements = yes
 	}
@@ -1373,6 +1679,12 @@ lost_knowledge = {
 }
 summon_new_tribe = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_new_tribe_known
+		}
+	}
 	is_valid = {
 		summon_new_tribe_requirements = yes
 	}
@@ -1387,8 +1699,17 @@ summon_new_tribe = {
 			limit = { NOT = { has_variable = spell_fails } }
 			var:spell_target = {
 				# Main Effect Here
-				save_scope_as = war_target_ruler
-				summon_new_tribe_scripted_effect = yes
+				custom_description = {
+					text = summon_new_tribe_spell_effect_desc
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.summon_new_tribe.target
+						trigger_event = {
+							id = toi_magic_event.0005
+							days = 1
+						}
+					}
+				}
 			}
 		}
 		remove_variable = spell_fails
@@ -1398,6 +1719,12 @@ summon_new_tribe = {
 #Megalithic humans
 sacred_building = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sacred_building_known
+		}
+	}
 	is_valid = {
 		sacred_building_requirements = yes
 	}
@@ -1423,6 +1750,12 @@ sacred_building = {
 }
 suns_chosen = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:suns_chosen_known
+		}
+	}
 	is_valid = {
 		suns_chosen_requirements = yes
 	}
@@ -1448,6 +1781,12 @@ suns_chosen = {
 }
 hunting_spirits = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hunting_spirits_known
+		}
+	}
 	is_valid = {
 		hunting_spirits_requirements = yes
 	}
@@ -1477,6 +1816,12 @@ hunting_spirits = {
 #Partholonian
 rune_words = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:rune_words_known
+		}
+	}
 	is_valid = {
 		rune_words_requirements = yes
 	}
@@ -1504,6 +1849,12 @@ rune_words = {
 }
 protective_amulet = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:protective_amulet_known
+		}
+	}
 	is_valid = {
 		protective_amulet_requirements = yes
 	}
@@ -1535,6 +1886,12 @@ protective_amulet = {
 }
 greek_astrology = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:greek_astrology_known
+		}
+	}
 	is_valid = {
 		greek_astrology_requirements = yes
 	}
@@ -1549,43 +1906,46 @@ greek_astrology = {
 			limit = { NOT = { has_variable = spell_fails } }
 			var:spell_target = {
 				# Main Effect Here
-				random_list = {
-					10 = {
-						add_martial_skill = 1
+				custom_description = {
+					text = greek_astrology_spell_desc
+					random_list = {
+						10 = {
+							add_martial_skill = 1
+						}
+						10 = {
+							add_intrigue_skill = 1
+						}
+						10 = {
+							add_learning_skill = 1
+						}
+						10 = {
+							add_stewardship_skill = 1
+						}
+						10 = {
+							add_diplomacy_skill = 1
+						}
 					}
-					10 = {
-						add_intrigue_skill = 1
+					random_list = {
+						9 = {
+							add_martial_skill = -1
+						}
+						9 = {
+							add_intrigue_skill = -1
+						}
+						9 = {
+							add_learning_skill = -1
+						}
+						9 = {
+							add_stewardship_skill = -1
+						}
+						9 = {
+							add_diplomacy_skill = -1
+						}
+						6 = {
+							
+						}
 					}
-					10 = {
-						add_learning_skill = 1
-					}
-					10 = {
-						add_stewardship_skill = 1
-					}
-					10 = {
-						add_diplomacy_skill = 1
-					}
-				}
-				random_list = {
-					10 = {
-						add_martial_skill = -1
-					}
-					10 = {
-						add_intrigue_skill = -1
-					}
-					10 = {
-						add_learning_skill = -1
-					}
-					10 = {
-						add_stewardship_skill = -1
-					}
-					10 = {
-						add_diplomacy_skill = -1
-					}
-					1 = {
-						
-					}
-				}				
+				}					
 			}
 		}
 		remove_variable = spell_fails
@@ -1593,6 +1953,12 @@ greek_astrology = {
 }
 cursed_tablet = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:cursed_tablet_known
+		}
+	}
 	is_valid = {
 		cursed_tablet_requirements = yes
 	}
@@ -1630,10 +1996,51 @@ cursed_tablet = {
 		remove_variable = spell_fails
 	}
 }
+partholonian_plague = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:partholonian_plague_known
+		}
+	}
+	is_valid = {
+		partholonian_plague_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = cursed_tablet_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.partholonian_plague.target
+					add_character_modifier = {
+						modifier = weak_body
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
 
 #Nemedian
 sidhe_agriculture = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sidhe_agriculture_known
+		}
+	}
 	is_valid = {
 		sidhe_agriculture_requirements = yes
 	}
@@ -1650,7 +2057,7 @@ sidhe_agriculture = {
 				# Main Effect Here
 				every_held_title = {
 					limit = {
-						tier = county
+						tier = tier_county
 					}
 					add_county_modifier = {
 						modifier = sidhe_agriculture_modifier
@@ -1664,6 +2071,12 @@ sidhe_agriculture = {
 }
 blessed_family = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:blessed_family_known
+		}
+	}
 	is_valid = {
 		blessed_family_requirements = yes
 	}
@@ -1689,6 +2102,12 @@ blessed_family = {
 }
 nemedian_union = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:nemedian_union_known
+		}
+	}
 	is_valid = {
 		nemedian_union_requirements = yes
 	}
@@ -1714,6 +2133,12 @@ nemedian_union = {
 }
 nemed_seduction = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:nemed_seduction_known
+		}
+	}
 	is_valid = {
 		nemed_seduction_requirements = yes
 	}
@@ -1748,6 +2173,12 @@ nemed_seduction = {
 #Fir Bolg
 srengs_strenght = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:srengs_strenght_known
+		}
+	}
 	is_valid = {
 		srengs_strenght_requirements = yes
 	}
@@ -1773,6 +2204,12 @@ srengs_strenght = {
 }
 fir_bolg_endurance = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fir_bolg_endurance_known
+		}
+	}
 	is_valid = {
 		fir_bolg_endurance_requirements = yes
 	}
@@ -1798,6 +2235,12 @@ fir_bolg_endurance = {
 }
 men_of_bags = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:men_of_bags_known
+		}
+	}
 	is_valid = {
 		men_of_bags_requirements = yes
 	}
@@ -1823,6 +2266,12 @@ men_of_bags = {
 }
 heavy_lifters = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:heavy_lifters_known
+		}
+	}
 	is_valid = {
 		heavy_lifters_requirements = yes
 	}
@@ -1848,6 +2297,12 @@ heavy_lifters = {
 }
 united_in_defiance = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:united_in_defiance_known
+		}
+	}
 	is_valid = {
 		united_in_defiance_requirements = yes
 	}
@@ -1862,13 +2317,16 @@ united_in_defiance = {
 			limit = { NOT = { has_variable = spell_fails } }
 			var:spell_target = {
 				# Main Effect Here
-				every_vassal_or_below = {
-					limit = {
-						has_trait = fir_bolg
-					}
-					add_opinion = {
-						modifier = united_in_defiance_magic_opinion
-						target = root
+				custom_description = {
+					text = united_in_defiance_spell_effect_desc
+					every_vassal_or_below = {
+						limit = {
+							has_trait = fir_bolg
+						}
+						add_opinion = {
+							modifier = united_in_defiance_magic_opinion
+							target = root
+						}
 					}
 				}
 				add_character_flag = {
@@ -1884,6 +2342,12 @@ united_in_defiance = {
 #Milesian
 path_of_destiny = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:path_of_destiny_known
+		}
+	}
 	is_valid = {
 		path_of_destiny_requirements = yes
 	}
@@ -1901,7 +2365,7 @@ path_of_destiny = {
 				capital_county.kingdom = {
 					save_scope_as = target_kingdom
 				}
-				add_pressed_claim = target_kingdom
+				add_pressed_claim = scope:target_kingdom
 			}
 		}
 		remove_variable = spell_fails
@@ -1909,6 +2373,12 @@ path_of_destiny = {
 }
 realm_ceremony = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:realm_ceremony_known
+		}
+	}
 	is_valid = {
 		realm_ceremony_requirements = yes
 	}
@@ -1934,6 +2404,12 @@ realm_ceremony = {
 }
 enchant_bedroooms = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:enchant_bedroooms_known
+		}
+	}
 	is_valid = {
 		enchant_bedroooms_requirements = yes
 	}
@@ -1961,6 +2437,12 @@ enchant_bedroooms = {
 #Celts
 druidic_intersessions = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:druidic_intersessions_known
+		}
+	}
 	is_valid = {
 		druidic_intersessions_requirements = yes
 	}
@@ -1986,6 +2468,12 @@ druidic_intersessions = {
 }
 magic_paintings = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:magic_paintings_known
+		}
+	}
 	is_valid = {
 		magic_paintings_requirements = yes
 	}
@@ -2017,6 +2505,12 @@ magic_paintings = {
 }
 befriend_the_morrigan = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:befriend_the_morrigan_known
+		}
+	}
 	is_valid = {
 		befriend_the_morrigan_requirements = yes
 	}
@@ -2042,6 +2536,12 @@ befriend_the_morrigan = {
 }
 settle_power = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:settle_power_known
+		}
+	}
 	is_valid = {
 		settle_power_requirements = yes
 	}
@@ -2067,6 +2567,12 @@ settle_power = {
 }
 influence_culture = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:influence_culture_known
+		}
+	}
 	is_valid = {
 		influence_culture_requirements = yes
 	}
@@ -2091,6 +2597,12 @@ influence_culture = {
 #Hy Brasilian
 mystical_craft = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:mystical_craft_known
+		}
+	}
 	is_valid = {
 		mystical_craft_requirements = yes
 	}
@@ -2107,7 +2619,7 @@ mystical_craft = {
 				# Main Effect Here
 				add_tales_of_abundance_lifestyle_xp = 250
 				add_character_flag = {
-					flag = spell_cooldown_five_years
+					flag = spell_mystical_craft_five_years
 					years = 5
 				}
 			}
@@ -2117,6 +2629,12 @@ mystical_craft = {
 }
 two_worlds = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:two_worlds_known
+		}
+	}
 	is_valid = {
 		two_worlds_requirements = yes
 	}
@@ -2134,7 +2652,7 @@ two_worlds = {
 				add_gold = 50
 				add_prestige = 50
 				add_character_flag = {
-					flag = spell_cooldown_five_years
+					flag = spell_two_world_five_years
 					years = 5
 				}
 			}
@@ -2144,6 +2662,12 @@ two_worlds = {
 }
 no_escape_curse = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:no_escape_curse_known
+		}
+	}
 	is_valid = {
 		no_escape_curse_requirements = yes
 	}
@@ -2163,7 +2687,7 @@ no_escape_curse = {
 					title = tooltip.magic.no_escape_curse.target
 					every_held_title = {
 						limit = {
-							tier = county
+							tier = tier_county
 						}
 						add_county_modifier = {
 							modifier = no_escape_curse_modifier
@@ -2182,6 +2706,12 @@ no_escape_curse = {
 }
 brasil_fog = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:brasil_fog_known
+		}
+	}
 	is_valid = {
 		brasil_fog_requirements = yes
 	}
@@ -2206,7 +2736,7 @@ brasil_fog = {
 						contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
 					}
 					add_character_flag = {
-						flag = basil_fog_flag
+						flag = brasil_fog_flag
 						years = 10
 					}
 				}
@@ -2217,6 +2747,12 @@ brasil_fog = {
 }
 magic_mist = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:magic_mist_known
+		}
+	}
 	is_valid = {
 		magic_mist_requirements = yes
 	}
@@ -2290,6 +2826,12 @@ magic_mist = {
 #Latin
 burn_incense = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:burn_incense_known
+		}
+	}
 	is_valid = {
 		burn_incense_requirements = yes
 	}
@@ -2316,6 +2858,12 @@ burn_incense = {
 }
 roman_astrology = {
 	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:roman_astrology_known
+		}
+	}
 	is_valid = {
 		roman_astrology_requirements = yes
 	}
@@ -2329,62 +2877,65 @@ roman_astrology = {
 		if = {
 			limit = { NOT = { has_variable = spell_fails } }
 			var:spell_target = {
-				# Main Effect Here
-				random_list = {
-					10 = {
-						add_martial_skill = 2
+				custom_description = {
+					text = roman_astrology_spell_desc
+					# Main Effect Here
+					random_list = {
+						10 = {
+							add_martial_skill = 2
+						}
+						10 = {
+							add_intrigue_skill = 2
+						}
+						10 = {
+							add_learning_skill = 2
+						}
+						10 = {
+							add_stewardship_skill = 2
+						}
+						10 = {
+							add_diplomacy_skill = 2
+						}
 					}
-					10 = {
-						add_intrigue_skill = 2
+					random_list = {
+						10 = {
+							add_martial_skill = -1
+						}
+						10 = {
+							add_intrigue_skill = -1
+						}
+						10 = {
+							add_learning_skill = -1
+						}
+						10 = {
+							add_stewardship_skill = -1
+						}
+						10 = {
+							add_diplomacy_skill = -1
+						}
+						1 = {
+							
+						}
 					}
-					10 = {
-						add_learning_skill = 2
-					}
-					10 = {
-						add_stewardship_skill = 2
-					}
-					10 = {
-						add_diplomacy_skill = 2
-					}
-				}
-				random_list = {
-					10 = {
-						add_martial_skill = -1
-					}
-					10 = {
-						add_intrigue_skill = -1
-					}
-					10 = {
-						add_learning_skill = -1
-					}
-					10 = {
-						add_stewardship_skill = -1
-					}
-					10 = {
-						add_diplomacy_skill = -1
-					}
-					1 = {
-						
-					}
-				}
-				random_list = {
-					10 = {
-						add_martial_skill = -1
-					}
-					10 = {
-						add_intrigue_skill = -1
-					}
-					10 = {
-						add_learning_skill = -1
-					}
-					10 = {
-						add_stewardship_skill = -1
-					}
-					10 = {
-						add_diplomacy_skill = -1
-					}
-					1 = {
-						
+					random_list = {
+						10 = {
+							add_martial_skill = -1
+						}
+						10 = {
+							add_intrigue_skill = -1
+						}
+						10 = {
+							add_learning_skill = -1
+						}
+						10 = {
+							add_stewardship_skill = -1
+						}
+						10 = {
+							add_diplomacy_skill = -1
+						}
+						2 = {
+							
+						}
 					}
 				}
 			}

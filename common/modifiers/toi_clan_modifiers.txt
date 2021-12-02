@@ -1,0 +1,64 @@
+﻿very_high_clan_rulers = {
+	icon = family_positive
+	domain_tax_mult = 0.1
+	powerful_vassal_opinion = 5
+	levy_size = -0.2
+}
+
+very_high_clan_leader = {
+	icon = family_positive
+	domain_tax_mult = 0.1
+	powerful_vassal_opinion = 5
+	levy_size = 0.3
+	monthly_prestige = 1
+}
+
+high_clan_rulers = {
+	icon = family_positive
+	domain_tax_mult = 0.05
+	powerful_vassal_opinion = 5
+	levy_size = -0.1
+}
+
+high_clan_leader = {
+	icon = family_positive
+	domain_tax_mult = 0.1
+	powerful_vassal_opinion = 5
+	levy_size = 0.2
+	monthly_prestige = 0.5
+}
+
+medium_clan_rulers = {
+	icon = family_positive
+	domain_tax_mult = 0.05
+	levy_size = -0.1
+}
+
+medium_clan_leader = {
+	icon = family_positive
+	domain_tax_mult = 0.05
+	levy_size = 0.2
+}
+
+low_clan_rulers = {
+	icon = family_positive
+	levy_size = 0.1
+}
+
+low_clan_leader = {
+	icon = family_positive
+	levy_size = -0.15
+}
+
+very_low_clan_rulers = {
+	icon = family_positive
+	monthly_prestige_gain_mult = -0.15
+	levy_size = 0.1
+}
+
+very_low_clan_leader = {
+	icon = family_positive
+	monthly_prestige_gain_mult = -0.15
+	levy_size = -0.2
+	powerful_vassal_opinion = -5
+}

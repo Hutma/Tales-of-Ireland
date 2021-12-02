@@ -68,6 +68,7 @@
     trait = patient
     trait = gregarious
     trait = fir_bolg
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4774.1.1 = {

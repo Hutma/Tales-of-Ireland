@@ -343,9 +343,11 @@ toi_lifestyle_event.0008 = {
         capital_county = {
             change_development_level = -1
         }
-        every_vassal.capital_county = {
-            change_development_level = -1
-        }
+        every_vassal = {
+			capital_county = {
+				change_development_level = -1
+			}
+		}
         add_tales_of_abundance_lifestyle_xp = 200
         add_character_modifier = {
             modifier = spring_festival
@@ -359,8 +361,10 @@ toi_lifestyle_event.0008 = {
         capital_county ={
             change_development_level = -1
         }
-        every_vassal.capital_county = {
-            change_development_level = -1
+        every_vassal = {
+			capital_county = {
+				change_development_level = -1
+			}
         }
         add_tales_of_war_lifestyle_xp = 150
         add_prestige = 100
@@ -453,13 +457,13 @@ toi_lifestyle_event.0010 = {
     }
 
     immediate = {
-        realm_priest = {
+			realm_priest = {
             save_scope_as = your_druid
         }
     }
 
     right_portrait = {
-        character = your_druid
+        character = scope:your_druid
         animation = personality_honorable
     }
 
@@ -479,7 +483,7 @@ toi_lifestyle_event.0010 = {
         name = toi_lifestyle_event.0010.c
         duel = {
             skill = diplomacy
-            target = your_druid
+            target = scope:your_druid
             50 = {
                 root = { 
                     add_tales_of_war_lifestyle_xp = 125
@@ -512,7 +516,7 @@ toi_lifestyle_event.0011 = {
     }
 
     trigger = {
-        highest_held_title >= 4
+        highest_held_title_tier >= 4
         prestige_level >= 2
     }
 
@@ -564,8 +568,8 @@ toi_lifestyle_event.0011 = {
                     has_trait = wrathful
                     has_trait = arrogant
                 }
-                add_stress = -20
             }
+            add_stress = -20
         }
         every_neighboring_top_liege_realm_owner = {
             add_opinion = {

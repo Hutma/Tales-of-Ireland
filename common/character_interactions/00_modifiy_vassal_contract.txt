@@ -101,13 +101,6 @@
 						generous = medium_stress_impact_gain
 					}
 				}
-				if = {
-					limit = {
-						always = scope:hook
-					}
-					use_hook = scope:recipient
-					add_achievement_flag = { FLAG = achievement_fine_print_flag }
-				}
 
 				scope:recipient = {
 					hidden_effect = { set_vassal_contract_modification_blocked = yes }
@@ -217,11 +210,6 @@ vassal_modify_vassal_contract_interaction = {
 				type = msg_vassal_contract_change
 				title = modify_vassal_contract_interaction_notification
 				right_icon = scope:recipient
-				if = {
-					limit = { always = scope:hook }
-					use_hook = scope:recipient
-					add_achievement_flag = { FLAG = achievement_fine_print_flag }
-				}
 				
 				hidden_effect = { set_vassal_contract_modification_blocked = yes }
 				if = { limit = { has_government = tributary_government }

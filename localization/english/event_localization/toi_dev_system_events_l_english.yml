@@ -20,7 +20,7 @@
  cattle.0003.c.failure: "They were not so gullible..."
  tooltip.cattle.0003.c.failure: "Oh no!"
  cattle.0004.t: "The Blessed Water"
- cattle.0004.desc: "A rumour has swept through the ring fort: one of my champions has supposedly discovered a magical spring.\n\nThe water from this spring will keep you and your herd hale and hearty,” he explains.\n\nThe source of this water is far away and the trip might be risky, and I can’t know for sure if the water is really magical. If this is a trick, this expedition could cost a lot and gain me nothing."
+ cattle.0004.desc: "A rumour has swept through the ring fort: one of my champions has supposedly discovered a magical spring.\n\n“The water from this spring will keep you and your herd hale and hearty,” he explains.\n\nThe source of this water is far away and the trip might be risky, and I can’t know for sure if the water is really magical. If this is a trick, this expedition could cost a lot and gain me nothing."
  cattle.0004.a: "We should travel to these lands and find this water."
  cattle.0004.b: "I'm not risking my time and my money for water."
  cattle.00041.t: "The blessed water"

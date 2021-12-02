@@ -26,7 +26,11 @@ island_region_irish_isles = {
 	}
 	
 	counties = { 
-		c_bere 
-		c_leabgarrow
+		c_bere
+	}
+	
+	provinces = {
+		b_plughoge
+		b_leabgarrow
 	}
 }

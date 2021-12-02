@@ -2,7 +2,7 @@ version="0.1"
 tags={
 	"Total Conversion"
 }
-name="toi_dev"
+name="Tales of Ireland"
 replace_path="common/culture/cultures"
 replace_path="common/religion/religions"
 replace_path="history/characters"
