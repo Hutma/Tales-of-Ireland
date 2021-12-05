@@ -355,3 +355,12 @@ burn_incense_modifier = {
 	courtier_opinion = 5
 	realm_priest_opinion = 10
 }
+
+mass_influence_modifier = {
+	icon = magic_positive
+	county_opinion_add = 10
+	vassal_opinion = 10
+	courtier_opinion = 10
+	tax_mult = 0.25
+	monthly_county_control_change_add = 0.5
+}

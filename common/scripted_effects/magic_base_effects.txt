@@ -107,6 +107,15 @@
 	add_to_global_variable_list = { name = self_spells_list target = flag:burn_incense }
 	add_to_global_variable_list = { name = self_spells_list target = flag:roman_astrology }
 	
+	#Perk spells
+	add_to_global_variable_list = { name = self_spells_list target = flag:soul_transfer }
+	add_to_global_variable_list = { name = self_spells_list target = flag:mass_influence }
+	add_to_global_variable_list = { name = self_spells_list target = flag:word_of_peace }
+	add_to_global_variable_list = { name = character_spells_list target = flag:call_rage }
+	add_to_global_variable_list = { name = self_spells_list target = flag:make_them_bow }
+	add_to_global_variable_list = { name = self_spells_list target = flag:the_evil_army }
+	add_to_global_variable_list = { name = character_spells_list target = flag:cause_discorde_spell }
+	
 	####List to give out new spells###
 	##GENERIC SPELLS##
 	add_to_global_variable_list = { name = generic_spells_global_list target = flag:summon_sidhe_child_known }
@@ -196,6 +205,10 @@
 }
 
 run_bad_effects_spell = {
+	if = {
+		limit = { years_from_game_start > 1 }
+		add_tales_of_magic_lifestyle_xp = 10 #give Magic lifestyle points for each spell cast
+	}
 	if = {
 		limit = { failure_chance_for_spells > 15 }
 		random_list = {

@@ -24,3 +24,8 @@
  
  ADD_TALES_OF_WAR_LIFESTYLE_XP:2 "You gained $VALUE|V0$ [tales_of_war|E] experience"
  TARGET_ADD_TALES_OF_WAR_LIFESTYLE_XP:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_war|E] experience"
+ 
+ ADD_TALES_OF_MAGIC_LIFESTYLE_XP:2 "You gained $VALUE|V0$ [tales_of_magic|E] experience"
+ TARGET_ADD_TALES_OF_MAGIC_LIFESTYLE_XP:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_magic|E] experience"
+ 
+ CAN_ONLY_BE_DONE_ONCE_DESC:2 "#N Can only be done once#!"

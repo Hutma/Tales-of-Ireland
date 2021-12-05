@@ -14273,6 +14273,22 @@ e_ulster = {
 
 	}
 	
+	k_vampire_kingdom = {
+		color = { 145 35 35 }
+		color2 = { 255 255 255 }
+		
+		ai_primary_priority = {
+			# if = {
+				# limit = {
+					# has_trait = irish_vampire
+				# }
+				# add = @always_primary_score
+			# }
+		}
+
+		capital = c_finvoy
+	}
+	
 	k_breifne = {
 		color = { 194 233 87 }
 		color2 = { 255 255 255 }

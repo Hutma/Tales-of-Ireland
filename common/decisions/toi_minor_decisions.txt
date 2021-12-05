@@ -248,3 +248,44 @@ call_gladiators_decision = {
 		base = 100
 	}
 }
+
+buy_mercenaries_with_cattle_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	
+	desc = buy_mercenaries_with_cattle_decision_desc
+	
+	ai_check_interval = 80
+	
+	cooldown = { years = 20 }
+
+	is_shown = {
+		is_independent_ruler = yes
+	}
+
+	is_valid = {
+		capital_county = {
+			development_level > 20
+		}
+		is_at_war = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 15
+	}
+
+	effect = {
+		buy_mercenaries_with_cattle_decision_scripted_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}

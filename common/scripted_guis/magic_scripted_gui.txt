@@ -18,9 +18,7 @@ get_all_possible_candidates = {
 			}
 		}
 		if = { #get your spells
-			limit = { NOT = { exists = var:list_of_spells_known } }
-			learn_a_spell_magician_effect = yes
-			learn_a_spell_magician_effect = yes
+			limit = { NOT = { has_variable_list = list_of_spells_known } }
 			learn_a_spell_magician_effect = yes
 			learn_a_spell_magician_effect = yes
 			learn_a_spell_magician_effect = yes
@@ -32,6 +30,7 @@ get_all_possible_candidates = {
 			}
 			if = {
 				limit = {has_trait = magician_good_3 }
+				learn_a_spell_magician_effect = yes
 				learn_a_spell_magician_effect = yes
 			}
 		}
@@ -55,7 +54,7 @@ get_all_possible_candidates = {
 					root = {
 						add_to_variable_list = {
 							name = spell_candidates
-							target = scope:add_ruler
+							target = scope:add_vassal
 						}
 					}
 				}
@@ -2816,6 +2815,7 @@ magic_mist = {
 						flag = magic_mist_flag
 						years = 10
 					}
+					clear_local_variable_list = possible_target_death_courtier
 				}
 			}
 		}
@@ -2943,6 +2943,309 @@ roman_astrology = {
 		remove_variable = spell_fails
 	}
 }
+
+#Perk Spells
+soul_transfer = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_soul_transfer_spell
+	}
+	is_valid = {
+		soul_transfer_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = soul_transfer_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				if = {
+					limit = { has_trait = magician_good_1 }
+					player_heir = {
+						add_trait = magician_good_1
+					}
+				}
+				else_if = {
+					limit = { has_trait = magician_good_2 }
+					player_heir = {
+						add_trait = magician_good_2
+					}
+				}
+				else_if = {
+					limit = { has_trait = magician_good_3 }
+					player_heir = {
+						add_trait = magician_good_3
+					}
+				}
+				add_diplomacy_skill = -7
+				add_martial_skill = -7
+				add_stewardship_skill = -7
+				add_intrigue_skill = -7
+				add_learning_skill = -7
+				player_heir = {
+					add_diplomacy_skill = 7
+					add_martial_skill = 7
+					add_stewardship_skill = 7
+					add_intrigue_skill = 7
+					add_learning_skill = 7
+				}
+				add_stress = 200
+				add_trait = depressed_1
+				add_trait = lunatic_1
+				add_trait = possessed_1
+				remove_trait = magician_good_1
+				remove_trait = magician_good_2
+				remove_trait = magician_good_3
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+mass_influence = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_mass_influence_spell
+	}
+	is_valid = {
+		mass_influence_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = mass_influence_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				add_character_modifier = {
+					modifier = mass_influence_modifier
+					years = 2
+				}
+				add_prestige = 100
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+word_of_peace = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_word_of_peace_spell
+	}
+	is_valid = {
+		word_of_peace_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = word_of_peace_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				every_character_war = {
+					limit = {
+						# any_primary_war_enemy = { this = root }
+						root = { is_defender_in_war = prev }
+					}
+					end_war = white_peace
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+call_rage = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_call_rage_spell
+	}
+	is_valid = {
+		call_rage_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = call_rage_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = call_rage_effect_desc
+					save_scope_as = target_of_war
+					primary_title = {
+						every_in_de_facto_hierarchy = {
+							limit = {tier = tier_county }
+							add_to_list = possible_target_county_conquest
+						}
+					}
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.call_rage.target
+						every_neighboring_top_liege_realm_owner = {
+							limit = {
+								NOT = { is_allied_to = scope:target_of_war }
+								NOT = { has_truce = scope:target_of_war }
+								NOT = { this = root }
+							}
+							scope:target_of_war = {
+								random_in_list = {
+									list = possible_target_county_conquest
+									save_scope_as = targeted_county
+									remove_from_list = possible_target_county_conquest
+								}
+							}
+							start_war = { 
+								casus_belli = county_conquest_cb
+								target = scope:target_of_war
+								target_title = scope:targeted_county
+							}
+						}
+					}
+					add_character_flag = {
+						flag = called_rage_recently
+						years = 5
+					}
+					clear_local_variable_list = possible_target_county_conquest
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+make_them_bow = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_make_them_bow_spell
+	}
+	is_valid = {
+		make_them_bow_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = make_them_bow_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				add_dread = 30
+				custom_description = {
+					text = two_random_vassal_die
+					every_vassal = {
+						add_to_list = possible_vassal_death
+					}
+					random_in_list = {
+						list = possible_vassal_death
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+						remove_from_list = possible_vassal_death
+					}
+					random_in_list = {
+						list = possible_vassal_death
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+						remove_from_list = possible_vassal_death
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+the_evil_army = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_the_evil_army_spell
+	}
+	is_valid = {
+		the_evil_army_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = the_evil_army_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				the_evil_army_scripted_effect = yes
+				add_character_flag = {
+					flag = called_evil_army_recently
+					years = 20
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+cause_discorde_spell = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_cause_discorde_spell
+	}
+	is_valid = {
+		cause_discorde_spell_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = cause_discorde_spell_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				save_scope_as = faction_target
+				custom_description = {
+					text = cause_discorde_spell_desc
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.cause_discorde.target
+						every_vassal = {
+							limit = { is_powerful_vassal = yes }
+							start_war = {
+								casus_belli = independence_war
+								target = scope:faction_target
+							}
+						}
+					}
+				}
+				add_character_flag = {
+					flag = caused_discorde_recently
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+
 
 #Not spells, must keep
 increase_times_repeated = {

@@ -8,7 +8,7 @@ poison_cattle_outcome.0001 = {
 	desc = poison_cattle_outcome.0001.desc
 	theme = diplomacy_foreign_affairs_focus
 
-	left_portrait = {
+	right_portrait = {
 		character = root
 		animation = scheme
 	}

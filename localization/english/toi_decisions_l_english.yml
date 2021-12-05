@@ -178,3 +178,26 @@
  leave_fintan_form_decision_desc: "I have to leave my Salmon form and go back to my human one, I hope the transformation won't affect me much."
  leave_fintan_form_decision_tooltip: "Back to human"
  leave_fintan_form_decision_confirm: "Back to human"
+ practice_magical_powers_decision: "Practice your magic"
+ practice_magical_powers_decision_desc: "I could spend some time training my magical skills, I could learn a lot from it but it might tire me."
+ practice_magical_powers_decision_tooltip: "Gain Magic Lifestyle experience"
+ practice_magical_powers_decision_confirm: "Practice"
+ 
+ #Minor decisions
+ toi_mercenaries_troops: "Mercenaries"
+ buy_mercenaries_with_cattle_decision: "Buy mercenaries with cattle"
+ buy_mercenaries_with_cattle_decision_desc: "We have little chance to win this war, we trade some of our cattle for good fighting men, there is no point of having such a herd if we can't protect our realm."
+ buy_mercenaries_with_cattle_decision_tooltip: "Hire mercenaries"
+ buy_mercenaries_with_cattle_decision_confirm: "Make the trade"
+ 
+ #Vampire
+ ask_court_for_blood_decision: "Ask blood to the court"
+ ask_court_for_blood_decision_desc: "I need blood... I want blood... my courtiers will all give some of their blood to calm my blood thirst!"
+ ask_court_for_blood_decision_tooltip: "Ask your court to give you blood"
+ ask_court_for_blood_decision_confirm: "I'm thirsty!"
+ 
+ reform_the_vampire_kingdom_decision: "Form Tir Neamh-Mairbh"
+ reform_the_vampire_kingdom_decision_desc: "The heartland of the mac Bram dynasty. Every Vampire is drawn to this place, yet none know why. Some say the first man to discover Blood Magic is buried here, others see it as home to particularly bloodthirsty Sidhe. For too long it has been occupied by mortals, and it's time to restore the old kingdom."
+ reform_the_vampire_kingdom_decision_tooltip: "Form Tir Neamh-Mairbh, the land of the dead"
+ reform_the_vampire_kingdom_decision_confirm: "A Kingdom for the dead"
+ 

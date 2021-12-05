@@ -45,3 +45,7 @@ cause_discorde_perk_desc = {
 shadow_blood_perk_desc = {
 	global = SHADOW_BLOOD_PERK_DESC
 }
+
+can_only_be_done_once_desc = {
+	global = CAN_ONLY_BE_DONE_ONCE_DESC
+}

@@ -69,3 +69,43 @@
 		texture = "d_inver_ayre_coa.dds"
 	}
 }
+
+198 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_galmoy_coa.dds"
+	}
+}
+
+131 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_newry_coa.dds"
+	}
+}
+
+96 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_athenry_coa.dds"
+	}
+}
+
+218 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_beaufort_coa.dds"
+	}
+}
+
+217 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_finvoy_coa.dds"
+	}
+}

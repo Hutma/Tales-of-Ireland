@@ -41,6 +41,9 @@
  tenet_manx_legacy_name:0 "Manx Legacy"
  tenet_manx_legacy_desc:0 "Our island's ancient megaliths, unique myths and rich history has granted us rituals and beliefs unlike anywhere else."
  
+ tenet_le_cheile_name:0 "Le chéile"
+ tenet_le_cheile_desc:0 "We share many different origins and we have learned to live together as mercenary brothers in arms."
+ 
  doctrine_parameter_cattle_raiding_cb_disable:0 "Can not use [cattle_raiding_cb|E]"
  doctrine_parameter_purification_cb_enabled:0 "Can use the Purification casus belli"
  doctrine_parameter_to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"

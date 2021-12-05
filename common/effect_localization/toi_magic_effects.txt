@@ -39,3 +39,21 @@ the_spell_is_cast_message = {
 	first = THE_SPELL_IS_CAST_MESSAGE
 	third = THE_SPELL_IS_CAST_MESSAGE
 }
+
+call_rage_effect_desc = {
+	global = CALL_RAGE_EFFECT_DESC
+	first = CALL_RAGE_EFFECT_DESC
+	third = CALL_RAGE_EFFECT_DESC
+}
+
+two_random_vassal_die = {
+	global = TWO_RANDOM_VASSAL_DIE
+	first = TWO_RANDOM_VASSAL_DIE
+	third = TWO_RANDOM_VASSAL_DIE
+}
+
+cause_discorde_spell_desc = {
+	global = CAUSE_DISCORDE_SPELL_DESC
+	first = CAUSE_DISCORDE_SPELL_DESC
+	third = CAUSE_DISCORDE_SPELL_DESC
+}

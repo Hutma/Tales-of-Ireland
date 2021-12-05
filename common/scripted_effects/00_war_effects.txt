@@ -719,6 +719,43 @@ send_captured_combatant_message = {
 	}
 }
 
+send_new_alliance_message = {
+	$THIS_CHARACTER$ = {
+		every_character_war = {
+			limit = {
+				# As a pure notification thing, we only care about players. No need to waste CPU cycles for AI-only wars.
+				any_war_participant = {
+					is_ai = no
+				}
+				# Only if we're the primary attacker or defender (non-primary participants can't call their own allies)
+				OR = {
+					primary_attacker = $THIS_CHARACTER$
+					primary_defender = $THIS_CHARACTER$
+				}
+				# Don't send messages about alliances to landless courtiers (who can't actually join wars, alliance or no)
+				$THIS_CHARACTER$ = { is_landed = yes }
+				$OTHER_CHARACTER$ = { is_landed = yes }
+			}
+			save_scope_as = this_war
+			$THIS_CHARACTER$ = { save_scope_as = this_character }
+			$OTHER_CHARACTER$ = { save_scope_as = other_character }
+			every_war_participant = {
+				limit = {
+					is_ai = no
+					# We only want to alert people of potential new enemies
+					any_war_enemy = { this = scope:this_character}
+				}
+				send_interface_toast = {
+					title = enemy_gained_new_ally
+					left_icon = scope:this_character
+					right_icon = scope:other_character
+					custom_tooltip = enemy_gained_new_ally_tt
+				}
+			}
+		}
+	}
+}
+
 send_slain_combatant_message = {
 	# The positioning of the character portraits needs to sync up with the loc-string we're using.
 	if = {

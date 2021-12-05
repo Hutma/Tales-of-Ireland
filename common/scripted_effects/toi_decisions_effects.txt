@@ -222,3 +222,22 @@ roman_road_decision_scripted_effect = {
 		add_county_modifier = roman_road_modifier
 	}
 }
+
+buy_mercenaries_with_cattle_decision_scripted_effect = {
+	capital_county = {
+		change_development_level = -15
+	}
+	spawn_army = {
+		uses_supply = yes
+		inheritable = no
+		name = toi_mercenaries_troops
+		levies = {
+			value = 50
+		}
+		men_at_arms = {
+			type = warriors_of_tara
+			stacks = 2
+		}
+		location = capital_province
+	}
+}

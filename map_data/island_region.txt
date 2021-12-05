@@ -30,7 +30,7 @@ island_region_irish_isles = {
 	}
 	
 	provinces = {
-		b_plughoge
-		b_leabgarrow
+		1903
+		1904
 	}
 }

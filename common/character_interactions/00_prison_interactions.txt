@@ -3198,6 +3198,7 @@ execute_prisoner_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
+		scope:recipient = { NOT = { has_trait = irish_vampire } } #Tales of ireland vampire
 		scope:recipient = { is_diplomatically_available = yes } #Prisoner
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		scope:recipient = {

@@ -49,3 +49,19 @@ tuatha_de_danann = {
 		}
 	}
 }
+
+
+vampire_eyes = {
+	vampire_eyes = {
+		traits = { irish_vampire }
+		dna_modifiers = {
+			color = {
+				gene = eye_color
+				mode = modify
+					
+				x = -1.0
+				y = 0.0
+			}
+		}
+	}
+}

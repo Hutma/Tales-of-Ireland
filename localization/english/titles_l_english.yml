@@ -442,7 +442,7 @@
  b_kilbrean:0 "Kilbrean"
  b_cumeen:0 "Cumeen"
  b_muckross:0 "Muckross"
- b_beaufort:0 "Beaufort"
+ b_beaufort:0 "Droch Fhola"
  b_dunloe:0 "Dunloe"
  b_ranalough:0 "Ranalough"
  b_kilgobnet:0 "Kilgobnet"
@@ -5648,3 +5648,4 @@
  k_breifne:0"Bréifne"
  k_iarmuman:0"Iarmuman"
  k_airgialla:0"Airgíalla"
+ k_vampire_kingdom:0"Tir Neamh-Mairbh"

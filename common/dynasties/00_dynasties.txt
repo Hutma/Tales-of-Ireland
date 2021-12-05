@@ -1201,3 +1201,22 @@
 	name = "dynn_Heroes"
 	culture = "dal_riata"	
 }
+
+#Vampires
+217 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Bram"
+	culture = "ir_milesians"	
+}
+
+218 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Gceanna"
+	culture = "lughaid_milesians"	
+}
+
+219 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Sealgair"
+	culture = "ui_maine"	
+}

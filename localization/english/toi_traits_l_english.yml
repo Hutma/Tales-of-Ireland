@@ -136,3 +136,7 @@
  trait_outlaw:0 "Outlaw"
  trait_outlaw_desc:0 "This character has been declared Outlaw by the [high_king|E]."
  trait_outlaw_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been declared Outlaw by the [high_king|E]. Because of this any neighboring ruler can attack [ROOT.GetCharacter.GetGetHerHim] and conquer [ROOT.GetCharacter.GetGetHerHim] lands."
+ 
+ trait_irish_vampire: "Vampire"
+ trait_irish_vampire_desc: "This character is a Vampire, nearly unkillable and possessing unique magic so long as they consume the blood of others. Their unique tastes make them hated and feared by most. \n #italic Vampires can Take Blood from a courtier or prisoner to fulfill their need for blood#!"
+ trait_irish_vampire_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Vampire. Nearly unkillable and possessing unique magic so long as they consume the blood of others. Their unique tastes make them hated and feared by most. \n #italic Vampires can Take Blood from a courtier or prisoner to fulfill their need for blood#!"

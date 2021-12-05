@@ -529,3 +529,57 @@ burn_incense_requirements = {
 roman_astrology_requirements = {
 	always = yes
 }
+
+#Perk spells
+soul_transfer_requirements = {
+	always = yes
+}
+mass_influence_requirements = {
+	always = yes
+}
+word_of_peace_requirements = {
+	is_at_war_as_defender = yes
+}
+call_rage_requirements = {
+	custom_description = {
+		text = five_years_cooldown_spel
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				AND = {
+					is_independent_ruler = yes
+					NOT = {
+						has_character_flag = called_rage_recently
+					}
+				}
+			}
+		}
+	}
+}
+make_them_bow_requirements = {
+	always = yes
+}
+the_evil_army_requirements = {
+	custom_description = {
+		text = twenty_years_cooldown_spell
+		NOT = {
+			has_character_flag = called_evil_army_recently
+		}
+	}
+}
+cause_discorde_spell_requirements = {
+	custom_description = {
+		text = ten_years_before_targeting_again
+		OR = {
+			root = var:dummy_char_target
+			var:dummy_char_target = {
+				AND = {
+					is_independent_ruler = yes
+					NOT = {
+						has_character_flag = caused_discorde_recently
+					}
+				}
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@
 # History database id:540000
 bookmark_fall_of_milesians_rudraige={
 	type=male
-	id=392
+	id=398
 	age=0.180000
 	genes={ 		hair_color={ 203 108 203 108 }
  		skin_color={ 127 90 127 90 }
@@ -96,7 +96,7 @@ bookmark_fall_of_milesians_rudraige={
  		expression_other={ "cheek_wrinkles_both_01" 40 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_7" 159 "complexion_7" 159 }
  		gene_height={ "normal_height" 110 "normal_height" 110 }
- 		gene_bs_body_type={ "body_fat_head_fat_low" 133 "body_fat_head_fat_low" 147 }
+ 		gene_bs_body_type={ "body_fat_head_fat_low" 80 "body_fat_head_fat_low" 147 }
  		gene_bs_body_shape={ "body_shape_average_clothed" 255 "body_shape_triangle_half" 0 }
  		gene_bs_bust={ "bust_clothes" 93 "bust_shape_3_full" 93 }
  		gene_age={ "old_4" 202 "old_4" 202 }
@@ -109,13 +109,13 @@ bookmark_fall_of_milesians_rudraige={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 252 "normal_eyelashes" 252 }
  		pose={ "" 255 "" 0 }
- 		beards={ "no_beard" 10 "no_beard" 0 }
- 		cloaks={ "fp1_cloak" 55 "no_cloak" 0 }
+ 		beards={ "western_beards_straight" 55 "no_beard" 0 }
+ 		cloaks={ "fp1_cloak" 11 "no_cloak" 0 }
  		gene_bs_cloak={ "cloak" 255 "no_cloak" 0 }
- 		clothes={ "western_royalty_clothes" 183 "most_clothes" 0 }
- 		hairstyles={ "western_hairstyles_straight" 208 "all_hairstyles" 0 }
- 		headgear={ "western_high_nobility" 76 "no_headgear" 0 }
- 		legwear={ "western_common_legwear" 208 "all_legwear" 0 }
+ 		clothes={ "byzantine_high_nobility_clothes" 184 "most_clothes" 0 }
+ 		hairstyles={ "byzantine_hairstyles_straight" 104 "all_hairstyles" 0 }
+ 		headgear={ "western_high_nobility" 199 "no_headgear" 0 }
+ 		legwear={ "western_common_legwear" 55 "all_legwear" 0 }
  }
 	entity={ 3942081117 3942081117 }
 }

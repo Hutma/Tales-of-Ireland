@@ -154,3 +154,35 @@ summon_magical_army_scripted_effect = {
 		name = magic_soldiers_troops
 	}
 }
+
+the_evil_army_scripted_effect = {
+	spawn_army = {
+		levies = {
+			value = 100
+		}
+		men_at_arms = {
+			type = bloody_warriors
+			stacks = 2
+		}
+		men_at_arms = {
+			type = hy_brazylian_adventurers
+			stacks = 2
+		}
+		men_at_arms = {
+			type = wolf_pack
+			stacks = 2
+		}
+		men_at_arms = {
+			type = ram
+			stacks = 2
+		}
+		men_at_arms = {
+			type = house_guard
+			stacks = 2
+		}
+		uses_supply = no
+		inheritable = no
+		location = capital_province
+		name = evil_army_troops
+	}
+}

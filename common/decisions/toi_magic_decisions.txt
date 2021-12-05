@@ -37,6 +37,47 @@
 	}
 }
 
+practice_magical_powers_decision = {
+	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	
+	ai_check_interval = 36
+	
+	desc = practice_magical_powers_decision_desc
+
+	cooldown = { years = 5 }
+
+	is_shown = {
+		has_trait = magician_good
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		add_tales_of_magic_lifestyle_xp = 100
+		add_stress = 35
+	}
+
+	ai_potential = {
+		NOT = {
+			stress_level >= 1
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
 ai_magic = {
 	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
 	
@@ -65,6 +106,7 @@ ai_magic = {
 	}
 
 	effect = {
+		add_tales_of_magic_lifestyle_xp = 35
 		every_independent_ruler = {
 			limit = {
 				in_diplomatic_range = root
@@ -98,6 +140,18 @@ ai_magic = {
 				list = possible_targets
 				save_scope_as = ai_target
 			}
+			if = {
+				limit = {
+					NOT = { exists = scope:ai_target }
+				}
+				every_vassal = {
+					add_to_list = possible_targets
+				}
+				random_in_list = {
+					list = possible_targets
+					save_scope_as = ai_target
+				}
+			}
 		}
 		random_list = {
 			1 = {
@@ -129,7 +183,7 @@ ai_magic = {
 			}
 			1 = {
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -176,7 +230,7 @@ ai_magic = {
 					has_trait = cessarian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -235,7 +289,7 @@ ai_magic = {
 					has_trait = fomorian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -294,7 +348,7 @@ ai_magic = {
 					has_trait = tuatha_de_danann
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -368,7 +422,7 @@ ai_magic = {
 					has_trait = partholonian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -491,12 +545,6 @@ ai_magic = {
 			}
 			1 = {
 				trigger = {
-					has_trait = celtic_human
-				}
-				influence_culture_ai_effect = yes
-			}
-			1 = {
-				trigger = {
 					has_trait = hy_brazylian
 				}
 				two_worlds_ai_effect = yes
@@ -506,7 +554,7 @@ ai_magic = {
 					has_trait = hy_brazylian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -541,7 +589,7 @@ ai_magic = {
 					has_trait = hy_brazylian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {
@@ -576,7 +624,7 @@ ai_magic = {
 					has_trait = hy_brazylian
 				}
 				if = {
-					limit = NOT = { { scope:ai_target = { is_independent_ruler = yes } } }
+					limit = { NOT = { { scope:ai_target = { is_independent_ruler = yes } } } }
 					clear_saved_scope = ai_target
 					every_independent_ruler = {
 						limit = {

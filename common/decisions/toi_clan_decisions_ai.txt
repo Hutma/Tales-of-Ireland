@@ -113,10 +113,12 @@ ai_collect_clan_cattle_decision = {
 					is_independent_ruler = yes
 					NOT = { this = dynasty.dynast }
 				}
-				left_icon = root.dynasty.dynast
-				title = tooltip.clan.cattle_clan.target
-				capital_county = {
-					change_development_level = -3
+				send_interface_toast = {
+					left_icon = root.dynasty.dynast
+					title = tooltip.clan.cattle_clan.target
+					capital_county = {
+						change_development_level = -3
+					}
 				}
 			}
 			root = {

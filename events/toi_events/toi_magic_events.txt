@@ -151,3 +151,134 @@ toi_magic_event.0005 = {
 		summon_new_tribe_scripted_effect = yes
 	}
 }
+
+#Vampire or Wolfwalker perk event
+toi_magic_event.0006 = {
+	title = toi_magic_event.0006.t
+	desc = toi_magic_event.0006.desc
+	type = character_event
+	theme = witchcraft
+	
+	left_portrait = {
+		character = root
+		animation = personality_dishonorable
+	}
+	
+	option = { #wolf
+		name = toi_magic_event.0006.a
+		trigger = { 
+			NOT = {
+				OR = {
+					has_trait = wolfwalker
+					has_trait = irish_vampire
+				}
+			}
+		}
+		add_trait = wolfwalker
+		add_character_modifier = balanced_wolf
+	}
+	
+	option = { #vampire
+		trigger = { 
+			NOT = {
+				OR = {
+					has_trait = wolfwalker
+					has_trait = irish_vampire
+				}
+			}
+		}
+		name = toi_magic_event.0006.b
+		add_trait = irish_vampire
+	}
+	
+	option = { #no
+		trigger = { 
+			NOT = {
+				OR = {
+					has_trait = wolfwalker
+					has_trait = irish_vampire
+				}
+			}
+		}
+		name = toi_magic_event.0006.c
+	}
+	
+	option = {
+		trigger = { 
+			has_trait = wolfwalker
+		}
+		name = toi_magic_event.0006.d
+		add_prowess_skill = 1
+	}
+	
+	option = {
+		trigger = { 
+			has_trait = irish_vampire
+		}
+		name = toi_magic_event.0006.e
+		add_stress = -200
+		add_prowess_skill = 1
+	}
+}
+
+#Choose between 3 light spells event
+toi_magic_event.0007 = {
+	title = toi_magic_event.0007.t
+	desc = toi_magic_event.0007.desc
+	type = character_event
+	theme = witchcraft
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = { #transfer soul
+		name = toi_magic_event.0007.a
+		custom_tooltip = gain_transfer_soul_spell_tooltip
+		add_character_flag = has_soul_transfer_spell
+	}
+	
+	option = { #mass influence
+		name = toi_magic_event.0007.b
+		custom_tooltip = gain_mass_influence_spell_tooltip
+		add_character_flag = has_mass_influence_spell
+	}
+	
+	option = { #word of peace
+		name = toi_magic_event.0007.c
+		custom_tooltip = gain_word_of_peace_spell_tooltip
+		add_character_flag = has_word_of_peace_spell
+	}
+}
+
+#Choose between 3 dark spells event
+toi_magic_event.0008 = {
+	title = toi_magic_event.0008.t
+	desc = toi_magic_event.0008.desc
+	type = character_event
+	theme = witchcraft
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = { #transfer soul
+		name = toi_magic_event.0008.a
+		custom_tooltip = gain_call_rage_spell_tooltip
+		add_character_flag = has_call_rage_spell
+	}
+	
+	option = { #mass influence
+		name = toi_magic_event.0008.b
+		custom_tooltip = gain_make_them_bow_spell_tooltip
+		add_character_flag = has_make_them_bow_spell
+	}
+	
+	option = { #word of peace
+		name = toi_magic_event.0008.c
+		custom_tooltip = gain_the_evil_army_spell_tooltip
+		add_character_flag = has_the_evil_army_spell
+	}
+}

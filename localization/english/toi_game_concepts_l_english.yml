@@ -79,5 +79,8 @@
  game_concept_tales_of_abundance:0 "Tales of Abundance"
  game_concept_tales_of_abundance_desc:0 "Tales of Abundance is a lifestyle that doesn't have any focus. You will gain points in this lifestyle by having high diplomacy or stewardship skill, staying at peace, making your powerful vassals like you, owning many cattle, being pious, converting a county to your culture, marrying your children to prestigious pretenders, and holding feasts."
  
+ game_concept_tales_of_magic:0 "Tales of Magic"
+ game_concept_tales_of_magic_desc:0 "Tales of Magic is a lifestyle that doesn't have any focus. You will gain points in this lifestyle by having high learning or intrigue skill, casting a spell, taking learning or intrigue lifestyle focus, for the level of your magician trait or having the Wise Man trait."
+ 
  game_concept_clan:0 "Clan"
  game_concept_clan_desc:0 "A [clan|E] can be founded by a Dynasty Head and unlocks interactions between the members as well as different clan actions and casus belli. The Clan leader is the Dynasty Head and the Clan Rulers are the independent rulers of the dynasty. If a clan has less than 3 independent rulers, it is disolved."

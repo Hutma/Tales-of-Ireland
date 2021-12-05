@@ -123,6 +123,15 @@
  burn_incense_name: "Burn Insence"
  roman_astrology_name: "Roman Astrology"
  
+ #Perk spells
+ soul_transfer_name: "Soul Transfer"
+ mass_influence_name: "Mass Influence"
+ word_of_peace_name: "Word of Peace"
+ call_rage_name: "Unleash Rage"
+ make_them_bow_name: "Make Them Bow"
+ the_evil_army_name: "The Evil Army"
+ cause_discorde_spell_name: "Cause Discord"
+  
  ## Traits
  trait_magician_good:0 "Magical Characters"
  trait_magician_good_1:0 "Magician"
@@ -162,9 +171,13 @@
  UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC: "Every vassal with the [fir_bolg|E] trait gain #P 40#! opinion of you"
  THE_SPELL_IS_CAST_MESSAGE: "#P The spell is cast#!"
  LEARN_A_NEW_SPELL_EFFECT_DESC: "You learn a new spell"
+ CALL_RAGE_EFFECT_DESC: "#bold Every non ally neighbours of the target declares a conquest war on the target!#!"
+ TWO_RANDOM_VASSAL_DIE: "#N Two random vassals will die!#!"
+ CAUSE_DISCORDE_SPELL_DESC: "#bold All powerful vassals of the target attack the targer rulers!#!"
  
  #Armies
  magic_soldiers_troops: "Magical Troops"
+ evil_army_troops: "The Evil Army"
  
  #Interface toasts
  tooltip.magic.inflict_wounds.target: "You have been magically wounded!"
@@ -182,3 +195,5 @@
  tooltip.magic.magic_mist.target: "A magic mist is killing your people!"
  tooltip.magic.brasil_fog.target: "A fog is making your children sick!"
  tooltip.magic.summon_new_tribe.target: "A Tuatha magician has called an army from the Otherworld upon you!"
+ tooltip.magic.call_rage.target: "A dark magician is causing your neighbours to attack you!"
+ tooltip.magic.cause_discorde.target: "A dark magician is causing your vassals to rebel!"

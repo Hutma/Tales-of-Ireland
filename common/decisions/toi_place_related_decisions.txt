@@ -18,15 +18,13 @@
 		AND = {
 			has_title = title:c_dunseverick
 			NOT = {
-				has_character_flag = {
-					flag = giant_called
-				}
+				has_character_flag = giant_called
 			}
 		}
 	}
-
+	
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {
@@ -90,7 +88,7 @@ many_crowns_for_galway_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {
@@ -213,7 +211,7 @@ found_meath_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {

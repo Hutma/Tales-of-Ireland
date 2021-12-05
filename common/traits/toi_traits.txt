@@ -1851,6 +1851,10 @@ wolfwalker = {
 	index = 435
 	icon = wolfwalker.dds
 	
+	opposites = {
+		irish_vampire
+	}
+	
 	enemy_hard_casualty_modifier = 0.15
 	prowess = 8
 	levy_size = 0.5
@@ -1890,6 +1894,50 @@ outlaw = {
 				desc = trait_outlaw_desc
 			}
 			desc = trait_outlaw_character_desc
+		}
+	}
+}
+
+irish_vampire = {
+	index = 437
+	icon = vampire.dds
+	
+	opposites = {
+		wolfwalker
+	}
+	
+	independent_ruler_opinion = -25
+	vassal_opinion = -5
+	prowess = 10
+	men_at_arms_maintenance = 0.35
+	health = 50
+	dread_baseline_add = 30
+	dread_gain_mult = 0.25
+	fertility = -5
+	attraction_opinion = -10
+	general_opinion = -60
+	stress_gain_mult = -0.9
+	stress_loss_mult = -0.8
+	scheme_discovery_chance_mult = 2.0
+	enemy_personal_scheme_success_chance_add = -50
+	enemy_hostile_scheme_success_chance_add = -500
+	immortal = yes
+	no_prowess_loss_from_age = yes
+	negate_health_penalty_add = 50
+	
+	flag = lower_chance_of_dying_in_combat
+	
+	ruler_designer_cost = 50
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_irish_vampire_desc
+			}
+			desc = trait_irish_vampire_character_desc
 		}
 	}
 }

@@ -264,6 +264,28 @@ roman_astrology_usage = {
 	value = 1
 }
 
+#Perks spells
+soul_transfer_usage = {
+	value = 1
+}
+mass_influence_usage = {
+	value = 4
+}
+word_of_peace_usage = {
+	value = 4
+}
+call_rage_usage = {
+	value = 5
+}
+make_them_bow_usage = {
+	value = 4
+}
+the_evil_army_usage = {
+	value = 5
+}
+cause_discorde_spell_usage = {
+	value = 5
+}
 
 
 _usage = { # Needs to exist but shouldn't do anything

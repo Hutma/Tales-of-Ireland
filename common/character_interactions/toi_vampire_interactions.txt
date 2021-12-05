@@ -1,0 +1,79 @@
+﻿take_blood_interaction = {
+	category = interaction_category_hostile
+
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+
+	desc = take_blood_interaction_desc
+	
+	icon = vampire_interaction
+	
+	is_shown = {
+		scope:actor = {
+			has_trait = irish_vampire
+		}
+		NOT = { scope:recipient = scope:actor }
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_imprisoned_by = scope:actor
+				is_foreign_court_or_pool_guest_of = scope:actor
+			}
+		}
+	}
+
+	is_valid = {
+		scope:recipient = {
+			NOT = {	has_character_modifier = gave_blood_recently }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_available_adult = yes
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_character_modifier = {
+				modifier = had_blood_recently
+				years = 2
+			}
+		}
+		scope:recipient = {
+			send_interface_toast = {
+				left_icon = scope:actor
+				title = tooltip.vampire.take_blood.target
+				add_character_modifier = {
+					modifier = gave_blood_recently
+					years = 1
+				}
+				add_opinion = {
+					modifier = scared_opinion
+					opinion = -40
+					target = scope:actor
+				}
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = courtiers
+		max = 20
+	}
+	
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 24
+
+	ai_will_do = {
+		base = 100
+	}
+}

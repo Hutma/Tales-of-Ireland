@@ -129,6 +129,19 @@ game_rule.1001 = { #by Mathilda Bjarnehed
 		NOR = {
 			has_government = republic_government
 			has_government = theocracy_government
+			#TALES OF IRELAND VAMPIRE NO FAMILY
+			AND = {
+				exists = character:280009
+				this = character:280009
+			}
+			AND = {
+				exists = character:280010
+				this = character:280010
+			}
+			AND = {
+				exists = character:280011
+				this = character:280011
+			}
 		}
 	}
 

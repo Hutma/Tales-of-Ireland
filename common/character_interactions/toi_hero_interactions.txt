@@ -8,12 +8,13 @@
 	desc = send_to_hero_interaction_desc
 
 	is_shown = {
-		scope:recipient = {
-			is_in_the_same_court_as = scope:actor
-		}
-		scope:recipient = {
-			is_child_of = scope:actor
-		}
+		always = no
+		# scope:recipient = {
+			# is_in_the_same_court_as = scope:actor
+		# }
+		# scope:recipient = {
+			# is_child_of = scope:actor
+		# }
 	}
 
 	is_valid_showing_failures_only = {

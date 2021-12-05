@@ -173,3 +173,104 @@ bm_manxs_fate = {
 		animation = personality_vengeful
 	}
 }
+
+bm_tales_of_magic = {
+	start_date = 4800.1.1
+	is_playable = yes
+	character = {
+		name = "bookmark_tales_of_magic_nuada"
+		dynasty = 202
+		dynasty_splendor_level = 4
+		type = male
+		history_id = 1000000
+		birth = 4782.1.1
+		title = k_londonderry
+		government = feudal_government
+		culture = de_danann
+		religion = sidhe_beliefs
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 750 150 }
+
+		animation = personality_bold
+	}
+	character = {
+		name = "bookmark_tales_of_magic_abhartach"
+		dynasty = 217
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 280009
+		birth = 4592.1.1
+		title = c_finvoy
+		government = feudal_government
+		culture = ir_milesians
+		religion = milesian_paganism
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1200 150 }
+
+		animation = personality_callous
+	}
+	character = {
+		name = "bookmark_tales_of_magic_droch_fhuil"
+		dynasty = 218
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 280010
+		birth = 4703.1.1
+		title = c_beaufort
+		government = feudal_government
+		culture = lughaid_milesians
+		religion = milesian_paganism
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 250 750 }
+
+		animation = personality_vengeful
+	}
+	character = {
+		name = "bookmark_tales_of_magic_liam"
+		dynasty = 198
+		dynasty_splendor_level = 3
+		type = male
+		history_id = 930007
+		birth = 4781.1.1
+		title = d_galmoy
+		government = feudal_government
+		culture = osraighe
+		religion = sea_dwellers
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 1000 800 }
+
+		animation = personality_honorable
+	}
+	character = {
+		name = "bookmark_tales_of_magic_aaron"
+		dynasty = 131
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 640001
+		birth = 4774.1.1
+		title = d_newry
+		government = feudal_government
+		culture = dal_fiatach
+		religion = the_old_gods
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1000 400 }
+
+		animation = personality_rational
+	}
+	character = {
+		name = "bookmark_tales_of_magic_fearn"
+		dynasty = 96
+		dynasty_splendor_level = 3
+		type = male
+		history_id = 800002
+		birth = 4780.1.1
+		title = d_athenry
+		government = feudal_government
+		culture = newgrange_builders
+		religion = fomorian_worship
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 425 425 }
+
+		animation = personality_zealous
+	}
+}

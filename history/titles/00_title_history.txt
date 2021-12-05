@@ -1186,7 +1186,8 @@ c_killarney = {
 c_beaufort = {
               1.1.1 = { change_development_level = 8 }
               4799.1.1 = {
-                            holder = 200001
+							liege = d_killarney
+                            holder = 280010
               }
 }
 
@@ -1194,7 +1195,8 @@ c_beaufort = {
 c_kilgobnet = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 200001
+							liege = d_killarney
+                            holder = 280010
               }
 }
 
@@ -4225,7 +4227,8 @@ d_athlone = {
 c_athlone = {
               1.1.1 = { change_development_level = 11 }
               4799.1.1 = {
-                            holder = 670006
+							liege = d_moycarn
+                            holder = 280011
               }
 }
 
@@ -4249,7 +4252,8 @@ c_ballydangan = {
 c_purts = {
               1.1.1 = { change_development_level = 14 }
               4799.1.1 = {
-                            holder = 670006
+							liege = d_moycarn
+                            holder = 280011
               }
 }
 
@@ -7383,7 +7387,8 @@ c_cloughmills = {
 c_finvoy = {
               1.1.1 = { change_development_level = 15 }
               4799.1.1 = {
-                            holder = 610003
+                            holder = 280009
+							liege = d_kilconway
               }
 }
 

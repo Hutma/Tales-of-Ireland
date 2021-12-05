@@ -101,7 +101,9 @@ as_wise_as_the_sidhe_perk = {
 	effect = {
 		custom_description = {
 			text = learn_a_unique_spell_effect_desc
-			as_wise_as_the_sidhe_learn_spell_effect = yes
+			trigger_event = {
+				id = toi_magic_event.0007
+			}
 		}
 	}
 }

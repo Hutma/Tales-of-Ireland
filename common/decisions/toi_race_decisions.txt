@@ -43,7 +43,7 @@
 
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
-		is_at_war = no		
+		is_at_war = no
 	}
 
 	cost = {

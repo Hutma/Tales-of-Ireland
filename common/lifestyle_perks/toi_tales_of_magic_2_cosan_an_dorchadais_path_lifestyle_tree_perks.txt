@@ -54,7 +54,7 @@ cause_discorde_perk = {
 	effect = {
 		custom_description_no_bullet = {
 			text = cause_discorde_perk_desc
-			
+			add_character_flag = has_cause_discorde_spell
 		}
 	}
 }
@@ -70,6 +70,9 @@ shadow_blood_perk = {
 	effect = {
 		custom_description_no_bullet = {
 			text = shadow_blood_perk_desc
+			trigger_event = {
+				id = toi_magic_event.0006
+			}
 		}
 	}
 }
@@ -86,6 +89,9 @@ as_cruel_as_balor_perk = {
 	effect = {
 		custom_description_no_bullet = {
 			text = learn_a_unique_spell_effect_desc
+			trigger_event = {
+				id = toi_magic_event.0008
+			}
 		}
 	}
 }

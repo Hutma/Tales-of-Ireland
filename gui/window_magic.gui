@@ -406,7 +406,7 @@
                         item = {
                             widget = {
                                 datacontext = "[Scope.GetCharacter]"
-                                visible = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(Scope.GetCharacter.MakeScope).AddScope('main_player',GetPlayer.MakeScope).End)]"
+                                #visible = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(Scope.GetCharacter.MakeScope).AddScope('main_player',GetPlayer.MakeScope).End)]"
                                 block "size" {
                                     size = { 300 90 }
                                 }

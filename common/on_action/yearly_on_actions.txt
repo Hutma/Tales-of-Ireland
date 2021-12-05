@@ -337,8 +337,8 @@ random_yearly_playable_pulse = {
 		4 = fp1_yearly_events
 	}
 	on_actions = {
-		delay = { days = { 50 120 } }
 		on_toi_lifestyles_yearly
+		on_toi_magic_lifestyle_yearly
 		delay = { days = { 25 85 } }
 		on_cattle_system
 		delay = { days = { 45 75 } }

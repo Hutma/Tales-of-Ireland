@@ -1,0 +1,45 @@
+﻿five_year_playable_pulse = {
+	on_actions = {
+		give_vampire_immortal_age
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = {
+		give_vampire_stress
+	}
+}
+
+give_vampire_immortal_age = {
+	trigger = {
+		has_trait = irish_vampire
+		age > 18
+	}
+	effect = {
+		set_immortal_age = age
+	}
+}
+
+give_vampire_stress = {
+	trigger = {
+		has_trait = irish_vampire
+		age > 18
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_character_modifier = massive_blood_received
+						has_character_modifier = had_blood_recently
+					}
+				}
+			}
+		}
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.vampire.need_blood
+			add_stress = 300
+		}
+	} 
+}

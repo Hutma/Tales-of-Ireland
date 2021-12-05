@@ -19778,20 +19778,25 @@
 ##            Finvoy (c_finvoy)
 
 3042 = {      #Finvoy (b_finvoy)
-              culture = dal_riata
-              religion = celtic_de_danann_worship
-              holding = castle_holding
+	culture = dal_riata
+	religion = milesian_paganism
+	holding = castle_holding
+	2500.1.1 = {
+		buildings = {
+			castle_02
+		}
+	}
 }
 
 3043 = {      #Killymaddy (b_killymaddy)
               culture = dal_riata
-              religion = celtic_de_danann_worship
+              religion = milesian_paganism
               holding = church_holding
 }
 
 3044 = {      #Mullans (b_mullans)
               culture = dal_riata
-              religion = celtic_de_danann_worship
+              religion = milesian_paganism
               holding = none
 }
 
