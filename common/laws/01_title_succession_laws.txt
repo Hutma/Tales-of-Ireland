@@ -4,6 +4,10 @@
 		can_have = {
 			has_government = feudal_government
 			highest_held_title_tier >= tier_duchy
+			NOR = { #Cultures have their special flavor.
+				culture = { has_cultural_parameter = witenagemot_succession_enabled }
+				culture = { has_cultural_parameter = scandinavian_elective_enabled }
+			}
 		}
 		can_pass = {
 			can_change_title_law_trigger = yes
@@ -21,7 +25,7 @@
 			prestige = change_title_succession_law_prestige_cost
 		}
 		pass_cost = {
-			prestige = change_title_succession_law_prestige_cost
+			prestige = 15000
 		}
 	}
 
@@ -42,6 +46,60 @@
 		succession = {
 			order_of_succession = election
 			election_type = high_king_elective
+		}
+		flag = elective_succession_law
+		title_allegiance_opinion = 10
+		modifier = {
+			vassal_limit = 10
+		}
+		revoke_cost = {
+			prestige = 50000
+		}
+	}
+	#Seelie court
+	seelie_elective_succession_law = {
+		can_have = {
+			OR = {
+				highest_held_title_tier = tier_empire
+				highest_held_title_tier = tier_kingdom
+			}
+		}
+		can_pass = {
+			always = no
+		}
+		can_title_have = {
+			this = title:k_seelie_court
+		}
+		succession = {
+			order_of_succession = election
+			election_type = seelie_elective
+		}
+		flag = elective_succession_law
+		title_allegiance_opinion = 10
+		modifier = {
+			vassal_limit = 10
+		}
+		revoke_cost = {
+			prestige = 50000
+		}
+	}
+	#Unseelie court
+	unseelie_elective_succession_law = {
+		can_have = {
+			OR = {
+				highest_held_title_tier = tier_empire
+				highest_held_title_tier = tier_kingdom
+			}
+		}
+		can_pass = {
+			always = no
+		}
+		can_title_have = {
+			this = title:k_unseelie_court
+		}
+		succession = {
+			order_of_succession = election
+			election_type = unseelie_elective
 		}
 		flag = elective_succession_law
 		title_allegiance_opinion = 10

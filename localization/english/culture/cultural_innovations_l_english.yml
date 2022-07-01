@@ -7,7 +7,7 @@
  multiple_claim_wars_others:0 "Can press multiple [claims|E] for another character in a single war"
  fabricate_claim_speed:0 ""Fabricate Claim on County" [councillor_task|E] Speed: #P +50%#!"
  promote_culture_speed:0 ""Promote Culture" [councillor_task|E] Speed: #P +15%#!"
- same_culture_group_reduced_factionalism:0 "[vassals|E] of your [culture_group|E] are less likely to join [independence_factions|E]"
+ same_culture_group_reduced_factionalism:1 "[vassals|E] whose [culture|E] has a shared [heritage|E] with yours are less likely to join [independence_factions|E]"
  reduce_develop_county_penalty_01:0 "Counties now reach the maximum [existing_development|E] penalty at 20 [development|E]"
  reduce_develop_county_penalty_02:0 "Counties now reach the maximum [existing_development|E] penalty at 35 [development|E]"
  reduce_develop_county_penalty_03:0 "Counties now reach the maximum [existing_development|E] penalty at 55 [development|E]"

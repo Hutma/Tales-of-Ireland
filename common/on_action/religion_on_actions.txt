@@ -6,16 +6,34 @@
 on_faith_created = {
 	effect = {
 		scope:old_faith = {
+			if = {
+				limit = { has_doctrine_parameter = unreformed }
 				set_variable = { name = has_been_reformed }
 			}
 		
 			root = { play_music_cue = "mx_cue_faith_conversion" }
 		}
-		set_variable = { name = has_created_a_faith }
-		check_for_equal_doctrine_effect = yes
-		root = {
-			add_achievement_flag = { FLAG = achievement_its_not_a_cult_flag }
+		set_variable = {
+			name = has_created_a_faith
 		}
+		# Set original faith this one was based on
+		if = {
+			limit = {
+				exists = scope:old_faith.founder
+				scope:old_faith.founder = { has_variable = foundational_faith }
+			}
+			set_variable = {
+				name = foundational_faith
+				value = scope:old_faith.founder.var:foundational_faith
+			}
+		}
+		else = {
+			set_variable = {
+				name = foundational_faith
+				value = scope:old_faith
+			}
+		}
+		check_for_equal_doctrine_effect = yes
 	}
 
 	events = {
@@ -35,6 +53,8 @@ on_faith_conversion = {
 	events = {
 		faith_conversion.0001	# Convert capital county
 		faith_conversion.0003	# Convert close family
+		faith_conversion.1002	# Player-only narrative-notification event
+		faith_conversion.1101   # Notify vassals of conversion
 	}
 }
 
@@ -44,6 +64,80 @@ on_faith_conversion = {
 on_character_faith_change = {
 	effect = {
 		check_for_equal_doctrine_effect = yes
+		every_held_title = {
+			update_dynamic_coa = yes
+		}
+
+		# Struggle Catalyst: heir changes culture while under age
+		if = {
+			limit = {
+				catalyst_very_important_child_change_culture_or_faith_preliminary_trigger = yes
+			}
+			random_parent = {
+				limit = {
+					any_character_struggle = {
+						involvement = involved
+					}
+				}
+				every_character_struggle = {
+					involvement = involved
+					activate_struggle_catalyst = {
+						catalyst = catalyst_very_important_child_change_culture_or_faith
+						character = root
+					}
+				}
+			}
+		}
+
+		# Local conversion
+		if = {
+			limit = {
+				exists = root.capital_province
+				root.capital_province.faith = root.faith
+				any_character_struggle = {
+					involvement = involved
+					phase_has_catalyst = catalyst_convert_local_culture_faith
+					is_faith_involved_in_struggle = root.faith
+				}
+			}
+			every_character_struggle = {
+				involvement = involved
+				activate_struggle_catalyst = {
+					catalyst = catalyst_convert_local_culture_faith
+					character = root
+				}
+			}
+		}
+		else_if = { # Forced conversion
+			limit = {
+				any_character_struggle = {
+					involvement = involved
+					is_faith_involved_in_struggle = root.faith
+					phase_has_catalyst = catalyst_forced_conversion
+				}
+			}
+			every_character_struggle = {
+				involvement = involved
+				activate_struggle_catalyst = {
+					catalyst = catalyst_forced_conversion
+					character = root
+				}
+			}
+		}
+
+
+		# Achievements
+		if = {
+			limit = { is_ai = no }
+
+			if = { # FP2 - Basque In My Glory
+				limit = { faith = faith:basque_pagan }
+				add_achievement_global_variable_effect = {
+					VARIABLE = fp2_basque_in_my_glory_achievement_unlocked
+					VALUE = yes
+				}
+			}
+		}
 	}
 	events = {
 		faith_conversion.0002 # Remove obsolete modifiers
@@ -109,7 +203,8 @@ faith_holy_order_land_acquisition_pulse = {
 faith_heresy_events_pulse = {
 	trigger = {
 		fervor <= 40
-		NOT = {
+		NOR = {
+			has_doctrine = unreformed_faith_doctrine
 			has_variable = current_heresy
 		}
 	}
@@ -131,13 +226,15 @@ faith_heresy_events_pulse = {
 			}
 		}
 		100 = heresy.0001
-		100 = heresy.0005
+		# 100 = heresy.0005
+		10 = 0
 	}
 }
 
 faith_fervor_events_pulse = {
 	trigger = {
-		NOT = {
+		NOR = {
+			has_doctrine = unreformed_faith_doctrine
 			has_variable = recent_fervor_event
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿800000 = {
-    name = "Beith "
+    name = "Beith"
     dynasty =  94 
     religion = fomorian_worship
     culture = newgrange_builders
@@ -61,10 +61,11 @@
     prowess =  7 
 
     trait = education_learning_4
-    trait = fickle
+    trait = cynical
     trait = arrogant
     trait = diligent
     trait = megalith_human
+	trait = magician_good_2
 
     disallow_random_traits = yes
     4780.1.1 = {
@@ -259,6 +260,7 @@
     trait = honest
     trait = trusting
     trait = megalith_human
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4768.1.1 = {
@@ -351,6 +353,7 @@
     learning =  6 
     prowess =  3 
     trait = calm
+    trait = charming
     trait = megalith_human
 
     disallow_random_traits = yes
@@ -481,7 +484,7 @@
     }
 }
 850004 = {
-    name = "Ebad "
+    name = "Ebad"
     dynasty =  98 
     religion = newgrange_faith
     culture = bell_beakers
@@ -517,7 +520,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_1 
+    trait = education_stewardship_1
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -602,7 +605,7 @@
     }
 }
 850009 = {
-    name = "Ifín"
+    name = "IfI_n"
     dynasty =  94 
     religion = megalithic_de_danann_worship
     culture = bell_beakers
@@ -626,7 +629,7 @@
     }
 }
 850010 = {
-    name = "Straiph "
+    name = "Straiph"
     dynasty =  96 
     religion = megalithic_de_danann_worship
     culture = bell_beakers
@@ -643,6 +646,7 @@
     trait = lazy
     trait = arrogant
     trait = megalith_human
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4764.1.1 = {
@@ -650,7 +654,7 @@
     }
 }
 850011 = {
-    name = "Gort "
+    name = "Gort"
     dynasty =  99 
     religion = newgrange_faith
     culture = bell_beakers

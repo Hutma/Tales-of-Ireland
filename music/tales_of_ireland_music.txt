@@ -1,88 +1,78 @@
 ﻿####Music TALES OF IRELAND####
 Castle_in_the_Sky = {
 	music = "file:/music/Vindsvept/Castle_in_the_Sky.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
-	
+	can_be_interrupted = yes	
 }
 
 Into_Silence_two = {
 	music = "file:/music/Vindsvept/Into_Silence_two.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Into_the_Unknown = {
 	music = "file:/music/Vindsvept/Into_the_Unknown.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Keeper_of_the_Forest = {
 	music = "file:/music/Vindsvept/Keeper_of_the_Forest.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Leaving_the_Dream = {
 	music = "file:/music/Vindsvept/Leaving_the_Dream.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Night_of_the_Fae = {
 	music = "file:/music/Vindsvept/Night_of_the_Fae.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Nightfall = {
 	music = "file:/music/Vindsvept/Nightfall.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Riversong = {
 	music = "file:/music/Vindsvept/Riversong.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Spirit_Bond = {
 	music = "file:/music/Vindsvept/Spirit_Bond.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 The_Story_So_Far = {
 	music = "file:/music/Vindsvept/The_Story_So_Far.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
 	
@@ -90,80 +80,102 @@ The_Story_So_Far = {
 
 Windsong_Cavern = {
 	music = "file:/music/Vindsvept/Windsong_Cavern.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 A_World_Unbound = {
 	music = "file:/music/Vindsvept/A_World_Unbound.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Frozen_in_Time = {
 	music = "file:/music/Vindsvept/Frozen_in_Time.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Heart_of_Thunder = {
 	music = "file:/music/Vindsvept/Heart_of_Thunder.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Hideaway = {
 	music = "file:/music/Vindsvept/Hideaway.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Through_The_Fog = {
 	music = "file:/music/Vindsvept/Through_The_Fog.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Voyage_to_Nowhere = {
 	music = "file:/music/Vindsvept/Voyage_to_Nowhere.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
 	can_be_interrupted = yes 
-	is_prioritized_mood = yes
 	
 }
 
 Wanderer = {
 	music = "file:/music/Vindsvept/Wanderer.mp3"
-	weight = 15
+	pause_factor = 15
 	mood = yes
-	can_be_interrupted = yes 
-	is_prioritized_mood = yes
+	can_be_interrupted = yes
 	
+}
+
+As_we_March = {
+	music = "file:/music/Vindsvept/As_we_March.mp3"
+	pause_factor = 15
+	mood = yes
+	can_be_interrupted = yes
+	
+}
+
+Veiled_in_Light = {
+	music = "file:/music/Vindsvept/Veiled_in_Light.mp3"
+	pause_factor = 15
+	mood = yes
+	can_be_interrupted = yes
+	
+}
+
+tales_of_ireland_main_theme = {
+	music = "file:/music/toi_opening_theme.mp3"
+	pause_factor = 15
+	mood = yes
+	can_be_interrupted = yes
+	
+}
+
+mx_cue_uniting_ireland = {
+	music = "file:/music/mx_cue_uniting_ireland.mp3"
+	pause_factor = 25
+	# play every time
 }
 
 ###FIR BOLGS
 Tales_of_Ireland_fir_bolg_one = {
 	music = "file:/music/Tales_of_Ireland_fir_bolg_one.mp3"
-	weight = 20
+	pause_factor = 20
 	mood = yes
 	can_be_interrupted = yes 
 	is_prioritized_mood = yes
@@ -171,10 +183,21 @@ Tales_of_Ireland_fir_bolg_one = {
 	is_valid = {
 		OR = {
 			has_trait = fir_bolg
-			culture_group = culture_group:toi_fir_bolg_group
+			culture = { has_cultural_pillar = heritage_fir_bolg }
 			faith = faith:ancient_greek_slave
 		}
 	}
 }
 
+mx_cue_magic = {
+	music = "file:/music/mx_cue_magic.mp3"
+	pause_factor = 25
+	# play every time
+}
+
+mx_cue_clan_founding = {
+	music = "file:/music/clan_founding_music.mp3"
+	pause_factor = 25
+	# play every time
+}
 ###end TALES OF IRELAND mod ###

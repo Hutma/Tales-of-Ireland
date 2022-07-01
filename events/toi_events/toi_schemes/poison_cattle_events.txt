@@ -8,18 +8,18 @@ poison_cattle_outcome.0001 = {
 	desc = poison_cattle_outcome.0001.desc
 	theme = diplomacy_foreign_affairs_focus
 
-	left_portrait = {
+	right_portrait = {
 		character = root
 		animation = scheme
 	}
 	left_portrait = {
-		character = scope:target
+		character = scope:plot_target
 		animation = personality_irrational
 	}
 
 	option = { #poison
 		name = poison_cattle_outcome.0001.a
-		scope:target = {
+		scope:plot_target = {
 			capital_county = {
 				set_variable = {
 					name = cattle_number
@@ -37,7 +37,7 @@ poison_cattle_outcome.0001 = {
 			}
 		}
 		
-		scope:target = {
+		scope:plot_target = {
 			trigger_event = {
 				id = poison_cattle_outcome.0002
 				days = 1

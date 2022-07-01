@@ -301,6 +301,9 @@ bastard_real_father_suspicion_chance_effect = {
 		#Build a list of potential fathers
 		every_in_list = {
 			variable = potential_father_variable_list
+			limit = {
+				NOT = {	is_consort_of = scope:mother }	
+			}
 			add_to_list = potential_fathers
 		}
 		clear_variable_list = potential_father_variable_list #Remove list when unnecessary
@@ -385,16 +388,38 @@ bastard_real_father_suspicion_chance_effect = {
 						}
 					}
 				}
-				trigger_event = {
-					id = pregnancy.3001
-					days = { 5 20 }
+				if = {
+					limit = {
+						scope:mother = {
+							exists = var:event_triggered
+						}
+					}
+					trigger_event = {
+						id = pregnancy.3001
+						days = { 5 20 }
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = {
+							scope:mother = {
+								exists = var:event_triggered
+							}
+						}
+					}
+					scope:mother = {
+						set_variable = {
+							name = event_triggered 
+							value = yes
+							days = 365
+						}
+					}
 				}
 			}
 		}
 	}
 }
-
-
 
 bastard_pregnancy_mother_announcement_effect = {
 	hidden_effect = {
@@ -906,6 +931,30 @@ legitimize_bastard_interaction_opinions_effect = {
 			}
 		}
 	}
+	# Reveal secret if you are the father
+	if = {
+		limit = {
+			any_secret = {
+				secret_type = secret_unmarried_illegitimate_child
+				secret_target = {
+					real_father = {
+						this = scope:actor
+					}
+				}
+			}
+		}
+		random_secret = {
+			limit = {
+				secret_type = secret_unmarried_illegitimate_child
+				secret_target = {
+					real_father = {
+						this = root
+					}
+				}
+			}
+			expose_secret = scope:actor
+		}
+	}
 
 	$BASTARD$ = {
 		hidden_effect = { remove_trait = bastard }
@@ -1138,4 +1187,40 @@ bastard_to_wild_oat_conversion_interaction_effect = {
 		remove_trait = bastard
 		add_trait_force_tooltip = wild_oat
 	}
+}
+
+bastard_to_wild_oat_conversion_assimilation_effect = {
+	if = { #If you're a bastard and your new faith says they don't exist! 
+		limit = {
+			has_trait = bastard
+			scope:new_faith = { has_doctrine_parameter = bastards_none }
+			trigger_if = { #If you have a highborn parent, then you have to have their dynasty and their faith has to say no to bastards as well! Otherwise we might mess up too many successions... 
+				limit = {
+					any_parent = {
+						exists = dynasty
+					}
+				}
+				exists = dynasty
+				any_parent = {
+					dynasty = prev.dynasty
+					faith = { has_doctrine_parameter = bastards_none }
+				}
+			}
+		}
+		remove_trait = bastard
+		add_trait_force_tooltip = wild_oat
+	}
+}
+
+remove_inherited_descendent_traits_effect = {
+	# if = {
+		# limit = {
+			# has_trait = sayyid
+			# exists = scope:real_father
+			# NOT = {
+				# scope:real_father = { has_trait = sayyid }
+			# }
+		# }
+		# remove_trait = sayyid
+	# }
 }

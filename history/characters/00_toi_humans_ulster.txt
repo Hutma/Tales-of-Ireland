@@ -25,7 +25,7 @@
 610001 = {
     name = "Inne"
     dynasty =  117 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_riata
     female = yes
 
@@ -50,7 +50,7 @@
 610002 = {
     name = "Finnsnechtae"
     dynasty =  118 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_riata
 
     diplomacy =  10 
@@ -61,19 +61,19 @@
     prowess =  7 
     trait = fickle
     trait = arrogant
-    trait = diligent
+    trait = charming
     trait = celtic_human
 
     disallow_random_traits = yes
     4788.1.1 = {
         birth = yes
-        add_pressed_claim = k_antrim
+        add_pressed_claim = title:k_antrim
     }
 }
 610003 = {
     name = "Imchad"
     dynasty =  116 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_riata
 
     diplomacy =  1 
@@ -97,7 +97,7 @@
 610004 = {
     name = "Drust"
     dynasty =  119 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_riata
 
     diplomacy =  4 
@@ -217,7 +217,7 @@
 620004 = {
     name = "Emer"
     dynasty =  122 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_naraide
     female = yes
 
@@ -242,7 +242,7 @@
 620005 = {
     name = "Sogan"
     dynasty =  123 
-    religion = celtic_de_danann_worship
+    religion = the_old_gods
     culture = dal_naraide
 
     diplomacy =  9 
@@ -376,7 +376,7 @@
     prowess =  8 
     trait = chaste
     trait = brave
-    trait = stubborn
+    trait = charming
     trait = celtic_human
 
     disallow_random_traits = yes
@@ -408,7 +408,7 @@
     disallow_random_traits = yes
     4765.1.1 = {
         birth = yes
-        add_pressed_claim = d_iveagh
+        add_pressed_claim = title:d_iveagh
     }
 }
 630006 = {
@@ -484,7 +484,7 @@
     disallow_random_traits = yes
     4764.1.1 = {
         birth = yes
-        add_pressed_claim = d_iveagh
+        add_pressed_claim = title:d_iveagh
     }
 }
 630009 = {
@@ -524,7 +524,7 @@
     learning =  2 
     prowess =  7 
 
-    trait = education_stewardship_2 
+    trait = education_stewardship_2
     trait = callous
     trait = gluttonous
     trait = arbitrary
@@ -562,7 +562,7 @@
     disallow_random_traits = yes
     4773.1.1 = {
         birth = yes
-        add_pressed_claim = d_newry
+        add_pressed_claim = title:d_newry
     }
 }
 640001 = {
@@ -583,14 +583,15 @@
     trait = shy
     trait = compassionate
     trait = celtic_human
+	trait = magician_good_3
 
     father=  641000 
 
     disallow_random_traits = yes
     4774.1.1 = {
         birth = yes
-        add_pressed_claim = d_fews
-        add_pressed_claim = d_orior
+        add_pressed_claim = title:d_fews
+        add_pressed_claim = title:d_orior
     }
 }
 640002 = {
@@ -618,9 +619,9 @@
     disallow_random_traits = yes
     4775.1.1 = {
         birth = yes
-        add_pressed_claim = d_newry
-        add_pressed_claim = d_fews
-        add_pressed_claim = d_orior
+        add_pressed_claim = title:d_newry
+        add_pressed_claim = title:d_fews
+        add_pressed_claim = title:d_orior
     }
 }
 640003 = {
@@ -647,9 +648,9 @@
     disallow_random_traits = yes
     4777.1.1 = {
         birth = yes
-        add_pressed_claim = d_newry
-        add_pressed_claim = d_fews
-        add_pressed_claim = d_orior
+        add_pressed_claim = title:d_newry
+        add_pressed_claim = title:d_fews
+        add_pressed_claim = title:d_orior
     }
 }
 640004 = {
@@ -968,7 +969,7 @@
     learning =  12 
     prowess =  7 
 
-    trait = education_stewardship_2 
+    trait = education_stewardship_2
     trait = fickle
     trait = gluttonous
     trait = forgiving
@@ -1117,6 +1118,7 @@
     trait = temperate
     trait = craven
     trait = celtic_human
+	trait = magician_good_2
 
     disallow_random_traits = yes
     4774.1.1 = {
@@ -1338,7 +1340,7 @@
     disallow_random_traits = yes
     4771.1.1 = {
         birth = yes
-        add_pressed_claim = k_fermanagh
+        add_pressed_claim = title:k_fermanagh
     }
 }
 650018 = {
@@ -1388,7 +1390,7 @@
     disallow_random_traits = yes
     4749.1.1 = {
         birth = yes
-        add_pressed_claim = k_fermanagh
+        add_pressed_claim = title:k_fermanagh
     }
 }
 650020 = {
@@ -1404,7 +1406,7 @@
     learning =  1 
     prowess =  5 
 
-    trait = education_stewardship_2 
+    trait = education_stewardship_2
     trait = humble
     trait = arbitrary
     trait = generous

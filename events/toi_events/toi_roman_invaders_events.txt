@@ -179,3 +179,89 @@ toi_roman_invasion.0005 = {
 		name = toi_roman_invasion.0005.a
 	}
 }
+
+#roman alba hidden triggers
+toi_roman_invasion.2001 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes 
+			}
+			trigger_event = {
+				id = toi_roman_invasion.0201
+				days = 1
+			}
+		}
+		trigger_event = {
+			id = toi_roman_invasion.2002
+			days = { 25 1256 }
+		}
+	}
+}
+
+#roman alba first event
+toi_roman_invasion.0201 = {
+		title = toi_roman_invasion.0201.t
+	desc = toi_roman_invasion.0201.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = { #Alba is prepared
+			trigger = {
+				capital_county.title_province = { geographical_region = region_scotland }
+			}
+			text = toi_roman_invasion.0201.ascot
+		}
+		name = { #Ireland is wary
+			trigger = {
+				capital_county.title_province = { geographical_region = ireland_region }
+			}
+			text = toi_roman_invasion.0201.aire
+		}
+	}
+}
+
+#roman alba hidden triggers second
+toi_roman_invasion.2002 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes 
+			}
+			trigger_event = {
+				id = toi_roman_invasion.0202
+				days = 1
+			}
+		}
+		roman_invasion_alba_scripted_effect = yes
+	}
+}
+
+#roman alba last event
+toi_roman_invasion.0202 = {
+		title = toi_roman_invasion.0202.t
+	desc = toi_roman_invasion.0202.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = toi_roman_invasion.0202.a
+	}
+}

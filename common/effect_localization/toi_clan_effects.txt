@@ -1,0 +1,59 @@
+﻿diminish_clan_value_by_five = {
+	global = DIMINISH_CLAN_VALUE_BY_FIVE
+	first = DIMINISH_CLAN_VALUE_BY_FIVE	#Same loc as third person, since you cannot be a county.
+	third = DIMINISH_CLAN_VALUE_BY_FIVE
+}
+
+used_clan_action_five_cooldown = {
+	global = USED_CLAN_ACTION_FIVE_COOLDOWN
+	first = USED_CLAN_ACTION_FIVE_COOLDOWN	#Same loc as third person, since you cannot be a county.
+	third = USED_CLAN_ACTION_FIVE_COOLDOWN
+}
+
+increase_cattle_clan_leader = {
+	global = INCREASE_CATTLE_CLAN_LEADER
+	first = INCREASE_CATTLE_CLAN_LEADER	#Same loc as third person, since you cannot be a county.
+	third = INCREASE_CATTLE_CLAN_LEADER
+}
+
+up_clan_value_by_three = {
+	global = UP_CLAN_VALUE_BY_THREE
+	first = UP_CLAN_VALUE_BY_THREE	#Same loc as third person, since you cannot be a county.
+	third = UP_CLAN_VALUE_BY_THREE
+}
+
+down_clan_value_by_two = {
+	global = DOWN_CLAN_VALUE_BY_TWO
+	first = DOWN_CLAN_VALUE_BY_TWO	#Same loc as third person, since you cannot be a county.
+	third = DOWN_CLAN_VALUE_BY_TWO
+}
+
+call_clan_to_war_effect_desc = {
+	global = CALL_CLAN_TO_WAR_EFFECT_DESC
+	first = CALL_CLAN_TO_WAR_EFFECT_DESC	#Same loc as third person, since you cannot be a county.
+	third = CALL_CLAN_TO_WAR_EFFECT_DESC
+}
+
+call_leader_to_war_effect_desc = {
+	global = CALL_LEADER_TO_WAR_EFFECT_DESC
+	first = CALL_LEADER_TO_WAR_EFFECT_DESC	#Same loc as third person, since you cannot be a county.
+	third = CALL_LEADER_TO_WAR_EFFECT_DESC
+}
+
+down_clan_value_by_fifteen = {
+	global = DOWN_CLAN_VALUE_BY_FIFTEEN
+	first = DOWN_CLAN_VALUE_BY_FIFTEEN
+	third = DOWN_CLAN_VALUE_BY_FIFTEEN
+}
+
+up_clan_value_by_ten = {
+	global = UP_CLAN_VALUE_BY_TEN
+	first = UP_CLAN_VALUE_BY_TEN
+	third = UP_CLAN_VALUE_BY_TEN
+}
+
+all_clan_members_are_called_into_war = {
+	global = ALL_CLAN_MEMBERS_ARE_CALLED_INTO_WAR
+	first = ALL_CLAN_MEMBERS_ARE_CALLED_INTO_WAR
+	third = ALL_CLAN_MEMBERS_ARE_CALLED_INTO_WAR
+}

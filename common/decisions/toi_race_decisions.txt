@@ -5,7 +5,6 @@
 	
 	major = yes
 	ai_goal = yes
-	ai_check_interval = 80
 
 	is_shown = {
 		AND  = {
@@ -44,7 +43,7 @@
 
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
-		is_at_war = no		
+		is_at_war = no
 	}
 
 	cost = {
@@ -78,7 +77,6 @@ restore_aran_kingship_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
 	major = yes
 	ai_goal = yes
-	ai_check_interval = 120
 
 	desc = restore_aran_kingship_decision_desc
 
@@ -94,7 +92,7 @@ restore_aran_kingship_decision = {
 				has_title = title:c_inishbofin
 				has_title = title:c_inishturk
 			}
-			culture = culture:sea_fomorians	
+			culture = { has_cultural_pillar = heritage_fomorian	}
 		}
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
@@ -115,7 +113,7 @@ restore_aran_kingship_decision = {
 		completely_controls = title:d_aran
 		completely_controls = title:d_toremoreislands
 		any_realm_province = { #You must have some realm support for your claims.
-			culture = culture:sea_fomorians
+			culture = { has_cultural_pillar = heritage_fomorian }
 		}
 	}
 
@@ -164,7 +162,6 @@ ceremony_in_newgrange_decision = {
 	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
 	major = yes
 	ai_goal = yes
-	ai_check_interval = 120
 
 	desc = ceremony_in_newgrange_decision_desc
 
@@ -287,7 +284,7 @@ restore_nemedian_kingdom_decision = {
 		is_ruler = yes
 		is_landed = yes
 		exists = dynasty # Everyone should have a dynasty, but in case they don't...
-		culture_group = culture_group:toi_nemedian_group	
+		culture = { has_cultural_pillar = heritage_nemedian }	
 		
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
@@ -313,7 +310,7 @@ restore_nemedian_kingdom_decision = {
 		completely_controls = title:d_corkaree
 		completely_controls = title:d_magheradernon
 		any_realm_province = { #You must have some realm support for your claims.
-			culture_group = culture_group:toi_nemedian_group
+			culture = { has_cultural_pillar = heritage_nemedian }
 		}
 	}
 
@@ -377,7 +374,10 @@ celtic_troops_decision = {
 	is_valid = {
 		OR = {
 			is_independent_ruler = yes
-			highest_held_title_tier > 2
+			AND = {
+				highest_held_title_tier > 2
+				prestige_level > 2
+			}
 		}
 		piety_level >= 2
 	}

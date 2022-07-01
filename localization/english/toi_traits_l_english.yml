@@ -133,3 +133,26 @@
  trait_wolfwalker_desc:0 "The wolfwalkers are mythological half-wolf people, the wolfwalkers have an inner wolf that appears when they fall asleep. They can easily heal their wounds and command the other wolves."
  trait_wolfwalker_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Wolfwalker. The wolfwalkers are mythological half-wolf people, the wolfwalkers have an inner wolf that appears when they fall asleep. They can easily heal their wounds and command the other wolves."
  
+ trait_outlaw:0 "Outlaw"
+ trait_outlaw_desc:0 "This character has been declared Outlaw by the [high_king|E]."
+ trait_outlaw_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been declared Outlaw by the [high_king|E]. Because of this any neighboring ruler can attack [ROOT.GetCharacter.GetGetHerHim] and conquer [ROOT.GetCharacter.GetGetHerHim] lands."
+ 
+ trait_irish_vampire: "Vampire"
+ trait_irish_vampire_desc: "This character is a Vampire, nearly unkillable and possessing unique magic so long as they consume the blood of others. Their unique tastes make them hated and feared by most. \n #italic Vampires can Take Blood from a courtier or prisoner to fulfill their need for blood#!"
+ trait_irish_vampire_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Vampire. Nearly unkillable and possessing unique magic so long as they consume the blood of others. Their unique tastes make them hated and feared by most. \n #italic Vampires can Take Blood from a courtier or prisoner to fulfill their need for blood#!"
+ 
+ trait_scottish_fairy: "Fairy"
+ trait_scottish_fairy_desc: "This character is a Fairy of Alba, belonging to either the Seelie or Unseelie court, the Fairies of Alba are a part of the Sidhe people but they have erthly possession and interact actively with the surface world."
+ trait_scottish_fairy_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a Fairy of Alba, belonging to either the Seelie or Unseelie court, the Fairies of Alba are a part of the Sidhe people but they have erthly possession and interact actively with the surface world."
+ 
+ trait_unseelie_fairy: "Unseelie"
+ trait_unseelie_fairy_desc: "This character is a part of the Unseelie court.The Unseelie Court, conversely, was used to describe the darkly-inclined fairies. Unlike the Seelie Court, no offense was deemed necessary to bring down their assaults. As a group, they were thought to appear at night and assault travelers, often carrying them through the air, beating them, and forcing them to commit such acts as shooting at cattle."
+ trait_unseelie_fairy_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is part of the Unseelie court. Unlike the Seelie Court, no offense was deemed necessary to bring down their assaults. As a group, they were thought to appear at night and assault travelers, often carrying them through the air, beating them, and forcing them to commit such acts as shooting at cattle."
+ 
+ trait_seelie_fairy: "Seelie"
+ trait_seelie_fairy_desc: "This character is a part of the Seelie court. They are described as those fairies who would seek help from humans, warn those who have accidentally offended them, and return human kindness with favors of their own. Still, a fairy belonging to this court would avenge insults and could be prone to mischief."
+ trait_seelie_fairy_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is part of the Seelie court. They are described as those fairies who would seek help from humans, warn those who have accidentally offended them, and return human kindness with favors of their own. Still, a fairy belonging to this court would avenge insults and could be prone to mischief."
+ 
+ trait_lactose_intolerance: "Lactose Intolerance"
+ trait_lactose_intolerant_desc: "This character is weak of body and soul as he suffers from a very malignant condition.... the inability to consume the dairy that is provided by his own cattle. A punishment from the sky."
+ trait_lactose_intolerant_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is weak of body and soul as he suffers from a very malignant condition.... the inability to consume the dairy that is provided by his own cattle. A punishment from the sky."

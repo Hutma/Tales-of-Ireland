@@ -1,0 +1,17 @@
+﻿namespace = toi_interaction
+
+#Recall Sept
+toi_interaction.0001 = {
+	type = letter_event
+	sender = scope:actor
+	
+	opening = {
+		desc = toi_interaction.0001.opening
+	}
+	
+	desc = toi_interaction.0001.opening_desc
+	
+	option = {
+		name = toi_interaction.0001.a
+	}
+}

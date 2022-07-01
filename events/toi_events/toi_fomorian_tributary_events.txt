@@ -95,13 +95,14 @@ toi_fomorian_tributary.0001 = {
 	option = { #Talk to him to reduce the payment
 		name = toi_fomorian_tributary.0001.b
 		trigger = {
+			exists = scope:scope:fomorian_liege
 			root.diplomacy > 12
 		}
 		random_list = {
 			50 = { #Success
 				trigger = {
 					diplomacy_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= 6
 					}
 				}
@@ -113,7 +114,7 @@ toi_fomorian_tributary.0001 = {
 			30 = { #Success
 				trigger = {
 					diplomacy_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= 2
 					}
 				}
@@ -131,7 +132,7 @@ toi_fomorian_tributary.0001 = {
 			30 = { #Failure
 				trigger = {
 					diplomacy_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= -2
 					}
 				}
@@ -143,7 +144,7 @@ toi_fomorian_tributary.0001 = {
 			50 = { #Failure
 				trigger = {
 					diplomacy_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= -6
 					}
 				}
@@ -160,13 +161,14 @@ toi_fomorian_tributary.0001 = {
 	option = { #Hide a part of the cattle
 		name = toi_fomorian_tributary.0001.c
 		trigger = {
+			exists = scope:scope:fomorian_liege
 			root.intrigue > 12
 		}
 		random_list = {
 			50 = { #Success
 				trigger = {
 					intrigue_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= 6
 					}
 				}
@@ -178,7 +180,7 @@ toi_fomorian_tributary.0001 = {
 			30 = { #Success
 				trigger = {
 					intrigue_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= 2
 					}
 				}
@@ -196,7 +198,7 @@ toi_fomorian_tributary.0001 = {
 			30 = { #Failure
 				trigger = {
 					intrigue_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= -2
 					}
 				}
@@ -208,7 +210,7 @@ toi_fomorian_tributary.0001 = {
 			50 = { #Failure
 				trigger = {
 					intrigue_diff = {
-						scope:fomorian_liege
+						target = scope:fomorian_liege
 						value >= -6
 					}
 				}

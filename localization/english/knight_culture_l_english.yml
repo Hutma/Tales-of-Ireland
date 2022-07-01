@@ -27,8 +27,8 @@
  knight_hetaeria_no_tooltip:0 "Hetaeria"
  knight_hetaeria_no_tooltip_plural:0 "Hetaeriae"
 
- knight_champion_no_tooltip:0 "Champion"
- knight_champion_no_tooltip_plural:0 "Champions"
+ knight_champion_no_tooltip:0 "Ridire"
+ knight_champion_no_tooltip_plural:0 "Ridirí"
   
   # Lowercase versions
  knight_default_no_tooltip_lowercase:0 "knight"
@@ -96,3 +96,9 @@
  knight_hero_no_tooltip_lowercase_plural:0 "ridirí"
  knight_hero_no_tooltip_lowercase_adjective:0 "ridire's"
  knight_hero_no_tooltip_lowercase_plural_possessive:0 "ridirí's"
+ 
+ knight_alba_no_tooltip_plural: "Ridirean"
+ knight_alba_plural: "Ridirean"
+ knight_alba_no_tooltip_plural_possessive:0 "Ridirean"
+ knight_alba_no_tooltip_lowercase_plural:0 "ridiran"
+ knight_alba_no_tooltip_lowercase_plural_possessive:0 "ridirean's"

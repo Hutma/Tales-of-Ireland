@@ -25,6 +25,9 @@
  sea_fomorians_collective_noun:0 "Sea Fomorians"
  underground_fomorians:0 "Underground Fomorian"
  underground_fomorians_collective_noun:0 "Underground Fomorians"
+ fooar_culture: "Fooar"
+ fooar_culture_collective_noun: "Fooars"
+ 
  #Celtic Humans
  #Cruithin group
  toi_cruithin_group:0 "Cruithin"
@@ -72,6 +75,10 @@
  bell_beakers_collective_noun:0 "Bell-Beakers"
  newgrange_builders:0 "Ancient Builder"
  newgrange_builders_collective_noun:0 "Ancient Builders"
+ brodgarii: "Brodagrii"
+ brodgarii_collective_noun: "Brodagrii"
+ calanaisii: "Calanaisii"
+ calanaisii_collective_noun: "Calanaisii"
  #Milesian group
  toi_milesian_group:0 "Milensian"
  toi_milesian_group_collective_noun:0 "Milensians"
@@ -81,8 +88,8 @@
  eber_milesians_collective_noun:0 "Eber Milensians"
  ir_milesians:0 "Ir Milesian"
  ir_milesians_collective_noun:0 "Ir Milesians"
- lughaid_milesians:0 "Ludhaid Milesian"
- lughaid_milesians_collective_noun:0 "Ludhaid Milesians"
+ lughaid_milesians:0 "Lughaid Milesian"
+ lughaid_milesians_collective_noun:0 "Lughaid Milesians"
  #Nemedian group
  toi_nemedian_group:0 "Nemedian"
  toi_nemedian_group_collective_noun:0 "Nemedians"
@@ -99,6 +106,8 @@
  the_plagued_collective_noun:0 "The Plagued Partholonians"
  first_landers:0 "First Lander"
  first_landers_collective_noun:0 "First Landers"
+ the_gone_ones_culture: "Gone Ones"
+ the_gone_ones_culture_collective_noun: "Gone Ones"
  
  #Hy Brazylian group
  toi_hy_brazylian_group:0 "Hy-Brasylian"
@@ -115,3 +124,25 @@
  brythonic_mann_collective_noun:0 "Manaw"
  fir_mannin:0 "Fir Mannin "
  fir_mannin_collective_noun:0 "Fir Mannin"
+
+ #Latin group
+ toi_latin:0 "Latin"
+ toi_latin_collective_noun:0 "Latins"
+ roman:0 "Roman"
+ roman_collective_noun:0 "Romans"
+ 
+ #Brythonic
+ toi_brythonic_alba_group: "Brythonic"
+ toi_brythonic_alba_group_collective_noun: "Brythonic"
+ toi_pictish: "Pictish"
+ toi_pictish_collective_noun: "Pictish"
+ brythonic_scotland: "Northern Brythonic"
+ brythonic_scotland_collective_noun: "Northern Brythonic"
+ toi_cumbrian: "Cumbrian"
+ toi_cumbrian_collective_noun: "Cumbrians"
+ 
+ #Fairy
+ toi_fairy_group: "Fairy"
+ toi_fairy_group_collective_noun: "Fairies"
+ fairy_culture: "Fairy"
+ fairy_culture_collective_noun: "Fairies"

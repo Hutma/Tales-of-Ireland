@@ -5,6 +5,7 @@
 # *_with_offset versions first subtract the NCharacter.SKILL_MODIFIER_OFFSET value from the skill
 
 diplomacy_modifier = {
+	ai_amenity_target_baseline = 0.01
 }
 diplomacy_modifier_with_offset = {
 	monthly_prestige_gain_mult = 0.01
@@ -30,7 +31,7 @@ martial_modifier = {
 martial_modifier_with_offset = {
 	levy_size = 0.02
 	levy_reinforcement_rate = 0.02
-	siege_phase_time = -0.03
+	siege_phase_time = -0.02
 }
 
 learning_modifier = {
@@ -75,7 +76,7 @@ emperor_modifier = {
 	domain_limit = 3
 	knight_limit = 6
 	vassal_limit = 60
-	
+	ai_amenity_target_baseline = 0.3
 	mercenary_hire_cost_mult = 0.4
 }
 
@@ -122,22 +123,27 @@ prestige_level_0 = {
 }
 prestige_level_1 = {
 	hide_effects = yes # Custom description will generate the full level information
+	ai_amenity_target_baseline = 0.1
 }
 prestige_level_2 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 1
+	ai_amenity_target_baseline = 0.2
 }
 prestige_level_3 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 2
+	ai_amenity_target_baseline = 0.3
 }
 prestige_level_4 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 3
+	ai_amenity_target_baseline = 0.4
 }
 prestige_level_5 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 4
+	ai_amenity_target_baseline = 0.5
 }
 
 stress_level_0 = {
@@ -182,6 +188,7 @@ debt_level_0 = {
 	development_growth_factor = -0.1
 	vassal_opinion = -5
 	county_opinion_add = -5
+	ai_amenity_spending = -0.1
 }
 
 debt_level_1 = {
@@ -190,6 +197,7 @@ debt_level_1 = {
 	development_growth_factor = -0.2
 	vassal_opinion = -10
 	county_opinion_add = -10
+	ai_amenity_spending = -0.2
 }
 
 debt_level_2 = {
@@ -198,6 +206,7 @@ debt_level_2 = {
 	development_growth_factor = -0.3
 	vassal_opinion = -15
 	county_opinion_add = -15
+	ai_amenity_spending = -0.3
 }
 
 debt_level_3 = {
@@ -206,6 +215,7 @@ debt_level_3 = {
 	development_growth_factor = -0.4
 	vassal_opinion = -20
 	county_opinion_add = -20
+	ai_amenity_spending = -0.5
 }
 
 debt_level_4 = {
@@ -214,22 +224,25 @@ debt_level_4 = {
 	development_growth_factor = -0.5
 	vassal_opinion = -25
 	county_opinion_add = -25
+	ai_amenity_spending = -0.7
 }
 
 debt_level_5 = {
-	levy_size = -0.5
-	levy_reinforcement_rate = -0.5
-	development_growth_factor = -0.5
+	levy_size = -0.6
+	levy_reinforcement_rate = -0.6
+	development_growth_factor = -0.6
 	vassal_opinion = -30
 	county_opinion_add = -30
+	ai_amenity_spending = -1
 }
 
 debt_level_6 = {
-	levy_size = -0.9
-	levy_reinforcement_rate = -0.9
-	development_growth_factor = -0.9
-	vassal_opinion = -50
-	county_opinion_add = -50
+	levy_size = -0.7
+	levy_reinforcement_rate = -0.7
+	development_growth_factor = -0.7
+	vassal_opinion = -40
+	county_opinion_add = -40
+	ai_amenity_spending = -1.25
 }
 
 debt_level_7 = {
@@ -238,6 +251,7 @@ debt_level_7 = {
 	development_growth_factor = -0.8
 	vassal_opinion = -50
 	county_opinion_add = -50
+	ai_amenity_spending = -1.5
 }
 
 debt_level_8 = {
@@ -246,6 +260,7 @@ debt_level_8 = {
 	development_growth_factor = -0.9
 	vassal_opinion = -75
 	county_opinion_add = -75
+	ai_amenity_spending = -2
 }
 
 debt_level_9 = {
@@ -254,6 +269,7 @@ debt_level_9 = {
 	development_growth_factor = -0.95
 	vassal_opinion = -100
 	county_opinion_add = -100
+	ai_amenity_spending = -3
 }
 
 debt_level_no_income = { #Special no income
@@ -262,4 +278,5 @@ debt_level_no_income = { #Special no income
 	development_growth_factor = -0.95
 	vassal_opinion = -100
 	county_opinion_add = -100
+	ai_amenity_spending = -3
 }

@@ -1,0 +1,28 @@
+﻿
+mediterranean = {
+	trigger = {
+		exists = capital_county
+		always = no
+	}
+}
+
+mena = {
+	trigger = {
+		exists = capital_county
+		always = no
+	}
+}
+
+indian = {
+	trigger = {
+		exists = capital_county
+		always = no
+	}
+}
+
+western = {
+	trigger = {
+		exists = capital_county
+		always = yes
+	}
+}

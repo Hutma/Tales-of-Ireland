@@ -16,9 +16,17 @@ toi_fomorian_event.0001 = {
 	}
 	
 	immediate = {
-		any_child = {
-			is_courtier_of = root
-			has_trait = compassionate
+		every_child = {
+			limit = {
+				AND = {
+					is_courtier_of = root
+					has_trait = compassionate
+				}
+			}
+			add_to_list = compassionate_children
+		}
+		random_in_list = {
+			list = compassionate_children
 			save_scope_as = weak_child
 		}
 	}
@@ -95,10 +103,12 @@ toi_fomorian_event.0001 = {
 		}
 		add_piety = 50
 		if = {
-			NOT = {
-				OR = {
-					has_trait = callous
-					has_trait = sadistic
+			limit = {
+				NOT = {
+					OR = {
+						has_trait = callous
+						has_trait = sadistic
+					}
 				}
 			}
 			add_stress = 75
@@ -145,39 +155,262 @@ toi_fomorian_event.0002 = {
 				years = 15
 			}
 		}
-		random_list = {
-			50 = {
-				capital_county = {
-					change_development_level = -3
-				}
-			}
-			50 = {
-				capital_county = {
-					change_development_level = -4
-				}
-			}
+
+		capital_county = {
+			change_development_level = {-3 -4}
 		}
-		random_list = {
-			50 = {
-				modifier = {
-					value = 10
-					mult = root.piety_level
+
+		hidden_effect = {
+			random_list = {
+				50 = {
+					modifier = {
+						add = {
+							value = 10
+							multiply = root.piety_level
+						}
+					}
+					trigger_event = {
+						id = toi_fomorian_event.0003
+						days = { 10 50 }
+					}
 				}
-				trigger_event = {
-					id = toi_fomorian_event.0003
-					days = { 10 50 }
-				}
-			}
-			50 = {
-				modifier = {
-					value = -10 
-					mult = root.piety_level
-				}
-				send_interface_toast = {
-					left_icon = root
-					title = toi_fomorian_event.0002.b.fail
+				50 = {
+					modifier = {
+						add = {
+							value = -10 
+							multiply = root.piety_level
+						}
+					}
+					send_interface_toast = {
+						left_icon = root
+						title = toi_fomorian_event.0002.b.fail
+					}
 				}
 			}
 		}
 	}
 }
+
+
+#Balor Answered
+
+toi_fomorian_event.0003 = {
+    type = character_event
+    title = toi_fomorian_event.0003.t
+    desc = toi_fomorian_event.0003.desc
+    theme = faith
+    override_background = {
+        event_background = fp1_runestone_circle
+    }
+    
+    left_portrait = {
+        character = root
+        animation = personality_zealous
+    }
+    
+    trigger = {
+        has_trait = fomorian
+    }
+    
+    option = { #We have been blessed
+        name = toi_fomorian_event.0003.a
+        add_character_modifier = { 
+            modifier = balor_success
+            years = 15
+        }
+    }
+}
+
+# Chosen blood
+
+toi_fomorian_event.0004 = {
+    type = character_event
+    title = toi_fomorian_event.0004.t
+    desc = toi_fomorian_event.0004.desc
+    theme = faith
+
+    left_portrait = {
+        character = root
+        animation = personality_rational
+    }
+
+    right_portrait = {
+        character = root.realm_priest
+        animation = personality_zealous
+    }
+
+    trigger = {
+        any_prisoner = {
+            count >= 1
+        }
+        has_trait = fomorian
+    }
+	
+	immediate = {
+		every_prisoner = {
+			add_to_list = prisoners_in_danger
+		}
+		random_in_list = {
+			list = prisoners_in_danger
+			save_scope_as = prisoner_to_kill
+		}
+		scope:prisoner_to_kill = {
+			remove_from_list = prisoners_in_danger
+		}
+	}
+
+    option = { # I'll do as the gods command
+		name = toi_fomorian_event.0004.a
+        add_piety = 150
+		
+        scope:prisoner_to_kill = {
+            death = {
+                killer = root
+                death_reason = death_execution
+            }
+        }
+    }
+	
+	option = { #I'll kill another one
+		name = toi_fomorian_event.0004.b
+		trigger = {
+			any_prisoner = {
+				count >= 2
+			}
+		}
+		add_piety = 100
+		random_in_list = {
+			list = prisoners_in_danger
+			save_scope_as = second_to_kill
+		}
+		scope:second_to_kill = {
+            death = {
+                killer = root
+                death_reason = death_execution
+            }
+        }
+		root.realm_priest = {
+			add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -30
+			}
+		}
+	}
+	
+	option = { #Not today
+		name = toi_fomorian_event.0004.c
+		add_piety = -200
+		root.realm_priest = {
+			add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -15
+			}
+		}
+	}
+
+}
+
+
+#Sea Fomorian resurgence
+
+toi_fomorian_event.0005 = {
+    type = character_event
+    hidden = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_player = {
+					AND = {
+						has_trait = fomorian
+						has_culture = culture:sea_fomorians
+					}
+				}
+			}
+			every_player = {
+				limit = {
+					AND = {
+						has_trait = fomorian
+						has_culture = culture:sea_fomorians
+					}
+				}
+				add_to_list = sea_fomorians_players
+			}
+			random_in_list = {
+				list = sea_fomorians_players
+				save_scope_as = fomorian_chosen
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:fomorian_chosen
+				}
+			}
+			every_independent_ruler = {
+				limit = {
+					AND = {
+						has_trait = fomorian
+						has_culture = culture:sea_fomorians
+					}
+				}
+				add_to_list = sea_fomorians_players
+			}
+			random_in_list = {
+				list = sea_fomorians_players
+				save_scope_as = fomorian_chosen
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:fomorian_chosen
+			}
+			every_ruler = {
+				trigger_event = {
+					id = toi_fomorian_event.0006
+					days = 1
+				}
+			}
+		}
+		scope:fomorian_chosen = {
+			add_character_modifier = {
+				modifier = fomorian_chosen_modifier
+			}
+			add_character_flag = can_use_conquest_cbs
+			spawn_army = {
+				levies = 300
+				men_at_arms = {
+					type = bloody_warriors
+					stacks = 4
+				}
+				location = root.capital_province
+				name = fomorian_revenge_troops
+				inheritable = no
+			}
+		}
+	}
+}
+
+toi_fomorian_event.0006 = {
+    type = character_event
+    title = toi_fomorian_event.0006.t
+    desc = toi_fomorian_event.0006.desc
+    theme = war
+	
+    left_portrait = {
+        character = root
+        animation = personality_rational
+    }
+
+    right_portrait = {
+        character = scope:fomorian_chosen
+        animation = personality_bold
+    }
+	
+	option = {
+		name = toi_fomorian_event.0006.a
+	}
+}
+	

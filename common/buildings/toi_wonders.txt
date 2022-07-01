@@ -2,6 +2,7 @@
 wonder_hill_of_tara_01 = {
 	type_icon = "icon_structure_walls_of_benin.dds"
 	asset = {
+		name = "wonder_hill_of_tara_county_view"
 		illustration = "gfx/interface/illustrations/county_view/county_view_hill_of_tara.dds"
 	}
 
@@ -24,13 +25,13 @@ wonder_hill_of_tara_01 = {
 	character_modifier = {
 		prowess = 1
 		knight_effectiveness_mult = 0.05
-		monthly_prestige = 0.25
+		court_grandeur_baseline_add = 1
 	}
 	province_modifier = {
 		fort_level = 1
 	}
 	county_modifier = {
-		defender_advantage = 5
+		defender_holding_advantage = 5
 		monthly_county_control_change_add = 0.1
 		development_growth = 0.1
 		development_growth_factor = 0.1
@@ -45,6 +46,7 @@ wonder_hill_of_tara_01 = {
 wonder_hill_of_tara_02 = {
 	type_icon = "icon_structure_walls_of_benin.dds"
 	asset = {
+		name = "wonder_hill_of_tara_county_view"
 		illustration = "gfx/interface/illustrations/county_view/county_view_hill_of_tara.dds"
 	}
 
@@ -67,13 +69,13 @@ wonder_hill_of_tara_02 = {
 	character_modifier = {
 		prowess = 1
 		knight_effectiveness_mult = 0.1
-		monthly_prestige = 0.25
+		court_grandeur_baseline_add = 1
 	}
 	province_modifier = {
 		fort_level = 1
 	}
 	county_modifier = {
-		defender_advantage = 5
+		defender_holding_advantage = 5
 		monthly_county_control_change_add = 0.25
 		development_growth = 0.1
 		development_growth_factor = 0.1
@@ -89,9 +91,7 @@ wonder_hill_of_tara_02 = {
 #Skellig Island
 wonder_skellig_island_01 = {
 	type_icon = "icon_structure_skellig_island.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -129,9 +129,7 @@ wonder_skellig_island_01 = {
 #Giant Causeway
 wonder_giant_causeway_01 = {
 	type_icon = "icon_structure_giant_causeway.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -164,9 +162,7 @@ wonder_giant_causeway_01 = {
 #Newgrange
 wonder_newgrange_01 = {
 	type_icon = "icon_structure_newgrange.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -207,9 +203,7 @@ wonder_newgrange_01 = {
 #Dún Dúchathair
 wonder_dun_duchathair_01 = {
 	type_icon = "icon_structure_visby_ringmur.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -236,7 +230,7 @@ wonder_dun_duchathair_01 = {
 		fort_level = 1
 	}
 	county_modifier = {
-		defender_advantage = 5
+		defender_holding_advantage = 5
 		levy_size = 0.1
 	}
 	
@@ -249,9 +243,7 @@ wonder_dun_duchathair_01 = {
 
 wonder_dun_duchathair_02 = {
 	type_icon = "icon_structure_visby_ringmur.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_2_cost
@@ -279,7 +271,7 @@ wonder_dun_duchathair_02 = {
 		fort_level = 2
 	}
 	county_modifier = {
-		defender_advantage = 10
+		defender_holding_advantage = 10
 		levy_size = 0.2
 	}
 	
@@ -289,13 +281,12 @@ wonder_dun_duchathair_02 = {
 	}
 }
 
+
 #MANX WONDERS
 #King's grave
 wonder_king_grave_01 = {
 	type_icon = "icon_structure_king_orry_grave.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -328,9 +319,6 @@ wonder_king_grave_01 = {
 
 wonder_king_grave_02 = {
 	type_icon = "icon_structure_king_orry_grave.dds"
-	asset = {
-
-	}
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_2_cost
@@ -363,9 +351,7 @@ wonder_king_grave_02 = {
 #ballaharra_stones
 wonder_ballaharra_stones_01 = {
 	type_icon = "icon_structure_stone_cricle.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -398,9 +384,7 @@ wonder_ballaharra_stones_01 = {
 #meayll_circle
 wonder_meayll_circle_01 = {
 	type_icon = "icon_structure_stone_cricle.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -430,9 +414,7 @@ wonder_meayll_circle_01 = {
 #cashtal_yn_ard
 wonder_cashtal_yn_ard_01 = {
 	type_icon = "icon_structure_king_orry_grave.dds"
-	asset = {
-
-	}
+	
 
 	construction_time = slow_construction_time
 	cost_prestige = expensive_building_tier_1_cost
@@ -453,10 +435,182 @@ wonder_cashtal_yn_ard_01 = {
 	}
 	county_modifier = {
 		levy_size = 0.15
-		defender_advantage = 5
+		defender_holding_advantage = 5
 		
 	}
 	max_garrison = 35
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+
+#SCOTLAND WONDERS
+#Torrylin cairn
+wonder_torrylin_cairn_01 = {
+	type_icon = "icon_structure_stone_cricle.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		realm_priest_opinion = 5
+		same_heritage_county_advantage_add = 3
+	}
+	county_modifier = {
+		defender_holding_advantage = 5
+	}
+	max_garrison = 40
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Tourhouse stone circle
+wonder_tourhouse_circle_01 = {
+	type_icon = "icon_structure_stone_cricle.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		monthly_war_income_mult = 0.25
+		diplomacy_per_piety_level = 1
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#The Stone of Lochmaben
+wonder_stone_of_lochmaben_01 = {
+	type_icon = "icon_structure_king_orry_grave.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		court_grandeur_baseline_add = 1
+		monthly_prestige = 0.25
+		short_reign_duration_mult = -0.35
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Abory hill
+wonder_abory_hill_01 = {
+	type_icon = "icon_structure_walls_of_benin.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	max_garrison = 25
+	
+	character_modifier = {
+		skirmishers_damage_mult = 0.04
+		skirmishers_maintenance_mult = -0.1
+	}
+	province_modifier = {
+		fort_level = 1
+	}
+	county_modifier = {
+		defender_holding_advantage = 5
+	}
+	
+	next_building = wonder_abory_hill_02
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+wonder_abory_hill_02 = {
+	type_icon = "icon_structure_walls_of_benin.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = expensive_building_tier_2_cost
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_house_soldiers
+			has_innovation = innovation_development_01
+		}
+	}
+	
+	max_garrison = 55
+	
+	character_modifier = {
+		skirmishers_damage_mult = 0.08
+		skirmishers_maintenance_mult = -0.2
+	}
+	province_modifier = {
+		fort_level = 3
+	}
+	county_modifier = {
+		defender_holding_advantage = 8
+	}
 	
 	type = special
 	ai_value = {

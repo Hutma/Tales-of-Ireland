@@ -1,0 +1,35 @@
+﻿need_greater_prestige_than_target = {
+	first = need_greater_prestige_than_target
+	first_not = need_greater_prestige_than_target
+	global = need_greater_prestige_than_target
+	global_not = need_greater_prestige_than_target
+	third = need_greater_prestige_than_target
+	third_not = need_greater_prestige_than_target
+}
+
+repented_outlaw_requirements = {
+	first = repented_outlaw_requirements
+	first_not = repented_outlaw_requirements
+	global = repented_outlaw_requirements
+	global_not = repented_outlaw_requirements
+	third = repented_outlaw_requirements
+	third_not = repented_outlaw_requirements
+}
+
+disinherit_requirements_desc = {
+	first = DISINHERIT_REQUIREMENTS_DESC
+	first_not = DISINHERIT_REQUIREMENTS_DESC
+	global = DISINHERIT_REQUIREMENTS_DESC
+	global_not = DISINHERIT_REQUIREMENTS_DESC
+	third = DISINHERIT_REQUIREMENTS_DESC
+	third_not = DISINHERIT_REQUIREMENTS_DESC
+}
+
+recall_sept_once_per_lifetime = {
+	first = RECALL_SEPT_ONCE_PER_LIFETIME
+	first_not = RECALL_SEPT_ONCE_PER_LIFETIME
+	global = RECALL_SEPT_ONCE_PER_LIFETIME
+	global_not = RECALL_SEPT_ONCE_PER_LIFETIME
+	third = RECALL_SEPT_ONCE_PER_LIFETIME
+	third_not = RECALL_SEPT_ONCE_PER_LIFETIME
+}

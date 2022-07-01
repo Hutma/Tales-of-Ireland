@@ -11,3 +11,19 @@
  toi_fomorian_event.0002.a: "To battle!"
  toi_fomorian_event.0002.b: "If we sacrifice our best cattle, Balor might visit us again."
  toi_fomorian_event.0002.b.fail: "It did not work"
+ 
+ toi_fomorian_event.0003.t: "Balor Answered"
+ toi_fomorian_event.0003.desc: "We sacrificed our best cattle, sang our most fervent prayers, and diligently performed each ritual to ensure Balor’s favor upon us. \n\nThen, we waited. \n\nThe darkness of the night grew deeper, and the flames of our torches started spluttering and dying one by one. No answer came. Some grew restless, their glance shifting uncertainly between the altar and their own feet. A sharp look from the druid stilled them. \n\nOnly a few torches were burning now, casting long shadows. The night had reached its darkest hours. Then suddenly, the ground started shaking beneath our feet. Softly at first, but I knew at once that our prayers had been answered. The temperature rose sharply, sweat gathering on everyone’s brows like we were standing near a blazing fire, and I could see a red light burning deep in my mind. And then a voice. A clear, imposing voice that seemed to come from every direction and which reverberated against itself. \n\nNone of us remember what happened after that, or what the voice said. But when I awoke the next morning, my heavy head was filled with visions of future greatness."
+ toi_fomorian_event.0003.a: "We have been blessed."
+ 
+ toi_fomorian_event.0004.t: "Chosen Blood"
+ toi_fomorian_event.0004.desc: "After today’s ceremony of prayer has ended, my druid hurries to my side, a fiery look of determination in his eyes. He insists an urgent matter has come up.\n\n“The gods have made it clear to me that your prisoner [prisoner_to_kill.GetName] is to be sacrificed in their honor. It must be done today, for their blood-thirst is great, and any delay would mean risking their disfavor. I have made all the necessary arrangements, and at your word we can begin the sacrifice within the hour.”"
+ toi_fomorian_event.0004.a: "Our druid surely knows the will of the gods best."
+ toi_fomorian_event.0004.b: "I will decide who to sacrifice, if the gods demand blood."
+ toi_fomorian_event.0004.c: "No one is getting sacrificed today."
+ 
+ toi_fomorian_event.0006.t: "Sea Fomorian resurgence"
+ toi_fomorian_event.0006.desc: "For millennials the Sea Fomorians have dominated and terrified the tribes of Ireland.\n\nBut now the threat they represent only belong to the legends of the past. They now have to fight to survive and even if their cruelty is still legendary, they don't inspire fear in the eyes of their enemies anymore.\n\nSeeing their demise so close a great Sea Fomorian leader assembled and army ready to re-instaure the greatness of [fomorian_chosen.GetHerHis] people.\n\nThis leader is [fomorian_chosen.GetFirstName], dark days are waiting for sea fomorians' enemies."
+ toi_fomorian_event.0006.a: "Fomorian power rises again."
+ 
+ fomorian_revenge_troops: "Sea Fomorian revenge troops"

@@ -1,0 +1,92 @@
+﻿namespace = toi_partholonians_event
+
+#The sea ambitions
+
+toi_partholonians_event.0001 = {
+    type = character_event
+    title = toi_partholonians_event.0001.t
+    desc = toi_partholonians_event.0001.desc
+    theme = war
+
+    left_portrait = {
+        character = root
+        animation = personality_bold
+    }
+
+    trigger = {
+        AND = {
+            has_faith = faith:sons_of_the_ocean
+            has_trait = partholonian
+            is_independent_ruler = Yes
+            has_character_flag = used_lifetitle_new_land_cb
+        }
+    }
+
+    option = { # Hoist the sails! Wide new lands await us! 
+        name = toi_partholonians_event.0001.a
+        remove_character_flag = used_lifetile_new_land_cb
+        add_prestige = 50
+    }
+
+    option = { # We should focus on improving the land we have
+        name = toi_partholonians_event.0001.b
+        add_prestige = -50
+        add_character_modifier = {
+            modifier = no_more_land
+            years = 5
+        }
+    }
+}
+
+# Weak, cursed body
+
+toi_partholonians_event.0002 = {
+    type = character_event
+    title = toi_partholonians_event.0002.t
+    desc = toi_partholonians_event.0002.desc
+    theme = death
+
+    left_portrait = {
+        character = root
+        animation = personality_irrational
+    }
+	
+	trigger = {
+		OR = {
+			has_trait = partholonian
+			has_trait = three_quarter_partholonian
+		}
+	}
+
+    option = { # I accept my fate
+		name = toi_partholonians_event.0002.a
+        add_character_modifier = {
+            modifier = weak_body
+            years = { 5 10 }
+        }
+    }
+
+    option = { # I'll fight the cursed, fight the gods
+		name = toi_partholonians_event.0002.b
+		
+        add_piety_level = -1
+		
+		stress_impact = {
+			zealous = major_stress_loss
+		}
+		
+		duel = {
+            skill = learning
+            value = 16
+            50 = {
+                add_character_modifier = {
+					modifier = weak_body
+					years = { 5 10 }
+				}
+            }
+            50 = {
+                add_prestige = 50
+            }
+        }
+    }
+}

@@ -1,0 +1,303 @@
+﻿#Fairy War
+fairy_war_cb = {
+	group = subjugation
+
+	allowed_for_character = {
+		AND = {
+			has_government = feudal_government
+			has_trait = scottish_fairy
+			is_independent_ruler = yes
+		}
+	}
+	
+	# Root is the title
+	# scope:attacker is the attacker
+	# scope:defender is the defender
+	
+	allowed_against_character = {
+		OR = {
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.capital_county
+					value < 1000000
+				}
+			}
+			scope:attacker = {
+				realm_to_title_distance_squared = {
+					title = scope:defender.primary_title
+					value < 1000000
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				scope:defender = { target_is_liege_or_above = scope:attacker }
+				scope:attacker = { target_is_liege_or_above = scope:defender }
+			}
+		}
+		OR = {
+			AND = {
+				scope:attacker = {
+					has_trait = seelie_fairy
+				}
+				scope:defender = {
+					has_trait = unseelie_fairy
+				}
+			}
+			AND = {
+				scope:attacker = {
+					has_trait = unseelie_fairy
+				}
+				scope:defender = {
+					has_trait = seelie_fairy
+				}
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 15
+		}
+		prestige = {
+			value = 15
+		}
+	}
+	
+	should_invalidate = {
+		
+	}
+	
+	on_declaration = {
+		on_declared_war = yes
+	}
+	
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
+	
+	on_invalidated = {
+		
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = fairy_war_cb_victory_desc_attacker
+			}
+			desc = fairy_war_cb_victory_desc
+		}
+	}
+	
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		
+		
+		#Humiliation effects
+		scope:attacker = {
+			capital_county = {
+				add_county_modifier = {
+					modifier = victorious_fairy_ruler
+					years = 10
+				}
+			}
+			add_prestige = 150
+			add_piety = 150
+		}
+		scope:defender = {
+			capital_county = {
+				add_county_modifier = {
+					modifier = humiliated_fairy_ruler
+					years = 5
+				}
+			}
+			
+			add_character_modifier = {
+				modifier = humiliated_fairy
+				years = 5
+			}
+			
+			pay_long_term_income = {
+				target = scope:attacker
+				years = 3
+			}
+		}
+		
+		# Prestige level progress for the attacker
+		scope:attacker = {
+			add_prestige_experience = {
+				value = 200
+			}
+		}
+
+		# Prestige loss for the defender
+		scope:defender = {
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = {
+				value = minor_prestige_value
+			}
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = {
+				value = minor_prestige_value
+			}
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+		
+		# Truce
+		add_truce_attacker_victory_effect = yes
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = fairy_war_cb_white_peace_desc_defender
+			}
+			desc = fairy_war_cb_white_peace_desc
+		}
+	}
+	
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+		
+		add_truce_white_peace_effect = yes
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = fairy_war_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = fairy_war_cb_defeat_desc_attacker
+			}
+			desc = fairy_war_cb_defeat_desc
+		}
+	}
+	
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		scope:defender = {
+			capital_county = {
+				add_county_modifier = {
+					modifier = victorious_fairy_ruler
+					years = 10
+				}
+			}
+			add_prestige = 150
+			add_piety = 150
+		}
+		
+		# Prestige loss for the attacker
+		scope:attacker = {
+			pay_short_term_gold = {
+				gold = 3
+				target = scope:defender
+				yearly_income = yes
+			}
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for the defender
+		scope:defender = {
+			add_prestige = {
+				value = minor_prestige_value
+			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+		
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		
+		# Truce
+		add_truce_attacker_defeat_effect = yes
+		
+		on_lost_aggression_war_discontent_loss = yes
+	}
+	
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+	
+	war_name = "FAIRY_WAR_NAME"
+	war_name_base = "FAIRY_WAR_NAME_BASE"
+	cb_name = "FAIRY_CB_NAME"
+	interface_priority = 61
+	
+	attacker_wargoal_percentage = 0.8
+	
+	ai_score = { # Script value, standard war scopes. Added to the hard-coded scoring from titles, if there are any
+		value = 75
+	}
+	
+	max_attacker_score_from_battles = 70
+	max_defender_score_from_battles = 70
+	
+}

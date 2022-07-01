@@ -1,0 +1,293 @@
+﻿failure_chance_for_spells = {
+	value = 0
+	add = total_magic_usage
+	divide = learning
+	multiply = xx_modifier
+	multiply = 100
+	round = yes
+	min = 0
+	max = 100
+}
+
+negative_failure_chance_for_spells = {
+	value = failure_chance_for_spells
+	multiply = -1
+}
+
+total_magic_usage = {
+	value = 0
+	if = { limit = { exists = var:your_magic_usage } add = var:your_magic_usage }
+}
+
+xx_modifier = {
+	value = 1
+	if = { limit = { has_trait = magician_good_2 } subtract = 0.25 }
+	if = { limit = { has_trait = magician_good_3 } subtract = 0.5 }
+}
+
+summon_sidhe_child_usage = {
+	value = 3
+}
+summon_sidhe_advisor_usage = {
+	value = 1
+}
+summon_sidhe_feast_usage = {
+	value = 1
+}
+summon_magical_army_usage = {
+	value = 4
+}
+summon_magical_siege_engine_usage = {
+	value = 1
+}
+command_the_wind_usage = {
+	value = 1
+}
+hidden_blade_usage = {
+	value = 1
+}
+hidden_eye_usage = {
+	value = 1
+}
+hidden_aura_usage = {
+	value = 1
+}
+extend_lifespan_usage = {
+	value = 3
+}
+channel_giant_strength_usage = {
+	value = 1
+}
+exchange_your_talents_usage = {
+	value = 3
+}
+sidhe_speechcraft_usage = {
+	value = 1
+}
+heal_wounds_usage = {
+	value = 2
+}
+inflict_wounds_usage = {
+	value = 1
+}
+inflict_terror_usage = {
+	value = 1
+}
+inflict_pestilence_usage = {
+	value = 2
+}
+hostile_whispers_usage = {
+	value = 1
+}
+captivate_mind_usage = {
+	value = 1
+}
+bless_the_cattle_usage = {
+	value = 2
+}
+multiply_herds_usage = {
+	value = 3
+}
+
+#Cessarian
+fintan_transformation_usage = {
+	value = 1
+}
+deer_form_usage = {
+	value = 1
+}
+flood_realm_usage = {
+	value = 3
+}
+mark_of_cain_usage = {
+	value = 1
+}
+serpent_bite_usage = {
+	value = 3
+}
+garden_eden_usage = {
+	value = 3
+}
+
+#Fomorian
+call_sea_armies_usage = {
+	value = 2
+}
+call_underground_ridri_usage = {
+	value = 3
+}
+fomorian_transformation_usage = {
+	value = 2
+}
+destroy_essence_usage = {
+	value = 1
+}
+blood_moon_usage = {
+	value = 1
+}
+omen_of_opression_usage = {
+	value = 2
+}
+
+#Tuatha De Danann
+healing_secret_usage = {
+	value = 1
+}
+silverarmed_usage = {
+	value = 3
+}
+dagda_cauldron_usage = {
+	value = 1
+}
+lugh_strenght_usage = {
+	value = 2
+}
+call_light_usage = {
+	value = 2
+}
+lost_knowledge_usage = {
+	value = 3
+}
+summon_new_tribe_usage = {
+	value = 4
+}
+
+#Megalithic
+sacred_building_usage = {
+	value = 1
+}
+suns_chosen_usage = {
+	value = 2
+}
+hunting_spirits_usage = {
+	value = 2
+}
+
+#Partholonian
+rune_words_usage = {
+	value = 2
+}
+protective_amulet_usage = {
+	value = 2
+}
+greek_astrology_usage = {
+	value = 1
+}
+cursed_tablet_usage = {
+	value = 2
+}
+partholonian_plague_usage = {
+	value = 1
+}
+
+#Nemedian
+sidhe_agriculture_usage = {
+	value = 3
+}
+blessed_family_usage = {
+	value = 2
+}
+nemedian_union_usage = {
+	value = 1
+}
+nemed_seduction_usage = {
+	value = 2
+}
+
+#Fir Bolg
+srengs_strenght_usage = {
+	value = 1
+}
+fir_bolg_endurance_usage = {
+	value = 3
+}
+men_of_bags_usage = {
+	value = 1
+}
+heavy_lifters_usage = {
+	value = 2
+}
+united_in_defiance_usage = {
+	value = 3
+}
+
+#Milesian
+path_of_destiny_usage = {
+	value = 3
+}
+realm_ceremony_usage = {
+	value = 2
+}
+enchant_bedroooms_usage = {
+	value = 2
+}
+
+#Celts
+druidic_intersessions_usage = {
+	value = 3
+}
+magic_paintings_usage = {
+	value = 1
+}
+befriend_the_morrigan_usage = {
+	value = 2
+}
+settle_power_usage = {
+	value = 1
+}
+influence_culture_usage = {
+	value = 3
+}
+
+#Hy Brasilian
+mystical_craft_usage = {
+	value = 1
+}
+two_worlds_usage = {
+	value = 2
+}
+no_escape_curse_usage = {
+	value = 2
+}
+brasil_fog_usage = {
+	value = 3
+}
+magic_mist_usage = {
+	value = 4
+}
+
+#Latin
+burn_incense_usage = {
+	value = 2
+}
+roman_astrology_usage = {
+	value = 1
+}
+
+#Perks spells
+soul_transfer_usage = {
+	value = 1
+}
+mass_influence_usage = {
+	value = 4
+}
+word_of_peace_usage = {
+	value = 4
+}
+call_rage_usage = {
+	value = 5
+}
+make_them_bow_usage = {
+	value = 4
+}
+the_evil_army_usage = {
+	value = 5
+}
+cause_discorde_spell_usage = {
+	value = 5
+}
+
+
+_usage = { # Needs to exist but shouldn't do anything
+	value = 0
+}

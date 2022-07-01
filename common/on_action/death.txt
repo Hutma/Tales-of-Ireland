@@ -48,20 +48,88 @@ on_death = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					exists = root.top_liege
+					root.top_liege = {
+						highest_held_title_tier = 5
+					}
+				}
+				remove_character_flag = not_independent_when_died
+				remove_character_flag = not_independent_when_died_multiple_titles
+			}
 		}
 ###TALES OF IRELAND END
 		play_music_cue = "mx_cue_death"
-		every_parent = {
-			sound_foundations_random_removal_effect = yes
-		}
+
+		add_character_flag = { flag = about_to_die_but_not_dead_yet_flag } # Used in perk calc
+
 		if = {
 			limit = {
-				is_ai = no
 				exists = player_heir
 			}
 			player_heir = {
-				add_character_flag = {
-					flag = tutorial_reactive_advice_succession
+				apply_hold_court_grace_effect = yes
+			}
+			if = {
+				limit = {
+					is_ai = no
+				}
+				player_heir = {
+					add_character_flag = {
+						flag = tutorial_reactive_advice_succession
+					}
+				}
+				if = {
+					limit = {
+						has_royal_court = yes
+						any_sponsored_inspiration = { count >= 1 }
+					}
+					save_scope_as = old_ruler
+					every_sponsored_inspiration = { add_to_list = inherited_inspiration_list }
+					player_heir = {
+						trigger_event = { id = fund_inspiration.9005 days = 5 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character_flag = undertaking_hungarian_migration
+				}
+				player_heir = {
+					add_character_flag = {
+						flag = undertaking_hungarian_migration
+					}
+				}
+			}
+		}
+		
+		if = { # Lower Grandeur a little bit on death
+			limit = {
+				has_royal_court = yes
+				exists = primary_heir
+				primary_heir = {
+					has_royal_court = no
+				}
+			}
+			change_current_court_grandeur = grandeur_loss_on_succession_value
+		}
+		
+		if = { # Grandeur in elective realms
+			limit = {
+				has_royal_court = yes
+				exists = primary_heir
+				primary_heir = {
+					has_royal_court = no
+				}
+				primary_title = {
+					has_order_of_succession = election
+				}
+			}
+			primary_heir = {
+				set_variable = {
+					name = previous_holder_grandeur_value
+					value = prev.court_grandeur_current
 				}
 			}
 		}

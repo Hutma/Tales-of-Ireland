@@ -35,10 +35,9 @@
     learning =  3 
     prowess =  7 
 
-    trait = education_martial_2
     trait = fickle
     trait = arrogant
-    trait = diligent
+    trait = pensive
     trait = cessarian
 
     disallow_random_traits =  yes 
@@ -89,6 +88,7 @@
     trait = forgiving
     trait = compassionate
     trait = cessarian
+	trait = magician_good_1
 
     disallow_random_traits =  yes 
     4776.1.1 = {
@@ -216,10 +216,12 @@
     trait = impatient
     trait = humble
     trait = cessarian
+	trait = magician_good_2
 
     father=  101002 
 
-    disallow_random_traits =  2 
+    disallow_random_traits =  yes
+	
     4768.1.1 = {
         birth = yes
     }

@@ -112,13 +112,13 @@ get_popular_revolt_target_effect = {
 							holder.top_liege = scope:faction_target
 						}
 					}
-					add_to_list = potential_kingdoms
+					add_to_list = tmp_potential_kingdoms
 				}
 			}
 
 			# Out of the valid kingdoms (if any), pick the 'best' one
 			ordered_in_list = {
-				list = potential_kingdoms
+				list = tmp_potential_kingdoms
 
 				order_by = {
 					# First look at the total number of rebels within the kingdom's de jure territory.
@@ -181,13 +181,13 @@ get_popular_revolt_target_effect = {
 							holder.top_liege = scope:faction_target
 						}
 					}
-					add_to_list = potential_duchies
+					add_to_list = tmp_potential_duchies
 				}
 			}
 
 			# Out of the valid duchies (if any), pick the 'best' one
 			ordered_in_list = {
-				list = potential_duchies
+				list = tmp_potential_duchies
 
 				order_by = {
 					value = 0
@@ -241,7 +241,7 @@ get_popular_revolt_target_effect = {
 			}
 		}
 
-		# Re-save our temporary scope as the 'official' target scope, then clear the temporary scope.
+		# Re-save our temporary scope as the 'official' target scope, then clear all temporary scopes.
 		if = {
 			limit = {
 				exists = scope:tmp_target_title
@@ -251,6 +251,14 @@ get_popular_revolt_target_effect = {
 			}
 			set_special_title = scope:target_title
 			clear_saved_scope = tmp_target_title
+		}
+		every_in_list = {
+			list = tmp_potential_kingdoms
+			remove_from_list = tmp_potential_kingdoms
+		}
+		every_in_list = {
+			list = tmp_potential_duchies
+			remove_from_list = tmp_potential_duchies
 		}
 	}
 }
@@ -355,7 +363,6 @@ successful_popular_revolt_outcome_effect = {
 		every_faction_county_member = {
 			add_to_list = siezed_counties
 		}
-
 	}
 	# Additionally, if we're at war (and not just pressing demands), add all occupied counties and connected counties of the correct culture/faith.
 	if = {
@@ -460,7 +467,7 @@ successful_popular_revolt_outcome_effect = {
 							NOT = { exists = holder}
 							trigger_if = {
 								limit = { exists = holder}
-								holder.top_liege = scope:faction_target
+								holder.top_liege = scope:faction_target 
 
 								# Don't usurp the primary title from independent rulers if they don't have an equal-tier title to replace it with.
 								trigger_if = {
@@ -491,6 +498,10 @@ successful_popular_revolt_outcome_effect = {
 							}
 						}
 						# Special block to stop populist factions from creating Germany if the HRE is still alive and kicking.
+						NAND = {
+							this = title:k_east_francia
+							exists = title:e_hre.holder
+						}
 					}
 					add_to_list = potential_kingdoms
 				}
@@ -503,11 +514,19 @@ successful_popular_revolt_outcome_effect = {
 				any_in_list = {
 					list = potential_kingdoms
 					count >= 1
+					NAND = {
+						this = title:k_east_francia
+						exists = title:e_hre.holder
+					}
 				}
 			}
 			ordered_in_list = {
 				list = potential_kingdoms
 				limit = {
+					NAND = {
+						this = title:k_east_francia
+						exists = title:e_hre.holder
+					}
 				}
 
 				order_by = {
@@ -689,10 +708,24 @@ successful_popular_revolt_outcome_effect = {
 				liege = $FACTION_LEADER$
 				change = scope:change_three
 			}
+		} # give them independence
+		else = {
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = local_change
+			}
+			change_liege_or_become_independent = {
+				CHANGE = scope:local_change
+				VASSAL = this
+			}
+			resolve_title_and_vassal_change = scope:change
 		}
 	}
 
 	resolve_title_and_vassal_change = scope:change_three
+
+	# Sub-change: if any counties have been offended by HumSac'ing, since they're revolting, and tempers have hit fever pitch, remove their county opinion malus.
+	$FACTION_LEADER$ = { fp1_remove_humsac_offended_counties_effect = yes }
 
 	# CHANGE FOUR: If there are any disconnected counties, split them off via exclave independence rules.
 	scope:capital_county = {
@@ -743,6 +776,19 @@ successful_popular_revolt_outcome_effect = {
 				change_government = feudal_government
 			}
 			#If sourced elsewhere, and Islamic, make clan.
+			else_if = {
+				limit = {
+					$SOURCE_GOVERNMENT$ = {
+						NOR = {
+							has_government = tribal_government
+							has_government = clan_government
+							has_government = feudal_government
+						}
+					}
+					has_religion = religion:islam_religion
+				}
+				change_government = clan_government
+			}
 			#If sourced elsewhere, and not Islamic, make feudal.
 			else_if = {
 				limit = {
@@ -799,6 +845,7 @@ peasant_faction_demands_enforced = {
 			}
 		}
 		hidden_effect = {
+			clean_revolt_county_modifiers_from_faction_members_effect = yes
 			destroy_faction = yes
 		}
 	}
@@ -812,6 +859,7 @@ invalidate_claimant_factions_on_death_effect = {
 				exists = faction_war
 			}
 			faction_war = {
+				clear_claimant = yes
 				set_casus_belli = depose_war
 			}
 			faction_remove_war = yes # else the war gets invalidated when we destroy the faction
@@ -957,28 +1005,38 @@ setup_populist_leader_effect = {
 
 setup_peasant_leader_effect = {
 	save_scope_as = faction
-	random_faction_county_member = {
-		save_scope_as = peasant_county
-	}
-	create_character = {
-		location = scope:peasant_county.title_province
-		template = peasant_faction_leader_template
-		faith = scope:peasant_county.faith
-		culture = scope:peasant_county.culture
-		gender_female_chance = {
-			if = {
-				limit = { scope:peasant_county.faith = { has_doctrine = doctrine_gender_male_dominated } }
-				add = 0
-			}
-			else_if = {
-				limit = { scope:peasant_county.faith = { has_doctrine = doctrine_gender_female_dominated } }
-				add = 100
-			}
-			else = {
-				add = 50
-			}
+	# Does a peasant capital county already exist?
+	if = {
+		limit = {
+			NOT = { exists = scope:peasant_county }
 		}
-		save_scope_as = peasant_leader
+		random_faction_county_member = { save_scope_as = peasant_county }
+	}
+	# Does a peasant leader already exist?
+	if = {
+		limit = {
+			NOT = { exists = scope:peasant_leader }
+		}
+		create_character = {
+			location = scope:peasant_county.title_province
+			template = peasant_faction_leader_template
+			faith = scope:peasant_county.faith
+			culture = scope:peasant_county.culture
+			gender_female_chance = {
+				if = {
+					limit = { scope:peasant_county.faith = { has_doctrine = doctrine_gender_male_dominated } }
+					add = 0
+				}
+				else_if = {
+					limit = { scope:peasant_county.faith = { has_doctrine = doctrine_gender_female_dominated } }
+					add = 100
+				}
+				else = {
+					add = 50
+				}
+			}
+			save_scope_as = peasant_leader
+		}
 	}
 	scope:peasant_leader = {
 		add_character_flag = peasant_faction_random_peasant

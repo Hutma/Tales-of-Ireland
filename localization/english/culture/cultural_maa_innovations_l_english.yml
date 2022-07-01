@@ -1,7 +1,9 @@
 ﻿l_english:
  #Siege
  innovation_ram:0 "Ram"
- innovation_ram:0 "Using Ram will help us breaking through the walls of Ringforts."
+ innovation_ram_tribal:0 "Ram"
+ innovation_ram_desc:0 "Using Ram will help us breaking through the walls of Ringforts."
+ innovation_ram_tribal_desc:0 "Using Ram will help us breaking through the walls of Ringforts."
  #Military
  innovation_maa_leinster:0 "Warriors of Leinster"
  innovation_maa_leinster_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."
@@ -18,6 +20,9 @@
  innovation_maa_manx:0 "Warriors of Mannin"
  innovation_maa_manx_desc:0 "Living on this small island has taught us to manage our resources carefully. We have learned to maintain an effective fighting force more efficiently than other lands."
  
+ innovation_maa_scotland:0 "Warriors of Alba"
+ innovation_maa_scotland_desc:0 "We have many brave warriors, even our farmers know how to fight. We consider that a numerous band will always win over a trained one."
+ 
  innovation_chariot_leinster:0 "Chariots of Leinster"
  innovation_chariot_leinster_desc:0 "For decades we have been fighting in the plains of Leinster, we know how to use this flat terrain to our advantage."
  
@@ -32,6 +37,9 @@
  
  innovation_chariot_manx:0 "Chariots of Mannin"
  innovation_chariot_manx_desc:0 "Living on this small island has taught us to manage our resources carefully. We have learned to maintain an effective fighting force more efficiently than other lands."
+ 
+ innovation_chariot_scotland:0 "Chariots of Alba"
+ innovation_chariot_scotland_desc:0 "We have many brave warriors, even our farmers know how to fight. We consider that a numerous band will always win over a trained one."
  
  innovation_men_at_arms:0 "Men-at-Arms"
  innovation_men_at_arms_desc:0 "Training and equipping standing armies that remain under the direct disposal of our rulers will be a stepping stone on the road to centralize our power."
@@ -65,3 +73,9 @@
  
  innovation_maa_hybrazil:0 "Hy-Brasylian Adventurers"
  innovation_maa_hybrazil_desc:0 "The Hy-Brasylian live on a small magical island North of Ireland, hidden in the clouds. The lack of space there forces some of the Hy-Brasylians to leave their home, looking for other shores. They are the Hy-Brasylian Adventurers."
+ 
+ innovation_maa_roman:0 "The Legion"
+ innovation_maa_roman_desc:0 "The Roman Legion has nothing to prove, it just crushes the enemies with ease and efficiency."
+ 
+ innovation_maa_fairy:0 "Fairy Swarm"
+ innovation_maa_fairy_desc:0 "Rallying all the fairies we can in a strong swarm to overhelm the enemy."

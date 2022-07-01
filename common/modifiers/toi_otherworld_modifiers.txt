@@ -1,0 +1,83 @@
+﻿child_of_magic_modifier = {
+	icon = magic_positive
+	health = 2
+	courtier_opinion = 10
+	learning_per_piety_level = 2
+	diplomacy_per_piety_level = 2
+	intrigue_per_piety_level = 2
+	monthly_piety_gain_mult = 0.25	
+}
+
+lover_from_the_otherworld_modifier = {
+	icon = magic_positive
+	health = 6
+	courtier_opinion = 10
+	learning_per_piety_level = 2
+	diplomacy_per_piety_level = 2
+	intrigue_per_piety_level = 2
+	monthly_piety_gain_mult = 0.25	
+}
+
+concubine_of_a_sidhe_modifier = {
+	icon = magic_negative
+	diplomacy = -3
+	monthly_piety_gain_mult = -0.25
+}
+
+sidhe_heal_stress_modifier = {
+	icon = magic_positive
+	stress_loss_mult = 0.25
+}
+
+sidhe_heal_body_modifier = {
+	icon = magic_positive
+	health = 0.25
+}
+
+worsen_destiny_modifier = {
+	icon = magic_negative
+	general_opinion = -10
+	monthly_prestige = -0.5
+}
+
+better_destiny_modifier = {
+	icon = magic_positive
+	general_opinion = 10
+	monthly_prestige = 0.5
+}
+
+feast_with_gods_modifier = {
+	icon = food_positive
+	general_opinion = 5
+	monthly_piety = 0.25
+	diplomacy = 1
+}
+
+tir_fo_thuinn_trees_modifier = {
+	icon = fertility_positive
+	cultural_head_fascination_mult = 0.1
+}
+
+has_visited_tir_fo_thuinn_forest_modifier = {
+	icon = fertility_positive
+	learning_per_piety_level = 2
+	fertility = 0.1
+}
+
+talked_with_fishes_modifier = {
+	icon = diplomacy_positive
+	monthly_prestige = 0.15
+	embarkation_cost_mult = -0.35
+}
+
+admired_brandan_feasa_modifier = {
+	icon = diplomacy_positive
+	monthly_prestige = 0.15
+	vassal_opinion = 10
+}
+
+generous_to_the_poor_modifier = {
+	icon = diplomacy_positive
+	monthly_piety = 0.15
+	county_opinion_add = 10
+}

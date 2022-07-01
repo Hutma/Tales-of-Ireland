@@ -1,0 +1,550 @@
+﻿summon_sidhe_child_ai_effect = {
+	trigger_event = {
+		id = toi_magic_event.0001
+		days = { 100 600 }
+	}
+}
+
+summon_sidhe_advisor_ai_effect = {
+	random_list = {
+		10 = {
+			add_character_modifier = {
+				modifier = sidhe_advisor_martial
+				years = 4
+			}
+		}	
+		10 = {
+			add_character_modifier = {
+				modifier = sidhe_advisor_stewardship
+				years = 4
+			}
+		}	
+		10 = {
+			add_character_modifier = {
+				modifier = sidhe_advisor_intrigue
+				years = 4
+			}
+		}	
+		10 = {
+			add_character_modifier = {
+				modifier = sidhe_advisor_learning
+				years = 4
+			}
+		}	
+		10 = {
+			add_character_modifier = {
+				modifier = sidhe_advisor_diplomacy
+				years = 4
+			}
+		}
+	}
+}
+
+extend_lifespan_ai_effect = {
+	add_character_modifier = {
+		modifier = extended_life
+		years = 15
+	}
+}
+
+
+inflict_wounds_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.inflict_wounds.target
+			random_list = {
+				60 = {
+					add_trait = wounded_1
+				}
+				25 = {
+					add_trait = wounded_2
+				}
+				15 = {
+					add_trait = wounded_3
+				}
+			}
+		}
+	}
+}
+
+inflict_terror_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.inflict_terror.target
+			add_stress = 80
+		}
+	}
+}
+
+inflict_pestilence_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.inflict_pestilence.target
+			contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+		}
+	}
+}
+
+hostile_whispers_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.hostile_whispers.target
+			add_character_modifier = {
+				modifier = bad_wishpers
+				years = 5
+			}
+		}
+	}
+}
+
+fintan_transformation_ai_effect = {
+	add_character_modifier = {
+		modifier = fintan_form
+	}
+}
+
+deer_form_ai_effect = {
+	add_character_modifier = {
+		modifier = deer_form_modifier
+		years = 2
+	}
+}
+
+flood_realm_ai_effect = {
+	if = {
+		limit = {
+			exists = scope:ai_target
+		}
+		scope:ai_target = {
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.magic.flood_realm.target
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					set_variable = {
+						name = cattle_number
+						value = this.development_level
+					}
+					change_variable = {
+						name = cattle_number
+						multiply = 0.5
+					}
+					change_development_level = {
+						value = var:cattle_number
+						multiply = -1.0
+					}
+					remove_variable = cattle_number
+				}
+			}
+		}
+	}
+}
+
+serpent_bite_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.serpent_bite.target
+			random_list = {
+				55 = {
+					contract_disease_effect = { DISEASE = pneumonic TREATMENT_EVENT = no }
+				}
+				30 = {
+					contract_disease_effect = { DISEASE = leper TREATMENT_EVENT = no }
+				}
+				15 = {
+					contract_disease_effect = { DISEASE = great_pox TREATMENT_EVENT = no }
+				}
+			}
+		}
+	}
+}
+
+blood_moon_ai_effect = {
+	every_prisoner = {
+		add_to_list = possbile_blood_target
+	}
+	random_in_list = {
+		list = possbile_blood_target
+		save_scope_as = target_blood_moon
+	}
+	scope:target_blood_moon = {
+		death = {
+			killer = root
+			death_reason = death_sacrificed_to_gods
+		}
+	}
+	add_character_modifier = {
+		modifier = blood_moon_sacrifice
+		years = 5
+	}
+	add_prestige = 50
+}
+
+omen_of_opression_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.omen_of_opression.target
+			add_character_modifier = {
+				modifier = omen_of_opression_modifier
+				years = 5
+			}
+		}
+	}
+}
+
+healing_secret_ai_effect = {
+	add_character_modifier = {
+		modifier = healing_secret_modifier
+		years = 5
+	}
+}
+
+dagda_cauldron_ai_effect = {
+	add_character_modifier = {
+		modifier = dagda_cauldron_modifier
+		years = 5
+	}
+}
+
+lugh_strenght_ai_effect = {
+	add_character_modifier = {
+		modifier = lugh_strenght_modifier
+		years = 5
+	}
+}
+
+call_light_ai_effect = {
+	add_character_modifier = {
+		modifier = call_light_modifier
+		years = 5
+	}
+	add_stress = -80
+}
+
+summon_new_tribe_ai_effect = {
+	scope:ai_target = {
+		save_scope_as = war_target_ruler
+		summon_new_tribe_scripted_effect = yes
+	}
+}
+
+sacred_building_ai_effect = {
+	add_character_modifier = {
+		modifier = sacred_building_modifier
+		years = 4
+	}
+}
+
+suns_chosen_ai_effect = {
+	add_character_modifier = {
+		modifier = suns_chosen_modifier
+		years = 4
+	}	
+}
+
+hunting_spirits_ai_effect = {
+	add_character_modifier = {
+		modifier = hunting_spirits_modifier
+		years = 4
+	}
+	add_prestige = 150
+	add_trait = hunter_1
+}
+
+rune_words_ai_effect = {
+	every_knight = {
+		add_character_modifier = {
+			modifier = rune_words_modifier
+			years = 4
+		}
+	}
+}
+
+protective_amulet_ai_effect = {
+	add_character_modifier = {
+		modifier = protective_amulet_modifier
+		years = 5
+	}
+	every_close_family_member = {
+		add_character_modifier = {
+			modifier = protective_amulet_modifier
+			years = 5
+		}
+	}
+}
+
+cursed_tablet_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.cursed_tablet.target
+			add_character_modifier = {
+				modifier = cursed_tablet_modifier
+				years = 5
+			}
+		}
+		every_close_family_member = {
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.magic.cursed_tablet.target
+				add_character_modifier = {
+					modifier = cursed_tablet_modifier
+					years = 5
+				}
+			}
+		}
+	}
+}
+
+sidhe_agriculture_ai_effect = {
+	every_held_title = {
+		limit = {
+			tier = tier_county
+		}
+		add_county_modifier = {
+			modifier = sidhe_agriculture_modifier
+			years = 10
+		}
+	}
+}
+
+blessed_family_ai_effect = {
+	add_character_modifier = {
+		modifier = blessed_family_modifier
+		years = 4
+	}
+}
+
+nemedian_union_ai_effect = {
+	add_character_modifier = {
+		modifier = nemedian_union_modifier
+		years = 5
+	}
+}
+
+nemed_seduction_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.nemed_seduction.target
+			set_relation_lover = root
+		}
+	}
+}
+
+srengs_strenght_ai_effect = {
+	add_character_modifier = {
+		modifier = srengs_strenght_modifier
+		years = 3
+	}	
+}
+
+fir_bolg_endurance_ai_effect = {
+	add_character_modifier = {
+		modifier = fir_bolg_endurance_modifier
+		years = 4
+	}
+}
+
+men_of_bags_ai_effect = {
+	add_character_modifier = {
+		modifier = men_of_bags_modifier
+		years = 6
+	}
+}
+
+heavy_lifters_ai_effect = {
+	add_character_modifier = {
+		modifier = heavy_lifters_modifier
+		years = 4
+	}
+}
+
+path_of_destiny_ai_effect = {
+	capital_county.kingdom = {
+		save_scope_as = target_kingdom
+	}
+	add_pressed_claim = scope:target_kingdom
+}
+
+realm_ceremony_ai_effect = {
+	add_character_modifier = {
+		modifier = realm_ceremony_modifier
+		years = 5
+	}
+}
+
+enchant_bedroooms_ai_effect = {
+	add_character_modifier = {
+		modifier = enchant_bedroooms_modifier
+		years = 8
+	}
+}
+
+druidic_intersessions_ai_effect = {
+	add_character_modifier = {
+		modifier = druidic_intersessions_modifier
+		years = 15
+	}
+}
+
+magic_paintings_ai_effect = {
+	add_character_modifier = {
+		modifier = magic_paintings_modifier
+		years = 4
+	}
+	every_close_family_member = {
+		add_character_modifier = {
+			modifier = magic_paintings_modifier
+			years = 4
+		}
+	}
+}
+
+befriend_the_morrigan_ai_effect = {
+	add_character_modifier = {
+		modifier = befriend_the_morrigan_modifier
+		years = 10
+	}
+}
+
+settle_power_ai_effect = {
+	add_character_modifier = {
+		modifier = settle_power_modifier
+		years = 3
+	}
+}
+
+influence_culture_ai_effect = {
+	every_held_title = {
+		limit = {
+			tier = county
+		}
+		add_to_list = possible_county_target
+	}
+	random_in_list = {
+		list = possible_county_target
+		save_scope_as = county_target
+	}
+	scope:county_target = {
+		set_county_culture = root.culture
+	}
+}
+
+two_worlds_ai_effect = {
+	add_gold = 50
+	add_tales_of_abundance_lifestyle_xp = 250
+	add_prestige = 50
+}
+
+no_escape_curse_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.no_escape_curse.target
+			every_held_title = {
+				limit = {
+					tier = county
+				}
+				add_county_modifier = {
+					modifier = no_escape_curse_modifier
+					years = 10
+				}
+			}
+			add_character_flag = {
+				flag = no_escape_curse_flag
+				years = 15
+			}
+		}
+	}
+}
+
+brasil_fog_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.brasil_fog.target
+			every_child = {
+				limit = {
+					is_landed = no
+				}
+				contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+			}
+			add_character_flag = {
+				flag = basil_fog_flag
+				years = 10
+			}
+		}
+	}	
+}
+
+magic_mist_ai_effect = {
+	scope:ai_target = {
+		send_interface_toast = {
+			left_icon = root
+			title = tooltip.magic.magic_mist.target
+			add_character_modifier = {
+				modifier = magic_mist_modifier
+				years = 5
+			}
+			every_knight = {
+				add_to_list = possible_target_death_knights
+			}
+			every_courtier = {
+				add_to_list = possible_target_death_courtier
+			}
+			random_in_list = {
+				list = possible_target_death_knights
+				trigger_event = {
+					id = toi_magic_event.0004
+					days = 1
+				}
+			}
+			random_in_list = {
+				list = possible_target_death_courtier
+				save_scope_as = future_dead
+			}
+			random_in_list = {
+				list = possible_target_death_courtier
+				limit = {
+					NOT = {
+						this = scope:future_dead
+					}
+				}
+				save_scope_as = future_dead_two
+			}
+			scope:future_dead = {
+				trigger_event = {
+					id = toi_magic_event.0004
+					days = 1
+				}
+			}
+			scope:future_dead_two = {
+				trigger_event = {
+					id = toi_magic_event.0004
+					days = 1
+				}
+			}					
+			add_character_flag = {
+				flag = magic_mist_flag
+				years = 10
+			}
+		}
+	}
+}
+
+burn_incense_ai_effect = {
+	add_tales_of_abundance_lifestyle_xp = 75
+	add_character_modifier = {
+		modifier = burn_incense_modifier
+		years = 3
+	}	
+}

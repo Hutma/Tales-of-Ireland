@@ -1,0 +1,12 @@
+﻿#OPINIONS FOR TOI
+
+captivated_magic_opinion = {
+	opinion = 80
+	monthly_change = 1
+	decaying = yes
+}
+united_in_defiance_magic_opinion = {
+	opinion = 40
+	monthly_change = 4
+	decaying = yes
+}

@@ -11,8 +11,20 @@ on_opening_events = {
 }
 
 on_game_start = {
+	events = {
+		#Guaranteed historical artifacts fixed spawning
+		debug_portraits.1 					# Debug portraits for animation testing
+	}
 	effect = {
 #### TALES OF IRELAND ####
+		#vampires
+		if = {
+			limit = {
+				has_trait = irish_vampire
+			}
+			set_immortal_age = age
+		}
+		#vampires end
 		#Labraid story
 		if = {
 			limit = {
@@ -29,11 +41,12 @@ on_game_start = {
 		}
 		#Labraid story end
 		#High kingship
-		every_living_character = {
+		every_ruler = {
 			if 	= {
 				limit = {
 					AND = {
 						is_independent_ruler = yes
+						is_landed = yes
 						OR = {
 							highest_held_title_tier = 3
 							highest_held_title_tier = 4
@@ -45,70 +58,150 @@ on_game_start = {
 			add_pressed_claim = title:k_high_kingship
 			}
 		}
+		every_independent_ruler = {
+			if 	= {
+				limit = {
+					AND = {
+						has_government = feudal_government
+						has_trait = seelie_fairy
+					}
+				}
+			add_pressed_claim = title:k_seelie_court
+			}
+		}
+		every_independent_ruler = {
+			if 	= {
+				limit = {
+					AND = {
+						has_government = feudal_government
+						has_trait = unseelie_fairy
+					}
+				}
+			add_pressed_claim = title:k_unseelie_court
+			}
+		}
 		#high kingship end
 		
 		every_living_character = {
 			if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_cessarian_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 				add_trait = cessarian
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_cruithin_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_cruithin }}
 				add_trait = celtic_human
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_de_danann_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 				add_trait = tuatha_de_danann
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_erainn_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 				add_trait = celtic_human
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_laigin_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 				add_trait = celtic_human
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 				add_trait = fir_bolg
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_meghalithic_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 				add_trait = megalith_human
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_milesian_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 				add_trait = milesian
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_nemedian_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 				add_trait = nemedian
 			}
-			if = {
-			limit = {has_culture_group = culture_group:toi_partholonian_group}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 				add_trait = partholonian
 			}
-			if = {
+			else_if = {
 			limit = {has_culture = culture:bann_culture}
 				add_trait = megalith_human
 			}
-			if = {
+			else_if = {
 			limit = {has_culture = culture:brythonic_mann}
 				add_trait = celtic_human
 			}
-			if = {
-			limit = {has_culture = culture:roman}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 				add_trait = latin_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+				add_trait = scottish_fairy
 			}
 			add_trait = celtic_human
 		}
+		
+		every_ruler = {
+			limit = {
+				exists = dynasty 
+				dynasty.dynasty_prestige_level < 2
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 4
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 3
+				}
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 3
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 2
+				}
+			}
+			if = {
+				limit = {
+					highest_held_title_tier = 2
+					dynasty.dynasty_prestige_level < 2
+				}
+				dynasty = {
+					add_dynasty_prestige_level = 1
+				}
+			}
+		}
 #### TALES OF IRELAND ####
-	}
-	on_actions = {
+		### GRANDEUR ###
+		#Royal Court: Set starting Grandeur to be the same as Expected
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			every_character_with_royal_court = {
+				set_current_court_grandeur = court_grandeur_minimum_expected
+				apply_hold_court_grace_effect = yes
+				# Stops Hold Court reminders at game start
+				set_variable = {
+					name = last_hold_court_date
+					value = current_year
+				}
+			}
+		}
+
+		### STRUGGLES ###
 	}
 }
 
@@ -155,13 +248,12 @@ on_game_start_after_lobby = {
 			game_rule_sexuality_distribution_effect = yes
 		}
 
-		### ACHIEVEMENT: FROM RAGS TO RICHES
-		every_player = {
-			limit = { highest_held_title_tier = tier_county }
-			add_achievement_global_variable = {
-				VARIABLE = achievement_rags_to_riches_valid
-				VALUE = yes
-			}
+		### HOLD COURT STARTING GRACE
+		every_character_with_royal_court = {
+			set_variable = {
+				name = hold_court_cooldown
+	 			days = standard_hold_court_cooldown_time
+	 		}
 		}
 	}
 

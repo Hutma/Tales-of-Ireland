@@ -1,0 +1,21 @@
+﻿l_english:
+
+ toi_place_event.0001.t: "Carrick-a-Rede Rope Bridge"
+ toi_place_event.0001.desc: "The tiny island of Carraig a' Ráid, literally rock of the casting, is linked to the mainland via a simple rope bridge. Believed to have been built by fishermen who needed access to the fishing hotspot, the bridge is 30 meters, or 98 feet above the ground.\n\nThe perilous height and rickety bridge is a sure test of bravery, or foolishness. I wasn't sure which one I was as I slowly crossed over to the edge of the world. My nerves were calmed by the clear sky reflecting on the sapphire water, and the sand below shone in the bright sun. Fortunately, my companions and I crossed over and back without trouble; a clear reminder that even with my power as Ri, I am always at the mercy of the weather and nature.\n\nMy Court will surely be interested to hear the story..."
+ toi_place_event.0001.a: "A fine adventure."
+ toi_place_event.0001.b: "I tried to be brave, and led the crossing."
+ 
+ toi_place_event.0002.t: "The Cliffs of Moher"
+ toi_place_event.0002.desc: "The immense yet beautiful cliffs of the Clare coast has inspired many artists and poets for generations. They run for 14 kilometers, rising 214 meters above the sea at their highest point. Numerous paved pathways make this a walk unlike any other.\n\nAfter a difficult ascent, the view was a painting come to life. Waves of white and blue swirling and clashing; an eternal battle against a grey that is anything but dull, even the rocks had a vibrancy and livelihood unlike any other coast. Sitting in the emerald grass, I could see the Aran Islands standing almost defiantly, reaching out of the water to point at the sky. Behind me was the great mountains that divide our world. Never before have I seen such contrast and conflict in a place without man.\n\nMy Court will surely be interested to hear the story..."
+ toi_place_event.0002.a: "A fine adventure."
+ toi_place_event.0002.b: "I tried to be strong, and carried much of our supplies."
+
+ toi_place_event.0003.t: "Gap of Dunloe"
+ toi_place_event.0003.desc: "After the last Ice Age, massive glaciers cut through the land of Kerry, carving out a deep valley between MacGillycuddy's Reeks and the Purple Mountains. The name is derived from Dún Lóich, literally Lóich's Fort. Deala mac Lóich himself led the Fir Bolg on their reconquest of Ireland.\n\nAs I journeyed through the valley, I passed by the rushing rivers, the lazy interweaving streams, and the five magnificent lakes, each with their own shapes and sizes. Between Coosaun Lough and Black Lake was the famous Wishing Bridge, said to grant the wishes of any who visit. The water was shining white amid the bright sun, while reflecting the walls of green that flanked us.\n\nMy Court will surely be interested to hear the story..."
+ toi_place_event.0003.a: "I feel rested."
+ toi_place_event.0003.b: "I wished to be more Pious than my family."
+
+ toi_place_event.0004.t: "The Connemara"
+ toi_place_event.0004.desc: "In the western half of County Galway lies a wild, yet beautiful region. It is famous for its natural beauty and strong traditions that have survived over the generations.\n\nThis area is a microcosm of the world, capturing all the features of our island in a single place. Shining lakes and rushing rivers, coral beaches and sandy bays, vast plains and marshy bogs, rolling hills and deep forests. The tranquility of this place made me think of my own lands, how I could manage it better to bring harmony and prosperity.\n\nMy Court will surely be interested to hear the story..."
+ toi_place_event.0004.a: "I should do that more often."
+ toi_place_event.0004.b: "I was inspired to try some new, drastic ideas."

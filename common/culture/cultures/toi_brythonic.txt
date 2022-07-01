@@ -1,0 +1,98 @@
+﻿toi_pictish = {
+	# graphical_cultures = {
+		# western_building_gfx
+	# }
+	
+	color = { 178 28 0 }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_brythonic
+	language = language_picthish
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_concubines
+		tradition_poetry
+		tradition_highland_warriors
+		tradition_hill_dwellers
+	}
+	
+	name_list = name_list_pictish
+	
+	coa_gfx = { irish_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		5 = caucasian_blond
+		30 = caucasian_ginger
+		35 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}
+
+
+brythonic_scotland = {
+	# graphical_cultures = {
+		# western_building_gfx
+	# }
+	
+	color = { 0 120 90 }
+	
+	ethos = ethos_stoic
+	heritage = heritage_brythonic
+	language = language_cumbric
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_tribe_unity
+		tradition_highland_warriors
+		tradition_hill_dwellers
+	}
+	
+	name_list = name_list_cumbrian
+	
+	coa_gfx = { irish_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		5 = caucasian_blond
+		30 = caucasian_ginger
+		35 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}
+
+toi_cumbrian = {
+	# graphical_cultures = {
+		# western_building_gfx
+	# }
+	
+	color = { 30 134 151 }
+	
+	ethos = ethos_stoic
+	heritage = heritage_brythonic
+	language = language_cumbric
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_poetry
+		tradition_concubines
+		tradition_highland_warriors
+		tradition_stalwart_defenders
+	}
+	
+	name_list = name_list_cumbrian
+	
+	coa_gfx = { irish_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		5 = caucasian_blond
+		30 = caucasian_ginger
+		35 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+ take_blood_interaction:0 "Take Blood"
+ take_blood_interaction_desc:0 "Feed on the blood of [recipient.GetShortUINameNoTooltip] to fulfill your needs."
+ tooltip.vampire.take_blood.target:0 "[actor.GetShortUINameNoTooltip] drank your blood!"
+ tooltip.vampire.take_blood.target.fail:0 "[actor.GetShortUINameNoTooltip] tried to drink your blood!"

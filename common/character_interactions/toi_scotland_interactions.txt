@@ -1,0 +1,118 @@
+﻿#Recall Sept for Brythonic
+recall_sept_interaction = {
+	category = interaction_category_vassal
+	interface_priority = 70
+
+	desc = recall_sept_interaction_desc
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+
+		scope:actor = {
+			dynasty = scope:recipient.dynasty
+			culture = { has_cultural_pillar = heritage_brythonic }
+			highest_held_title_tier > scope:recipient.highest_held_title_tier
+			is_independent_ruler = yes
+		}
+		scope:recipient = {
+			is_landed = yes
+			is_independent_ruler = yes
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = need_greater_prestige_than_target
+			scope:actor.prestige_level > scope:recipient.prestige_level
+		}
+		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		custom_description = {
+			text = recall_sept_once_per_lifetime
+			scope:actor = { NOT = { has_character_flag = has_recalled_sept } }
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:recipient = {
+			trigger_event = {
+				id = toi_interaction.0001
+			}
+			#offer vassalization
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = change
+			}
+			scope:recipient = {
+				change_liege = {
+					liege = scope:actor
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Special terms for feudal contracts
+			scope:recipient = {
+				if = {
+					limit = {
+						has_government = feudal_government
+					}
+					hidden_effect = {
+						if = {
+							limit = { is_independent_ruler = no} # To avoid errors during tooltip generation (prior to the contract being generated)
+							vassal_contract_set_obligation_level = { type = feudal_government_taxes level = 1 }
+							vassal_contract_set_obligation_level = { type = feudal_government_levies level = 1 }
+						}			
+					}
+					custom_tooltip = low_obligations_taxes
+					custom_tooltip = low_obligations_levies	
+				}
+			}
+			add_opinion = {
+				modifier = hate_opinion
+				opinion = -25
+				target = scope:actor
+			}
+		}
+		
+		scope:actor = {
+			add_character_flag = has_recalled_sept
+		}
+	}
+
+	cost = {
+		prestige = 100
+	}
+
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = family
+	}
+	
+	ai_frequency = 36
+
+	ai_will_do = {
+		base = 100
+		
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+	}
+}

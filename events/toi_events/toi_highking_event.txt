@@ -1,0 +1,33 @@
+﻿namespace = toi_highking_event
+
+toi_highking_event.0001 = { #Respected high king
+	type = character_event
+	title = toi_highking_event.0001.t
+	desc = toi_highking_event.0001.desc
+	theme = diplomacy_majesty_focus
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = { 
+		has_title = title:k_high_kingship
+		diplomacy >= 12
+		is_at_war = no
+		root = {
+			any_targeting_faction = {
+				faction_power < 80
+			}
+		}
+	}
+
+	option = { # It feels good
+		name = toi_highking_event.0001.a
+		capital_county = {
+			change_development_level = 5
+		}
+		add_gold = 50
+		add_stress = -20
+	}
+}

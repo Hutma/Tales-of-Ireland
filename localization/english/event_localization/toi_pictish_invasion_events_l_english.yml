@@ -1,0 +1,22 @@
+﻿l_english:
+ 
+ toi_pictish_invasion.0001.t:0 "Wrath of the Picts"
+ toi_pictish_invasion.0001.desc:0 "Most Picts dwell in the Scottish Highlands, a wild and dangerous place with impassable mountains, ferocious animals and harsh weather. There's also many Sidhe that hate all beings who walk on two legs or lack wings.\n\nWith the subjugation of the Lowland Picts, the passage has opened for raiders to take Pictish treasures from up north. Word is spreading of the Highland Clans uniting and preparing to march on Alba!"
+ toi_pictish_invasion.0001.a:0 "A storm gathers over the mountains..."
+ 
+ toi_pictish_invasion.0002.t:0 "The Picts are here!"
+ toi_pictish_invasion.0002.desc:0 "Sources in the northern frontiers spread word of hordes painted in blue and armed to the teeth marching south. They will wash over the Lowlands like a flood, destroying all in their path. How far will they get before meeting an army that stops them?\n\nWe're not sure if they're here to avenge the loss of their brothers or simply replace them as new kings. Either way, all of Alba will feel their wrath."
+ toi_pictish_invasion.0002.a:0 "A storm descends from the mountains..."
+ 
+ toi_pictish_invasion.0003.t:0 "Last Pictish chance"
+ toi_pictish_invasion.0003.desc:0 "The final opportunity for the Picts has arrived. With morale at an all time low, a victory is desperately needed to revitalize the Pictish cause. If no such victory is achieved, one does not need to be a diplomat to see what might happen."
+ toi_pictish_invasion.0003.a:0 "The Picts are fading"
+ 
+ toi_pictish_invasion.0004.t:0 "End of the Picts"
+ toi_pictish_invasion.0004.desc:0 "They have failed!\n\nThe Picts have failed!\n\nThey, who were once united, have been shattered by the rock of the defenders. The highlands will likely be in total turmoil for centuries to come, as men capable of uniting it are rare indeed. \n\nWith this defeat, the era of the picts is decidedly over, and a new era has begun."
+ toi_pictish_invasion.0004.a:0 "To a New Era! "
+ 
+ 
+ PICTISH_ARMY:0 "Pictish Army"
+ 
+ pictish_army_event_troops:0 "Pictish invading army"

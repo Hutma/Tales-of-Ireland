@@ -1,0 +1,498 @@
+﻿ai_update_fairy_trait_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	
+	ai_check_interval = 12
+	cooldown = {
+		years = 15
+	}
+
+	is_shown = {
+		is_ai = yes
+		has_trait = scottish_fairy
+	}
+
+	is_valid = {
+		has_trait = scottish_fairy
+		is_landed = yes
+		NOT = {
+			OR = {
+				has_title = title:k_seelie_court
+				has_title = title:k_unseelie_court
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 0
+	}
+
+	effect = {
+		remove_trait = seelie_fairy
+		remove_trait = unseelie_fairy
+		give_seelie_unseelie_effect = yes
+		
+		if 	= {
+			limit = {
+				is_landed = yes
+				AND = {
+					has_government = feudal_government
+					has_trait = seelie_fairy
+				}
+			}
+			add_pressed_claim = title:k_seelie_court
+			remove_claim = title:k_unseelie_court
+		}
+		if 	= {
+			limit = {
+				is_landed = yes
+				AND = {
+					has_government = feudal_government
+					has_trait = unseelie_fairy
+				}
+			}
+			add_pressed_claim = title:k_unseelie_court
+			remove_claim = title:k_seelie_court
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+determine_fairy_court_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	
+	desc = determine_fairy_court_decision_desc
+	
+	ai_check_interval = 80
+	cooldown = {
+		years = 20
+	}
+
+	is_shown = {
+		has_trait = scottish_fairy
+	}
+
+	is_valid = {
+		has_trait = scottish_fairy
+		is_landed = yes
+		NOT = {
+			OR = {
+				has_title = title:k_seelie_court
+				has_title = title:k_unseelie_court
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+	}
+
+	cost = {
+		piety = 100
+	}
+
+	effect = {
+		remove_trait = seelie_fairy
+		remove_trait = unseelie_fairy
+		give_seelie_unseelie_effect = yes
+		
+		hidden_effect = {
+			if 	= {
+				limit = {
+					is_landed = yes
+					AND = {
+						has_government = feudal_government
+						has_trait = seelie_fairy
+					}
+				}
+				add_pressed_claim = title:k_seelie_court
+				remove_claim = title:k_unseelie_court
+			}
+			if 	= {
+				limit = {
+					is_landed = yes
+					AND = {
+						has_government = feudal_government
+						has_trait = unseelie_fairy
+					}
+				}
+				add_pressed_claim = title:k_unseelie_court
+				remove_claim = title:k_seelie_court
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+summon_fairy_to_court_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	
+	desc = summon_fairy_to_court_decision_desc
+	
+	ai_check_interval = 80
+	cooldown = {
+		years = 12
+	}
+
+	is_shown = {
+		has_trait = scottish_fairy
+		age > 18
+	}
+
+	is_valid = {
+		has_trait = scottish_fairy
+		is_landed = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 75
+		gold = 15
+	}
+
+	effect = {
+		hidden_effect = {
+			random_list = {
+				10 = {
+					create_character = {
+						trait = scottish_fairy
+						age = 17
+						employer = root
+						template = pool_repopulate_diplomacy
+						faith = root.faith
+						culture = root.culture
+						gender_female_chance = 50
+						save_scope_as = generated_fairy
+					}
+				}
+				10 = {
+					create_character = {
+						trait = scottish_fairy
+						age = 17
+						employer = root
+						template = pool_repopulate_martial
+						faith = root.faith
+						culture = root.culture
+						gender_female_chance = 50
+						save_scope_as = generated_fairy
+					}
+				}
+				10 = {
+					create_character = {
+						trait = scottish_fairy
+						age = 17
+						employer = root
+						template = pool_repopulate_stewardship
+						faith = root.faith
+						culture = root.culture
+						gender_female_chance = 50
+						save_scope_as = generated_fairy
+					}
+				}
+				10 = {
+					create_character = {
+						trait = scottish_fairy
+						age = 17
+						employer = root
+						template = pool_repopulate_intrigue
+						faith = root.faith
+						culture = root.culture
+						gender_female_chance = 50
+						save_scope_as = generated_fairy
+					}
+				}
+				10 = {
+					create_character = {
+						trait = scottish_fairy
+						age = 17
+						employer = root
+						template = pool_repopulate_learning
+						faith = root.faith
+						culture = root.culture
+						gender_female_chance = 50
+						save_scope_as = generated_fairy
+					}
+				}
+			}
+		}
+		scope:generated_fairy = {
+			set_house = root.house
+			if = {
+				limit = { root = { is_female = no } }
+				set_father = root
+			}
+			else = {
+				set_mother = root
+			}
+		}
+		send_interface_toast = {
+			title = a_new_fairy_in_court.tt
+			left_icon = scope:generated_fairy
+		}
+		clear_saved_scope = generated_fairy
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+call_seelie_king_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	
+	desc = call_seelie_king_decision_desc
+	
+	cooldown = { years = 5 }
+	major = yes
+	ai_check_interval = 12
+
+	is_shown = {
+		is_independent_ruler = yes
+		has_trait = seelie_fairy
+		any_character_war = {
+			primary_defender = root
+		}
+		exists = title:k_seelie_court.holder
+		NOT = { has_title = title:k_seelie_court }
+	}
+
+	is_valid = {
+		custom_description = {
+			text = defend_against_non_fairy_trigger_desc
+			OR = {
+				any_character_war = {
+					primary_attacker = title:k_unseelie_court.holder
+				}
+				any_character_war = {
+					primary_attacker = {
+						NOT = {
+							has_trait = scottish_fairy
+						}
+					}
+				}
+			}
+			NOT = { has_title = title:k_seelie_court }
+		}
+	}
+
+	cost = {
+		prestige = 100
+	}
+
+	effect = {
+		every_character_war = {
+			limit = {
+				is_defender = root
+				is_war_leader = root
+				primary_attacker = { NOT = { has_trait = scottish_fairy } }
+			}
+			add_to_list = war_defender_list
+		}
+		random_in_list = {
+			list = war_defender_list
+			save_scope_as = war_to_call
+		}
+		save_scope_as = fairy_to_defend
+		title:k_seelie_court.holder = {
+			trigger_event = {
+				days = 3
+				id = toi_fairy_event.0001
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+call_unseelie_king_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	
+	desc = call_unseelie_king_decision_desc
+	
+	cooldown = { years = 5 }
+	major = yes
+	ai_check_interval = 12
+
+	is_shown = {
+		is_independent_ruler = yes
+		has_trait = unseelie_fairy
+		any_character_war = {
+			primary_defender = root
+		}
+		exists = title:k_unseelie_court.holder
+		NOT = { has_title = title:k_unseelie_court }
+	}
+
+	is_valid = {
+		custom_description = {
+			text = defend_against_non_fairy_trigger_desc
+			OR = {
+				any_character_war = {
+					primary_attacker = title:k_seelie_court.holder
+				}
+				any_character_war = {
+					primary_attacker = {
+						NOT = {
+							has_trait = scottish_fairy
+						}
+					}
+				}
+			}
+			NOT = { has_title = title:k_unseelie_court }
+		}
+	}
+
+	cost = {
+		prestige = 100
+	}
+
+	effect = {
+		every_character_war = {
+			limit = {
+				is_defender = root
+				is_war_leader = root
+				primary_attacker = { NOT = { has_trait = scottish_fairy } }
+			}
+			add_to_list = war_defender_list
+		}
+		random_in_list = {
+			list = war_defender_list
+			save_scope_as = war_to_call
+		}
+		save_scope_as = fairy_to_defend
+		title:k_unseelie_court.holder = {
+			trigger_event = {
+				days = 3
+				id = toi_fairy_event.0001
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+retake_seelie_court_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	
+	desc = retake_seelie_court_decision_desc
+	
+	major = yes
+	ai_check_interval = 60
+
+	is_shown = {
+		is_independent_ruler = yes
+		has_trait = seelie_fairy
+		OR = {
+			NOT = {
+				exists = title:k_seelie_court.holder
+			}
+			title:k_seelie_court.holder = {
+				NOT = {
+					has_trait = seelie_fairy
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+	}
+
+	cost = {
+		prestige = 50
+		gold = 25
+	}
+
+	effect = {
+		get_title = title:k_seelie_court
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+retake_unseelie_court_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	
+	desc = retake_unseelie_court_decision_desc
+	
+	major = yes
+	ai_check_interval = 60
+
+	is_shown = {
+		is_independent_ruler = yes
+		has_trait = unseelie_fairy
+		OR = {
+			NOT = {
+				exists = title:k_unseelie_court.holder
+			}
+			title:k_unseelie_court.holder = {
+				NOT = {
+					has_trait = unseelie_fairy
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+	}
+
+	cost = {
+		prestige = 50
+		gold = 25
+	}
+
+	effect = {
+		get_title = title:k_unseelie_court
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

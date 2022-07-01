@@ -1,6 +1,59 @@
 ﻿##################################################
-# Decisions
-##################################################
+
+secure_high_kingdom_north_sea_scripted_effect = {
+	
+}
+
+found_capital_of_rus_scripted_effect = {
+	#Reward fame to compensate for reduced development gain.
+	add_prestige_experience = major_prestige_gain
+	scope:new_rus_capital = {
+		#Boost local development a few levels; majority of development gain is handled in the modifiers now.
+		if = {
+			limit = { development_level < 5 }
+			change_development_level = {
+				value = 5
+				subtract = scope:new_rus_capital.development_level
+			}
+		}
+		else_if = {
+			limit = { development_level < 8 }
+			change_development_level = {
+				value = 8
+				subtract = scope:new_rus_capital.development_level
+			}
+		}
+		else_if = {
+			limit = { development_level < 12 }
+			change_development_level = {
+				value = 12
+				subtract = scope:new_rus_capital.development_level
+			}
+		}
+		#If control is less than full, boost it to full.
+		if = {
+			limit = { county_control < full_county_control }
+			change_county_control = 100
+		}
+		#Add county modifier giving solid opinion for a decent chunk of time.
+		add_county_modifier = {
+			modifier = capital_of_rus_opinion_modifier
+			years = 20
+		}
+		#Add county modifier giving intense benefits for a century.
+		add_county_modifier = {
+			modifier = capital_of_rus_misc_benefits_modifier
+			years = 100
+		}
+		#If this county isn't the de jure capital of e_russia, make it so.
+		if = {
+			limit = {
+				NOT = { this = title:e_russia.title_capital_county }
+			}
+			title:e_russia = { set_capital_county = scope:new_rus_capital }
+		}
+	}
+}
 
 fp1_apply_generic_stele_bonuses_effect = {
 	add_piety = major_piety_gain
@@ -42,6 +95,9 @@ fp1_apply_generic_stele_bonuses_effect = {
 	}
 }
 
+elevate_mann_and_the_isles_scripted_effect = {
+
+}
 
 fp1_remove_stele_effect = {
 	if = {
@@ -192,7 +248,6 @@ forge_the_jomsvikings_scripted_effect = {
 		value = scope:leader.primary_title
 	}
 	# Achievement flag.
-	add_achievement_flag = { FLAG = achievement_non_nobis_domine_flag }
 	# Some minor misc effects.
 	create_holy_order_effect = yes
 	scope:leader.primary_title = { set_coa = ho_jomsvikings }
@@ -205,6 +260,26 @@ forge_the_jomsvikings_scripted_effect = {
 	}
 }
 
+forge_the_jomsvikings_maa_reward_effect = {
+
+}
+
+forge_the_jomsvikings_decision_tooltip_effect = {
+	# Standard info.
+	custom_tooltip = create_holy_order_decision_effect_message
+	create_holy_order_effect = yes
+	# And the free army.
+	forge_the_jomsvikings_maa_reward_effect = yes
+}
+
+fp1_remove_humsac_offended_counties_effect = {
+	every_sub_realm_county = {
+		if = {
+			limit = { has_county_modifier = held_human_sacrifice_fp1_modifier }
+			remove_county_modifier = held_human_sacrifice_fp1_modifier
+		}
+	}
+}
 
 ##################################################
 # Interactions
@@ -259,9 +334,9 @@ fp1_tbc_death_effect = {
 		limit = { $TBC_VICTOR$.primary_title.tier < $TBC_LOSER$.primary_title.tier }
 		$TBC_VICTOR$ = { add_prestige = minor_prestige_gain }
 	}
-	$TBC_VICTOR$ = {
+	$TBC_LOSER$ = {
 		death = {
-			killer = $TBC_LOSER$
+			killer = $TBC_VICTOR$
 			death_reason = death_duel
 		}
 	}
@@ -311,6 +386,78 @@ try_create_challenge_to_single_combat = {
 	}
 }
 
+replace_with_learning_trait_effect = {
+	if = {
+		limit = { has_trait = education_intrigue_1 }
+		remove_trait = education_intrigue_1
+	}
+	else_if = {
+		limit = { has_trait = education_intrigue_2 }
+		remove_trait = education_intrigue_2
+	}
+	else_if = {
+		limit = { has_trait = education_intrigue_3 }
+		remove_trait = education_intrigue_3
+	}
+	else_if = {
+		limit = { has_trait = education_intrigue_4 }
+		remove_trait = education_intrigue_4
+	}
+	else_if = {
+		limit = { has_trait = education_diplomacy_1 }
+		remove_trait = education_diplomacy_1
+	}
+	else_if = {
+		limit = { has_trait = education_diplomacy_2 }
+		remove_trait = education_diplomacy_2
+	}
+	else_if = {
+		limit = { has_trait = education_diplomacy_3 }
+		remove_trait = education_diplomacy_3
+	}
+	else_if = {
+		limit = { has_trait = education_diplomacy_4 }
+		remove_trait = education_diplomacy_4
+	}
+	else_if = {
+		limit = { has_trait = education_stewardship_1 }
+		remove_trait = education_stewardship_1
+	}
+	else_if = {
+		limit = { has_trait = education_stewardship_2 }
+		remove_trait = education_stewardship_2
+	}
+	else_if = {
+		limit = { has_trait = education_stewardship_3 }
+		remove_trait = education_stewardship_3
+	}
+	else_if = {
+		limit = { has_trait = education_stewardship_4 }
+		remove_trait = education_stewardship_4
+	}
+	else_if = {
+		limit = { has_trait = education_martial_1 }
+		remove_trait = education_martial_1
+	}
+	else_if = {
+		limit = { has_trait = education_martial_2 }
+		remove_trait = education_martial_2
+	}
+	else_if = {
+		limit = { has_trait = education_martial_3 }
+		remove_trait = education_martial_3
+	}
+	else_if = {
+		limit = { has_trait = education_martial_4 }
+		remove_trait = education_martial_4
+	}
+	random_list = {
+		2 = { add_trait = education_learning_2 }
+		2 = { add_trait = education_learning_3 }
+		1 = { add_trait = education_learning_4 }
+	}
+}
+
 ##################################################
 # CBs
 ##################################################
@@ -323,6 +470,41 @@ clean_scandinavian_adventurer_effect = {
 			scope:attacker = { destroy_title = scope:destroyable_title }
 		}
 		remove_character_modifier = scandinavian_adventurer_fp1_modifier
+	}
+}
+
+fp1_add_realm_size_appropriate_sa_reprieve_effect = {
+	# Depending on the sub realm size of $VICTIM$, we give them a scaling amount of time not to be hit by SA attacks.
+	## The smallest realms get a long reprieve.
+	if = {
+		limit = { sub_realm_size <= tiny_realm_size }
+		add_character_modifier = {
+			modifier = fp1_reprieve_from_sa_modifier
+			years = 20
+		}
+	}
+	## Then a decent reprieve.
+	else_if = {
+		limit = { sub_realm_size <= minor_realm_size }
+		add_character_modifier = {
+			modifier = fp1_reprieve_from_sa_modifier
+			years = 15
+		}
+	}
+	## Then a short reprieve.
+	else_if = {
+		limit = { sub_realm_size <= medium_realm_size }
+		add_character_modifier = {
+			modifier = fp1_reprieve_from_sa_modifier
+			years = 10
+		}
+	}
+	## Then you're clearly too big and juicy a target for much reprieve at all.
+	else = {
+		add_character_modifier = {
+			modifier = fp1_reprieve_from_sa_modifier
+			years = 5
+		}
 	}
 }
 

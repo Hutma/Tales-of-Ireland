@@ -65,9 +65,9 @@
 		#HealthGod
 		HealthGodName = eastern_legacy_health_god_name
 		HealthGodNamePossessive = eastern_legacy_health_god_name_possessive
-		HealthGodSheHe = CHARACTER_SHEHE_SHE
-		HealthGodHerHis = CHARACTER_HERHIS_HER
-		HealthGodHerHim = CHARACTER_HERHIM_HER
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
 		
 		#FertilityGod
 		FertilityGodName = eastern_legacy_fertility_god_name
@@ -79,51 +79,51 @@
 		#WealthGod
 		WealthGodName = eastern_legacy_wealth_god_name
 		WealthGodNamePossessive = eastern_legacy_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_SHE
-		WealthGodHerHis = CHARACTER_HERHIS_HER
-		WealthGodHerHim = CHARACTER_HERHIM_HER
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
 
 		#HouseholdGod
 		HouseholdGodName = eastern_legacy_household_god_name
 		HouseholdGodNamePossessive = eastern_legacy_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HER
-		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
 		#FateGod
 		FateGodName = eastern_legacy_fate_god_name
 		FateGodNamePossessive = eastern_legacy_fate_god_name_possessive
-		FateGodSheHe = CHARACTER_SHEHE_IT
-		FateGodHerHis = CHARACTER_HERHIS_ITS
-		FateGodHerHim = CHARACTER_HERHIM_IT
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		#KnowledgeGod
 		KnowledgeGodName = eastern_legacy_knowledge_god_name
 		KnowledgeGodNamePossessive = eastern_legacy_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WarGod
 		WarGodName = eastern_legacy_war_god_name
 		WarGodNamePossessive = eastern_legacy_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_SHE
-		WarGodHerHis = CHARACTER_HERHIS_HER
-		WarGodHerHim = CHARACTER_HERHIM_HER
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
 
 		#TricksterGod
 		TricksterGodName = eastern_legacy_trickster_god_name
 		TricksterGodNamePossessive = eastern_legacy_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_HE
-		TricksterGodHerHis = CHARACTER_HERHIS_HIS
-		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		TricksterGodSheHe = CHARACTER_SHEHE_SHE
+		TricksterGodHerHis = CHARACTER_HERHIS_HER
+		TricksterGodHerHim = CHARACTER_HERHIM_HER
 
 		#NightGod
 		NightGodName = eastern_legacy_night_god_name
 		NightGodNamePossessive = eastern_legacy_night_god_name_possessive
-		NightGodSheHe = CHARACTER_SHEHE_HE
-		NightGodHerHis = CHARACTER_HERHIS_HIS
-		NightGodHerHim = CHARACTER_HERHIM_HIM
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
 
 		#WaterGod
 		WaterGodName = eastern_legacy_water_god_name
@@ -133,9 +133,9 @@
 		WaterGodHerHim = CHARACTER_HERHIM_HER
 
 
-		PantheonTerm = eastern_legacy_mother_earth_father_sky
+		PantheonTerm = eastern_legacy_the_gods
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { eastern_legacy_high_god_name eastern_legacy_good_god_father_sky eastern_legacy_good_god_ancestors }
+		GoodGodNames = { eastern_legacy_high_god_name eastern_legacy_good_god_ancestors }
 		DevilName = eastern_legacy_devil_name
 		DevilNamePossessive = eastern_legacy_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = eastern_legacy_religious_text
 		ReligiousHeadName = eastern_legacy_religious_head_title
 		ReligiousHeadTitleName = eastern_legacy_religious_head_title_name
-		DevoteeMale = eastern_legacy_devotee
-		DevoteeMalePlural = eastern_legacy_devoteeplural
-		DevoteeFemale = eastern_legacy_devotee
-		DevoteeFemalePlural = eastern_legacy_devoteeplural
-		DevoteeNeuter = eastern_legacy_devotee
-		DevoteeNeuterPlural = eastern_legacy_devoteeplural
-		PriestMale = eastern_legacy_priest
-		PriestMalePlural = eastern_legacy_priest_plural
-		PriestFemale = eastern_legacy_priest
-		PriestFemalePlural = eastern_legacy_priest_plural
-		PriestNeuter = eastern_legacy_priest
-		PriestNeuterPlural = eastern_legacy_priest_plural
+		DevoteeMale = eastern_legacy_devotee_male
+		DevoteeMalePlural = eastern_legacy_devotee_male_plural
+		DevoteeFemale = eastern_legacy_devotee_female
+		DevoteeFemalePlural = eastern_legacy_devotee_female_plural
+		DevoteeNeuter = eastern_legacy_devotee_male
+		DevoteeNeuterPlural = eastern_legacy_devotee_male_plural
+		PriestMale = eastern_legacy_priest_male
+		PriestMalePlural = eastern_legacy_priest_male_plural
+		PriestFemale = eastern_legacy_priest_female
+		PriestFemalePlural = eastern_legacy_priest_female_plural
+		PriestNeuter = eastern_legacy_priest_male
+		PriestNeuterPlural = eastern_legacy_priest_male_plural
 		AltPriestTermPlural = eastern_legacy_priest_alternate_plural
-		BishopMale = eastern_legacy_priest
-		BishopMalePlural = eastern_legacy_priest_plural
-		BishopFemale = eastern_legacy_priest
-		BishopFemalePlural = eastern_legacy_priest_plural
-		BishopNeuter = eastern_legacy_priest
-		BishopNeuterPlural = eastern_legacy_priest_plural
+		BishopMale = eastern_legacy_bishop_male
+		BishopMalePlural = eastern_legacy_bishop_male_plural
+		BishopFemale = eastern_legacy_bishop_female
+		BishopFemalePlural = eastern_legacy_bishop_female_plural
+		BishopNeuter = eastern_legacy_bishop_male
+		BishopNeuterPlural = eastern_legacy_bishop_male_plural
 		DivineRealm = eastern_legacy_divine_realm
 		PositiveAfterLife = eastern_legacy_divine_realm
 		NegativeAfterLife = eastern_legacy_afterlife
@@ -174,12 +174,12 @@
 		DeathDeityNamePossessive = eastern_legacy_death_deity_name_possessive
 		DeathDeitySheHe = eastern_legacy_devil_shehe
 		DeathDeityHerHis = eastern_legacy_death_deity_herhis
-		WitchGodName = witchgodname_eastern_legacy_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
-		WitchGodMistressMaster = witch_spirit
- 		WitchGodMotherFather = witch_source
+		WitchGodName = witchgodname_eastern_legacy_the_morrigan
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+ 		WitchGodMotherFather = mother
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
@@ -199,6 +199,145 @@
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_sky_burials
 			doctrine = tenet_divine_agriculture
+
+                	localization = {
+
+				HighGodName = scythian_heritage_high_god_name
+				HighGodNamePossessive = scythian_heritage_high_god_name_possessive
+				HighGodNameSheHe = CHARACTER_SHEHE_SHE
+				HighGodHerselfHimself = CHARACTER_HERSELF
+				HighGodHerHis = CHARACTER_HERHIS_HER
+				HighGodNameAlternate = scythian_heritage_high_god_name_alternate
+				HighGodNameAlternatePossessive = scythian_heritage_high_god_name_alternate_possessive
+
+				#Creator
+				CreatorName = scythian_heritage_creator_god_name
+				CreatorNamePossessive = scythian_heritage_creator_god_name_possessive
+				CreatorSheHe = CHARACTER_SHEHE_SHE
+				CreatorHerHis = CHARACTER_HERHIS_HER
+				CreatorHerHim = CHARACTER_HERHIM_HER
+
+				#HealthGod
+				HealthGodName = scythian_heritage_health_god_name
+				HealthGodNamePossessive = scythian_heritage_health_god_name_possessive
+				HealthGodSheHe = CHARACTER_SHEHE_SHE
+				HealthGodHerHis = CHARACTER_HERHIS_HER
+				HealthGodHerHim = CHARACTER_HERHIM_HER
+		
+				#FertilityGod
+				FertilityGodName = scythian_heritage_fertility_god_name
+				FertilityGodNamePossessive = scythian_heritage_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = scythian_heritage_wealth_god_name
+				WealthGodNamePossessive = scythian_heritage_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_SHE
+				WealthGodHerHis = CHARACTER_HERHIS_HER
+				WealthGodHerHim = CHARACTER_HERHIM_HER
+
+				#HouseholdGod
+				HouseholdGodName = scythian_heritage_household_god_name
+				HouseholdGodNamePossessive = scythian_heritage_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_SHE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HER
+				HouseholdGodHerHim = CHARACTER_HERHIM_HER
+
+				#FateGod
+				FateGodName = scythian_heritage_fate_god_name
+				FateGodNamePossessive = scythian_heritage_fate_god_name_possessive
+				FateGodSheHe = CHARACTER_SHEHE_HE
+				FateGodHerHis = CHARACTER_HERHIS_HIS
+				FateGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = scythian_heritage_knowledge_god_name
+				KnowledgeGodNamePossessive = scythian_heritage_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WarGod
+				WarGodName = scythian_heritage_war_god_name
+				WarGodNamePossessive = scythian_heritage_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#TricksterGod
+				TricksterGodName = scythian_heritage_trickster_god_name
+				TricksterGodNamePossessive = scythian_heritage_trickster_god_name_possessive
+				TricksterGodSheHe = CHARACTER_SHEHE_HE
+				TricksterGodHerHis = CHARACTER_HERHIS_HIS
+				TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+				#NightGod
+				NightGodName = scythian_heritage_night_god_name
+				NightGodNamePossessive = scythian_heritage_night_god_name_possessive
+				NightGodSheHe = CHARACTER_SHEHE_SHE
+				NightGodHerHis = CHARACTER_HERHIS_HER
+				NightGodHerHim = CHARACTER_HERHIM_HER
+
+				#WaterGod
+				WaterGodName = scythian_heritage_water_god_name
+				WaterGodNamePossessive = scythian_heritage_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+
+				PantheonTerm = scythian_heritage_mother_earth_father_sky
+				PantheonTermHasHave = scythian_heritage_have
+				GoodGodNames = { scythian_heritage_high_god_name scythian_heritage_health_god_name scythian_heritage_fertility_god_name scythian_heritage_fate_god_name scythian_heritage_knowledge_god_name scythian_heritage_war_god_name scythian_heritage_good_god_ancestors }
+				DevilName = scythian_heritage_devil_name
+				DevilNamePossessive = scythian_heritage_devil_name_possessive
+				DevilSheHe = CHARACTER_SHEHE_IT
+				DevilHerHis = CHARACTER_HERHIS_ITS
+				DevilHerselfHimself = scythian_heritage_devil_herselfhimself
+				EvilGodNames = { scythian_heritage_devil_name scythian_heritage_evil_god_decay }
+				HouseOfWorship = scythian_heritage_house_of_worship
+				HouseOfWorshipPlural = scythian_heritage_house_of_worship_plural
+				ReligiousSymbol = scythian_heritage_religious_symbol
+				ReligiousText = scythian_heritage_religious_text
+				ReligiousHeadName = scythian_heritage_religious_head_title
+				ReligiousHeadTitleName = scythian_heritage_religious_head_title_name
+				DevoteeMale = scythian_heritage_devotee_male
+				DevoteeMalePlural = scythian_heritage_devotee_male_plural
+				DevoteeFemale = scythian_heritage_devotee_female
+				DevoteeFemalePlural = scythian_heritage_devotee_female_plural
+				DevoteeNeuter = scythian_heritage_devotee_male
+				DevoteeNeuterPlural = scythian_heritage_devotee_male_plural
+				PriestMale = scythian_heritage_priest_male
+				PriestMalePlural = scythian_heritage_priest_male_plural
+				PriestFemale = scythian_heritage_priest_female
+				PriestFemalePlural = scythian_heritage_priest_female_plural
+				PriestNeuter = scythian_heritage_priest_male
+				PriestNeuterPlural = scythian_heritage_priest_male_plural
+				AltPriestTermPlural = scythian_heritage_priest_alternate_plural
+				BishopMale = scythian_heritage_bishop_male
+				BishopMalePlural = scythian_heritage_bishop_male_plural
+				BishopFemale = scythian_heritage_bishop_female
+				BishopFemalePlural = scythian_heritage_bishop_female_plural
+				BishopNeuter = scythian_heritage_bishop_male
+				BishopNeuterPlural = scythian_heritage_bishop_male_plural
+				DivineRealm = scythian_heritage_divine_realm
+				PositiveAfterLife = scythian_heritage_divine_realm
+				NegativeAfterLife = scythian_heritage_afterlife
+				DeathDeityName = scythian_heritage_death_deity_name
+				DeathDeityNamePossessive = scythian_heritage_death_deity_name_possessive
+				DeathDeitySheHe = scythian_heritage_devil_shehe
+				DeathDeityHerHis = scythian_heritage_death_deity_herhis
+				WitchGodName = witchgodname_scythian_heritage_maspalla
+				WitchGodSheHe = CHARACTER_SHEHE_SHE
+				WitchGodHerHis = CHARACTER_HERHIS_HER
+				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodMistressMaster = mistress
+ 				WitchGodMotherFather = mother
+		
+					}
+
 		}
 		ancient_greek_slave = {
 			color = { 220 100 100 }
@@ -213,6 +352,146 @@
 			doctrine = tenet_unrelenting_faith
 			doctrine = tenet_communal_identity
 			doctrine = tenet_deep_vengeance_flame
+
+			localization = {
+
+				#High God Name
+				HighGodName = hellenism_high_god_name
+				HighGodNamePossessive = hellenism_high_god_name_possessive
+				HighGodNameSheHe = CHARACTER_SHEHE_HE
+				HighGodHerselfHimself = CHARACTER_HIMSELF
+				HighGodHerHis = CHARACTER_HERHIS_HIS
+				HighGodNameAlternate = hellenism_high_god_name_alternate
+				HighGodNameAlternatePossessive = hellenism_high_god_name_alternate_possessive
+
+				#Creator
+				CreatorName = hellenism_creator_god_name
+				CreatorNamePossessive = hellenism_creator_god_name_possessive
+				CreatorSheHe = CHARACTER_SHEHE_SHE
+				CreatorHerHis = CHARACTER_HERHIS_HER
+				CreatorHerHim = CHARACTER_HERHIM_HER
+
+				#HealthGod
+				HealthGodName = hellenism_health_god_name
+				HealthGodNamePossessive = hellenism_health_god_name_possessive
+				HealthGodSheHe = CHARACTER_SHEHE_HE
+				HealthGodHerHis = CHARACTER_HERHIS_HIS
+				HealthGodHerHim = CHARACTER_HERHIM_HIM
+		
+				#FertilityGod
+				FertilityGodName = hellenism_fertility_god_name
+				FertilityGodNamePossessive = hellenism_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = hellenism_wealth_god_name
+				WealthGodNamePossessive = hellenism_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = hellenism_household_god_name
+				HouseholdGodNamePossessive = hellenism_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_SHE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HER
+				HouseholdGodHerHim = CHARACTER_HERHIM_HER
+
+				#FateGod
+				FateGodName = hellenism_fate_god_name
+				FateGodNamePossessive = hellenism_fate_god_name_possessive
+				FateGodSheHe = CHARACTER_SHEHE_THEY
+				FateGodHerHis = CHARACTER_HERHIS_THEIR
+				FateGodHerHim = CHARACTER_HERHIM_THEM
+
+				#KnowledgeGod
+				KnowledgeGodName = hellenism_knowledge_god_name
+				KnowledgeGodNamePossessive = hellenism_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+				#WarGod
+				WarGodName = hellenism_war_god_name
+				WarGodNamePossessive = hellenism_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#TricksterGod
+				TricksterGodName = hellenism_trickster_god_name
+				TricksterGodNamePossessive = hellenism_trickster_god_name_possessive
+				TricksterGodSheHe = CHARACTER_SHEHE_HE
+				TricksterGodHerHis = CHARACTER_HERHIS_HIS
+				TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+				#NightGod
+				NightGodName = hellenism_night_god_name
+				NightGodNamePossessive = hellenism_night_god_name_possessive
+				NightGodSheHe = CHARACTER_SHEHE_SHE
+				NightGodHerHis = CHARACTER_HERHIS_HER
+				NightGodHerHim = CHARACTER_HERHIM_HER
+
+				#WaterGod
+				WaterGodName = hellenism_water_god_name
+				WaterGodNamePossessive = hellenism_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+
+
+				PantheonTerm = religion_the_gods
+				PantheonTermHasHave = pantheon_term_have
+				GoodGodNames = { hellenism_good_god_poseidon hellenism_good_god_athena hellenism_good_god_ares hellenism_good_god_hera hellenism_good_god_apollo hellenism_good_god_artemis hellenism_good_god_hermes hellenism_good_god_aphrodite }
+				DevilName = hellenism_devil_name
+				DevilNamePossessive = hellenism_devil_name_possessive
+				DevilSheHe = CHARACTER_SHEHE_HE
+				DevilHerHis = CHARACTER_HERHIS_HIS
+				DevilHerselfHimself = CHARACTER_HIMSELF
+				EvilGodNames = { hellenism_evil_god_menoetius hellenism_evil_god_erinyes }
+				HouseOfWorship = paganism_house_of_worship
+				HouseOfWorshipPlural = paganism_house_of_worship_plural
+				ReligiousSymbol = hellenism_religious_symbol
+				ReligiousText = hellenism_religious_text
+				ReligiousHeadName = hellenism_religious_head_title
+				ReligiousHeadTitleName = dualism_religious_head_title_name
+				DevoteeMale = paganism_devotee
+				DevoteeMalePlural = paganism_devoteeplural
+				DevoteeFemale = paganism_devotee
+				DevoteeFemalePlural = paganism_devoteeplural
+				DevoteeNeuter = paganism_devotee
+				DevoteeNeuterPlural = paganism_devoteeplural
+				PriestMale = hellenism_priest_male
+				PriestMalePlural = hellenism_priest_male_plural
+				PriestFemale = hellenism_priest_female
+				PriestFemalePlural = hellenism_priest_female_plural
+				PriestNeuter = hellenism_priest_male
+				PriestNeuterPlural = hellenism_priest_male_plural
+				AltPriestTermPlural = christianity_priest_alternate_plural
+				BishopMale = hellenism_bishop_male
+				BishopMalePlural = hellenism_bishop_male_plural
+				BishopFemale = hellenism_priest_female
+				BishopFemalePlural = hellenism_priest_female_plural
+				BishopNeuter = hellenism_priest_male
+				BishopNeuterPlural = hellenism_priest_male_plural
+				DivineRealm = hellenism_divine_realm
+				PositiveAfterLife = hellenism_death_deity_name
+				NegativeAfterLife = hellenism_death_deity_name
+				DeathDeityName = hellenism_death_deity_name
+				DeathDeityNamePossessive = hellenism_death_deity_name_possessive
+				DeathDeitySheHe = CHARACTER_SHEHE_HE
+				DeathDeityHerHis = CHARACTER_HERHIS_HIS
+				WitchGodName = hellenism_witchgodname_hekate
+				WitchGodHerHis = CHARACTER_HERHIS_HER
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodMistressMaster = mistress
+				WitchGodMotherFather = mother
+		
+					}
 		}
 	}
 }

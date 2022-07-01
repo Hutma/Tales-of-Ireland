@@ -1,0 +1,3290 @@
+﻿can_use_magic_window = {
+	is_valid = {
+		has_trait = magician_good # Add requirements here
+	}
+}
+
+get_all_possible_candidates = {
+	effect = {
+		set_variable = {
+			name = repeat_spell
+			value = 1
+		}
+		if = {
+			limit = { NOT = { exists = var:your_magic_usage } }
+			set_variable = {
+				name = your_magic_usage
+				value = 0
+			}
+		}
+		if = { #get your spells
+			limit = { NOT = { has_variable_list = list_of_spells_known } }
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			learn_a_spell_magician_effect = yes
+			if = {
+				limit = {has_trait = magician_good_2 }
+				learn_a_spell_magician_effect = yes
+			}
+			if = {
+				limit = {has_trait = magician_good_3 }
+				learn_a_spell_magician_effect = yes
+				learn_a_spell_magician_effect = yes
+			}
+		}
+		clear_variable_list = spell_candidates
+		every_independent_ruler = {
+			limit = { in_diplomatic_range = root character_is_realm_neighbor = root }
+			save_scope_as = add_ruler
+			root = {
+				add_to_variable_list = {
+					name = spell_candidates
+					target = scope:add_ruler
+				}
+			}
+		}
+		if = {
+			limit = { is_independent_ruler = no }
+			liege = {
+				every_vassal = {
+					limit = { NOT = { this = root } }
+					save_scope_as = add_vassal
+					root = {
+						add_to_variable_list = {
+							name = spell_candidates
+							target = scope:add_vassal
+						}
+					}
+				}
+			}
+		}
+		every_vassal = {
+			save_scope_as = add_vassal
+			root = {
+				add_to_variable_list = {
+					name = spell_candidates
+					target = scope:add_vassal
+				}
+			}
+		}
+		every_courtier = {
+			save_scope_as = add_courtier
+			root = {
+				add_to_variable_list = {
+					name = spell_candidates
+					target = scope:add_courtier
+				}
+			}
+		}
+		every_prisoner = {
+			save_scope_as = add_prisoner
+			root = {
+				add_to_variable_list = {
+					name = spell_candidates
+					target = scope:add_prisoner
+				}
+			}
+		}
+		clear_variable_list = realm_candidates
+		every_realm_county = {
+			save_scope_as = realm_county
+			root = {
+				add_to_variable_list = {
+					name = realm_candidates
+					target = scope:realm_county
+				}
+			}
+		}
+		capital_county = {
+			save_scope_as = target_title
+		}
+		set_variable = {
+			name = dummy_title_target
+			value = scope:target_title
+		}
+		ordered_in_list = {
+			variable = spell_candidates
+			position = 0
+			save_scope_as = target_char
+		}
+		set_variable = {
+			name = dummy_char_target
+			value = scope:target_char
+		}
+	}
+}
+
+select_self_target = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = target_types
+			value = 0
+		}
+		set_variable = {
+			name = spell_target
+			value = root
+		}
+		set_variable = {
+			name = dummy_char_target
+			value = root
+		}
+	}
+}
+
+select_character_target = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = spell_target
+			value = scope:target_char
+		}
+		set_variable = {
+			name = dummy_char_target
+			value = root
+		}
+	}
+}
+
+select_spell_target = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = spell_target
+			value = scope:target_title
+		}
+		set_variable = {
+			name = dummy_title_target
+			value = root
+		}
+	}
+}
+
+get_first_option_target = {
+	scope = character
+	effect = {
+		ordered_in_list = {
+			variable = spell_candidates
+			position = 0
+			save_scope_as = target_char
+		}
+		set_variable = {
+			name = target_types
+			value = 1
+		}
+		set_variable = {
+			name = spell_target
+			value = scope:target_char
+		}
+		set_variable = {
+			name = dummy_char_target
+			value = scope:target_char
+		}
+	}
+}
+
+get_first_option_target_title = {
+	scope = character
+	effect = {
+		capital_county = {
+			save_scope_as = target_title
+		}
+		set_variable = {
+			name = target_types
+			value = 2
+		}
+		set_variable = {
+			name = spell_target
+			value = scope:target_title
+		}
+		set_variable = {
+			name = dummy_title_target
+			value = scope:target_title
+		}
+	}
+}
+
+valid_cast_spell = {
+	is_valid = {
+		exists = var:spell_target
+		has_variable = spell_target
+	}
+}
+
+clear_current_target = {
+	effect = {
+		remove_variable = spell_target
+	}
+}
+
+summon_sidhe_child = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_child_known
+		}
+	}
+	is_valid = {
+		summon_sidhe_child_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_sidhe_child_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				trigger_event = {
+					id = toi_magic_event.0001
+					days = { 100 600 }
+				}
+				add_character_modifier = {
+					modifier = asked_sidhe_for_child
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+summon_sidhe_advisor = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_advisor_known
+		}
+	}
+	is_valid = {
+		summon_sidhe_advisor_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_sidhe_advisor_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				random_list = {
+					10 = {
+						add_character_modifier = {
+							modifier = sidhe_advisor_martial
+							years = 4
+						}
+					}	
+					10 = {
+						add_character_modifier = {
+							modifier = sidhe_advisor_stewardship
+							years = 4
+						}
+					}	
+					10 = {
+						add_character_modifier = {
+							modifier = sidhe_advisor_intrigue
+							years = 4
+						}
+					}	
+					10 = {
+						add_character_modifier = {
+							modifier = sidhe_advisor_learning
+							years = 4
+						}
+					}	
+					10 = {
+						add_character_modifier = {
+							modifier = sidhe_advisor_diplomacy
+							years = 4
+						}
+					}
+				}
+				add_character_flag = {
+					flag = called_sidhe_advisor
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+summon_sidhe_feast = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_sidhe_feast_known
+		}
+	}
+	is_valid = {
+		summon_sidhe_feast_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_sidhe_feast_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = sidhe_in_feast
+					years = 4
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+summon_magical_army = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_magical_army_known
+		}
+	}
+	is_valid = {
+		summon_magical_army_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_magical_army_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				summon_magical_army_scripted_effect = yes
+				
+				add_character_modifier = {
+					modifier = slow_magic_troops
+					years = 4
+				}
+				
+				add_character_flag = {
+					flag = has_called_magical_armies_recently
+					years = 10
+				}
+				
+				add_character_flag = used_magical_armies_once
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+summon_magical_siege_engine = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_magical_siege_engine_known
+		}
+	}
+	is_valid = {
+		summon_magical_siege_engine_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_magical_siege_engine_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = magical_siege_engines
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+command_the_wind = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:command_the_wind_known
+		}
+	}
+	is_valid = {
+		command_the_wind_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = command_the_wind_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = command_the_wind_modifier
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+hidden_blade = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_blade_known
+		}
+	}
+	is_valid = {
+		hidden_blade_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = hidden_blade_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = hidden_blade_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+hidden_eye = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_eye_known
+		}
+	}
+	is_valid = {
+		hidden_eye_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = hidden_eye_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = hidden_eye_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+hidden_aura = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hidden_aura_known
+		}
+	}
+	is_valid = {
+		hidden_aura_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = hidden_aura_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = hidden_aura_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+extend_lifespan = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:extend_lifespan_known
+		}
+	}
+	is_valid = {
+		extend_lifespan_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = extend_lifespan_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = extended_life
+					years = 10
+				}
+
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+channel_giant_strength = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:channel_giant_strength_known
+		}
+	}
+	is_valid = {
+		channel_giant_strength_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = channel_giant_strength_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = giant_strenght
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+exchange_your_talents = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:exchange_your_talents_known
+		}
+	}
+	is_valid = {
+		exchange_your_talents_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = exchange_your_talents_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = you_ask_the_sidhe_to_change_you
+				}
+				trigger_event = {
+					id = toi_magic_event.0002
+					days = 1
+				}
+				add_character_flag = {
+					flag = cast_exchange_recently
+					days = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+sidhe_speechcraft = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sidhe_speechcraft_known
+		}
+	}
+	is_valid = {
+		sidhe_speechcraft_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = sidhe_speechcraft_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = sidhe_speechcraft_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+heal_wounds = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:heal_wounds_known
+		}
+	}
+	is_valid = {
+		heal_wounds_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = heal_wounds_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				remove_trait = wounded_1
+				remove_trait = wounded_2
+				remove_trait = wounded_3
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+inflict_wounds = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_wounds_known
+		}
+	}
+	is_valid = {
+		inflict_wounds_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = inflict_wounds_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			# Main Effect Here
+			var:spell_target = {
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.inflict_wounds.target
+					random_list = {
+						60 = {
+							add_trait = wounded_1
+						}
+						25 = {
+							add_trait = wounded_2
+						}
+						15 = {
+							add_trait = wounded_3
+						}
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+inflict_terror = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_terror_known
+		}
+	}
+	is_valid = {
+		inflict_terror_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = inflict_terror_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.inflict_terror.target
+					add_stress = 80
+				}
+				add_character_flag = {
+					flag = has_been_terrified
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+inflict_pestilence = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:inflict_pestilence_known
+		}
+	}
+	is_valid = {
+		inflict_pestilence_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = inflict_pestilence_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.inflict_pestilence.target
+					contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+				}
+				add_character_flag = {
+					flag = has_been_pestilenced
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+hostile_whispers = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hostile_whispers_known
+		}
+	}
+	is_valid = {
+		hostile_whispers_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = hostile_whispers_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.hostile_whispers.target
+					add_character_modifier = {
+						modifier = bad_wishpers
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+captivate_mind = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:captivate_mind_known
+		}
+	}
+	is_valid = {
+		captivate_mind_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = captivate_mind_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_opinion = {
+					modifier = captivated_magic_opinion
+					target = root
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+bless_the_cattle = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:bless_the_cattle_known
+		}
+	}
+	is_valid = {
+		bless_the_cattle_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = bless_the_cattle_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_county_modifier = {
+					modifier = blessed_cattle
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+multiply_herds = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:multiply_herds_known
+		}
+	}
+	is_valid = {
+		multiply_herds_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = multiply_herds_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				if = {
+					limit = {
+						development_level < 15
+					}
+					
+					change_development_level = 20
+				}
+				if = {
+					limit = {
+						AND = {
+							development_level >= 15
+							development_level <= 30
+						}
+					}
+					
+					change_development_level = 10
+				}
+				if = {
+					limit = {
+						AND = {
+							development_level > 30
+							development_level <= 60
+						}
+					}
+					
+					change_development_level = 8
+				}
+				if = {
+					limit = {
+						development_level > 60
+					}
+					
+					change_development_level = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Cessarian
+fintan_transformation = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fintan_transformation_known
+		}
+	}
+	is_valid = {
+		fintan_transformation_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = fintan_transformation_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = fintan_form
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+deer_form = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:deer_form_known
+		}
+	}
+	is_valid = {
+		deer_form_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = deer_form_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = deer_form_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+flood_realm = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:flood_realm_known
+		}
+	}
+	is_valid = {
+		flood_realm_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = flood_realm_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.flood_realm.target
+					every_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						set_variable = {
+							name = cattle_number
+							value = this.development_level
+						}
+						change_variable = {
+							name = cattle_number
+							multiply = 0.5
+						}
+						change_development_level = {
+							value = var:cattle_number
+							multiply = -1.0
+						}
+						remove_variable = cattle_number
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+mark_of_cain = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:mark_of_cain_known
+		}
+	}
+	is_valid = {
+		mark_of_cain_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = mark_of_cain_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				move_to_pool = yes
+				add_character_modifier = {
+					modifier = mark_of_cain_modifier
+					years = 40
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+serpent_bite = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:serpent_bite_known
+		}
+	}
+	is_valid = {
+		serpent_bite_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = serpent_bite_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.serpent_bite.target
+					random_list = {
+						55 = {
+							contract_disease_effect = { DISEASE = pneumonic TREATMENT_EVENT = no }
+						}
+						30 = {
+							contract_disease_effect = { DISEASE = leper TREATMENT_EVENT = no }
+						}
+						15 = {
+							contract_disease_effect = { DISEASE = great_pox TREATMENT_EVENT = no }
+						}
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+garden_eden = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:garden_eden_known
+		}
+	}
+	is_valid = {
+		garden_eden_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = garden_eden_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				every_held_title = {
+					limit = {
+						tier = county
+					}
+					change_development_level = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Fomorian
+call_sea_armies = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_sea_armies_known
+		}
+	}
+	is_valid = {
+		call_sea_armies_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = call_sea_armies_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				call_sea_army_scripted_effect = yes
+				add_character_flag = {
+					flag = has_called_sea_armies
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+call_underground_ridri = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_underground_ridri_known
+		}
+	}
+	is_valid = {
+		call_underground_ridri_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = call_underground_ridri_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				call_underground_ridri_scripted_effect = yes
+				
+				custom_description = {
+					text = a_knight_appears_spell
+					create_character = {
+						age = 30
+						random_traits = yes
+						prowess = 18
+						gender_female_chance = 25
+						dynasty = generate
+						faith = faith:dark_gods
+						culture = root.culture
+						employer = root
+						save_scope_as = underground_ridri
+					}
+					scope:underground_ridri = {
+						add_trait = fomorian
+					}
+				}
+				add_character_flag = {
+					flag = has_called_sea_ridri
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+fomorian_transformation = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fomorian_transformation_known
+		}
+	}
+	is_valid = {
+		fomorian_transformation_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = fomorian_transformation_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				root.house = {
+					save_scope_as = target_house
+				}
+				remove_trait = cessarian
+				remove_trait = partholonian
+				remove_trait = nemedian
+				remove_trait = fir_bolg
+				remove_trait = tuatha_de_danann
+				remove_trait = milesian
+				remove_trait = celtic_human
+				remove_trait = megalith_human		
+				remove_trait = gaelic_giant
+				remove_trait = hy_brazylian
+				remove_trait = latin_human
+				add_trait = fomorian
+				set_house = scope:target_house
+				add_stress = 100
+				add_character_modifier = {
+					modifier = painful_transformation
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+destroy_essence = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:destroy_essence_known
+		}
+	}
+	is_valid = {
+		destroy_essence_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = destroy_essence_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				if = {
+					limit = {
+						is_ai = no
+					}
+					send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.destroy_essence.target
+						change_variable = {
+							name = your_magic_usage
+							add = 3
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					add_character_flag = {
+						flag = cannot_use_magic
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+blood_moon = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:blood_moon_known
+		}
+	}
+	is_valid = {
+		blood_moon_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = blood_moon_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				if = {
+					limit = {
+						is_landed = no
+					}
+					root = {
+						add_character_modifier = {
+							modifier = blood_moon_sacrifice
+							years = 2
+						}
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							is_landed = yes
+							highest_held_title_tier <= 3
+						}
+					}
+					root = {
+						add_character_modifier = {
+							modifier = blood_moon_sacrifice
+							years = 5
+						}
+						add_prestige = 50
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							is_landed = yes
+							highest_held_title_tier >= 4
+						}
+					}
+					root = {
+						add_character_modifier = {
+							modifier = blood_moon_sacrifice
+							years = 8
+						}
+						add_prestige = 100
+					}
+				}
+				root = {
+					save_scope_as = killer_magic
+				}
+				custom_description = {
+					text = target_will_die_spell
+					trigger_event = {
+						id = toi_magic_event.0003
+						days = 1
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+omen_of_opression = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:omen_of_opression_known
+		}
+	}
+	is_valid = {
+		omen_of_opression_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = omen_of_opression_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.omen_of_opression.target
+					add_character_modifier = {
+						modifier = omen_of_opression_modifier
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+
+#Tuatha De danann
+healing_secret = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:healing_secret_known
+		}
+	}
+	is_valid = {
+		healing_secret_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = healing_secret_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = healing_secret_modifier
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+silverarmed = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:silverarmed_known
+		}
+	}
+	is_valid = {
+		silverarmed_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = silverarmed_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				remove_trait = one_legged
+				remove_trait = scarred
+				remove_trait = wounded_3
+				add_character_modifier = {
+					modifier = silverarmed_modifier
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+dagda_cauldron = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:dagda_cauldron_known
+		}
+	}
+	is_valid = {
+		dagda_cauldron_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = dagda_cauldron_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = dagda_cauldron_modifier
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+lugh_strenght = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:lugh_strenght_known
+		}
+	}
+	is_valid = {
+		lugh_strenght_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = lugh_strenght_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = lugh_strenght_modifier
+					years = 4
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+call_light = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:call_light_known
+		}
+	}
+	is_valid = {
+		call_light_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = call_light_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = call_light_modifier
+					years = 5
+				}
+				add_stress = -80
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+lost_knowledge = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:lost_knowledge_known
+		}
+	}
+	is_valid = {
+		lost_knowledge_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = lost_knowledge_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = lost_knowledge_modifier
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+summon_new_tribe = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:summon_new_tribe_known
+		}
+	}
+	is_valid = {
+		summon_new_tribe_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = summon_new_tribe_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = summon_new_tribe_spell_effect_desc
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.summon_new_tribe.target
+						trigger_event = {
+							id = toi_magic_event.0005
+							days = 1
+						}
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Megalithic humans
+sacred_building = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sacred_building_known
+		}
+	}
+	is_valid = {
+		sacred_building_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = sacred_building_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = sacred_building_modifier
+					years = 4
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+suns_chosen = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:suns_chosen_known
+		}
+	}
+	is_valid = {
+		suns_chosen_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = suns_chosen_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = suns_chosen_modifier
+					years = 4
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+hunting_spirits = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:hunting_spirits_known
+		}
+	}
+	is_valid = {
+		hunting_spirits_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = hunting_spirits_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = hunting_spirits_modifier
+					years = 4
+				}
+				add_prestige = 150
+				add_trait = hunter_1
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Partholonian
+rune_words = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:rune_words_known
+		}
+	}
+	is_valid = {
+		rune_words_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = rune_words_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				every_knight = {
+					add_character_modifier = {
+						modifier = rune_words_modifier
+						years = 4
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+protective_amulet = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:protective_amulet_known
+		}
+	}
+	is_valid = {
+		protective_amulet_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = protective_amulet_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = protective_amulet_modifier
+					years = 5
+				}
+				every_close_family_member = {
+					add_character_modifier = {
+						modifier = protective_amulet_modifier
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+greek_astrology = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:greek_astrology_known
+		}
+	}
+	is_valid = {
+		greek_astrology_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = greek_astrology_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = greek_astrology_spell_desc
+					random_list = {
+						10 = {
+							add_martial_skill = 1
+						}
+						10 = {
+							add_intrigue_skill = 1
+						}
+						10 = {
+							add_learning_skill = 1
+						}
+						10 = {
+							add_stewardship_skill = 1
+						}
+						10 = {
+							add_diplomacy_skill = 1
+						}
+					}
+					random_list = {
+						9 = {
+							add_martial_skill = -1
+						}
+						9 = {
+							add_intrigue_skill = -1
+						}
+						9 = {
+							add_learning_skill = -1
+						}
+						9 = {
+							add_stewardship_skill = -1
+						}
+						9 = {
+							add_diplomacy_skill = -1
+						}
+						6 = {
+							
+						}
+					}
+				}					
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+cursed_tablet = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:cursed_tablet_known
+		}
+	}
+	is_valid = {
+		cursed_tablet_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = cursed_tablet_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.cursed_tablet.target
+					add_character_modifier = {
+						modifier = cursed_tablet_modifier
+						years = 5
+					}
+				}
+				every_close_family_member = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.cursed_tablet.target
+						add_character_modifier = {
+							modifier = cursed_tablet_modifier
+							years = 5
+						}
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+partholonian_plague = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:partholonian_plague_known
+		}
+	}
+	is_valid = {
+		partholonian_plague_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = cursed_tablet_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.partholonian_plague.target
+					add_character_modifier = {
+						modifier = weak_body
+						years = 5
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Nemedian
+sidhe_agriculture = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:sidhe_agriculture_known
+		}
+	}
+	is_valid = {
+		sidhe_agriculture_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = sidhe_agriculture_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					add_county_modifier = {
+						modifier = sidhe_agriculture_modifier
+						years = 10
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+blessed_family = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:blessed_family_known
+		}
+	}
+	is_valid = {
+		blessed_family_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = blessed_family_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = blessed_family_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+nemedian_union = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:nemedian_union_known
+		}
+	}
+	is_valid = {
+		nemedian_union_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = nemedian_union_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = nemedian_union_modifier
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+nemed_seduction = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:nemed_seduction_known
+		}
+	}
+	is_valid = {
+		nemed_seduction_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = nemed_seduction_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.nemed_seduction.target
+					set_relation_lover = root
+				}
+				root = {
+					add_character_flag = {
+						flag = has_nemed_seduced_recently
+						years = 10
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Fir Bolg
+srengs_strenght = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:srengs_strenght_known
+		}
+	}
+	is_valid = {
+		srengs_strenght_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = srengs_strenght_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = srengs_strenght_modifier
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+fir_bolg_endurance = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:fir_bolg_endurance_known
+		}
+	}
+	is_valid = {
+		fir_bolg_endurance_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = fir_bolg_endurance_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = fir_bolg_endurance_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+men_of_bags = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:men_of_bags_known
+		}
+	}
+	is_valid = {
+		men_of_bags_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = men_of_bags_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = men_of_bags_modifier
+					years = 4
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+heavy_lifters = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:heavy_lifters_known
+		}
+	}
+	is_valid = {
+		heavy_lifters_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = heavy_lifters_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = heavy_lifters_modifier
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+united_in_defiance = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:united_in_defiance_known
+		}
+	}
+	is_valid = {
+		united_in_defiance_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = united_in_defiance_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = united_in_defiance_spell_effect_desc
+					every_vassal_or_below = {
+						limit = {
+							has_trait = fir_bolg
+						}
+						add_opinion = {
+							modifier = united_in_defiance_magic_opinion
+							target = root
+						}
+					}
+				}
+				add_character_flag = {
+					flag = recently_united_in_defiance
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Milesian
+path_of_destiny = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:path_of_destiny_known
+		}
+	}
+	is_valid = {
+		path_of_destiny_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = path_of_destiny_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				capital_county.kingdom = {
+					save_scope_as = target_kingdom
+				}
+				add_pressed_claim = scope:target_kingdom
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+realm_ceremony = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:realm_ceremony_known
+		}
+	}
+	is_valid = {
+		realm_ceremony_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = realm_ceremony_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = realm_ceremony_modifier
+					years = 2
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+enchant_bedroooms = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:enchant_bedroooms_known
+		}
+	}
+	is_valid = {
+		enchant_bedroooms_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = enchant_bedroooms_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = enchant_bedroooms_modifier
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Celts
+druidic_intersessions = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:druidic_intersessions_known
+		}
+	}
+	is_valid = {
+		druidic_intersessions_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = druidic_intersessions_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = druidic_intersessions_modifier
+					years = 15
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+magic_paintings = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:magic_paintings_known
+		}
+	}
+	is_valid = {
+		magic_paintings_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = magic_paintings_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = magic_paintings_modifier
+					years = 2
+				}
+				every_close_family_member = {
+					add_character_modifier = {
+						modifier = magic_paintings_modifier
+						years = 2
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+befriend_the_morrigan = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:befriend_the_morrigan_known
+		}
+	}
+	is_valid = {
+		befriend_the_morrigan_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = befriend_the_morrigan_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = befriend_the_morrigan_modifier
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+settle_power = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:settle_power_known
+		}
+	}
+	is_valid = {
+		settle_power_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = settle_power_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_character_modifier = {
+					modifier = settle_power_modifier
+					years = 1
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+influence_culture = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:influence_culture_known
+		}
+	}
+	is_valid = {
+		influence_culture_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = influence_culture_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				set_county_culture = root.culture
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Hy Brasilian
+mystical_craft = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:mystical_craft_known
+		}
+	}
+	is_valid = {
+		mystical_craft_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = mystical_craft_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				if = {
+					limit = {
+						has_any_focus = yes
+					}
+					add_tales_of_abundance_lifestyle_xp = 250
+				}
+				add_character_flag = {
+					flag = spell_mystical_craft_five_years
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+two_worlds = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:two_worlds_known
+		}
+	}
+	is_valid = {
+		two_worlds_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = two_worlds_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				add_gold = 50
+				add_prestige = 50
+				add_character_flag = {
+					flag = spell_two_world_five_years
+					years = 5
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+no_escape_curse = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:no_escape_curse_known
+		}
+	}
+	is_valid = {
+		no_escape_curse_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = no_escape_curse_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.no_escape_curse.target
+					every_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						add_county_modifier = {
+							modifier = no_escape_curse_modifier
+							years = 10
+						}
+					}
+					add_character_flag = {
+						flag = no_escape_curse_flag
+						years = 15
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+brasil_fog = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:brasil_fog_known
+		}
+	}
+	is_valid = {
+		brasil_fog_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = brasil_fog_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.brasil_fog.target
+					every_child = {
+						limit = {
+							is_landed = no
+						}
+						contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+					}
+					add_character_flag = {
+						flag = brasil_fog_flag
+						years = 10
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+magic_mist = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:magic_mist_known
+		}
+	}
+	is_valid = {
+		magic_mist_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = magic_mist_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.magic.magic_mist.target
+					add_character_modifier = {
+						modifier = magic_mist_modifier
+						years = 5
+					}
+					every_knight = {
+						add_to_list = possible_target_death_knights
+					}
+					every_courtier = {
+						add_to_list = possible_target_death_courtier
+					}
+					random_in_list = {
+						list = possible_target_death_knights
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+					}
+					random_in_list = {
+						list = possible_target_death_courtier
+						save_scope_as = future_dead
+					}
+					random_in_list = {
+						list = possible_target_death_courtier
+						limit = {
+							NOT = {
+								this = scope:future_dead
+							}
+						}
+						save_scope_as = future_dead_two
+					}
+					scope:future_dead = {
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+					}
+					scope:future_dead_two = {
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+					}					
+					add_character_flag = {
+						flag = magic_mist_flag
+						years = 10
+					}
+					clear_local_variable_list = possible_target_death_courtier
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Latin
+burn_incense = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:burn_incense_known
+		}
+	}
+	is_valid = {
+		burn_incense_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = burn_incense_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				if = {
+					limit = {
+						has_any_focus = yes
+					}
+					add_tales_of_abundance_lifestyle_xp = 75
+				}
+				add_character_modifier = {
+					modifier = burn_incense_modifier
+					years = 3
+				}					
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+roman_astrology = {
+	scope = character
+	is_shown = {
+		any_in_list = {
+			variable = list_of_spells_known
+			this = flag:roman_astrology_known
+		}
+	}
+	is_valid = {
+		roman_astrology_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = roman_astrology_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				custom_description = {
+					text = roman_astrology_spell_desc
+					# Main Effect Here
+					random_list = {
+						10 = {
+							add_martial_skill = 2
+						}
+						10 = {
+							add_intrigue_skill = 2
+						}
+						10 = {
+							add_learning_skill = 2
+						}
+						10 = {
+							add_stewardship_skill = 2
+						}
+						10 = {
+							add_diplomacy_skill = 2
+						}
+					}
+					random_list = {
+						10 = {
+							add_martial_skill = -1
+						}
+						10 = {
+							add_intrigue_skill = -1
+						}
+						10 = {
+							add_learning_skill = -1
+						}
+						10 = {
+							add_stewardship_skill = -1
+						}
+						10 = {
+							add_diplomacy_skill = -1
+						}
+						1 = {
+							
+						}
+					}
+					random_list = {
+						10 = {
+							add_martial_skill = -1
+						}
+						10 = {
+							add_intrigue_skill = -1
+						}
+						10 = {
+							add_learning_skill = -1
+						}
+						10 = {
+							add_stewardship_skill = -1
+						}
+						10 = {
+							add_diplomacy_skill = -1
+						}
+						2 = {
+							
+						}
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+#Perk Spells
+soul_transfer = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_soul_transfer_spell
+	}
+	is_valid = {
+		soul_transfer_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = soul_transfer_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				if = {
+					limit = { has_trait = magician_good_1 }
+					player_heir = {
+						add_trait = magician_good_1
+					}
+				}
+				else_if = {
+					limit = { has_trait = magician_good_2 }
+					player_heir = {
+						add_trait = magician_good_2
+					}
+				}
+				else_if = {
+					limit = { has_trait = magician_good_3 }
+					player_heir = {
+						add_trait = magician_good_3
+					}
+				}
+				add_diplomacy_skill = -7
+				add_martial_skill = -7
+				add_stewardship_skill = -7
+				add_intrigue_skill = -7
+				add_learning_skill = -7
+				player_heir = {
+					add_diplomacy_skill = 7
+					add_martial_skill = 7
+					add_stewardship_skill = 7
+					add_intrigue_skill = 7
+					add_learning_skill = 7
+				}
+				add_stress = 200
+				add_trait = depressed_1
+				add_trait = lunatic_1
+				add_trait = possessed_1
+				remove_trait = magician_good_1
+				remove_trait = magician_good_2
+				remove_trait = magician_good_3
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+mass_influence = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_mass_influence_spell
+	}
+	is_valid = {
+		mass_influence_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = mass_influence_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				add_character_modifier = {
+					modifier = mass_influence_modifier
+					years = 2
+				}
+				add_prestige = 100
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+word_of_peace = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_word_of_peace_spell
+	}
+	is_valid = {
+		word_of_peace_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = word_of_peace_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				every_character_war = {
+					limit = {
+						# any_primary_war_enemy = { this = root }
+						root = { is_defender_in_war = prev }
+					}
+					end_war = white_peace
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+call_rage = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_call_rage_spell
+	}
+	is_valid = {
+		call_rage_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = call_rage_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				# Main Effect Here
+				custom_description = {
+					text = call_rage_effect_desc
+					save_scope_as = target_of_war
+					primary_title = {
+						every_in_de_facto_hierarchy = {
+							limit = {tier = tier_county }
+							add_to_list = possible_target_county_conquest
+						}
+					}
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.call_rage.target
+						every_neighboring_top_liege_realm_owner = {
+							limit = {
+								NOT = { is_allied_to = scope:target_of_war }
+								NOT = { has_truce = scope:target_of_war }
+								NOT = { this = root }
+							}
+							scope:target_of_war = {
+								random_in_list = {
+									list = possible_target_county_conquest
+									save_scope_as = targeted_county
+									remove_from_list = possible_target_county_conquest
+								}
+							}
+							start_war = { 
+								casus_belli = county_conquest_cb
+								target = scope:target_of_war
+								target_title = scope:targeted_county
+							}
+						}
+					}
+					add_character_flag = {
+						flag = called_rage_recently
+						years = 5
+					}
+					clear_local_variable_list = possible_target_county_conquest
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+make_them_bow = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_make_them_bow_spell
+	}
+	is_valid = {
+		make_them_bow_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = make_them_bow_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				add_dread = 30
+				custom_description = {
+					text = two_random_vassal_die
+					every_vassal = {
+						add_to_list = possible_vassal_death
+					}
+					random_in_list = {
+						list = possible_vassal_death
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+						remove_from_list = possible_vassal_death
+					}
+					random_in_list = {
+						list = possible_vassal_death
+						trigger_event = {
+							id = toi_magic_event.0004
+							days = 1
+						}
+						remove_from_list = possible_vassal_death
+					}
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+the_evil_army = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_the_evil_army_spell
+	}
+	is_valid = {
+		the_evil_army_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = the_evil_army_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				the_evil_army_scripted_effect = yes
+				add_character_flag = {
+					flag = called_evil_army_recently
+					years = 20
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+cause_discorde_spell = {
+	scope = character
+	is_shown = {
+		has_character_flag = has_cause_discorde_spell
+	}
+	is_valid = {
+		cause_discorde_spell_requirements = yes
+	}
+	effect = {
+		play_music_cue = "mx_cue_magic"
+		run_bad_effects_spell = yes
+		change_variable = {
+			name = your_magic_usage
+			add = cause_discorde_spell_usage
+		}
+		if = {
+			limit = { NOT = { has_variable = spell_fails } }
+			var:spell_target = {
+				#Main Effect here
+				save_scope_as = faction_target
+				custom_description = {
+					text = cause_discorde_spell_desc
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.magic.cause_discorde.target
+						every_vassal = {
+							limit = { is_powerful_vassal = yes }
+							start_war = {
+								casus_belli = independence_war
+								target = scope:faction_target
+							}
+						}
+					}
+				}
+				add_character_flag = {
+					flag = caused_discorde_recently
+					years = 10
+				}
+			}
+		}
+		remove_variable = spell_fails
+	}
+}
+
+
+
+#Not spells, must keep
+increase_times_repeated = {
+	is_valid = {
+		var:repeat_spell < 10
+	}
+	effect = {
+		change_variable = {
+			name = repeat_spell
+			add = 1
+		}
+	}
+}
+
+decrease_times_repeated = {
+	is_valid = {
+		var:repeat_spell > 1
+	}
+	effect = {
+		change_variable = {
+			name = repeat_spell
+			add = -1
+		}
+	}
+}

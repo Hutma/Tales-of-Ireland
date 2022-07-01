@@ -27,6 +27,9 @@
 	ai_check_interval = 120
 
 	ai_potential = {
+		faith = {
+			has_doctrine_parameter = vows_of_poverty_active
+		}
 		# AI considers taking if their income exceeds their expenses * 1.4 (decision will reduce it by 20%).
 		monthly_character_income > monthly_character_expenses_plus_fourty_percent
 	}
@@ -70,6 +73,7 @@ renounce_vow_of_poverty_decision = {
 	ai_check_interval = 60
 
 	ai_potential = {
+		has_character_modifier = vow_of_poverty_modifier
 		# AI will consider if we're spending more money than we're making, and their treasury is low.
 		monthly_character_expenses > monthly_character_income
 		short_term_gold < minor_gold_value
@@ -179,6 +183,10 @@ seek_aid_of_the_spirits_decision = {
 	effect = {
 		custom_tooltip = seek_aid_of_the_spirits_decision_effect.tt
 		trigger_event = religious_decision.0001
+		add_character_flag = {
+			flag = flag_sought_aid_of_spirits
+			days = 1825
+			}
 	}
 
 	ai_check_interval = 60
@@ -213,7 +221,11 @@ select_personal_deity_decision = {
 	}
 
 	is_valid_showing_failures_only = {
+		# Have to at _least_ not be in piety debt.
+		piety >= 0
 	}
+
+	cooldown = { years = 2 }
 
 	effect = {
 		custom_tooltip = select_personal_deity_decision_tt
@@ -288,6 +300,8 @@ meditate_in_seclusion_decision = {
 
 give_sky_burial_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	
+	sort_order = 75
 
 	desc = give_sky_burial_decision_desc
 	selection_tooltip = give_sky_burial_decision_tooltip
@@ -333,6 +347,107 @@ give_sky_burial_decision = {
 			}
 		}
 		trigger_event = religious_decision.0302
+	}
+
+	ai_check_interval = 36
+	cooldown = { months = 12 }
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+raise_runestone_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+
+	desc = raise_runestone_decision_desc
+	selection_tooltip = raise_runestone_decision_tooltip
+
+	is_shown = {
+		# Has access to a valid method of raising runestones.
+		fp1_can_raise_stele_trigger = yes
+		# Has a suitable ancestor available to bury.
+		has_variable = ancestor_to_bury
+		var:ancestor_to_bury = { dynasty = root.dynasty }
+		# Use expanded version if we have FP1.
+		has_fp1_dlc_trigger = no
+	}
+
+	is_valid = {
+	}
+
+	is_valid_showing_failures_only = {
+
+	}
+
+	effect = {
+		#The modifier will only be active if a character of your dynasty holds it
+		capital_province = {
+			county = {
+				set_variable = {
+					name = ancestor_to_bury
+					value = root.var:ancestor_to_bury
+				}
+				root = {
+					send_interface_toast = {
+						title = raise_runestone_decision_toast
+						left_icon = root
+
+						prev = {
+							add_county_modifier = {
+								modifier = county_raised_runestone_modifier
+							}
+						}
+					}
+				}
+			}
+		}
+		remove_variable = ancestor_to_bury
+		add_piety = medium_piety_value
+		every_vassal = {
+			limit = { fp1_can_raise_stele_trigger = yes }
+			custom = raise_runestone_vassals
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 10
+			}
+		}
+		#Show a warning about it being destroyed if someone outside of your dynasty takes over the county it's built in
+		custom_description_no_bullet = {
+			text = raise_runestone_decision_warning
+		}
+
+		# Saga in Stone achievement tracking.
+		if = {
+			limit = {
+				# Grab the player and any dynasty members of theirs.
+				any_player = { dynasty = root.dynasty }
+			}
+			dynasty = {
+				# Start a count if we don't have one.
+				if = {
+					limit = {
+						NOT = { exists = var:saga_in_stone_achievement_tally }
+					}
+					set_variable = {
+						name = saga_in_stone_achievement_tally
+						value = 1
+					}
+				}
+				# Otherwise, increment it.
+				else = {
+					change_variable = {
+						name = saga_in_stone_achievement_tally
+						add = 1
+					}
+				}
+			}
+		}
 	}
 
 	ai_check_interval = 36
@@ -410,7 +525,6 @@ revoke_false_conversion_decision = {	#Reveal yourself as a crypto-religionist.
 	is_valid = {
 		is_adult = yes
 		NOT = { has_trait = zealous }
-		piety >= major_piety_value
 	}
 
 	is_valid_showing_failures_only = {
@@ -418,6 +532,10 @@ revoke_false_conversion_decision = {	#Reveal yourself as a crypto-religionist.
 			text = cannot_be_atoned_krstjani_leader_flag
 			NOT = { has_character_flag = atoned_krstjani_leader_flag }
 		}
+	}
+
+	cost = {
+		piety = major_piety_value
 	}
 
 	cooldown = { years = 20 }
@@ -507,10 +625,13 @@ encourage_confession_of_false_conversions_decision = {	#Ask that crypto-religion
 		is_adult = yes
 		NOR = {
 			has_trait = zealous
-			dread >= low_dread
+			dread > low_dread
 			tyranny >= 1
 		}
-		piety >= major_piety_value
+	}
+
+	cost = {
+		piety = major_piety_value
 	}
 
 	effect = {
@@ -566,6 +687,8 @@ encourage_confession_of_false_conversions_decision = {	#Ask that crypto-religion
 go_on_pilgrimage_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	ai_check_interval = 60
+	
+	sort_order = 64
 
 	desc = go_on_pilgrimage_decision_desc
 	selection_tooltip = go_on_pilgrimage_decision_tooltip
@@ -591,7 +714,48 @@ go_on_pilgrimage_decision = {
 	effect = {
 		custom_tooltip = pilgrimage_effect_1
 		custom_tooltip = pilgrimage_effect_2
-		custom_tooltip = pilgrimage_effect_3
+		if = { #What is the minimum you will have to pay?
+			limit = {
+				faith = {
+					any_holy_site = {
+						squared_distance = {
+							target = root.capital_province
+							value <= short_pilgrimage_max_length
+						}
+					}
+				}
+			}
+			custom_tooltip = pilgrimage_effect_3
+		}
+		else_if = {
+			limit = {
+				faith = {
+					any_holy_site = {
+						squared_distance = {
+							target = root.capital_province
+							value <= medium_pilgrimage_max_length
+						}
+					}
+				}
+			}
+			custom_tooltip = pilgrimage_effect_4
+		}
+		else_if = {
+			limit = {
+				faith = {
+					any_holy_site = {
+						squared_distance = {
+							target = root.capital_province
+							value <= long_pilgrimage_max_length
+						}
+					}
+				}
+			}
+			custom_tooltip = pilgrimage_effect_5
+		}
+		else = {
+			custom_tooltip = pilgrimage_effect_6
+		}
 		if = {
 			limit = { has_trait = ill }
 			custom_tooltip = line_break
@@ -608,6 +772,8 @@ go_on_pilgrimage_decision = {
 
 	ai_potential = {
 		is_landed = yes
+		is_available_adult = yes
+		short_term_gold > pilgrimage_minimum_cost
 	}
 
 	ai_will_do = {

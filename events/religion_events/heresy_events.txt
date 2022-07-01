@@ -13,38 +13,14 @@ scripted_trigger nearby_county_of_faith = {
 	}
 }
 
-scripted_trigger no_heretical_hof_faith_trigger = { #Head of Faith shouldn't convert.
-	OR = {
-		NOT = {
-			exists = root.religious_head
-		}
-		AND = {
-			exists = root.religious_head
-			NOT = { this = root.religious_head }
-		}
-	}
-}
-
-scripted_trigger is_valid_heresiarch = {
-	faith = root
-	OR = {
-		highest_held_title_tier = tier_duchy
-		highest_held_title_tier = tier_county
-	}
-	is_imprisoned = no
-	is_capable_adult_ai = yes
-	is_landed = yes
-	exists = capital_county
-	NOT = { has_trait = heresiarch }
-	no_heretical_hof_faith_trigger = yes
-	recently_converted_faith_trigger = no # As amusing as it may be, rulers shouldn't 'flip-flop' between Faiths, so we need to enforce a cooldown on heresy conversions.
-}
-
 heresy.0001 = {
 	hidden = yes
 	scope = faith
 
 	trigger = {
+		OR = {
+			NOT = { has_doctrine = overworld_hostility_doctrine }
+		}
 	}
 
 	immediate = {
@@ -313,6 +289,162 @@ heresy.0005 = {
 	}
 
 	immediate = {
+		#Look for a valid Duke of this Faith to be our heresiarch.
+		random_ruler = {
+			#Prefer Dukes with only 1 or 2 Duchies.
+			limit = {
+				faith = root
+				highest_held_title_tier = 3
+				any_held_title = {
+					tier = tier_duchy
+					count < 3 #Limit the influence of Mega-Dukes
+				}
+				is_capable_adult_ai = yes
+				is_landed = yes
+				exists = capital_county
+				NOT = { has_trait = heresiarch }
+				no_heretical_hof_faith_trigger = yes
+			}
+			#Then accept any valid Duke.
+			alternative_limit = {
+				faith = root
+				highest_held_title_tier = 3
+				is_capable_adult_ai = yes
+				is_landed = yes
+				exists = capital_county
+				NOT = { has_trait = heresiarch }
+				no_heretical_hof_faith_trigger = yes
+			}
+			#If no Dukes exist, accept a Count.
+			alternative_limit = {
+				faith = root
+				highest_held_title_tier = 2
+				is_capable_adult_ai = yes
+				is_landed = yes
+				exists = capital_county
+				NOT = { has_trait = heresiarch }
+				no_heretical_hof_faith_trigger = yes
+			}
+
+			weight = {
+				base = 100
+
+				modifier = {
+					add = 100
+					is_powerful_vassal = yes
+				}
+				modifier = {
+					add = 75
+					is_independent_ruler = yes
+				}
+				modifier = {
+					add = 50
+					is_a_faction_member = yes
+				}
+			}
+
+			save_scope_as = heretic_ruler
+			primary_title = {
+				save_scope_as = heretic_title
+			}
+			capital_county = {
+				save_scope_as = heretic_capital
+			}
+		}
+
+
+		#Once we have a heresiarch, look for a valid heretical faith to them to convert to.
+		if = {
+			limit = {
+				exists = scope:heretic_ruler
+			}
+
+
+			#Trigger the heresy event for all rulers of the same Faith.
+			if = {
+				limit = {
+					exists = scope:heretic_faith
+				}
+
+				save_scope_as = origin_faith
+
+				#Determine roughly how many Counties we expext to flip to the heretical Faith.
+				random_list = {
+					20 = {
+						modifier = {
+							add = 20
+							fervor > 30
+						}
+						set_variable = {
+							name = heresy_power
+							value = 10
+						}
+					}
+					55 = {
+						set_variable = {
+							name = heresy_power
+							value = 15
+						}
+					}
+					20 = {
+						modifier = {
+							add = 30
+							fervor <= 20
+						}
+						set_variable = {
+							name = heresy_power
+							value = 20
+						}
+					}
+					5 = {
+						modifier = {
+							add = 45
+							fervor <= 10
+						}
+
+						set_variable = {
+							name = heresy_power
+							value = 25
+						}
+					}
+				}
+
+				# Modify heresy power for pluralist/fundamentalist
+				if = {
+					limit = {
+						has_doctrine_parameter = pluralism_pluralistic_resistant_to_heresy
+					}
+					change_variable = {
+						name = heresy_power
+						multiply = hostility_multiplier_pluralism
+					}
+				}
+				else_if = {
+					limit = {
+						has_doctrine_parameter = pluralism_fundamentalist_vulnerable_to_heresy
+					}
+					change_variable = {
+						name = heresy_power
+						multiply = hostility_multiplier_fundamentalist
+					}
+				}
+
+				#Flag the heretic faith as the parent faith's active heresy for the next 10 years.
+				set_variable = {
+					name = current_heresy
+					value = scope:heretic_faith
+					days = 3650
+				}
+
+				#Trigger the heresy outbreak event.
+				scope:heretic_ruler = {
+					trigger_event = {
+						id = heresy.0010
+						days = 3
+					}
+				}
+			}
+		}	
 	}
 }
 
@@ -403,7 +535,18 @@ heresy.0010 = {
 		scope:heretic_ruler = {
 			#Convert this character to the new heresy.
 			set_character_faith_with_conversion = scope:heretic_faith
-			add_trait = heresiarch
+			#Heresy-using faiths become heresiarchs.
+			if = {
+				limit = {
+					faith = {
+						OR = {
+							NOT = { has_doctrine = eastern_hostility_doctrine }
+							has_doctrine = heresy_hostility_doctrine #Zoroastrians also get heresies, despite being Eastern.
+						}
+					}
+				}
+				add_trait = heresiarch
+			}
 
 			#Kick off the follow-up events in the heresy chain.
 			trigger_event = {
@@ -468,10 +611,16 @@ heresy.0010 = {
 
 		#Fervor adjustments to prevent multiple heresy flip-flopping.
 		scope:heretic_faith = {
-			change_fervor = 100
+			change_fervor = {
+				value = 100
+				desc = fervor_gain_new_heresy
+			}
 		}
 		scope:origin_faith = {
-			change_fervor = heretical_defector_fervor_gain
+			change_fervor = {
+				value = heretical_defector_fervor_gain
+				desc = fervor_gain_defector_heresy
+			}
 		}
 	}
 
@@ -616,7 +765,7 @@ heresy.0011 = {
 				#Rulers of the same(or similar) culture are more likely to join Heresies.
 				modifier = {
 					factor = 3
-					has_same_culture_group_as = scope:heretic_ruler
+					culture = { has_same_culture_heritage = scope:heretic_ruler.culture }
 				}
 				modifier = {
 					factor = 4
@@ -801,7 +950,10 @@ heresy.0011 = {
 
 			#Fervor adjustments to prevent multiple heresy flip-flopping.
 			scope:origin_faith = {
-				change_fervor = heretical_defector_fervor_gain
+				change_fervor = {
+					value = heretical_defector_fervor_gain
+					desc = fervor_gain_defector_heresy
+				}
 			}
 		}
 	}

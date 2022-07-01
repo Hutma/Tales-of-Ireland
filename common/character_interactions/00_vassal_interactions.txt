@@ -36,12 +36,19 @@ grant_vassal_interaction = {
 				exists = scope:actor.liege
 				scope:actor.liege = scope:recipient
 			}
+			AND = {
+				scope:actor.faith.religious_head = scope:recipient
+				scope:recipient = {
+					is_independent_ruler = yes
+				}
+			}
 		}
 		scope:recipient.highest_held_title_tier > tier_barony
 	}
 
 	is_valid_showing_failures_only = {
 		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_landed = yes }
 		NOT = { scope:actor = { is_at_war_with = scope:recipient } }
 		trigger_if = {
 			limit = { exists = scope:secondary_actor }
@@ -84,7 +91,7 @@ grant_vassal_interaction = {
 							prestige_level >= 3 
 						}
 					}
-					NOT = { has_government = tribal_government }
+					# NOT = { has_government = tribal_government }
 				}
 			}
 			custom_description = {
@@ -96,8 +103,7 @@ grant_vassal_interaction = {
 		}
 		trigger_if = {
 			limit = {
-				AND = { 
-					NOT = { has_government = tribal_government }
+				AND = {
 					NOT = { 
 						scope:actor = {
 							has_realm_law_flag = grant_vassal_allowed 
@@ -165,7 +171,7 @@ grant_vassal_interaction = {
 		}
 	}
 	
-	on_accept = {		
+	on_accept = {
 		scope:actor = {
 			send_interface_toast = {
 				title = grant_vassal_interaction_notification
@@ -175,8 +181,8 @@ grant_vassal_interaction = {
 				# If we're granting a vassal to our liege, gain a truce with our former vassal (we can't immediately reconquer them, and they can't attack us either).
 				if = {
 					limit = {
-						scope:secondary_actor = {
-							is_vassal_of = scope:actor
+						scope:actor = {
+							is_vassal_of = scope:recipient
 						}
 					}
 					add_truce_both_ways = {
@@ -488,7 +494,7 @@ retract_vassal_interaction = {
 			desc = AI_REFUSAL_IS_DE_JURE_LIEGE
 		}
 		modifier = {
-			add = 25
+			add = intimidated_halved_reason_value
 			scope:recipient = {
 				has_dread_level_towards = {
 					target = scope:actor
@@ -498,7 +504,7 @@ retract_vassal_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 50
+			add = cowed_halved_reason_value
 			scope:recipient = {
 				has_dread_level_towards = {
 					target = scope:actor
@@ -881,7 +887,7 @@ create_claimant_faction_against_interaction = {
 		scope:actor.liege = scope:secondary_actor
 		scope:actor = {
 			custom_description = {
-				text = "FACTION_JOIN_CREATE_CONDITION_NOT_FACTION_MEMBER"
+				text = "faction_can_join_create_in_another_faction"
 				is_a_faction_member = no
 			}
 			highest_held_title_tier > tier_barony
@@ -910,6 +916,24 @@ create_claimant_faction_against_interaction = {
 					any_held_title = {
 						any_claimant = {
 							NOT = { has_trait = incapable }
+						}
+					}
+				}
+			}
+
+			trigger_if = {
+				limit = {
+					exists = scope:landed_title
+				}
+				custom_description = {
+					text = "claimant_faction_already_exists"
+					subject = scope:landed_title
+					object = scope:recipient
+					NOT = {
+						any_targeting_faction = {
+							faction_is_type = claimant_faction
+							special_character = scope:recipient
+							special_title = scope:landed_title
 						}
 					}
 				}
@@ -1055,17 +1079,13 @@ invite_to_council_position_interaction = {
 		}
 		trigger_if = {
 			limit = {
-				scope:target = scope:actor.council_task:councillor_court_chaplain
+				exists = scope:target.councillor
 			}
+			scope:target = { can_fire_position = yes }
 			NOT = {
-				scope:actor.cp:councillor_court_chaplain = {
+				scope:target.councillor = {
 					is_blocked_from_being_fired_from_council_trigger = { COURT_OWNER = scope:actor }
 				}
-			}
-			scope:actor.faith = {
-				scope:recipient.faith = this
-				#Not ideal but that's the only approximation we can do in script
-				NOT = { has_doctrine = doctrine_clerical_succession_spiritual_fixed_appointment }
 			}
 		}
 	}
@@ -1155,6 +1175,13 @@ force_onto_council = {
 				is_councillor = yes
 			}
 		}
+
+		trigger_if = {
+			limit = {
+				exists = scope:target.councillor
+			}
+			scope:target = { can_fire_position = yes }
+		}
 	}
 	
 	is_valid_showing_failures_only = {
@@ -1170,6 +1197,15 @@ force_onto_council = {
 			is_adult = yes
 			NOT = {
 				is_at_war_with = scope:recipient
+			}
+			NAND = {
+				has_council_position = councillor_court_chaplain
+				faith = {
+					OR = {
+						has_doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+						has_doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+					}
+				}
 			}
 		}
 	}
@@ -1198,7 +1234,10 @@ force_onto_council = {
 				limit = {
 					NOT = { vassal_contract_has_flag = can_demand_council_seat }
 				}
-				use_hook = scope:recipient
+				save_scope_value_as = {
+					name = used_hook
+					value = yes
+				}
 			}
 			block_firing_councillor_effect = { COURT_OWNER = scope:recipient }
 			#And notify exactly which councillor type they've become.
@@ -1222,8 +1261,21 @@ force_onto_council = {
 				send_interface_toast = {	
 					title = force_onto_council.recipient.tt
 					left_icon = scope:actor
+					if = {
+						limit = { exists = scope:used_hook }
+						show_as_tooltip = { scope:actor = { use_hook = scope:recipient } }
+					}
 					custom_tooltip = force_onto_council.recipient.tt.duration
 				}
+			}
+		}
+		#Done in the end so that all tooltips will show correct information
+		scope:actor = {
+			if = {
+				limit = {
+					exists = scope:used_hook
+				}
+				use_hook = scope:recipient
 			}
 		}
 	}
@@ -1316,7 +1368,8 @@ force_onto_council = {
 	}
 	
 	ai_potential = {
-		always = yes
+		is_independent_ruler = no
+		is_councillor = no
 	}
 	
 	ai_targets = {
@@ -1700,29 +1753,64 @@ pardon_interaction = {
 			LIEGE = scope:actor
 			CRIMINAL = scope:recipient
 		}
-		
-		scope:recipient = {
-			add_opinion = {
-				target = scope:actor
-				modifier = grateful_opinion
-				opinion = 15
-			}
-			
-			send_interface_toast = {
-				title = pardon_interaction_toast
-				left_icon = scope:actor
-            }			
-		}	
 
 		scope:actor = {
 			stress_impact = {
 				forgiving =  medium_stress_loss
 			}
 		}
+		
+		
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:actor = {
+						culture = {
+							has_cultural_parameter = pardoning_gives_loyalty
+						}
+					}
+				}
+				add_opinion = {
+					modifier = loyal_servant
+					target = scope:actor
+				}
+				scope:actor = {
+					if = {
+						limit = {
+							can_add_hook = {
+								target = scope:recipient
+								type = loyalty_hook
+							}
+						}
+						add_hook = {
+							type = loyalty_hook
+							target = scope:recipient
+						}
+					}
+				}
+			}
+			else = {
+				add_opinion = {
+					target = scope:actor
+					modifier = grateful_opinion
+					opinion = 15
+				}
+			}
+			
+			send_interface_toast = {
+				title = pardon_interaction_toast
+				left_icon = scope:actor
+            }			
+		}			
 	}
 	
 	ai_potential = {
-		has_trait = forgiving
+		OR = {
+			has_trait = forgiving
+			culture = {
+				has_cultural_parameter = pardoning_gives_loyalty
+			}
+		}
 	}
 	ai_targets = {
 		ai_recipients = vassals
@@ -1744,6 +1832,336 @@ pardon_interaction = {
 					has_relation_lover = scope:actor
 					has_relation_soulmate = scope:actor
 					is_primary_heir_of = scope:actor
+				}
+			}
+		}
+	}
+}
+
+vassal_claim_liege_title_interaction = {
+	category = interaction_category_diplomacy
+	desc = vassal_claim_liege_title_interaction_desc
+	target_type = title
+	target_filter = recipient_domain_titles
+	ignores_pending_interaction_block = yes
+	
+	cost = {	
+		prestige = {
+			value = {
+				add = monumental_prestige_value
+				if = {
+					limit = {
+						scope:actor.prestige_level > scope:recipient.prestige_level
+					}
+					subtract = {
+						value = major_prestige_value
+						multiply = {
+							value = scope:actor.prestige_level
+							subtract = scope:recipient.prestige_level
+						}
+						desc = higher_prestige_level_than_liege
+					}
+				}
+				else_if = {
+					limit = {
+						scope:actor.prestige_level < scope:recipient.prestige_level
+					}
+					add = {
+						value = major_prestige_value
+						multiply = {
+							value = scope:recipient.prestige_level
+							subtract = scope:actor.prestige_level
+						}
+						desc = lower_prestige_level_than_liege
+					}
+				}
+				min = 0
+			}
+		}
+	}
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		
+		scope:actor = {
+			is_physically_able_adult = yes
+		}
+		
+		scope:recipient = scope:actor.liege
+
+		scope:recipient = {
+			is_landed = yes
+			any_held_title = {
+				tier >= tier_duchy
+				scope:actor = {
+					NOT = {
+						has_claim_on = prev
+					}
+				}
+			}
+		}
+	}
+
+	is_highlighted = {
+		scope:actor.prestige >= vassal_claim_liege_title_interaction_highlight_value
+	}
+	
+	can_be_picked = {
+		trigger_if = {
+			limit = {
+				scope:actor = {
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = powerful_vassal_can_claim_liege_titles
+					}
+				}
+			}
+			scope:actor = { is_powerful_vassal_of = scope:recipient }
+		}
+		trigger_else = {
+			scope:target = {
+				tier >= tier_duchy
+				custom_description = {
+					text = has_51_percent_of_a_dejure_title
+					any_in_de_jure_hierarchy = {
+						filter = {
+							tier = tier_county
+						}
+						continue = {
+							tier > tier_county
+						}
+						OR = {
+							holder = scope:actor
+							holder = {
+								target_is_liege_or_above = scope:actor
+							}
+						}
+						percent >= 0.51
+					}
+				}
+			}
+		}
+
+		custom_description = {
+			NOT = {
+				scope:actor = {
+					has_claim_on = scope:target
+				}
+			}
+			text = "already_have_a_claim_on_this_title"
+		}
+	}
+	
+	has_valid_target_showing_failures_only = {
+		scope:target = {
+			tier >= tier_duchy
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			scope:recipient = {
+				any_held_title = {
+					tier >= tier_county
+					NOT = { any_claimant = { this = scope:actor } }
+				} 
+			}
+
+			object = scope:recipient
+			text = "already_have_claims_on_all_titles"
+		}		
+		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		NOT = {
+			scope:actor = {
+				is_allied_to = scope:recipient
+			}
+		}
+	}
+
+	on_auto_accept = {
+		scope:target = {
+			random_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					OR = {
+						holder = scope:actor
+						holder = {
+							target_is_liege_or_above = scope:actor
+						}
+					}
+				}
+				title_province = {
+					save_scope_as = county_in_title
+				}
+			}
+		}
+		scope:recipient = {
+			trigger_event = vassal_interaction.0040
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			send_interface_toast = {
+				title = buy_claim_interaction.message
+				left_icon = scope:actor
+				right_icon = scope:recipient
+				vassal_claim_liege_title_interaction_effect = yes
+			}
+		}
+	}
+
+	auto_accept = yes
+	
+	ai_targets = {
+		ai_recipients = liege
+	}
+	ai_frequency = 24
+	
+	ai_potential = {
+		domain_size > 1
+		NOR = {
+			has_trait = content
+			has_trait = craven
+		}
+	}
+	
+	ai_will_do = {
+		base = 25
+		
+		ai_value_modifier = {
+			who = scope:actor
+			ai_greed = 1
+			ai_boldness = 0.5
+			ai_honor = -0.5
+		}
+		
+		modifier = {
+			add = scope:actor.ai_zeal
+			scope:actor = {
+				ai_zeal > 0
+			}
+			NOT = {
+				scope:actor.faith = scope:recipient.faith
+			}
+		}
+		
+		modifier = {
+			add = 25
+			scope:actor = {
+				is_powerful_vassal_of = scope:recipient
+			}
+		}
+		
+		modifier = {
+			add = 50
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value <= 0
+				}
+			}
+		}
+		
+		modifier = {
+			add = 25
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+		
+		modifier = {
+			add = -15
+			scope:recipient = {
+				has_relation_lover = scope:actor
+			}
+		}
+
+		# Agenda impact
+		modifier = {
+			scope:actor = {
+				any_character_struggle = {
+					involvement = involved
+				}
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title
+							}
+							has_character_flag = agenda_towards_escalation
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title
+							}
+						}
+					}
+					add = -100
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.25
+			scope:actor = {
+				ai_greed < 100
+				opinion = {
+					target = scope:recipient
+					value >= 50
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			scope:actor = {
+				ai_greed < 100
+				opinion = {
+					target = scope:recipient
+					value >= 75
+				}
+			}
+		}
+		
+		modifier = {
+			add = -25
+			scope:actor = {
+				has_dread_level_towards = {
+					target = scope:recipient
+					level = 1
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			scope:actor = {
+				has_dread_level_towards = {
+					target = scope:recipient
+					level = 2
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+					has_relation_soulmate = scope:actor
 				}
 			}
 		}

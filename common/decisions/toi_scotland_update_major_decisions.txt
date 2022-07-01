@@ -1,0 +1,161 @@
+﻿the_empire_of_the_isles_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	desc = the_empire_of_the_isles_decision_desc
+	
+	major = yes
+	ai_goal = yes
+
+	is_shown = {
+		is_landed = yes
+		NOT = { highest_held_title_tier = 5 }
+		OR = {
+			has_title = title:k_mann
+			has_title = title:k_hay
+			has_title = title:k_hamilton
+			AND = {
+				highest_held_title_tier >= 3
+				capital_county.title_province = {
+					geographical_region = region_mann
+				}
+			}
+			capital_county.kingdom = title:k_hay
+			capital_county.kingdom = title:k_hamilton
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:the_empire_of_the_isles_decision
+			}
+		}
+	}
+
+	is_valid = {
+		has_title = title:k_mann
+		has_title = title:k_hay
+		has_title = title:k_hamilton
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		gold = {
+			value = 150
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_fomorian }
+				}
+				multiply = {
+					value = 0.5
+				}
+			}
+		}
+	}
+
+	effect = {
+		the_empire_of_the_isles_decision_scripted_effect = yes
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = emperor_of_the_isles_modifier
+			}
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:the_empire_of_the_isles_decision
+		}
+		
+		trigger_event = {
+			id = toi_scotland_decisions.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_scotland_decisions.0002
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+the_empire_of_dal_riata_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	
+	desc = the_empire_of_dal_riata_decision_desc
+	
+	major = yes
+	ai_goal = yes
+
+	is_shown = {
+		is_landed = yes
+		NOT = { highest_held_title_tier = 5 }
+		has_culture = culture:dal_riata
+		is_indepedent_ruler = yes
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:the_empire_of_dal_riata_decision
+			}
+		}
+	}
+
+	is_valid = {
+		has_title = title:k_antrim
+		has_title = title:k_mann
+		has_title = title:k_hay
+		has_title = title:k_hamilton
+		has_title = title:k_kennedy
+		prestige_level >= 4
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	effect = {
+		the_empire_of_dal_riata_decision_scripted_effect = yes
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:the_empire_of_dal_riata_decision
+		}
+		
+		trigger_event = {
+			# id = toi_scotland_decisions.0003
+			id = toi_scotland_decisions.0001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			# trigger_event = toi_scotland_decisions.0004
+			trigger_event = toi_scotland_decisions.0002
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

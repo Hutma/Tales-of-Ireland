@@ -1,11 +1,11 @@
-﻿# Accepted categories are: governments, cultures, culture_groups, faiths, religions
+﻿# Accepted categories are: governments, name_lists, heritages, faiths, religions
 # A Flavorization will apply if ALL specified categories have ANY of their entries
 # represented in the character/title
 # So for example:
 # governments = { feudal_government }
-# culture_groups = { mongolic_group central_germanic_group }
+# heritages = { mongolic_group central_germanic_group }
 # religions = { christianity_religion }
-# cultures = { norse }
+# name_lists = { name_list_norse }
 # faiths = { catholicism }
 # For this to apply a character MUST BE feudal, AND must also be EITHER altaic OR germanic
 # priority is used to determine priority, if they are the same then the LAST will be selected,
@@ -17,6 +17,13 @@
 # if this is not specified ( or 'top_liege = yes' the default ) then it is the top liege of that character
 # that is tested, this means that most title flavor comes from the top liege of the title not the holder
 
+#sultan = { #Example
+#	gender = male
+#	special = holder
+#	tier = kingdom
+	#	governments = { feudal_government clan_government }
+#	religions = { islam_religion }
+#}
 
 #############################################
 
@@ -38,6 +45,24 @@ high_king_feudal_female = { # High Queen
 	priority = 400
 	titles = { k_high_kingship }
 	only_independent = yes
+	top_liege = no
+}
+
+seelie_title_name = { # Seelie court
+	type = character
+	special = holder
+	priority = 390
+	titles = { k_seelie_court }
+	only_independent = no
+	top_liege = no
+}
+
+unseelie_title_name = { # Unseelie court
+	type = character
+	special = holder
+	priority = 390
+	titles = { k_unseelie_court }
+	only_independent = no
 	top_liege = no
 }
 

@@ -1,0 +1,232 @@
+﻿take_blood_interaction = {
+	category = interaction_category_hostile
+
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+
+	desc = take_blood_interaction_desc
+	
+	icon = vampire_interaction
+	
+	is_shown = {
+		scope:actor = {
+			has_trait = irish_vampire
+		}
+		NOT = { scope:recipient = scope:actor }
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_imprisoned_by = scope:actor
+				is_foreign_court_or_pool_guest_of = scope:actor
+			}
+		}
+	}
+
+	is_valid = {
+		scope:recipient = {
+			NOT = {	has_trait = irish_vampire }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_available_adult = yes
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = { scope:actor = { has_character_flag = intrigue_hunt_style } }
+			scope:actor = {
+				duel = {
+					skill = intrigue
+					target = scope:recipient
+					50 = {
+						compare_modifier = {
+							value = scope:duel_value
+							multiplier = 2
+						}
+						scope:actor = {
+							remove_character_modifier = hungry_for_blood
+							remove_character_modifier = hungry_for_blood_2
+							remove_character_modifier = hungry_for_blood_3
+							send_interface_toast = {
+								left_icon = scope:recipient
+								title = tooltip.vampire.take_blood.success
+								add_character_modifier = {
+									modifier = had_blood_recently
+									years = 3
+								}
+							}
+						}
+						scope:recipient = {
+							if = {
+								limit = { NOT = { has_character_modifier = gave_blood_recently } }
+								send_interface_toast = {
+									left_icon = scope:actor
+									title = tooltip.vampire.take_blood.target
+									add_character_modifier = {
+										modifier = gave_blood_recently
+										years = 1
+									}
+									add_opinion = {
+										modifier = scared_opinion
+										opinion = -40
+										target = scope:actor
+									}
+								}
+							}
+							else_if = {
+								limit = { has_character_modifier = gave_blood_recently  }
+								send_interface_toast = {
+									left_icon = scope:actor
+									title = tooltip.vampire.take_blood.target
+									death = {
+										death_reason = death_bled_vampire
+										killer = scope:actor
+									}
+								}
+							}
+						}
+					}
+					50 = {
+						compare_modifier = {
+							value = scope:duel_value
+							multiplier = -2
+						}
+						scope:actor = {
+							send_interface_toast = {
+								left_icon = scope:recipient
+								title = tooltip.vampire.take_blood.failure
+							}
+						}
+						scope:recipient = {
+							send_interface_toast = {
+								left_icon = scope:actor
+								title = tooltip.vampire.take_blood.target.fail
+								add_opinion = {
+									modifier = scared_opinion
+									opinion = -40
+									target = scope:actor
+								}
+							}
+							if = {
+								limit = {
+									NOT = { is_spouse_of = scope:actor }
+									is_adult = yes
+								}
+								move_to_pool = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:actor = { NOT = { has_character_flag = intrigue_hunt_style } } }
+			scope:actor = {
+				duel = {
+					skill = prowess
+					target = scope:recipient
+					55 = {
+						compare_modifier = {
+							value = scope:duel_value
+							multiplier = 2
+						}
+						scope:actor = {
+							remove_character_modifier = hungry_for_blood
+							remove_character_modifier = hungry_for_blood_2
+							remove_character_modifier = hungry_for_blood_3
+							send_interface_toast = {
+								left_icon = scope:recipient
+								title = tooltip.vampire.take_blood.success
+								add_character_modifier = {
+									modifier = had_blood_recently
+									years = 3
+								}
+							}
+						}
+						scope:recipient = {
+							if = {
+								limit = { NOT = { has_character_modifier = gave_blood_recently } }
+								send_interface_toast = {
+									left_icon = scope:actor
+									title = tooltip.vampire.take_blood.target
+									add_character_modifier = {
+										modifier = gave_blood_recently
+										years = 1
+									}
+									add_opinion = {
+										modifier = scared_opinion
+										opinion = -40
+										target = scope:actor
+									}
+								}
+							}
+							else_if = {
+								limit = { has_character_modifier = gave_blood_recently  }
+								send_interface_toast = {
+									left_icon = scope:actor
+									title = tooltip.vampire.take_blood.target
+									death = {
+										death_reason = death_bled_vampire
+										killer = scope:actor
+									}
+								}
+							}
+						}
+					}
+					45 = {
+						compare_modifier = {
+							value = scope:duel_value
+							multiplier = -2
+						}
+						scope:actor = {
+							send_interface_toast = {
+								left_icon = scope:recipient
+								title = tooltip.vampire.take_blood.failure
+							}
+						}
+						scope:recipient = {
+							send_interface_toast = {
+								left_icon = scope:actor
+								title = tooltip.vampire.take_blood.target.fail
+								add_opinion = {
+									modifier = scared_opinion
+									opinion = -40
+									target = scope:actor
+								}
+							}
+							if = {
+								limit = {
+									NOT = { is_spouse_of = scope:actor }
+									is_adult = yes
+								}
+								move_to_pool = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = courtiers
+		max = 20
+	}
+	
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 24
+
+	ai_will_do = {
+		base = 100
+	}
+}

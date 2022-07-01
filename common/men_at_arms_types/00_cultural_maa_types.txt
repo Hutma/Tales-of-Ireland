@@ -340,3 +340,25 @@ roman_legion = {
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = heavy_infantry
 }
+
+fairy_swarm = {
+	type = light_cavalry
+	
+	damage = 8
+	toughness = 8
+	pursuit = 0
+	screen = 0
+	
+	counters = {
+		archers = 0.5
+		skirmishers = 0.5
+	}
+	
+	buy_cost = { gold = skirmisher_recruitment_cost }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	
+	stack = 65
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = light_cavalry
+}

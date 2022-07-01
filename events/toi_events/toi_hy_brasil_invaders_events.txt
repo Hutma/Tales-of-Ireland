@@ -48,7 +48,31 @@ toi_hybrazil.1002 = {
 	type = empty
 	
 	immediate = {
+		every_independent_ruler = {
+			add_to_list = hy_brasil_visiter_list
+		}
+		random_in_list = {
+			list = hy_brasil_visiter_list
+			save_scope_as = visitor_employer_chosen
+		}
+		create_character = {
+			age = { 20 40 }
+			trait = hy_brazylian
+			random_traits = yes
+			gender_female_chance = 0
+			employer = scope:visitor_employer_chosen
+			dynasty = generate
+			faith = faith:hy_brazil_sidhe
+			culture = culture:hy_brazylian_culture
+			save_scope_as = visiting_hy_brasilian_chosen
+		}
 		every_ruler = {
+			scope:visitor_employer_chosen = {
+				save_scope_as = visitor_employer
+			}
+			scope:visiting_hy_brasilian_chosen = {
+				save_scope_as = visiting_hy_brasilian
+			}
 			trigger_event = {
 				id = toi_hybrazil.0002
 				days = 1
@@ -76,37 +100,35 @@ toi_hybrazil.0002 = {
 		animation = personality_cynical
 	}
 	
-	immediate = {
-		every_independent_ruler = {
-			add_to_list = hy_brasil_visiter_list
+	left_portrait = {
+		character = scope:visiting_hy_brasilian
+		animation = personality_rational
+	}
+
+	option = {
+		name = toi_hybrazil.0002.a
+		trigger = {
+			NOT = {
+				root = scope:visitor_employer
+			}
 		}
-		random_in_list = {
-			list = hy_brasil_visiter_list
-			save_scope_as = visitor_employer
-		}
-		create_character = {
-			age = { 20 40 }
-			trait = hy_brazylian
-			random_traits = yes
-			gender_female_chance = 0
-			employer = scope:visitor_employer
-			dynasty = generate
-			faith = faith:hy_brazil_sidhe
-			culture = culture:hy_brazylian_culture
+	}
+	option = {
+		name = toi_hybrazil.0002.a
+		trigger = {
+			root = scope:visitor_employer
 		}
 		scope:visitor_employer = {
 			add_gold = 200
 			add_prestige = 200
 		}
 	}
-	option = {
-		name = toi_hybrazil.0002.a
-	}
 }
 
-#Hy Brasylian hidden triggers 0003
+#Hy Brasylian hidden triggers 0003 launch the invasions
 toi_hybrazil.1003 = {
 	hidden = yes
+	type = empty
 	
 	immediate = {
 		every_ruler = {
@@ -115,67 +137,13 @@ toi_hybrazil.1003 = {
 				days = 1
 			}
 		}
-		random_list = {
-			15 = { #5 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
-			15 = { #6 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
-			30 = { #7 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
-			20 = { #8 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
-			15 = { #9 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
-			5 = { #12 invaders
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-				hy_brasylian_invasion_effect = yes
-			}
+
+		hy_brasylian_invasion_effect = yes
+		trigger_event = {
+			id = toi_hybrazil.1500
+			days = 20
 		}
+
 	}
 }
 
@@ -199,5 +167,109 @@ toi_hybrazil.0003 = {
 	}
 	option = {
 		name = toi_hybrazil.0003.a
+	}
+}
+
+
+
+#launch invasions 5 armies
+toi_hybrazil.1500 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		hy_brasylian_invasion_effect = yes
+		trigger_event = {
+			id = toi_hybrazil.1501
+			days = 35
+		}
+	}
+}
+toi_hybrazil.1501 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		hy_brasylian_invasion_effect = yes
+		trigger_event = {
+			id = toi_hybrazil.1502
+			days = 35
+		}
+	}
+}
+toi_hybrazil.1502 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		#5th army??
+		random_list = {
+			10 = {
+				hy_brasylian_invasion_effect = yes
+			}
+			90 = {
+				hy_brasylian_invasion_effect = yes
+				trigger_event = {
+					id = toi_hybrazil.1503
+					days = 35
+				}
+			}
+		}
+	}
+}
+toi_hybrazil.1503 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		#sixth army??
+		random_list = {
+			25 = {
+				hy_brasylian_invasion_effect = yes
+			}
+			75 = {
+				hy_brasylian_invasion_effect = yes
+				trigger_event = {
+					id = toi_hybrazil.1504
+					days = 35
+				}
+			}
+		}
+	}
+}
+toi_hybrazil.1504 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		#7th army??
+		random_list = {
+			45 = {
+				hy_brasylian_invasion_effect = yes
+			}
+			55 = {
+				hy_brasylian_invasion_effect = yes
+				trigger_event = {
+					id = toi_hybrazil.1505
+					days = 35
+				}
+			}
+		}
+	}
+}
+toi_hybrazil.1505 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		#8th army??
+		random_list = {
+			65 = {
+				hy_brasylian_invasion_effect = yes
+			}
+			35 = {
+				hy_brasylian_invasion_effect = yes
+			}
+		}
 	}
 }

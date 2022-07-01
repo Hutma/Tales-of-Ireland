@@ -1,0 +1,269 @@
+﻿language_south_munster = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_south_munster
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_south_munster }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 5 200 20 }
+}
+
+language_picthish = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_picthish
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_picthish }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 178 28 0 }
+}
+
+language_cumbric = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_cumbric
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_cumbric }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 30 134 151 }
+}
+
+language_noric = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_noric
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_noric }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 120 50 240 }
+}
+
+language_sidhe_tongue = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sidhe_tongue
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sidhe_tongue }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 200 20 240 }
+}
+
+language_irish_celtic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_irish_celtic
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_irish_celtic }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 100 200 150 }
+}
+
+language_greek = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_greek
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_greek }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 200 20 20 }
+}
+
+language_fomorian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_fomorian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_fomorian }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 80 80 30 }
+}
+
+language_fooar = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_fooar
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_fooar }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 80 80 125 }
+}
+
+language_ivernic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_ivernic
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_ivernic }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 200 100 120 }
+}
+
+language_latin = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_latin
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_latin }
+			multiply = 10
+		}
+	}
+	
+	color = { 0.8 0.1 0.1 }
+}
+
+language_manx = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_manx
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_manx }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 124 59 8 }
+}
+
+language_bell_beakers = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bell_beakers
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bell_beakers }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 150 150 150 }
+}
+
+language_northern_bell_beakers = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_northern_bell_beakers
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_northern_bell_beakers }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 80 80 80 }
+}
+
+language_celtiberian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_celtiberian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_celtiberian }
+			multiply = 10
+		}
+	}
+	
+	color = rgb { 50 100 200 }
+}

@@ -18,7 +18,7 @@ beards = {
             base = 0
             modifier = {
                 add = 100
-                age < 18
+                scope:age < 18
             }
         }
     }
@@ -36,9 +36,10 @@ beards = {
             base = 30 
             modifier = {
                 add = -50
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
             portrait_clean_shaven_clothing_modifier = yes
@@ -60,6 +61,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                     has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -72,6 +74,14 @@ beards = {
                 OR = {
                     portrait_western_clothing_trigger = yes
                     portrait_byzantine_clothing_trigger = yes
+                }
+            }
+			modifier = {
+                add = -100
+                exists = this
+                OR = {
+                    is_from_ruler_designer = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -92,6 +102,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -108,9 +119,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -131,6 +143,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -149,7 +162,7 @@ beards = {
                 add = -100
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+					always = no
                 }
             }
         }
@@ -170,6 +183,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -186,9 +200,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+
                 }
             }
         }
@@ -209,6 +224,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -222,9 +238,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -245,6 +262,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -258,9 +276,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -280,6 +299,7 @@ beards = {
             base = 0
             modifier = {
                 add = 70
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_straight_thin_beard
@@ -287,9 +307,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -310,6 +331,7 @@ beards = {
             modifier = {
                 add = 50
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -323,9 +345,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -346,6 +369,7 @@ beards = {
             modifier = {
                 add = 50
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -359,9 +383,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -382,6 +407,7 @@ beards = {
             modifier = {
                 add = 50
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -395,9 +421,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -418,6 +445,7 @@ beards = {
             modifier = {
                 add = 90
                 OR = {
+                    NOT = { exists = this }
                     has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -431,9 +459,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -453,6 +482,7 @@ beards = {
             base = 0
             modifier = {
                 add = 70
+                exists = this
                  has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -460,9 +490,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -483,6 +514,7 @@ beards = {
             modifier = {
                 add = 90
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_straight
@@ -496,9 +528,10 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
@@ -519,6 +552,7 @@ beards = {
             modifier = {
                 add = 70
                 OR = {
+                    NOT = { exists = this }
                      has_gene = {
                         category = gene_hair_type
                         template = hair_wavy
@@ -532,13 +566,12 @@ beards = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
-                    is_custom_char = yes
+                    has_character_flag = has_scripted_appearance
                 }
             }
         }
     }
-
-
 }

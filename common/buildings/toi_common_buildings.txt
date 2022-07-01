@@ -7,9 +7,7 @@
 grain_storage_01 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -41,9 +39,7 @@ grain_storage_01 = {
 grain_storage_02 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -76,9 +72,7 @@ grain_storage_02 = {
 grain_storage_03 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		always = yes
@@ -112,9 +106,7 @@ grain_storage_03 = {
 cattle_lookout_01 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -148,9 +140,7 @@ cattle_lookout_01 = {
 cattle_lookout_02 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -182,9 +172,7 @@ cattle_lookout_02 = {
 cattle_lookout_03 = {
 	construction_time = quick_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
+	
 
 	can_construct_potential = {
 		always = yes

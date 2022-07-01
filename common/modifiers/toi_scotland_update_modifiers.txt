@@ -1,0 +1,6 @@
+﻿emperor_of_the_isles_modifier = {
+	icon = prestige_positive
+	courtier_opinion = 10
+	county_opinion_add = 5
+	naval_speed = 0.25
+}

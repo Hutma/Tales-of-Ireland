@@ -513,7 +513,20 @@ unite_ireland_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -581,7 +594,20 @@ unite_ireland_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -991,7 +1017,6 @@ cattle_raiding_cb = {
 				set_variable = { 
 					name = cattle_number_total
 					value = 0
-					days = 10
 				}
 				every_held_title = {
 					limit = {
@@ -1001,21 +1026,30 @@ cattle_raiding_cb = {
 						name = cattle_number
 						value = this.development_level
 					}
-					change_variable = {
-						name = cattle_number
-						multiply = 0.3
-					}
-					scope:defender = {
+					if = { 
+						limit = { exists = var:cattle_number }
 						change_variable = {
-							name = cattle_number_total
-							add = prev.var:cattle_number
+							name = cattle_number
+							multiply = 0.3
 						}
 					}
-					change_development_level = {
-						value = var:cattle_number
-						multiply = -1.0
+					scope:defender = {
+						if = { 
+							limit = { exists = var:cattle_number_total }
+							change_variable = {
+								name = cattle_number_total
+								add = prev.var:cattle_number
+							}
+						}
 					}
-					remove_variable = var:cattle_number
+					if = { 
+						limit = { exists = var:cattle_number }
+						change_development_level = {
+							value = var:cattle_number
+							multiply = -1.0
+						}
+					}
+					remove_variable = cattle_number
 				}
 			#Money gained
 				set_variable = {
@@ -1023,19 +1057,22 @@ cattle_raiding_cb = {
 					value = var:cattle_number_total
 					days = 5
 				}
-				change_variable = {
-					name = cattle_raid_gold_gain
-					add = 5
+				if = {
+					limit = { exists = var:cattle_raid_gold_gain }
+					change_variable = {
+						name = cattle_raid_gold_gain
+						add = 5
+					}
+					change_variable = {
+						name = cattle_raid_gold_gain
+						multiply = 2.0
+					}
+					pay_short_term_gold = {
+						gold = var:cattle_raid_gold_gain
+						target = scope:attacker
+					}
+					remove_variable = cattle_raid_gold_gain
 				}
-				change_variable = {
-					name = cattle_raid_gold_gain
-					multiply = 2.0
-				}
-				pay_short_term_gold = {
-					gold = var:cattle_raid_gold_gain
-					target = scope:attacker
-				}
-				remove_variable = cattle_raid_gold_gain
 			}
 
 
@@ -1044,22 +1081,23 @@ cattle_raiding_cb = {
 				set_variable = {
 					name = cattle_number_total
 					value = scope:defender.var:cattle_number_total
-					days = 10
 				}
-				capital_county = {
-					change_development_level = {
-						value = prev.var:cattle_number_total
-						multiply = 0.3
+				if = {
+					limit = { exists = var:cattle_number_total }
+					capital_county = {
+						change_development_level = {
+							value = prev.var:cattle_number_total
+							multiply = 0.3
+						}
 					}
-				}
-				change_variable = {
-					name = cattle_number_total
-					multiply = 0.7
+					change_variable = {
+						name = cattle_number_total
+						multiply = 0.7
+					}
 				}
 				set_variable = {
 					name = number_of_counties
 					value = 0
-					days = 10
 				}
 				every_held_title = {
 					limit = {
@@ -1072,18 +1110,30 @@ cattle_raiding_cb = {
 						}
 					}
 				}
-				change_variable = {
-					name = cattle_number_total
-					divide = var:number_of_counties
-				}
-				every_held_title = {
-					limit = {
-						tier = tier_county
-					}
-					change_development_level = {
-						value = scope:attacker.var:cattle_number_total
+				if = { 
+					limit = { exists = var:cattle_number_total }
+					change_variable = {
+						name = cattle_number_total
+						divide = var:number_of_counties
 					}
 				}
+				remove_variable = number_of_counties
+				if = {
+					limit = { exists = var:cattle_number_total }
+					every_held_title = {
+						limit = {
+							tier = tier_county
+						}
+						change_development_level = {
+							value = scope:attacker.var:cattle_number_total
+						}
+					}
+				}
+				remove_variable = cattle_number_total
+			}
+			
+			scope:defender = {
+				remove_variable = cattle_number_total
 			}
 		}
 		
@@ -1193,21 +1243,23 @@ cattle_raiding_cb = {
 					set_variable = {
 						name = cattle_number_total
 						value = 0
-						days = 10
 					}
-					change_variable = {
-						name = cattle_number_total
-						add = this.development_level
+					if = { 
+						limit = { exists = var:cattle_number_total }
+						change_variable = {
+							name = cattle_number_total
+							add = this.development_level
+						}
+						change_variable = {
+							name = cattle_number_total
+							multiply = 0.3
+						}
+						change_development_level = {
+							value = var:cattle_number_total
+							multiply = -1.0
+						}
+						save_scope_as = cattle_count
 					}
-					change_variable = {
-						name = cattle_number_total
-						multiply = 0.3
-					}
-					change_development_level = {
-						value = var:cattle_number_total
-						multiply = -1.0
-					}
-					save_scope_as = cattle_count
 				}
 			}
 			
@@ -1217,12 +1269,18 @@ cattle_raiding_cb = {
 					set_variable = {
 						name = cattle_number_total
 						value = scope:cattle_count.var:cattle_number_total
-						days = 10
 					}
-					change_development_level = {
-						value = var:cattle_number_total
+					if = { 
+						limit = { exists = var:cattle_number_total }
+						change_development_level = {
+							value = var:cattle_number_total
+						}
 					}
+					remove_variable = cattle_number_total
 				}
+			}
+			scope:attacker = {
+				remove_variable = cattle_number_total
 			}
 		}
 		# Prestige loss for the attacker
@@ -1418,7 +1476,7 @@ lure_to_cattle_raid_cb = {
 				flag = is_target_raid
 			}
 		}
-		desc = cattle_luring_explaination_desc
+		#desc = cattle_luring_explaination_desc
 	}
 
 	on_victory_desc = {
@@ -1575,335 +1633,6 @@ lure_to_cattle_raid_cb = {
 
 	attacker_wargoal_percentage = 0.8
 
-}
-
-#Land for son cb
-land_son_cb = {
-	group = conquest
-	
-	allowed_for_character = {
-		AND = {
-			scope:attacker = {
-				ALL_FALSE = {
-					top_liege = scope:defender.top_liege
-					liege = scope:defender
-				}
-			}
-			AND = {
-				any_child = {
-					AND = {
-						is_female = no
-						is_landed = no
-						is_adult = yes
-					}
-				}
-				has_government = feudal_government
-			}
-		}
-	}
-	
-	target_titles = neighbor_land
-	target_title_tier = duchy
-	target_de_jure_regions_above = yes
-	combine_into_one = yes
-	should_show_war_goal_subview = yes
-	mutually_exclusive_titles = { always = yes }
-	
-	allowed_against_character = {
-		scope:attacker = {
-			ALL_FALSE = {
-				top_liege = scope:defender.top_liege
-				liege = scope:defender
-			}
-		}
-		NOT = {
-			AND = {
-				scope:defender = {
-					is_close_family_of = scope:attacker
-				}
-				NOT = {
-					scope:defender = {
-						is_sibling_of = scope:attacker
-					}
-				}
-			}
-		}
-	}
-
-	cost = {
-		piety = {
-			value = 150
-		}
-		prestige = {
-			value = 0
-		}
-	}
-
-	on_declaration = {
-		on_declared_war = yes
-	}
-
-	should_invalidate = {
-		NOT = {
-			any_in_list = {
-				list = target_titles
-				any_in_de_jure_hierarchy = {
-					tier = tier_county
-					holder = {
-						OR = {
-							this = scope:defender
-							target_is_liege_or_above = scope:defender
-						}
-					}
-				}
-			}
-		}
-		scope:attacker = {
-			NOT = {
-				any_child = {
-					AND = {
-						is_female = no
-						is_landed = no
-						is_adult = yes
-					}
-				}
-			}
-		}
-	}
-
-	on_invalidated_desc = msg_county_conquest_war_invalidated_message
-	
-	on_invalidated = {
-	}
-
-	on_victory_desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:attacker = { is_local_player = yes } }
-				desc = land_for_son_cb_victory_desc_attacker
-			}
-			desc = county_conquest_cb_victory_desc
-		}
-	}
-
-	on_victory = {
-		scope:attacker = { show_pow_release_message_effect = yes }
-		create_title_and_vassal_change = {
-			type = conquest
-			save_scope_as = change
-			add_claim_on_loss = yes
-		}
-		
-		# go through the dejure hierarchy under target titles, transfer eligible vassals and sieze counties from ineligible ones
-		every_in_list = {
-			list = target_titles
-			if = {
-				limit = {
-					AND = {
-						tier = tier_duchy
-						holder = scope:defender
-					}
-				}
-				change_title_holder = {
-				holder = scope:attacker
-				change = scope:change
-				take_baronies = yes
-				}
-				add_to_global_variable_list = {
-					name = tracked_titles_for_son
-					target = this
-				}
-			}
-			every_in_de_jure_hierarchy = {
-				if = {
-					limit = {
-						this.holder = scope:defender
-					}
-					change_title_holder = {
-						holder = scope:attacker
-						change = scope:change
-						take_baronies = yes
-					}
-					add_to_global_variable_list = {
-						name = tracked_titles_for_son
-						target = this
-					}
-				}
-				if = {
-					limit = {
-						this.holder.liege = scope:defender
-					}
-					change_title_holder = {
-						holder = scope:attacker
-						change = scope:change
-						take_baronies = yes
-					}
-					add_to_global_variable_list = {
-						name = tracked_titles_for_son
-						target = this
-					}
-				}
-			}
-		}
-
-		resolve_title_and_vassal_change = scope:change
-
-		# Prestige Progress for the Attacker
-		every_in_list = {
-			list = target_titles
-			scope:attacker = {
-				add_prestige_experience = medium_prestige_value
-			}
-		}
-
-		# Prestige for the attacker's war allies
-		add_from_contribution_attackers = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		# Prestige for the defender's war allies
-		add_from_contribution_defenders = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		# Truce
-		add_truce_attacker_victory_effect = yes
-		
-		#Give title to one of your unlanded son
-		scope:attacker = {
-			trigger_event = {
-				id = toi_war.0001
-				days = 1
-			}
-		}
-	}
-
-	on_white_peace_desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:defender = { is_local_player = yes } }
-				desc = county_conquest_cb_white_peace_desc_defender
-			}
-			desc = county_conquest_cb_white_peace_desc
-		}
-	}
-
-	on_white_peace = {
-		scope:attacker = { show_pow_release_message_effect = yes }
-		# Prestige loss for the attacker
-		scope:attacker = {
-			add_prestige = {
-				value = minor_prestige_value
-				multiply = -1.0
-			}
-		}
-
-		# Prestige for the attacker's war allies
-		add_from_contribution_attackers = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		# Prestige for the defender's war allies
-		add_from_contribution_defenders = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		add_truce_white_peace_effect = yes
-	}
-
-	on_defeat_desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = { scope:defender = { is_local_player = yes } }
-				desc = county_conquest_cb_defeat_desc_defender
-			}
-			triggered_desc = {
-				trigger = {
-					scope:attacker = {
-						is_local_player = yes
-						has_targeting_faction = yes
-					}
-				}
-				desc = county_conquest_cb_defeat_desc_attacker
-			}
-			desc = county_conquest_cb_defeat_desc
-		}
-	}
-
-	on_defeat = {
-		scope:attacker = { show_pow_release_message_effect = yes }
-
-		# Prestige loss for the attacker
-		scope:attacker = {
-			pay_short_term_gold = {
-				gold = 3
-				target = scope:defender
-				yearly_income = yes
-			}
-			add_prestige = {
-				value = major_prestige_value
-				multiply = -1.0
-			}
-		}
-
-		# Prestige for Defender
-		scope:defender = {
-			add_prestige = major_prestige_value
-		}
-
-		# Prestige for the attacker's war allies
-		add_from_contribution_attackers = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		# Prestige for the defender's war allies
-		add_from_contribution_defenders = {
-			prestige = medium_prestige_value
-			opinion = {
-				modifier = contributed_in_war
-			}
-		}
-
-		add_truce_attacker_defeat_effect = yes
-
-		scope:attacker = {
-			save_temporary_scope_as = loser
-		}
-		on_lost_aggression_war_discontent_loss = yes
-	}
-
-	on_primary_attacker_death = inherit
-	on_primary_defender_death = inherit
-
-	transfer_behavior = transfer
-
-	attacker_allies_inherit = yes
-	defender_allies_inherit = yes
-
-	war_name = "LAND_SON_WAR_NAME"
-	war_name_base = "LAND_SON_WAR_NAME_BASE"
-	cb_name = "LAND_SON_CB_NAME"
-	interface_priority = 60
-
-
-	attacker_wargoal_percentage = 0.8
-
-	max_ai_diplo_distance_to_title = 1000
 }
 
 #Fomorian religion special cb Purification
@@ -2080,7 +1809,20 @@ purification_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -2216,12 +1958,12 @@ purification_cb = {
 			}
 		}
 
-		scope:attacker.faith = {
-			change_fervor = -1
-		}
-		scope:defender.faith = {
-			change_fervor = 3
-		}
+		# scope:attacker.faith = {
+			# change_fervor = -1
+		# }
+		# scope:defender.faith = {
+			# change_fervor = 3
+		# }
 
 		# Truce
 		add_truce_attacker_victory_effect = yes
@@ -2523,7 +2265,20 @@ purification_duchy_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -2671,12 +2426,12 @@ purification_duchy_cb = {
 			}
 		}
 
-		scope:attacker.faith = {
-			change_fervor = -2
-		}
-		scope:defender.faith = {
-			change_fervor = 4
-		}
+		# scope:attacker.faith = {
+			# change_fervor = -2
+		# }
+		# scope:defender.faith = {
+			# change_fervor = 4
+		# }
 		
 		scope:attacker = {
 			create_alliance = scope:usurpator
@@ -3002,7 +2757,20 @@ fomorian_tributary_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -3074,10 +2842,11 @@ fomorian_tributary_cb = {
 				change = scope:change
 			}
 			resolve_title_and_vassal_change = scope:change
-		}
-		
-		scope:defender = {
-			vassal_contract_set_obligation_level = { type = special_contract level = special_contract_fomorian_tributary }
+			
+			if = {
+				limit = { is_independent_ruler = no }
+				vassal_contract_set_obligation_level = { type = special_contract level = special_contract_fomorian_tributary }
+			}
 		}
 		
 		
@@ -3371,7 +3140,20 @@ humiliate_candidate_cb = {
 					desc = CB_ATTACKER_DYNASTY_WARFARE
 				}
 			}
-
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
 			# Vassal contract in-realm cost reduction
 			if = {
 				limit = {
@@ -3570,4 +3352,506 @@ humiliate_candidate_cb = {
 	attacker_ticking_warscore = 0
 	attacker_wargoal_percentage = 0.8
 	
+}
+
+#attack outlaw
+outlaw_conquest_cb = {
+	group = conquest
+
+	combine_into_one = yes
+	should_show_war_goal_subview = yes
+	mutually_exclusive_titles = { always = yes }
+
+	allowed_for_character = {
+		is_independent_ruler = yes
+	}
+
+	allowed_against_character = {
+		scope:defender = {
+			has_trait = outlaw
+		}
+	}
+	target_titles = all
+	target_title_tier = county
+	ignore_effect = change_title_holder
+
+	ai_can_target_all_titles = {
+		can_use_viking_invasion_cbs_trigger = yes
+	}
+	ai_score_mult = {
+		value = viking_conquest_ai_score_value
+		
+		# As a feudal gov, do not attack owner of tribal holdings  if you have a tribal holding to convert already
+		add = {
+			every_in_list = {
+				list = target_titles
+				if = {
+					limit = { feudal_clan_tribal_conquest_constraints = yes }
+					add = -1000
+				}
+			}
+		}
+	}
+
+	valid_to_start = {
+		scope:target = {
+			neighboring_county_or_viking_conquest_trigger = { CHARACTER = root }
+		}
+	}
+
+	should_invalidate = {
+		NOT = {
+			any_in_list = {
+				list = target_titles
+				any_in_de_jure_hierarchy = {
+					tier = tier_county
+					holder = {
+						OR = {
+							this = scope:defender
+							target_is_liege_or_above = scope:defender
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_county_conquest_war_invalidated_message
+	on_invalidated = {
+	}
+
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = {
+					scope:defender.faith = scope:attacker.faith
+				}
+				add = {
+					value = medium_piety_value
+					desc = CB_SAME_FAITH_COST
+				}
+			}
+			if = {
+				limit = {
+					scope:attacker = { has_government = tribal_government }
+				}
+				multiply = {
+					value = 0.5
+					desc = CB_TRIBAL_COST
+				}
+			}
+
+			# Bellum Justum Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_perk = bellum_justum_perk
+					}
+				}
+				multiply = {
+					add = bellum_justum_discount_percentage
+					divide = 100
+					desc = CB_ATTACKER_BELLUM_JUSTUM
+				}
+			}
+
+			# Dynasty Warfare Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_dynasty = yes
+						dynasty = {
+							has_dynasty_perk = warfare_legacy_2
+						}
+					}
+				}
+				multiply = {
+					value = warfare_legacy_2_discount
+					desc = CB_ATTACKER_DYNASTY_WARFARE
+				}
+			}
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
+			# Vassal contract in-realm cost reduction
+			if = {
+				limit = {
+					scope:attacker = {
+						is_independent_ruler = no
+						vassal_contract_has_flag = vassal_contract_war_override
+						liege = scope:defender.liege
+					}
+				}
+				multiply = {
+					value = war_declaration_rights_allowed_cost_reduction
+					desc = "CB_ATTACKER_VASSAL_CONTRACT"
+				}
+			}
+
+			if = {
+				limit = {
+					has_game_rule = no_cost_casus_belli_costs
+				}
+				multiply = {
+					value = 0
+					desc = CB_GAME_RULE_NO_COST
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { scope:defender.faith = scope:attacker.faith }
+				}
+				add = {
+					value = medium_prestige_value
+					desc = CB_COST_DIFFERENT_FAITH
+				}
+			}
+			if = {
+				limit = {
+					scope:attacker = { has_government = tribal_government }
+				}
+				multiply = {
+					value = 0.5
+					desc = CB_TRIBAL_COST
+				}
+			}
+
+			#Innovation Prestige Discounts
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_innovation = innovation_chronicle_writing
+							has_innovation = innovation_land_grants
+							has_innovation = innovation_rightful_ownership
+						}
+					}
+				}
+				multiply = {
+					value = 0.7
+					desc = CB_ATTACKER_INNOVATIONS
+				}
+			}
+			else_if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							OR = {
+								has_innovation = innovation_chronicle_writing
+								has_innovation = innovation_land_grants
+							}
+							OR = {
+								has_innovation = innovation_land_grants
+								has_innovation = innovation_rightful_ownership
+							}
+							OR = {
+								has_innovation = innovation_chronicle_writing
+								has_innovation = innovation_rightful_ownership
+							}
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = CB_ATTACKER_INNOVATIONS
+				}
+			}
+			else_if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							OR = {
+								has_innovation = innovation_chronicle_writing
+								has_innovation = innovation_land_grants
+								has_innovation = innovation_rightful_ownership
+							}
+						}
+					}
+				}
+				multiply = {
+					value = 0.9
+					desc = CB_ATTACKER_INNOVATIONS
+				}
+			}
+
+			# Bellum Justum Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_perk = bellum_justum_perk
+					}
+				}
+				multiply = {
+					add = bellum_justum_discount_percentage
+					divide = 100
+					desc = CB_ATTACKER_BELLUM_JUSTUM
+				}
+			}
+
+			# Dynasty Warfare Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_dynasty = yes
+						dynasty = {
+							has_dynasty_perk = warfare_legacy_2
+						}
+					}
+				}
+				multiply = {
+					value = warfare_legacy_2_discount
+					desc = CB_ATTACKER_DYNASTY_WARFARE
+				}
+			}
+			# Culture
+			if = {
+				limit = {
+					scope:attacker = {
+						culture = {
+							has_cultural_parameter = cheaper_cbs
+						}
+					}
+				}
+				multiply = {
+					value = 0.8
+					desc = "CB_ATTACKER_CULTURE"
+				}
+			}
+			# Vassal contract in-realm cost reduction
+			if = {
+				limit = {
+					scope:attacker = {
+						is_independent_ruler = no
+						vassal_contract_has_flag = vassal_contract_war_override
+						liege = scope:defender.liege
+					}
+				}
+				multiply = {
+					value = war_declaration_rights_allowed_cost_reduction
+					desc = "CB_ATTACKER_VASSAL_CONTRACT"
+				}
+			}
+
+			if = {
+				limit = {
+					has_game_rule = no_cost_casus_belli_costs
+				}
+				multiply = {
+					value = 0
+					desc = CB_GAME_RULE_NO_COST
+				}
+			}
+		}
+	}
+
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	on_victory_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:attacker = { is_local_player = yes } }
+				desc = county_conquest_cb_victory_desc_attacker
+			}
+			desc = county_conquest_cb_victory_desc
+		}
+	}
+
+	on_victory = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = yes
+		}
+
+		#As this is just a county conquest, simply grab the designated county.
+		every_in_list = {
+			list = target_titles
+			change_title_holder = {
+				holder = scope:attacker
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+
+		# Prestige Progress for the Attacker
+		every_in_list = {
+			list = target_titles
+			scope:attacker = {
+				add_prestige_experience = minor_prestige_value
+			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Truce
+		add_truce_attacker_victory_effect = yes
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = county_conquest_cb_white_peace_desc_defender
+			}
+			desc = county_conquest_cb_white_peace_desc
+		}
+	}
+
+	on_white_peace = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+		# Prestige loss for the attacker
+		scope:attacker = {
+			add_prestige = {
+				value = minor_prestige_value
+				multiply = -1.0
+			}
+			stress_impact = {
+ 				ambitious = medium_stress_impact_gain
+ 				arrogant = medium_stress_impact_gain
+ 			}
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+		
+		scope:defender = {
+			stress_impact = {
+ 				arrogant = medium_stress_impact_gain
+ 			}
+		}
+
+		add_truce_white_peace_effect = yes
+	}
+
+	on_defeat_desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:defender = { is_local_player = yes } }
+				desc = county_conquest_cb_defeat_desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					scope:attacker = {
+						is_local_player = yes
+						has_targeting_faction = yes
+					}
+				}
+				desc = county_conquest_cb_defeat_desc_attacker
+			}
+			desc = county_conquest_cb_defeat_desc
+		}
+	}
+
+	on_defeat = {
+		scope:attacker = { show_pow_release_message_effect = yes }
+
+		# Prestige loss for the attacker
+		scope:attacker = {
+			pay_short_term_gold = {
+				gold = 2
+				target = scope:defender
+				yearly_income = yes
+			}
+			add_prestige = {
+				value = medium_prestige_value
+				multiply = -1.0
+			}
+		}
+
+		# Prestige for Defender
+		scope:defender = {
+			add_prestige = medium_prestige_value
+		}
+
+		# Prestige for the attacker's war allies
+		add_from_contribution_attackers = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		# Prestige for the defender's war allies
+		add_from_contribution_defenders = {
+			prestige = minor_prestige_value
+			opinion = {
+				modifier = contributed_in_war
+			}
+		}
+
+		add_truce_attacker_defeat_effect = yes
+
+		scope:attacker = {
+			save_temporary_scope_as = loser
+		}
+		on_lost_aggression_war_discontent_loss = yes
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "OUTLAW_CONQUEST_WAR_NAME"
+	war_name_base = "OUTLAW_CONQUEST_WAR_NAME_BASE"
+	cb_name = "OUTLAW_CONQUEST_COUNTY_CB_NAME"
+
+	interface_priority = 79
+
+	use_de_jure_wargoal_only = yes
+
+	attacker_wargoal_percentage = 0.8
+
 }

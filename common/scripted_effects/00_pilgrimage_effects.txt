@@ -126,24 +126,62 @@ pilgrimage_additional_reward_effect = {
 
 short_pilgrimage_reward_effect = {
 	add_piety = short_pilgrimage_piety_gain
+	if = {
+		limit = {
+			can_perform_the_hajj_trigger = yes
+			exists = scope:activity.var:is_hajj
+		}
+		add_trait = pilgrim
+	}
+	christian_saint_bone_tooltip_effect = yes
 	pilgrimage_additional_reward_effect = yes
 }
 
 medium_pilgrimage_reward_effect = {
 	add_piety = long_pilgrimage_piety_gain
-	add_trait = pilgrim
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { can_perform_the_hajj_trigger = yes }
+				exists = scope:activity.var:is_hajj
+			}
+			trigger_else = { always = yes }
+		}
+		add_trait = pilgrim
+	}
+	christian_saint_bone_tooltip_effect = yes
 	pilgrimage_additional_reward_effect = yes
 }
 
 long_pilgrimage_reward_effect = {
 	add_piety = very_long_pilgrimage_piety_gain
-	add_trait = pilgrim
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { can_perform_the_hajj_trigger = yes }
+				exists = scope:activity.var:is_hajj
+			}
+			trigger_else = { always = yes }
+		}
+		add_trait = pilgrim
+	}
+	christian_saint_bone_tooltip_effect = yes
 	pilgrimage_additional_reward_effect = yes
 }
 
 very_long_pilgrimage_reward_effect = {
 	add_piety = exceptionally_long_pilgrimage_piety_gain
-	add_trait = pilgrim
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { can_perform_the_hajj_trigger = yes }
+				exists = scope:activity.var:is_hajj
+			}
+			trigger_else = { always = yes }
+		}
+		add_trait = pilgrim
+	}
+	christian_saint_bone_tooltip_effect = yes
 	pilgrimage_additional_reward_effect = yes
 }
 
@@ -329,7 +367,7 @@ set_up_next_pilgrimage_event_effect = {
 	}
 
 	if = {
-		limit = { # TODO: Is any fallback handling needed in an else here?
+		limit = { # TODO_CD Is any fallback handling needed in an else here?
 			exists = scope:activity
 		}
 		if = {
@@ -338,9 +376,18 @@ set_up_next_pilgrimage_event_effect = {
 					compare_value < scope:activity.var:pilgrimage_distance
 				}
 			}
-			trigger_event = {
-				on_action = pilgrimage_journey_events
-				days = $DAYS$
+			if = {
+				limit = { exists = scope:activity.var:is_hajj }
+				trigger_event = {
+					on_action = hajj_journey_events
+					days = $DAYS$
+				}
+			}
+			else = {
+				trigger_event = {
+					on_action = pilgrimage_journey_events
+					days = $DAYS$
+				}
 			}
 		}
 		else = {
@@ -353,9 +400,18 @@ set_up_next_pilgrimage_event_effect = {
 					}
 				}
 			}
-			trigger_event = {
-				on_action = pilgrimage_destination_events
-				days = $DAYS$
+			if = {
+				limit = { exists = scope:activity.var:is_hajj }
+				trigger_event = {
+					on_action = hajj_destination_events
+					days = $DAYS$
+				}
+			}
+			else = {
+				trigger_event = {
+					on_action = pilgrimage_destination_events
+					days = $DAYS$
+				}
 			}
 		}
 		scope:activity = {
@@ -444,7 +500,7 @@ set_up_holy_sites_for_selection_effect = {
 				}
 			}
 		}
-		save_temporary_scope_value_as = {
+		save_scope_value_as = {
 			name = has_set_up_pilgrimage_sites
 			value = yes
 		}
@@ -508,3 +564,16 @@ abandon_pilgrimage_early_effect = {
 		}
 	}
 } 
+
+christian_saint_bone_creation_effect = { # Create a bone of a random saint in a box
+
+}
+
+christian_saint_bone_tooltip_effect = { # Needed to ensure tooltip matches artifact name
+	if = {
+		limit = { exists = scope:christian_saint_bone_scope }
+		show_as_tooltip = {
+			scope:christian_saint_bone_scope = { set_owner = ROOT }
+		}
+	}
+}

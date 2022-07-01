@@ -373,3 +373,51 @@ k_airgialla = {
 		texture = "k_airgialla.dds"
 	}
 }
+
+d_galmoy = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_galmoy_coa.dds"
+	}
+}
+
+d_newry = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_newry_coa.dds"
+	}
+}
+
+d_athenry = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_athenry_coa.dds"
+	}
+}
+
+c_beaufort = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_beaufort_coa.dds"
+	}
+}
+
+c_finvoy = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_finvoy_coa.dds"
+	}
+}
+
+k_vampire_kingdom = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_finvoy_coa.dds"
+	}
+}

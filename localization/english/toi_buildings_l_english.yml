@@ -68,6 +68,26 @@
  building_cattle_lookout_03:0 "Huge Cattle Lookout"
  building_cattle_lookout_03_desc:0 "This place is used to protect, look after, and take care of animals. During harsh winters this look helps keeps the cows and sheep alive."
  
+ #Roman
+ building_type_coliseum_01:0 "Coliseum"
+ building_coliseum_01:0 "Small Coliseum"
+ building_coliseum_01_desc: "Roman amphitheatres are Roman theatres – large, circular or oval open-air venues with raised seating – built by the ancient Romans. They were used for events such as gladiator combats, venationes (animal slayings) and executions. About 230 Roman amphitheatres have been found across the area of the Roman Empire. Early amphitheatres date from the Republican period, though they became more monumental during the Imperial era."
+ building_type_coliseum_01_desc:0 "Roman amphitheatres are Roman theatres – large, circular or oval open-air venues with raised seating – built by the ancient Romans. They were used for events such as gladiator combats, venationes (animal slayings) and executions. About 230 Roman amphitheatres have been found across the area of the Roman Empire. Early amphitheatres date from the Republican period, though they became more monumental during the Imperial era."
+ building_type_coliseum_02:0 "Coliseum"
+ building_coliseum_02:0 "Coliseum"
+ building_coliseum_02_desc:0 "Roman amphitheatres are Roman theatres – large, circular or oval open-air venues with raised seating – built by the ancient Romans. They were used for events such as gladiator combats, venationes (animal slayings) and executions. About 230 Roman amphitheatres have been found across the area of the Roman Empire. Early amphitheatres date from the Republican period, though they became more monumental during the Imperial era."
+ 
+ building_type_aqueduct_01:0 "Aqueduct"
+ building_aqueduct_01:0 "Small Aqueduct"
+ building_aqueduct_01_desc:0 "The Romans constructed aqueducts throughout their Republic and later Empire, to bring water from outside sources into cities and towns. Aqueduct water supplied public baths, latrines, fountains, and private households; it also supported mining operations, milling, farms, and gardens."
+ building_type_aqueduct_01_desc:0 "The Romans constructed aqueducts throughout their Republic and later Empire, to bring water from outside sources into cities and towns. Aqueduct water supplied public baths, latrines, fountains, and private households; it also supported mining operations, milling, farms, and gardens."
+ building_type_aqueduct_02:0 "Aqueduct"
+ building_aqueduct_02:0 "Aqueduct"
+ building_aqueduct_02_desc:0 "The Romans constructed aqueducts throughout their Republic and later Empire, to bring water from outside sources into cities and towns. Aqueduct water supplied public baths, latrines, fountains, and private households; it also supported mining operations, milling, farms, and gardens."
+ building_type_aqueduct_03:0 "Aqueduct"
+ building_aqueduct_03:0 "Large Aqueduct"
+ building_aqueduct_03_desc:0 "The Romans constructed aqueducts throughout their Republic and later Empire, to bring water from outside sources into cities and towns. Aqueduct water supplied public baths, latrines, fountains, and private households; it also supported mining operations, milling, farms, and gardens."
+ 
  #MANX
  building_type_wonder_king_grave_01:0 "King's Grave"
  building_type_wonder_king_grave_01_desc:1 "There are two tombs on this site. The first is the largest known megalithic tomb on the Isle of Man. The cairn is made of coloured sandstone with a forecourt of 12 metres across and 4 metres deep. It contains three chambers once filled with burials. Following excavation, only one burial and bowl were found intact. \n\nThe second tomb is just to the south and across the road from the first. Following the sign and path leads to the tomb, which is situated behind a house. It has three chambers enclosed within a cairn of stones and earth. A standing stone remains at the back of the site, along with the remains of other stones which would have been the forecourt and entrance to the tomb."
@@ -92,3 +112,29 @@
  building_type_wonder_cashtal_yn_ard_01_desc:1 "Cashtal yn Ard is an ancient burial site. Legends say it was once a fort from which ancient god-kings ruled over the mortals living on Man. The tomb was likely originally constructed as a single burial chamber, but as successive important community members died the site was expanded to accommodate them.\n\nThe tomb consists of a west facing open forecourt which leads to five stone chambers in the east."
  building_wonder_cashtal_yn_ard_01:0 "Cashtal yn Ard"
  building_wonder_cashtal_yn_ard_01_desc:1 "Cashtal yn Ard is an ancient burial site. Legends say it was once a fort from which ancient god-kings ruled over the mortals living on Man. The tomb was likely originally constructed as a single burial chamber, but as successive important community members died the site was expanded to accommodate them.\n\nThe tomb consists of a west facing open forecourt which leads to five stone chambers in the east."
+ 
+ #SCOTLAND
+ 
+ building_type_wonder_torrylin_cairn_01:0 "Torrylin Cairn"
+ building_type_wonder_torrylin_cairn_01_desc:1 "Torrylin Cairn is of a type found across south-west Scotland known as a Clyde cairn, of which a better preserved example can be found at Carn Ban, about five kilometres to the northeast. The tomb would probably have had a crescent-shaped forecourt, framed by a façade of slender upright stones."
+ building_wonder_torrylin_cairn_01:0 "Torrylin Cairn"
+ building_wonder_torrylin_cairn_01_desc:1 "Torrylin Cairn is of a type found across south-west Scotland known as a Clyde cairn, of which a better preserved example can be found at Carn Ban, about five kilometres to the northeast. The tomb would probably have had a crescent-shaped forecourt, framed by a façade of slender upright stones."
+
+ building_type_wonder_tourhouse_circle_01:0 "Torhouse Circle"
+ building_type_wonder_tourhouse_circle_01_desc:1 "The stone circle consists of nineteen granite boulders set on a slightly raised platform. The stones have a height ranging from about 0.6 metres to 1.5 metres and are arranged in a circle with a diameter of about 22 metres. The larger stones, over 1 metre high, are on the southeast side.\n\nThree upright boulders stand in a line near the centre of the circle. The direction of the line of the three central stones is northeast to southwest. \n\nLocal tradition maintains that the three large stones in the center of the circle contained the tomb of Galdus, a mythical king."
+ building_wonder_tourhouse_circle_01:0 "Torhouse Circle"
+ building_wonder_tourhouse_circle_01_desc:1 "The stone circle consists of nineteen granite boulders set on a slightly raised platform. The stones have a height ranging from about 0.6 metres to 1.5 metres and are arranged in a circle with a diameter of about 22 metres. The larger stones, over 1 metre high, are on the southeast side.\n\nThree upright boulders stand in a line near the centre of the circle. The direction of the line of the three central stones is northeast to southwest. \n\nLocal tradition maintains that the three large stones in the center of the circle contained the tomb of Galdus, a mythical king."
+ 
+ building_type_wonder_stone_of_lochmaben_01:0 "Lochmaben Stone"
+ building_type_wonder_stone_of_lochmaben_01_desc:1 "The Lochmaben Stone is a megalith standing in a field, nearly a mile west of the Sark mouth on the Solway Firth, three hundred yards or so above high water mark on the farm of Old Graitney in Dumfries & Galloway in Scotland. The area is also known as Stormont. Together with a smaller stone it is all that is left of a stone circle dating back to around 3000BC."
+ building_wonder_stone_of_lochmaben_01:0 "Lochmaben Stone"
+ building_wonder_stone_of_lochmaben_01_desc:1 "The Lochmaben Stone is a megalith standing in a field, nearly a mile west of the Sark mouth on the Solway Firth, three hundred yards or so above high water mark on the farm of Old Graitney in Dumfries & Galloway in Scotland. The area is also known as Stormont. Together with a smaller stone it is all that is left of a stone circle dating back to around 3000BC."
+ 
+ building_type_wonder_abory_hill_01:0 "Abory Hillfort"
+ building_type_wonder_abory_hill_01_desc:1 "A summit of South Lanarkshire, Arbory Hill rises to 429m. This is a strong Iron Age hill-fort crowning the hill, comprising a walled enclosure and huts circles surrounded by a double rampart."
+ building_wonder_abory_hill_01:0 "Abory Hillfort"
+ building_wonder_abory_hill_01_desc:1 "A summit of South Lanarkshire, Arbory Hill rises to 429m. This is a strong Iron Age hill-fort crowning the hill, comprising a walled enclosure and huts circles surrounded by a double rampart."
+ building_type_wonder_abory_hill_02:0 "Abory Hillfort"
+ building_type_wonder_abory_hill_02_desc:1 "A summit of South Lanarkshire, Arbory Hill rises to 429m. This is a strong Iron Age hill-fort crowning the hill, comprising a walled enclosure and huts circles surrounded by a double rampart."
+ building_wonder_abory_hill_02:0 "Fortified Abory Hillfort"
+ building_wonder_abory_hill_02_desc:1 "A summit of South Lanarkshire, Arbory Hill rises to 429m. This is a strong Iron Age hill-fort crowning the hill, comprising a walled enclosure and huts circles surrounded by a double rampart."

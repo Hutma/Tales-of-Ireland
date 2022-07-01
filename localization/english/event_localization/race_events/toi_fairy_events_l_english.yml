@@ -1,0 +1,8 @@
+﻿l_english:
+ toi_fairy_event.0001.t: "A Fairy in need of assistance"
+ toi_fairy_event.0001.desc: "As ruler of the Court, it is my duty to help its members against external threats and aggression. Because of this [fairy_to_defend.GetName] is asking for my help in [war_to_call.GetName]. How should I answer?"
+ toi_fairy_event.0001.a: "I will honor my duties."
+ toi_fairy_event.0001.b: "I can't help everyone."
+ tooltip.toi_fairy_event.0001.attacker: "[denfender_king.GetFirstNameNoTooltip] has decided to defend the Fairy Realm"
+ tooltip.toi_fairy_event.0001.a: "[denfender_king.GetFirstNameNoTooltip] has decided to defend your Realm"
+ tooltip.toi_fairy_event.0001.b: "[denfender_king.GetFirstNameNoTooltip] has betrayed us and won't join our war"

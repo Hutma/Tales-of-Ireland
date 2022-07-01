@@ -1,5 +1,5 @@
 ﻿2000000 = {
-    name = "Caoimhín an Aoire"
+    name = "CaoimhI_n_an_Aoire"
     dynasty = 207 
     religion = ancient_greek_slave
     culture = fir_bolg
@@ -34,8 +34,8 @@
 				type = the_brave_ones
 				stacks = 1
 			}
-			location = 4452
-			origin = 4452
+			location = capital_province
+			origin = capital_province
 			inheritable = no
 		}
 	}
@@ -68,6 +68,7 @@
     trait = patient
     trait = gregarious
     trait = fir_bolg
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4774.1.1 = {
@@ -107,7 +108,7 @@
     disallow_random_traits = yes
     4779.1.1 = {
         birth = yes
-        add_pressed_claim = c_balley_keeill_eoin
+        add_pressed_claim = title:c_balley_keeill_eoin
     }
 }
 2000002 = {
@@ -135,7 +136,7 @@
     disallow_random_traits = yes
     4775.1.1 = {
         birth = yes
-        add_pressed_claim = c_peel
+        add_pressed_claim = title:c_peel
     }
 }
 2000003 = {
@@ -169,8 +170,8 @@
 				type = kern_warriors
 				stacks = 1
 			}
-			location = 4432
-			origin = 4432
+			location = capital_province
+			origin = capital_province
 			inheritable = no
 		}
 	}
@@ -208,8 +209,8 @@
 				type = kern_warriors
 				stacks = 1
 			}
-			location = 4434
-			origin = 4434
+			location = capital_province
+			origin = capital_province
 			inheritable = no
 		}
 	}
@@ -238,7 +239,7 @@
     disallow_random_traits = yes
     4755.1.1 = {
         birth = yes
-        add_pressed_claim = d_medall
+        add_pressed_claim = title:d_medall
     }
 }
 2000006 = {
@@ -296,8 +297,8 @@
 				type = nemedian_famer
 				stacks = 1
 			}
-			location = 4444
-			origin = 4444
+			location = capital_province
+			origin = capital_province
 			inheritable = no
 		}
 	}
@@ -357,8 +358,8 @@
 				type = newgrange_guardians
 				stacks = 1
 			}
-			location = 4452
-			origin = 4452
+			location = capital_province
+			origin = capital_province
 			inheritable = no
 		}
 	}
@@ -408,6 +409,35 @@
 
     disallow_random_traits = yes
     4752.1.1 = {
+        birth = yes
+    }
+}
+2000010 = {
+    name = "Manannan"
+    dynasty = 215
+    religion = sidhe_beliefs
+    culture = bann_culture
+
+    diplomacy = 4
+    martial = 14
+    stewardship = 8
+    intrigue = 14
+    learning = 12
+    prowess = 16
+
+    trait = education_intrigue_3
+    trait = education_martial_prowess_3
+    trait = just
+    trait = brave
+    trait = zealous
+    trait = tuatha_de_danann
+	
+	trait = physique_good_2
+	
+	health =  10
+	
+    disallow_random_traits = yes
+    3375.1.1 = {
         birth = yes
     }
 }

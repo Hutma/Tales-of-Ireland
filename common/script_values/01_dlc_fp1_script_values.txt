@@ -939,6 +939,14 @@ fp1_trade_events_cash_settlement_value = {
 	max = 50
 }
 
+fp1_trade_events_truce_length_value = 3650
+
+fp1_trade_events_truce_renewal_date_value = {
+	value = fp1_trade_events_truce_length_value
+
+	add = -30
+}
+
 ##################################################
 # Jomsvikings
 

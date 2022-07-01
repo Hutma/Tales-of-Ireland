@@ -21,6 +21,7 @@ hairstyles = {
             modifier = {
                 add = 55
 				OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -34,6 +35,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -55,6 +57,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -63,6 +66,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -84,6 +88,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -92,6 +97,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -113,6 +119,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -121,6 +128,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -143,6 +151,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -153,14 +162,6 @@ hairstyles = {
 					}
 				}
                 portrait_mena_clothing_trigger = yes
-            }
-            modifier = {
-                add = -100
-                OR = {
-                    is_from_ruler_designer = yes
-                    has_character_flag = has_scripted_appearance
-                    this = character:33922 # Prophet Muhammad
-                }
             }
         }
     }
@@ -178,19 +179,12 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
                 }
                 portrait_mena_clothing_trigger = yes
-            }
-            modifier = {
-                add = -100
-                OR = {
-                    is_from_ruler_designer = yes
-                    has_character_flag = has_scripted_appearance
-                    this = character:33922 # Prophet Muhammad
-                }
             }
         }
     }
@@ -208,19 +202,12 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
                 }
                 portrait_mena_clothing_trigger = yes
-            }
-            modifier = {
-                add = -100
-                OR = {
-                    is_from_ruler_designer = yes
-                    has_character_flag = has_scripted_appearance
-                    this = character:33922 # Prophet Muhammad
-                }
             }
         }
     }
@@ -238,19 +225,12 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
                 }
                 portrait_mena_clothing_trigger = yes
-            }
-            modifier = {
-                add = -100
-                OR = {
-                    is_from_ruler_designer = yes
-                    has_character_flag = has_scripted_appearance
-                    this = character:33922 # Prophet Muhammad
-                }
             }
         }
     }
@@ -269,6 +249,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -282,6 +263,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -303,6 +285,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -311,6 +294,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -332,6 +316,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -340,6 +325,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -361,6 +347,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -369,6 +356,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -391,6 +379,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -404,6 +393,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -425,6 +415,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -433,6 +424,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -454,6 +446,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -462,6 +455,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -483,6 +477,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -491,6 +486,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -513,6 +509,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -526,6 +523,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -547,6 +545,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -555,6 +554,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -576,6 +576,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -584,6 +585,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -605,6 +607,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -613,6 +616,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -635,6 +639,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -648,6 +653,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -669,6 +675,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -677,6 +684,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -698,6 +706,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -706,6 +715,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -727,6 +737,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -735,6 +746,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -757,6 +769,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -770,6 +783,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -791,6 +805,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -799,6 +814,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -820,6 +836,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
@@ -828,6 +845,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -849,6 +867,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_afro
@@ -857,6 +876,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -879,7 +899,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 100
-                age < @baby_hair_age
+                scope:age < @baby_hair_age
                 NOT = { portrait_african_clothing_trigger = yes } # Should be replaced with a has_gene trigger when we get that
             }
         }
@@ -899,7 +919,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 100
-                age < @baby_hair_age
+                scope:age < @baby_hair_age
                 portrait_african_clothing_trigger = yes # Should be replaced with a has_gene trigger when we get that
             }
         }
@@ -918,10 +938,11 @@ hairstyles = {
             base = 0
             modifier = {
                 add = -100
-                age < @baby_hair_age
+                scope:age < @baby_hair_age
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -940,7 +961,7 @@ hairstyles = {
     #         base = 0
     #         modifier = {
     #             add = 100
-    #             age >= @baby_hair_age
+    #             scope:age >= @baby_hair_age
     #         }
     #         # This can't be always 100 otherwise it will get insta picked, so we subtract the no hair chance off to weight it properly
     #         modifier = {
@@ -968,6 +989,7 @@ hairstyles = {
             modifier = {
                 add = 55
                 OR = {
+                    NOT = { exists = this }
 					has_gene = {
 						category = gene_hair_type
 						template = hair_straight
@@ -981,6 +1003,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -1002,6 +1025,7 @@ hairstyles = {
             base = 0
             modifier = {
                 add = 55
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_wavy
@@ -1010,6 +1034,7 @@ hairstyles = {
             }
             modifier = {
                 add = -100
+                exists = this
                 OR = {
                     is_from_ruler_designer = yes
                     has_character_flag = has_scripted_appearance
@@ -1041,6 +1066,15 @@ hairstyles = {
 
 		weight = {
 			base = 0
+			modifier = {
+                add = 55
+                exists = this
+                has_gene = {
+                    category = gene_hair_type
+                    template = hair_wavy
+                }
+                culture = { has_cultural_pillar = heritage_brythonic }
+            }
 		}
 	}
 
@@ -1095,11 +1129,12 @@ hairstyles = {
 			base = 0
 			modifier = {
                 add = 25
+                exists = this
                 has_gene = {
                     category = gene_hair_type
                     template = hair_curly
                 }
-				culture.culture_group = culture_group:frankish_group
+				culture = { has_cultural_pillar = heritage_cessarian }
             }
 		}
 	}

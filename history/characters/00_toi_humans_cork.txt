@@ -19,7 +19,7 @@
     trait = lazy
     trait = celtic_human
 
-    father=  601000 
+    father = 601000 
 
     disallow_random_traits = yes
     4782.1.1 = {
@@ -50,7 +50,7 @@
     disallow_random_traits = yes
     4765.1.1 = {
         birth = yes
-        add_pressed_claim = k_cork
+        add_pressed_claim = title:k_cork
     }
 }
 600002 = {
@@ -312,7 +312,7 @@
     learning =  3 
     prowess =  7 
     trait = fickle
-    trait = arrogant
+    trait = curious
     trait = celtic_human
 
     disallow_random_traits = yes
@@ -387,13 +387,13 @@
     trait = ambitious
     trait = celtic_human
 
-    father=  601001 
+    father = 601001 
 
     disallow_random_traits = yes
     4761.1.1 = {
         birth = yes
     }
-    4997.1.1 = {
+    4797.1.1 = {
         death = yes
     }
 }
@@ -491,7 +491,7 @@
     learning =  2 
     prowess =  1 
     trait = greedy
-    trait = impatient
+    trait = curious
     trait = celtic_human
 
     father=  600001 
@@ -514,7 +514,7 @@
     learning =  9 
     prowess =  10 
     trait = just
-    trait = honest
+    trait = bossy
     trait = celtic_human
 
     father=  600002 
@@ -537,6 +537,7 @@
     learning =  3 
     prowess =  10 
     trait = wrathful
+    trait = rowdy
     trait = celtic_human
 
     father=  600002 
@@ -559,6 +560,7 @@
     learning =  4 
     prowess =  8 
     trait = greedy
+    trait = rowdy
     trait = celtic_human
 
     father=  600002 
@@ -608,6 +610,7 @@
     learning =  6 
     prowess =  3 
     trait = calm
+    trait = bossy
     trait = celtic_human
 
     father=  600003 
@@ -656,7 +659,7 @@
     prowess =  6 
     trait = stubborn
     trait = gregarious
-    trait = generous
+    trait = bossy
     trait = celtic_human
 
     father=  600006 
@@ -706,7 +709,7 @@
     prowess =  10 
     trait = paranoid
     trait = gregarious
-    trait = content
+    trait = bossy
     trait = celtic_human
 
     mother=  600009 
@@ -782,6 +785,7 @@
     learning =  2 
     prowess =  7 
     trait = callous
+    trait = rowdy
     trait = celtic_human
 
     father=  600014 

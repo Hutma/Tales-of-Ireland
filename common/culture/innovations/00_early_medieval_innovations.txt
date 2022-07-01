@@ -15,6 +15,8 @@
 @weapons_and_armor_01 = "gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_01.dds"
 @weapons_and_armor_02 = "gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_02.dds"
 @knight = "gfx/interface/icons/culture_innovations/innovation_knight.dds"
+@hird = "gfx/interface/icons/culture_innovations/innovation_hird.dds"
+@longboats = "gfx/interface/icons/culture_innovations/innovation_longboats.dds"
 @majesty_01 = "gfx/interface/icons/culture_innovations/innovation_majesty_01.dds"
 @majesty_02 = "gfx/interface/icons/culture_innovations/innovation_majesty_02.dds"
 @majesty_03 = "gfx/interface/icons/culture_innovations/innovation_majesty_03.dds"
@@ -53,6 +55,10 @@ innovation_ram = {
 	icon = @siege_weapons
 
 	unlock_maa = ram
+	
+	potential = {
+		has_game_rule = second_era
+	}
 
 	flag = global_regular
 	flag = early_medieval_era_regular
@@ -65,8 +71,6 @@ innovation_burhs = {
 
 
 	custom = unlock_early_medieval_military_buildings
-
-	custom = unlock_march_contract
 	
 	modifier = {
 		levy_size = 0.05
@@ -280,6 +284,17 @@ innovation_chariot_manx = {
 	icon = @maa_02
 
 	unlock_maa = armored_horsemen_manx
+	
+	flag = global_maa
+}
+
+innovation_chariot_scotland = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	region = region_scotland
+	icon = @maa_02
+
+	unlock_maa = armored_horsemen_scotland
 	
 	flag = global_maa
 }

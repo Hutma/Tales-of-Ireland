@@ -80,6 +80,66 @@ GetUpperClothingArticle = {
 	}
 }
 
+GetAccessory = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		localization_key = accessory_earring
+	}
+
+	text = {
+		localization_key = accessory_bow
+	}
+
+	text = {
+		localization_key = accessory_bracelet
+	}
+
+	text = {
+		localization_key = accessory_snood
+	}
+
+	text = {
+		localization_key = accessory_garter
+	}
+
+	text = {
+		localization_key = accessory_gauntlet
+	}
+
+	text = {
+		localization_key = accessory_cap
+	}
+
+	text = {
+		localization_key = accessory_nose_ring
+	}
+
+	text = {
+		localization_key = accessory_sash
+	}
+
+	text = {
+		localization_key = accessory_shawl
+	}
+
+	text = {
+		localization_key = accessory_scarf
+	}
+
+	text = {
+		localization_key = accessory_sock
+	}
+	text = {
+		localization_key = accessory_fan
+	}
+	text = {
+		localization_key = accessory_muff
+	}
+}
+
 GetFoodDetail = {
 	type = character
 
@@ -237,5 +297,65 @@ ThreeToTwelve = {
 	}
 	text = {
 		localization_key = number_twelve
+	}
+}
+
+GetPrideEnvy = {
+	type = character
+	random_valid = yes
+	text = {
+		trigger = {
+			reverse_opinion = {
+				target = scope:second
+				value < -50
+			}
+		}
+		localization_key = scorn_reaction
+	}
+	text = {
+		trigger = {
+			OR = {
+				scope:second = {
+					has_trait = greedy
+					has_trait = ambitious
+				}
+				reverse_opinion = {
+					target = scope:second
+					value < 0
+				}
+			}
+		}
+		localization_key = envy_reaction
+	}
+	text = {
+		trigger = {
+			reverse_opinion = {
+				target = scope:second
+				value > 60
+			}
+		}
+		localization_key = pride_reaction
+	}
+	text = {
+		localization_key = surprise_reaction
+	}
+}
+
+GetLivestockFowlIndef = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		localization_key = a_duck
+	}
+	text = {
+		localization_key = a_chicken
+	}
+	text = {
+		localization_key = a_rooster
+	}
+	text = {
+		localization_key = a_goose
 	}
 }

@@ -36,6 +36,14 @@ scandinavian_adventurer_fp1_modifier = {
 	min_combat_roll = 10
 }
 
+nithing_fp1_modifier = {
+	icon = cockroach_negative
+	norse_opinion = -20
+	norwegian_opinion = -20
+	danish_opinion = -20
+	swedish_opinion = -20
+}
+
 stingy_host_fp1_modifier = {
 	icon = feast_negative
 	general_opinion = -5
@@ -199,7 +207,7 @@ fp1_yearly_0071_troll_victory_wolverine_modifier = {
 
 fp1_yearly_0071_troll_victory_lynx_modifier = {
 	icon = bear_positive
-	scheme_resistance = 10
+	hostile_scheme_resistance_add = 10
 }
 
 fp1_yearly_0071_troll_victory_moose_modifier = {

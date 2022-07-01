@@ -67,7 +67,7 @@ toi_mann.0002 = {
 			dynasty = none
 			faith = this.faith
 			culture = this.culture
-			location = title:b_balley_keeill_eoin
+			location = title:b_balley_keeill_eoin.title_province
 			save_scope_as = champion
 		}
 	}
@@ -660,58 +660,67 @@ toi_mann.0450 = {
 	hidden = yes
 	
 	immediate = {
-		random_list = {
-			50 = {
-				modifier = {
-					add = 20
-					scope:woman_given = {
-						learning >= 8
-					}
-				}
-				modifier = {
-					add = 20
-					scope:woman_given = {
-						diplomacy >= 8
-					}
-				}
-				modifier = {
-					add = 40
-					scope:woman_given = {
-						OR = {
-							has_trait = beauty_good_1
-							has_trait = beauty_good_2
-							has_trait = beauty_good_3
+		if = {
+			limit = { exists = scope:woman_given }
+			random_list = {
+				50 = {
+					modifier = {
+						add = 20
+						scope:woman_given = {
+							learning >= 8
 						}
 					}
-				}
-				trigger_event = {
-					id = toi_mann.0451
-					days = 1
-				}
-			}
-			40 = {
-				trigger_event = {
-					id = toi_mann.0452
-					days = 1
-				}
-			}
-			10 = {
-				modifier = {
-					add = 20
-					scope:woman_given = {
-						learning <= 4
+					modifier = {
+						add = 20
+						scope:woman_given = {
+							diplomacy >= 8
+						}
+					}
+					modifier = {
+						add = 40
+						scope:woman_given = {
+							OR = {
+								has_trait = beauty_good_1
+								has_trait = beauty_good_2
+								has_trait = beauty_good_3
+							}
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0451
+						days = 1
 					}
 				}
-				modifier = {
-					add = 20
-					scope:woman_given = {
-						diplomacy <= 4
+				40 = {
+					trigger_event = {
+						id = toi_mann.0452
+						days = 1
 					}
 				}
-				trigger_event = {
-					id = toi_mann.0453
-					days = 1
+				10 = {
+					modifier = {
+						add = 20
+						scope:woman_given = {
+							learning <= 4
+						}
+					}
+					modifier = {
+						add = 20
+						scope:woman_given = {
+							diplomacy <= 4
+						}
+					}
+					trigger_event = {
+						id = toi_mann.0453
+						days = 1
+					}
 				}
+			}
+		}
+		else = {
+			trigger_event = {
+				id = toi_mann.0453
+				days = 1
 			}
 		}
 	}
@@ -738,7 +747,7 @@ toi_mann.0451 = {
 	immediate = {
 		create_character = {
 			name = "Glashtin"
-			age = { 25 }
+			age = 25
 			trait = physique_good_2
 			trait = beauty_good_2
 			prowess = 25
@@ -798,7 +807,7 @@ toi_mann.0452 = {
 	immediate = {
 		create_character = {
 			name = "Glashtin"
-			age = { 25 }
+			age = 25
 			trait = physique_good_2
 			trait = beauty_good_2
 			prowess = 25

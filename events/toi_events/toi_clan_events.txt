@@ -1,0 +1,931 @@
+﻿namespace = toi_clan
+
+#A new clan 
+toi_clan.0001 = {
+	title = toi_clan.0001.t
+	desc = toi_clan.0001.desc
+	type = character_event
+	theme = diplomacy
+	override_background = {
+		event_background = connemara
+	}
+	right_portrait = {
+		character = scope:founder
+		animation = personality_bold
+	}
+	
+	option = {
+		name = toi_clan.0001.a
+		hidden_effect = {
+			dynasty = {
+				if = {
+					limit = { NOT = { exists = var:clan_unity_value } }
+					set_variable = {
+						name = clan_unity_value
+						value = 50
+					}
+				}
+			}
+			dynasty = {
+				if = {
+					limit = { NOT = { exists = var:prestige_clan_modifier } }
+					set_variable = {
+						name = prestige_clan_modifier
+						value = 0
+					}
+				}
+			}
+			trigger_event = {
+				on_action = dynasty_unity_maintenance
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Choose war defense 
+toi_clan.0002 = {
+	title = toi_clan.0002.t
+	desc = toi_clan.0002.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = war_defender
+	}
+	
+	immediate = {
+		clear_saved_scope = war_1
+		clear_saved_scope = war_2
+		clear_saved_scope = war_3
+		clear_saved_scope = war_4
+		clear_saved_scope = war_5
+		clear_saved_scope = war_6
+		clear_saved_scope = war_chosen
+		every_character_war = {
+			limit = {
+				is_defender = root
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:war_1
+					}
+				}
+				save_scope_as = war_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_2
+					}
+				}
+				save_scope_as = war_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_3
+					}
+				}
+				save_scope_as = war_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_4
+					}
+				}
+				save_scope_as = war_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_5
+					}
+				}
+				save_scope_as = war_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_6
+					}
+				}
+				save_scope_as = war_6
+			}
+		}
+	}
+	
+	option = {
+		name = toi_clan.0002.a
+		
+		trigger = {
+			exists = scope:war_1
+		}
+		
+		scope:war_1 = {
+			save_scope_as = war_chosen
+		}	
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0002.b
+		
+		trigger = {
+			exists = scope:war_2
+		}
+		
+		scope:war_2 = {
+			save_scope_as = war_chosen
+		}	
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0002.c
+		
+		trigger = {
+			exists = scope:war_3
+		}
+		
+		scope:war_3 = {
+			save_scope_as = war_chosen
+		}		
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0002.d
+		
+		trigger = {
+			exists = scope:war_4
+		}
+		
+		scope:war_4 = {
+			save_scope_as = war_chosen
+		}	
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0002.e
+		
+		trigger = {
+			exists = scope:war_5
+		}
+		
+		scope:war_5 = {
+			save_scope_as = war_chosen
+		}	
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0002.f
+		
+		trigger = {
+			exists = scope:war_6
+		}
+		
+		scope:war_6 = {
+			save_scope_as = war_chosen
+		}	
+		every_in_list = {
+			variable = clan_rulers
+			limit = { NOT = { is_at_war_with = root } }
+			trigger_event = {
+				id = toi_clan.0003
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Choose to join or not the leader 
+toi_clan.0003 = {
+	title = toi_clan.0003.t
+	desc = toi_clan.0003.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	left_portrait = {
+		character = root.dynasty.dynast
+		animation = war_defender
+	}
+	
+	option = { #i join
+		name = toi_clan.0003.a
+		
+		scope:war_chosen = {
+			add_defender = root
+		}
+		
+		ai_chance = {
+			base = 100
+			
+			modifier = {
+				has_relation_rival = root.dynasty.dynast
+				factor = 0
+			}
+		}
+	}
+	option = { #i refuse
+		name = toi_clan.0003.b
+		
+		add_prestige = -200
+		add_prestige_experience = -350
+		
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				has_relation_rival = root.dynasty.dynast
+				add = 100
+			}
+		}
+	}
+}
+
+#Call leader into war
+toi_clan.0004 = {
+	title = toi_clan.0004.t
+	desc = toi_clan.0004.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = root
+		animation = war_attacker
+	}
+	
+	immediate = {
+		clear_saved_scope = war_1
+		clear_saved_scope = war_2
+		clear_saved_scope = war_3
+		clear_saved_scope = war_4
+		clear_saved_scope = war_5
+		clear_saved_scope = war_6
+		clear_saved_scope = war_chosen
+		root = {
+			save_scope_as = war_demander
+		}
+		every_character_war = {
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:war_1
+					}
+				}
+				save_scope_as = war_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_2
+					}
+				}
+				save_scope_as = war_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_3
+					}
+				}
+				save_scope_as = war_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_4
+					}
+				}
+				save_scope_as = war_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_5
+					}
+				}
+				save_scope_as = war_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:war_6
+					}
+				}
+				save_scope_as = war_6
+			}
+		}
+	}
+	
+	option = {
+		name = toi_clan.0004.a
+		
+		trigger = {
+			exists = scope:war_1
+		}
+		
+		scope:war_1 = {
+			save_scope_as = war_chosen
+		}	
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0004.b
+		
+		trigger = {
+			exists = scope:war_2
+		}
+		
+		scope:war_2 = {
+			save_scope_as = war_chosen
+		}	
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0004.c
+		
+		trigger = {
+			exists = scope:war_3
+		}
+		
+		scope:war_3 = {
+			save_scope_as = war_chosen
+		}		
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0004.d
+		
+		trigger = {
+			exists = scope:war_4
+		}
+		
+		scope:war_4 = {
+			save_scope_as = war_chosen
+		}	
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0004.e
+		
+		trigger = {
+			exists = scope:war_5
+		}
+		
+		scope:war_5 = {
+			save_scope_as = war_chosen
+		}	
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0004.f
+		
+		trigger = {
+			exists = scope:war_6
+		}
+		
+		scope:war_6 = {
+			save_scope_as = war_chosen
+		}	
+		dynasty.dynast = {
+			trigger_event = {
+				id = toi_clan.0005
+				days = 1
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#Choose to join or not the clan ruler 
+toi_clan.0005 = {
+	title = toi_clan.0005.t
+	desc = toi_clan.0005.desc
+	type = character_event
+	theme = war
+	
+	right_portrait = {
+		character = scope:war_demander
+		animation = personality_bold
+	}
+	
+	left_portrait = {
+		character = root.dynasty.dynast
+		animation = war_defender
+	}
+	
+	option = { #i join
+		name = toi_clan.0005.a
+		
+		scope:war_chosen = {
+			if = {
+				limit = {
+					scope:war_demander = {
+						is_attacker_in_war = scope:war_chosen
+					}
+				}
+				add_attacker = root
+			}
+			else_if = {
+				limit = {
+					scope:war_demander = {
+						is_defender_in_war = scope:war_chosen
+					}
+				}
+				add_defender = root
+			}
+		}
+		
+		custom_description = {
+			text = up_clan_value_by_three
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = 3
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+			
+			modifier = {
+				has_relation_rival = scope:war_demander
+				factor = 0
+			}
+		}
+	}
+	option = { #i refuse
+		name = toi_clan.0005.b
+		
+		add_prestige = -100
+		add_prestige_experience = -150
+		
+		custom_description = {
+			text = diminish_clan_value_by_five
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = -5
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				has_relation_rival = scope:war_demander
+				add = 100
+			}
+		}
+	}
+}
+
+#Make all clan join clan invasion
+toi_clan.0006 = {
+	hidden = yes
+	
+	immediate = {
+		every_in_list = {
+			variable = clan_rulers
+			send_interface_toast = {
+				left_icon = root.dynasty.dynast
+				title = tooltip.clan.clan_invasion.target
+				scope:war_to_join.war = { add_attacker = prev }
+			}
+		}
+	}
+}
+
+#Leader chooose his duchy
+# toi_clan.0007 = {
+	# title = toi_clan.0007.t
+	# desc = toi_clan.0007.desc
+	# type = character_event
+	# theme = war
+	
+	# right_portrait = {
+		# character = root
+		# animation = war_attacker
+	# }
+	
+	# immediate = {
+		# clear_saved_scope = duchy_1
+		# clear_saved_scope = duchy_2
+		# clear_saved_scope = duchy_3
+		# clear_saved_scope = duchy_4
+		# clear_saved_scope = duchy_5
+		# clear_saved_scope = duchy_6
+		# every_in_list = {
+			# list = duchies_gained
+			# if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_1
+					# }
+				# }
+				# save_scope_as = duchy_1
+			# }
+			# else_if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_2
+					# }
+				# }
+				# save_scope_as = duchy_2
+			# }
+			# else_if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_3
+					# }
+				# }
+				# save_scope_as = duchy_3
+			# }
+			# else_if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_4
+					# }
+				# }
+				# save_scope_as = duchy_4
+			# }
+			# else_if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_5
+					# }
+				# }
+				# save_scope_as = duchy_5
+			# }
+			# else_if = {
+				# limit = {
+					# NOT = {
+						# exists = scope:duchy_6
+					# }
+				# }
+				# save_scope_as = duchy_6
+			# }
+		# }
+	# }
+	
+	# option = {
+		# name = toi_clan.0007.a
+		
+		# trigger = {
+			# exists = scope:duchy_1
+		# }
+		
+		# scope:duchy_1 = {
+			# save_scope_as = duchy_chosen_leader
+		# }
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+	# option = {
+		# name = toi_clan.0007.b
+		
+		# trigger = {
+			# exists = scope:duchy_2
+		# }
+		
+		# scope:duchy_2 = {
+			# save_scope_as = duchy_chosen_leader
+		# }	
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+	# option = {
+		# name = toi_clan.0007.c
+		
+		# trigger = {
+			# exists = scope:duchy_3
+		# }
+		
+		# scope:duchy_3 = {
+			# save_scope_as = duchy_chosen_leader
+		# }		
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+	# option = {
+		# name = toi_clan.0007.d
+		
+		# trigger = {
+			# exists = scope:duchy_4
+		# }
+		
+		# scope:duchy_4 = {
+			# save_scope_as = duchy_chosen_leader
+		# }	
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+	# option = {
+		# name = toi_clan.0007.e
+		
+		# trigger = {
+			# exists = scope:duchy_5
+		# }
+		
+		# scope:duchy_5 = {
+			# save_scope_as = duchy_chosen_leader
+		# }	
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+	# option = {
+		# name = toi_clan.0007.f
+		
+		# trigger = {
+			# exists = scope:duchy_6
+		# }
+		
+		# scope:duchy_6 = {
+			# save_scope_as = duchy_chosen_leader
+		# }	
+		# scope:duchy_chosen_leader = {
+			# remove_from_list = duchies_gained
+		# }
+		
+		# ai_chance = {
+			# base = 100
+		# }
+	# }
+# }
+
+toi_clan.0008 = {
+	title = toi_clan.0008.t
+	desc = toi_clan.0008.desc
+	type = character_event
+	theme = diplomacy
+	override_background = {
+		event_background = connemara
+	}
+	right_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	option = {
+		name = toi_clan.0008.a
+		
+		add_prestige = -150
+		dynasty = {
+			add_dynasty_prestige = -50
+		}
+		
+		dynasty = {
+			remove_dynasty_modifier = clannic_dynasty
+		}
+		
+		dynasty = {
+			if = {
+				limit = { exists = var:clan_unity_value }
+				remove_variable = clan_unity_value
+			}
+		}
+		
+		dynasty = {
+			every_dynasty_member = {
+				remove_character_modifier = very_high_clan_leader
+				remove_character_modifier = high_clan_leader
+				remove_character_modifier = medium_clan_leader
+				remove_character_modifier = low_clan_leader
+				remove_character_modifier = very_low_clan_leader
+				remove_character_modifier = very_high_clan_rulers
+				remove_character_modifier = high_clan_rulers
+				remove_character_modifier = medium_clan_rulers
+				remove_character_modifier = low_clan_rulers
+				remove_character_modifier = very_low_clan_rulers
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+toi_clan.0009 = {
+	title = toi_clan.0009.t
+	desc = toi_clan.0009.desc
+	type = character_event
+	theme = diplomacy
+	override_background = {
+		event_background = connemara
+	}
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	option = {
+		name = toi_clan.0009.a
+		
+		remove_short_term_gold = 25
+		
+		dynasty = {
+			add_dynasty_prestige = 25
+		}
+		
+		capital_county = {
+			change_development_level = -5
+		}
+		
+		custom_description = {
+			text = up_clan_value_by_ten
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = 10
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = toi_clan.0009.b
+		
+		add_prestige = -50
+		
+		dynasty = {
+			add_dynasty_prestige = -25
+		}
+		
+		custom_description = {
+			text = diminish_clan_value_by_five
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = -5
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				factor = 8
+			}
+		}
+	}
+}

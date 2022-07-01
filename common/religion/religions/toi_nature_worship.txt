@@ -135,7 +135,7 @@
 
 		PantheonTerm = nature_worship_mother_earth_father_sky
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { nature_worship_high_god_name nature_worship_good_god_father_sky nature_worship_good_god_ancestors }
+		GoodGodNames = { nature_worship_high_god_name nature_worship_the_gods nature_worship_mother_earth_father_sky nature_worship_good_god_ancestors }
 		DevilName = nature_worship_devil_name
 		DevilNamePossessive = nature_worship_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
@@ -148,25 +148,25 @@
 		ReligiousText = nature_worship_religious_text
 		ReligiousHeadName = nature_worship_religious_head_title
 		ReligiousHeadTitleName = nature_worship_religious_head_title_name
-		DevoteeMale = nature_worship_devotee
-		DevoteeMalePlural = nature_worship_devoteeplural
-		DevoteeFemale = nature_worship_devotee
-		DevoteeFemalePlural = nature_worship_devoteeplural
-		DevoteeNeuter = nature_worship_devotee
-		DevoteeNeuterPlural = nature_worship_devoteeplural
-		PriestMale = nature_worship_priest
-		PriestMalePlural = nature_worship_priest_plural
-		PriestFemale = nature_worship_priest
-		PriestFemalePlural = nature_worship_priest_plural
-		PriestNeuter = nature_worship_priest
-		PriestNeuterPlural = nature_worship_priest_plural
+		DevoteeMale = nature_worship_devotee_male
+		DevoteeMalePlural = nature_worship_devotee_male_plural
+		DevoteeFemale = nature_worship_devotee_female
+		DevoteeFemalePlural = nature_worship_devotee_female_plural
+		DevoteeNeuter = nature_worship_devotee_male
+		DevoteeNeuterPlural = nature_worship_devotee_male_plural
+		PriestMale = nature_worship_priest_male
+		PriestMalePlural = nature_worship_priest_male_plural
+		PriestFemale = nature_worship_priest_female
+		PriestFemalePlural = nature_worship_priest_female_plural
+		PriestNeuter = nature_worship_priest_male
+		PriestNeuterPlural = nature_worship_priest_male_plural
 		AltPriestTermPlural = nature_worship_priest_alternate_plural
-		BishopMale = nature_worship_priest
-		BishopMalePlural = nature_worship_priest_plural
-		BishopFemale = nature_worship_priest
-		BishopFemalePlural = nature_worship_priest_plural
-		BishopNeuter = nature_worship_priest
-		BishopNeuterPlural = nature_worship_priest_plural
+		BishopMale = nature_worship_bishop_male
+		BishopMalePlural = nature_worship_bishop_male_plural
+		BishopFemale = nature_worship_bishop_female
+		BishopFemalePlural = nature_worship_bishop_female_plural
+		BishopNeuter = nature_worship_bishop_male
+		BishopNeuterPlural = nature_worship_bishop_male_plural
 		DivineRealm = nature_worship_divine_realm
 		PositiveAfterLife = nature_worship_divine_realm
 		NegativeAfterLife = nature_worship_afterlife
@@ -175,9 +175,9 @@
 		DeathDeitySheHe = nature_worship_devil_shehe
 		DeathDeityHerHis = nature_worship_death_deity_herhis
 		WitchGodName = witchgodname_nature_worship_the_shadow
-		WitchGodSheHe = CHARACTER_SHEHE_IT
-		WitchGodHerHis = CHARACTER_HERHIS_ITS
-		WitchGodHerHim = CHARACTER_HERHIM_IT
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
 		WitchGodMistressMaster = witch_spirit
  		WitchGodMotherFather = witch_source
 		
@@ -197,62 +197,6 @@
 			doctrine = tenet_sun_worship
 			doctrine = tenet_aniconism
 			doctrine = tenet_newgrange_splendor
-		}
-		first_men = {
-			color = { 100 200 100 }
-			icon = custom_faith_fp1_yggdrasil
-			
-			doctrine = doctrine_gender_equal
-			
-			holy_site = newgrange
-			holy_site = bere
-			holy_site = first_arrival_bay
-			
-			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_pacifism
-			doctrine = tenet_animal_worship
-		}
-		cult_of_life = {
-			color = { 80 200 120 }
-			icon = cult_of_life
-			
-			doctrine = doctrine_gender_female_dominated
-			
-			holy_site = newgrange
-			holy_site = bere
-			holy_site = first_arrival_bay
-			
-			doctrine = tenet_sacred_childbirth
-			doctrine = tenet_pacifism
-			doctrine = tenet_animal_worship
-		}
-		iabhism = {
-			color = { 173 255 239 }
-			icon = cainitism
-			
-			doctrine = doctrine_gender_equal
-			
-			holy_site = newgrange
-			holy_site = bere
-			holy_site = first_arrival_bay
-			
-			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_pacifism
-			doctrine = tenet_unreformed_syncretism
-			
-			
-			doctrine = doctrine_gender_equal
-			doctrine = doctrine_pluralism_righteous
-
-
-			doctrine = doctrine_consanguinity_unrestricted
-
-			doctrine = doctrine_homosexuality_crime
-			doctrine = doctrine_adultery_men_crime
-
-			doctrine = doctrine_clerical_function_taxation
-			doctrine = doctrine_clerical_marriage_disallowed
-			doctrine = doctrine_clerical_succession_temporal_fixed_appointment
 		}
 		manx_builders = {
 			color = { 125 90 80 }

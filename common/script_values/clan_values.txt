@@ -1,0 +1,14 @@
+﻿clan_unity = {
+	value = 0
+	add = clan_unity_dynasty_value
+	round = yes
+	min = 0
+	max = 100
+}
+
+clan_unity_dynasty_value = {
+	value = 0
+	dynasty = {
+		if = { limit = { exists = var:clan_unity_value } add = var:clan_unity_value }
+	}
+}

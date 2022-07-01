@@ -10,7 +10,6 @@ continent = "continent.txt"
 adjacencies = "adjacencies.csv"
 #climate = "climate.txt"
 island_region = "island_region.txt"
-geographical_region = "geographical_region.txt"
 seasons = "seasons.txt"
 
 #############
@@ -19,6 +18,7 @@ seasons = "seasons.txt"
 sea_zones = RANGE { 4337 4414 }
 sea_zones = RANGE { 4416 4420 }
 sea_zones = RANGE { 4459 4467 }
+sea_zones = RANGE { 5024 5032 }
 
 ###############
 # MAJOR RIVERS
@@ -26,6 +26,7 @@ sea_zones = RANGE { 4459 4467 }
 river_provinces = RANGE { 1030 1040 }
 river_provinces = RANGE { 1622 1625 }
 river_provinces = RANGE { 4305 4336 }
+river_provinces = RANGE { 4998 5023 }
 river_provinces = LIST { 2546 }
 
 ########
@@ -38,7 +39,7 @@ river_provinces = LIST { 2546 }
 #####################
 # Can be colored by whoever owns the most of the province's neighbours.
 # Blocks unit movement.
-impassable_mountains = LIST { 1029 1254 1255 1256 1621 1626 2210 4421 }
+impassable_mountains = LIST { 1029 1254 1255 1256 1621 1626 2210 4421 4996 4997 }
 impassable_mountains = RANGE { 1516 1525 }
 impassable_mountains = RANGE { 1830 1839 }
 impassable_mountains = RANGE { 2070 2073 }

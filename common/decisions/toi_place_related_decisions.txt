@@ -18,17 +18,13 @@
 		AND = {
 			has_title = title:c_dunseverick
 			NOT = {
-				c_dunseverick = {
-					has_title_flag = {
-						flag = giant_called
-					}
-				}
+				has_character_flag = giant_called
 			}
 		}
 	}
-
+	
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {
@@ -40,11 +36,9 @@
 			id = toi_decisions.001
 			days = 120
 		}
-		c_dunseverick = {
-			set_title_flag = {
-				flag = giant_called
-				years = 30
-			}
+		add_character_flag = {
+			flag = giant_called
+			years = 30
 		}
 	}
 
@@ -94,7 +88,7 @@ many_crowns_for_galway_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {
@@ -211,13 +205,13 @@ found_meath_decision = {
 			is_powerful_vassal = yes
 			opinion = {
 				target = root
-				value >= positive_opinion
+				value >= 0
 			}
 		}
 	}
 
 	is_valid_showing_failures_only = {
-		
+		is_available_adult = yes
 	}
 
 	cost = {
@@ -343,6 +337,8 @@ investigate_on_wolfwalkers_decision = {
 
 	desc = investigate_on_wolfwalkers_decision_desc
 	
+	ai_check_interval = 12
+	
 	cooldown = { years = 10 }
 	
 	is_shown = {
@@ -376,6 +372,8 @@ investigate_on_wolfwalkers_decision = {
 		NOT = { has_trait = fomorian }
 		NOT = { has_trait = tuatha_de_danann }
 		OR = {
+			has_trait = education_learning_1
+			has_trait = education_learning_2
 			has_trait = education_learning_3
 			has_trait = education_learning_4
 			has_trait = hunter_1
@@ -611,11 +609,11 @@ found_iarmuman_decision = {
 		OR = {
 			any_held_title = {
 				tier = tier_county
-				duchy = title:d_kinnatallon
+				duchy = title:d_kinnatalloon
 			}
 			any_held_title = {
 				tier = tier_county
-				duchy = title:d_omkilly
+				duchy = title:d_imokilly
 			}
 			any_held_title = {
 				tier = tier_county
@@ -646,8 +644,8 @@ found_iarmuman_decision = {
 		has_title = title:d_iffa
 		has_title = title:d_coshmore
 		OR = {
-			has_title = title:d_omkilly
-			has_title = title:d_kinnatallon
+			has_title = title:d_imokilly
+			has_title = title:d_kinnatalloon
 		}
 	}
 

@@ -736,6 +736,16 @@ fp1_tbc.0101 = {
 	}
 }
 
+fp1_tbc.0102 = {
+	#TODO Replace with correct event
+	desc = debug_main
+	theme = prison
+
+	option = {
+		name = interaction_debug_main
+	}
+}
+
 ##################################################
 # Scope:recipient Results
 # by Ewan Cowhig Croft

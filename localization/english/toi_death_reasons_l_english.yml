@@ -1,0 +1,3 @@
+﻿l_english:
+ death_bled_vampire: "Exanguinated by a Vampire"
+ death_bled_vampire_killer: "You exanguinated [CHARACTER.GetUIName]"

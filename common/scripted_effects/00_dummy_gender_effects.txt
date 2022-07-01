@@ -243,8 +243,12 @@ random_dummy_gender_landholder_effect = {
 						has_realm_law = female_only_law
 
 						# These cultures historically granted equal property rights to women.
-						has_culture = culture:minoan
-						has_culture = culture:eblaite
+						culture = {
+							OR = {
+								has_cultural_pillar = heritage_partholonian
+								has_cultural_parameter = gender_equal_inheritance
+							}
+						}
 					}
 				}
 				dummy_female = { save_scope_as = dummy_gender }
@@ -258,7 +262,11 @@ random_dummy_gender_landholder_effect = {
 						has_realm_law = female_preference_law
 						has_realm_law = female_only_law
 
-						# These religions historically granted more property rights to women.
+						
+
+						# These cultures historically granted more property rights to women.
+						culture = { has_cultural_pillar = heritage_partholonian } # Scandanavian women often managed households and had full property rights.
+						culture = { has_cultural_pillar = heritage_milesian } # Granted by the Liber Judiciorum ca 642/642. Includes Basque.
 						
 					}
 				}
@@ -269,9 +277,10 @@ random_dummy_gender_landholder_effect = {
 				trigger = {
 					OR = {
 						# These cultures historically prevented women from owning/inheriting land.
-						NOR = {
-							has_culture_group = culture_group:egyptian_group # Patriarchical society which made women subordinate to men.
-							has_culture_group = culture_group:hellenic_group
+						NOT = {
+							culture = { has_cultural_pillar = heritage_brythonic } # Patriarchical society which made women subordinate to men.
+							culture = { has_cultural_pillar = heritage_fir_bolg } # Based on Roman Law
+							culture = { has_cultural_pillar = heritage_latin } # Based on Roman Law
 						}
 						# But if their legal system changes to allow it, women should gain full ownership/inheritance rights.
 						has_realm_law = equal_law

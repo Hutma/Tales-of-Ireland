@@ -65,7 +65,10 @@ learning_medicine.2001 = { #by Mathilda Bjarnehed
 	trigger = {
 		is_landed = yes
 		exists = root.capital_province
-		learning >= high_skill_rating
+		OR = {
+			learning >= high_skill_rating
+			culture = { has_cultural_parameter = herbalist_traits_more_common }
+		}
 		NOR = {
 			has_character_flag = had_event_learning_medicine_2001
 			has_trait = lifestyle_herbalist
@@ -601,7 +604,49 @@ learning_medicine.2010 = { #by Mathilda Bjarnehed
 	title = learning_medicine.2010.t
 	desc = {
 		desc = learning_medicine.2010.start.desc
-		desc = learning_medicine.2010.fallback.desc
+		first_valid = {
+			random_valid = {
+				triggered_desc = {
+					trigger = {
+						always = yes
+					}
+					desc = learning_medicine.2010.galen.desc
+				}
+				triggered_desc = {
+					trigger = {
+						always = yes
+					}
+					desc = learning_medicine.2010.hippocrates.desc
+				}
+				triggered_desc = {
+					trigger = {
+						always = yes
+					}
+					desc = learning_medicine.2010.herophilus.desc
+				}
+				triggered_desc = {
+					trigger = { current_date >= 1120.1.1 }
+					desc = learning_medicine.2010.hildegard.desc
+				}
+				triggered_desc = {
+					trigger = { current_date >= 1316.12.30 }
+					desc = learning_medicine.2010.mundinus.desc
+				}
+				triggered_desc = {
+					trigger = {
+						always = no
+					}
+					desc = learning_medicine.2010.avicenna.desc
+				}
+				triggered_desc = {
+					trigger = {
+						always = no
+					}
+					desc = learning_medicine.2010.trota.desc
+				}
+			}
+			desc = learning_medicine.2010.fallback.desc
+		}
 		desc = learning_medicine.2010.end.desc
 	}
 	
@@ -799,7 +844,10 @@ learning_medicine.2020 = {
 			}
 			trigger_event = learning_medicine.2022
 		}
-		else = {
+		else_if = {
+			limit = {
+				can_employ_court_position_type = court_physician_court_position
+			}
 			save_scope_value_as = {
 				name = new_physician
 				value = yes
@@ -894,10 +942,12 @@ learning_medicine.2021 = { #by Mathilda Bjarnehed
 #Physician offers you to try different methods
 scripted_trigger learning_medicine_2022_valid_physician_trigger = {
 	exists = scope:physician
-	scope:physician = {
-		can_be_court_physician_of = { EMPLOYER = root }
+	root = {
+		any_court_position_holder = {
+	        type = court_physician_court_position
+	        this = scope:physician
+	    }
 	}
-	root = { has_relation_court_physician = scope:physician }
 }
 
 learning_medicine.2022 = { #by Mathilda Bjarnehed
@@ -1232,7 +1282,9 @@ learning_medicine.2023 = { #by Mathilda Bjarnehed
 							random_independent_ruler = {
 								limit = {
 									is_landed = yes
-									in_diplomatic_range = no
+									NOT = {
+										in_diplomatic_range = root
+									}
 								}
 								weight = {
 									base = 1
@@ -1920,6 +1972,7 @@ learning_medicine.2030 = { #by Mathilda Bjarnehed
 		trigger = {
 			exists = scope:option_2
 			scope:option_2 = flag:secret_trading_guaranteed
+			exists = scope:root_secret
 		}
 		name = learning_medicine.2030.c
 
@@ -2034,7 +2087,7 @@ learning_medicine.2040 = { #by Mathilda Bjarnehed
 	
 	trigger = {
 		NOR = {
-			has_trait = athletic
+			has_traits_that_negate_athletic_trigger = yes #Are we already athletic or does any of our traits contradict athletic?
 			has_trait = journaller
 			has_character_flag = had_event_learning_medicine_2040
 		}
@@ -2184,9 +2237,10 @@ learning_medicine.2040 = { #by Mathilda Bjarnehed
 
 	#REGULAR OPTIONS
 
-	#Atheltic
+	#Athletic
 	option = {
 		trigger = {
+			has_traits_that_negate_athletic_trigger = no 	#Fail-safe in case the event gets triggered somehow
 			OR = {
 				NOT = { exists = scope:friend_help }
 				trigger_if = {
@@ -2372,15 +2426,19 @@ learning_medicine.2050 = { #by Mathilda Bjarnehed
 		}
 
 		#Grab physician for loc
-		random_relation = {
-			type = court_physician
-			if = {
-				limit = {
-					can_be_court_physician_of = { EMPLOYER = root }
+		if = {
+			limit = {
+				employs_court_position = court_physician_court_position
+				any_court_position_holder = {
+					type = court_physician_court_position
 					NOT = { this = scope:helper }
-				}
-				save_scope_as = physician
+					is_physically_able = yes
+			    }
 			}
+			random_court_position_holder = {
+				type = court_physician_court_position
+				save_scope_as = physician
+		    }
 		}
 	}
 
@@ -2760,7 +2818,9 @@ learning_medicine_special.2110 = {
 		is_at_war = no
 		NOT = { has_character_flag = had_event_learning_medicine_2110 }
 		any_vassal = { learning_medicine_2110_valid_hashish_vassal_or_liege = yes }
-		always = no
+		root.capital_province = {
+			NOT = {	geographical_region = world_europe }
+		}
 	}
 
 	weight_multiplier = {
@@ -3638,6 +3698,16 @@ learning_medicine_special.1006 = {
 
 scripted_trigger learning_medicine_special_2100_broad_dreamfish_range = {
 	is_coastal = yes
+	OR = {
+		geographical_region = world_europe_west_britannia
+		geographical_region = world_europe_west_francia
+		geographical_region = world_europe_west_iberia
+		geographical_region = world_europe_south
+		geographical_region = world_asia_minor
+		geographical_region = world_middle_east_jerusalem
+		geographical_region = world_africa_north
+		geographical_region = world_africa_west
+	}
 }
 
 #	You consume a hallucinogenic fish.

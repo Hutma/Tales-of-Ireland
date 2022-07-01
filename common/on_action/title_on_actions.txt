@@ -1,10 +1,41 @@
 ﻿#On actions about titles
 
+# All on-actions in this file provide scope:transfer_type unless otherwise noted
+# scope:transfer_type has the following permutations:
+# flag:conquest
+# flag:conquest_holy_war
+# flag:conquest_claim
+# flag:conquest_populist
+# flag:inheritance
+# flag:abdication
+# flag:destroyed
+# flag:created
+# flag:usurped
+# flag:granted
+# flag:revoked
+# flag:election
+# flag:independency
+# flag:returned
+# flag:leased_out
+# flag:lease_revoked
+# flag:faction_demand
+# flag:swear_fealty
+
 # A title is destroyed
 # root = the holder before destruction
 # scope:landed_title = the title that is being destroyed
+# Does *not* provide scope:transfer_type
 on_title_destroyed = {
 	events = {
+	}
+
+	# remove existing claims
+	effect = {
+		scope:landed_title = {
+			every_claimant = {
+				remove_claim = prev
+			}
+		}
 	}
 }
 
@@ -14,6 +45,8 @@ on_title_destroyed = {
 # scope:previous_holder = previous holder. Might be dead
 on_title_gain = {
 	effect = {
+		scope:title = { update_dynamic_coa = yes }
+		
 		if = {
 			limit = {
 				scope:title = { is_holy_order = yes }
@@ -41,11 +74,85 @@ on_title_gain = {
 				years = 4
 			}
 		}
+		
+		# Grandeur in elective realms
+		if = {
+			limit = {
+				exists = var:previous_holder_grandeur_value
+				has_royal_court = yes
+			}
+			hidden_effect = {
+				change_current_court_grandeur = -100 # Reset to 0
+				change_current_court_grandeur = var:previous_holder_grandeur_value
+				remove_variable = previous_holder_grandeur_value
+			}
+		}
+
+		# Petition allowed again
+		if = {
+			limit = { has_variable = petition_title_cooldown }
+			remove_variable = petition_title_cooldown
+		}
+
+		if = {
+			limit = {
+				exists = scope:previous_holder
+				scope:previous_holder = {
+					any_character_artifact = {
+						has_variable = artifact_succession_title #Is this an artifact that should follow a title?
+						var:artifact_succession_title = { is_title_created = yes } #Does the title the artifact should follow exist?
+						var:artifact_succession_title = scope:title #Scope title is the artifact title
+					}
+				}
+			}
+			scope:previous_holder = {
+				every_character_artifact = {
+					limit = {
+						has_variable = artifact_succession_title #Is this an artifact that should follow a title?
+						var:artifact_succession_title = { is_title_created = yes } #Does the title the artifact should follow exist?
+						var:artifact_succession_title = scope:title #Scope title is the artifact title
+					}
+					if = {
+						limit = {
+							OR = {
+								scope:transfer_type = flag:conquest
+								# scope:transfer_type = flag:conquest_holy_war
+								scope:transfer_type = flag:conquest_claim
+								scope:transfer_type = flag:conquest_populist
+								scope:transfer_type = flag:abdication
+								scope:transfer_type = flag:usurped
+								scope:transfer_type = flag:revoked
+								scope:transfer_type = flag:faction_demand
+							}
+						}
+						set_owner = {
+							target = root
+							history = {
+								type = conquest
+								actor = scope:previous_holder
+								recipient = root
+								location = scope:previous_holder.location
+							}
+						}
+					}
+					else = {
+						set_owner = {
+							target = root
+							history = {
+								type = inherited
+								recipient = root
+							}
+						}
+					}
+				}
+			}
+		}
 ###TALES OF IRELAND###
 		#High King claim
 		if 	= {
 			limit = {
 				root = {
+					is_alive = yes
 					AND = {
 						is_independent_ruler = yes
 						OR = {
@@ -58,159 +165,201 @@ on_title_gain = {
 					}
 				}
 			}
-			add_pressed_claim = title:k_high_kingship
+			scope:title.holder = { add_pressed_claim = title:k_high_kingship }
 		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = fomorian
-				}
-			}
-			add_trait = fomorian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = cessarian
-				}
-			}
-			add_trait = cessarian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = partholonian
-				}
-			}
-			add_trait = partholonian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = nemedian
-				}
-			}
-			add_trait = nemedian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = fir_bolg
-				}
-			}
-			add_trait = fir_bolg
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = tuatha_de_danann
-				}
-			}
-			add_trait = tuatha_de_danann
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = milesian
-				}
-			}
-			add_trait = milesian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = celtic_human
-				}
-			}
-			add_trait = celtic_human
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = megalith_human
-				}
-			}
-			add_trait = megalith_human
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = hy_brazylian
-				}
-			}
-			add_trait = hy_brazylian
-		}
-		if 	= {
-			limit = {
-				root.liege = {
-					has_trait = latin_human
-				}
-			}
-			add_trait = latin_human
-		}
-		
-		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {
+				NOT = {
+					OR = {
+						has_trait = fomorian
+						has_trait = cessarian
+						has_trait = tuatha_de_danann
+						has_trait = celtic_human
+						has_trait = fir_bolg
+						has_trait = megalith_human
+						has_trait = milesian
+						has_trait = nemedian
+						has_trait = partholonian
+						has_trait = hy_brazylian
+						has_trait = latin_human
+						has_trait = gaelic_giant
+						has_trait = scottish_fairy
+					}
+				}		
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = fomorian
+					}
+				}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
-			add_trait = cessarian
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = cessarian
+					}
+				}
+				add_trait = cessarian
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = partholonian
+					}
+				}
+				add_trait = partholonian
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = nemedian
+					}
+				}
+				add_trait = nemedian
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = fir_bolg
+					}
+				}
+				add_trait = fir_bolg
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = tuatha_de_danann
+					}
+				}
+				add_trait = tuatha_de_danann
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = milesian
+					}
+				}
+				add_trait = milesian
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = celtic_human
+					}
+				}
+				add_trait = celtic_human
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = megalith_human
+					}
+				}
+				add_trait = megalith_human
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = hy_brazylian
+					}
+				}
+				add_trait = hy_brazylian
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = latin_human
+					}
+				}
+				add_trait = latin_human
+			}
+			if 	= {
+				limit = {
+					root.liege = {
+						has_trait = scottish_fairy
+					}
+				}
+				add_trait = scottish_fairy
+			}
+			
+			
+			if = {
+				limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
+					add_trait = fomorian
+				}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
+				add_trait = cessarian
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
+				add_trait = tuatha_de_danann
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_errain }}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
+				add_trait = fir_bolg
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
+				add_trait = megalith_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
+				add_trait = milesian
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
+				add_trait = nemedian
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
+				add_trait = partholonian
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
+				add_trait = hy_brazylian
+			}
+			else_if = {
+			limit = {has_culture = culture:bann_culture}
+				add_trait = megalith_human
+			}
+			else_if = {
+			limit = {has_culture = culture:brythonic_mann}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_latin }}
+				add_trait = latin_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+				add_trait = celtic_human
+			}
+			else_if = {
+			limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+				add_trait = scottish_fairy
+			}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
-			add_trait = tuatha_de_danann
+		#Fairies traits
+		if = { 
+			limit = { has_trait = scottish_fairy }
+			give_seelie_unseelie_effect = yes
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
-			add_trait = celtic_human
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
-			add_trait = celtic_human
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
-			add_trait = fir_bolg
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
-			add_trait = megalith_human
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
-			add_trait = milesian
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
-			add_trait = nemedian
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
-			add_trait = partholonian
-		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
-			add_trait = hy_brazylian
-		}
-		if = {
-		limit = {has_culture = culture:bann_culture}
-			add_trait = megalith_human
-		}
-		if = {
-		limit = {has_culture = culture:brythonic_mann}
-			add_trait = celtic_human
-		}
-		if = {
-		limit = {has_culture = culture:roman}
-			add_trait = latin_human
-		}
-		add_trait = celtic_human
 ###TALES OF IRELAND###
 	}
 	events = {
@@ -261,6 +410,8 @@ on_title_gain_inheritance = {
 							has_character_flag = not_independent_when_died_multiple_titles
 						}
 					}
+					exists = root.liege.liege
+					NOT = { root = root.liege.liege }
 				}
 			}
 			create_title_and_vassal_change = {
@@ -276,6 +427,11 @@ on_title_gain_inheritance = {
 			resolve_title_and_vassal_change = scope:change
 		}
 	}
+#TALES OF IRELAND
+	on_actions = {
+		fairy_king_bonus_on_aciton
+	}
+#TALES OF IRELAND END
 }
 ###TALES OF IRELAND ANCIENT PARTITION END
 
@@ -304,6 +460,35 @@ on_title_lost = {
 			}
 		}
 		
+		#Make sure nobody ever has only the Kingdom of Fashion
+		if = {
+			limit = {
+				scope:title = { tier = tier_kingdom }
+				has_title = title:k_fashion
+				NOT = {
+					any_held_title = { # Only trigger if you don't have any kingdom titles other than Fashion and the kingdom you just lost. Double negative is confusing but it's the only way I could think to script it
+						tier = tier_kingdom
+						NOT = { this = title:k_fashion }
+						NOT = { this = scope:title }
+					}
+				}
+			}
+			destroy_title = title:k_fashion
+		}
+
+		#To remove concubines if a character becomes unlanded
+		if = {
+			limit = {
+				is_landed = no
+				any_concubine = { count >= 1 }
+			}
+			every_concubine = {
+				root = {
+					remove_concubine = prev
+				}
+			}
+		}
+
 		#Apply loss of stress to the Rivals
 		if = {
 			limit = {
@@ -341,8 +526,6 @@ on_title_lost = {
 			}
 		}
 	}
-	events = {
-	}
 }
 
 # A claim is gained by a character
@@ -370,10 +553,26 @@ on_rank_up = { # Will not fire during history execution or for dying characters
 	events = {
 	}
 	effect = {
-		add_achievement_flag = { FLAG = achievement_moving_up_in_the_world_flag }
+		add_achievement_flag_effect = { FLAG = achievement_moving_up_in_the_world_flag }
 		update_embassies_effect = yes
 		every_ally = {
 			update_embassies_effect = yes
+		}
+		# Make a note of ranking up for stele purposes.
+		if = {
+			limit = {
+				# DLC check.
+				has_fp1_dlc_trigger = yes
+				# Is the culture eligible?
+				fp1_can_raise_stele_trigger = yes
+				# Aaaaand, for balance reasons, were they landed already?
+				exists = scope:title
+			}
+			set_variable = {
+				name = recent_rank_increase
+				value = root.primary_title
+				years = 5
+			}
 		}
 	}
 }
@@ -385,13 +584,83 @@ on_rank_down = { # Will not fire during history execution or for dying character
 	events = {
 	}
 	effect = {
-		add_character_flag = {
-			flag = make_suicide_available
-			years = 5
+		if = {
+			limit = {
+				NOR = {
+					has_trait = humble
+					has_trait = content
+					has_trait = generous
+				}
+			}
+			add_character_flag = {
+				flag = make_suicide_available
+				years = 5
+			}
+			set_variable = {
+				name = rank_demoted
+				value = yes
+			}
 		}
 		update_embassies_effect = yes
 		every_ally = {
 			update_embassies_effect = yes
+		}
+	}
+}
+
+# A character gains a vassal
+# root = character gaining vassal
+# scope:vassal = vassal being gained
+# scope:old_liege = the previous liege of the vassal. Might be the null character (vassal used to be a non-ruler or independent), so make sure to use "exists" checks where relevant
+on_vassal_gained = {
+	effect = {
+		# Struggle Catalyst
+		if = {
+			limit = {
+				# Verify if vassal used to be independent
+				NOT = { exists = scope:old_liege }
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_vassalize_independent_ruler
+							CHAR = scope:vassal
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_vassalize_independent_ruler
+							CHAR = scope:vassal
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_vassalize_independent_ruler
+						character = root
+					}
+				}
+			}
+		}
+	}
+	events = {
+		realm_maintenance.1000 # Notify vassals of new liege
+	}
+}
+
+# A baron is found or created for a title, E.G., due to the player using the "Give to Low Noble" action
+# No transfer type here; it's always a grant
+# root = the baron
+# scope:liege = the person who wanted them created
+# scope:title = the barony
+on_baron_found_or_created_for_title = {
+	effect = {
+		add_opinion = {
+			target = scope:liege
+			modifier = received_title_barony
 		}
 	}
 }

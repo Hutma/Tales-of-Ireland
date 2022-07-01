@@ -180,7 +180,7 @@ fp1_yearly.2000 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_2000 }
 		
 		OR = {
-			culture_group = culture_group:toi_partholonian_group
+			culture = { has_cultural_pillar = heritage_partholonian }
 			culture = culture:sea_fomorians
 		}
 		
@@ -1145,7 +1145,7 @@ fp1_yearly.2200 = {
 		
 		OR = {
 			OR = {
-				culture_group = culture_group:toi_partholonian_group
+				culture = { has_cultural_pillar = heritage_partholonian }
 				culture = culture:sea_fomorians
 			}
 			religion = religion:northern_legacy_religion
@@ -1656,10 +1656,6 @@ fp1_yearly.2300 = {
 		
 		spawn_army = {
 			levies = 25
-			men_at_arms = {
-				type = huscarl
-				men = number_of_huscarls
-			}
 			location = scope:recruiting_character.capital_province
 			inheritable = no
 			name = grizzled_veterans
@@ -1688,10 +1684,6 @@ fp1_yearly.2300 = {
 		
 		spawn_army = {
 			levies = 50
-			men_at_arms = {
-				type = bondi
-				men = number_of_bondi
-			}
 			location = scope:recruiting_character.capital_province
 			inheritable = no
 			name = glory_seekers
@@ -1736,10 +1728,6 @@ fp1_yearly.2300 = {
 		
 		spawn_army = {
 			levies = 25
-			men_at_arms = {
-				type = huscarl
-				men = number_of_huscarls
-			}
 			location = scope:recruiting_character.capital_province
 			inheritable = no
 			name = grizzled_veterans
@@ -1747,10 +1735,6 @@ fp1_yearly.2300 = {
 		
 		spawn_army = {
 			levies = 50
-			men_at_arms = {
-				type = bondi
-				men = number_of_bondi
-			}
 			location = scope:recruiting_character.capital_province
 			inheritable = no
 			name = glory_seekers
@@ -2198,7 +2182,7 @@ fp1_yearly.2600 = {
 		
 		OR = {
 			OR = {
-				culture_group = culture_group:toi_partholonian_group
+				culture = { has_cultural_pillar = heritage_partholonian }
 				culture = culture:sea_fomorians
 			}
 			religion = religion:northern_legacy_religion

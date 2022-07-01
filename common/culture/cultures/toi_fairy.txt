@@ -1,0 +1,32 @@
+﻿fairy_culture = {
+	# graphical_cultures = {
+		# western_building_gfx
+	# }
+	
+	color = { 240 80 180 }
+	
+	ethos = ethos_courtly
+	heritage = heritage_fairy
+	language = language_sidhe_tongue
+	martial_custom = martial_custom_equal
+	traditions = {
+		tradition_festivities
+		tradition_gardening
+		tradition_poetry
+		tradition_faith_bound
+	}
+	
+	name_list = name_list_cumbrian
+	
+	coa_gfx = { irish_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		5 = caucasian_blond
+		30 = caucasian_ginger
+		35 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}

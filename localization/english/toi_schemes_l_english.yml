@@ -12,3 +12,7 @@
  poison_cattle_interaction:0 "@scheme_icon!Poison Cattle"
  poison_cattle_interaction_desc:0 "Attempt to poison [recipient.GetShortUINameNoTooltip]'s cattle, killing half of [SCHEME.GetTarget.GetHerHis] the herd!"
  poison_cattle_hook_interaction_toast:0 "Planning Poisonning Cattle"
+ 
+ poison_cattle_invalidated_dead:0 "Poison Cattle scheme invalidated (death)"
+ poison_cattle_invalidated_war:0 "Poison Cattle scheme invalidated (war)"
+ poison_cattle_invalidated_title:0 "Poison Cattle scheme invalidated (title lost)"

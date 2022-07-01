@@ -1,0 +1,81 @@
+﻿
+#####################################################################
+# EFFECT LIST
+#####################################################################
+# !!! Remember to add all new effects with a short description here !!!
+
+# on_declared_war
+#
+# [...]
+#
+# send_captured_combatant_message: Sends the specified message to a character about a combatant being captured after a battle.
+# send_slain_combatant_message: Sends the specified message to a character about a combatant being slain after (or in) a battle.
+# add_truce_attacker_victory_effect: Used to set truces in a CB's on_victory
+# add_truce_white_peace_effect: Used to set truces in a CB's on_white_peace
+# add_truce_attacker_defeat_effect: Used to set truces in a CB's on_defeat
+
+
+#####################################################################
+# EFFECTS
+#####################################################################
+# TRUCES
+# Add attacker truce on victory
+give_seelie_unseelie_effect = {
+	random_list = {
+		50 = {
+			modifier = {
+				factor = 0.25
+				OR = {
+					has_trait = vengeful
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = wrathful
+					has_trait = deceitful
+				}
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					has_trait = forgiving
+					has_trait = compassionate
+					has_trait = calm
+					has_trait = honest
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = 2
+				ai_compassion = 2
+				ai_vengefulness = -2
+			}
+			add_trait = seelie_fairy
+		}
+		50 = {
+			modifier = {
+				factor = 4
+				OR = {
+					has_trait = vengeful
+					has_trait = callous
+					has_trait = sadistic
+					has_trait = wrathful
+					has_trait = deceitful
+				}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					has_trait = forgiving
+					has_trait = compassionate
+					has_trait = calm
+					has_trait = honest
+				}
+			}
+			ai_value_modifier = {
+				ai_honor = -1
+				ai_compassion = -2
+				ai_vengefulness = 4
+			}
+			add_trait = unseelie_fairy
+		}		
+	}	
+}
+

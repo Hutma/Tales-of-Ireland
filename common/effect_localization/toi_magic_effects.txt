@@ -1,0 +1,59 @@
+﻿a_knight_appears_spell = {
+	global = A_KNIGHT_APPEARS_SPELL
+	first = A_KNIGHT_APPEARS_SPELL	#Same loc as third person, since you cannot be a county.
+	third = A_KNIGHT_APPEARS_SPELL
+}
+
+target_will_die_spell = {
+	global = TARGET_WILL_DIE_SPELL
+	first = TARGET_WILL_DIE_SPELL
+	third = TARGET_WILL_DIE_SPELL
+}
+
+summon_new_tribe_spell_effect_desc = {
+	global = SUMMON_NEW_TRIBE_SPELL_EFFECT_DESC
+	first = SUMMON_NEW_TRIBE_SPELL_EFFECT_DESC
+	third = SUMMON_NEW_TRIBE_SPELL_EFFECT_DESC
+}
+
+greek_astrology_spell_desc = {
+	global = GREEK_ASTROLOGY_SPELL_DESC
+	first = GREEK_ASTROLOGY_SPELL_DESC
+	third = GREEK_ASTROLOGY_SPELL_DESC
+}
+
+united_in_defiance_spell_effect_desc = {
+	global = UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC
+	first = UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC
+	third = UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC
+}
+
+roman_astrology_spell_desc = {
+	global = ROMAN_ASTROLOGY_SPELL_DESC
+	first = ROMAN_ASTROLOGY_SPELL_DESC
+	third = ROMAN_ASTROLOGY_SPELL_DESC
+}
+
+the_spell_is_cast_message = {
+	global = THE_SPELL_IS_CAST_MESSAGE
+	first = THE_SPELL_IS_CAST_MESSAGE
+	third = THE_SPELL_IS_CAST_MESSAGE
+}
+
+call_rage_effect_desc = {
+	global = CALL_RAGE_EFFECT_DESC
+	first = CALL_RAGE_EFFECT_DESC
+	third = CALL_RAGE_EFFECT_DESC
+}
+
+two_random_vassal_die = {
+	global = TWO_RANDOM_VASSAL_DIE
+	first = TWO_RANDOM_VASSAL_DIE
+	third = TWO_RANDOM_VASSAL_DIE
+}
+
+cause_discorde_spell_desc = {
+	global = CAUSE_DISCORDE_SPELL_DESC
+	first = CAUSE_DISCORDE_SPELL_DESC
+	third = CAUSE_DISCORDE_SPELL_DESC
+}

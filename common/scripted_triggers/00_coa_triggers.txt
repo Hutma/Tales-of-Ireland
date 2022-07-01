@@ -1,1 +1,197 @@
-﻿
+﻿#Triggers to control Coat of Arms weighting
+
+coa_african_trigger = {
+	OR = {
+		coa_african_culture_trigger = yes
+		coa_african_religion_trigger = yes
+	}
+}
+
+coa_african_culture_trigger = {
+	scope:culture = {
+		OR = {
+			has_coa_gfx = central_african_group_coa_gfx
+			has_coa_gfx = east_african_coa_gfx
+			has_coa_gfx = west_african_group_coa_gfx
+		}
+	}
+}
+
+coa_african_religion_trigger = {
+	scope:faith.religion = { 
+		save_temporary_scope_as = religion 
+	}
+	always = no
+}
+
+coa_bishopric_trigger = {
+	always = no
+	coa_theocratic_trigger = yes
+}
+
+coa_breton_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = breton_coa_gfx }
+
+	}
+}
+
+coa_byzantine_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = byzantine_group_coa_gfx }
+
+	}
+}
+
+coa_castilian_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = castilian_coa_gfx }
+
+	}
+}
+
+coa_coptic_trigger = {
+	always = no
+}
+
+coa_cross_trigger = {
+	always = no
+}
+
+coa_england_switches_to_france_coa_trigger = {
+	always = no
+}
+coa_switch_to_norman_trigger = {
+	always = no
+}
+
+coa_switch_to_norse_trigger = {
+	holder = {
+		OR = {
+			faith.religion = religion:northern_legacy_religion
+			culture = { has_coa_gfx = norse_coa_gfx }
+		}
+	}
+}
+
+coa_feudal_trigger = {
+	always = no
+	has_government = feudal_government
+}
+
+coa_french_trigger = {
+	always = no
+}
+
+coa_irish_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = irish_coa_gfx }
+	}
+}
+
+
+coa_indian_culture_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = burman_group_coa_gfx }
+		scope:culture = { has_coa_gfx = dravidian_group_coa_gfx }
+		scope:culture = { has_coa_gfx = indo_aryan_group_coa_gfx }
+		scope:culture = { has_coa_gfx = tibetan_group_coa_gfx }
+	}
+}
+coa_indian_region_trigger = {
+	always = no
+}
+coa_indian_religion_trigger = {
+	scope:faith.religion = { 
+		save_temporary_scope_as = religion 
+	}
+	always = no
+}
+coa_indian_trigger = {
+	OR = {
+		coa_indian_culture_trigger = yes
+		coa_indian_region_trigger = yes
+		coa_indian_religion_trigger = yes
+	}
+}
+
+coa_jewish_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = israelite_group_coa_gfx }
+	}
+}
+
+coa_leonese_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = leonese_coa_gfx }
+		always = no
+	}
+}
+
+coa_manx_trigger = {
+	always = no
+}
+
+coa_mena_trigger = {
+	always = no
+}
+
+coa_suomenusko_trigger = {
+	always = no
+}
+
+coa_polish_trigger = {
+	always = no
+}
+
+coa_scottish_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = scottish_coa_gfx }
+	}
+}
+
+coa_theocratic_trigger = {
+	exists = root
+	OR = {
+		has_government = theocracy_government
+		AND = {
+			exists = liege
+			liege = {
+				any_sub_realm_barony = {
+					lessee = ROOT
+					title_province = {
+						has_holding_type = church_holding
+					}
+				}
+			}
+		}
+	}
+}
+
+coa_welsh_trigger = {
+	scope:culture = { has_coa_gfx = welsh_coa_gfx }
+}
+
+coa_tamga_trigger = {
+	scope:culture = { has_coa_gfx = steppe_coa_gfx }
+}
+
+coa_scandinavian_trigger = {
+	OR = {
+		scope:culture = { has_coa_gfx = swedish_coa_gfx }
+		scope:culture = { has_coa_gfx = norwegian_coa_gfx }
+		scope:culture = { has_coa_gfx = danish_coa_gfx }
+	}
+}
+
+coa_norse_trigger = {
+	scope:culture = { has_coa_gfx = norse_coa_gfx }
+}
+
+coa_germanic_trigger = {
+	scope:culture = { has_coa_gfx = german_group_coa_gfx }
+}
+
+coa_iberian_trigger = {
+	always = no
+}

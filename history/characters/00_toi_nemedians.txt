@@ -16,6 +16,7 @@
     trait = honest
     trait = craven
     trait = nemedian
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4782.1.1 = {
@@ -62,7 +63,7 @@
     learning =  4 
     prowess =  3 
     trait = fickle
-    trait = arrogant
+    trait = rowdy
     trait = nemedian
 
     father=  701000 
@@ -70,7 +71,7 @@
     disallow_random_traits = yes
     4788.1.1 = {
         birth = yes
-        add_pressed_claim = d_oneilland
+        add_pressed_claim = title:d_oneilland
     }
 }
 700003 = {
@@ -142,6 +143,7 @@
     trait = arrogant
     trait = ambitious
     trait = nemedian
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4757.1.1 = {
@@ -272,7 +274,7 @@
     }
 }
 780002 = {
-    name = "Fergus "
+    name = "Fergus"
     dynasty =  92 
     religion = scythian_heritage
     culture = ennell_nemedians
@@ -289,6 +291,7 @@
     trait = impatient
     trait = vengeful
     trait = nemedian
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4749.1.1 = {

@@ -4,7 +4,7 @@
 	desc = one_heir_decision_desc
 	
 	major = yes
-	ai_check_interval = 260
+	ai_check_interval = 100
 
 	is_shown = {
 		any_child = {
@@ -25,11 +25,9 @@
 					}
 				}
 				any_child = {
-					limit = {
-						is_female = no
-						NOT = {
-							is_primary_heir_of = root
-						}
+					is_female = no
+					NOT = {
+						is_primary_heir_of = root
 					}
 					NOT = {
 						has_trait = disinherited
@@ -44,26 +42,35 @@
 			prestige_level >= 3
 			piety_level >= 3
 			any_child = {
-				NOT = {
-					is_primary_heir_of = root
+				custom_description = {
+					text = except_primary_heir_desc
+					NOT = {
+						is_primary_heir_of = root
+					}
 				}
 				is_landed = yes
 				highest_held_title_tier >= 3
-				OR = {
-					is_independent = yes	
-					NOT = { top_liege = root}
+				custom_description = {
+					text = independent_or_not_your_vassal_desc
+					OR = {
+						is_independent_ruler = yes	
+						NOT = { top_liege = root}
+					}
 				}
 			}
-			any_heir = {
-				is_primary_heir_of = root
-				age >= 20
+			custom_description = {
+				text = your_primary_heir_is_at_least_twenty
+				any_heir = {
+					is_primary_heir_of = root
+					age >= 20
+				}
 			}
 			any_vassal = {
 				count >= 3
 				is_powerful_vassal = yes
 				opinion = {
 					target = root
-					value >= positive_opinion
+					value >= 0
 				}
 			}
 		}
@@ -147,6 +154,7 @@ unite_all_ireland_decision = {
 	}
 
 	effect = {
+		play_music_cue = mx_cue_uniting_ireland
 		show_as_tooltip = {
 			unite_all_ireland_decision_scripted_effect = yes
 		}
@@ -167,6 +175,77 @@ unite_all_ireland_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_united_all_ireland
 			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_clan_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	desc = found_clan_decision_desc
+	
+	major = yes
+	ai_goal = yes
+
+	is_shown = {
+		highest_held_title_tier >= 3
+		dynasty.dynasty_prestige_level >= 2
+		is_independent_ruler = yes
+		NOT = {
+			dynasty = {
+				has_dynasty_modifier = clannic_dynasty
+			}
+		}
+	}
+
+	is_valid = {
+		highest_held_title_tier >= 4
+		dynasty.dynasty_prestige_level >= 3
+		prestige_level >= 2
+		is_independent_ruler = yes
+		dynasty.dynast = root
+		dynasty = {
+			any_dynasty_member = {
+				count >= 3
+				is_landed = yes
+				is_independent_ruler = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 100
+	}
+
+	effect = {
+		play_music_cue = mx_cue_clan_founding
+		save_scope_as = founder
+		dynasty = {
+			every_dynasty_member = {
+				limit = {
+					is_landed = yes
+				}
+				trigger_event = {
+					id = toi_clan.0001
+					days = 1
+				}
+			}
+		}
+		dynasty = {
+			add_dynasty_modifier = clannic_dynasty
 		}
 	}
 

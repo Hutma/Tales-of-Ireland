@@ -1,0 +1,18 @@
+﻿l_english:
+ toi_tuatha_de_danann_event.0001.t: "Contested Reign"
+ toi_tuatha_de_danann_event.0001.desc: "By the law of Dana, only unblemished and well formed men are given to rule. Being not of this fold, some of my subjects have begun to voice their dissent. Not only behind closed doors, but in open court as well."
+ toi_tuatha_de_danann_event.0001.a: "This Challenge Shall Not Stand!"
+ toi_tuatha_de_danann_event.0001.b: "Those words mean nothing to me."
+ toi_tuatha_de_danann_event.0001.b.tt_success: "Contestations end, for now"
+ toi_tuatha_de_danann_event.0001.b.tt_failure: "Contestations get worse"
+ 
+ toi_tuatha_de_danann_event.0002.t: "Unperfect of Body"
+ toi_tuatha_de_danann_event.0002.desc: "I have elected to face my vassals in open court, and speak on our traditions. They stand in the courtroom, eyeing me, waiting.\n\n#bold Waiting for me to abdicate.#!"
+ toi_tuatha_de_danann_event.0002.a: "I formally abdicate to [possible_heir.GetName] on grounds of fitness."
+ toi_tuatha_de_danann_event.0002.b: "No deformity will remove this crown!"
+ toi_tuatha_de_danann_event.0002.c: "While I am physically unfit, I am the best suited mentally to lead our peoples." 
+ 
+ toi_tuatha_de_danann_event.0003.t: "Let Them Talk"
+ toi_tuatha_de_danann_event.0003.desc: "Weeks ago, I elected to ignore the whispers of my fitness and hopes of my abdication. I thought that letting them speak about it would let them realize who their leader was.\n\nOh, how wrong I was.\n\nMy most powerful vassals are planning a coup against my twisted rule. This is my final opportunity to save the realm from war."
+ toi_tuatha_de_danann_event.0003.a: "So the battlefield it must be."
+ toi_tuatha_de_danann_event.0003.b: "I abdicate!"

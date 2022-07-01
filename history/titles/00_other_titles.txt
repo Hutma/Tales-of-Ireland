@@ -1,10 +1,38 @@
 #High Kingship
 k_high_kingship = {
-              4799.1.1 = {
-                           holder = 260000
-						   succession_laws = {
-								high_king_elective_succession_law
-								male_only_law
-							}
-              }
+    4799.1.1 = {
+		 holder = 260000
+				   succession_laws = {
+						high_king_elective_succession_law
+						male_only_law
+					}
+    }
+}
+
+#Trainers
+d_hero_trainer = {
+    4799.1.1 = {
+				   holder = 3000004
+    }
+}
+
+#Seelie and unseelie courts
+k_seelie_court = {
+	4799.1.1 = {
+		holder = 4000076
+		succession_laws = {
+			seelie_elective_succession_law
+			equal_law
+		}
+	}
+}
+
+k_unseelie_court = {
+	4799.1.1 = {
+		holder = 4000083
+		succession_laws = {
+			unseelie_elective_succession_law
+			equal_law
+		}
+	}
 }

@@ -9,8 +9,8 @@ crown_authority = {
 	crown_authority_0 = {
 		modifier = {
 			direct_vassal_opinion = 10
-			#feudal_government_tax_contribution_mult = -0.1
-			#vassal_levy_contribution_mult = -0.1
+			feudal_government_tax_contribution_mult = -0.1
+			vassal_levy_contribution_mult = -0.1
 		}
 
 		can_keep = { realm_law_use_crown_authority = yes }
@@ -55,11 +55,9 @@ crown_authority = {
 		}
 		
 		on_pass = {
-			if = {
-				limit = {
-					NOT = { has_realm_law = crown_authority_2 }
-				}
-			}
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = crown_authority_cooldown
 				years = @crown_authority_cooldown_years
@@ -80,6 +78,7 @@ crown_authority = {
 			feudal_government_tax_contribution_mult = 0.1
 			vassal_levy_contribution_mult = 0.1
 		}
+		flag = vassal_internal_wars_banned
 		flag = vassal_refusal_is_treason
 		flag = can_change_succession_laws
 		flag = can_designate_heirs
@@ -114,11 +113,9 @@ crown_authority = {
 		}
 		
 		on_pass = {
-			if = {
-				limit = {
-					NOT = { has_realm_law = crown_authority_3 }
-				}
-			}
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = crown_authority_cooldown
 				years = @crown_authority_cooldown_years
@@ -136,8 +133,8 @@ crown_authority = {
 	crown_authority_3 = {
 		modifier = {
 			direct_vassal_opinion = -20
-			feudal_government_tax_contribution_mult = 0.25
-			vassal_levy_contribution_mult = 0.25
+			feudal_government_tax_contribution_mult = 0.15
+			vassal_levy_contribution_mult = 0.15
 		}
 		flag = vassal_all_wars_banned
 		flag = vassal_internal_wars_banned
@@ -168,6 +165,9 @@ crown_authority = {
 		}
 		
 		on_pass = {
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = crown_authority_cooldown
 				years = @crown_authority_cooldown_years
@@ -219,14 +219,9 @@ tribal_authority = {
 		}
 		
 		on_pass = {
-			if = {
-				limit = {
-					NOR = {
-						has_realm_law = tribal_authority_2
-						has_realm_law = tribal_authority_3
-					}
-				}
-			}
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = tribal_authority_cooldown
 				years = @tribal_authority_cooldown_years
@@ -274,11 +269,9 @@ tribal_authority = {
 		}
 		
 		on_pass = {
-			if = {
-				limit = {
-					NOT = { has_realm_law = tribal_authority_3 }
-				}
-			}
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = tribal_authority_cooldown
 				years = @tribal_authority_cooldown_years
@@ -312,6 +305,9 @@ tribal_authority = {
 		pass_cost = { prestige = increase_tribal_authority_prestige_cost }
 		
 		on_pass = {
+			# Increment cooldown breaker tally, if appropriate.
+			calculate_authority_cooldown_break_effect = yes
+			# Set regular cooldown.
 			set_variable = {
 				name = tribal_authority_cooldown
 				years = @tribal_authority_cooldown_years

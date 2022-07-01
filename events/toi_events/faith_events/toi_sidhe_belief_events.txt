@@ -263,6 +263,7 @@ sidhe_belief.0003 = { #a dry spell
 	}
 	
 	trigger = {
+		exists = root.primary_heir
 		AND = {
 			religion = religion:mystical_knowledge_legacy_religion
 			exists = cp:councillor_court_chaplain

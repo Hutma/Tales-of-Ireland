@@ -1,13 +1,25 @@
 ﻿#Interactions relating to the head of the dynasty
 
 disinherit_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_hostile
 	interface_priority = 60
 
 	desc = disinherit_interaction_desc
+	use_diplomatic_range = no
 	
 	is_shown = {
-		NOT = { scope:recipient = scope:actor }
+		NOT = { 
+			scope:recipient = scope:actor 
+
+			AND = { # Explicit AND to ensure no funny business
+				scope:recipient = { is_child_of = scope:actor }
+				scope:actor.dynasty = {
+					this = scope:recipient.dynasty
+					has_dynasty_perk = fp2_coterie_legacy_5
+				}
+			}
+		}
 
 		scope:actor = {
 			is_dynast = yes
@@ -21,25 +33,38 @@ disinherit_interaction = {
 		}
 	}
 
+	is_valid = {
+		custom_description = {
+			scope:actor.culture = {
+				NOT = { has_cultural_parameter = cannot_disherit }
+			}
+			text = "mystical_ancestors_disinherit"
+		}
+	}
+
 	is_valid_showing_failures_only = {
-#TALES OF IRELAND
-		scope:recipient = { 
-			OR = {
-				has_trait = craven
-				has_trait = lunatic
-				has_trait = possessed
-				has_trait = clubfooted
-				has_trait = hunchbacked
-				has_trait = lisping
-				has_trait = stuttering
-				has_trait = inbred
-				has_trait = weak
-				has_trait = impotent
-				has_trait = spindly
-				has_trait = scaly
-				has_trait = albino
-				has_trait = bleeder
-				has_trait = infertile
+	#TALES OF IRELAND
+		scope:recipient = {
+			custom_description = {
+				text = disinherit_requirements_desc
+				OR = {
+					has_trait = craven
+					has_trait = lunatic
+					has_trait = possessed
+					has_trait = clubfooted
+					has_trait = hunchbacked
+					has_trait = lisping
+					has_trait = stuttering
+					has_trait = inbred
+					has_trait = weak
+					has_trait = impotent
+					has_trait = spindly
+					has_trait = scaly
+					has_trait = albino
+					has_trait = bleeder
+					has_trait = infertile
+					has_trait = blind
+				}
 			}
 		}
 		scope:actor.dynasty = {
@@ -85,7 +110,7 @@ disinherit_interaction = {
 
 					scope:recipient = {
 						show_as_tooltip = {
-							disinherit_effect = yes
+							disinherit_effect = { DISINHERITOR = scope:actor }
 						}
 					}
 				}
@@ -93,7 +118,7 @@ disinherit_interaction = {
 		}
 
 		scope:recipient = {
-			disinherit_effect = yes
+			disinherit_effect = { DISINHERITOR = scope:actor }
 		}
 	}
 	
@@ -290,7 +315,295 @@ disinherit_interaction = {
 	}
 }
 
+disinherit_children_interaction = {
+	icon = icon_dynasty
+	category = interaction_category_hostile
+	interface_priority = 60
+
+	desc = disinherit_children_interaction_desc
+	use_diplomatic_range = no
+
+	is_shown = {
+		# DLC checking
+		has_fp2_dlc_trigger = yes
+		# Standard check
+		NOT = { scope:recipient = scope:actor }
+
+		scope:actor.dynasty = {
+			this = scope:recipient.dynasty
+			has_dynasty_perk = fp2_coterie_legacy_5
+		}
+		scope:recipient = {
+			NOT = {
+				has_trait = disinherited
+			}
+		}
+	}
+
+	is_valid = {
+		scope:actor = { is_parent_of = scope:recipient }
+
+
+		custom_description = {
+			scope:actor.culture = {
+				NOT = { has_cultural_parameter = cannot_disherit }
+			}
+			text = "mystical_ancestors_disinherit"
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	#TALES OF IRELAND
+		scope:recipient = {
+			custom_description = {
+				text = disinherit_requirements_desc
+				OR = {
+					has_trait = craven
+					has_trait = lunatic
+					has_trait = possessed
+					has_trait = clubfooted
+					has_trait = hunchbacked
+					has_trait = lisping
+					has_trait = stuttering
+					has_trait = inbred
+					has_trait = weak
+					has_trait = impotent
+					has_trait = spindly
+					has_trait = scaly
+					has_trait = albino
+					has_trait = bleeder
+					has_trait = infertile
+					has_trait = blind
+				}
+			}
+		}
+		scope:actor = {
+			prestige >= major_prestige_value
+		}
+		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		trigger_if = {
+			limit = {
+				scope:recipient = {
+					NOR = {
+						is_child_of = scope:actor
+						is_grandchild_of = scope:actor
+						is_great_grandchild_of = scope:actor
+					}
+				}
+			}
+			custom_description = {
+				scope:recipient.top_liege = scope:actor.top_liege
+				text = "same_realm_as"
+			}
+		}
+	}
+
+	on_auto_accept = {
+		scope:recipient = {
+			trigger_event = char_interaction.0020
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			stress_impact = {
+				forgiving = minor_stress_impact_gain
+				compassionate = minor_stress_impact_gain
+			}
+			add_tyranny = massive_tyranny_value
+			hidden_effect = {
+				send_interface_toast = {
+					title = disinherit_interaction_notification
+
+					left_icon = scope:actor
+					right_icon = scope:recipient
+
+					scope:recipient = {
+						show_as_tooltip = {
+							disinherit_effect = { DISINHERITOR = scope:actor }
+						}
+					}
+				}
+			}
+		}
+
+		scope:recipient = {
+			disinherit_effect = { DISINHERITOR = scope:actor }
+		}
+	}
+
+	cost = {
+		prestige = {
+			value = {
+				add = medium_prestige_value
+				if = {
+					limit = {
+						scope:recipient = {
+							is_landed = yes
+						}
+					}
+					add = massive_prestige_value
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							is_landed = no
+							any_heir_title = {
+								exists = holder
+							}
+						}
+					}
+					add = medium_prestige_value
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_potential = {
+		is_at_war = no
+		NOT = {
+			has_trait = forgiving
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = dynasty
+		max = 20
+	}
+
+	ai_frequency = 96
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:recipient = {
+				is_primary_heir_of = scope:actor
+				OR = {
+					has_trait = inbred
+					has_trait = intellect_bad_3
+					has_trait = incapable
+				}
+			}
+		}
+
+		modifier = {
+			add = 5
+			ai_vengefulness >= medium_positive_ai_value
+			scope:recipient = {
+				is_heir_of = scope:actor
+			}
+			OR = {
+				AND = {
+					scope:recipient = {
+						has_trait = incestuous
+					}
+					NOT = { is_incestuous_trigger = yes }
+					trait_is_criminal_in_faith_trigger = { TRAIT = incestuous FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = kinslayer
+					}
+					NOT = { has_trait = kinslayer }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = adulterer
+					}
+					NOR = {
+						has_trait = adulterer
+						has_trait = fornicator
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = adulterer FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = fornicator
+					}
+					NOR = {
+						has_trait = adulterer
+						has_trait = fornicator
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = fornicator FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = deviant
+					}
+					NOT = {
+						is_deviant_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = deviant FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = witch
+					}
+					NOT = {
+						is_witch_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = witch FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = sodomite
+					}
+					NOR = {
+						has_trait = sodomite
+						any_secret = {
+							secret_type = secret_homosexual
+						}
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = sodomite FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+				AND = {
+					scope:recipient = {
+						has_trait = cannibal
+					}
+					NOT = {
+						is_cannibal_trigger = yes
+					}
+					trait_is_criminal_in_faith_trigger = { TRAIT = cannibal FAITH = scope:actor.faith GENDER_CHARACTER = scope:recipient }
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				is_ai = no
+			}
+		}
+	}
+}
+
 restore_inheritance_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_friendly
 	desc = restore_inheritance_interaction_desc
 
@@ -400,6 +713,7 @@ restore_inheritance_interaction = {
 }
 
 denounce_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_hostile
 	interface_priority = 60
 
@@ -633,6 +947,7 @@ denounce_interaction = {
 }
 
 forgive_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_friendly
 	interface_priority = 60
 
@@ -743,6 +1058,7 @@ forgive_interaction = {
 }
 
 call_dynasty_member_to_war_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_diplomacy
 	interface_priority = 60
 
@@ -795,6 +1111,10 @@ call_dynasty_member_to_war_interaction = {
 
 	is_valid_showing_failures_only = {
 		scope:actor.dynasty = { dynasty_prestige >= medium_dynasty_prestige_value }
+		scope:recipient = {
+			NOT = { has_government = mercenary_government }
+			NOT = { has_government = holy_order_government }
+		}
 		custom_description = {
 			text = "is_already_in_all_wars"
 			scope:actor = {
@@ -1046,6 +1366,7 @@ call_dynasty_member_to_war_interaction = {
 }
 
 dynast_claim_title_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_diplomacy
 	desc = dynast_claim_title_interaction_desc
 	target_type = title
@@ -1115,6 +1436,7 @@ dynast_claim_title_interaction = {
 }
 
 dynast_end_dynasty_wars_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_diplomacy
 	desc = dynast_end_dynasty_wars_interaction_desc
 
@@ -1176,6 +1498,7 @@ dynast_end_dynasty_wars_interaction = {
 }
 
 dynast_legitimize_bastard_interaction = {
+	icon = icon_dynasty
 	category = interaction_category_diplomacy
 	desc = dynast_legitimize_bastard_interaction_desc
 

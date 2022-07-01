@@ -1,5 +1,5 @@
 ﻿400000 = {
-    name = "Cíocal"
+    name = "CI_ocal"
     dynasty =  15 
     religion = dark_gods
     culture = sea_fomorians
@@ -43,6 +43,7 @@
     trait = forgiving
     trait = compassionate
     trait = fomorian
+	trait = magician_good_1
 
     father=  401000 
 
@@ -65,7 +66,7 @@
     prowess =  7 
     trait = fickle
     trait = arrogant
-    trait = diligent
+    trait = rowdy
     trait = fomorian
 
     disallow_random_traits = yes
@@ -74,7 +75,7 @@
     }
 }
 400003 = {
-    name = "Conand "
+    name = "Conand"
     dynasty =  16 
     religion = dark_gods
     culture = sea_fomorians
@@ -210,11 +211,11 @@
     learning =  5 
     prowess =  2 
 
-    trait = education_intrigue_1
+    trait = bossy
     trait = gregarious
     trait = lustful
-    trait = diligent
     trait = fomorian
+	trait = magician_good_2
 
     mother=  400001 
 
@@ -408,7 +409,7 @@
     father=  400006 
 
     disallow_random_traits = yes
-    .1.1 = {
+    4782.1.1 = {
         birth = yes
     }
 }
@@ -575,7 +576,7 @@
     learning =  3 
     prowess =  7 
     trait = fickle
-    trait = arrogant
+    trait = rowdy
     trait = fomorian
 
     disallow_random_traits = yes
@@ -602,7 +603,7 @@
     trait = wrathful
     trait = fomorian
 
-    father=  401002 
+    father=  401102 
 
     disallow_random_traits = yes
     4772.1.1 = {
@@ -628,7 +629,7 @@
     trait = compassionate
     trait = fomorian
 
-    father=  401002 
+    father=  401102 
 
     disallow_random_traits = yes
     4776.1.1 = {
@@ -636,7 +637,7 @@
     }
 }
 400017 = {
-    name = "Conand "
+    name = "Conand"
     dynasty =  18 
     religion = dark_gods
     culture = sea_fomorians

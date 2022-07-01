@@ -1,0 +1,5 @@
+﻿l_english:
+ toi_vampire.0001.t:0 "The Art of blood-hunting"
+ toi_vampire.0001.desc:0 "As a vampire I have to choose my approach on how I will feed. Should I take blood by force or should I try to use more refined ways to feed?"
+ toi_vampire.0001.a:0 "I will take blood by force. #italic Take Blood interaction will be resolved based on Prowess#!"
+ toi_vampire.0001.b:0 "I will use all of my malice. #italic Take Blood interaction will be resolved based on Intrigue#!"

@@ -443,6 +443,7 @@ main_building_tier_1_cost = @[main_cost_tier_1]
 main_building_tier_2_cost = @[main_cost_tier_2]
 main_building_tier_3_cost = @[main_cost_tier_3]
 main_building_tier_4_cost = @[main_cost_tier_4]
+main_building_tier_5_cost = @[main_cost_tier_5]
 
 # Tribal Buildings
 tribal_building_tier_1_cost = @[tribal_cost_tier_1]
@@ -491,6 +492,26 @@ excellent_building_tax_tier_5 = @[excellent_tax_tier_5]
 excellent_building_tax_tier_6 = @[excellent_tax_tier_6]
 excellent_building_tax_tier_7 = @[excellent_tax_tier_7]
 excellent_building_tax_tier_8 = @[excellent_tax_tier_8]
+
+# Cultural Tradition Extra - Poor Tax
+poor_building_extra_tax_tier_1 = @[poor_tax_tier_1 / 4]
+poor_building_extra_tax_tier_2 = @[poor_tax_tier_2 / 4]
+poor_building_extra_tax_tier_3 = @[poor_tax_tier_3 / 4]
+poor_building_extra_tax_tier_4 = @[poor_tax_tier_4 / 4]
+poor_building_extra_tax_tier_5 = @[poor_tax_tier_5 / 4]
+poor_building_extra_tax_tier_6 = @[poor_tax_tier_6 / 4]
+poor_building_extra_tax_tier_7 = @[poor_tax_tier_7 / 4]
+poor_building_extra_tax_tier_8 = @[poor_tax_tier_8 / 4]
+
+# Cultural Tradition - Super Poor Tax
+super_poor_building_tax_tier_1 = @[poor_tax_tier_1 / 2]
+super_poor_building_tax_tier_2 = @[poor_tax_tier_2 / 2]
+super_poor_building_tax_tier_3 = @[poor_tax_tier_3 / 2]
+super_poor_building_tax_tier_4 = @[poor_tax_tier_4 / 2]
+super_poor_building_tax_tier_5 = @[poor_tax_tier_5 / 2]
+super_poor_building_tax_tier_6 = @[poor_tax_tier_6 / 2]
+super_poor_building_tax_tier_7 = @[poor_tax_tier_7 / 2]
+super_poor_building_tax_tier_8 = @[poor_tax_tier_8 / 2]
 
 # Special Mine Tax, for unique buildings and such
 special_mine_building_tax_tier_1 = @[special_mine_tax_tier_1]
@@ -709,6 +730,18 @@ fill_building_slot_chance = {
 	value = 140
 	if = {
 		limit = {
+			current_date < 1066.1.1
+		}
+		subtract = 70
+	}
+	if = {
+		limit = {
+			has_building_or_higher = tribe_01
+		}
+		subtract = 15
+	}
+	if = {
+		limit = {
 			has_special_building = yes
 			num_buildings <= 1
 		}
@@ -717,7 +750,12 @@ fill_building_slot_chance = {
 	add = {
 		value = county.development_level
 		multiply = 1.5
-		max = 45
+		max = 35
+	}
+	multiply = {
+		value = county.development_rate_modifier
+		max = 1.5
+		min = 0.85
 	}
 	subtract = {
 		value = 75
@@ -774,3 +812,4 @@ building_garrison_reinforcement_factor_tier_5 = @[garrison_reinforcement_factor_
 building_garrison_reinforcement_factor_tier_6 = @[garrison_reinforcement_factor_tier_6]
 building_garrison_reinforcement_factor_tier_7 = @[garrison_reinforcement_factor_tier_7]
 building_garrison_reinforcement_factor_tier_8 = @[garrison_reinforcement_factor_tier_8]
+

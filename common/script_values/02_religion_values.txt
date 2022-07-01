@@ -419,6 +419,7 @@ ghw_target_stretch = 10
 ghw_target_has_holy_site = 50
 #Targets that should always be priorities if not controlled:
 ghw_target_key_religious_holding = 100
+ghw_target_religious_vengeance = 150
 #Distance modifiers stack:
 ghw_target_distance_01_reduction = 0.8
 ghw_target_distance_02_reduction = 0.8
@@ -428,28 +429,31 @@ ghw_target_distance_02_threshold = 1445000
 ghw_target_distance_03_threshold = 2167500
 
 # Referenced by code when building list of ghw targets
-#Logic reworked by Ewan Cowhig Croft
+# Logic reworked by Ewan Cowhig Croft
 great_holy_war_target_kingdom_weight = {
-	#WEIGHTING PROCESS
-	#1. Check how many individual counties within a de jure kingdom have a top-liege with an eligible faith for GHWing. Boost the count a little for kingdoms with existing same-faith monarchs.
-	#2. Modify the count by region location & relative importance to the Faith (is this kingdom in the heartlands of the faith, or one of an increasing gradiant of frontier regions?).
-	#3. Modify the count by region distance from the HoF's capital, or a fallback holy site.
-	#4. Weight up kingdoms containing holy sites directly.
-	#5. Weight up special priority targets (e.g., Jerusalem, Mecca) directly.
+	# WEIGHTING PROCESS
+	# 1. Check how many individual counties within a de jure kingdom have a top-liege with an eligible faith for GHWing. Boost the count a little for kingdoms with existing same-faith monarchs.
+	# 2. Modify the count by region location & relative importance to the Faith (is this kingdom in the heartlands of the faith, or one of an increasing gradiant of frontier regions?).
+	# 3. Modify the count by region distance from the HoF's capital, or a fallback holy site.
+	# 4. Weight up kingdoms containing holy sites directly.
+	# 5. Weight up special priority targets (e.g., Jerusalem, Mecca) directly.
 
 	### 1 ###
-	#Is the target kingdom a viable GHW target?
+	# Is the target kingdom a viable GHW target?
 	every_in_de_jure_hierarchy = {
-		continue = { tier > tier_county }	#Check individual counties within the potential target de jure kingdom.
-		limit = {	#For every county with a GHWable liege...
+		# Check individual counties within the potential target de jure kingdom.
+		continue = { tier > tier_county }
+		# For every county with a GHWable liege...
+		limit = {
 			tier = tier_county
 			scope:the_faith = {
-					is_hostile_enough_for_holy_war_trigger = { FAITH = prev.holder.top_liege.faith }
+				is_hostile_enough_for_holy_war_trigger = { FAITH = prev.holder.top_liege.faith }
 			}
 		}
-		add = 1	#... Add 1 to the weighting.
+		# ... Add 1 to the weighting.
+		add = 1
 	}
-	#Weight up the kingdom if it either has an existing same-faith holder, or at least a same-faith claimant.
+	# Weight up the kingdom if it either has an existing same-faith holder, or at least a same-faith claimant.
 	if = {
 		limit = {
 			OR = {
@@ -460,14 +464,13 @@ great_holy_war_target_kingdom_weight = {
 				any_claimant = {
 					exists = this
 					faith = scope:the_faith
-					is_available_adult = no
+					is_available_adult = yes
 				}
 			}
 		}
 		multiply = ghw_target_existing_same_faith_ruler
 	}
 }
-
 
 great_holy_war_pledge_amount = {
 	value = root.yearly_character_income
@@ -535,6 +538,7 @@ faith_creation_cost_mult = {
 # The returned value is interpreted as a multiplicative modifier (e.g. 0.5 means +50% cost).
 # scope:character = the converting character
 # scope:new_faith = the faith the character is converting to
+# There should be no subtract equal or higher than 1
 faith_conversion_cost_mult = {
 	add = {
 		value = scope:new_faith.faith_conversion_fervor_mult
@@ -822,9 +826,45 @@ faith_conversion_cost_mult = {
 			desc = faith_conversion_cost_inside_religion_family
 			format = "BREAKDOWN_FORMAT_PIETY_PERCENTAGE_POSITIVE_IS_BAD"
 			value = 1
+			add = {
+				desc = faith_conversion_cost_inside_religion_family
+				format = "BREAKDOWN_FORMAT_PIETY_PERCENTAGE_POSITIVE_IS_BAD"
+				value = 1
+			}
 		}
 	}
 
+	#######################################
+	# Misc penalties #
+	#######################################
+
+	# More expensive to convert to a faith who's HoF you HumSac'D/to a faith on good terms with one who's HoF you HumSac'd, unless they're chill with HumSac.
+	if = {
+		limit = {
+			scope:character = {
+				has_variable_list = humsacd_hofs
+				any_in_list = {
+					variable = humsacd_hofs
+					faith_hostility_level = {
+						target = scope:new_faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			# Exemptions for people who already practice HumSac: they're likely not happy, but it's not the ultimate taboo for them.
+			scope:new_faith = {
+				NOT = { has_doctrine_parameter = human_sacrifice_active }
+			}
+		}
+		multiply = {
+			value = 1
+			add = {
+				desc = faith_conversion_cost_sacrificed_hof
+				format = "BREAKDOWN_FORMAT_PIETY_PERCENTAGE_POSITIVE_IS_BAD"
+				value = 5
+			}
+		}
+	}
 	########################
 	# Conversion Discounts #
 	########################
@@ -1237,7 +1277,7 @@ faith_conversion_cost_mult = {
 reincarnation_chance = 4
 
 holy_sites_to_create_temporal_head_of_faith = 2
-holy_sites_to_create_spiritual_head_of_faith = 1
+holy_sites_to_create_spiritual_head_of_faith = 2 
 
 faith_military_strength = {
 	every_ruler = {

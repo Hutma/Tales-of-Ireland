@@ -1,0 +1,152 @@
+﻿namespace = toi_nemedian_event
+
+# Stranger visits
+
+toi_nemedian_event.0001 = {
+	type = character_event
+	title = toi_nemedian_event.0001.t
+	desc = toi_nemedian_event.0001.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		has_trait = nemedian
+	}
+	
+	option = { #Yes. Human, Spirit or otherwise, you are my guest. 
+		name = toi_nemedian_event.0001.a
+		capital_county = {
+			change_development_level = -1
+		}
+		remove_short_term_gold = 10
+		trigger_event = {
+			id = toi_nemedian_event.0002
+			days = { 3 10 }
+		}
+	}
+	
+	option = { #No. Take this gold and leave.
+		name = toi_nemedian_event.0001.b
+		remove_short_term_gold = 1 
+	}
+}	
+
+# Stranger needs for more
+
+toi_nemedian_event.0002 = {
+	type = character_event 
+	title = toi_nemedian_event.0002.t
+	desc = toi_nemedian_event.0002.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		has_trait = nemedian
+	}
+	
+	option = { #Fine, have some more Cattle!
+		name = toi_nemedian_event.0002.a
+		trigger = { 
+			capital_county = {
+				development_level >= 5
+			}
+		}
+		capital_county = {
+			change_development_level = -5
+		}
+		remove_short_term_gold = 25
+		add_piety = 50
+		random_list = {
+			30 = {
+				modifier = {
+					add = {
+						value = 10
+						multiply = root.piety_level
+					}
+				}
+				modifier = {
+					add = {
+						value = 10
+						multiply = root.realm_priest.piety_level
+					}
+				}
+				####NOT DONE HAVE TO DO IT THE LAKE
+				# trigger_event = {
+					# id = toi_nemedian_event.0004
+					# days = { 7 10 }
+				# }
+			}
+			70 = {
+				modifier = {
+					add = {
+						value = -10
+						multiply = root.piety_level
+					}
+				}
+				modifier = {
+					add = {
+						value = -10 
+						multiply = root.realm_priest.piety_level
+					}
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = toi_nemedian_event.0002.a.fail #The stranger didn't come out from his dining chamber. Tired of waiting, we marched in only to find he was gone, alongside the Cattle we served to him. No-one in my Ringfort saw him leave. That malevolent trickster!
+				}
+			}
+		}
+	}
+
+	option = { #No, in this land, Cattle is more precious than any divine wisdom!
+		name = toi_nemedian_event.0002.b
+		add_piety = 20
+	}
+}
+
+# Satisfied Stranger
+
+toi_nemedian_event.0003 = {
+	type = character_event
+	title = toi_nemedian_event.0003.t
+	desc = toi_nemedian_event.0003.desc
+	theme = feast_activity
+	
+	left_portrait = {
+		character = root 
+		animation = personality_rational
+	}
+	
+	trigger = {
+		has_trait = nemedian
+	}
+	
+	option = { # Am I trully blessed ?
+		name = toi_nemedian_event.0003.a
+		random_list = {
+			50 = { 
+				capital_county = {
+					change_development_level = 10
+					}
+			}
+			50 = {
+				capital_county = {
+					change_development_level = 15
+				}
+			}
+		}
+		add_piety = 200
+		add_tales_of_abundance_lifestyle_perk_points = 1
+		add_character_modifier = { 
+			modifier = stranger_success
+			years = 15
+		}
+	}
+}

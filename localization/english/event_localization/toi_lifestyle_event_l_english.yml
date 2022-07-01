@@ -1,0 +1,64 @@
+﻿l_english:
+ toi_lifestyle_event.0001.t:0 "Spear training"
+ toi_lifestyle_event.0001.desc:0 "Each day after meeting with my council, I take the time and sequester myself in the nearby woodlands.\n\nWithout the help of my Marshal, I practice my effectiveness with the spear.\n\nHaving just an hour each day to practice has bolstered my confidence in my technique immensely."
+ toi_lifestyle_event.0001.a:0 "I’m rapidly becoming more proficient."
+ toi_lifestyle_event.0001.b:0 "To improve my form I need my Marshal."
+
+ toi_lifestyle_event.0002.t:0 "Halloween/Samhain"
+ toi_lifestyle_event.0002.desc:0 "Today is the day of Samhain, the harvest is done for the winter and we are proud of this year productivity of our land. \n\nIn the tradition it's time to light great bonfires accros my realm, sew Sidhe disguises for the children, play our music to honor the gods and, of course, it's time for games and feasting. \n\nOn this sacred day the druids are retiring in a sacred Grove to perform divination."
+ toi_lifestyle_event.0002.a:0 "Collect our harvest and prepare the fires!"
+ toi_lifestyle_event.0002.b:0 "I won't waste money on this."
+ toi_lifestyle_event.0002.c:0 "I'll even make a sacrifice to the gods tonight."
+ toi_lifestyle_event.0002.d:0 " I'll go and visit the druids to foresee my future."
+
+ toi_lifestyle_event.0003.t:0 "Foreseeing my future"
+ toi_lifestyle_event.0003.desc:0 "I met with the druids and the oldest, wisest one told me to approach. \n\nI prayed with him during a long time to open my being to the gods so that they can read what will happen to me."
+ toi_lifestyle_event.0003.a:0 "I let my future in the hands of the gods!"
+
+ toi_lifestyle_event.0004.t:0 "Bright fighting future"
+ toi_lifestyle_event.0004.desc:0 "The druid starts to scream unintelligible words to the sky, to the gods. After a while he stops and listens. We can hear from the forest the wolves hurling in the night with a unique intensity. \n\nThe druid turns to me and says : “You are blessed by a future of war and conquest, the gods love you.”"
+ toi_lifestyle_event.0004.a:0 "The gods be praised!"
+
+ toi_lifestyle_event.0005.t:0 "Bright future of peace"
+ toi_lifestyle_event.0005.desc:0 "The druid starts to scream unintelligible words to the sky, to the gods. After a while he stops and listens. We can see on the horizon of the night a huge pack of birds flying around in the sky above the forest,like if they were dancing and feasting in the sky. \n\nThe druid turns to me and says : “You are blessed with a future of peace and prosperity, the gods trust you.”"
+ toi_lifestyle_event.0005.a:0 "The gods be praised!"
+
+ toi_lifestyle_event.0006.t:0 "Dark future"
+ toi_lifestyle_event.0006.desc:0 "The druid starts to scream unintelligible words to the sky, to the gods. After a while he stops and listens. We then wait for a sign, but nothing happens. After half an hour a big cloud of rain forms in the sky above us and the rain starts slowly falling down on us... \n\nThe druid turns to me and says : “You are cursed with a dark future, the gods are unhappy, you must do anything in your power to please them.” \n\n #X You need to gain a level of devotion to loose the bad modifier #!"
+ toi_lifestyle_event.0006.a:0 "I'm cursed..."
+
+ toi_lifestyle_event.0008.t:0 "Spring Festival"
+ toi_lifestyle_event.0008.desc:0 "This year my court and the influencial families all have one thing on their mind, preparing and  celebrating a grand spring festival to celebrate this end of this year's harsh winter. Everyone is ready to  participate with their cattle for this grand time in the year."
+ toi_lifestyle_event.0008.a:0 "Let's make this festival."
+ toi_lifestyle_event.0008.b:0 "It would be better to use these resource for our army.1"
+ toi_lifestyle_event.0008.c:0 "All of this is useless, we shall keep our cattle..."
+
+ toi_lifestyle_event.0009.t:0 "Starfalling night prayer"
+ toi_lifestyle_event.0009.desc:0 "Tonight is a special night, the sky is illuminated by hundreds of falling stars. It's a great time to pray and ask to [ROOT.Char.GetFaith.HighGodName] to protect us. \n\nI stand out in the plain and sit religiously, praying."
+ toi_lifestyle_event.0009.a:0 "I pray [ROOT.Char.GetFaith.WarGodNamePossessive] for strength and victory."
+ toi_lifestyle_event.0009.b:0 "I pray [ROOT.Char.GetFaith.FertilityGodName] for peace and calm winter."
+ toi_lifestyle_event.0009.c:0 "I pray [ROOT.Char.GetFaith.HighGodName] to grant me a prestigious reign."
+
+ toi_lifestyle_event.0010.t:0 "Lessons of the Past"
+ toi_lifestyle_event.0010.desc:0 "What are we without our past? Nothing. [your_druid.GetFirstName] was all too happy to remind us of that as he spoke of the great warriors and rulers that brought us where we are today. I was completely enthralled by these tales of wisdom and bravery. If I knew more, perhaps I can emulate their achievements? I turned to [your_druid.GetFirstName] and asked..."
+ toi_lifestyle_event.0010.a:0 "Tell me about one of our wisest rulers."
+ toi_lifestyle_event.0010.b:0 "Tell me about one of our bravest Warriors."
+ toi_lifestyle_event.0010.c:0 "I know the histories, and will tell a story of my own!"
+
+ toi_lifestyle_event.0011.t:0 "Forging my Legend"
+ toi_lifestyle_event.0011.desc:0 "My Vassals asked me to join them for a small feast. It will be attended my foreign delegates, and this is my chance to show the other Realms what kind of Ruler I am. I must make a good impression, but exactly what kind will that be? I must decide who will accompany me..."
+ toi_lifestyle_event.0011.a:0 "I will bring my Ridrí as a show of strength."
+ toi_lifestyle_event.0011.b:0 "I will bring artists and bards to show I am cultured."
+ toi_lifestyle_event.0011.c:0 "I won't go, what if I embarass myself ?"
+ toi_lifestyle_event.0011.d:0 "These outsiders aren't worth my time."
+
+ toi_lifestyle_event.1001.t:0 "Assisted spear training"
+ toi_lifestyle_event.1001.desc:0 "The following day after having practiced my skills in the art of spearfighting alone I confront my Marshal [ROOT.marshal.GetFirstName], after scolding me about endangering myself he agrees to assist. As we arrive in the nearby woodlands time seems to move faster. It feels like the sun is going down before we’ve gotten to the most advanced techniques. Even though the intent was to train an hour, we’ve spent the entire day sparring and discussing technique. With the guidance of [ROOT.marshal.GetFirstName] my form must’ve improved tremendously."
+ toi_lifestyle_event.1001.a:0 "I might’ve trained a bit too hard..."
+ toi_lifestyle_event.1001.b:0 "The improvements I felt might’ve just been due to the good company of my marshall."
+ toi_lifestyle_event.1001.a.success:0 "Your training succeeded"
+ toi_lifestyle_event.1001.a.fail:0 "You have trained too hard"
+ toi_lifestyle_event.1001.b.success:0 "You have improved"
+ toi_lifestyle_event.1001.b.fail:0 "You have not improved"
+
+

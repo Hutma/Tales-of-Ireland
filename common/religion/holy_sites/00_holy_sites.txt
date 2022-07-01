@@ -144,7 +144,7 @@ first_arrival_bay = {
 	character_modifier = {
 		different_culture_opinion = 5
 		archers_max_size_add = 1
-		archers_screen_mult = 4
+		archers_screen_add = 5
 	}
 }
 
@@ -200,5 +200,41 @@ cashtal_yn_ard = {
 		name = holy_site_cashtal_yn_ard_effect_name
 		monthly_prestige_gain_mult = 0.05
 		monthly_piety_gain_mult = 0.05
+	}
+}
+
+#Scotland Holy sites
+torhouse_stone_circle = {
+	
+	county = c_wigtown
+	
+	character_modifier = {
+		name = holy_site_torhouse_stone_circle_effect_name
+		monthly_prestige = 0.15
+		title_creation_cost_mult = -0.15
+		mercenary_hire_cost_mult = -0.15
+	}
+}
+
+the_stone_of_lochmaben = {
+	
+	county = c_gretna
+	
+	character_modifier = {
+		name = holy_site_the_stone_of_iochmaben_effect_name
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.15
+		monthly_learning_lifestyle_xp_gain_mult = 0.15
+		learning = 1
+	}
+}
+
+torrylin_cairn = {
+	
+	county = c_lagg
+	
+	character_modifier = {
+		name = holy_site_torrylin_cairn_effect_name
+		close_relative_opinion = 5
+		clergy_opinion = 5
 	}
 }

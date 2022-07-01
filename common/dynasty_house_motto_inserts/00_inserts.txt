@@ -2058,23 +2058,10 @@ creature = {
 	fox = {
 	}
 	tiger = {
-		trigger = {
-			NOR = {
-				has_culture_group = culture_group:hellenic_group
-				has_culture_group = culture_group:aegean_group
-			}
-		}
+	
 	}
 	elephant = {
-		trigger = {
-			NOR = {
-				has_culture_group = culture_group:hellenic_group
-				has_culture_group = culture_group:aegean_group
-				has_culture_group = culture_group:bryges_group
-				has_culture_group = culture_group:luwian_group
-				has_culture_group = culture_group:hattian_group
-			}
-		}
+
 	}
 	hound = {
 		trigger = {
@@ -2083,28 +2070,14 @@ creature = {
 		}
 	}
 	horse = {
-		weight = {
-			value = 1000
-			if = {
-				limit = {
-					OR = {
-						has_culture_group = culture_group:hurrian_group
-					}
-				}
-				multiply = 5
-			}
-		}
+
 	}
 	leopard = {
 	}
 	gazelle = {
 	}
 	hippopotamus = {
-		trigger = {
-			OR = {
-				has_culture_group = culture_group:egyptian_group
-			}
-		}
+
 	}
 }
 
@@ -2133,47 +2106,20 @@ the_creature = {
 	the_fox = {
 	}
 	the_tiger = {
-		trigger = {
-			NOR = {
-				has_culture_group = culture_group:hellenic_group
-				has_culture_group = culture_group:aegean_group
-			}
-		}
+
 	}
 	the_elephant = {
-		trigger = {
-			NOR = {
-				has_culture_group = culture_group:hellenic_group
-				has_culture_group = culture_group:aegean_group
-				has_culture_group = culture_group:bryges_group
-				has_culture_group = culture_group:luwian_group
-				has_culture_group = culture_group:hattian_group
-			}
-		}
+
 	}
 	the_hound = {
 	}
 	the_horse = {
-		weight = {
-			value = 1000
-			if = {
-				limit = {
-					OR = {
-						has_culture_group = culture_group:hurrian_group
-					}
-				}
-				multiply = 5
-			}
-		}
+
 	}
 	the_leopard = {
 	}
 	the_hippopotamus = {
-		trigger = {
-			OR = {
-				has_culture_group = culture_group:egyptian_group
-			}
-		}
+
 	}
 }
 

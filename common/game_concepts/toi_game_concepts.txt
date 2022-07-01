@@ -102,3 +102,13 @@ tales_of_abundance = {
 	framesize = { 144 144 }
 	frame = 2
 }
+
+tales_of_magic = {
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	framesize = { 144 144 }
+	frame = 2
+}
+
+toi_clan = {
+	texture = "gfx/interface/icons/message_feed/dynasty.dds"
+}

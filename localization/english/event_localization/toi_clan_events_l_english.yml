@@ -1,0 +1,41 @@
+﻿l_english:
+ toi_clan.0001.t:0 "A Rising Clan"
+ toi_clan.0001.desc:0 "Our dynasty has become more and more famous, generation after generation. It is now time for us to rally under the banner of a clan. \n\n[founder.GetFirstName] will guide the [founder.GetDynasty.GetBaseName] to greatness! \n\n\n\n #bold Whenever there are less than 3 independent rulers in the clan, the clan will be destroyed #!"
+ toi_clan.0001.a:0 "Long live the clan."
+ 
+ toi_clan.0002.t:0 "Calling the Clan"
+ toi_clan.0002.desc:0 "I have gathered the Clan in my ringfort tonight. Most of them already know why they are here. \n\nThey are here to defend their Clan. Tonight I'm going to call each one of them to join me into war and battle!"
+ toi_clan.0002.a:0 "Join me into the[war_1.GetName]"
+ toi_clan.0002.b:0 "Join me into the[war_2.GetName]"
+ toi_clan.0002.c:0 "Join me into the[war_3.GetName]"
+ toi_clan.0002.d:0 "Join me into the[war_4.GetName]"
+ toi_clan.0002.e:0 "Join me into the[war_5.GetName]"
+ toi_clan.0002.f:0 "Join me into the[war_6.GetName]"
+ 
+ toi_clan.0003.t:0 "A call to war"
+ toi_clan.0003.desc:0 "Our clan Leader has called us to war! Our traditions dictates us to join him into battle, but the choice is still mine to make."
+ toi_clan.0003.a:0 "Of course I'll defend the Clan."
+ toi_clan.0003.b:0 "I don't have time for traditions."
+ 
+ toi_clan.0004.t:0 "Calling the Clan Leader"
+ toi_clan.0004.desc:0 "I have invited the Clan Leader in my ringfort tonight. He already knows why he is here. \n\nI'm going to invoque our traditions and ask him to join my war, to join me into battle and victory!"
+ toi_clan.0004.a:0 "Join me into the[war_1.GetName]"
+ toi_clan.0004.b:0 "Join me into the[war_2.GetName]"
+ toi_clan.0004.c:0 "Join me into the[war_3.GetName]"
+ toi_clan.0004.d:0 "Join me into the[war_4.GetName]"
+ toi_clan.0004.e:0 "Join me into the[war_5.GetName]"
+ toi_clan.0004.f:0 "Join me into the[war_6.GetName]"
+ 
+ toi_clan.0005.t:0 "A call to war"
+ toi_clan.0005.desc:0 "One of our Clan's Ruler has called us into the [war_chosen.GetName] war! Our traditions dictates us to join him into battle, but the choice is still mine to make."
+ toi_clan.0005.a:0 "Of course I'll defend the Clan."
+ toi_clan.0005.b:0 "I don't have time for traditions."
+ 
+ toi_clan.0008.t:0 "Clan destroyed"
+ toi_clan.0008.desc:0 "Our clan is getting smaller and smaller, our power as a family is decreasing. \n\nWith less than three clannic rulers, we have to face the fact that there is not much reason for the clan to exist anymore..."
+ toi_clan.0008.a:0 "It's a failure for our dynasty."
+ 
+ toi_clan.0009.t:0 "Feast for the clan rulers"
+ toi_clan.0009.desc:0 "A clan meeting will take place this year and for several weeks my councillors are coming up with the idea of organising a feast to welcome the clan rulers, if the feast goes well it could make our clan more united and stronger. \n\nWith my councillors' insistence I'm wondering if this would be a good idea, it would certainly bring the clan together but is it worth the cost?"
+ toi_clan.0009.a:0 "I'll invest in such a feast!"
+ toi_clan.0009.b:0 "It's not worth the money..."

@@ -1,0 +1,6 @@
+﻿##### MAINTHEME
+
+main_theme_track = {
+	music = "file:/music/toi_opening_theme.mp3"
+	can_be_interrupted = yes
+}

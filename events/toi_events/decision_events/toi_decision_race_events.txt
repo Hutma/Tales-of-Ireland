@@ -39,14 +39,14 @@ toi_decision_race.0002 = {
 	option = {
 		name = { #Fomorian peoples are happy.
 			trigger = {
-				has_culture_group = culture_group:toi_fomorian_group
+				culture = { has_cultural_pillar = heritage_fomorian }
 			}
 			text = toi_decision_race.0002.a
 		}
 		name = { #Noone else especially cares.
 			trigger = {
-				NOR = {
-					has_culture_group = culture_group:toi_fomorian_group
+				NOT = {
+					culture = { has_cultural_pillar = heritage_fomorian }
 				}
 			}
 			text = toi_decision_race.0002.b

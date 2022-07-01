@@ -2,1084 +2,1434 @@
 #CESSARIANS#
 
 1 = {
-	name = "Mac Bóchra"
+	prefix = "dynnp_mac"
+	name = "dynn_BO_chra"
 	culture = "cessair_descendants"
 }
 
 2 = {
-	name = "Mac Gréine"
+	prefix = "dynnp_mac"
+	name = "dynn_GrE_ine"
 	culture = "cessair_descendants"
 }
 
 3 = {
-	name = "Mac Cecht"
+	prefix = "dynnp_mac"
+	name = "dynn_Cecht"
 	culture = "cessair_descendants"
 }
 
 4 = {
-	name = "Noah"
+	name = "dynn_Noah"
 	culture = "cessair_descendants"
 }
 
 5 = {
-	name = "Traige"
+	name = "dynn_Traige"
 	culture = "cessair_descendants"
 }
 
 6 = {
-	name = "Cuill"
+	name = "dynn_Cuill"
 	culture = "cessair_descendants"
 }
 
 #LUGHAID MILESIANS#
 7 = {
-	name = "Finn"
+	name = "dynn_Finn"
 	culture = "lughaid_milesians"
 }
 
 8 = {
-	name = "Mac Clonmael"
+	prefix = "dynnp_mac"
+	name = "dynn_Clonmael"
 	culture = "lughaid_milesians"
 }
 
 9 = {
-	name = "Mac Er"
+	prefix = "dynnp_mac"
+	name = "dynn_Er"
 	culture = "lughaid_milesians"
 }
 
 #PARTHOLONIAN #
 10 = {
-	name = "Bartholomaeus"
+	name = "dynn_Bartholomaeus"
 	culture = "first_landers"
 }
 
 11 = {
-	name = "Cerbnad"
+	prefix = "dynnp_mac"
+	name = "dynn_Cerbnad"
 	culture = "first_landers"
 }
 
 12 = {
-	name = "Mac Slanga"
+	prefix = "dynnp_mac"
+	name = "dynn_Slanga"
 	culture = "first_landers"
 }
 
 13 = {
-	name = "Mac Laiglinne"
+	prefix = "dynnp_mac"
+	name = "dynn_Laiglinne"
 	culture = "first_landers"
 }
 
 14 = {
-	name = "Mac Rudraige"
+	prefix = "dynnp_mac"
+	name = "dynn_Rudraige"
 	culture = "first_landers"
 }
 
 58 = {
-	name = "Partholon Heirs"
+	name = "dynn_Partholon_Heirs"
 	culture = "the_plagued"
 }
 
 59 = {
-	name = "Dynan"
+	name = "dynn_Dynan"
 	culture = "the_plagued"
 }
 
 #SEA FOMORIANS#
 15 = {
-	name = "Mac Deled"
+	prefix = "dynnp_mac"
+	name = "dynn_Deled"
 	culture = "sea_fomorians"
 }
 
 16 = {
-	name = "Mac Febair"
+	prefix = "dynnp_mac"
+	name = "dynn_Febair"
 	culture = "sea_fomorians"
 }
 
 17 = {
-	name = "Gricenchos"
+	name = "dynn_Gricenchos"
 	culture = "sea_fomorians"
 }
 
 18 = {
-	name = "Mac Inshted"
+	prefix = "dynnp_mac"
+	name = "dynn_Inshted"
 	culture = "sea_fomorians"
 }
 
 19 = {
-	name = "Béimnech"
+	name = "dynn_BE_imnech"
 	culture = "sea_fomorians"
 }
 
 41 = {
-	name = "Azegid"
+	name = "dynn_Azegid"
 	culture = "sea_fomorians"
 }
 
 42 = {
-	name = "Moshegid"
+	name = "dynn_Moshegid"
 	culture = "sea_fomorians"
 }
 
 50 = {
-	name = "Moshegid"
+	name = "dynn_Moshegid"
 	culture = "sea_fomorians"
 }
 
 51 = {
-	name = "Ó Dubhuir"
+	name = "dynn_O_Dubhuir"
 	culture = "sea_fomorians"
 }
 
 52 = {
-	name = "Ó Buachalla"
+	name = "dynn_O_Buachalla"
 	culture = "sea_fomorians"
 }
 
 53 = {
-	name = "Mac Árdghail"
+	prefix = "dynnp_mac"
+	name = "dynn_A_rdghail"
 	culture = "sea_fomorians"
 }
 
 54 = {
-	name = "Mac Bradaigh"
+	prefix = "dynnp_mac"
+	name = "dynn_Bradaigh"
 	culture = "sea_fomorians"
 }
 
 55 = {
-	name = "Mac Cába"
+	prefix = "dynnp_mac"
+	name = "dynn_CA_ba"
 	culture = "sea_fomorians"
 }
 
 56 = {
-	name = "Ó Cathaláin"
+	name = "dynn_O_CathalA_in"
 	culture = "sea_fomorians"
 }
 
 57 = {
-	name = "Mac Cathmhaoil"
+	prefix = "dynnp_mac"
+	name = "dynn_Cathmhaoil"
 	culture = "sea_fomorians"
 }
 
 #FIR BOLGS#
 20 = {
-	name = "Mac Nikolaos"
+	prefix = "dynnp_mac"
+	name = "dynn_Nikolaos"
 	culture = "fir_domnann"
 }
 
 21 = {
-	name = "Sons of Clare"
+	name = "dynn_Sons_of_Clare"
 	culture = "fir_domnann"
 }
 
 22 = {
-	name = "Mac Ruaric"
+	prefix = "dynnp_mac"
+	name = "dynn_Ruaric"
 	culture = "fir_domnann"
 }
 
 23 = {
-	name = "Mac Flannac"
+	prefix = "dynnp_mac"
+	name = "dynn_Flannac"
 	culture = "fir_domnann"
 }
 
 24 = {
-	name = "Dalach"
+	name = "dynn_Dalach"
 	culture = "fir_domnann"
 }
 
 
 72 = {
-	name = "Mac Dela"
+	prefix = "dynnp_mac"
+	name = "dynn_Dela"
 	culture = "fir_bolg"
 }
 
 73 = {
-	name = "Mac Starn"
+	prefix = "dynnp_mac"
+	name = "dynn_Starn"
 	culture = "fir_bolg"
 }
 
 74 = {
-	name = "Mac Genann"
+	prefix = "dynnp_mac"
+	name = "dynn_Genann"
 	culture = "fir_bolg"
 }
 
 75 = {
-	name = "Mac Sengann"
+	prefix = "dynnp_mac"
+	name = "dynn_Sengann"
 	culture = "fir_bolg"
 }
 
 76 = {
-	name = "Mac Eirc"
+	prefix = "dynnp_mac"
+	name = "dynn_Eirc"
 	culture = "fir_bolg"
 }
 
 77 = {
-	name = "Mac Umor"
+	prefix = "dynnp_mac"
+	name = "dynn_Umor"
 	culture = "fir_bolg"
 }
 
 78 = {
-	name = "Cennfinnán"
+	name = "dynn_CennfinnA_n"
 	culture = "fir_bolg"
 }
 
 79 = {
-	name = "Menn"
+	name = "dynn_Menn"
 	culture = "fir_bolg"
 }
 
 80 = {
-	name = "Fáelad"
+	name = "dynn_FA_elad"
 	culture = "fir_bolg"
 }
 
 81 = {
-	name = "Cennmagair"
+	name = "dynn_Cennmagair"
 	culture = "fir_bolg"
 }
 
 82 = {
-	name = "Mac Írgalaig"
+	prefix = "dynnp_mac"
+	name = "dynn_I_rgalaig"
 	culture = "fir_gailioin"
 }
 
 83 = {
-	name = "Mac Óengusso"
+	prefix = "dynnp_mac"
+	name = "dynn_O_engusso"
 	culture = "fir_gailioin"
 }
 
 84 = {
-	name = "Allán"
+	name = "dynn_AllA_n"
 	culture = "fir_gailioin"
 }
 #HUMANS OF CORK#
 25 = {
-	name = "Mac Cárthaigh"
+	prefix = "dynnp_mac"
+	name = "dynn_CA_rthaigh"
 	culture = "corca_loigde"
 }
 
 26 = {
-	name = "Mac Airt"
+	prefix = "dynnp_mac"
+	name = "dynn_Airt"
 	culture = "corca_loigde"
 }
 
 27 = {
-	name = "O'Donovan"
+	name = "dynn_O_Donovan"
 	culture = "sogain"
 }
 
 28 = {
-	name = "O'Riordan"
+	name = "dynn_O_Riordan"
 	culture = "corca_loigde"
 }
 
 29 = {
-	name = "Cóem"
+	name = "dynn_CO_em"
 	culture = "corca_loigde"
 }
 
 30 = {
-	name = "Mór"
+	name = "dynn_MO_r"
 	culture = "corca_loigde"
 }
 
 31 = {
-	name = "Mac Con"
+	prefix = "dynnp_mac"
+	name = "dynn_Con"
 	culture = "sogain"
 }
 
 32 = {
-	name = "Dubdétach"
+	name = "dynn_DubdE_tach"
 	culture = "corca_loigde"
 }
 
 33 = {
-	name = "Gonnat"
+	name = "dynn_Gonnat"
 	culture = "corca_loigde"
 }
 
 34 = {
-	name = "Lifechair"
+	name = "dynn_Lifechair"
 	culture = "corca_loigde"
 }
 
 35 = {
-	name = "Sroiptine"
+	name = "dynn_Sroiptine"
 	culture = "corca_loigde"
 }
 
 #UNDERGROUND FOMORIANS#
 36 = {
-	name = "Breathnach"
+	name = "dynn_Breathnach"
 	culture = "underground_fomorians"
 }
 
 37 = {
-	name = "Mac Tomáis"
+	prefix = "dynnp_mac"
+	name = "dynn_TomA_is"
 	culture = "underground_fomorians"
 }
 
 38 = {
-	name = "Ó Mordha"
+	name = "dynn_O_Mordha"
 	culture = "underground_fomorians"
 }
 
 39 = {
-	name = "Syktyvkar"
+	name = "dynn_Syktyvkar"
 	culture = "underground_fomorians"
 }
 
 40 = {
-	name = "Mac an Bhaird"
+	prefix = "dynnp_mac"
+	name = "dynn_an_Bhaird"
 	culture = "underground_fomorians"
 }
 
 104 = {
-	name = "Decair"
+	name = "dynn_Decair"
 	culture = "underground_fomorians"
 }
 
 105 = {
-	name = " Ó Ceallaigh"
+	name = "dynn_O_Ceallaigh"
 	culture = "underground_fomorians"
 }
 
 106 = {
-	name = " Ó Broin"
+	name = "dynn_O_Broin"
 	culture = "underground_fomorians"
 }
 
 107 = {
-	name = "Ó Duinn"
+	name = "dynn_O_Duinn"
 	culture = "underground_fomorians"
 }
 
 108 = {
-	name = " Ó Floinn"
+	name = "dynn_O_Floinn"
 	culture = "underground_fomorians"
 }
 
 109 = {
-	name = "Mac Gearailt"
+	prefix = "dynnp_mac"
+	name = "dynn_Gearailt"
 	culture = "underground_fomorians"
 }
 
 110 = {
-	name = "Ó Mathúna"
+	name = "dynn_O_MathU_na"
 	culture = "underground_fomorians"
 }
 
 111 = {
-	name = "Ó Baoill"
+	name = "dynn_O_Baoill"
 	culture = "underground_fomorians"
 }
 
 112 = {
-	name = "Ó Séaghdha"
+	name = "dynn_O_SE_aghdha"
 	culture = "underground_fomorians"
 }
 
 113 = {
-	name = "Ó hAodha"
+	name = "dynn_O_hAodha"
 	culture = "underground_fomorians"
 }
 
 114 = {
-	name = "de Paor"
+	prefix = "dynnp_de"
+	name = "dynn_Paor"
 	culture = "underground_fomorians"
 }
 
 115 = {
-	name = "Mac Sergil"
+	prefix = "dynnp_mac"
+	name = "dynn_Sergil"
 	culture = "underground_fomorians"
 }
 
 #MILESIANS#
 43 = {
-	name = "Eber Finn"
+	name = "dynn_Eber_Finn"
 	culture = "eber_milesians"
 }
 
 44 = {
-	name = "Féne"
+	name = "dynn_FE_ne"
 	culture = "eber_milesians"
 }
 
 45 = {
-	name = "Farsaidh"
+	name = "dynn_Farsaidh"
 	culture = "eber_milesians"
 }
 
 46 = {
-	name = "Mac Scotia"
+	prefix = "dynnp_mac"
+	name = "dynn_Scotia"
 	culture = "eber_milesians"
 }
 
 47 = {
-	name = "Chruiteir"
+	name = "dynn_Chruiteir"
 	culture = "eber_milesians"
 }
 
 48 = {
-	name = " Ó Laighin"
+	name = "dynn_O_Laighin"
 	culture = "eber_milesians"
 }
 
 49 = {
-	name = "Mac Cionaoith"
+	prefix = "dynnp_mac"
+	name = "dynn_Cionaoith"
 	culture = "eber_milesians"
 }
 
 70 = {
-	name = "Lorc"
+	name = "dynn_Lorc"
 	culture = "eremon_milesians"
 }
 
-71 = {
-	name = "Cóel Breg"
-	culture = "eremon_milesians"
-}
+# 71 = {
+	# name = "dynn_CO_el_Breg"
+	# culture = "eremon_milesians"
+# }
 
 60 = {
-	name = "Ollom"
+	name = "dynn_Ollom"
 	culture = "eremon_milesians"
 }
 
 61 = {
-	name = "Cruaidchelgach "
+	name = "dynn_Cruaidchelgach"
 	culture = "eremon_milesians"
 }
 
 62 = {
-	name = "Caisfiaclach"
+	name = "dynn_Caisfiaclach"
 	culture = "eremon_milesians"
 }
 
 63 = {
-	name = "Ailtlethan"
+	name = "dynn_Ailtlethan"
 	culture = "eremon_milesians"
 }
 
 64 = {
-	name = "Fortamail"
+	name = "dynn_Fortamail"
 	culture = "eremon_milesians"
 }
 
 65 = {
-	name = "Tuirmech"
+	name = "dynn_Tuirmech"
 	culture = "eremon_milesians"
 }
 
 66 = {
-	name = "Dedad"
-	culture = "ir_milesians"
+	name = "dynn_Dedad"
+	culture = "eremon_milesians"
 }
 
 67 = {
-	name = "Fáthach"
-	culture = "ir_milesians"
+	name = "dynn_FA_thach"
+	culture = "eremon_milesians"
 }
 
 68 = {
-	name = "Feidlech"
-	culture = "ir_milesians"
+	name = "dynn_Feidlech"
+	culture = "eremon_milesians"
 }
 
 69 = {
-	name = "Airem"
-	culture = "ir_milesians"
+	name = "dynn_Airem"
+	culture = "eremon_milesians"
 }
 
 #NEMEDIANS#
 85 = {
-	name = "Munremar"
+	name = "dynn_Munremar"
 	culture = "neagh_nemedians"
 }
 
 86 = {
-	name = "O'Kain"
+	name = "dynn_O_Kain"
 	culture = "neagh_nemedians"
 }
 
 87 = {
-	name = "O'Breen"
+	name = "dynn_O_Breen"
 	culture = "neagh_nemedians"
 }
 
 88 = {
-	name = "O'Turrain"
+	name = "dynn_O_Turrain"
 	culture = "ramor_nemedians"
 }
 
 89 = {
-	name = "O'Mulfaver"
+	name = "dynn_O_Mulfaver"
 	culture = "ramor_nemedians"
 }
 
 90 = {
-	name = "O'Rourke"
+	name = "dynn_O_Rourke"
 	culture = "ramor_nemedians"
 }
 
 91 = {
-	name = "Nemed Children"
+	name = "dynn_Nemed_Children"
 	culture = "ennell_nemedians"
 }
 
 92 = {
-	name = "Nemid"
+	name = "dynn_Nemid"
 	culture = "ennell_nemedians"
 }
 
 93 = {
-	name = "Mac Nemetes"
+	prefix = "dynnp_mac"
+	name = "dynn_Nemetes"
 	culture = "ennell_nemedians"
 }
 
 #MEGALITHICS#
 94 = {
-	name = "Mac Beith"
+	prefix = "dynnp_mac"
+	name = "dynn_Beith"
 	culture = "newgrange_builders"
 }
 
 95 = {
-	name = "Mac Onn"
+	prefix = "dynnp_mac"
+	name = "dynn_Onn"
 	culture = "newgrange_builders"
 }
 
 96 = {
-	name = "Mac Ceirt"
+	prefix = "dynnp_mac"
+	name = "dynn_Ceirt"
 	culture = "newgrange_builders"
 }
 
 97 = {
-	name = "Mac Idad"
+	prefix = "dynnp_mac"
+	name = "dynn_Idad"
 	culture = "newgrange_builders"
 }
 
 98 = {
-	name = "Mac Edad"
+	prefix = "dynnp_mac"
+	name = "dynn_Edad"
 	culture = "newgrange_builders"
 }
 
 99 = {
-	name = "Mac Ailm"
+	prefix = "dynnp_mac"
+	name = "dynn_Ailm"
 	culture = "bell_beakers"
 }
 
 100 = {
-	name = "Mac Ur"
+	prefix = "dynnp_mac"
+	name = "dynn_Ur"
 	culture = "bell_beakers"
 }
 
 101 = {
-	name = "Mac Luis"
+	prefix = "dynnp_mac"
+	name = "dynn_Luis"
 	culture = "bell_beakers"
 }
 
 102 = {
-	name = "Mac Fearn"
+	prefix = "dynnp_mac"
+	name = "dynn_Fearn"
 	culture = "bell_beakers"
 }
 
 103 = {
-	name = "Mac Nuin"
+	prefix = "dynnp_mac"
+	name = "dynn_Nuin"
 	culture = "bell_beakers"
 }
 
 #HUMANS#
 116 = {
-	name = "Uais"
+	name = "dynn_Uais"
 	culture = "dal_riata"
 }
 
 117 = {
-	name = "Tirech"
+	name = "dynn_Tirech"
 	culture = "dal_riata"
 }
 
 118 = {
-	name = "Mugmedon"
+	name = "dynn_Mugmedon"
 	culture = "dal_riata"
 }
 
 119 = {
-	name = "Mac Fiadig"
+	prefix = "dynnp_mac"
+	name = "dynn_Fiadig"
 	culture = "dal_riata"
 }
 
 120 = {
-	name = "Mac Neill"
+	prefix = "dynnp_mac"
+	name = "dynn_Neill"
 	culture = "dal_naraide"
 }
 
 121 = {
-	name = "Molt"
+	name = "dynn_Molt"
 	culture = "dal_naraide"
 }
 
 122 = {
-	name = "Mac Lóegairi"
+	prefix = "dynnp_mac"
+	name = "dynn_LO_egairi"
 	culture = "dal_naraide"
 }
 
 123 = {
-	name = "Mac Ercae"
+	prefix = "dynnp_mac"
+	name = "dynn_Ercae"
 	culture = "dal_naraide"
 }
 
 124 = {
-	name = "Máelgarb"
+	name = "dynn_MA_elgarb"
 	culture = "ui_eachach_coba"
 }
 
 125 = {
-	name = "Mac Cerbaill"
+	prefix = "dynnp_mac"
+	name = "dynn_Cerbaill"
 	culture = "ui_eachach_coba"
 }
 
 126 = {
-	name = "Mac Sétnai"
+	prefix = "dynnp_mac"
+	name = "dynn_SE_tnai"
 	culture = "ui_eachach_coba"
 }
 
 127 = {
-	name = "Mac Ninneda"
+	prefix = "dynnp_mac"
+	name = "dynn_Ninneda"
 	culture = "ui_eachach_coba"
 }
 
 128 = {
-	name = "Mac Ainmuirech"
+	prefix = "dynnp_mac"
+	name = "dynn_Ainmuirech"
 	culture = "ui_eachach_coba"
 }
 
 129 = {
-	name = "Rímid"
+	name = "dynn_RI_mid"
 	culture = "ui_eachach_coba"
 }
 
 130 = {
-	name = "Uaridnach"
+	name = "dynn_Uaridnach"
 	culture = "ui_eachach_coba"
 }
 
 131 = {
-	name = "Menn"
+	name = "dynn_Menn"
 	culture = "dal_fiatach"
 }
 
 132 = {
-	name = "Fledach"
+	name = "dynn_Fledach"
 	culture = "dal_fiatach"
 }
 
 133 = {
-	name = "Mac Írgalaig"
+	prefix = "dynnp_mac"
+	name = "dynn_I_rgalaig"
 	culture = "dal_fiatach"
 }
 
 134 = {
-	name = "Mac Loingsig"
+	prefix = "dynnp_mac"
+	name = "dynn_Loingsig"
 	culture = "dal_fiatach"
 }
 
 135 = {
-	name = "Midi"
+	name = "dynn_Midi"
 	culture = "sogain"
 }
 
 136 = {
-	name = "Frossach"
+	name = "dynn_Frossach"
 	culture = "sogain"
 }
 
 137 = {
-	name = "Oirdnide"
+	name = "dynn_Oirdnide"
 	culture = "sogain"
 }
 
 138 = {
-	name = "Mac Donnchada"
+	prefix = "dynnp_mac"
+	name = "dynn_Donnchada"
 	culture = "sogain"
 }
 
 139 = {
-	name = "Mac Crimthainn"
+	prefix = "dynnp_mac"
+	name = "dynn_Crimthainn"
 	culture = "sogain"
 }
 
 140 = {
-	name = "Sinna"
+	name = "dynn_Sinna"
 	culture = "sogain"
 }
 
 141 = {
-	name = "Glúndub"
+	name = "dynn_GlU_ndub"
 	culture = "luighne"
 }
 
 142 = {
-	name = "Cnogba"
+	name = "dynn_Cnogba"
 	culture = "luighne"
 }
 
 143 = {
-	name = "Boru"
+	name = "dynn_Boru"
 	culture = "luighne"
 }
 
 144 = {
-	name = "Mac Briain"
+	prefix = "dynnp_mac"
+	name = "dynn_Briain"
 	culture = "luighne"
 }
 
 145 = {
-	name = "Ua Lochlainn"
+	prefix = "dynnp_ua"
+	name = "dynn_Lochlainn"
 	culture = "luighne"
 }
 
 146 = {
-	name = "Ua Conchobair"
+	prefix = "dynnp_ua"
+	name = "dynn_Conchobair"
 	culture = "luighne"
 }
 
 147 = {
-	name = "Mac Léti"
+	prefix = "dynnp_mac"
+	name = "dynn_LE_ti"
 	culture = "luighne"
 }
 
 148 = {
-	name = "Ruad"
+	name = "dynn_Ruad"
 	culture = "luighne"
 }
 
 149 = {
-	name = "Cláiringnech"
+	name = "dynn_ClA_iringnech"
 	culture = "conmaicne"
 }
 
 150 = {
-	name = "Sálbuide"
+	name = "dynn_SA_lbuide"
 	culture = "conmaicne"
 }
 
 151 = {
-	name = "Mac Róich"
+	prefix = "dynnp_mac"
+	name = "dynn_RO_ich"
 	culture = "conmaicne"
 }
 
 152 = {
-	name = "Mac Nessa"
+	prefix = "dynnp_mac"
+	name = "dynn_Nessa"
 	culture = "conmaicne"
 }
 
 153 = {
-	name = "Mac Conchobar"
+	prefix = "dynnp_mac"
+	name = "dynn_Conchobar"
 	culture = "ui_maine"
 }
 
 154 = {
-	name = "Finn"
+	name = "dynn_Finn"
 	culture = "ui_maine"
 }
 
 155 = {
-	name = "Mac Conrach"
+	prefix = "dynnp_mac"
+	name = "dynn_Conrach"
 	culture = "ui_maine"
 }
 
 156 = {
-	name = "Mac Rochride"
+	prefix = "dynnp_mac"
+	name = "dynn_Rochride"
 	culture = "ui_maine"
 }
 
 157 = {
-	name = "Tireach"
+	name = "dynn_Tireach"
 	culture = "ui_maine"
 }
 
 158 = {
-	name = "Mac Fedlimid"
+	prefix = "dynnp_mac"
+	name = "dynn_Fedlimid"
 	culture = "ui_maine"
 }
 
 159 = {
-	name = "Mac Imchad"
+	prefix = "dynnp_mac"
+	name = "dynn_Imchad"
 	culture = "gaileanga"
 }
 
 160 = {
-	name = "Mac Dallan"
+	prefix = "dynnp_mac"
+	name = "dynn_Dallan"
 	culture = "gaileanga"
 }
 
 161 = {
-	name = "Muinderg "
+	name = "dynn_Muinderg"
 	culture = "gaileanga"
 }
 
 162 = {
-	name = "Mac Muiredaig"
+	prefix = "dynnp_mac"
+	name = "dynn_Muiredaig"
 	culture = "gaileanga"
 }
 
 163 = {
-	name = "Mac Caolbad"
+	prefix = "dynnp_mac"
+	name = "dynn_Caolbad"
 	culture = "gaileanga"
 }
 
 164 = {
-	name = "Mac Oengusso"
+	prefix = "dynnp_mac"
+	name = "dynn_Oengusso"
 	culture = "ui_enachglaiss"
 }
 
 165 = {
-	name = "Ibdaig"
+	name = "dynn_Ibdaig"
 	culture = "ui_bairrche"
 }
 
 166 = {
-	name = "Mac Cairell"
+	prefix = "dynnp_mac"
+	name = "dynn_Cairell"
 	culture = "ui_bairrche"
 }
 
 167 = {
-	name = "Mac Cairill"
+	prefix = "dynnp_mac"
+	name = "dynn_Cairill"
 	culture = "ui_bairrche"
 }
 
 168 = {
-	name = "Mac Suibni"
+	prefix = "dynnp_mac"
+	name = "dynn_Suibni"
 	culture = "ui_bairrche"
 }
 
 169 = {
-	name = "Mac Báetáin"
+	prefix = "dynnp_mac"
+	name = "dynn_BA_etA_in"
 	culture = "ui_bairrche"
 }
 
 170 = {
-	name = "Mac Demmáin"
+	prefix = "dynnp_mac"
+	name = "dynn_DemmA_in"
 	culture = "ui_bairrche"
 }
 
 171 = {
-	name = "Mac Sgánnail"
+	prefix = "dynnp_mac"
+	name = "dynn_SgA_nnail"
 	culture = "ui_bairrche"
 }
 
 172 = {
-	name = "Mac Fiachnai"
+	prefix = "dynnp_mac"
+	name = "dynn_Fiachnai"
 	culture = "ui_bairrche"
 }
 
 173 = {
-	name = "Mac Máele"
+	prefix = "dynnp_mac"
+	name = "dynn_MA_ele"
 	culture = "ui_bairrche"
 }
 
 174 = {
-	name = "Mac Dúnchada"
+	prefix = "dynnp_mac"
+	name = "dynn_DU_nchada"
 	culture = "ui_failge"
 }
 
 175 = {
-	name = "Mac Blathmaic"
+	prefix = "dynnp_mac"
+	name = "dynn_Blathmaic"
 	culture = "ui_failge"
 }
 
 176 = {
-	name = "Mac Dúngail Eilni"
+	prefix = "dynnp_mac"
+	name = "dynn_DU_ngail_Eilni"
 	culture = "ui_failge"
 }
 
 177 = {
-	name = "Mac Bécce"
+	prefix = "dynnp_mac"
+	name = "dynn_BE_cce"
 	culture = "ui_failge"
 }
 
 178 = {
-	name = "Mac Indrechtaig"
+	prefix = "dynnp_mac"
+	name = "dynn_Indrechtaig"
 	culture = "ui_failge"
 }
 
 179 = {
-	name = "Mac Fiachnai"
+	prefix = "dynnp_mac"
+	name = "dynn_Fiachnai"
 	culture = "ui_failge"
 }
 
 180 = {
-	name = "Mac Eochada"
+	prefix = "dynnp_mac"
+	name = "dynn_Eochada"
 	culture = "ui_failge"
 }
 
 181 = {
-	name = "Mac Muiredaig"
+	prefix = "dynnp_mac"
+	name = "dynn_Muiredaig"
 	culture = "ui_failge"
 }
 
 182 = {
-	name = "Mac Loingsig"
+	prefix = "dynnp_mac"
+	name = "dynn_Loingsig"
 	culture = "ui_failge"
 }
 
 183 = {
-	name = "Mac Ainbítha"
+	prefix = "dynnp_mac"
+	name = "dynn_AinbI_tha"
 	culture = "ui_failge"
 }
 
 184 = {
-	name = "Mac Lethlobair"
+	prefix = "dynnp_mac"
+	name = "dynn_Lethlobair"
 	culture = "loigis"
 }
 
 185 = {
-	name = "Mac Eochocáin"
+	prefix = "dynnp_mac"
+	name = "dynn_EochocA_in"
 	culture = "loigis"
 }
 
 186 = {
-	name = "Mac Cinn Etig"
+	prefix = "dynnp_mac"
+	name = "dynn_Cinn_Etig"
 	culture = "loigis"
 }
 
 187 = {
-	name = "Mac Ardgail"
+	prefix = "dynnp_mac"
+	name = "dynn_Ardgail"
 	culture = "loigis"
 }
 
 188 = {
-	name = "Ua Máel Ruanaid"
+	prefix = "dynnp_ua"
+	name = "dynn_MA_el_Ruanaid"
 	culture = "loigis"
 }
 
 189 = {
-	name = "Ua Mathgamna"
+	prefix = "dynnp_ua"
+	name = "dynn_Mathgamna"
 	culture = "loigis"
 }
 
 190 = {
-	name = "Mac Duinn Sléibe"
+	prefix = "dynnp_mac"
+	name = "dynn_Duinn_SlE_ibe"
 	culture = "loigis"
 }
 
 191 = {
-	name = "Aulom"
+	name = "dynn_Aulom"
 	culture = "osraighe"
 }
 
 192 = {
-	name = "Mac Con"
+	prefix = "dynnp_mac"
+	name = "dynn_Con"
 	culture = "osraighe"
 }
 
 193 = {
-	name = "Mór"
+	name = "dynn_MO_r"
 	culture = "osraighe"
 }
 
 194 = {
-	name = "Muillethan"
+	name = "dynn_Muillethan"
 	culture = "osraighe"
 }
 
 195 = {
-	name = "Flann Bec"
+	name = "dynn_Flann_Bec"
 	culture = "osraighe"
 }
 
 196 = {
-	name = "Mac Fidaig"
+	prefix = "dynnp_mac"
+	name = "dynn_Fidaig"
 	culture = "osraighe"
 }
 
 197 = {
-	name = "Mac Ailello Thassaig"
+	prefix = "dynnp_mac"
+	name = "dynn_Ailello_Thassaig"
 	culture = "osraighe"
 }
 
 198 = {
-	name = "Mac Cuirc"
+	prefix = "dynnp_mac"
+	name = "dynn_Cuirc"
 	culture = "osraighe"
 }
 
 199 = {
-	name = "Mac Nad Froích"
+	prefix = "dynnp_mac"
+	name = "dynn_Nad_FroI_ch"
 	culture = "osraighe"
 }
 
 200 = {
-	name = "Mac Óengusa"
+	prefix = "dynnp_mac"
+	name = "dynn_O_engusa"
 	culture = "osraighe"
 }
 
 #TUATHA DE DANANN
 201 = {
-	name = "Ollathair"
+	name = "dynn_Ollathair"
 	culture = "de_danann"
 }
 
 202 = {
-	name = "Airgetlám"
+	name = "dynn_AirgetlA_m"
 	culture = "de_danann"
 }
 
 203 = {
-	name = "Lámfada"
+	name = "dynn_LAmfada"
 	culture = "de_danann"
 }
 
 204 = {
-	name = "Tuireann"
+	name = "dynn_Tuireann"
 	culture = "de_danann"
 }
 
 205 = {
-	name = "Dunany"
+	name = "dynn_Dunany"
 	culture = "de_danann"
 }
 
 206 = {
-	name = "Gobae"
+	name = "dynn_Gobae"
 	culture = "de_danann"
 }
 
 #MANX
 207 = {
-	name = "Koloksai"
+	name = "dynn_Koloksai"
 	culture = "neagh_nemedians"	
 }
 
 208 = {
-	name = "mac Fergusa"
+	prefix = "dynnp_mac"
+	name = "dynn_Fergusa"
 	culture = "bann_culture"	
 }
 
 209 = {
-	name = "Conung"
+	name = "dynn_Conung"
 	culture = "bann_culture"	
 }
 
 210 = {
-	name = "Crovan"
+	name = "dynn_Crovan"
 	culture = "brythonic_mann"	
 }
 
 211 = {
-	name = "Dubgaill"
+	name = "dynn_Dubgaill"
 	culture = "brythonic_mann"	
 }
 
 212 = {
-	name = "Argead"
+	name = "dynn_Argead"
 	culture = "fir_bolg"	
 }
 
 #Latin
 213 = {
-	name = "Agricola"
+	name = "dynn_Agricola"
 	culture = "roman"	
 }
 
 214 = {
-	name = "Paulinus"
+	name = "dynn_Paulinus"
 	culture = "roman"	
+}
+
+215 = {
+	name = "dynn_Lir"
+	culture = "de_danann"	
+}
+
+#Heroes
+216 = {
+	name = "dynn_Heroes"
+	culture = "dal_riata"	
+}
+
+#Vampires
+217 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Bram"
+	culture = "eber_milesians"	
+}
+
+218 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Gceanna"
+	culture = "lughaid_milesians"	
+}
+
+219 = {
+	prefix = "dynnp_mac"
+	name = "dynn_Sealgair"
+	culture = "ui_maine"	
+}
+
+#Scotland 
+
+#Fomorians
+220 = {
+	name = "dynn_Ceithlionn"
+	culture = "fooar_culture"
+}
+
+221 = {
+	name = "dynn_Chaisfhiaclach"
+	culture = "fooar_culture"
+}
+
+222 = {
+	name = "dynn_Fomors"
+	culture = "fooar_culture"
+}
+
+223 = {
+	name = "dynn_Omurik"
+	culture = "fooar_culture"
+}
+
+224 = {
+	name = "dynn_Clach"
+	culture = "fooar_culture"
+}
+
+225 = {
+	name = "dynn_mor_itheadair"
+	culture = "fooar_culture"
+}
+
+#The Gone ones
+226 = {
+	name = "dynn_neach_siubhail"
+	culture = "the_gone_ones_culture"
+}
+
+227 = {
+	name = "dynn_dhfhalbh"
+	culture = "the_gone_ones_culture"
+}
+
+
+#Picts
+228 = {
+	name = "dynn_Hamaltan"
+	culture = "toi_pictish"
+}
+
+229 = {
+	name = "dynn_dealbhach"
+	culture = "toi_pictish"
+}
+
+230 = {
+	name = "dynn_ionnsaigh"
+	culture = "toi_pictish"
+}
+
+231 = {
+	name = "dynn_caoineadh"
+	culture = "toi_pictish"
+}
+
+232 = {
+	name = "dynn_dioghaltas"
+	culture = "toi_pictish"
+}
+
+233 = {
+	name = "dynn_fotla"
+	culture = "toi_pictish"
+}
+
+234 = {
+	name = "dynn_circinn"
+	culture = "toi_pictish"
+}
+
+#Cumbrian
+
+235 = {
+	name = "dynn_Setantii"
+	culture = "toi_cumbrian"
+}
+
+236 = {
+	name = "dynn_Gordanach"
+	culture = "toi_cumbrian"
+}
+
+238 = {
+	name = "dynn_Carvetii"
+	culture = "toi_cumbrian"
+}
+
+#Scot britons
+
+237 = {
+	name = "dynn_Greumaich"
+	culture = "brythonic_scotland"
+}
+
+#Brodgarii
+239 = {
+	name = "dynn_MacGhillechearr"
+	culture = "brodgarii"
+}
+
+240 = {
+	name = "dynn_ceardaich"
+	culture = "brodgarii"
+}
+
+#calanaisii
+241 = {
+	name = "dynn_Dunbarra"
+	culture = "calanaisii"
+}
+
+#Fairies
+242 = {
+	name = "dynn_Bogies"
+	culture = "fairy_culture"
+}
+
+243 = {
+	name = "dynn_Bogles"
+	culture = "fairy_culture"
+}
+
+244 = {
+	name = "dynn_Boggart"
+	culture = "fairy_culture"
+}
+
+245 = {
+	name = "dynn_lubbers"
+	culture = "fairy_culture"
+}
+
+246 = {
+	name = "dynn_buttery"
+	culture = "fairy_culture"
+}
+
+247 = {
+	name = "dynn_Brollachan"
+	culture = "fairy_culture"
+}
+
+248 = {
+	name = "dynn_Boobrie"
+	culture = "fairy_culture"
+}
+
+249 = {
+	name = "dynn_Cuachag"
+	culture = "fairy_culture"
+}
+
+250 = {
+	name = "dynn_Dunters"
+	culture = "fairy_culture"
+}
+
+251 = {
+	name = "dynn_Fideal"
+	culture = "fairy_culture"
+}
+
+252 = {
+	name = "dynn_Glaistig"
+	culture = "fairy_culture"
+}
+
+253 = {
+	name = "dynn_Habetrot"
+	culture = "fairy_culture"
+}
+
+254 = {
+	name = "dynn_Morool"
+	culture = "fairy_culture"
+}
+
+255 = {
+	name = "dynn_Powries"
+	culture = "fairy_culture"
+}
+
+256 = {
+	name = "dynn_Wulver"
+	culture = "fairy_culture"
+}
+
+257 = {
+	name = "dynn_Urisk"
+	culture = "fairy_culture"
+}
+
+258 = {
+	name = "dynn_Tangie"
+	culture = "fairy_culture"
+}
+
+259 = {
+	name = "dynn_Loireag"
+	culture = "fairy_culture"
 }

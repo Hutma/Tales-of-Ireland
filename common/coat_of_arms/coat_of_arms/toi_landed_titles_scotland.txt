@@ -1,0 +1,162 @@
+k_kerr = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kerr_coa.dds"
+	}
+}
+
+k_hay = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_hay_coa.dds"
+	}
+}
+
+k_hamilton = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_hamilton_coa.dds"
+	}
+}
+
+k_graham = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_graham_coa.dds"
+	}
+}
+
+k_johnstone = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_johnstone_coa.dds"
+	}
+}
+
+k_stewart = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_stewart_coa.dds"
+	}
+}
+
+k_dunbar = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_dunbar_coa.dds"
+	}
+}
+
+k_gordon = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_gordon_coa.dds"
+	}
+}
+
+k_kennedy = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kennedy_coa.dds"
+	}
+}
+
+k_seelie_court = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_seelie_court_coa.dds"
+	}
+}
+
+k_unseelie_court = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_unseelie_court_coa.dds"
+	}
+}
+
+e_caledonia = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "red"
+		color2 = "blue"
+		instance = { position = { 0.5 0.485 } scale = { 0.57 0.57 }  }
+	}
+	colored_emblem = {
+		texture = "ce_double_tressure.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+}
+
+e_isles_empire = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_isles_empire_coa.dds"
+	}
+}
+
+e_dal_riata_empire = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_dal_riata_empire_coa.dds"
+	}
+}
+
+d_troon = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_troon_coa.dds"
+	}
+}
+
+c_kippford = {
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_boar_passant.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+		}
+
+	}
+}
+
+d_stranraer = {
+	pattern="pattern_vertical_split_01.dds"
+	color1=grey
+	color2=grey
+	color3=red
+	colored_emblem={
+		color1=rgb { 174 159 74 }
+		color2=red
+		texture="ce_tamgha_turkic_16.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ -1.000000 1.000000 }
+		}
+
+	}
+
+}

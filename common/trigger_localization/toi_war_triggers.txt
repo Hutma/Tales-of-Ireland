@@ -1,0 +1,8 @@
+﻿has_used_lifetime_unite_the_sept = {
+	first = HAS_USED_LIFETIME_UNITE_THE_SEPT
+	first_not = HAS_USED_LIFETIME_UNITE_THE_SEPT
+	global = HAS_USED_LIFETIME_UNITE_THE_SEPT
+	global_not = HAS_USED_LIFETIME_UNITE_THE_SEPT
+	third = HAS_USED_LIFETIME_UNITE_THE_SEPT
+	third_not = HAS_USED_LIFETIME_UNITE_THE_SEPT
+}

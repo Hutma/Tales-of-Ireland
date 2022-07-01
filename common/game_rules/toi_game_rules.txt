@@ -9,3 +9,15 @@
 
 	}	
 }
+
+toi_ram_era_rule = {
+	default = first_era
+
+	first_era = {
+
+	}
+
+	second_era = {
+
+	}	
+}

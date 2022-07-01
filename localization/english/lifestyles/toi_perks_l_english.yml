@@ -37,3 +37,30 @@
  
  SWIFT_EXECUTION_SCHEME_PERK: "This perk gives you access to the Poison Cattle scheme"
  EMBASSIES_SCHEME_PERK: "This perk gives you access to the Force Cattle Trade scheme"
+ 
+ 
+ #Tales of Magic
+ CONTROL_MAGIC_BLOOD_PERK_DESC: "Gain the ability to make someone a magician \n Reset your #bold Magic Stress#! to #bold 0#!"
+ LEARN_A_UNIQUE_SPELL_EFFECT_DESC: "Choose a spell among #bold 3 unique powerful spells#! to learn"
+ KILLER_BLOW_MAGIC_PERK_EFFECT_DESC: "Unlock the #bold Killer Blow#! interaction"
+ CAUSE_DISCORDE_PERK_DESC: "Learn the #bold Cause Discorde#! spell"
+ SHADOW_BLOOD_PERK_DESC: "Get a chance to become a #N Vampire#! or a #N Wolfwalker#!"
+ make_magician_interaction: "Make Magician"
+ make_magician_interaction_desc: "Turn [recipient.GetShortUINameNoTooltip] into a powerful magician"
+ tooltip.magic.made_magician.target: "You have been given magical powers"
+ killing_blow_interaction: "Killing Blow"
+ make_magician_interaction_desc: "Kill [recipient.GetShortUINameNoTooltip]"
+ 
+ # Tales Of Magic: Light path
+ fast_learner_perk_name:0 "Fast Learner"
+ life_magic_perk_name:0 "Life Magic"
+ control_magic_blood_perk_name:0 "Control Magic Blood"
+ learn_by_the_books_perk_name:0 "Learn the myths"
+ as_wise_as_the_sidhe_perk_name:0 "As wise as a Sidhe"
+
+ # Tales Of Magic: dark path
+ shadow_forces_perk_name:0 "Shadow Forces"
+ killer_blow_magic_perk_name:0 "Killer Word"
+ cause_discorde_perk_name:0 "Cause Discord"
+ shadow_blood_perk_name:0 "Dark Blood"
+ as_cruel_as_balor_perk_name:0 "As cruel as Balor"

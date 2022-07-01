@@ -1,0 +1,154 @@
+﻿ask_court_for_blood_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+
+	ai_check_interval = 24
+	
+	cooldown = { years = 3 }
+	
+	desc = ask_court_for_blood_decision_desc
+
+
+	is_shown = {
+		has_trait = irish_vampire
+	}
+
+	is_valid = {
+		has_trait = irish_vampire
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		prestige = 50
+	}
+
+	effect = {
+		every_courtier = {
+			add_character_modifier = {
+				modifier = gave_blood_for_lord
+				years = 3
+			}
+		}
+		add_character_modifier = {
+			modifier = massive_blood_received
+			years = 6
+		}
+		add_stress = -250
+		add_dread = 15
+		remove_character_modifier = hungry_for_blood
+		remove_character_modifier = hungry_for_blood_2
+		remove_character_modifier = hungry_for_blood_3
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+reform_the_vampire_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+
+	ai_goal = yes
+	major = yes
+	
+	desc = reform_the_vampire_kingdom_decision_desc
+
+
+	is_shown = {
+		has_trait = irish_vampire
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_vampire_kingship
+			}
+		}
+	}
+
+	is_valid = {
+		has_trait = irish_vampire
+		is_independent_ruler = yes
+		has_title = title:d_kilconway
+		has_title = title:d_loughinsholin
+		has_title = title:d_toome
+		has_title = title:c_finvoy
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 500
+		gold = 100
+	}
+
+	effect = {
+		restore_vampire_kingship_decision_scripted_effect = yes
+		add_character_modifier = {
+			modifier = vampire_king_modifier
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_vampire_kingship
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+choose_hunt_type_vampire_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+
+	ai_check_interval = 24
+	
+	cooldown = { years = 20 }
+	
+	desc = choose_hunt_type_vampire_decision_desc
+
+
+	is_shown = {
+		has_trait = irish_vampire
+	}
+
+	is_valid = {
+		has_trait = irish_vampire
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		prestige = 50
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_vampire.0001
+			days = 1
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}

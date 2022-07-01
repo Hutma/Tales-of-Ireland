@@ -8,6 +8,7 @@
 
 	is_shown = {
 		AND  = {
+			is_landed = yes
 			capital_county.title_province = { geographical_region = region_mann }
 			NOT = {	#You can only do it once.
 				is_target_in_global_variable_list = {
@@ -32,8 +33,7 @@
 	}
 
 	cost = {
-		gold = 50
-		prestige = 250
+		prestige = 500
 	}
 
 	effect = {
@@ -64,6 +64,7 @@ control_over_manx_legacy_decision = {
 	cooldown = { years = 30 }
 
 	is_shown = {
+		is_landed = yes
 		AND  = {
 			capital_county.title_province = { geographical_region = region_mann }
 			NOT = {
@@ -122,6 +123,7 @@ a_claim_in_manx_decision = {
 	cooldown = { years = 15 }
 
 	is_shown = {
+		is_landed = yes
 		AND  = {
 			capital_county.title_province = { geographical_region = region_mann }
 			NOT = {
@@ -293,6 +295,7 @@ visit_ballaharra_stones_decision = {
 	cooldown = { years = 15 }
 
 	is_shown = {
+		is_landed = yes
 		AND  = {
 			capital_county.title_province = { geographical_region = region_mann }
 			exists = title:k_mann.holder
@@ -418,10 +421,7 @@ fir_mannin_decision = {
 	is_shown = {
 		has_title = title:k_mann
 		NOT = {
-			OR = {
-				culture = culture:bann_culture
-				culture = culture:brythonic_mann
-			}
+			cuulture= { has_cultural_pillar = heritage_manx }
 		}
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {

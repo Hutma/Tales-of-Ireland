@@ -17,8 +17,9 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 1000
 				AND = {
+					# Deliberately not the "fully naked" one since you'll wear a nightgown if we don't allow full nudity
 					should_be_naked_trigger = yes
 				}
 			}
@@ -41,7 +42,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				age < 4
+				scope:age < 4
 			}
 		}
 	}
@@ -130,7 +131,7 @@
 			accessory = {
 				mode = add
 				gene = legwear
-				template = mena_common_legwear
+				template = mena_war_legwear
 				range = { 0 1 } # For the randomness to work correctly
 			}
 			# morph = {
@@ -154,4 +155,56 @@
 		}
 	}
 
+	fighting_trousers = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = no_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = legwear
+				template = fp1_common_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				should_be_topless_portrait_trigger = yes
+			}
+		}
+	}
+
+
+	ep1_jester_legwear = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = ep1_jester_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = -100
+			modifier = {
+				add = 1000
+				is_male = yes
+				has_court_position = court_jester_court_position
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_adult = no
+					should_be_naked_trigger = yes
+				}
+			}			
+		}
+	}
 }

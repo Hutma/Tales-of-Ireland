@@ -1,0 +1,424 @@
+﻿can_use_clan_mechanics = {
+	is_valid = {
+		dynasty = {
+			has_dynasty_modifier = clannic_dynasty
+		}
+	}
+}
+
+get_clan_derbfine = {
+	effect = {
+		root = {
+			clear_variable_list = clan_derbfine
+		}
+		dynasty.dynast = {
+			save_scope_as = clan_leader
+		}
+		scope:clan_leader = {
+			every_close_or_extended_family_member = {
+				limit = { this.dynasty = scope:clan_leader.dynasty }
+				save_scope_as = family_guy # Why not
+				root = {
+					add_to_variable_list = {
+						name = clan_derbfine
+						target = scope:family_guy
+					}
+				}
+			}
+		}	
+	}
+}
+
+get_clan_dynast_and_heir = {
+	effect = {
+		root = {
+			clear_variable_list = clan_dynast_and_heir
+		}
+		root = {
+			add_to_variable_list = {
+				name = clan_dynast_and_heir
+				target = root.dynasty.dynast
+			}
+		}
+		root = {
+			add_to_variable_list = {
+				name = clan_dynast_and_heir
+				target = root.dynasty.dynast.player_heir
+			}
+		}
+	}	
+}
+
+get_clan_rulers = {
+	effect = {
+		root = {
+			clear_variable_list = clan_rulers
+		}
+		dynasty.dynast = {
+			save_scope_as = clan_leader
+		}
+		root.dynasty = {
+			every_dynasty_member = {
+				limit = {
+					NOT = {
+						this = scope:clan_leader
+					}
+					this = {
+						is_independent_ruler = yes
+					}
+				}
+				save_scope_as = family_guy # Why not
+				root = {
+					add_to_variable_list = {
+						name = clan_rulers
+						target = scope:family_guy
+					}
+				}
+			}
+		}
+	}
+}
+
+initialize_clan_unity = {
+	effect = {
+		dynasty = {
+			if = {
+				limit = { NOT = { exists = var:clan_unity_value } }
+				set_variable = {
+					name = clan_unity_value
+					value = 50
+				}
+			}
+		}
+		dynasty = {
+			if = {
+				limit = { NOT = { exists = var:prestige_clan_modifier } }
+				set_variable = {
+					name = prestige_clan_modifier
+					value = 0
+				}
+			}
+		}
+		trigger_event = {
+			on_action = dynasty_unity_maintenance
+		}
+	}
+}
+
+collect_clan_tax_decision_selected = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			remove_variable = decision_selected_value
+		}
+		set_variable = {
+			name = decision_selected_value
+			value = 1
+		}
+	}
+}
+
+collect_clan_cattle_decision_selected = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			remove_variable = decision_selected_value
+		}
+		set_variable = {
+			name = decision_selected_value
+			value = 2
+		}
+	}
+}
+
+force_clan_leader_decision_selected = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			remove_variable = decision_selected_value
+		}
+		set_variable = {
+			name = decision_selected_value
+			value = 3
+		}
+	}
+}
+
+leader_call_in_war_decision_selected = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			remove_variable = decision_selected_value
+		}
+		set_variable = {
+			name = decision_selected_value
+			value = 4
+		}
+	}
+}
+
+force_leader_into_war_selected = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			remove_variable = decision_selected_value
+		}
+		set_variable = {
+			name = decision_selected_value
+			value = 5
+		}
+	}
+}
+
+clan_decision_effect_gui = {
+	effect = {
+		if = {
+			limit = { exists = var:decision_selected_value }
+			if = { #clan gold tax
+				limit = {
+					var:decision_selected_value = { compare_value = 1  }
+				}
+				every_in_list = {
+					variable = clan_rulers
+					send_interface_toast = {
+						left_icon = root.dynasty.dynast
+						title = tooltip.clan.tax_clan.target
+						pay_short_term_income = {
+							target = root
+							years = 1
+						}
+					}
+				}
+				custom_description = {
+					text = diminish_clan_value_by_five
+					dynasty = {
+						if = {
+							limit = { exists = var:clan_unity_value }
+							change_variable = {
+								name = clan_unity_value
+								add = -5
+							}
+						}
+					}
+				}
+				custom_description = {
+					text = used_clan_action_five_cooldown
+					add_character_flag = {
+						flag = used_clan_action
+						years = 5
+					}
+				}
+			}
+			if = { #Clan cattle tax
+				limit = {
+					var:decision_selected_value = { compare_value = 2  }
+				}
+				
+				set_variable = {
+					name = cattle_count
+					value = 0
+				}
+
+				every_in_list = {
+					variable = clan_rulers
+					send_interface_toast = {
+						left_icon = root.dynasty.dynast
+						title = tooltip.clan.cattle_clan.target
+						capital_county = {
+							change_development_level = -3
+						}
+					}
+					root = {
+						change_variable = {
+							name = cattle_count
+							add = 3
+						}
+					}
+				}
+				
+				custom_description = {
+					text = increase_cattle_clan_leader
+					capital_county = {
+						change_development_level = {
+							value = root.var:cattle_count
+						}
+					}
+				}
+				remove_variable = cattle_count
+				
+				custom_description = {
+					text = diminish_clan_value_by_five
+					dynasty = {
+						if = {
+							limit = { exists = var:clan_unity_value }
+							change_variable = {
+								name = clan_unity_value
+								add = -5
+							}
+						}
+					}
+				}
+				custom_description = {
+					text = used_clan_action_five_cooldown
+					add_character_flag = {
+						flag = used_clan_action
+						years = 5
+					}
+				}
+			}
+			if = { #Force clan leader
+				limit = {
+					var:decision_selected_value = { compare_value = 3  }
+				}
+				add_hook = {
+					type = loyalty_hook
+					target = root.dynasty.dynast
+					years = 10
+				}
+				custom_description = {
+					text = up_clan_value_by_three
+					dynasty = {
+						if = {
+							limit = { exists = var:clan_unity_value }
+							change_variable = {
+								name = clan_unity_value
+								add = 3
+							}
+						}
+					}
+				}
+				custom_description = {
+					text = used_clan_action_five_cooldown
+					add_character_flag = {
+						flag = used_clan_action
+						years = 5
+					}
+				}
+			}
+			if = { #call clan into defensive war
+				limit = {
+					var:decision_selected_value = { compare_value = 4  }
+				}
+				custom_description = {
+					text = call_clan_to_war_effect_desc
+					trigger_event = {
+						id = toi_clan.0002
+						days = 1
+					}
+				}
+				custom_description = {
+					text = down_clan_value_by_two
+					dynasty = {
+						if = {
+							limit = { exists = var:clan_unity_value }
+							change_variable = {
+								name = clan_unity_value
+								add = -2
+							}
+						}
+					}
+				}
+			}
+			if = { #call leader into war
+				limit = {
+					var:decision_selected_value = { compare_value = 5  }
+				}
+				custom_description = {
+					text = call_leader_to_war_effect_desc
+					trigger_event = {
+						id = toi_clan.0004
+						days = 1
+					}
+				}
+				
+				custom_description = {
+					text = used_clan_action_five_cooldown
+					add_character_flag = {
+						flag = used_clan_action
+						years = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+can_use_clan_action_tax = {
+	is_valid = {
+		custom_description = {
+			text = wait_five_years_between_use
+			NOT = {
+				has_character_flag = used_clan_action
+			}
+		}
+		dynasty.dynast = root
+		custom_description = {
+			text = at_least_medium_unity
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value >= 30 }
+			}
+		}
+	}
+}
+
+can_use_clan_action_force = {
+	is_valid = {
+		custom_description = {
+			text = wait_five_years_between_use
+			NOT = {
+				has_character_flag = used_clan_action
+			}
+		}
+		NOT = {
+			dynasty.dynast = root
+		}
+		custom_description = {
+			text = low_unity_or_lower
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value < 30 }
+			}
+		}
+	}
+}
+
+can_use_clan_action_call = {
+	is_valid = {
+		is_at_war_as_defender = yes
+		dynasty.dynast = root
+		custom_description = {
+			text = at_least_high_unity
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value > 60 }
+			}
+		}
+	}
+}
+
+can_use_clan_action_call_leader_war = {
+	is_valid = {
+		custom_description = {
+			text = wait_five_years_between_use
+			NOT = {
+				has_character_flag = used_clan_action
+			}
+		}
+		is_at_war = yes
+		is_independent_ruler = yes
+		NOT = {
+			is_at_war_with = dynasty.dynast
+		}
+		NOT = {
+			dynasty.dynast = root
+		}
+		custom_description = {
+			text = medium_unity_or_lower
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value <= 60 }
+			}
+		}
+	}
+}

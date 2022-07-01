@@ -1,0 +1,85 @@
+﻿# A title is inherited by a character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Should be dead
+###TALES OF IRELAND ANCIENT PARTITION
+fairy_king_bonus_on_aciton = {
+	effect = {
+		if = {
+			limit = {
+				has_title = title:k_seelie_court
+				has_trait = seelie_fairy
+			}
+			set_variable = {
+				name = count_seelies
+				value = 0
+			}
+			every_independent_ruler = {
+				limit = {
+					is_landed = yes
+					has_trait = seelie_fairy
+				}
+				root = {
+					change_variable = {
+						name = count_seelies
+						add = 1
+					}
+				}
+			}
+			spawn_army = {
+				uses_supply = no
+				inheritable = no
+				levies = {
+					value = 25
+				}
+				men_at_arms = {
+					type = fairy_swarm
+					stacks = {
+						value = var:count_seelies
+					}
+				}
+				location = root.capital_province
+				name = call_royal_army_decision_troops
+			}
+			remove_variable = count_seelies
+		}
+		else_if = {
+			limit = {
+				has_title = title:k_unseelie_court
+				has_trait = unseelie_fairy
+			}
+			set_variable = {
+				name = count_unseelies
+				value = 0
+			}
+			every_independent_ruler = {
+				limit = {
+					is_landed = yes
+					has_trait = unseelie_fairy
+				}
+				root = {
+					change_variable = {
+						name = count_unseelies
+						add = 1
+					}
+				}
+			}
+			spawn_army = {
+				uses_supply = no
+				inheritable = no
+				levies = {
+					value = 25
+				}
+				men_at_arms = {
+					type = fairy_swarm
+					stacks = {
+						value = var:count_unseelies
+					}
+				}
+				location = root.capital_province
+				name = call_royal_army_decision_troops
+			}
+			remove_variable = count_unseelies	
+		}
+	}
+}

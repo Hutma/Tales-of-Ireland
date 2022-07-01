@@ -1,0 +1,16 @@
+﻿l_english:
+ toi_scotland_decisions.0001.t:0 "The Founder of The Isles"
+ toi_scotland_decisions.0001.desc:0 "The work of many years has finally been rewarded. I have founded the empire of The Isles, uniting my formerly divided subjects under a single banner. This achievement will lend its radiance to my dynasty for generations to come, and ensure its bright and glorious future.\n\nThe news has travelled far beyond our borders, reaching ears both high and low. Many new allies have sent their envoys to treat with us, and existing ones have sought to strengthen our bonds of friendship. Still, our vigilance cannot waver. Many new rivals and would-be usurpers have also risen from the shadows, ready to strike at the first sign of weakness. I will stand ready to defend my realm against any who would threaten it, and will lead my newly united people to greatness and prosperity."
+ toi_scotland_decisions.0001.a:0 "The seas are ours to rule."
+ 
+ toi_scotland_decisions.0002.t:0 "The Isles Rises"
+ toi_scotland_decisions.0002.desc:0 "[founder.GetFullName] has succeeded where many others have failed. Exerting his great power and influence, he founded the empire of The Isles, where its formerly divided inhabitants will now live united under his rule. This monumental achievement will attract many new allies to his side, but jealous rivals will be lurking in the shadows as well. Will this new empire endure and its people thrive? Or will it fall into the hands of those who would destroy it?"
+ toi_scotland_decisions.0002.a:0 "The seas are theirs to rule."
+ 
+ toi_scotland_decisions.0003.t:0 "The Founder of the Dal Riata Empire"
+ toi_scotland_decisions.0003.desc:0 "The work of many years has finally been rewarded. I have founded the Dal Riata Empire, uniting my formerly divided subjects under a single banner. This achievement will lend its radiance to my dynasty for generations to come, and ensure its bright and glorious future.\n\nThe news has travelled far beyond our borders, reaching ears both high and low. Many new allies have sent their envoys to treat with us, and existing ones have sought to strengthen our bonds of friendship. Still, our vigilance cannot waver. Many new rivals and would-be usurpers have also risen from the shadows, ready to strike at the first sign of weakness. I will stand ready to defend my realm against any who would threaten it, and will lead my newly united people to greatness and prosperity."
+ toi_scotland_decisions.0003.a:0 "Kings in both Ireland and Alba."
+ 
+ toi_scotland_decisions.0004.t:0 "The Dal Riata Empire Rises"
+ toi_scotland_decisions.0004.desc:0 "[founder.GetFullName] has succeeded where many others have failed. Exerting his great power and influence, he founded the Dal Riata Empire, where its formerly divided inhabitants will now live united under his rule. This monumental achievement will attract many new allies to his side, but jealous rivals will be lurking in the shadows as well. Will this new empire endure and its people thrive? Or will it fall into the hands of those who would destroy it?"
+ toi_scotland_decisions.0004.a:0 "Kings in both Ireland and Alba."

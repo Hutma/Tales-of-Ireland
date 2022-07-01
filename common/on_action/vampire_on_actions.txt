@@ -1,0 +1,54 @@
+﻿yearly_playable_pulse = {
+	on_actions = {
+		give_vampire_stress
+	}
+}
+
+give_vampire_stress = {
+	trigger = {
+		has_trait = irish_vampire
+		age > 18
+		NOT = { has_character_modifier = massive_blood_received }
+		NOT = { has_character_modifier = had_blood_recently }
+	}
+	effect = {
+		if = {
+			limit = { has_character_modifier = hungry_for_blood_3 }
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.vampire.need_blood
+				add_stress = 300
+			}
+		}
+		if = {
+			limit = { has_character_modifier = hungry_for_blood_2 }
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.vampire.hungry_for_blood
+				remove_character_modifier = hungry_for_blood_2
+				add_character_modifier = hungry_for_blood_3
+			}
+		}
+		if = {
+			limit = { has_character_modifier = hungry_for_blood }
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.vampire.hungry_for_blood
+				remove_character_modifier = hungry_for_blood
+				add_character_modifier = hungry_for_blood_2
+			}
+		}	
+		if = {
+			limit = { 
+				NOT = { has_character_modifier = hungry_for_blood }
+				NOT = { has_character_modifier = hungry_for_blood_2 }
+				NOT = { has_character_modifier = hungry_for_blood_3 }
+			}
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.vampire.hungry_for_blood
+				add_character_modifier = hungry_for_blood
+			}
+		}	
+	}
+}

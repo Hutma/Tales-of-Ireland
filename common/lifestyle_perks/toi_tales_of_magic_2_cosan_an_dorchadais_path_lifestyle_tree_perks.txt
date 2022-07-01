@@ -1,0 +1,97 @@
+﻿shadow_forces_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_dorchadais
+	position = { 0 0 }
+	icon = node_intrigue
+	
+	auto_selection_weight = {
+		value = 20
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	
+	character_modifier = {
+		intrigue = 3
+	}
+}
+
+killer_blow_magic_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_dorchadais
+	position = { 0 2 }
+	icon = node_intrigue
+	
+	parent = shadow_forces_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = killer_blow_magic_perk_effect_desc
+			add_character_flag = killer_blow_magic_perk_flag
+		}
+	}
+}
+
+cause_discorde_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_dorchadais
+	position = { 2 0 }
+	icon = node_intrigue
+	
+	auto_selection_weight = {
+		value = 20
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = cause_discorde_perk_desc
+			add_character_flag = has_cause_discorde_spell
+		}
+	}
+}
+
+shadow_blood_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_dorchadais
+	position = { 2 2 }
+	icon = node_intrigue
+	
+	parent = cause_discorde_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = shadow_blood_perk_desc
+			trigger_event = {
+				id = toi_magic_event.0006
+			}
+		}
+	}
+}
+
+as_cruel_as_balor_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_dorchadais
+	position = { 1 4 }
+	icon = tales_of_magic_dark_end
+	
+	parent = killer_blow_magic_perk
+	parent = shadow_blood_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = learn_a_unique_spell_effect_desc
+			trigger_event = {
+				id = toi_magic_event.0008
+			}
+		}
+	}
+}

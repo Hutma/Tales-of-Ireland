@@ -16,6 +16,7 @@
 				exists = location
 				in_diplomatic_range = scope:owner
 			}
+			is_landed = yes
 		}
 		# Special AI exceptions
 		NOT = {
@@ -204,12 +205,18 @@
 				limit = {
 					exists = scope:scheme_successful
 				}
+				scope:target = {
+					save_scope_as = plot_target
+				}
 				trigger_event = {
 					id = poison_cattle_outcome.0001
 					days = 1
 				}
 			}
 			else = {
+				scope:target = {
+					save_scope_as = plot_target
+				}
 				trigger_event = {
 					id = poison_cattle_outcome.1001
 					days = 1

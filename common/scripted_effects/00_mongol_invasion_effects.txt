@@ -1,0 +1,115 @@
+﻿@creatable_successor_empire_county_threshold = 15
+
+
+# Give a suitable County to Genghis
+give_temujin_land_effect = {
+	
+}
+
+# A wild Genghis Khan appears!
+spawn_temujin_character_effect = {
+	
+}
+
+
+# Form the actual Mongol Empire...
+form_the_mongol_empire_effect = {
+	
+}
+
+# Make sure the Empire has troops...
+spawn_mongol_troops_effect = {
+	
+}
+
+spawn_mongol_troops_condensed_effect = {
+
+}
+
+### Populating the life of Temujin...
+spawn_temujins_court_effect = {
+
+}
+
+### Start war of conquest for the Mongolian heartland
+start_wars_for_mongolia_effect = {
+	
+}
+
+# Send subjugation demand effect
+send_mongol_subjugation_demand_effect = {
+	
+}
+
+
+### Mongol war target evaluation and declaration
+mongol_war_target_evaluation_and_declaration_effect = {
+	
+}
+
+mongols_devastate_county_effect = {
+	
+}
+
+
+### MONGOL EMPIRE BREAKUP EFFECTS ###
+
+### Title creation effects
+assign_core_mongol_titles_to_heir_effect = {
+	
+}
+
+grant_ilkhanate_effect = {
+	
+}
+
+grant_golden_horde_effect = {
+	
+}
+
+grant_chagatai_effect = {
+
+}
+
+grant_black_horde_effect = {
+	
+}
+
+grant_white_horde_effect = {
+
+}
+
+grant_aarlud_khanate_effect = {
+	
+}
+
+grant_togskol_khanate_effect = {
+
+}
+
+grant_baruun_khanate_effect = {
+
+}
+
+
+# Effect to clean up borders a little
+pick_up_remaining_counties_effect = {
+	
+}
+
+# Set up all vassals and assign them flags for the "correct" Khanate
+set_correct_mongol_breakup_vassalage_effect = {
+	
+}
+
+
+### END Title creation effects
+
+grant_suitable_title_to_candidate_effect = {
+	
+}
+
+
+break_up_mongol_empire_effect = { # Intended to run in the Mongol Emperor's scope
+
+}

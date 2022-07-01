@@ -244,38 +244,78 @@ can_use_conquest_cbs_trigger = { #Tales of Ireland TOI
 		}
 		
 		has_character_flag = roman_invader
+		
+		has_character_flag = can_use_conquest_cbs
 	}
 }
 
 can_be_warrior_trigger = {
 	is_adult = yes
 	is_imprisoned = no
-	can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $ARMY_OWNER$ }
+	OR = {
+		can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $ARMY_OWNER$ }
+		AND = {
+			$ARMY_OWNER$.culture = {
+				has_cultural_parameter = high_prowess_ignores_knight_restrictions
+			}
+			prowess >= 10
+		}
+	}
 	NOT = {
 		has_trait = incapable
 	}
 }
 
 can_be_knight_trigger = {
+	trigger_if = {
+		limit = {
+			$ARMY_OWNER$.culture = {
+				has_cultural_parameter = minimum_prowess_for_knights
+			}
+		}
+		prowess >= 12
+	}
 	can_be_warrior_trigger = { ARMY_OWNER = $ARMY_OWNER$ }
-	NOR = {
+	OR = {
 		AND = {
-			has_trait = devoted
-			faith = {
-				NOT = {
-					has_doctrine_parameter = clergy_can_fight
+			$ARMY_OWNER$.culture = {
+				has_cultural_parameter = high_prowess_ignores_knight_restrictions
+			}
+			prowess >= 10
+		}
+		NOR = {
+			AND = {
+				has_trait = devoted
+				OR = {
+					faith = {
+						NOT = {
+							has_doctrine_parameter = clergy_can_fight
+						}
+					}
+					culture = {
+						NOT = {
+							has_cultural_parameter = culture_clergy_can_fight
+						}
+					}
 				}
 			}
-		}
-		AND = {
-			is_clergy = yes
-			faith = {
-				NOT = {
-					has_doctrine_parameter = clergy_can_fight
+			AND = {
+				is_clergy = yes
+				OR = {
+					faith = {
+						NOT = {
+							has_doctrine_parameter = clergy_can_fight
+						}
+					}
+					culture = {
+						NOT = {
+							has_cultural_parameter = culture_clergy_can_fight
+						}
+					}
 				}
 			}
+			has_trait = blind
 		}
-		has_trait = blind
 	}
 	is_ai = yes
 }
@@ -350,7 +390,7 @@ prisoner_gives_warscore_for_trigger = {
 				this = scope:war_prisoner
 				#player_heir_position = {
 					#target = scope:war_prisoner
-					#position <= 3
+					#value <= 3
 				#}
 			}
 		}
@@ -363,7 +403,7 @@ prisoner_gives_warscore_for_trigger = {
 				this = scope:war_prisoner
 				#player_heir_position = {
 					#target = scope:war_prisoner
-					#position <= 3
+					#value <= 3
 				#}
 			}
 		}
@@ -389,6 +429,11 @@ using_de_jure_cb_trigger = {
 		using_cb = de_jure_cb
 		using_cb = individual_county_de_jure_cb
 		using_cb = individual_duchy_de_jure_cb
+		using_cb = imperial_reconquest_cb
+		using_cb = dismantle_holy_pretender_cb
+		using_cb = dismantle_byz_pretender_cb
+		using_cb = norman_conquest_cb
+		using_cb = norwegian_invasion_cb
 	}
 }
 
@@ -633,6 +678,12 @@ neighboring_county_or_viking_conquest_trigger = {
 	}
 }
 
+valid_struggle_cb_target_trigger = {
+	any_neighboring_county = {
+		holder = { target_is_same_character_or_above = $CHARACTER$ }
+	}
+}
+
 prisoners_of_war_trigger = {
 	OR = {
 		scope:defender = {
@@ -662,6 +713,16 @@ prisoners_of_war_trigger = {
 				}
 			}
 		}
+	}
+}
+
+# Used for checking if a captured combatant is worth war-score.
+character_is_potential_important_hostage = {
+	OR = {
+		this = scope:primary_siege_attacker
+		this = scope:primary_siege_defender
+		is_heir_of = scope:primary_siege_attacker
+		is_heir_of = scope:primary_siege_defender
 	}
 }
 

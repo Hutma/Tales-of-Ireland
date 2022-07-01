@@ -1,0 +1,1402 @@
+﻿#Campbeltown
+d_campbeltown = {
+    4799.1.1 = {
+        holder = 4000017
+    }
+}
+
+#Macharioch
+c_macharioch = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000017
+    }
+}
+
+#Campbeltown
+c_campbeltown = {
+    1.1.1 = { change_development_level = 25 }
+    4799.1.1 = {
+        holder = 4000017
+    }
+}
+
+#Largiebaan
+c_largiebaan = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        holder = 4000018
+    }
+}
+
+#Southend
+c_southend = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        liege = d_campbeltown
+        holder = 4000024
+    }
+}
+
+#Ballochgair
+d_ballochgair = {
+    4799.1.1 = {
+        holder = 4000021
+    }
+}
+
+#Ballochgair
+c_ballochgair = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000021
+    }
+}
+
+#Kilchenzie
+c_kilchenzie = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000021
+    }
+}
+
+#Glenbarr
+c_glenbarr = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        liege = d_ballochgair
+        holder = 4000023
+    }
+}
+
+#Lamlash
+d_lamlash = {
+    4799.1.1 = {
+        holder = 4000020
+    }
+}
+
+#Lamlash
+c_lamlash = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        liege = d_lamlash
+        holder = 4000025
+    }
+}
+
+#Knockenkelly
+c_knockenkelly = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        liege = d_lamlash
+        holder = 4000025
+    }
+}
+
+#Lagg
+d_lagg = {
+    4799.1.1 = {
+        holder = 4000020
+    }
+}
+
+#Lagg
+c_lagg = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        holder = 4000020
+    }
+}
+
+#Blackwaterfoot
+c_blackwaterfoot = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000020
+    }
+}
+
+#Torbeg
+c_torbeg = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000020
+    }
+}
+
+#Ailsa Craig
+d_ailsa_craig = {
+    4799.1.1 = {
+        holder = 4000003
+    }
+}
+
+#Ailsa Craig
+c_ailsa_craig = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000003
+    }
+}
+
+#Stranraer
+d_stranraer = {
+    4799.1.1 = {
+        holder = 4000000
+    }
+}
+
+#Stranraer
+c_stranraer = {
+    1.1.1 = { change_development_level = 35 }
+    4799.1.1 = {
+        holder = 4000000
+    }
+}
+
+#Soleburn
+c_soleburn = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        holder = 4000000
+    }
+}
+
+#Barnhills
+c_barnhills = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000000
+    }
+}
+
+#Sandhead
+c_sandhead = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        liege = d_stranraer
+        holder = 4000002
+    }
+}
+
+#Drummore
+c_drummore = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        liege = d_stranraer
+        holder = 4000002
+    }
+}
+
+#Cairnryan
+c_cairnryan = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000001
+    }
+}
+
+#Innermessan
+c_innermessan = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000001
+    }
+}
+
+#Castle Kennedy
+c_castle_kennedy = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        liege = d_stranraer
+        holder = 4000004
+    }
+}
+
+#Glenluce
+c_glenluce = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        liege = d_stranraer
+        holder = 4000004
+    }
+}
+
+#Whithorn
+d_whithorn = {
+    4799.1.1 = {
+        holder = 4000012
+    }
+}
+
+#Whithorn
+c_whithorn = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000012
+    }
+}
+
+#Wigtown
+c_wigtown = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000012
+    }
+}
+
+#Alticry
+c_alticry = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000012
+    }
+}
+
+#Port William
+c_port_william = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000012
+    }
+}
+
+#Creetown
+d_creetown = {
+    4799.1.1 = {
+        holder = 4000006
+    }
+}
+
+#Creetown
+c_creetown = {
+    1.1.1 = { change_development_level = 25 }
+    4799.1.1 = {
+        liege = d_borness
+        holder = 4000008
+    }
+}
+
+#Newton Stewart
+c_newton_stewart = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000006
+    }
+}
+
+#Barrhill
+c_barrhill = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000006
+    }
+}
+
+#Clachaneasy
+c_clachaneasy = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000006
+    }
+}
+
+#Kirkcudbright
+c_kirkcudbright = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000014
+    }
+}
+
+#Airieland
+c_airieland = {
+    1.1.1 = { change_development_level = 19 }
+    4799.1.1 = {
+        holder = 4000014
+    }
+}
+
+#Orchardton
+c_orchardton = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000015
+    }
+}
+
+#Borness
+d_borness = {
+    4799.1.1 = {
+        holder = 4000005
+    }
+}
+
+#Borness
+c_borness = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000005
+    }
+}
+
+#Ardwall
+c_ardwall = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000005
+    }
+}
+
+#Cardoness
+c_cardoness = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        liege = d_borness
+        holder = 4000008
+    }
+}
+
+#Twynholm
+c_twynholm = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000005
+    }
+}
+
+#Ayr
+d_ayr = {
+    4799.1.1 = {
+        holder = 4000076
+    }
+}
+
+#Ayr
+c_ayr = {
+    1.1.1 = { change_development_level = 27 }
+    4799.1.1 = {
+        holder = 4000076
+    }
+}
+
+#Maybole
+c_maybole = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000076
+    }
+}
+
+#Dailly
+c_dailly = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000076
+    }
+}
+
+#Rankinston
+c_rankinston = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000076
+    }
+}
+
+#Dalmellington
+c_dalmellington = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000007
+    }
+}
+
+#Tairlaw
+c_tairlaw = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        liege = d_creetown
+        holder = 4000009
+    }
+}
+
+#Girvan
+d_girvan = {
+    4799.1.1 = {
+        holder = 4000075
+    }
+}
+
+#Girvan
+c_girvan = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000075
+    }
+}
+
+#Ballantrae
+c_ballantrae = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000075
+    }
+}
+
+#Barr
+c_barr = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000075
+    }
+}
+
+#Castle Douglas
+d_castle_douglas = {
+    4799.1.1 = {
+        holder = 4000037
+    }
+}
+
+#Castle Douglas
+c_castle_douglas = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000037
+    }
+}
+
+#Crossmichael
+c_crossmichael = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000037
+    }
+}
+
+#Kippford
+d_kippford = {
+    4799.1.1 = {
+        holder = 4000013
+    }
+}
+
+#Kippford
+c_kippford = {
+    1.1.1 = { change_development_level = 24 }
+    4799.1.1 = {
+        holder = 4000015
+    }
+}
+
+#Carsethorn
+c_carsethorn = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000013
+    }
+}
+
+#Kirkconnell
+c_kirkconnell = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000013
+    }
+}
+
+#Kinharvie
+c_kinharvie = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000013
+    }
+}
+
+#Dalskairth
+d_dalskairth = {
+    4799.1.1 = {
+        holder = 4000039
+    }
+}
+
+#Dalskairth
+c_dalskairth = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000039
+    }
+}
+
+#Terregles
+c_terregles = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000039
+    }
+}
+
+#Drumlanrig
+d_drumlanrig = {
+    4799.1.1 = {
+        holder = 4000080
+    }
+}
+
+#Drumlanrig
+c_drumlanrig = {
+    1.1.1 = { change_development_level = 19 }
+    4799.1.1 = {
+        holder = 4000080
+    }
+}
+
+#Keir Mill
+c_keir_mill = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000080
+    }
+}
+
+#Craigenputtock
+c_craigenputtock = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000079
+    }
+}
+
+#Kenmure
+d_kenmure = {
+    4799.1.1 = {
+        holder = 4000038
+    }
+}
+
+#Kenmure
+c_kenmure = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000043
+    }
+}
+
+#Crocketford
+c_crocketford = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000038
+    }
+}
+
+#Clatteringshaws
+c_clatteringshaws = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000043
+    }
+}
+
+#Nether Glaisters
+c_nether_glaisters = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000040
+    }
+}
+
+#Knowehead
+c_knowehead = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000041
+    }
+}
+
+#Kelloholm
+d_kelloholm = {
+    4799.1.1 = {
+        holder = 4000070
+    }
+}
+
+#Kelloholm
+c_kelloholm = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000070
+    }
+}
+
+#Craigdarroch
+c_craigdarroch = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000070
+    }
+}
+
+#Sanquhar
+c_sanquhar = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000079
+    }
+}
+
+#Bankglen
+c_bankglen = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000071
+    }
+}
+
+#Troon
+d_troon = {
+    4799.1.1 = {
+        holder = 4000022
+    }
+}
+
+#Troon
+c_troon = {
+    1.1.1 = { change_development_level = 36 }
+    4799.1.1 = {
+        holder = 4000022
+    }
+}
+
+#Prestwick
+c_prestwick = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000022
+    }
+}
+
+#Mauchline
+c_mauchline = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000022
+    }
+}
+
+#Lochlea
+c_lochlea = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        liege = d_troon
+        holder = 4000026
+    }
+}
+
+#Cumnock
+c_cumnock = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000078
+    }
+}
+
+#Dalblair
+c_dalblair = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000093
+    }
+}
+
+#Catrine
+c_catrine = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000027
+    }
+}
+
+#Muirkirk
+c_muirkirk = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000029
+    }
+}
+
+#Cronberry
+c_cronberry = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        holder = 4000027
+    }
+}
+
+#Kirkconnel
+c_kirkconnel = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000029
+    }
+}
+
+#Douglas
+c_douglas_scotland = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000028
+    }
+}
+
+#Glentaggart
+c_glentaggart = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000028
+    }
+}
+
+#Crawfordjohn
+c_crawfordjohn = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000030
+    }
+}
+
+#Abington
+c_abington = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000030
+    }
+}
+
+#Mennock
+d_mennock = {
+    4799.1.1 = {
+        holder = 4000083
+    }
+}
+
+#Mennock
+c_mennock = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000083
+    }
+}
+
+#Elvanfoot
+c_elvanfoot = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000083
+    }
+}
+
+#Durisdeer
+c_durisdeer = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000083
+    }
+}
+
+#Dumfries
+d_dumfries = {
+    4799.1.1 = {
+        holder = 4000049
+    }
+}
+
+#Dumfries
+c_dumfries = {
+    1.1.1 = { change_development_level = 26 }
+    4799.1.1 = {
+        holder = 4000049
+    }
+}
+
+#Caerlaverock
+c_caerlaverock = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000049
+    }
+}
+
+#Powfoot
+c_powfoot = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        liege = d_dumfries
+        holder = 4000064
+    }
+}
+
+#Hoddom
+c_hoddom = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        liege = d_dumfries
+        holder = 4000064
+    }
+}
+
+#Thornhill
+c_thornhill = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000082
+    }
+}
+
+#Morton
+c_morton = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000081
+    }
+}
+
+#Heathhall
+c_heathhall = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000082
+    }
+}
+
+#Ae
+c_ae = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000081
+    }
+}
+
+#Lockerbie
+d_lockerbie = {
+    4799.1.1 = {
+        holder = 4000056
+    }
+}
+
+#Lockerbie
+c_lockerbie = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000056
+    }
+}
+
+#Hangingshaw
+c_hangingshaw = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000056
+    }
+}
+
+#Boreland
+c_boreland = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        holder = 4000056
+    }
+}
+
+#Corrie
+c_corrie = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000047
+    }
+}
+
+#Burnswark
+c_burnswark = {
+    1.1.1 = { change_development_level = 6 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000047
+    }
+}
+
+#Crawford
+d_crawford = {
+    4799.1.1 = {
+        holder = 4000073
+    }
+}
+
+#Crawford
+c_crawford = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000073
+    }
+}
+
+#Lamington
+c_lamington = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        holder = 4000091
+    }
+}
+
+#Tweedsmuir
+c_tweedsmuir = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000073
+    }
+}
+
+#Wintercleugh
+c_wintercleugh = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000073
+    }
+}
+
+#Moffat
+d_moffat = {
+    4799.1.1 = {
+        holder = 4000067
+    }
+}
+
+#Moffat
+c_moffat = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000067
+    }
+}
+
+#Beattock
+c_beattock = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000067
+    }
+}
+
+#Laverhay
+c_laverhay = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000068
+    }
+}
+
+#Bodesbeck
+c_bodesbeck = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000085
+    }
+}
+
+#Dryfehead
+c_dryfehead = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000067
+    }
+}
+
+#Graham
+k_graham = {
+    4799.1.1 = {
+        holder = 4000046
+    }
+}
+
+#Gretna
+d_gretna = {
+    4799.1.1 = {
+        holder = 4000046
+    }
+}
+
+#Gretna
+c_gretna = {
+    1.1.1 = { change_development_level = 26 }
+    4799.1.1 = {
+        holder = 4000046
+    }
+}
+
+#Ecclefechan
+c_ecclefechan = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000046
+    }
+}
+
+#Chapelknowe
+c_chapelknowe = {
+    1.1.1 = { change_development_level = 19 }
+    4799.1.1 = {
+        holder = 4000046
+    }
+}
+
+#Canonbie
+d_canonbie = {
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000050
+    }
+}
+
+#Canonbie
+c_canonbie = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000050
+    }
+}
+
+#Waterbeck
+c_waterbeck = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000050
+    }
+}
+
+#Dunnabie
+c_dunnabie = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000050
+    }
+}
+
+#Auchenrivock
+d_auchenrivock = {
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000051
+    }
+}
+
+#Auchenrivock
+c_auchenrivock = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000051
+    }
+}
+
+#Kershopefoot
+c_kershopefoot = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000051
+    }
+}
+
+#Langholm
+c_langholm = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        liege = k_graham
+        holder = 4000051
+    }
+}
+
+#Castleton
+d_castleton = {
+    4799.1.1 = {
+        holder = 4000088
+    }
+}
+
+#Castleton
+c_castleton = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000088
+    }
+}
+
+#Arkleton
+c_arkleton = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000088
+    }
+}
+
+#Sandholm
+c_sandholm = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000088
+    }
+}
+
+#Jedburgh
+d_jedburgh = {
+    4799.1.1 = {
+        holder = 4000066
+    }
+}
+
+#Jedburgh
+c_jedburgh = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000066
+    }
+}
+
+#Ferniehirst
+c_ferniehirst = {
+    1.1.1 = { change_development_level = 5 }
+    4799.1.1 = {
+        holder = 4000066
+    }
+}
+
+#Saughtree
+c_saughtree = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000089
+    }
+}
+
+#Hermitage
+c_hermitage = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000089
+    }
+}
+
+#Dodburn
+c_dodburn = {
+    1.1.1 = { change_development_level = 10 }
+    4799.1.1 = {
+        holder = 4000090
+    }
+}
+
+#Cheviot
+c_cheviot = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000090
+    }
+}
+
+#Hawick
+d_hawick = {
+    4799.1.1 = {
+        holder = 4000032
+    }
+}
+
+#Hawick
+c_hawick = {
+    1.1.1 = { change_development_level = 32 }
+    4799.1.1 = {
+        holder = 4000032
+    }
+}
+
+#Monteath
+c_monteath = {
+    1.1.1 = { change_development_level = 17 }
+    4799.1.1 = {
+        liege = d_hawick
+        holder = 4000033
+    }
+}
+
+#Broadhaugh
+c_broadhaugh = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        liege = d_hawick
+        holder = 4000033
+    }
+}
+
+#Hearthstane
+c_hearthstane = {
+    1.1.1 = { change_development_level = 16 }
+    4799.1.1 = {
+        holder = 4000084
+    }
+}
+
+#Meggethead
+c_meggethead = {
+    1.1.1 = { change_development_level = 13 }
+    4799.1.1 = {
+        holder = 4000087
+    }
+}
+
+#Drumelzier
+c_drumelzier = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000086
+    }
+}
+
+#Innerleithen
+c_innerleithen = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000086
+    }
+}
+
+#Cappercleuch
+c_cappercleuch = {
+    1.1.1 = { change_development_level = 8 }
+    4799.1.1 = {
+        holder = 4000035
+    }
+}
+
+#Kirkhope
+c_kirkhope = {
+    1.1.1 = { change_development_level = 14 }
+    4799.1.1 = {
+        holder = 4000032
+    }
+}
+
+#Crosslee
+c_crosslee = {
+    1.1.1 = { change_development_level = 9 }
+    4799.1.1 = {
+        holder = 4000035
+    }
+}
+
+#Teviothead
+d_teviothead = {
+    4799.1.1 = {
+        holder = 4000054
+    }
+}
+
+#Teviothead
+c_teviothead = {
+    1.1.1 = { change_development_level = 19 }
+    4799.1.1 = {
+        holder = 4000061
+    }
+}
+
+#Burnfoot
+c_burnfoot = {
+    1.1.1 = { change_development_level = 11 }
+    4799.1.1 = {
+        holder = 4000061
+    }
+}
+
+#Linhope
+c_linhope = {
+    1.1.1 = { change_development_level = 7 }
+    4799.1.1 = {
+        holder = 4000054
+    }
+}
+
+#Fiddleton
+c_fiddleton = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000054
+    }
+}
+
+#Greensykes
+c_greensykes = {
+    1.1.1 = { change_development_level = 18 }
+    4799.1.1 = {
+        holder = 4000054
+    }
+}
+
+#Eskdalemuir
+c_eskdalemuir = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000060
+    }
+}
+
+#Castle Oer
+c_castle_oer = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000057
+    }
+}
+
+#Westerkirk
+c_westerkirk = {
+    1.1.1 = { change_development_level = 20 }
+    4799.1.1 = {
+        holder = 4000054
+    }
+}
+
+#Davington
+d_davington = {
+    4799.1.1 = {
+        holder = 4000059
+    }
+}
+
+#Davington
+c_davington = {
+    1.1.1 = { change_development_level = 15 }
+    4799.1.1 = {
+        holder = 4000060
+    }
+}
+
+#Buccleuch
+c_buccleuch = {
+    1.1.1 = { change_development_level = 19 }
+    4799.1.1 = {
+        holder = 4000059
+    }
+}
+
+#Meadshaw
+c_meadshaw = {
+    1.1.1 = { change_development_level = 12 }
+    4799.1.1 = {
+        holder = 4000059
+    }
+}
+

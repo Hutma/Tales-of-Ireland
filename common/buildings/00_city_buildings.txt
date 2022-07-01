@@ -1,7 +1,8 @@
-﻿@holding_illustration_western = "gfx/interface/illustrations/holding_types/city_western.dds"
+﻿@holding_illustration_western = "gfx/interface/illustrations/holding_types/tribe_grass.dds"
 @holding_illustration_india = "gfx/interface/illustrations/holding_types/city_india.dds"
 @holding_illustration_mediterranean = "gfx/interface/illustrations/holding_types/city_mediterranean.dds"
 @holding_illustration_mena = "gfx/interface/illustrations/holding_types/city_mena.dds"
+@holding_illustration_norse = "gfx/interface/illustrations/holding_types/fp1_city_norse.dds"
 
 city_01 = {
 	construction_time = slow_construction_time
@@ -14,7 +15,7 @@ city_01 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { irelander_building_gfx }
+		graphical_cultures = { western_building_gfx }
 	}
 	
 	asset = {
@@ -30,11 +31,12 @@ city_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
+		barony_cannot_construct_holding = no
 	}
 	
 	can_construct = {
 		culture = {
-			has_innovation = innovation_city_planning
+			has_innovation = innovation_burhs
 		}
 	}
 	
@@ -43,10 +45,44 @@ city_01 = {
 	}
 	cost_gold = main_building_tier_1_cost
 	
-	levy = poor_building_levy_tier_2
+	levy = poor_building_levy_tier_1
 	max_garrison = normal_building_max_garrison_tier_1
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_1
 	province_modifier = {
-		monthly_income = good_building_tax_tier_2
+		monthly_income = poor_building_tax_tier_1
+	}
+
+	province_culture_modifier = {
+		parameter = city_buildings_more_powerful
+		levy_size = 0.25
+		tax_mult = 0.01
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_county_opinion
+		county_opinion_add = 5
+	}
+
+	province_terrain_modifier = {
+		parameter = maritime_mercantilism_coastal_holdings
+		is_coastal = yes
+		tax_mult = maritime_mercantilism_coastal_holdings_value
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_powerful		
+		development_growth_factor = 0.05
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_less_control
+		monthly_county_control_change_factor = -0.25
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = 2
 	}
 	
 	flag = city
@@ -78,6 +114,10 @@ city_01 = {
 				}
 			}
 		}
+		modifier = {
+			factor = 5
+			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_city }
+		}
 	}
 }
 
@@ -92,7 +132,7 @@ city_02 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { irelander_building_gfx }
+		graphical_cultures = { western_building_gfx }
 	}
 	
 	asset = {
@@ -118,13 +158,52 @@ city_02 = {
 	
 	levy = poor_building_levy_tier_4
 	max_garrison = normal_building_max_garrison_tier_2
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_2
 	province_modifier = {
-		monthly_income = good_building_tax_tier_4
+		monthly_income = poor_building_tax_tier_3
 	}
+
+	province_culture_modifier = {
+		parameter = city_buildings_more_powerful
+		levy_size = 0.5
+		tax_mult = 0.02
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_county_opinion
+		county_opinion_add = 10
+	}
+
+	province_terrain_modifier = {
+		parameter = maritime_mercantilism_coastal_holdings
+		is_coastal = yes
+		tax_mult = maritime_mercantilism_coastal_holdings_value
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_powerful
+		development_growth_factor = 0.1
+	}
+	
+	county_culture_modifier = {
+		parameter = city_buildings_less_control
+		monthly_county_control_change_factor = -0.25
+	}
+	
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = 3
+	}
+	
 	flag = city
 	next_building = city_03
 	ai_value = {
-		base = 6		
+		base = 6
+		modifier = {
+			add = 1
+			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_city }
+		}	
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -143,9 +222,9 @@ city_03 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { irelander_building_gfx }
+		graphical_cultures = { western_building_gfx }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -155,7 +234,6 @@ city_03 = {
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 2 } }
 	}
 	
-
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -169,12 +247,52 @@ city_03 = {
 	
 	levy = poor_building_levy_tier_6
 	max_garrison = normal_building_max_garrison_tier_3
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_3
 	province_modifier = {
-		monthly_income = good_building_tax_tier_6
+		monthly_income = poor_building_tax_tier_5
 	}
+
+	province_culture_modifier = {
+		parameter = city_buildings_more_powerful
+		levy_size = 0.75
+		tax_mult = 0.03
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_county_opinion
+		county_opinion_add = 15
+	}
+
+
+	province_terrain_modifier = {
+		parameter = maritime_mercantilism_coastal_holdings
+		is_coastal = yes
+		tax_mult = maritime_mercantilism_coastal_holdings_value
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_powerful		
+		development_growth_factor = 0.15
+	}
+	
+	county_culture_modifier = {
+		parameter = city_buildings_less_control
+		monthly_county_control_change_factor = -0.25
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = 4
+	}
+	
 	flag = city
 	ai_value = {
-		base = 5		
+		base = 5
+		modifier = {
+			add = 1
+			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_city }
+		}	
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -193,7 +311,7 @@ city_04 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { irelander_building_gfx }
+		graphical_cultures = { western_building_gfx }
 	}
 	
 	asset = {
@@ -226,12 +344,51 @@ city_04 = {
 	
 	levy = poor_building_levy_tier_8
 	max_garrison = normal_building_max_garrison_tier_7
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_4
 	province_modifier = {
-		monthly_income = good_building_tax_tier_8
+		monthly_income = poor_building_tax_tier_7
 	}
+
+	province_culture_modifier = {
+		parameter = city_buildings_more_powerful
+		levy_size = 1
+		tax_mult = 0.04
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_county_opinion
+		county_opinion_add = 20
+	}
+
+	province_terrain_modifier = {
+		parameter = maritime_mercantilism_coastal_holdings
+		is_coastal = yes
+		tax_mult = maritime_mercantilism_coastal_holdings_value
+	}
+
+	county_culture_modifier = {
+		parameter = city_buildings_more_powerful		
+		development_growth_factor = 0.2
+	}
+	
+	county_culture_modifier = {
+		parameter = city_buildings_less_control
+		monthly_county_control_change_factor = -0.25
+	}
+	
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = 5
+	}
+	
 	flag = city
 	ai_value = {
-		base = 4		
+		base = 4
+		modifier = {
+			add = 1
+			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_city }
+		}	
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -250,10 +407,6 @@ city_04 = {
 
 guild_halls_01 = {
 	construction_time = standard_construction_time
-
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
 
 	can_construct_potential = {
 		has_building_or_higher = city_01
@@ -290,14 +443,13 @@ guild_halls_01 = {
 guild_halls_02 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct_potential = {
 		has_building_or_higher = city_01
 		culture = {
-			has_innovation = innovation_crop_rotation
+			OR = {
+				has_innovation = innovation_crop_rotation
+				has_cultural_parameter = next_level_guild_halls
+			}
 		}
 	}
 
@@ -329,14 +481,16 @@ guild_halls_02 = {
 guild_halls_03 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_02
 		culture = {
-			has_innovation = innovation_manorialism
+			OR = {
+				has_innovation = innovation_manorialism
+				AND = {
+					has_innovation = innovation_crop_rotation
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 
@@ -368,14 +522,16 @@ guild_halls_03 = {
 guild_halls_04 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_02
 		culture = {
-			has_innovation = innovation_manorialism
+			OR = {
+				has_innovation = innovation_manorialism
+				AND = {
+					has_innovation = innovation_crop_rotation
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 
@@ -407,14 +563,16 @@ guild_halls_04 = {
 guild_halls_05 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_03
 		culture = {
-			has_innovation = innovation_windmills
+			OR = {
+				has_innovation = innovation_windmills
+				AND = {
+					has_innovation = innovation_manorialism
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 
@@ -446,14 +604,16 @@ guild_halls_05 = {
 guild_halls_06 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_03
 		culture = {
-			has_innovation = innovation_windmills
+			OR = {
+				has_innovation = innovation_windmills
+				AND = {
+					has_innovation = innovation_manorialism
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 
@@ -485,14 +645,16 @@ guild_halls_06 = {
 guild_halls_07 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_04
 		culture = {
-			has_innovation = innovation_cranes
+			OR = {
+				has_innovation = innovation_cranes
+				AND = {
+					has_innovation = innovation_windmills
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 
@@ -524,14 +686,16 @@ guild_halls_07 = {
 guild_halls_08 = {
 	construction_time = standard_construction_time
 
-	is_enabled = {
-		building_disable_if_vastly_over_domain_limit_trigger = yes
-	}
-
 	can_construct = {
 		has_building_or_higher = city_04
 		culture = {
-			has_innovation = innovation_cranes
+			OR = {
+				has_innovation = innovation_cranes
+				AND = {
+					has_innovation = innovation_windmills
+					has_cultural_parameter = next_level_guild_halls
+				}
+			}
 		}
 	}
 

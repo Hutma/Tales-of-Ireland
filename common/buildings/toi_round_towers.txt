@@ -2,7 +2,8 @@
 wonder_round_tower_01 = {
 	type_icon = "icon_structure_round_tower_restored.dds"
 	asset = {
-
+		name = "wonder_round_tower_county_view"
+		illustration = "gfx/interface/illustrations/county_view/county_view_round_tower.dds"
 	}
 
 	construction_time = slow_construction_time
@@ -25,7 +26,7 @@ wonder_round_tower_01 = {
 		fort_level = 1
 	}
 	county_modifier = {
-		defender_advantage = 2
+		defender_holding_advantage = 2
 	}
 	
 	next_building = wonder_round_tower_02
@@ -38,7 +39,8 @@ wonder_round_tower_01 = {
 wonder_round_tower_02 = {
 	type_icon = "icon_structure_round_tower_restored.dds"
 	asset = {
-
+		name = "wonder_round_tower_county_view"
+		illustration = "gfx/interface/illustrations/county_view/county_view_round_tower.dds"
 	}
 
 	construction_time = slow_construction_time
@@ -65,7 +67,7 @@ wonder_round_tower_02 = {
 		fort_level = 1
 	}
 	county_modifier = {
-		defender_advantage = 5
+		defender_holding_advantage = 5
 		development_growth_factor = 0.1
 	}
 	
@@ -79,7 +81,8 @@ wonder_round_tower_02 = {
 wonder_round_tower_03 = {
 	type_icon = "icon_structure_round_tower_prestigious.dds"
 	asset = {
-
+		name = "wonder_round_tower_county_view"
+		illustration = "gfx/interface/illustrations/county_view/county_view_round_tower.dds"
 	}
 
 	construction_time = slow_construction_time
@@ -106,7 +109,7 @@ wonder_round_tower_03 = {
 		fort_level = 2
 	}
 	county_modifier = {
-		defender_advantage = 10
+		defender_holding_advantage = 10
 		development_growth_factor = 0.2
 	}
 	

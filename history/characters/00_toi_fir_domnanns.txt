@@ -14,7 +14,7 @@
     trait = education_martial_3
     trait = arrogant
     trait = cynical
-    trait = zealous
+    trait = temperate
     trait = fir_bolg
 
     father=  501000 
@@ -48,7 +48,7 @@
     disallow_random_traits = yes
     4755.1.1 = {
         birth = yes
-        add_pressed_claim = k_clare
+        add_pressed_claim = title:k_clare
     }
 }
 500002 = {
@@ -64,6 +64,7 @@
     learning =  3 
     prowess =  7 
     trait = fickle
+    trait = pensive
     trait = fir_bolg
 
     disallow_random_traits = yes

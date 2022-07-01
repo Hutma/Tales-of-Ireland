@@ -1,0 +1,44 @@
+﻿your_primary_heir_is_at_least_twenty = {
+	first = your_primary_heir_is_at_least_twenty
+	first_not = your_primary_heir_is_at_least_twenty
+	global = your_primary_heir_is_at_least_twenty
+	global_not = your_primary_heir_is_at_least_twenty
+	third = your_primary_heir_is_at_least_twenty
+	third_not = your_primary_heir_is_at_least_twenty
+}
+
+independent_or_not_your_vassal_desc = {
+	first = independent_or_not_your_vassal_desc
+	first_not = independent_or_not_your_vassal_desc
+	global = independent_or_not_your_vassal_desc
+	global_not = independent_or_not_your_vassal_desc
+	third = independent_or_not_your_vassal_desc
+	third_not = independent_or_not_your_vassal_desc
+}
+
+except_primary_heir_desc = {
+	first = except_primary_heir_desc
+	first_not = except_primary_heir_desc
+	global = except_primary_heir_desc
+	global_not = except_primary_heir_desc
+	third = except_primary_heir_desc
+	third_not = except_primary_heir_desc
+}
+
+found_empire_decision_six_kingdoms_held = {
+	first = found_empire_decision_six_kingdoms_held
+	first_not = found_empire_decision_six_kingdoms_held
+	global = found_empire_decision_six_kingdoms_held
+	global_not = found_empire_decision_six_kingdoms_held
+	third = found_empire_decision_six_kingdoms_held
+	third_not = found_empire_decision_six_kingdoms_held
+}
+
+defend_against_non_fairy_trigger_desc = {
+	first = defend_against_non_fairy_trigger_desc
+	first_not = defend_against_non_fairy_trigger_desc
+	global = defend_against_non_fairy_trigger_desc
+	global_not = defend_against_non_fairy_trigger_desc
+	third = defend_against_non_fairy_trigger_desc
+	third_not = defend_against_non_fairy_trigger_desc
+}

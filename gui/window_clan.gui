@@ -1,0 +1,522 @@
+
+window = {
+	name = "window_clan"
+	widgetid = "window_clan"
+	datacontext = "[DynastyHouseView.GetDynastyHouse]"
+	datacontext = "[DynastyHouse.GetDynasty]"
+	movable = no
+	allow_outside = yes
+	layer = windows_layer
+	
+	parentanchor = top|right
+	
+	using = Window_Size_MainTab
+	
+	decision_breakdown_view = {}
+	
+	blockoverride "button_close"
+	{
+		onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets window_clan')]"
+	}
+	
+	state = {
+		name = initialize
+		trigger_on_create = yes
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('my_realm'), 'my_realm', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('military'), 'military', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('council_window'), 'council_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('court_window'), 'court_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('intrigue_window'), 'intrigue_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('factions_window'), 'factions_window', '' ) )]"
+		on_start = "[ToggleGameView( Select_CString( IsGameViewOpen('decisions'), 'decisions', '' ) )]"
+		on_start = "[GetScriptedGui('get_clan_derbfine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		on_start = "[GetScriptedGui('get_clan_dynast_and_heir').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		on_start = "[GetScriptedGui('initialize_clan_unity').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+		on_start = "[GetScriptedGui('get_clan_rulers').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+	}
+	
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+		trigger_when = "[IsRightWindowOpen]"
+		alpha = 0
+	}
+	
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+		alpha = 1
+		on_start = "[GetScriptedGui('close_other_views').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	}
+	
+	background = {
+		texture = "gfx/interface/component_tiles/background_area_light.dds"
+		margin_left = -35
+		fittype = centercrop
+	}
+	
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 26 }
+		margin_right = 20
+		
+		widget = {
+			size = { 100% 100% }
+			
+			vbox = {
+				using = Window_Margins
+				
+				header_pattern = {
+					layoutpolicy_horizontal = expanding
+
+					blockoverride "header_text"
+					{
+						text = "CLAN_MENU"
+					}
+
+					blockoverride "button_close"
+					{
+						onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets window_clan')]"
+						onclick = "[GetVariableSystem.Clear('decision_breakdown')]"
+					}
+				}
+				scrollbox = {
+					name = "clan_scrollarea"
+					layoutpolicy_horizontal = expanding
+					
+					layoutpolicy_vertical = expanding
+					background = {
+						texture = "gfx/interface/illustrations/clan_background/clan_background.dds"
+						alpha = 0.25
+						modify_texture = {
+							name = "mask"
+							texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+							spriteType = Corneredstretched
+							spriteborder = { 0 0 }
+							blend_mode = alphamultiply
+						}
+					}
+					blockoverride "scrollbox_content"
+					{
+						vbox = {
+							name = "clan_head_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "CLAN_LEADER"
+							}
+							
+						}
+						
+						spacer = { size = { 0 15 } }
+						
+						dynamicgridbox = {
+							datamodel = "[GetPlayer.MakeScope.GetList('clan_dynast_and_heir')]"
+							
+							flipdirection = yes
+							
+							item = {
+								flowcontainer = {
+									datacontext = "[Scope.GetCharacter]"
+
+									portrait_head = {}
+								}
+							}
+						}
+						
+						spacer = { size = { 0 20 } }
+						
+						vbox = {
+							name = "core_clan_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "DERBFINE"
+							}
+						}
+						
+						spacer = { size = { 0 15 } }
+						
+						dynamicgridbox = {
+							datamodel = "[GetPlayer.MakeScope.GetList('clan_derbfine')]"
+							max_width = 500
+							flipdirection = yes
+							
+							item = {
+								
+								flowcontainer = {
+									datacontext = "[Scope.GetCharacter]"
+									
+									portrait_head = {}
+								}
+							}
+						}
+						
+						spacer = { size = { 0 20 } }
+
+						vbox = {
+							name = "wide_clan_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "CLAN_RULERS"
+							}
+						}
+						
+						spacer = { size = { 0 15 } }
+						
+						dynamicgridbox = {
+							datamodel = "[GetPlayer.MakeScope.GetList('clan_rulers')]"
+							max_width = 500
+							flipdirection = yes
+							
+							item = {
+								flowcontainer = {
+									datacontext = "[Scope.GetCharacter]"
+
+									portrait_head = {}
+								}
+							}
+						}
+						
+						spacer = { size = { 0 20 } }
+						
+						vbox = {
+							name = "unity_clan_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "CLAN_UNITY"
+							}
+						}
+						
+						spacer = { size = { 0 15 } }
+						
+						vbox = {
+							layoutpolicy_horizontal = expanding
+
+							hbox = {
+								vbox = {
+									background = {
+										texture = "gfx/interface/component_tiles/solid_black_label.dds"
+										margin = { 50 10 }
+										margin_top = 0
+										modify_texture = {
+											name = "mask"
+											texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+											spriteType = Corneredstretched
+											spriteborder = { 0 0 }
+											blend_mode = alphamultiply
+										}
+									}
+									text_single = {
+										text = "UNITY_VALUE"
+										fontsize = 32
+										align = center
+										minimumsize = { 100 -1 }
+										tooltip = unity_value_meaning
+									}
+								}
+								spacer = { size = { 125 0 } }
+								vbox = {
+									background = {
+										texture = "gfx/interface/component_tiles/solid_black_label.dds"
+										margin = { 50 10 }
+										margin_top = 0
+										modify_texture = {
+											name = "mask"
+											texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+											spriteType = Corneredstretched
+											spriteborder = { 0 0 }
+											blend_mode = alphamultiply
+										}
+									}
+									text_single = {
+										text = "[GetPlayer.Custom('clan_unity_level_custom_loc')]"
+										fontsize = 32
+										align = center
+										minimumsize = { 100 -1 }
+										tooltip = unity_level_meaning
+									}
+								}
+							}
+						}
+						
+						spacer = { size = { 0 40 } }
+						
+						vbox = {
+							name = "effects_clan_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "EFFECTS_CLAN"
+							}
+							
+							vbox = {
+								layoutpolicy_vertical = expanding
+								text_multi = {
+									margin = { 20 20 }
+									text = "[GetPlayer.Custom('clan_unity_level_effect_custom_loc')]"
+									minimumsize = { 400 -1 }
+									maximumsize = { 400 -1 }
+									autoresize = yes
+									align = center
+									 background = {
+										using = Background_Area_Dark
+										alpha = 2.8
+									}
+								}
+								expand = {}
+							}
+						}
+						
+						spacer = { size = { 0 20 } }
+						
+						vbox = {
+							name = "decisions_clan_container"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							text_label_center = {
+								text = "CLAN_DECISIONS"
+							}
+						}
+						
+						spacer = { size = { 0 20 } }
+						
+						vbox = {
+							background = {
+								texture = "gfx/interface/component_tiles/solid_black_label.dds"
+								margin = { 5 0 }
+								margin_top = 0
+								modify_texture = {
+									name = "mask"
+									texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = alphamultiply
+								}
+							}
+							
+							button_tertiary = {
+								size = { 450 50 }
+								tooltip = "[GetScriptedGui('can_use_clan_action_tax').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								enabled = "[GetScriptedGui('can_use_clan_action_tax').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('collect_clan_tax_decision_selected').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+								onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+								text_single = {
+									text = "collect_clan_tax_decision"
+									fontsize = 20
+									align = center
+									minimumsize = { 450 40 }
+								}
+							}
+							
+						}
+						
+						spacer = { size = { 0 25 } }
+						
+						vbox = {
+							background = {
+								texture = "gfx/interface/component_tiles/solid_black_label.dds"
+								margin = { 5 0 }
+								margin_top = 0
+								modify_texture = {
+									name = "mask"
+									texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = alphamultiply
+								}
+							}
+							
+							button_tertiary = {
+								size = { 450 50 }
+								tooltip = "[GetScriptedGui('can_use_clan_action_tax').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								enabled = "[GetScriptedGui('can_use_clan_action_tax').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('collect_clan_cattle_decision_selected').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+								onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+								text_single = {
+									text = "collect_clan_cattle_decision"
+									fontsize = 20
+									align = center
+									minimumsize = { 450 40 }
+								}
+							}
+							
+						}
+						
+						spacer = { size = { 0 25 } }
+						
+						vbox = {
+							background = {
+								texture = "gfx/interface/component_tiles/solid_black_label.dds"
+								margin = { 5 0 }
+								margin_top = 0
+								modify_texture = {
+									name = "mask"
+									texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = alphamultiply
+								}
+							}
+							
+							button_tertiary = {
+								size = { 450 50 }
+								tooltip = "[GetScriptedGui('can_use_clan_action_call').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								enabled = "[GetScriptedGui('can_use_clan_action_call').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('leader_call_in_war_decision_selected').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+								onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+								text_single = {
+									text = "leader_call_in_war_decision"
+									fontsize = 20
+									align = center
+									minimumsize = { 450 40 }
+								}
+							}
+							
+						}
+						
+						spacer = { size = { 0 25 } }
+						
+						vbox = {
+							background = {
+								texture = "gfx/interface/component_tiles/solid_black_label.dds"
+								margin = { 5 0 }
+								margin_top = 0
+								modify_texture = {
+									name = "mask"
+									texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = alphamultiply
+								}
+							}
+							
+							button_tertiary = {
+								size = { 450 50 }
+								tooltip = "[GetScriptedGui('can_use_clan_action_force').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								enabled = "[GetScriptedGui('can_use_clan_action_force').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('force_clan_leader_decision_selected').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+								onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+								text_single = {
+									text = "force_clan_leader_decision"
+									fontsize = 20
+									align = center
+									minimumsize = { 450 40 }
+								}
+							}
+						}
+						
+						spacer = { size = { 0 25 } }
+						
+						vbox = {
+							background = {
+								texture = "gfx/interface/component_tiles/solid_black_label.dds"
+								margin = { 5 0 }
+								margin_top = 0
+								modify_texture = {
+									name = "mask"
+									texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = alphamultiply
+								}
+							}
+							
+							button_tertiary = {
+								size = { 450 50 }
+								tooltip = "[GetScriptedGui('can_use_clan_action_call_leader_war').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								enabled = "[GetScriptedGui('can_use_clan_action_call_leader_war').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('force_leader_into_war_selected').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+								onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+								text_single = {
+									text = "force_leader_into_war_decision"
+									fontsize = 20
+									align = center
+									minimumsize = { 450 40 }
+								}
+							}
+						}
+					}
+				}
+				expand = {}
+			}
+		}
+	}
+}
+
+types ClanAuxiliaire {
+	type decision_breakdown_view = window {
+		size = { 550 500 }
+		position = {-680 460}
+		parentanchor = top|right
+		layer = windows_layer
+		allow_outside = yes
+		visible = "[GetVariableSystem.Exists('decision_breakdown')]"
+		
+		using = Window_Background
+		using = Window_Decoration
+		using = Animation_ShowHide_Standard
+		vbox = {
+			using = Window_Margins
+			restrictparent_min = yes
+	
+			header_pattern = {
+				layoutpolicy_horizontal = expanding
+	
+				blockoverride "header_text"
+				{
+					text = "[GetPlayer.Custom('clan_decision_selected_custom_loc')]"
+				}
+	
+				blockoverride "button_close"
+				{
+					onclick = "[GetVariableSystem.Clear( 'decision_breakdown' )]"
+				}
+			}
+			expand = {}
+		}
+		vbox = {
+			using = Window_Margins
+			restrictparent_min = yes
+			layoutpolicy_vertical = expanding
+			
+			
+			vbox = {
+				layoutpolicy_vertical = expanding
+				text_multi = {
+					margin = { 20 20 }
+					text = "[GetScriptedGui('clan_decision_effect_gui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					minimumsize = { 400 -1 }
+					maximumsize = { 400 -1 }
+					autoresize = yes
+					align = center
+					using = Background_Area_Dark
+				}
+			}
+			
+			expand = {}
+			
+			spacer = { size = { 0 20 } }
+			
+			button_tertiary_magic = {
+				text = "TAKE_ACTION"
+				onclick = "[GetScriptedGui('clan_decision_effect_gui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetVariableSystem.Toggle('decision_breakdown')]"
+			}
+			
+			spacer = { size = { 0 30 } }
+		}
+	}
+}

@@ -1,0 +1,382 @@
+﻿3000000 = {
+    ##General information
+	faith = the_old_gods
+	culture = dal_riata
+	dynasty = 216
+	name = "Cu_Chulainn"
+	dna = 1_cu_chulainn
+	##Educational Trait
+	trait = education_martial_4
+	disallow_random_traits = yes
+	
+	#life_expectancy = 1000
+	health = 50
+	
+	portrait_override ={
+		portrait_modifier_overrides={
+			custom_hair=male_hair_fp1_04
+			custom_beards=male_beard_western_09
+		}
+	}
+	
+    4783.1.1 = {
+        birth = yes
+		
+		effect = {
+			##Personality
+			random_list = {
+				33 = {
+					add_trait = diligent
+				}
+				33 = {
+					add_trait = arrogant
+				}
+				33 = {
+					add_trait = brave
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = ambitious
+				}
+				33 = {
+					add_trait = lustful
+				}
+				33 = {
+					add_trait = zealous
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = paranoid
+				}
+				33 = {
+					add_trait = callous
+				}
+				33 = {
+					add_trait = fickle
+				}
+			}
+			##Congenital add_traits
+			random_list = {
+				30 = {
+					add_trait = physique_good_1
+				}
+				45 = {
+					add_trait = physique_good_2
+				}
+				25 = {
+					add_trait = physique_good_3
+				}
+			}
+			random_list = {
+				55 = {
+					add_trait= beauty_good_1
+				}
+				45 = {
+					add_trait = beauty_good_2
+				}
+			}
+			add_character_flag = blocked_from_leaving
+		}
+    }
+}
+3000001 = {
+    ##General information
+	faith = the_old_gods
+	culture = dal_riata
+	dynasty = 216
+	name = "Fer_Diad"
+	dna = 2_fer_diad
+	##Educational Trait
+	trait = education_martial_4
+	disallow_random_traits = yes
+	
+	#life_expectancy = 1000
+	health = 50
+	
+	portrait_override ={
+		portrait_modifier_overrides={
+			custom_hair=male_hair_fp1_02
+			custom_beards=male_beard_mena_01
+		}
+	}
+	
+    4783.1.1 = {
+        birth = yes
+		
+		effect = {
+			#Personality
+			random_list = {
+				33 = {
+					add_trait = diligent
+				}
+				33 = {
+					add_trait = arrogant
+				}
+				33 = {
+					add_trait = brave
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = ambitious
+				}
+				33 = {
+					add_trait = lustful
+				}
+				33 = {
+					add_trait = zealous
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = paranoid
+				}
+				33 = {
+					add_trait = callous
+				}
+				33 = {
+					add_trait = fickle
+				}
+			}
+			##Congenital add_traits
+			random_list = {
+				55 = {
+					add_trait = physique_good_2
+				}
+				45 = {
+					add_trait = physique_good_3
+				}
+			}
+			add_character_flag = blocked_from_leaving
+		}
+    }
+}
+3000002 = {
+    ##General information
+	faith = the_old_gods
+	culture = dal_riata
+	dynasty = 216
+	name = "Conall_Cernach"
+	dna = 3_conall_cernach
+	##Educational Trait
+	trait = education_martial_4
+	disallow_random_traits = yes
+	
+	#life_expectancy = 1000
+	health = 50
+	
+	portrait_override ={
+		portrait_modifier_overrides={
+			custom_hair=male_hair_fp1_05
+			custom_beards=male_beard_mena_04
+		}
+	}
+
+    4776.1.1 = {
+        birth = yes
+		
+		effect = {
+			#Personality
+			random_list = {
+				33 = {
+					add_trait = diligent
+				}
+				33 = {
+					add_trait = arrogant
+				}
+				33 = {
+					add_trait = brave
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = ambitious
+				}
+				33 = {
+					add_trait = lustful
+				}
+				33 = {
+					add_trait = zealous
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = paranoid
+				}
+				33 = {
+					add_trait = callous
+				}
+				33 = {
+					add_trait = fickle
+				}
+			}
+			##Congenital add_traits
+			random_list = {
+				30 = {
+					add_trait = physique_good_2
+				}
+				45 = {
+					add_trait = physique_good_3
+				}
+				25 = {
+					
+				}
+			}
+			random_list = {
+				55 = {
+					add_trait = beauty_bad_1
+				}
+				45 = {
+					add_trait = beauty_bad_2
+				}
+			}
+			add_character_flag = blocked_from_leaving
+		}
+    }
+}
+3000003 = {
+   ##General information
+	faith = the_old_gods
+	culture = dal_riata
+	dynasty = 216
+	name = "Loegaire_Buadach"
+	dna = 4_loegaire_buadach
+	##Educational Trait
+	trait = education_martial_4
+	disallow_random_traits = yes
+	
+	#life_expectancy = 1000
+	health = 50
+	
+	portrait_override ={
+		portrait_modifier_overrides={
+			custom_beards=male_beard_indian_02
+			custom_hair=male_hair_fp1_07
+		}
+	}
+	
+    4783.1.1 = {
+        birth = yes
+		
+		effect = {
+			#Personality
+			random_list = {
+				33 = {
+					add_trait = diligent
+				}
+				33 = {
+					add_trait = arrogant
+				}
+				33 = {
+					add_trait = brave
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = ambitious
+				}
+				33 = {
+					add_trait = lustful
+				}
+				33 = {
+					add_trait = zealous
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = paranoid
+				}
+				33 = {
+					add_trait = callous
+				}
+				33 = {
+					add_trait = fickle
+				}
+			}
+			##Congenital add_traits
+			random_list = {
+				30 = {
+					add_trait = physique_good_2
+				}
+				45 = {
+					add_trait = physique_good_3
+				}
+				25 = {
+					
+				}
+			}
+			add_character_flag = blocked_from_leaving
+		}
+    }
+}
+3000004 = {
+    ##General information
+	faith = the_old_gods
+	culture = dal_riata
+	dynasty = 216
+	name = "Scathach"
+	#dna = 5_scathach 
+	female = yes
+	##Educational Trait
+	trait = education_martial_4
+	disallow_random_traits = yes
+	
+	#life_expectancy = 1000
+	health = 50
+	
+    4763.1.1 = {
+        birth = yes
+		
+		effect = {
+			#Personality
+			random_list = {
+				33 = {
+					add_trait = diligent
+				}
+				33 = {
+					add_trait = arrogant
+				}
+				33 = {
+					add_trait = brave
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = ambitious
+				}
+				33 = {
+					add_trait = lustful
+				}
+				33 = {
+					add_trait = zealous
+				}
+			}
+			random_list = {
+				33 = {
+					add_trait = paranoid
+				}
+				33 = {
+					add_trait = callous
+				}
+				33 = {
+					add_trait = fickle
+				}
+			}
+			##Congenital add_traits
+			random_list = {
+				30 = {
+					add_trait = physique_good_2
+				}
+				45 = {
+					add_trait = physique_good_3
+				}
+				25 = {
+					
+				}
+			}
+			add_character_flag = blocked_from_leaving
+		}
+    }
+}

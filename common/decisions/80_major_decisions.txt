@@ -254,6 +254,11 @@ declare_bloodline_holy_decision = {
 			}
 		}
 		custom_description = {
+			text = faith_is_reformed
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = unreformed } }
+		}
+		custom_description = {
 			text = "consecrate_bloodline_holy_site"
 			faith = {
 				any_holy_site = {
@@ -266,14 +271,6 @@ declare_bloodline_holy_decision = {
 			}
 		}
 		piety_level >= 5
-		piety >= 2500
-	}
-	
-	is_valid_showing_failures_only = {
-		NOR = {
-			has_trait = content
-			has_trait = humble
-		}	
 	}
 
 	cost = {
@@ -284,6 +281,11 @@ declare_bloodline_holy_decision = {
 		trigger_event = major_decisions.0100
 		show_as_tooltip = {
 			declare_bloodline_holy_decision_effect = yes
+		}
+
+		stress_impact = {
+			content = massive_stress_impact_gain
+			humble = massive_stress_impact_gain
 		}
 	}
 
@@ -449,10 +451,10 @@ accept_cannibalism_decision = { #by Linnéa Thimrén
 
 	is_shown = {
 		is_cannibal_trigger = yes
-		NOT = { #Snacking on people should be frowned upon
-			faith =  {
-				has_doctrine_parameter = cannibalism_legal
-			}
+		NOR = { #Snacking on people should be frowned upon
+			faith = { has_doctrine_parameter = cannibalism_legal }
+			faith = { has_variable = accepted_cannibalism }
+			faith.religious_head = root
 		}
 	}
 
@@ -478,12 +480,16 @@ accept_cannibalism_decision = { #by Linnéa Thimrén
 				}
 			}
 		}
-		piety >= major_piety_value
+		piety_level >= high_piety_level
 	}
 
 	is_valid_showing_failures_only = {
 		is_ruler = yes
 		is_available_adult = yes
+	}
+
+	cost = {
+		piety = major_piety_value
 	}
 
 	effect = {
@@ -620,16 +626,30 @@ found_witch_coven_decision = {
 				}
 			}
 			house = {
+				custom_tooltip = {
+					text = found_witch_coven_house_member_count_tt
+					any_adult_house_member = {
+						count >= found_witch_coven_member_count_value
+						is_witch_known_by_trigger = { CHARACTER = root }
+					}
+				}
 				any_adult_house_member = {
-					count >= 4
+					count >= found_witch_coven_member_count_value
 					is_witch_known_by_trigger = { CHARACTER = root }
 				}
 			}
 		}
 		trigger_else = {
 			house = {
+				custom_tooltip = {
+					text = found_witch_coven_house_member_percent_tt
+					any_adult_house_member = {
+						percent >= found_witch_coven_member_percent_value
+						is_witch_known_by_trigger = { CHARACTER = root }
+					}
+				}
 				any_adult_house_member = {
-					percent >= 0.6
+					percent >= found_witch_coven_member_percent_value
 					is_witch_known_by_trigger = { CHARACTER = root }
 				}
 			}
@@ -683,6 +703,20 @@ found_kingdom_decision = {
 
 	effect = {
 		create_custom_kingdom_effect = yes
+		if = {
+			limit = {
+				is_ai = no
+				NOT = { exists = global_var:found_kingdom_decision  }
+			}
+			set_global_variable = {
+				name = found_kingdom_decision
+				value = root
+			}
+			set_global_variable = {
+				name = found_kingdom_decision_kingdom
+				value = root.primary_title
+			}
+		}
 	}
 
 	ai_potential = {
@@ -714,6 +748,16 @@ found_empire_decision = {
 			}
 		}
 		NOT = { has_game_rule = off_custom_kingdoms }
+
+		trigger_if = {
+			limit = {
+				OR = {
+					fp2_character_interloper_in_struggle_trigger = yes
+					fp2_character_involved_in_struggle_trigger = yes
+				}
+			}
+			always = no
+		}
 	}
 
 	is_valid = {
@@ -722,9 +766,9 @@ found_empire_decision = {
 			sub_realm_size >= 240
 			AND = {
 				custom_description = {
-					text = found_empire_decision_three_kingdoms_held
+					text = found_empire_decision_six_kingdoms_held
 					any_held_title = {
-						count >= 8
+						count >= 6
 						tier = tier_kingdom
 					}
 				}
@@ -747,6 +791,20 @@ found_empire_decision = {
 
 	effect = {
 		create_custom_empire_effect = yes
+		if = {
+			limit = {
+				is_ai = no
+				NOT = { exists = global_var:found_empire_decision  }
+			}
+			set_global_variable = {
+				name = found_empire_decision
+				value = root
+			}
+			set_global_variable = {
+				name = found_empire_decision_empire
+				value = root.primary_title
+			}
+		}
 	}
 
 	ai_potential = {
@@ -875,7 +933,6 @@ repay_loan_decision = { #by Linnéa Thimrén
 #Adopt special succession type.
 adopt_special_succession_decision = { #by Ewan Cowhig Croft
 	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
-	major = yes
 	desc = adopt_special_succession_decision_desc
 
 	ai_check_interval = 36
@@ -1116,12 +1173,14 @@ tribal_challenge_ruler_decision = { #by Linnéa Thimrén
 		is_adult = yes
 		liege = {
 			is_available = yes
+			is_adult = yes
 		}
 		custom_description = {
 			text = recently_took_tribal_challenge_ruler_decision
 			subject = root
 			NOT = { has_character_flag = recently_took_the_tribal_challenge_ruler_decision }
 		}
+		can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = liege }
 	}
 
 	effect = {
@@ -1146,12 +1205,12 @@ tribal_challenge_ruler_decision = { #by Linnéa Thimrén
 				10 = {
 					show_chance = no
 					desc = tribal_challenge_ruler_desc_success
-					tribal_1001_transfer_liege_title_effect = yes
+					tribal_transfer_liege_title_effect = yes
 				}
 				10 = {
 					show_chance = no
 					desc = tribal_challenge_ruler_desc_failure
-					tribal_1001_challenger_lost_effect = yes
+					tribal_challenger_lost_effect = yes
 				}
 			}
 		}
@@ -1183,5 +1242,59 @@ tribal_challenge_ruler_decision = { #by Linnéa Thimrén
 			add = -50
 			liege = { is_ai = no }
 		}
+	}
+}
+
+#
+convert_to_tribalism_decision = { #by Maxence Voleau
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	desc = convert_to_tribalism_decision_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		is_landed = yes
+		primary_title.tier >= tier_county
+		NOT = {
+			any_held_title = {
+				tier = tier_county
+				title_province = {
+					NOT = { has_holding_type = tribal_holding }
+				}
+			}
+		}
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+		}
+	}
+
+	is_valid = {
+		
+	}
+
+
+	effect = {
+		trigger_event = major_decisions.0200
+		change_government = tribal_government
+		add_prestige = {
+			add = -150
+		}
+
+		hidden_effect = {
+			add_character_flag = {
+				flag = just_converted_to_tribalism
+				years = 5
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
 	}
 }

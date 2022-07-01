@@ -69,3 +69,21 @@ prayer_to_balor_root = {
 	icon = martial_positive
 	enemy_hard_casualty_modifier = 0.1
 }
+
+fomorian_chosen_modifier = {
+	icon = prowess_positive
+	enemy_hard_casualty_modifier = 0.1
+	levy_size = 0.25
+	martial = 2
+	vassal_opinion = 35
+	min_combat_roll = 5
+	max_combat_roll = 5
+	prowess = 2
+}
+
+invader_modifier = {
+	icon = prowess_positive
+	ai_war_chance = 1
+	ai_zeal = 1
+	monthly_prestige = 0.2
+}

@@ -29,9 +29,18 @@
  new_land_cb_defeat_desc:1 "[defender.GetShortUIName|U] keeps [title|E]."
  
  land_for_son_cb_victory_desc_attacker:0 "If you win the war an event will allow you to chose which son gets the land and the titles."
+ land_for_son_cb:0 "War to land a son"
  LAND_SON_CB_NAME:0 "Get land for Son"
- LAND_SON_WAR_NAME:0 "$ORDER$ [ATTACKER.GetShortUIName|U]'s land conquest for his son in [DEFENDER.GetShortUIName]"
+ LAND_SON_WAR_NAME:0 "[ATTACKER.GetShortUIName|U]'s land conquest for [ATTACKER.GetHerHis] son in [DEFENDER.GetShortUIName]"
  LAND_SON_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ LAND_DAUGHTER_CB_NAME:0 "Get land for Daughter"
+ LAND_DAUGHTER_WAR_NAME:0 "[ATTACKER.GetShortUIName|U]'s land conquest for [ATTACKER.GetHerHis] daughter in [DEFENDER.GetShortUIName]"
+ LAND_DAUGHTER_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ LAND_CHILD_CB_NAME:0 "Get land for Child"
+ LAND_CHILD_WAR_NAME:0 "[ATTACKER.GetShortUIName|U]'s land conquest for [ATTACKER.GetHerHis] child in [DEFENDER.GetShortUIName]"
+ LAND_CHILD_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  
  PURIFICATION_CB_NAME:0 "Purify County"
  PURIFICATION_WAR_NAME:0 "$ORDER$ Purify [DEFENDER.GetShortUIName]"
@@ -59,3 +68,28 @@
  humiliate_candidate_cb_defeat_desc_defender:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
  humiliate_candidate_cb_defeat_desc_attacker:1 "You are humiliated and will lose candidate score for the High Kingship election."
  humiliate_candidate_cb_defeat_desc:1 "[attacker.GetShortUIName] is humiliated and will lose candidate score for the High Kingship election."
+ 
+ OUTLAW_CONQUEST_COUNTY_CB_NAME:1 "Conquer outlaw's [county|E]"
+ OUTLAW_CONQUEST_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquest of the outlaw's [TITLE.GetBaseName]"
+ OUTLAW_CONQUEST_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ CLAN_SUBJUGATION_CB_NAME: "Clan Subjugation"
+ 
+ DISMANTLE_CLAN_LEADER_CB: "Dismantle Clan Leader"
+ DISMANTLE_CLAN_LEADER_WAR_NAME: "[ATTACKER.GetName] war to dismantle leader [DEFENDER.GetName]"
+ DISMANTLE_CLAN_LEADER_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ #Scotland update
+ UNITE_THE_SEPT_CB_NAME: "Unite the Sept"
+ UNITE_THE_SEPT_WAR_NAME: "[ATTACKER.GetName] war to integrate [DEFENDER.GetName] to [ATTACKER.GetHerHis] Sept"
+ UNITE_THE_SEPT_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ 
+ FAIRY_CB_NAME: "The Courts' War"
+ FAIRY_WAR_NAME: "[ATTACKER.GetName] war to humiliate [DEFENDER.GetName]"
+ FAIRY_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ fairy_war_cb_victory_desc_attacker:1 "You humiliate the target and gain reputation among the fairies"
+ fairy_war_cb_defeat_desc:1 "Your enemy gains reputation among the fairies"
+ fairy_war_cb_victory_desc:1 "You are humiliated"
+ fairy_war_cb_white_peace_desc:1 "White peace"
+ fairy_war_cb_white_peace_desc_defender:1 "White peace"
+ fairy_war_cb_defeat_desc_defender:1 "You gain reputation among the fairies"

@@ -1,0 +1,93 @@
+﻿on_game_start = {
+	on_actions = {
+		set_up_spells
+	}
+}
+
+set_up_spells = {
+	effect = {
+		set_up_spells = yes
+	}
+}
+
+on_birth_child = {
+	on_actions = {
+		add_the_magician_traits
+	}
+}
+
+add_the_magician_traits = {
+	effect = {
+		random_list = {
+			0 = {
+				modifier = { has_trait = tuatha_de_danann add = 80 }
+				modifier = { has_trait = hy_brazylian add = 20 }
+				modifier = { has_trait = fomorian add = 15 }
+				modifier = { has_trait = cessarian add = 7 }
+				modifier = { has_trait = nemedian add = 3 }
+				modifier = { has_trait = fir_bolg add = 3 }
+				modifier = { has_trait = partholonian add = 3 }
+				modifier = { has_trait = celtic_human add = 2 }
+				modifier = { has_trait = milesian add = 2 }
+				modifier = { has_trait = megalith_human add = 2 }
+				modifier = { has_trait = latin_human add = 1 }
+				gain_magician_trait = yes
+			}
+			100 = {
+				modifier = { has_trait = tuatha_de_danann add = -80 }
+				modifier = { has_trait = hy_brazylian add = -20 }
+				modifier = { has_trait = fomorian add = -15 }
+				modifier = { has_trait = cessarian add = -7 }
+				modifier = { has_trait = nemedian add = -3 }
+				modifier = { has_trait = fir_bolg add = -3 }
+				modifier = { has_trait = partholonian add = -3 }
+				modifier = { has_trait = celtic_human add = -2 }
+				modifier = { has_trait = milesian add = -2 }
+				modifier = { has_trait = megalith_human add = -2 }
+				modifier = { has_trait = latin_human add = -1 }
+			}
+		}
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = {
+		run_magic_decay_tests_start
+	}
+}
+
+run_magic_decay_tests_start = {
+	trigger = {
+		NOT = { exists = global_var:run_decay_start }
+	}
+	effect = {
+		every_living_character = {
+			limit = { exists = var:your_magic_usage has_variable = your_magic_usage var:your_magic_usage > 1 }
+			change_variable = {
+				name = your_magic_usage
+				add = -2
+			}
+		}
+		set_global_variable = run_decay_start
+	}
+	on_actions = {
+		delay = { years = 3 }
+		run_magic_decay_tests
+	}
+}
+
+run_magic_decay_tests = {
+	effect = {
+		every_living_character = {
+			limit = { exists = var:your_magic_usage has_variable = your_magic_usage var:your_magic_usage > 1 }
+			change_variable = {
+				name = your_magic_usage
+				add = -2
+			}
+		}
+	}
+	on_actions = {
+		delay = { years = 3 }
+		run_magic_decay_tests
+	}
+}

@@ -1,0 +1,17 @@
+﻿victorious_fairy_ruler = {
+	icon = martial_positive
+	levy_size = 0.25
+	tax_mult = 0.25
+}
+
+humiliated_fairy_ruler = {
+	icon = martial_negative
+	levy_size = -0.5
+	tax_mult = -0.5
+}
+
+humiliated_fairy = {
+	icon = martial_negative
+	health = -0.25
+	general_opinion = -10
+}

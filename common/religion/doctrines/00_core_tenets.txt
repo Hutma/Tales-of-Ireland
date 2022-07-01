@@ -360,12 +360,17 @@
 
 		parameters = {
 			hostility_override_tenet_gnosticism = 0
+			hostility_override_special_doctrine_is_gnostic_faith = 0
 			granting_titles_gives_stress = yes
 		}
 
 		character_modifier = {
 			learning = 2
 			stewardship = -2
+		}
+
+		is_shown = {
+			NOT = { has_doctrine = special_doctrine_is_gnostic_faith } # Can't be Gnostic if ye already are Gnostic
 		}
 	}
 
@@ -495,6 +500,7 @@
 		}
 
 		parameters = {
+			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
 			piety_from_long_peace = 1
@@ -508,7 +514,7 @@
 		character_modifier = {
 			domain_limit = 1
 			ai_war_chance = -0.25
-			ai_war_cooldown = 0.25
+			ai_war_cooldown = 5
 		}
 	}
 
@@ -552,7 +558,7 @@
 		}
 
 		parameters = {
-			fervor_per_holy_site = 0.1
+			fervor_per_holy_site = 1
 			pilgrimage_decision_active = yes
 		}
 	}
@@ -674,6 +680,178 @@
 		}
 	}
 
+	tenet_rite = {
+		icon = core_tenet_followers
+
+		is_shown = {
+			# Filter out Islam; they have their own system.
+			NOT = { religion = religion:islam_religion }
+			# We also only want people with existing spiritual HoFs.
+			exists = religious_head
+			has_doctrine_parameter = spiritual_head_of_faith
+		}
+
+		can_pick = {
+			# Must have a theocratic HoF.
+			custom_description = {
+				text = doctrine_requires_theocratic_head_of_faith_trigger
+				flag:doctrine_spiritual_head = { is_in_list = selected_doctrines }
+			}
+			# !!! SECTION NOTE !!!
+			## We check for tenets rather than doctrine parameters here because doctrine parameters cannot be checked in the selected_doctrines list, so we maintain such throughout the section for consistency.
+			# Some tenet/doctrine configurations are mutually exclusive.
+			## Pacifists vs. war-mongers.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_pacifists_vs_warmongers
+				NOR = {
+					# Either you're trying to be pacifist and your HoF hates it...
+					AND = {
+						OR = {
+							flag:tenet_dharmic_pacifism = { is_in_list = selected_doctrines }
+							flag:tenet_pacifism = { is_in_list = selected_doctrines }
+						}
+						religious_head.faith = {
+							OR = {
+								has_doctrine = tenet_armed_pilgrimages
+								has_doctrine = tenet_struggle_submission
+								has_doctrine = tenet_warmonger
+								has_doctrine = tenet_pursuit_of_power
+							}
+						}
+					}
+					# ... or your HoF is and hates your warmongering.
+					AND = {
+						OR = {
+							flag:tenet_armed_pilgrimages = { is_in_list = selected_doctrines }
+							flag:tenet_struggle_submission = { is_in_list = selected_doctrines }
+							flag:tenet_warmonger = { is_in_list = selected_doctrines }
+							flag:tenet_pursuit_of_power = { is_in_list = selected_doctrines }
+						}
+						religious_head.faith = {
+							OR = {
+								has_doctrine = tenet_dharmic_pacifism
+								has_doctrine = tenet_pacifism
+							}
+						}
+					}
+				}
+			}
+			## Criminal witches vs. adorcists.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_criminal_witches_vs_adorcists
+				NOR = {
+					# Either you're big on possessions but your HoF hates witchcraft...
+					AND = {
+						flag:tenet_adorcism = { is_in_list = selected_doctrines }
+						religious_head.faith = { has_doctrine = doctrine_witchcraft_crime }
+					}
+					# ... or you hate witchcraft but your HoF likes possessions.
+					AND = {
+						flag:doctrine_witchcraft_crime = { is_in_list = selected_doctrines }
+						religious_head.faith = { has_doctrine = tenet_adorcism }
+					}
+				}
+			}
+			## Hedonists vs. ascetics.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_hedonists_vs_ascetics
+				NOR = {
+					# Either you like to indulge but your HoF believes less is more...
+					AND = {
+						flag:tenet_hedonistic = { is_in_list = selected_doctrines }
+						religious_head.faith = { has_doctrine = tenet_asceticism }
+					}
+					# ... or your HoF throws constant wild parties whilst you prefer to sit and chill.
+					AND = {
+						flag:tenet_asceticism = { is_in_list = selected_doctrines }
+						religious_head.faith = { has_doctrine = tenet_hedonistic }
+					}
+				}
+			}
+			## Cannibals vs. non-cannibals of any kind.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_cannibals_vs_non_cannibals
+				NOR = {
+					# Cannibal-you doesn't get why your non-cannibal HoF freaks out when you offer them a hand...
+					AND = {
+						flag:tenet_ritual_cannibalism = { is_in_list = selected_doctrines }
+						NOT = {
+							religious_head.faith = { has_doctrine = tenet_ritual_cannibalism }
+						}
+					}
+					# ... or cannibal-HoF thinks you need to chill the hell out whilst they eat this dude.
+					AND = {
+						flag:tenet_ritual_cannibalism = { is_in_list = selected_doctrines }
+						NOT = {
+							religious_head.faith = { has_doctrine = tenet_ritual_cannibalism }
+						}
+					}
+				}
+			}
+			# Some tenet/doctrine configurations are unilaterally exclusive.
+			## HumSac/GruFes are disliked by anyone who doesn't also actively believe in such.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_world_vs_humsac_grufes
+				# Your HoF will not put up with your HumSackery if they don't also go in for it.
+				trigger_if = {
+					limit = {
+						OR = {
+							flag:tenet_gruesome_festivals = { is_in_list = selected_doctrines }
+							flag:tenet_human_sacrifice = { is_in_list = selected_doctrines }
+						}
+					}
+					NOR = {
+						religious_head.faith = { has_doctrine = tenet_gruesome_festivals }
+						religious_head.faith = { has_doctrine = tenet_human_sacrifice }
+					}
+				}
+			}
+			## Monogamy doesn't like polygamy.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_monogamy_vs_polygamy
+				# Monogamous HoFs do not appreciate polygamy.
+				trigger_if = {
+					limit = {
+						flag:doctrine_polygamy = { is_in_list = selected_doctrines }
+					}
+					NOT = {
+						religious_head.faith = { has_doctrine = doctrine_monogamy }
+					}
+				}
+			}
+			## All lesser variations of incest don't like unrestricted incest.
+			custom_description = {
+				text = incompatible_tenet_shared_hof_world_vs_unrestricted_incest
+				# Non-incestual HoFs really take issue with unrestricted incest.
+				trigger_if = {
+					limit = {
+						flag:doctrine_consanguinity_unrestricted = { is_in_list = selected_doctrines }
+					}
+					NOT = {
+						religious_head.faith = { has_doctrine = doctrine_consanguinity_unrestricted }
+					}
+				}
+			}
+		}
+
+		piety_cost = {
+			value = faith_tenet_cost_low
+		}
+
+		parameters = {
+			maintains_head_of_faith_on_creation = yes
+			# For loc:
+			ecumenical_christians_keep_ecumenism = yes
+			# TIT-32195: same-HoF hostility override to be added later, potentially.
+		}
+
+		character_modifier = {
+			faith_creation_piety_cost_mult = -0.25
+			opinion_of_same_faith = 5
+			religious_head_opinion = -10
+		}
+	}
+
 	############################
 	#	Muslim Faith Tenets	#
 	############################
@@ -761,7 +939,6 @@
 		parameters = {
 			tenet_esotericism_mystic_education = yes
 		}
-
 	}
 
 	tenet_legalism = {
@@ -1049,6 +1226,10 @@
 			levy_reinforcement_rate_same_faith = 0.25
 			levy_reinforcement_rate_different_faith = -0.25
 		}
+
+		parameters = {
+			unlock_jizya_contract = yes
+		}
 	}
 
 	#############################
@@ -1149,6 +1330,7 @@
 		
 		parameters = {
 			reincarnation_resistance_to_conversion = yes
+			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
 		}
@@ -1447,6 +1629,11 @@
 			human_sacrifice_active = yes
 			flower_war_cb_active = yes
 		}
+
+		character_modifier = {
+			ai_war_chance = 1
+			ai_war_cooldown = -0.5
+		}
 	}
 
 	tenet_mystical_birthright = {
@@ -1531,17 +1718,18 @@
 			}
 		}
 
-		is_shown = {
-
-		}
-
 		parameters = {
 			safer_childbirths_active = yes
 			healthier_children_active = yes
+			piety_from_childbirth_active = yes
 		}
 
 		character_modifier = {
 			fertility = 0.1
+		}
+
+		traits = {
+			virtues = { pregnant }
 		}
 	}
 
@@ -1578,6 +1766,10 @@
 				limit = { has_doctrine = tenet_sanctity_of_nature }
 				multiply = faith_unchanged_doctrine_cost_mult
 			}
+		}
+
+		parameters = {
+			believes_in_harmony_with_nature_invisible = yes
 		}
 
 		character_modifier = {
@@ -1691,14 +1883,10 @@
 			ai_war_cooldown = -0.25
 		}
 	}
-	
+
 	tenet_gruesome_festivals = {
 		name = {
 			first_valid = {
-				triggered_desc = {
-					trigger = { religion_tag = germanic_religion }
-					desc = tenet_gruesome_festivals_blot_name
-				}
 				desc = tenet_gruesome_festivals_name
 			}
 		}
@@ -1708,7 +1896,9 @@
 		piety_cost = {
 			# If you've already got human sacrifice, this is a nice and easy jump.
 			if = {
-				limit = { has_doctrine = tenet_human_sacrifice }
+				limit = { 
+					has_doctrine = tenet_human_sacrifice
+				}
 				value = faith_tenet_cost_low
 			}
 			else = {
@@ -1752,6 +1942,45 @@
 		parameters = {
 			human_sacrifice_active = yes
 			gruesome_festivals_active = yes
+		}
+	}
+
+	tenet_cthonic_redoubts = {
+		icon = core_tenet_birdofprey
+
+		piety_cost = {
+			value = faith_tenet_cost_mid
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_cthonic_redoubts }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			# Multiplier for traditional mountain-based religions or faiths.
+			
+		}
+
+		is_shown = { always = yes }
+
+		parameters = {
+			easier_to_convert_faith_in_mountains = yes
+			easier_to_convert_culture_in_same_faith_mountains = yes
+			harder_to_convert_faith_away_in_mountains = yes
+		}
+
+		character_modifier = {
+			mountains_attrition_mult = -0.5
+			mountains_levy_size = 0.3
+			mountains_advantage = 5
+		}
+
+		piety_cost = faith_tenet_cost_mid
+
+		traits = {
+			virtues = {
+				# For the Jentillaks et al.
+				giant
+			}
 		}
 	}
 
@@ -1903,6 +2132,8 @@
 			hostility_override_special_doctrine_is_christian_faith = 2
 			#For loc:
 			is_christian_faith_bilateral_loc_override = 2
+			# This parameter is empty; the syncretic religious trigger checks against the doctrine, as that's much clearer in tooltips and allows us to use a unified syncretic trigger per-religion rather than having bitty situational triggers.
+			can_use_christian_artefacts = yes
 			christian_syncretic_actor_opinion_active = yes
 			opinion_of_christian_syncretic_recipient_opinion_active = 30 #Sync this to syncretic_mutual_opinion_bonus_value
 		}
@@ -1951,6 +2182,8 @@
 
 		parameters = {
 			hostility_override_special_doctrine_is_islamic_faith = 2
+			# This parameter is empty; the syncretic religious trigger checks against the doctrine, as that's much clearer in tooltips and allows us to use a unified syncretic trigger per-religion rather than having bitty situational triggers.
+			can_use_islamic_artefacts = yes
 			islamic_syncretic_actor_opinion_active = yes
 			opinion_of_islamic_syncretic_recipient_opinion_active = 30 #Sync this to syncretic_mutual_opinion_bonus_value
 		}
@@ -1999,6 +2232,8 @@
 
 		parameters = {
 			hostility_override_special_doctrine_is_jewish_faith = 2
+			# This parameter is empty; the syncretic religious trigger checks against the doctrine, as that's much clearer in tooltips and allows us to use a unified syncretic trigger per-religion rather than having bitty situational triggers.
+			can_use_jewish_artefacts = yes
 			jewish_syncretic_actor_opinion_active = yes
 			opinion_of_jewish_syncretic_recipient_opinion_active = 30 #Sync this to syncretic_mutual_opinion_bonus_value
 		}
@@ -2341,7 +2576,7 @@
 	tenet_animal_worship = {
 		icon = core_tenet_holytree
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2369,10 +2604,17 @@
 	tenet_pure_island = {
 		icon = core_tenet_flagellant
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
-			always = yes
+			custom_description = {
+				text = incompatible_tenet_pacifism_trigger
+				NOT = { flag:tenet_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_dharmic_pacifism_trigger
+				NOT = { flag:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+			}
 		}
 
 		piety_cost = {
@@ -2382,7 +2624,7 @@
 		parameters = {
 			purification_cb_enabled = yes
 		}
-
+		
 		character_modifier = {
 			different_faith_opinion = -20
 			different_culture_opinion = -20
@@ -2398,7 +2640,7 @@
 	tenet_seafarers = {
 		icon = core_tenet_sword
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2425,7 +2667,7 @@
 	tenet_divine_agriculture = {
 		icon = core_tenet_holytree
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2491,7 +2733,7 @@
 	tenet_masters_of_ireland = {
 		icon = core_tenet_handcoin
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2533,7 +2775,8 @@
 		}
 
 		character_modifier = {
-			de_danann_opinion = 50
+			# de_danann_opinion = 50
+			learning = 2
 		}
 
 		traits = {
@@ -2559,9 +2802,10 @@
 		}
 
 		character_modifier = {
-			sea_fomorians_opinion = 50
-			underground_fomorians_opinion = 50
+			# sea_fomorians_opinion = 50
+			# underground_fomorians_opinion = 50
 			ai_war_chance = 0.5
+			martial = 2
 		}
 
 		traits = {
@@ -2572,7 +2816,7 @@
 	tenet_old_gods = {
 		icon = core_tenet_adorcism
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2599,7 +2843,7 @@
 	tenet_underground_sidhe = {
 		icon = core_tenet_festivities
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2625,7 +2869,7 @@
 	tenet_great_barrows = {
 		icon = core_tenet_cabal
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2653,7 +2897,7 @@
 	tenet_sea_dwellers = {
 		icon = core_tenet_scimitars
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2681,7 +2925,7 @@
 	tenet_newgrange_splendor = {
 		icon = core_tenet_followers
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2708,7 +2952,7 @@
 	tenet_manx_legacy = {
 		icon = core_tenet_shadyfigure
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2736,7 +2980,7 @@
 	tenet_le_cheile = {
 		icon = core_tenet_festivities
 		is_shown = {
-			always = no
+			always = yes
 		}
 		can_pick = {
 			always = yes
@@ -2756,6 +3000,33 @@
 			different_faith_liege_opinion = 15
 			tyranny_gain_mult = 1.00
 			powerful_vassal_opinion = 10
+		}
+
+		traits = {
+			
+		}
+	}
+	
+	tenet_seasonal_gods = {
+		icon = core_tenet_marriage
+		is_shown = {
+			always = yes
+		}
+		can_pick = {
+			always = yes
+		}
+
+		piety_cost = {
+			value = faith_tenet_cost_high
+		}
+
+		character_modifier = {
+			supply_capacity_mult = 0.15
+			fertility = 0.15
+			learning_per_stress_level = -1
+			stewardship_per_piety_level = 1
+			# winter_movement_speed = -0.4
+			winter_advantage = 15
 		}
 
 		traits = {

@@ -1,5 +1,5 @@
 ﻿200000 = {
-    name = 'Orba'
+    name = "Orba"
     dynasty =  7 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -22,12 +22,12 @@
     disallow_random_traits = yes
     4779.1.1 = {
         birth = yes
-        add_pressed_claim = d_killarney
-        add_pressed_claim = d_magunihy
+        add_pressed_claim = title:d_killarney
+        add_pressed_claim = title:d_magunihy
     }
 }
 200001 = {
-    name = 'Fergna'
+    name = "Fergna"
     dynasty =  7 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -50,12 +50,12 @@
     disallow_random_traits =  yes 
     4764.1.1 = {
         birth = yes
-        add_pressed_claim = d_dunkerron
-        add_pressed_claim = d_iveragh
+        add_pressed_claim = title:d_dunkerron
+        add_pressed_claim = title:d_iveragh
     }
 }
 201000 = {
-    name = 'Eber'
+    name = "Eber"
     dynasty =  7 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -82,7 +82,7 @@
     }
 }
 200003 = {
-    name = 'Conmael'
+    name = "Conmael"
     dynasty =  8 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -106,7 +106,7 @@
     }
 }
 200004 = {
-    name = 'Er'
+    name = "E_r"
     dynasty =  9 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -130,7 +130,7 @@
     }
 }
 205000 = {
-    name = 'Petair'
+    name = "Petair"
     dynasty =  7 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -156,7 +156,7 @@
     }
 }
 205001 = {
-    name = 'Conn'
+    name = "Conn"
     dynasty =  7 
     religion = milesian_paganism
     culture = lughaid_milesians
@@ -182,7 +182,7 @@
     }
 }
 205002 = {
-    name = 'Iarlaithe'
+    name = "Iarlaithe"
     dynasty =  8 
     religion = milesian_paganism
     culture = lughaid_milesians

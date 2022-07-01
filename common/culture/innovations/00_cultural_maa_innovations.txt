@@ -110,6 +110,22 @@ innovation_maa_manx = {
 	flag = global_maa
 }
 
+innovation_maa_scotland = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = region_scotland
+	icon = @maa_01
+
+
+	unlock_maa = light_footmen_scotland
+	unlock_maa = bowmen_scotland
+	unlock_maa = light_horsemen_scotland
+	unlock_maa = pikemen_unit_scotland
+	unlock_maa = armored_footmen_scotland
+	
+	flag = global_maa
+}
+
 #CULTURAL MAA
 innovation_maa_human = {
 	group = culture_group_regional
@@ -119,11 +135,11 @@ innovation_maa_human = {
 
 	potential = {
 		OR = {
-			this.culture_group = culture_group:toi_cruithin_group
-			this.culture_group = culture_group:toi_erainn_group
-			this.culture_group = culture_group:toi_laigin_group
-			this = culture:brythonic_mann
-			this = culture:fir_mannin
+			has_cultural_pillar = heritage_cruithin
+			has_cultural_pillar = heritage_errain
+			has_cultural_pillar = heritage_laigin
+			has_cultural_pillar = heritage_brythonic
+			has_cultural_pillar = heritage_manx
 		}
 	}
 
@@ -139,7 +155,7 @@ innovation_maa_fomorian = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_fomorian_group
+		has_cultural_pillar = heritage_fomorian
 	}
 
 	unlock_maa = bloody_warriors
@@ -153,7 +169,7 @@ innovation_maa_cessarian = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_cessarian_group
+		has_cultural_pillar = heritage_cessarian
 	}
 
 	unlock_maa = land_guardians
@@ -167,7 +183,7 @@ innovation_maa_partholonian = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_partholonian_group
+		has_cultural_pillar = heritage_partholonian
 	}
 
 	unlock_maa = travelers
@@ -181,7 +197,7 @@ innovation_maa_nemedian = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_nemedian_group
+		has_cultural_pillar = heritage_nemedian
 	}
 
 	unlock_maa = nemedian_famer
@@ -195,7 +211,7 @@ innovation_maa_fir_bolog = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_fir_bolg_group
+		has_cultural_pillar = heritage_fir_bolg
 	}
 
 	unlock_maa = the_brave_ones
@@ -209,7 +225,7 @@ innovation_maa_de_danann = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_de_danann_group
+		has_cultural_pillar = heritage_de_danann
 	}
 
 	unlock_maa = ancient_heroes
@@ -223,7 +239,7 @@ innovation_maa_milesian = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_milesian_group
+		has_cultural_pillar = heritage_milesian
 	}
 
 	unlock_maa = warriors_of_tara
@@ -238,9 +254,8 @@ innovation_maa_meghalithic = {
 
 	potential = {
 		OR = {
-			this.culture_group = culture_group:toi_meghalithic_group
-			this = culture:bann_culture
-			this = culture:fir_mannin
+			has_cultural_pillar = heritage_megalithic
+			has_cultural_pillar = heritage_manx
 		}
 	}
 
@@ -255,7 +270,7 @@ innovation_maa_hybrazil = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_hy_brazylian_group
+		has_cultural_pillar = heritage_hy_brazylian
 	}
 
 	unlock_maa = hy_brazylian_adventurers
@@ -269,9 +284,23 @@ innovation_maa_roman = {
 	icon = @maa_02
 
 	potential = {
-		this.culture_group = culture_group:toi_latin
+		has_cultural_pillar = heritage_latin
 	}
 
 	unlock_maa = roman_legion
+	
+}
+
+innovation_maa_fairy = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	
+	icon = @maa_02
+
+	potential = {
+		has_cultural_pillar = heritage_fairy
+	}
+
+	unlock_maa = fairy_swarm
 	
 }

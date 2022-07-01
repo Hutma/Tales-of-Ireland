@@ -1,0 +1,55 @@
+﻿massive_blood_received = {
+	icon = drink_positive
+	health = 2
+	courtier_opinion = -10
+	county_opinion_add = -5
+	prowess = 6
+}
+
+gave_blood_for_lord = {
+	icon = drink_negative
+	health = -1
+	prowess = -2
+}
+
+had_blood_recently = {
+	icon = drink_positive
+	health = 1
+	prowess = 4
+}
+
+gave_blood_recently = {
+	icon = drink_negative
+	health = -2
+	prowess = -4	
+}
+
+vampire_king_modifier = {
+	icon = prestige_positive
+	monthly_prestige_gain_mult = 2
+	monthly_dynasty_prestige_mult = 2
+}
+
+vampire_capital_modifier = {
+	icon = drink_positive
+	fort_level = 1
+	county_opinion_add = 80
+}
+
+hungry_for_blood = {
+	icon = drink_negative
+	prowess = -2
+	stress_gain_mult = 0.2
+}
+
+hungry_for_blood_2 = {
+	icon = drink_negative
+	prowess = -4
+	stress_gain_mult = 0.4
+}
+
+hungry_for_blood_3 = {
+	icon = drink_negative
+	prowess = -6
+	stress_gain_mult = 0.6
+}

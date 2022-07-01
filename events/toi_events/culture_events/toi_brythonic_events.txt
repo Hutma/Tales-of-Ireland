@@ -1,0 +1,117 @@
+﻿namespace = toi_brythonic_event
+
+#A united Sept
+toi_brythonic_event.0001 = {
+	title = toi_brythonic_event.0001.t
+	desc = toi_brythonic_event.0001.desc
+	theme = family
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+		is_independent_ruler = yes
+		culture = { has_cultural_pillar = heritage_brythonic }
+		dynasty = {
+			any_dynasty_member = {
+				count > 3
+				is_landed = yes
+				is_vassal_of = root
+			}
+		}
+	}
+	
+	option = {
+		name = toi_brythonic_event.0001.a
+		dynasty = {
+			add_dynasty_prestige = 75
+		}
+	}
+}
+
+#I shall rule all my Sept
+toi_brythonic_event.0002 = {
+	title = toi_brythonic_event.0002.t
+	desc = toi_brythonic_event.0002.desc
+	theme = family
+	override_background = {
+		event_background = picts_background
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+		is_independent_ruler = yes
+		culture = { has_cultural_pillar = heritage_brythonic }
+		has_character_flag = used_lifetime_unite_the_sept
+		dynasty = {
+			any_dynasty_member = {
+				count > 4
+				highest_held_title_tier <= root.highest_held_title_tier
+				is_independent_ruler = yes
+			}
+		}
+	}
+	
+	option = {
+		name = toi_brythonic_event.0002.a
+		custom_description = {
+			text = regain_ability_to_use_sept_stuff
+			remove_character_flag = used_lifetime_unite_the_sept
+			remove_character_flag = has_recalled_sept
+		}
+		stress_impact = {
+            content = major_stress_impact_gain
+            lazy = major_stress_impact_gain
+        }
+	}
+	option = {
+		name = toi_brythonic_event.0002.b
+		add_piety = 75
+		stress_impact = {
+            content = major_stress_impact_loss
+            lazy = major_stress_impact_loss
+        }
+	}
+}
+
+#A large Sept
+toi_brythonic_event.0003 = {
+	title = toi_brythonic_event.0003.t
+	desc = toi_brythonic_event.0003.desc
+	theme = family
+	override_background = {
+		event_background = picts_background
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+		culture = { has_cultural_pillar = heritage_brythonic }
+		dynasty = {
+			any_dynasty_member = {
+				count > 4
+				is_independent_ruler = yes
+				highest_held_title_tier >= 3
+			}
+		}
+	}
+	
+	option = {
+		name = toi_brythonic_event.0003.a
+		dynasty = {
+			add_dynasty_prestige = 50
+			every_dynasty_member = {
+				add_prestige = 25
+			}
+		}
+	}
+}

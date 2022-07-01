@@ -1,0 +1,37 @@
+﻿namespace = toi_scotland_decisions
+
+#empire founder
+toi_scotland_decisions.0001 = {
+	type = character_event
+	title = toi_scotland_decisions.0001.t
+	desc = toi_scotland_decisions.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	#No thanks on the nickname, more prestige instead please.
+	option = {
+		name = toi_scotland_decisions.0001.a
+		add_prestige = medium_prestige_gain
+	}
+}
+
+
+#Inform any players.
+toi_scotland_decisions.0002 = {
+	type = character_event
+	title = toi_scotland_decisions.0002.t
+	desc = toi_scotland_decisions.0002.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = toi_scotland_decisions.0002.a
+	}
+}

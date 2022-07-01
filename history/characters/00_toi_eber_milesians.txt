@@ -1,5 +1,5 @@
 ﻿250000 = {
-    name = "Ér"
+    name = "E_r"
     dynasty =  43 
     religion = milesian_paganism
     culture = eber_milesians
@@ -24,10 +24,9 @@
 }
 250001 = {
     name = "Fergna"
-    dynasty =  44 
+    dynasty = 44 
     religion = milesian_paganism
     culture = eber_milesians
-    female = yes
 
     diplomacy =  12 
     martial =  5 
@@ -50,7 +49,7 @@
     }
 }
 250002 = {
-    name = "Ferón "
+    name = "FerO_n"
     dynasty =  44 
     religion = milesian_paganism
     culture = eber_milesians
@@ -76,7 +75,7 @@
     }
 }
 250003 = {
-    name = "Fénius "
+    name = "FE_nius"
     dynasty =  45 
     religion = milesian_paganism
     culture = eber_milesians
@@ -100,7 +99,7 @@
     }
 }
 250004 = {
-    name = "Nél"
+    name = "NE_l"
     dynasty =  46 
     religion = milesian_paganism
     culture = eber_milesians
@@ -126,7 +125,7 @@
     }
 }
 250005 = {
-    name = "Bérla "
+    name = "BE_rla"
     dynasty =  47 
     religion = milesian_paganism
     culture = eber_milesians
@@ -297,7 +296,7 @@
     trait = vengeful
     trait = milesian
 
-    father=  250001 
+    father = 250001 
 
     disallow_random_traits = yes
     4780.1.1 = {
@@ -369,7 +368,7 @@
     learning =  6 
     prowess =  3 
     trait = calm
-    trait = arrogant
+    trait = bossy
     trait = milesian
 
     father=  250002 

@@ -13,8 +13,8 @@ aqueduct_01 = {
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
-		scope:holder = {
-			culture_group = culture_group:toi_latin
+		scope:holder.culture = {
+			has_cultural_pillar = heritage_latin
 		}
 	}
 
@@ -162,8 +162,8 @@ coliseum_02 = {
 
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
-		scope:holder = {
-			culture_group = culture_group:toi_latin
+		scope:holder.culture = {
+			has_cultural_pillar = heritage_latin
 		}
 	}
 

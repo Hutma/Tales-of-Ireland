@@ -220,9 +220,9 @@ toi_cessarian_event.0005 = {
 	trigger  = {
 		OR = { 
 			has_trait = cessarian
-			has_culture_group = culture_group:toi_cessarian_group
+			culture = { has_cultural_pillar = heritage_cessarian }
 		}
-		is_independent = yes
+		is_independent_ruler = yes
 		highest_held_title_tier >= 3
 		any_vassal = {
 			count >= 2
@@ -345,7 +345,7 @@ toi_cessarian_event.0007 = {
 	trigger = {
 		OR = {
 			has_trait = cessarian
-			culture_group = culture_group:toi_cessarian_group
+			culture = { has_cultural_pillar = heritage_cessarian }
 		}
 		NOT = {
 			has_character_flag = recent_gathering
@@ -354,7 +354,7 @@ toi_cessarian_event.0007 = {
 	
 	option = {
 		name = toi_cessarian_event.0007.a
-		add_gold = -25
+		remove_short_term_gold = 25
 		capital_county = {
 			change_development_level = -5
 		}
@@ -440,6 +440,7 @@ toi_cessarian_event.0008 = {
 			}
 			add_opinion = {
 				modifier = feast_hosted_successful_feast
+				target = this
 			}
 		}
 		add_prestige = 300
@@ -468,6 +469,7 @@ toi_cessarian_event.0009 = {
 			}
 			add_opinion = {
 				modifier = feast_hosted_successful_feast
+				target = this
 			}
 		}
 		add_prestige = 200
@@ -496,6 +498,7 @@ toi_cessarian_event.0010 = {
 			}
 			add_opinion = {
 				modifier = disorganized_feast_opinion
+				target = root
 			}
 		}
 		add_prestige = -100
@@ -516,9 +519,9 @@ toi_cessarian_event.0011 = {
 	trigger = {
 		OR = {
 			has_trait = cessarian
-			culture_group = culture_group:toi_cessarian_group
-			highest_held_title_tier >= 3
+			culture = { has_cultural_pillar = heritage_cessarian }
 		}
+		highest_held_title_tier >= 3
 	}
 	
 	option = {

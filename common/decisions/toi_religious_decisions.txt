@@ -57,6 +57,7 @@ truce_with_de_danann_decision = { #ask for a 10 years truce with the gods
 	}
 	
 	is_shown = {
+		always = no
 		is_ruler = yes
 		OR = {
 			faith = faith:celtic_de_danann_worship
@@ -110,6 +111,7 @@ truce_with_fomorian_decision = { #ask for a 10 years truce with the gods
 	}
 	
 	is_shown = {
+		always = no
 		is_ruler = yes
 		faith = faith:fomorian_worship
 	}

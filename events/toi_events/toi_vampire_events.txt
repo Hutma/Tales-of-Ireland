@@ -1,0 +1,25 @@
+﻿namespace = toi_vampire
+
+#Choose your hunt type
+toi_vampire.0001 = {
+	title = toi_vampire.0001.t
+	desc = toi_vampire.0001.desc
+	type = character_event
+	theme = murder_scheme
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		remove_character_flag = intrigue_hunt_style
+	}
+	option = {
+		name = toi_vampire.0001.a
+		
+	}
+	option = {
+		name = toi_vampire.0001.b
+		add_character_flag = intrigue_hunt_style
+	}
+}

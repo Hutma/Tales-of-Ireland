@@ -4,9 +4,9 @@
 ##            Chiarn  (c_chiarn )
 
 4422 = {      #Chiarn (b_chiarn)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = castle_holding
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
 			  2500.1.1 = {
 				special_building_slot = wonder_meayll_circle_01
 				special_building = wonder_meayll_circle_01
@@ -14,58 +14,58 @@
 }
 
 4423 = {      #Creneash (b_creneash)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = church_holding
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
 }
 
 4424 = {      #Eairy Shynnagh (b_eairy_shynnagh)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = none
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
 }
 
 4425 = {      #Balley Beg (b_balley_beg)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = none
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
 }
 
 ##            Balley Chashtal  (c_balley_chashtal )
 
 4426 = {      #Balley Chashtal (b_balley_chashtal)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = castle_holding
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
 }
 
 4427 = {      #Balley Sallagh (b_balley_sallagh)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = none
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
 }
 
 ###           Glion Faba (d_glion_faba)
 ##            Peel  (c_peel )
 
 4428 = {      #Peel (b_peel)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = castle_holding
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
 }
 
 4429 = {      #Delbee (b_delbee)
-              culture = fir_bolg
-              religion = ancient_greek_slave
-              holding = city_holding
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = city_holding
 }
 
 ##            Keeill Eoin  (c_balley_keeill_eoin )
 
 4430 = {      #Keeill Eoin (b_balley_keeill_eoin)
-              culture = fir_bolg
-              religion = manx_builders
-              holding = castle_holding
+    culture = fir_bolg
+    religion = manx_builders
+    holding = castle_holding
 			  2500.1.1 = {
 				special_building_slot = wonder_ballaharra_stones_01
 				special_building = wonder_ballaharra_stones_01
@@ -73,122 +73,122 @@
 }
 
 4431 = {      #Greeba (b_greeba)
-              culture = fir_bolg
-              religion = manx_builders
-              holding = church_holding
+    culture = fir_bolg
+    religion = manx_builders
+    holding = church_holding
 }
 
 ##            Ballagyr  (c_ballagyr )
 
 4432 = {      #Ballagyr (b_ballagyr)
-              culture = dal_riata
-              religion = sea_dwellers
-              holding = castle_holding
+    culture = dal_riata
+    religion = sea_dwellers
+    holding = castle_holding
 }
 
 4433 = {      #Lambfell Moar (b_lambfell_moar)
-              culture = dal_riata
-              religion = sea_dwellers
-              holding = city_holding
+    culture = dal_riata
+    religion = sea_dwellers
+    holding = city_holding
 }
 
 ###           Medall (d_medall)
 ##            Doolish  (c_doolish )
 
 4434 = {      #Doolish (b_doolish)
-              culture = brythonic_mann
-              religion = the_old_gods
-              holding = castle_holding
+    culture = brythonic_mann
+    religion = the_old_gods
+    holding = castle_holding
 }
 
 4435 = {      #Ballaveare (b_ballaveare)
-              culture = brythonic_mann
-              religion = the_old_gods
-              holding = church_holding
+    culture = brythonic_mann
+    religion = the_old_gods
+    holding = church_holding
 }
 
 4436 = {      #Braaid (b_braaid)
-              culture = brythonic_mann
-              religion = the_old_gods
-              holding = city_holding
+    culture = brythonic_mann
+    religion = the_old_gods
+    holding = city_holding
 }
 
 ##            Kione Droghad  (c_kione_droghad )
 
 4437 = {      #Kione Droghad (b_kione_droghad)
-              culture = brythonic_mann
-              religion = the_old_gods
-              holding = castle_holding
+    culture = brythonic_mann
+    religion = the_old_gods
+    holding = castle_holding
 }
 
 4438 = {      #Glion Vian (b_glion_vian)
-              culture = brythonic_mann
-              religion = the_old_gods
-              holding = none
+    culture = brythonic_mann
+    religion = the_old_gods
+    holding = none
 }
 
 ###           Maayl (d_maayl)
 ##            Laksaa  (c_laksaa )
 
 4439 = {      #Laksaa (b_laksaa)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = castle_holding
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = castle_holding
 }
 
 4440 = {      #Baldrine (b_baldrine)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = church_holding
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = church_holding
 }
 
 ##            Kirk Michael  (c_kirk_michael )
 
 4441 = {      #Kirk Michael (b_kirk_michael)
-              culture = bann_culture
-              religion = manx_builders
-              holding = castle_holding
+    culture = bann_culture
+    religion = manx_builders
+    holding = castle_holding
 }
 
 4442 = {      #Orrisdale (b_orrisdale)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = none
 }
 
 4443 = {      #Balley ny Loughey (b_balley_ny_loughey)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = none
 }
 
 ##            Snaefell  (c_snaefell )
 
 4444 = {      #Snaefell (b_snaefell)
-              culture = neagh_nemedians
-              religion = fathers_of_manx
-              holding = castle_holding
+    culture = neagh_nemedians
+    religion = fathers_of_manx
+    holding = castle_holding
 }
 
 4445 = {      #Injebreck (b_injebreck)
-              culture = neagh_nemedians
-              religion = fathers_of_manx
-              holding = church_holding
+    culture = neagh_nemedians
+    religion = fathers_of_manx
+    holding = church_holding
 }
 
 4446 = {      #Killabane (b_killabane)
-              culture = neagh_nemedians
-              religion = fathers_of_manx
-              holding = none
+    culture = neagh_nemedians
+    religion = fathers_of_manx
+    holding = none
 }
 
 ###           Garff (d_garff)
 ##            Rhumsaa  (c_rhumsaa )
 
 4447 = {      #Rhumsaa (b_rhumsaa)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = castle_holding
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = castle_holding
 			  2500.1.1 = {
 				special_building_slot = wonder_cashtal_yn_ard_01
 				special_building = wonder_cashtal_yn_ard_01
@@ -196,23 +196,23 @@
 }
 
 4448 = {      #Maghal (b_maghal)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = city_holding
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = city_holding
 }
 
 4449 = {      #Corrany (b_corrany)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = none
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = none
 }
 
 ##            Agneash  (c_agneash )
 
 4450 = {      #Agneash (b_agneash)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = castle_holding
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = castle_holding
 			  2500.1.1 = {
 				special_building_slot = wonder_king_grave_01
 				special_building = wonder_king_grave_01
@@ -220,55 +220,55 @@
 }
 
 4451 = {      #Verandah (b_verandah)
-              culture = brythonic_mann
-              religion = fathers_of_manx
-              holding = none
+    culture = brythonic_mann
+    religion = fathers_of_manx
+    holding = none
 }
 
 ###           Inver Ayre (d_inver_ayre)
 ##            Skeerey Jorby  (c_skeerey_jorby )
 
 4452 = {      #Skeerey Jorby (b_skeerey_jorby)
-              culture = bann_culture
-              religion = manx_builders
-              holding = castle_holding
+    culture = bann_culture
+    religion = manx_builders
+    holding = castle_holding
 }
 
 4453 = {      #Crawyn (b_crawyn)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = none
 }
 
 4454 = {      #Sulby (b_sulby)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = none
 }
 
 ##            Smeale  (c_smeale )
 
 4455 = {      #Smeale (b_smeale)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = castle_holding
 }
 
 4456 = {      #Ayre (b_ayre)
-              culture = bann_culture
-              religion = manx_builders
-              holding = castle_holding
+    culture = bann_culture
+    religion = manx_builders
+    holding = castle_holding
 }
 
 4457 = {      #Cranstal (b_cranstal)
-              culture = bann_culture
-              religion = manx_builders
-              holding = church_holding
+    culture = bann_culture
+    religion = manx_builders
+    holding = church_holding
 }
 
 4458 = {      #Andreas (b_andreas)
-              culture = bann_culture
-              religion = manx_builders
-              holding = none
+    culture = bann_culture
+    religion = manx_builders
+    holding = none
 }
 

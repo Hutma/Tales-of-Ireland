@@ -24,3 +24,12 @@
  ROMAN_ARMY:0 "Roman Invasion Army"
  
  roman_army_event_troops:0 "Roman invading army"
+ 
+ toi_roman_invasion.0201.t:0 "Romans are gathering"
+ toi_roman_invasion.0201.desc:0 "The Romans, the conquerors of the farlands in England, are not satisfied. An army has amassed near the great lowlands, preparing to push into new territory. Their ambitions, as too their armies, seem to have no bounds."
+ toi_roman_invasion.0201.ascot:0 "We must hold our ancestor’s lands!"
+ toi_roman_invasion.0201.aire:0 "May they never take this fair isle."
+ 
+ toi_roman_invasion.0202.t:0 "Attack on Caledonia"
+ toi_roman_invasion.0202.desc:0 "It has begun. The Roman Empire has declared the lowlands to be the province of Caledonia, and their mobilized army has begun to march into the lowlands. Time will tell whether the lowlands can unify and repel this force, for only a unified Lowlands can hold the line."
+ toi_roman_invasion.0202.a:0 "Forward! To crush the Eagle’s Wings!"

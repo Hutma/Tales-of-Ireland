@@ -1,0 +1,440 @@
+﻿# Events for toi_otherworld_explorations
+
+namespace = toi_otherworld_exploration
+
+
+# Plan the trip
+toi_otherworld_exploration.0001 = {
+	type = character_event
+	title = toi_otherworld_exploration.0001.t
+	desc = toi_otherworld_exploration.0001.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = root
+
+	immediate = {
+		# Stop characters from planning multiple activities at once.
+		add_character_flag = {
+			flag = planning_an_activity
+			days = 30
+		}
+	}
+	
+	option = { #short trip
+		name = toi_otherworld_exploration.0001.a
+		root.capital_barony.title_province = { #spawn activity
+			spawn_activity = {
+				owner = root
+				type = activity_otherworld_exploration
+			}
+		}
+		activity = {
+			set_variable = { #start countdown of events
+				name = number_of_places_counter
+				value = 2
+			}
+		}
+		remove_short_term_gold = minor_gold_value
+		capital_county = {
+			change_development_level = -2
+		}
+	}
+
+	option = { #medium one
+		name = toi_otherworld_exploration.0001.b
+		root.capital_barony.title_province = {
+			spawn_activity = {
+				owner = root
+				type = activity_otherworld_exploration
+			}
+		}
+		activity = {
+			set_variable = { #start countdown of events
+				name = number_of_places_counter
+				value = 1
+			}
+		}
+		remove_short_term_gold = medium_gold_value
+		capital_county = {
+			change_development_level = -4
+		}
+	}
+
+	option = { #long trip
+		name = toi_otherworld_exploration.0001.c
+		root.capital_barony.title_province = {
+			spawn_activity = {
+				owner = root
+				type = activity_otherworld_exploration
+			}
+		}
+		activity = {
+			set_variable = { #start countdown of events
+				name = number_of_places_counter
+				value = 0
+			}
+		}
+		remove_short_term_gold = major_gold_value
+		capital_county = {
+			change_development_level = -6
+		}
+	}
+	
+	option = { # I don't want to go on a toi_otherworld_exploration after all
+		name = toi_otherworld_exploration.0001.d
+		remove_decision_cooldown = go_on_otherworld_exlporation_mundane_decision
+		remove_decision_cooldown = go_on_otherworld_exlporation_magician_decision
+
+		remove_character_flag = planning_an_activity
+	}
+}
+
+
+toi_otherworld_exploration.1001 = {
+	type = character_event
+	title = toi_otherworld_exploration.1001.t
+	desc = {
+		desc = toi_otherworld_exploration.1001.desc
+	}
+	theme = learning_scholarship_focus
+	left_portrait = root
+	override_background = { event_background = terrain }
+
+	option = {
+		name = toi_otherworld_exploration.1001.a
+		trigger_event = {
+			on_action = otherworld_exploration_activity_limit_hub
+			days = 30
+		}
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+}
+
+#place events
+toi_otherworld_exploration.2001 = { #Tír na nÓg, the Lands of Youth
+	type = character_event
+    title = toi_otherworld_exploration.2001.t
+    desc = toi_otherworld_exploration.2001.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = lands_of_youth
+	}
+    right_portrait = {
+        character = root 
+        animation = happiness
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2001
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2001
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2001
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2001.a
+    }
+}
+
+toi_otherworld_exploration.2002 = { #Tír fo Thuinn, the Realm Beneath the Sea
+	type = character_event
+    title = toi_otherworld_exploration.2002.t
+    desc = toi_otherworld_exploration.2002.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = realm_beneath_the_sea
+	}
+    right_portrait = {
+        character = root 
+        animation = admiration
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2002
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2002
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2002
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2002.a
+    }
+}
+
+toi_otherworld_exploration.2003 = { #Mag Mell, the Delightful Plains
+	type = character_event
+    title = toi_otherworld_exploration.2003.t
+    desc = toi_otherworld_exploration.2003.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = the_delightful_plains
+	}
+    right_portrait = {
+        character = root 
+        animation = ecstasy
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2003
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2003
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2003
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2003.a
+		add_stress = -25
+    }
+}
+
+toi_otherworld_exploration.2004 = { #Ildathach, the Place of Many Colours
+	type = character_event
+    title = toi_otherworld_exploration.2004.t
+    desc = toi_otherworld_exploration.2004.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = place_of_many_colours
+	}
+    right_portrait = {
+        character = root 
+        animation = paranoia
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2004
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2004
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2004
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2004.a
+    }
+}
+
+toi_otherworld_exploration.2005 = { #Emain Ablach, the Island of the Apples
+	type = character_event
+    title = toi_otherworld_exploration.2005.t
+    desc = toi_otherworld_exploration.2005.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = the_island_of_the_apples
+	}
+    right_portrait = {
+        character = root 
+        animation = personality_rational
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2005
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2005
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2005
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2005.a
+    }
+}
+
+toi_otherworld_exploration.2006 = { #Mag Findargat, Land of Silver
+	type = character_event
+    title = toi_otherworld_exploration.2006.t
+    desc = toi_otherworld_exploration.2006.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = land_of_silver
+	}
+    right_portrait = {
+        character = root 
+        animation = worry
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2006
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2006
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2006
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2006.a
+    }
+}
+
+toi_otherworld_exploration.2007 = { #Tír na Marbh, the Land of the Dead
+	type = character_event
+    title = toi_otherworld_exploration.2007.t
+    desc = toi_otherworld_exploration.2007.desc
+    theme = learning_scholarship_focus
+	override_background = {
+		event_background = land_of_the_dead
+	}
+    right_portrait = {
+        character = root 
+        animation = sadness
+    }
+    
+   trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_exploration_2007
+		}
+	}
+
+	immediate = {
+		activity = {
+			set_variable = {
+				name = had_otherworld_exploration_2007
+				value = yes
+			}
+			set_variable = {
+				name = is_having_otherworld_exploration_2007
+				value = yes
+			}
+		}
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.2007.a
+		add_stress = 25
+    }
+}
+
+toi_otherworld_exploration.3000 = { #Return event
+	type = character_event
+    title = toi_otherworld_exploration.3000.t
+    desc = toi_otherworld_exploration.3000.desc
+    theme = learning_scholarship_focus
+
+    right_portrait = {
+        character = root 
+        animation = personality_bold
+    }
+    
+   trigger = {
+		exists = activity
+	}
+    
+    option = {
+        name = toi_otherworld_exploration.3000.a
+		
+		if = {
+			limit = { has_trait = magician_good }
+			add_tales_of_magic_lifestyle_xp = 200
+		}
+		activity = {
+			complete_activity = yes
+		}
+    }
+}
+

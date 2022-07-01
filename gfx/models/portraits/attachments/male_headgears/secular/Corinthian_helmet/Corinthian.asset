@@ -1,0 +1,19 @@
+﻿pdxmesh = {
+	name = "Corinthian_mesh"
+	file = "Corinthian.mesh"
+
+	meshsettings = {
+		name = "CorinthianShape"
+        index = 0
+		texture_diffuse = "PDXmat_Corinthian_diffuse.tga"
+		texture_normal = "PDXmat_Corinthian_normal.tga"
+		texture_specular = "PDXmat_Corinthian_properties.tga"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "Corinthian_entity"
+	pdxmesh = "Corinthian_mesh"
+}

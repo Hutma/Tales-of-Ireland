@@ -1,0 +1,179 @@
+﻿namespace = toi_pictish_invasion
+
+#pict hidden triggers 0001
+toi_pictish_invasion.1001 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				any_held_title = {
+					title_capital_county.title_province = {
+						geographical_region = region_scotland
+					}
+				}
+			}
+			trigger_event = {
+				id = toi_pictish_invasion.0001
+				days = 1
+			}
+		}
+		trigger_event = {
+			id = toi_pictish_invasion.1002
+			days = { 300 960 }
+		}
+	}
+}
+
+#Wrath of the picts
+toi_pictish_invasion.0001 = {
+	title = toi_pictish_invasion.0001.t
+	desc = toi_pictish_invasion.0001.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = picts_background
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_cynical
+	}
+	
+	option = {
+		name = toi_pictish_invasion.0001.a
+	}
+}
+
+#pictish hidden triggers 0002
+toi_pictish_invasion.1002 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				any_held_title = {
+					title_capital_county.title_province = {
+						geographical_region = region_scotland
+					}
+				}
+			}
+			trigger_event = {
+				id = toi_pictish_invasion.0002
+				days = 1
+			}
+		}
+		pictish_invasion_scripted_effect = yes
+	}
+}
+
+#They attack!
+toi_pictish_invasion.0002 = {
+	title = toi_pictish_invasion.0002.t
+	desc = toi_pictish_invasion.0002.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = picts_background
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {
+		name = toi_pictish_invasion.0002.a
+	}
+}
+
+#pictish hidden triggers 0003, after failing
+toi_pictish_invasion.1003 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				any_held_title = {
+					title_capital_county.title_province = {
+						geographical_region = region_scotland
+					}
+				}
+			}
+			trigger_event = {
+				id = toi_pictish_invasion.0003
+				days = 1
+			}
+		}
+		pictish_invasion_scripted_effect = yes
+	}
+}
+
+#Last pictish hope!
+toi_pictish_invasion.0003 = {
+	title = toi_pictish_invasion.0003.t
+	desc = toi_pictish_invasion.0003.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = picts_background
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {
+		name = toi_pictish_invasion.0003.a
+	}
+}
+
+#pictish hidden triggers 0004, finish
+toi_pictish_invasion.1004 = {
+	hidden = yes
+	type = empty
+	
+	immediate = {
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				any_held_title = {
+					title_capital_county.title_province = {
+						geographical_region = region_scotland
+					}
+				}
+			}
+			trigger_event = {
+				id = toi_pictish_invasion.0004
+				days = 1
+			}
+		}
+	}
+}
+
+#end of picts
+toi_pictish_invasion.0004 = {
+	title = toi_pictish_invasion.0004.t
+	desc = toi_pictish_invasion.0004.desc
+	type = character_event
+	theme = war
+	override_background = {
+		event_background = picts_background
+	}
+	
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {
+		name = toi_pictish_invasion.0004.a
+	}
+}

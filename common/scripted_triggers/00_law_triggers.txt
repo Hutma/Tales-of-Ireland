@@ -61,7 +61,11 @@ realm_law_use_crown_authority = {
 }
 
 can_have_confederate_partition_succession_law_trigger = {
-	has_government = feudal_government
+	OR = {
+		has_government = feudal_government
+		has_government = tribal_government
+		has_government = clan_government
+	}
 }
 
 can_have_ancient_partition_succession_law_trigger = {
@@ -81,7 +85,9 @@ can_keep_partition_succession_law_trigger = {
 }
 
 can_have_partition_succession_law_trigger = {
-	#Not in use atm
+	culture = {
+		has_innovation = innovation_hereditary_rule
+	}
 	custom_description = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {
@@ -133,9 +139,9 @@ can_keep_single_heir_dynasty_house_trigger = {
 
 can_have_single_heir_dynasty_house_trigger = {
 	exists = house
-	culture = {
-		has_innovation = innovation_empowered_aristocracy
-	}
+	# culture = {
+		# has_innovation = innovation_empowered_aristocracy
+	# }
 	custom_description = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {

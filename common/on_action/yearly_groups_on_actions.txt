@@ -1,21 +1,18 @@
 ﻿fp1_yearly_events = {
-	trigger = {
-		has_fp1_dlc_trigger = yes
-		OR = {
-			has_culture_group = culture_group:toi_partholonian_group
-			culture = culture:sea_fomorians
-			religion = religion:northern_legacy_religion
-		}
-	}
+	trigger = { fp1_eligible_for_yearly_events_trigger = yes }
 	weight_multiplier = {
 		base = 1
-		modifier = {
+		modifier = { # Reduces frequency for characters with non-matching cultures
 			factor = 0.33
 			religion = religion:northern_legacy_religion
 			NOT = {
-				has_culture_group = culture_group:toi_partholonian_group
+				culture = { has_cultural_pillar = heritage_partholonian }
 				culture = culture:sea_fomorians
 			}
+		}
+		modifier = { # Reduces frequency for having both sets of FP events valid
+			factor = 0.5
+			fp2_character_involved_in_struggle_trigger = yes
 		}
 	}
 
@@ -24,7 +21,6 @@
 		200 = 0
 		
 		# Other Events
-		100 = varangian.0001
 		200 = trait_specific.9001 # Become Poet
 		
 		#FP1 Events
@@ -68,6 +64,5 @@
 		50 = fp1_yearly.1071 # Sparklingly Clean
 		50 = fp1_yearly.1081 # An explorer of the Atlantic wishes to share their tales with you.
 		5 = fp1_yearly.2500 # What's that deviant up to this time!?
-		500 = fp1_major_decisions.1001 # Canute & the Tide
 	}
 }

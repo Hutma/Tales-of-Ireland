@@ -132,8 +132,8 @@ founded_iarmuman_decision_scripted_effect = {
 		title:d_clangibbon = { set_de_jure_liege_title = title:k_iarmuman }
 		title:d_iffa = { set_de_jure_liege_title = title:k_iarmuman }
 		title:d_coshmore = { set_de_jure_liege_title = title:k_iarmuman }
-		title:d_kinnatallon = { set_de_jure_liege_title = title:k_iarmuman }
-		title:d_omkilly = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_kinnatalloon = { set_de_jure_liege_title = title:k_iarmuman }
+		title:d_imokilly = { set_de_jure_liege_title = title:k_iarmuman }
 	}
 	
 	title:c_monatrim = {

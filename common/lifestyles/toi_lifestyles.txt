@@ -9,3 +9,15 @@ tales_of_abundance_lifestyle = {
 	xp_per_level = 1000
 	base_xp_gain = 25
 }
+
+tales_of_magic_lifestyle = {	
+	is_valid = { 
+		OR = { 
+			has_trait = magician_good_1
+			has_trait = magician_good_2
+			has_trait = magician_good_3
+		}
+	}
+	xp_per_level = 1000
+	base_xp_gain = 25
+}

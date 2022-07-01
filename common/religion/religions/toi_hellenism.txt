@@ -44,8 +44,6 @@
 		{ name = "holy_order_priesthood_of_ares" }
 	}
 
-	holy_order_maa = { praetorian }
-
 	localization = {
 		#High God Name
 		HighGodName = hellenism_high_god_name

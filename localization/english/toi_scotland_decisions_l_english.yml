@@ -1,0 +1,43 @@
+﻿l_english:
+ #Empires decisions
+ the_empire_of_the_isles_decision:0 "Unite the Isles"
+ the_empire_of_the_isles_decision_desc:0 "Too long has the sea been the domain of pirates, watery Sidhe and monsters. Too long have we lived in fear of what lies beneath and beyond the shores. From the deep shall arise a new kingdom, and we will subdue the last untamed corners of this earth!"
+ the_empire_of_the_isles_decision_tooltip:0 "Unite the Isles"
+ the_empire_of_the_isles_decision_confirm:0 "Rule the seas!"
+ 
+ the_empire_of_dal_riata_decision:0 "Kings in both Ireland and Alba"
+ the_empire_of_dal_riata_decision_desc:0 "The Dál Riata are destined to rule an empire spanning Ireland, Alba and the great waters between. Let us join these lands under one banner, and affirm ourselves as the masters over land and sea!"
+ the_empire_of_dal_riata_decision_tooltip:0 "The Dál Riata empire"
+ the_empire_of_dal_riata_decision_confirm:0 "Let's build our Empire!"
+ 
+ #Fairy
+ determine_fairy_court_decision:0 "Determine my Fairy Court"
+ determine_fairy_court_decision_desc:0 "It is time for me to pass the ceremony that will guide me to the court I must respect. I want to find out what the future has in store for me."
+ determine_fairy_court_decision_tooltip:0 "Determine Fairy court"
+ determine_fairy_court_decision_confirm:0 "Look into my future"
+ 
+ summon_fairy_to_court_decision:0 "Summon family member"
+ summon_fairy_to_court_decision_desc:0 "I feel like I should call a family member from the Otherworld to join my court. I will need help to rule my realm well. I will consider this new fairy as my own descendant."
+ summon_fairy_to_court_decision_tooltip:0 "Summon Fairy"
+ summon_fairy_to_court_decision_confirm:0 "A new family member"
+ a_new_fairy_in_court.tt: "A fairy has joined your court"
+ 
+ call_seelie_king_decision:0 "Call the Seelie Rí into war"
+ call_seelie_king_decision_desc:0 "My realm, which is a part of the fairy realm, is threaten and must denfend itself into a  risky war. We must call the ruler of the Seelie court to help us!"
+ call_seelie_king_decision_tooltip:0 "Ask help from the Seelie court"
+ call_seelie_king_decision_confirm:0 "Ask for help"
+ 
+ call_unseelie_king_decision:0 "Call the Unseelie Rí into war"
+ call_unseelie_king_decision_desc:0 "My realm, which is a part of the fairy realm, is threaten and must denfend itself into a  risky war. We must call the ruler of the Unseelie court to help us!"
+ call_unseelie_king_decision_tooltip:0 "Ask help from the Unseelie court"
+ call_unseelie_king_decision_confirm:0 "Ask for help"
+ 
+ retake_seelie_court_decision:0 "Claim the Seelie Court"
+ retake_seelie_court_decision_desc:0 "The Seelie Court is held by someone who cannot and should not rule it. I have a better legitimacy and could reform a true Seelie Court around my rule."
+ retake_seelie_court_decision_tooltip:0 "Take the Seelie Court"
+ retake_seelie_court_decision_confirm:0 "Take the Seelie Court"
+
+ retake_unseelie_court_decision:0 "Claim the Unseelie Court"
+ retake_unseelie_court_decision_desc:0 "The Unseelie Court is held by someone who cannot and should not rule it. I have a better legitimacy and could reform a true Unseelie Court around my rule."
+ retake_unseelie_court_decision_tooltip:0 "Take the Unseelie Court"
+ retake_unseelie_court_decision_confirm:0 "Take the Unseelie Court"

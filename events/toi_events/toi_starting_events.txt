@@ -15,7 +15,7 @@ introduction_event.001 =  {
 		name = introduction_event.001.a
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_fomorian_group
+				has_trait = fomorian
 			}
 			trigger_event = {
 				id = introduction_event.010
@@ -23,7 +23,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_cessarian_group
+				has_trait = cessarian
 			}
 			trigger_event = {
 				id = introduction_event.002
@@ -31,7 +31,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_partholonian_group
+				has_trait = partholonian
 			}
 			trigger_event = {
 				id = introduction_event.003
@@ -39,7 +39,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_nemedian_group
+				has_trait = nemedian
 			}
 			trigger_event = {
 				id = introduction_event.004
@@ -47,7 +47,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_fir_bolg_group
+				has_trait = fir_bolg
 			}
 			trigger_event = {
 				id = introduction_event.005
@@ -55,7 +55,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_de_danann_group
+				has_trait = tuatha_de_danann
 			}
 			trigger_event = {
 				id = introduction_event.006
@@ -63,7 +63,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_milesian_group
+				has_trait = milesian
 			}
 			trigger_event = {
 				id = introduction_event.007
@@ -71,11 +71,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				OR = {
-					has_culture_group = culture_group:toi_cruithin_group
-					has_culture_group = culture_group:toi_erainn_group
-					has_culture_group = culture_group:toi_laigin_group
-				}
+				has_trait = celtic_human
 			}
 			trigger_event = {
 				id = introduction_event.008
@@ -83,7 +79,7 @@ introduction_event.001 =  {
 		}
 		if = {
 			limit = {
-				has_culture_group = culture_group:toi_meghalithic_group
+				has_trait = megalith_human
 			}
 			trigger_event = {
 				id = introduction_event.009

@@ -1,0 +1,71 @@
+﻿
+### Cultural heritage triggers
+# By their nature these triggers will be a bit lose and inaccurate, so keep that in mind when using them!
+
+
+#ASIA
+culture_has_asian_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_east_asian_heritage_pillar_trigger = {
+	culture = { has_cultural_pillar = heritage_hy_brazylian }
+}
+culture_has_west_asian_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_south_asian_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_north_asian_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_central_asian_heritage_pillar_trigger = {
+	always = no
+}
+
+#AFRICA
+culture_has_african_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_west_african_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_east_african_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_north_african_heritage_pillar_trigger = {
+	always = no
+}
+culture_has_central_african_heritage_pillar_trigger = {
+	always = no
+}
+
+#MENA
+culture_has_mena_heritage_pillar_trigger = {
+	always = no
+}
+
+#EUROPE
+culture_has_european_heritage_pillar_trigger = {
+	always = yes
+}
+culture_has_west_european_heritage_pillar_trigger = {
+	culture = { has_cultural_pillar = heritage_milesian }
+}
+culture_has_east_european_heritage_pillar_trigger = {
+	culture = { has_cultural_pillar = heritage_nemedian }
+}
+culture_has_north_european_heritage_pillar_trigger = {
+	culture = { has_cultural_pillar = heritage_partholonian }
+}
+culture_has_south_european_heritage_pillar_trigger = {
+	culture = { 
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_fir_bolg
+		}
+	}
+}
+culture_has_central_european_heritage_pillar_trigger = {
+	always = no
+}

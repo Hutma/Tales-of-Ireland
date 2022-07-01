@@ -20,8 +20,8 @@
 		scope:actor = { #If you can call them as a House Member then do that
 			NOT = {
 				is_character_interaction_valid = {
-				    recipient = scope:recipient
-				    interaction = call_house_member_to_war_interaction
+					recipient = scope:recipient
+					interaction = call_house_member_to_war_interaction
 				}
 			}
 		}
@@ -112,6 +112,12 @@
 					any_war_attacker = { this = scope:recipient }
 					any_war_defender = { this = scope:recipient }
 				}
+			}
+
+			# block the call for Border Raid
+			custom_tooltip = {
+				text = no_call_ally_for_this_war_tt
+				NOT = { using_cb = fp2_border_raid }
 			}
 		}
 	}
@@ -289,6 +295,190 @@
 			scope:target.casus_belli.primary_defender = scope:actor
 			desc = DEFENSIVE_WAR_REASON
 		}
+		
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
+		}
+		
+		modifier = { # Shared Court Language (non-spoken)
+			add = 10
+			desc = foreign_realm_court_language_non_spoken_interaction_reason
+			trigger = {
+				scope:actor = {
+					has_royal_court = yes
+					NOT = { knows_court_language_of = this }
+				}
+				NOT = {
+					scope:actor.top_liege = scope:recipient.top_liege
+				}
+				OR = {
+					AND = {
+						scope:recipient = {
+							has_royal_court = yes
+						}
+						scope:actor = { # You share Court Language
+							has_same_court_language = scope:recipient
+						}
+					}
+					
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege does
+						is_independent_ruler = no
+						has_royal_court = no
+						liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						exists = liege.liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege's liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						exists = liege.liege.liege
+						exists = liege.liege.liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = { # Shared Court Language (spoken)
+			add = 30
+			desc = foreign_realm_court_language_spoken_interaction_reason
+			trigger = {
+				scope:actor = {
+					has_royal_court = yes
+					knows_court_language_of = this
+				}
+				NOT = {
+					scope:actor.top_liege = scope:recipient.top_liege
+				}
+				OR = {
+					AND = {
+						scope:recipient = {
+							has_royal_court = yes
+						}
+						scope:actor = { # You share Court Language
+							has_same_court_language = scope:recipient
+						}
+					}
+					
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege does
+						is_independent_ruler = no
+						has_royal_court = no
+						liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						exists = liege.liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+					scope:recipient = { # The recipient doesn't have a royal court, but their liege's liege's liege's liege does, while their liege doesn't have a royal court
+						is_independent_ruler = no
+						has_royal_court = no
+						exists = liege.liege
+						exists = liege.liege.liege
+						exists = liege.liege.liege.liege
+						liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege = {
+							is_independent_ruler = no
+							has_royal_court = no
+						}
+						liege.liege.liege.liege = {
+							has_royal_court = yes
+							has_same_court_language = scope:actor
+						}
+					}
+				}
+			}
+		}
 
 		compare_modifier = { # Likes fighting infidels
 			trigger = {
@@ -355,6 +545,56 @@
 			}
 			desc = WONT_ATTACK_RELIGIOUS_BRETHREN_REASON
 		}
+
+		modifier = { # Reluctant to join against Friends
+			add = -50
+			trigger_if = {
+				limit = {
+					scope:target.casus_belli.primary_defender = scope:actor
+				}
+				has_relation_friend = scope:target.casus_belli.primary_attacker
+			}
+			trigger_else = {
+				has_relation_friend = scope:target.casus_belli.primary_defender
+			}
+		}
+
+		modifier = { # Reluctant to join against Best Friends
+			add = -100
+			trigger_if = {
+				limit = {
+					scope:target.casus_belli.primary_defender = scope:actor
+				}
+				has_relation_best_friend = scope:target.casus_belli.primary_attacker
+			}
+			trigger_else = {
+				has_relation_best_friend = scope:target.casus_belli.primary_defender
+			}
+		}
+		modifier = { # Reluctant to join against Lovers
+			add = -100
+			trigger_if = {
+				limit = {
+					scope:target.casus_belli.primary_defender = scope:actor
+				}
+				has_relation_lover = scope:target.casus_belli.primary_attacker
+			}
+			trigger_else = {
+				has_relation_lover = scope:target.casus_belli.primary_defender
+			}
+		}
+		modifier = { # Reluctant to join against Soul mate
+			add = -200
+			trigger_if = {
+				limit = {
+					scope:target.casus_belli.primary_defender = scope:actor
+				}
+				has_relation_soulmate = scope:target.casus_belli.primary_attacker
+			}
+			trigger_else = {
+				has_relation_soulmate = scope:target.casus_belli.primary_defender
+			}
+		}
 	}
 
 	# Score above 0 means the AI will call this ally. Note that DESIRED_WAR_SIDE_STRENGTH still applies and can prevent calling the ally
@@ -405,6 +645,16 @@
 			factor = 0
 		}
 		
+		modifier = { # Don't call brand-new allies into old wars, at least until some time has elapsed.
+			has_variable = delay_calling_recent_ally
+			var:delay_calling_recent_ally = scope:recipient
+			scope:target = {
+				war_days >= 30
+			}
+			factor = 0
+
+		}
+
 		modifier = { # If the recipient is allied to both the attacker and the defender, the attacker shouldn't call
 			scope:target.casus_belli.primary_attacker = scope:actor
 			scope:target.casus_belli.primary_defender = {
@@ -707,25 +957,16 @@ negotiate_alliance_interaction = {
 							}
 						}
 						save_scope_as = actor_spouse
-					}
-				}
-				scope:recipient = {
-					random_close_family_member = {
-						limit = {
-							OR = {
-								is_child_of = scope:recipient
-								is_parent_of = scope:recipient
-								is_sibling_of = scope:recipient
-							}
-							any_spouse = {
+						random_spouse = {
+							limit = {
 								OR = {
-									is_child_of = scope:actor
-									is_parent_of = scope:actor
-									is_sibling_of = scope:actor
+									is_child_of = scope:recipient
+									is_parent_of = scope:recipient
+									is_sibling_of = scope:recipient
 								}
 							}
+							save_scope_as = recipient_spouse
 						}
-						save_scope_as = recipient_spouse
 					}
 				}
 				scope:actor = {
@@ -1000,36 +1241,42 @@ negotiate_alliance_interaction = {
 				value = -20
 				if = {
 					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_astray_level
+						# Exempt certain struggle phases.
+						NOT = { is_struggle_parameter_active_interfaith_marriages_available_between_involved_characters_trigger = yes }
+					}
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_astray_level
+								}
 							}
 						}
+						subtract = 20
 					}
-					subtract = 20
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_hostile_level
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_hostile_level
+								}
 							}
 						}
+						subtract = 40
 					}
-					subtract = 40
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_evil_level
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_evil_level
+								}
 							}
 						}
+						subtract = 60
 					}
-					subtract = 60
 				}
 			}
 			desc = MARRY_DIFFERENT_FAITH_REASON
@@ -1044,7 +1291,7 @@ negotiate_alliance_interaction = {
 		}
 		
 		modifier = {
-			add = 50
+			add = intimidated_reason_value
 			scope:recipient = {
 				target_is_liege_or_above = scope:actor
 				has_dread_level_towards = {
@@ -1055,7 +1302,7 @@ negotiate_alliance_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 100
+			add = cowed_reason_value
 			scope:recipient = {
 				target_is_liege_or_above = scope:actor
 				has_dread_level_towards = {
@@ -1067,7 +1314,7 @@ negotiate_alliance_interaction = {
 		}
 		
 		modifier = {
-			add = 10
+			add = intimidated_external_reason_value
 			scope:recipient = {
 				NOT = { target_is_liege_or_above = scope:actor }
 				has_dread_level_towards = {
@@ -1078,7 +1325,7 @@ negotiate_alliance_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 20
+			add = cowed_external_reason_value
 			scope:recipient = {
 				NOT = { target_is_liege_or_above = scope:actor }
 				has_dread_level_towards = {
@@ -1191,6 +1438,13 @@ negotiate_alliance_interaction = {
 			}
 			add = -50
 			desc = IS_AT_WAR_REASON
+		}
+
+		#Bonus from Tradition Astute Diplomats
+		modifier = {
+			scope:actor.culture = { has_cultural_parameter = facilitate_alliance_acceptance }
+			add = 50 #should be in a file 00_traditions_values
+			desc = TRADITION_ASTUTE_DIPLOMATS_ACCEPTANCE_MODIFIER
 		}
 	}
 
@@ -1579,43 +1833,49 @@ perk_alliance_interaction = {
 				value = -20
 				if = {
 					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_astray_level
+						# Exempt certain struggle phases.
+						NOT = { is_struggle_parameter_active_interfaith_marriages_available_between_involved_characters_trigger = yes }
+					}
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_astray_level
+								}
 							}
 						}
+						subtract = 20
 					}
-					subtract = 20
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_hostile_level
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_hostile_level
+								}
 							}
 						}
+						subtract = 40
 					}
-					subtract = 40
-				}
-				if = {
-					limit = {
-						scope:recipient.faith = {
-							faith_hostility_level = {
-								target = scope:actor.faith
-								value >= faith_evil_level
+					if = {
+						limit = {
+							scope:recipient.faith = {
+								faith_hostility_level = {
+									target = scope:actor.faith
+									value >= faith_evil_level
+								}
 							}
 						}
+						subtract = 60
 					}
-					subtract = 60
 				}
 			}
 			desc = MARRY_DIFFERENT_FAITH_REASON
 		}
 		
 		modifier = {
-			add = 50
+			add = intimidated_reason_value
 			scope:recipient = {
 				target_is_liege_or_above = scope:actor
 				has_dread_level_towards = {
@@ -1626,7 +1886,7 @@ perk_alliance_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 100
+			add = cowed_reason_value
 			scope:recipient = {
 				target_is_liege_or_above = scope:actor
 				has_dread_level_towards = {
@@ -1638,7 +1898,7 @@ perk_alliance_interaction = {
 		}
 		
 		modifier = {
-			add = 10
+			add = intimidated_external_reason_value
 			scope:recipient = {
 				NOT = { target_is_liege_or_above = scope:actor }
 				has_dread_level_towards = {
@@ -1649,7 +1909,7 @@ perk_alliance_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 20
+			add = cowed_external_reason_value
 			scope:recipient = {
 				NOT = { target_is_liege_or_above = scope:actor }
 				has_dread_level_towards = {
@@ -1736,6 +1996,12 @@ perk_alliance_interaction = {
 			scope:recipient.house = scope:actor.house
 			add = 15
 			desc = IS_SAME_HOUSE_REASON
+		}
+		#Bonus from Tradition Astute Diplomats
+		modifier = {
+			scope:actor.culture = { has_cultural_parameter = facilitate_alliance_acceptance }
+			add = 50 #should be in a file 00_traditions_values
+			desc = TRADITION_ASTUTE_DIPLOMATS_ACCEPTANCE_MODIFIER
 		}
 		modifier = {
 			scope:recipient = {
@@ -1832,6 +2098,7 @@ join_war_interaction = {
 				}
 			}
 		}
+
 		# recipient is ally or defending against a holy war
 		trigger_else_if = {
 			limit = {
@@ -1856,8 +2123,37 @@ join_war_interaction = {
 										}
 									}
 								}
+								#... Or, the target is your liege and they are being attacked for your held title.
+								AND = {
+									scope:recipient = { target_is_liege_or_above = scope:actor }
+									casus_belli = {
+										any_target_title = {
+											holder = {
+												OR = {
+													this = scope:actor
+													is_vassal_or_below_of = scope:actor
+												}
+											}
+										}
+											
+									}
+								}
 							}
 							any_war_defender = { this = scope:recipient }
+						}
+					}
+				}
+				# Deliberately blank; we've passed the trigger and making a desc out of this doesn't make sense
+			}
+			# Special case for Iberians helping each other after FP2 Conciliation ending after FP2 Conciliation ending
+			trigger_else_if = {
+				limit = {
+					fp2_struggle_conciliation_recipient_actor_involved_trigger = yes
+					scope:recipient = {
+						any_character_war = {
+							primary_defender = scope:recipient
+							primary_attacker = { save_temporary_scope_as = attacker_temp }
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:attacker_temp }
 						}
 					}
 				}
@@ -1899,6 +2195,27 @@ join_war_interaction = {
 				trigger_if = { #Only if you're not allies
 					limit = {
 						NOT = { scope:actor = { is_allied_to = scope:recipient } }
+						NOR = {
+							scope:recipient = { target_is_liege_or_above = scope:actor }
+							casus_belli = {
+								any_target_title = {
+									exists = holder
+									holder = {
+										OR = {
+											this = scope:actor
+											is_vassal_or_below_of = scope:actor
+										}
+									}
+								}
+							}
+						}
+						# Special case for Iberians helping each other after FP2 Conciliation ending
+						AND = {
+							fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+							NOT = {
+								fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+							}
+						} 
 					}
 					custom_description = {
 						text = join_war_interaction_recipient_not_def_GHW
@@ -1932,6 +2249,13 @@ join_war_interaction = {
 					primary_attacker = {
 						is_leading_faction_type = peasant_faction
 					}
+					# Special case for Iberians helping each other after FP2 Conciliation ending
+					AND = {
+						fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+						NOT = {
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+						}
+					}
 				}
 				always = yes
 			}
@@ -1941,6 +2265,13 @@ join_war_interaction = {
 				limit = {
 					is_religious_war = no
 					scope:actor = { NOT = { target_is_liege_or_above = scope:recipient } }
+					# Special case for Iberians helping each other after FP2 Conciliation ending
+					AND = {
+						fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+						NOT = {
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+						}
+					}
 				}
 				custom_description = {
 					text = join_war_interaction_recipient_not_ally
@@ -2056,3 +2387,5 @@ join_war_interaction = {
 		base = 100 # everyone wants help
 	}
 }
+
+

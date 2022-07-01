@@ -1,0 +1,48 @@
+﻿
+GetRegionalArcherMAA = {
+	type = character
+	
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_longbowmen } }
+		localization_key = longbowmen
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = bowmen
+	}
+}
+
+GetRegionalInfantryMAA = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = infantry
+	}
+}
+
+GetRegionalCavalryMAA = {
+	type = character
+	random_valid = yes
+	
+	
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = cavalry
+	}
+}
+
+GetRegionalSkirmisherMAA = {
+	type = character
+	random_valid = yes
+	
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = light_footmen
+	}
+}

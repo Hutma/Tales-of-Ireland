@@ -1,0 +1,380 @@
+﻿ai_collect_clan_tax_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	
+	ai_check_interval = 50
+	major = yes
+	
+	is_shown = {
+		is_ai = yes
+		exists = root.dynasty
+	}
+
+	is_valid = {
+		exists = root.dynasty
+		NOT = {
+			has_character_flag = used_clan_action
+		}
+		dynasty.dynast = root
+		root.dynasty = { exists = var:clan_unity_value }
+		root.dynasty = {
+			var:clan_unity_value = { compare_value >= 30 }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 10
+	}
+
+	effect = {
+		dynasty = {
+			every_dynasty_member = {
+				limit = {
+					is_independent_ruler = yes
+					NOT = { this = dynasty.dynast }
+				}
+				send_interface_toast = {
+					left_icon = root.dynasty.dynast
+					title = tooltip.clan.tax_clan.target
+					pay_short_term_income = {
+						target = root
+						years = 1
+					}
+				}
+			}
+		}
+		dynasty = {
+			if = {
+				limit = { exists = var:clan_unity_value }
+				change_variable = {
+					name = clan_unity_value
+					add = -5
+				}
+			}
+		}
+		add_character_flag = {
+			flag = used_clan_action
+			years = 5
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+ai_collect_clan_cattle_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	
+	ai_check_interval = 50
+	major = yes
+	
+	is_shown = {
+		is_ai = yes
+		exists = root.dynasty
+	}
+
+	is_valid = {
+		exists = root.dynasty
+		NOT = {
+			has_character_flag = used_clan_action
+		}
+		dynasty.dynast = root
+		root.dynasty = { exists = var:clan_unity_value }
+		root.dynasty = {
+			var:clan_unity_value = { compare_value >= 30 }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 10
+	}
+
+	effect = {
+		set_variable = {
+			name = cattle_count
+			value = 0
+		}
+
+		dynasty = {
+			every_dynasty_member = {
+				limit = {
+					is_independent_ruler = yes
+					NOT = { this = dynasty.dynast }
+				}
+				send_interface_toast = {
+					left_icon = root.dynasty.dynast
+					title = tooltip.clan.cattle_clan.target
+					capital_county = {
+						change_development_level = -3
+					}
+				}
+			}
+			root = {
+				change_variable = {
+					name = cattle_count
+					add = 3
+				}
+			}
+		}
+		
+		capital_county = {
+			change_development_level = {
+				value = root.var:cattle_count
+			}
+		}
+		remove_variable = cattle_count
+		
+		dynasty = {
+			if = {
+				limit = { exists = var:clan_unity_value }
+				change_variable = {
+					name = clan_unity_value
+					add = -5
+				}
+			}
+		}
+		add_character_flag = {
+			flag = used_clan_action
+			years = 5
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+ai_force_clan_ruler_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	
+	ai_check_interval = 25
+	major = yes
+	
+	is_shown = {
+		is_ai = yes
+		exists = root.dynasty
+	}
+
+	is_valid = {
+		exists = root.dynasty
+		custom_description = {
+			text = wait_five_years_between_use
+			NOT = {
+				has_character_flag = used_clan_action
+			}
+		}
+		NOT = {
+			dynasty.dynast = root
+		}
+		custom_description = {
+			text = low_unity_or_lower
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value < 30 }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 10
+	}
+
+	effect = {
+		add_hook = {
+			type = loyalty_hook
+			target = root.dynasty.dynast
+			years = 10
+		}
+		custom_description = {
+			text = up_clan_value_by_three
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = 3
+					}
+				}
+			}
+		}
+		custom_description = {
+			text = used_clan_action_five_cooldown
+			add_character_flag = {
+				flag = used_clan_action
+				years = 5
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+ai_call_clan_rulers_into_war_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	
+	ai_check_interval = 50
+	major = yes
+	
+	is_shown = {
+		is_ai = yes
+		exists = root.dynasty
+	}
+
+	is_valid = {
+		exists = root.dynasty
+		is_at_war_as_defender = yes
+		dynasty.dynast = root
+		custom_description = {
+			text = at_least_high_unity
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value > 60 }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 10
+	}
+
+	effect = {
+		custom_description = {
+			text = call_clan_to_war_effect_desc
+			trigger_event = {
+				id = toi_clan.0002
+				days = 1
+			}
+		}
+		custom_description = {
+			text = down_clan_value_by_two
+			dynasty = {
+				if = {
+					limit = { exists = var:clan_unity_value }
+					change_variable = {
+						name = clan_unity_value
+						add = -2
+					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 55
+	}
+}
+
+ai_call_clan_leader_into_war_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	
+	
+	ai_check_interval = 50
+	major = yes
+	
+	is_shown = {
+		is_ai = yes
+		exists = root.dynasty
+	}
+
+	is_valid = {
+		exists = root.dynasty
+		custom_description = {
+			text = wait_five_years_between_use
+			NOT = {
+				has_character_flag = used_clan_action
+			}
+		}
+		is_at_war = yes
+		is_independent_ruler = yes
+		NOT = {
+			is_at_war_with = dynasty.dynast
+		}
+		NOT = {
+			dynasty.dynast = root
+		}
+		custom_description = {
+			text = medium_unity_or_lower
+			root.dynasty = { exists = var:clan_unity_value }
+			root.dynasty = {
+				var:clan_unity_value = { compare_value <= 60 }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		prestige = 10
+	}
+
+	effect = {
+		custom_description = {
+			text = call_leader_to_war_effect_desc
+			trigger_event = {
+				id = toi_clan.0004
+				days = 1
+			}
+		}
+		
+		custom_description = {
+			text = used_clan_action_five_cooldown
+			add_character_flag = {
+				flag = used_clan_action
+				years = 5
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -1,0 +1,109 @@
+﻿fast_learner_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_tsolais
+	position = { 1 0 }
+	icon = node_learning
+	
+	auto_selection_weight = {
+		value = 20
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	
+	effect = {
+		custom_description = {
+			text = learn_a_new_spell_effect_desc
+			learn_a_spell_magician_effect = yes
+		}
+	}
+}
+
+life_magic_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_tsolais
+	position = { 0 2 }
+	icon = node_learning
+	
+	parent = fast_learner_perk
+	
+	character_modifier = {
+		health = 1
+	}
+}
+
+control_magic_blood_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_tsolais
+	position = { 0 4 }
+	icon = tales_of_magic_light_end
+	
+	parent = life_magic_perk
+	
+	effect = {
+		custom_description = {
+			text = control_magic_blood_perk_desc
+			add_character_flag = can_make_magician_flag
+			remove_variable = your_magic_usage
+			set_variable = {
+				name = your_magic_usage
+				value = 0
+			}
+		}
+	}
+}
+
+learn_by_the_books_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_tsolais
+	position = { 2 2 }
+	icon = node_learning
+	
+	parent = fast_learner_perk
+	
+	effect = {
+		if = {
+			limit = { 
+				AND = {
+					NOT = { has_trait = mystic_1 }
+					NOT = { has_trait = mystic_2 }
+					NOT = { has_trait = mystic_3 }
+				}
+			}
+			add_trait = mystic_1
+		}
+		else_if = {
+			limit = { has_trait = mystic_1 }
+			add_trait = mystic_2
+		}
+		else_if = {
+			limit = { has_trait = mystic_2 }
+			add_trait = mystic_3
+		}
+	}
+	
+	character_modifier = {
+		learning = 3
+	}
+}
+
+as_wise_as_the_sidhe_perk = {
+	lifestyle = tales_of_magic_lifestyle
+	tree = cosan_an_tsolais
+	position = { 2 4 }
+	icon = tales_of_magic_light_end
+	
+	parent = learn_by_the_books_perk
+	
+	effect = {
+		custom_description = {
+			text = learn_a_unique_spell_effect_desc
+			trigger_event = {
+				id = toi_magic_event.0007
+			}
+		}
+	}
+}

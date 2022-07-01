@@ -17,3 +17,35 @@ swift_execution_perk_poison_cattle_scheme_effect = {
 embassies_perk_froce_trade_scheme_effect = {
 	global = EMBASSIES_SCHEME_PERK
 }
+
+learn_a_new_spell_effect_desc = {
+	global = LEARN_A_NEW_SPELL_EFFECT_DESC
+	first = LEARN_A_NEW_SPELL_EFFECT_DESC
+	third = LEARN_A_NEW_SPELL_EFFECT_DESC
+}
+
+learn_a_unique_spell_effect_desc = {
+	global = LEARN_A_UNIQUE_SPELL_EFFECT_DESC
+	first = LEARN_A_UNIQUE_SPELL_EFFECT_DESC
+	third = LEARN_A_UNIQUE_SPELL_EFFECT_DESC
+}
+
+control_magic_blood_perk_desc = {
+	global = CONTROL_MAGIC_BLOOD_PERK_DESC
+}
+
+killer_blow_magic_perk_effect_desc = {
+	global = KILLER_BLOW_MAGIC_PERK_EFFECT_DESC
+}
+
+cause_discorde_perk_desc = {
+	global = CAUSE_DISCORDE_PERK_DESC
+}
+
+shadow_blood_perk_desc = {
+	global = SHADOW_BLOOD_PERK_DESC
+}
+
+can_only_be_done_once_desc = {
+	global = CAN_ONLY_BE_DONE_ONCE_DESC
+}

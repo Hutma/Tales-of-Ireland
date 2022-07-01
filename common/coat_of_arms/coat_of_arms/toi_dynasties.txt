@@ -69,3 +69,137 @@
 		texture = "d_inver_ayre_coa.dds"
 	}
 }
+
+198 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_galmoy_coa.dds"
+	}
+}
+
+131 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_newry_coa.dds"
+	}
+}
+
+96 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "d_athenry_coa.dds"
+	}
+}
+
+218 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_beaufort_coa.dds"
+	}
+}
+
+217 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "c_finvoy_coa.dds"
+	}
+}
+
+
+228 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_hamilton_coa.dds"
+	}
+}
+
+
+236 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_gordon_coa.dds"
+	}
+}
+
+
+237 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_graham_coa.dds"
+	}
+}
+
+
+239 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_kerr_coa.dds"
+	}
+}
+
+241 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_dunbar_coa.dds"
+	}
+}
+
+116 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "e_dal_riata_empire_coa.dds"
+	}
+}
+
+243 = {
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	textured_emblem = {
+		texture = "k_seelie_court_coa.dds"
+	}
+}
+
+227 = {
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=red
+		color2=red
+		texture="ce_boar_passant.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+		}
+
+	}
+}
+
+220 = {
+	pattern="pattern_vertical_split_01.dds"
+	color1=grey
+	color2=grey
+	color3=red
+	colored_emblem={
+		color1=rgb { 174 159 74 }
+		color2=red
+		texture="ce_tamgha_turkic_16.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ -1.000000 1.000000 }
+		}
+
+	}
+
+}

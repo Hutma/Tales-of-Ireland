@@ -16,6 +16,7 @@
     trait = forgiving
     trait = compassionate
     trait = fomorian
+	trait = magician_good_1
 
     disallow_random_traits = yes
     4765.1.1 = {

@@ -37,8 +37,9 @@
     prowess =  4 
     trait = forgiving
     trait = greedy
-    trait = fickle
+    trait = rowdy
     trait = partholonian
+	trait = magician_good_3
 
     disallow_random_traits = yes
     4788.1.1 = {
@@ -50,7 +51,7 @@
     dynasty =  12 
     religion = sons_of_the_ocean
     culture = first_landers
-
+	female = yes
     diplomacy =  9 
     martial =  4 
     stewardship =  7 
@@ -61,7 +62,7 @@
     trait = education_martial_2
     trait = lazy
     trait = forgiving
-    trait = forgiving
+    trait = stubborn
     trait = partholonian
 
     disallow_random_traits = yes
@@ -70,7 +71,7 @@
     }
 }
 300003 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  13 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -228,7 +229,7 @@
     }
 }
 305000 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  10 
     religion = sons_of_the_ocean
     culture = first_landers
@@ -266,10 +267,9 @@
     learning =  6 
     prowess =  1 
 
-    trait = education_stewardship_3
+    trait = bossy
     trait = forgiving
     trait = shy
-    trait = cynical
     trait = partholonian
 
     mother=  300000 
@@ -333,7 +333,7 @@
     }
 }
 350000 = {
-    name = "Partholón "
+    name = "PartholO_n"
     dynasty =  58 
     religion = sons_of_the_ocean
     culture = the_plagued

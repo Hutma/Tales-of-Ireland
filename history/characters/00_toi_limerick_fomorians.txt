@@ -64,7 +64,7 @@
     learning =  3 
     prowess =  7 
     trait = fickle
-    trait = arrogant
+    trait = charming
     trait = fomorian
 
     father=  451001 
@@ -231,7 +231,7 @@
     }
 }
 450009 = {
-    name = "Omna "
+    name = "Omna"
     dynasty =  39 
     religion = dark_gods
     culture = underground_fomorians
@@ -300,6 +300,7 @@
     trait = impatient
     trait = vengeful
     trait = fomorian
+	trait = magician_good_3
 
     father=  451006 
 

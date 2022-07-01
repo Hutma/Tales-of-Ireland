@@ -154,7 +154,6 @@ hall_of_heroes_01 = {
 
 	is_enabled = {
 		building_hall_of_heroes_requirement = yes
-		building_disable_if_vastly_over_domain_limit_trigger = yes
 	}
 	
 	next_building = hall_of_heroes_02
@@ -183,7 +182,6 @@ hall_of_heroes_02 = {
 
 	is_enabled = {
 		building_hall_of_heroes_requirement = yes
-		building_disable_if_vastly_over_domain_limit_trigger = yes
 	}
 
 	
@@ -213,7 +211,6 @@ hall_of_heroes_03 = {
 
 	is_enabled = {
 		building_hall_of_heroes_requirement = yes
-		building_disable_if_vastly_over_domain_limit_trigger = yes
 	}
 
 	
@@ -243,7 +240,6 @@ hall_of_heroes_04 = {
 
 	is_enabled = {
 		building_hall_of_heroes_requirement = yes
-		building_disable_if_vastly_over_domain_limit_trigger = yes
 	}
 
 	
@@ -273,7 +269,6 @@ hall_of_heroes_05 = {
 
 	is_enabled = {
 		building_hall_of_heroes_requirement = yes
-		building_disable_if_vastly_over_domain_limit_trigger = yes
 	}
 
 	

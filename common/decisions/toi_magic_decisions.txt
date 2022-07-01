@@ -1,0 +1,531 @@
+﻿leave_fintan_form_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	major = yes
+	ai_check_interval = 40
+	
+	desc = leave_fintan_form_decision_desc
+
+
+	is_shown = {
+		has_character_modifier = fintan_form
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		always = yes
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		remove_character_modifier = fintan_form
+		add_stress = 45
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+practice_magical_powers_decision = {
+	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	
+	ai_check_interval = 36
+	
+	desc = practice_magical_powers_decision_desc
+
+	cooldown = { years = 5 }
+
+	is_shown = {
+		has_trait = magician_good
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		add_tales_of_magic_lifestyle_xp = 100
+		add_stress = 35
+	}
+
+	ai_potential = {
+		NOT = {
+			stress_level >= 1
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+learn_new_spell_for_playtesters_decision = {
+	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	
+	ai_check_interval = 500
+	
+	desc = learn_new_spell_for_playtesters_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		is_ai = no
+		has_trait = magician_good
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		add_stress = 25
+		learn_a_spell_magician_effect = yes
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+ai_magic = {
+	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	
+	major = yes
+	ai_check_interval = 10
+	
+	cooldown = { years = 2 }
+
+	is_shown = {
+		is_ai = yes
+		has_trait = magician_good
+	}
+
+	is_valid = {
+		is_ai = yes
+		is_adult = yes
+		highest_held_title_tier >= 2
+		has_trait = magician_good
+		is_landed = yes
+	}
+
+	is_valid_showing_failures_only = {
+		always = yes
+	}
+
+	cost = {
+		
+	}
+
+	effect = {
+		add_tales_of_magic_lifestyle_xp = 35
+		every_independent_ruler = {
+			limit = {
+				in_diplomatic_range = root
+				character_is_realm_neighbor = root 
+				opinion = { target = this  value < 0 }
+			} 
+			add_to_list = possible_targets
+		}
+		every_vassal = {
+			limit = { 
+				opinion = { target = this  value < 0 } 
+			}
+			add_to_list = possible_targets
+		}
+		random_in_list = {
+			list = possible_targets
+			save_scope_as = ai_target
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:ai_target }
+			}
+			every_independent_ruler = {
+				limit = {
+					in_diplomatic_range = root
+					character_is_realm_neighbor = root
+				} 
+				add_to_list = possible_targets
+			}
+			random_in_list = {
+				list = possible_targets
+				save_scope_as = ai_target
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:ai_target }
+				}
+				every_vassal = {
+					add_to_list = possible_targets
+				}
+				random_in_list = {
+					list = possible_targets
+					save_scope_as = ai_target
+				}
+			}
+		}
+		random_list = {
+			1 = {
+				trigger = {
+					age > 30
+					any_child = {
+						count = 0
+					}
+				}
+				summon_sidhe_child_ai_effect = yes
+			}
+			1 = {
+				summon_sidhe_advisor_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					NOT = { has_character_flag = called_army_ai_recently }
+					NOT = { has_trait = irish_vampire }
+				}
+				summon_magical_army_scripted_effect = yes
+				add_character_flag = {
+					flag = called_army_ai_recently
+					years = 10
+				}
+			}
+			1 = {
+				extend_lifespan_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					exists = scope:ai_target
+				}
+				inflict_wounds_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					exists = scope:ai_target
+				}
+				inflict_terror_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					exists = scope:ai_target
+				}
+				inflict_pestilence_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					exists = scope:ai_target
+				}
+				hostile_whispers_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				fintan_transformation_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				deer_form_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+				}
+				flood_realm_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = cessarian
+					exists = scope:ai_target
+				}
+				serpent_bite_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+					NOT = { has_trait = irish_vampire }
+					NOT = { has_character_flag = called_army_ai_recently }
+				}
+				call_sea_army_scripted_effect = yes
+				add_character_flag = {
+					flag = called_army_ai_recently
+					years = 15
+				}
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+					NOT = { has_character_flag = called_army_ai_recently }
+					NOT = { has_trait = irish_vampire }
+				}
+				call_underground_ridri_scripted_effect = yes
+				add_character_flag = {
+					flag = called_army_ai_recently
+					years = 20
+				}
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+					any_prisoner = {
+						count >= 1
+					}
+				}
+				blood_moon_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fomorian
+					exists = scope:ai_target
+				}
+				omen_of_opression_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				healing_secret_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				dagda_cauldron_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				lugh_strenght_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = tuatha_de_danann
+				}
+				call_light_ai_effect = yes
+			}
+			# 1 = {
+				# trigger = {
+					# has_trait = tuatha_de_danann
+					# exists = scope:ai_target
+					# scope:ai_target = {
+						# is_landed = yes
+						# is_independent_ruler = yes	
+						# NOT = { top_liege = root}
+					# }
+				# }
+				# scope:ai_target = {
+					# send_interface_toast = {
+						# left_icon = root
+						# title = tooltip.magic.summon_new_tribe.target
+						# trigger_event = {
+							# id = toi_magic_event.0005
+							# days = 1
+						# }
+					# }
+				# }
+			# }
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				sacred_building_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				suns_chosen_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = megalith_human
+				}
+				hunting_spirits_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+				}
+				rune_words_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+				}
+				protective_amulet_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = partholonian
+					exists = scope:ai_target
+				}
+				cursed_tablet_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				sidhe_agriculture_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				blessed_family_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+				}
+				nemedian_union_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = nemedian
+					exists = scope:ai_target
+				}
+				nemed_seduction_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				srengs_strenght_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				fir_bolg_endurance_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				men_of_bags_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = fir_bolg
+				}
+				heavy_lifters_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+					path_of_destiny_requirements = yes
+				}
+				path_of_destiny_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+				}
+				realm_ceremony_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = milesian
+				}
+				enchant_bedroooms_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				druidic_intersessions_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				magic_paintings_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				befriend_the_morrigan_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = celtic_human
+				}
+				settle_power_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+				}
+				two_worlds_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+					exists = scope:ai_target
+				}
+				no_escape_curse_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+					exists = scope:ai_target
+				}
+				brasil_fog_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = hy_brazylian
+					exists = scope:ai_target
+				}
+				magic_mist_ai_effect = yes
+			}
+			1 = {
+				trigger = {
+					has_trait = latin_human
+				}
+				burn_incense_ai_effect = yes
+			}			
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

@@ -231,11 +231,17 @@ on_toi_lifestyles_marriage = {
 						}
 					}
 				}
-				scope:spouse.father = {
-					add_tales_of_abundance_lifestyle_xp = 105
+				if = {
+					limit = { scope:spouse.father = { is_alive = yes } }
+					scope:spouse.father = {
+						add_tales_of_abundance_lifestyle_xp = 105
+					}
 				}
-				scope:spouse.mother = {
-					add_tales_of_abundance_lifestyle_xp = 105
+				if = {
+					limit = { scope:spouse.mother = { is_alive = yes } }
+					scope:spouse.mother = {
+						add_tales_of_abundance_lifestyle_xp = 105
+					}
 				}
 			}
 			if = {
@@ -257,11 +263,17 @@ on_toi_lifestyles_marriage = {
 						}
 					}
 				}
-				root.father = {
-					add_tales_of_abundance_lifestyle_xp = 105
+				if = {
+					limit = { root.father = { is_alive = yes } }
+					root.father = {
+						add_tales_of_abundance_lifestyle_xp = 105
+					}
 				}
-				root.mother = {
-					add_tales_of_abundance_lifestyle_xp = 105
+				if = {
+					limit = { root.mother = { is_alive = yes } }
+					root.mother = {
+						add_tales_of_abundance_lifestyle_xp = 105
+					}
 				}
 			}
 		}
@@ -286,5 +298,81 @@ on_toi_lifestyles_siege = {
 	effect = {
 		#Taking a county
 		add_tales_of_war_lifestyle_xp = 25
+	}
+}
+
+on_toi_magic_lifestyle_yearly = {
+	trigger = {
+		OR = {
+			has_trait = magician_good_1
+			has_trait = magician_good_2
+			has_trait = magician_good_3
+		}
+	}
+	effect = {
+		if = {
+			limit = { has_trait = magician_good_1 }
+			add_tales_of_magic_lifestyle_xp = 10
+		}
+		if = {
+			limit = { has_trait = magician_good_2 }
+			add_tales_of_magic_lifestyle_xp = 20
+		}
+		if = {
+			limit = { has_trait = magician_good_3 }
+			add_tales_of_magic_lifestyle_xp = 30
+		}
+		if = {
+			limit = { 
+				OR = {
+					has_trait = mystic_1
+					has_trait = mystic_2
+					has_trait = mystic_3
+				}
+			}
+			add_tales_of_magic_lifestyle_xp = 10
+		}
+		if = {
+			limit = {
+				OR = {
+					has_focus = intrigue_skulduggery_focus
+					has_focus = intrigue_temptation_focus
+					has_focus = intrigue_intimidation_focus
+				}
+			}
+			add_tales_of_magic_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				OR = {
+					has_focus = learning_medicine_focus
+					has_focus = learning_scholarship_focus
+					has_focus = learning_theology_focus
+				}
+			}
+			add_tales_of_magic_lifestyle_xp = 10
+		}
+		if = {
+			limit = {
+				AND = {
+					intrigue >= diplomacy
+					intrigue >= stewardship
+					intrigue >= martial
+					intrigue >= learning
+				}					
+			}
+			add_tales_of_magic_lifestyle_xp = 5
+		}
+		if = {
+			limit = {
+				AND = {
+					learning >= diplomacy
+					learning >= stewardship
+					learning >= martial
+					learning >= intrigue
+				}					
+			}
+			add_tales_of_magic_lifestyle_xp = 10
+		}
 	}
 }

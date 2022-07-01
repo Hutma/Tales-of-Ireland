@@ -93,3 +93,43 @@ round_tower = {
 		ambience = "event:/SFX/Events/Backgrounds/meetingchamber_western"
 	}
 }
+
+carrick_a_rede = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/carrick_a_rede_background.dds"
+		environment = "environment_event_docks"
+		ambience = "event:/SFX/Events/Backgrounds/docks_day"
+	}
+}
+
+cliffs_of_moher = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/cliffs_of_moher_background.dds"
+		environment = "environment_event_docks"
+		ambience = "event:/SFX/Events/Backgrounds/docks_day"
+	}
+}
+
+connemara = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/connemara_background.dds"
+		environment = "environment_event_steppe"
+		ambience = "event:/SFX/Events/Backgrounds/steppe_day"
+	}
+}
+
+gap_of_dunloe = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/gap_of_dunloe_background.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+}
+
+picts_background = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/picts_background.dds"
+		environment = "environment_event_farms"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+}

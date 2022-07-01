@@ -21,40 +21,12 @@ ask_for_conversion_interaction = {
 		base = 0
 		religion_demand_conversion_default_modifier = yes
 	}
-	auto_accept = {
-		OR = {
-			scope:recipient = { is_imprisoned_by = scope:actor }
-			custom_description = {
-				text = "spending_hook"
-				subject = scope:actor
-				object = scope:recipient
-				scope:hook = yes
-				scope:actor = { has_strong_hook = scope:recipient }
-			}
-		}
-	}
 	
 	ai_min_reply_days = 1
 	ai_max_reply_days = 5
 	
 	on_accept = {
 		new_faith_created_conversion_effect = yes
-		if = {
-			limit = { scope:hook = yes }
-			scope:actor = {
-				use_hook = scope:recipient
-			}
-			scope:recipient = {
-				trigger_event = char_interaction.0180
-			}
-		}
-		if = {
-			limit = { scope:recipient = { is_imprisoned_by = scope:actor } }
-			scope:recipient = { release_from_prison = yes }
-			scope:recipient = {
-				trigger_event = char_interaction.0180
-			}
-		}
 	}
 
 	on_decline = {
@@ -68,22 +40,12 @@ ask_for_conversion_interaction = {
 	#Use hook
 	send_option = {
 		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-			NOT = {
-				scope:recipient = { is_imprisoned_by = scope:actor }
-			}
+			always = no # Only here to ensure that religion_demand_conversion_default_modifier doesn't error
 		}
 		flag = hook
 		localization = SCHEME_HOOK
 	}
-	should_use_extra_icon = {
-		scope:actor = { has_usable_hook = scope:recipient }
-	}
-	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
 	send_options_exclusive = no
-
 }
 
 ask_for_conversion_courtier_interaction = {
@@ -162,7 +124,12 @@ ask_for_conversion_courtier_interaction = {
 		if = {
 			limit = { scope:hook = yes }
 			scope:actor = {
-				use_hook = scope:recipient
+				if = {
+					limit = {
+						has_usable_hook = scope:recipient
+					}
+					use_hook = scope:recipient
+				}
 			}
 			scope:recipient = {
 				trigger_event = char_interaction.0180
@@ -214,6 +181,94 @@ ask_for_conversion_courtier_interaction = {
 		modifier = { # The AI will only use a Hook if they couldn't otherwise do this
 			scope:hook = yes
 			add = -1
+		}
+		
+		modifier = { # The AI doesn't really want to convert Diasporic culture courtiers
+			scope:recipient = {
+				always = no
+				culture = {
+					has_cultural_tradition = tradition_diasporic
+				}
+			}
+			factor = 0
+		}
+
+		modifier = { # Do not convert Righteous faith subjects, unless disturbingly zealous
+			factor = 0
+			scope:actor = {
+				ai_zeal < 100
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_fully_accepted_level
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				has_tolerant_faith_or_culture_trigger = yes
+				ai_zeal < 50
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+				ai_zeal < -10
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				NOR = {
+					faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+					has_tolerant_faith_or_culture_trigger = yes
+				}
+				ai_zeal < 0
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
 		}
 	}
 }
@@ -439,15 +494,12 @@ demand_conversion_vassal_ruler_interaction = {
 	}
 
 	auto_accept = {
-		OR = {
-			scope:recipient = { is_imprisoned_by = scope:actor }
-			custom_description = {
-				text = "spending_hook"
-				subject = scope:actor
-				object = scope:recipient
-				scope:hook = yes
-				scope:actor = { has_strong_hook = scope:recipient }
-			}
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
 		}
 	}
 
@@ -623,6 +675,133 @@ demand_conversion_vassal_ruler_interaction = {
 				gold < demand_conversion_bribe_size
 			}
 		}
+
+		modifier = {
+			factor = 0
+			scope:recipient.demand_conversion_likelihood_calculation < 90
+			scope:actor = {
+				culture = {
+					has_cultural_parameter = less_likely_to_force_conversion
+				}
+			}
+		}
+
+		modifier = { # Do not convert Righteous faith subjects, unless disturbingly zealous
+			factor = 0
+			scope:actor = {
+				ai_zeal < 100
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_fully_accepted_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				has_tolerant_faith_or_culture_trigger = yes
+				ai_zeal < 50
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+				ai_zeal < -10
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				NOR = {
+					faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+					has_tolerant_faith_or_culture_trigger = yes
+				}
+				ai_zeal < 0
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	ai_accept = {
 		base = 0
@@ -750,6 +929,128 @@ demand_conversion_player_ruler_interaction = {
 			factor = 0
 			scope:recipient.demand_conversion_likelihood_calculation < 10
 		}
+		
+		modifier = { # Do not convert Righteous faith subjects, unless disturbingly zealous
+			factor = 0
+			scope:actor = {
+				ai_zeal < 100
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_fully_accepted_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				has_tolerant_faith_or_culture_trigger = yes
+				ai_zeal < 50
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+				ai_zeal < -10
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
+
+		modifier = { # Astray faiths require specific circumstances to demand conversion of
+			factor = 0
+			scope:actor = {
+				NOR = {
+					faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+					has_tolerant_faith_or_culture_trigger = yes
+				}
+				ai_zeal < 0
+				faith = {
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value <= faith_astray_level
+					}
+				}
+			}
+			NOT = { # If the subject has one of your holy sites, always try to convert
+				scope:recipient = {
+					any_sub_realm_county = {
+						any_county_province = {
+							barony = {
+								is_holy_site_of = scope:actor.faith
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				scope:recipient = {
+					is_close_family_of = scope:actor
+				}
+			}
+		}
 	}
 }
 
@@ -766,10 +1067,19 @@ convert_to_religion_interaction = {
 	is_shown = {
 		NOT = { scope:actor.faith = scope:recipient.faith }
 		scope:actor = {
-			OR = { #They're either your liege or your spouse
+			# They're either your liege or your spouse
+			OR = {
 				target_is_liege_or_above = scope:recipient
 				any_consort = {
 					this = scope:recipient
+				}
+			}
+			# And you've never HumSac'd a tolerated HoF.
+			NAND = {
+				has_variable_list = humsacd_hofs
+				is_target_in_variable_list = {
+					name = humsacd_hofs
+					target = scope:recipient.faith
 				}
 			}
 		}
@@ -830,6 +1140,14 @@ convert_at_war_interaction = {
 				#They can convert
 				scope:actor = scope:actor.faith.religious_head
 				has_government = holy_order_government
+				# And you've never HumSac'd a tolerated HoF.
+				AND = {
+					has_variable_list = humsacd_hofs
+					is_target_in_variable_list = {
+						name = humsacd_hofs
+						target = scope:recipient.faith
+					}
+				}
 			}
 		}
 	}
@@ -869,7 +1187,11 @@ convert_at_war_interaction = {
 	ai_potential = {
 		ai_zeal < 100
 		faith = {
-			fervor <= 25
+			OR = {
+				has_doctrine = unreformed_faith_doctrine
+				fervor <= 25
+				has_doctrine_parameter = unattractive_for_character_conversions
+			}
 		}
 	}
 
@@ -1079,6 +1401,9 @@ seek_indulgences_interaction = {
 		scope:actor = {
 			custom_description = {
 				text = "hof_interaction_unreformed_faith"
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
 			}
 			NOT = {
 				is_at_war_with = scope:recipient
@@ -1094,6 +1419,16 @@ seek_indulgences_interaction = {
 			opinion_target = scope:actor
 			who = scope:recipient
 			multiplier = 1
+		}
+		
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
 		}
 	}
 	
@@ -1234,7 +1569,7 @@ declaration_of_repentance_interaction = {
 	}
 
 	ai_accept = {
-		base = 0
+		base = 25
 		
 		modifier = {
 			scope:declaration_hook = yes
@@ -1245,6 +1580,15 @@ declaration_of_repentance_interaction = {
 			opinion_target = scope:actor
 			who = scope:recipient
 			multiplier = 1
+		}
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
 		}
 		modifier = {
 			add = {
@@ -1359,6 +1703,12 @@ excommunicate_interaction = {
 			scope:recipient = {
 				has_character_modifier = excommunication_recently_lifted
 			}
+			AND = {
+				exists = scope:actor.faith.great_holy_war
+				scope:actor.faith.great_holy_war = {
+					has_pledged_attacker = scope:recipient
+				}
+			}
 		}
 		scope:recipient = {
 			age >= 12
@@ -1369,6 +1719,9 @@ excommunicate_interaction = {
 		scope:actor = {
 			custom_description = {
 				text = "hof_interaction_unreformed_faith"
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
 			}
 		}
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
@@ -1481,40 +1834,9 @@ lift_excommunication_interaction = {
 	#answer_accept_key = religious_interaction.1024.positive
 
 	on_accept = {
-		scope:actor = {
-			hidden_effect = {
-				send_interface_toast = {	
-					title = lift_excommunicate_interaction_desc.tt
-					left_icon = scope:recipient
-					scope:recipient = {
-						show_as_tooltip = { remove_trait = excommunicated }
-					}
-				}
-			}
-		}
-		scope:recipient = {
-			remove_trait = excommunicated
-			add_character_modifier = {
-				modifier = excommunication_recently_lifted
-				years = 10
-			}
-			add_opinion = {
-				modifier = grateful_opinion
-				target = scope:actor
-				opinion = 30
-			}
-			
-			hidden_effect = { #To nudge friendship
-				if = {
-					limit = {
-						NOR = {
-							has_relation_friend = scope:actor
-							has_relation_potential_friend = scope:actor
-						}
-					}
-					set_relation_potential_friend = scope:actor
-				}
-			}
+		lift_character_excommunication_effect = {
+			TARGET_CHARACTER = scope:recipient
+			REQUESTING_CHARACTER = scope:actor
 		}
 	}
 	
@@ -1556,7 +1878,6 @@ lift_excommunication_interaction = {
 		}
 	}
 }
-
 
 request_excommunication_interaction = {
 	category = interaction_category_hostile
@@ -1612,6 +1933,9 @@ request_excommunication_interaction = {
 		scope:actor = {
 			custom_description = {
 				text = "hof_interaction_unreformed_faith"
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
 			}
 			NOT = {
 				is_at_war_with = scope:recipient
@@ -1713,40 +2037,45 @@ request_excommunication_interaction = {
 
 	on_accept = {
 		if = {
-			limit = { scope:excommunication_hook = yes }
+			limit = {
+				scope:secondary_recipient = { is_alive = yes }
+			}
+			if = {
+				limit = { scope:excommunication_hook = yes }
+				scope:actor = {
+					use_hook = scope:recipient
+				}
+			}
+
 			scope:actor = {
-				use_hook = scope:recipient
-			}
-		}
+				#Spend piety for the excommunication.
+				add_piety = massive_piety_loss
 
-		scope:actor = {
-			#Spend piety for the excommunication.
-			add_piety = massive_piety_loss
-
-			#Letter event to inform character the pope agreed to their request.
-			trigger_event = {
-				id = religious_interaction.1022
+				#Letter event to inform character the pope agreed to their request.
+				trigger_event = {
+					id = religious_interaction.1022
+				}
 			}
-		}
-		excommunicate_character = {
-			TARGET_CHARACTER = scope:secondary_recipient
-			REQUESTING_CHARACTER = scope:actor
-		}
-		scope:secondary_recipient = {
-			#Letter event to inform character that they have been excommunicated.
-			trigger_event = {
-				id = religious_interaction.1020
+			excommunicate_character = {
+				TARGET_CHARACTER = scope:secondary_recipient
+				REQUESTING_CHARACTER = scope:actor
 			}
-			hidden_effect = { #Nudge towards rivalry
-				if = {
-					limit = {
-						NOR = {
-							has_relation_rival = scope:actor
-							has_relation_potential_rival = scope:actor
+			scope:secondary_recipient = {
+				#Letter event to inform character that they have been excommunicated.
+				trigger_event = {
+					id = religious_interaction.1020
+				}
+				hidden_effect = { #Nudge towards rivalry
+					if = {
+						limit = {
+							NOR = {
+								has_relation_rival = scope:actor
+								has_relation_potential_rival = scope:actor
+							}
+							scope:actor = { is_alive = yes }
 						}
-						scope:actor = { is_alive = yes }
+						set_relation_potential_rival = scope:actor
 					}
-					set_relation_potential_rival = scope:actor
 				}
 			}
 		}
@@ -2279,7 +2608,7 @@ send_to_holy_order_interaction = {
 		
 		#Dread modifiers
 		modifier = {
-			add = 25
+			add = intimidated_halved_reason_value
 			scope:recipient = {
 				has_dread_level_towards = {
 					target = scope:actor
@@ -2289,7 +2618,7 @@ send_to_holy_order_interaction = {
 			desc = INTIMIDATED_REASON
 		}
 		modifier = {
-			add = 50
+			add = cowed_halved_reason_value
 			scope:recipient = {
 				has_dread_level_towards = {
 					target = scope:actor
@@ -3129,6 +3458,25 @@ take_vows_interaction = {
 			}
 			desc = COWED_REASON
 		}
+
+		# Culture Tradition modifiers
+		
+		modifier = {
+			add = {
+				value = 25
+				if = {
+					limit = {
+						scope:recipient = {
+							is_adult = no
+							is_child_of = scope:actor
+						}
+					}
+					add = 100
+				}
+			}
+			scope:actor.culture = { has_cultural_parameter = monastic_expectations }
+			desc = MONASTIC_EXPECTATIONS_REASON
+		}
 	}
 	
 	# AI will do
@@ -3367,6 +3715,12 @@ temporal_condemnation_interaction = {
 				NOT = {
 					has_character_modifier = temporal_condemnation_modifier
 				}
+			}
+		}
+		NAND = {
+			exists = scope:actor.faith.great_holy_war
+			scope:actor.faith.great_holy_war = {
+				has_pledged_attacker = scope:recipient
 			}
 		}
 		scope:recipient = {
@@ -3692,7 +4046,7 @@ hof_ask_for_gold_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-	ai_frequency = 60
+	ai_frequency = 24
 	
 	cooldown_against_recipient = { years = 3 }
 
@@ -3726,6 +4080,9 @@ hof_ask_for_gold_interaction = {
 		scope:actor = {
 			custom_description = {
 				text = "hof_interaction_unreformed_faith"
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
 			}
 		}
 		scope:recipient = { is_diplomatically_available = yes }
@@ -3737,9 +4094,9 @@ hof_ask_for_gold_interaction = {
 		compare_modifier = {
 			value = scope:recipient.gold
 			trigger = {
-				scope:recipient.gold > 500
+				scope:recipient.gold > 2500
 			}
-			offset = -500
+			offset = -2500
 			multiplier = 0.1
 			max = 50
 			desc = ASK_FOR_GOLD_OVERFLOWING_COFFERS
@@ -3749,6 +4106,16 @@ hof_ask_for_gold_interaction = {
 			opinion_target = scope:actor
 			who = scope:recipient
 			multiplier = 1
+		}
+		
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
 		}
 		
 		modifier = { # Attacking a co-religionist
@@ -3807,9 +4174,9 @@ hof_ask_for_gold_interaction = {
 			add = -25
 			desc = I_AM_RICH
 			scope:actor = {
-				gold >= scope:actor.medium_gold_max_value
+				gold >= scope:actor.medium_treasury_value
 				NOT = {
-					gold >= scope:actor.major_gold_max_value
+					gold >= scope:actor.major_treasury_value
 				}
 			}
 		}
@@ -3818,9 +4185,9 @@ hof_ask_for_gold_interaction = {
 			add = -50
 			desc = I_AM_RICH
 			scope:actor = {
-				gold >= scope:actor.major_gold_max_value
+				gold >= scope:actor.major_treasury_value
 				NOT = {
-					gold >= scope:actor.massive_gold_max_value
+					gold >= scope:actor.massive_treasury_value
 				}
 			}
 		}
@@ -3829,7 +4196,7 @@ hof_ask_for_gold_interaction = {
 			add = -75
 			desc = I_AM_RICH
 			scope:actor = {
-				gold >= scope:actor.massive_gold_max_value
+				gold >= scope:actor.massive_treasury_value
 			}
 		}
 		
@@ -4047,7 +4414,11 @@ hof_ask_for_gold_interaction = {
 	
 	ai_potential = {
 		is_landed = yes
+		piety >= major_piety_value
+		is_landed = yes
+		NOT = { has_trait = excommunicated }
 		highest_held_title_tier > tier_barony
+		exists = faith.religious_head
 	}
 
 	ai_will_do = {
@@ -4060,13 +4431,13 @@ hof_ask_for_gold_interaction = {
 
 		modifier = { # Counts get a bad 'exchange rate' due to their low income.
 			highest_held_title_tier < tier_county 
-			scope:recipient.gold < 1500
+			scope:recipient.gold < 3000
 			add = -50
 		}
 		modifier = { # Dukes are also somewhat reluctant to request gold if not independent.
 			highest_held_title_tier = tier_duchy 
 			is_independent_ruler = no
-			scope:recipient.gold < 1500
+			scope:recipient.gold < 3000
 			add = -25
 		}
 
@@ -4102,11 +4473,11 @@ hof_ask_for_gold_interaction = {
 		}
 		
 		modifier = { # If the Pope has overflowing coffers, it'd be rather impious to NOT ask him to give some to a fellow, poor and struggling christian!
-			add = 25
+			add = 50
 			scope:actor = {
 				piety > major_piety_value
 			}
-			scope:recipient.gold >= 1500
+			scope:recipient.gold >= 3000
 		}
 	}
 }
@@ -4183,11 +4554,16 @@ hof_ask_for_claim_interaction = {
 				always = no
 			}
 		}
-		# Can't request claims on theocratic lessees
-		custom_description = {
-			text = "hof_ask_for_claim_theocratic_lessee"
-			object = scope:recipient
-			scope:secondary_recipient = { is_theocratic_lessee = no }
+		trigger_if = { # Can't request claims on theocratic lessees or theocracies (= Prince-Bishops)
+			limit = {
+				scope:secondary_recipient = { 
+					has_government = theocracy_government
+				}
+			}
+			custom_description = {
+				text = "hof_ask_for_claim_theocratic_lessee"
+				always = no	
+			}	
 		}
 		scope:actor = { # Variable piety cost depending on tier
 			trigger_if = {
@@ -4207,6 +4583,9 @@ hof_ask_for_claim_interaction = {
 		scope:actor = {
 			custom_description = {
 				text = "hof_interaction_unreformed_faith"
+				NOT = {
+					faith = { has_doctrine = unreformed_faith_doctrine }
+				}
 			}
 		}
 		scope:recipient = { is_diplomatically_available = yes }
@@ -4257,6 +4636,16 @@ hof_ask_for_claim_interaction = {
 			opinion_target = scope:actor
 			multiplier = 0.5
 			desc = AI_OPINION_REASON
+		}
+		
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
 		}
 		
 		opinion_modifier = { # Unlikely if Recipient likes Secondary Recipient
@@ -4682,16 +5071,29 @@ hof_redirect_great_holy_war_interaction = {
 	auto_accept = yes
 	
 	is_shown = {
-		always = no
+		#exists = scope:actor.faith.religious_head #Called by Autonomous Faiths too.
+		exists = scope:actor.faith.great_holy_war
+		scope:actor.faith = { is_hostile_enough_for_holy_war_trigger = { FAITH = scope:secondary_recipient.faith } }
+		scope:secondary_recipient = { is_independent_ruler = yes }
+		NOT = { exists = scope:actor.faith.great_holy_war.ghw_war }
+		NOT = { scope:target = scope:actor.faith.great_holy_war.ghw_target_title } #Do not show the title already targeted in the list.
 	}
 
 	can_be_picked_title = {
+		scope:target.tier = tier_kingdom
+		NOT = { scope:target = scope:actor.faith.great_holy_war.ghw_target_title } #Do not show the title already targeted in the list.
 	}
 	
 	is_valid_showing_failures_only = {
+		scope:actor = { piety >= faith.great_holy_war.var:redirect_cost }
+		scope:actor.faith.great_holy_war = { days_until_ghw_launch >= 100 } #No last minute changes.
+		scope:recipient = { is_diplomatically_available = yes }
 	}
 	
 	has_valid_target_showing_failures_only = {
+		exists = scope:target
+		scope:target.tier = tier_kingdom
+		NOT = { scope:target = scope:actor.faith.great_holy_war.ghw_target_title } #Do not show the title already targeted in the list.
 	}
 	
 	cost = {
@@ -4699,6 +5101,105 @@ hof_redirect_great_holy_war_interaction = {
 	}
 	
 	on_accept = {
+		scope:actor.faith.great_holy_war = {
+			#Toast for attackers
+			every_pledged_attacker = {
+				limit = {
+					is_ai = no
+				}
+				send_interface_toast = {
+					title = hof_redirected_ghw.0001.desc
+					left_icon = scope:actor
+					right_icon = scope:secondary_recipient
+				}
+			}
+			#Event for former defenders.
+			every_pledged_defender = {
+				limit = {
+					is_ai = no
+				}
+				add_to_temporary_list = former_defenders
+			}
+		}
+		scope:actor = {
+			faith.great_holy_war = {
+				save_scope_as = the_ghw
+				set_great_holy_war_target = { target_character = scope:secondary_recipient target_title = scope:target }
+				#Old defenders that are no longer in the area are notified.
+				every_in_list = {
+					list = former_defenders
+					limit = {
+						is_ai = no
+						NOT = {
+							scope:actor.faith.great_holy_war = { has_pledged_defender = prev }
+						}
+					}
+					trigger_event = great_holy_war.0081
+				}
+				#New defenders are notified.
+				every_pledged_defender = {
+					limit = {
+						is_ai = no
+					}
+					trigger_event = { id = great_holy_war.0082 }
+				}
+				change_variable = {
+					name = redirect_cost
+					multiply = 2
+				}
+				set_variable = {
+					name = last_redirector
+					value = scope:actor
+				}
+			}
+			hidden_effect = {
+				scope:actor.faith = { save_scope_as = the_faith }
+				scope:target = { save_scope_as = target_kingdom }
+				scope:secondary_recipient = {
+					save_scope_as = target_character
+					faith = { save_scope_as = target_faith }
+				}
+				every_ruler = { #Defenders Pledge to the Crusade again. (AI only)
+					limit = {
+						faith = scope:target_character.faith
+						is_ai = yes
+						is_landed = yes
+						highest_held_title_tier >= tier_county
+						NOT = {
+							scope:actor.faith.great_holy_war = { has_pledged_defender = prev }
+						}
+					}
+					trigger_event = { id = great_holy_war.0021 days = { 25 150 } } #AI counterpledging. Unlike attackers, defenders should be selected much faster during the preparation phase and then stop.
+				}
+				scope:target_character = {
+					faith = {
+						every_faith_holy_order = {
+							trigger_event = { id = great_holy_war.0091 days = { 25 60 } } #Holy order counterpledging
+						}
+					}
+				}
+				scope:actor.faith.great_holy_war = { #Recalculate Recipient.
+					faith = { save_scope_as = the_faith }
+					ghw_target_title = { save_scope_as = target_kingdom }
+					if = { #If Pope died in the meantime.
+						limit = {
+							OR = {
+								NOT = {
+									exists = scope:the_faith.great_holy_war.ghw_war_declarer
+								}
+								NOT = {
+									scope:the_faith.great_holy_war.ghw_war_declarer = { is_alive = yes }
+								}
+							}
+						}
+						scope:the_faith = { ghw_set_new_war_declarer_effect = yes }
+					}
+					scope:the_faith.great_holy_war.ghw_war_declarer = { save_scope_as = ghw_sponsor }
+					#Check and set sponsor if needed.
+					undirected_ghw_recipient_selection_effect = yes
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		base = 0
@@ -4707,6 +5208,7 @@ hof_redirect_great_holy_war_interaction = {
 
 select_ghw_beneficiary_interaction = {
 	category = interaction_category_religion
+
 	
 	populate_recipient_list = {
 		scope:recipient = {
@@ -4744,11 +5246,16 @@ select_ghw_beneficiary_interaction = {
 	auto_accept = yes
 	
 	is_shown = {
-		always = no
+		exists = scope:actor.faith.great_holy_war
+		scope:actor = {
+			exists = faith.great_holy_war
+			this = scope:recipient
+			is_pledged_ghw_attacker = yes
+		}
+		NOT = { scope:actor = scope:recipient.faith.great_holy_war.ghw_war_declarer } #Not for the Caliph himself.
 	}
 	
 	can_be_picked = {
-		always = no
 		is_adult = yes
 		is_ruler = no
 		faith = scope:actor.faith

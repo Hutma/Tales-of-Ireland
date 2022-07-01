@@ -1,0 +1,5478 @@
+﻿#####         Connacht (e_connacht)
+####          Galway (k_galway)
+###           Kiltartan (d_kiltartan)
+##            Kinvarra (c_kinvarra)
+
+971 = {       #Kinvarra (b_kinvarra)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+972 = {       #Doorus (b_doorus)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+973 = {       #Cappaghmore (b_cappaghmore)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+974 = {       #Tierneevin (b_tierneevin)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+975 = {       #Kilcornan (b_kilcornan)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Gort (c_gort)
+
+976 = {       #Gort (b_gort)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+977 = {       #Shanaglish (b_shanaglish)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+978 = {       #Tubber (b_tubber)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+979 = {       #Cregpark (b_cregpark)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Ballaba (c_ballaba)
+
+980 = {       #Ballaba (b_ballaba)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+981 = {       #Ardnagrove (b_ardnagrove)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+982 = {       #Caheravoneen (b_caheravoneen)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+983 = {       #Leaha (b_leaha)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+###           Dunkelin (d_dunkelin)
+##            Oranmore (c_oranmore)
+
+984 = {       #Oranmore (b_oranmore)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+985 = {       #Tawin (b_tawin)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+986 = {       #Glennascaul (b_glennascaul)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+987 = {       #Creganna (b_creganna)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+988 = {       #Ballinduff (b_ballinduff)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+##            Clarinbridge (c_clarinbridge)
+
+989 = {       #Clarinbridge (b_clarinbridge)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+990 = {       #Roveagh (b_roveagh)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+991 = {       #Lisheenkyle (b_lisheenkyle)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+992 = {       #Whistlebridge (b_whistlebridge)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+##            Craughwell (c_craughwell)
+
+993 = {       #Craughwell (b_craughwell)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+994 = {       #Rockmore (b_rockmore)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+995 = {       #Rathgorgan (b_rathgorgan)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+996 = {       #Cahercastle (b_cahercastle)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+##            Ballinderreen (c_ballinderreen)
+
+997 = {       #Ballinderreen (b_ballinderreen)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+998 = {       #Caherpeak (b_caherpeak)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+999 = {       #Ardrahan (b_ardrahan)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+###           Galway (d_galway)
+##            Galway (c_galway)
+
+1000 = {      #Galway (b_galway)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1001 = {      #Ballinfoyle (b_ballinfoyle)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1002 = {      #Menlough (b_menlough)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1003 = {      #Keeraun (b_keeraun)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1004 = {      #Cloosh (b_cloosh)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Moycullen (c_moycullen)
+
+1005 = {      #Moycullen (b_moycullen)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1006 = {      #Portarra (b_portarra)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1007 = {      #Carrowmoreknock (b_carrowmoreknock)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1008 = {      #Rosscahill (b_rosscahill)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1009 = {      #Birchall (b_birchall)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Bealadangan (c_bealadangan)
+
+1010 = {      #Bealadangan (b_bealadangan)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1011 = {      #Salalee (b_salalee)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1012 = {      #Carraroe (b_carraroe)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1013 = {      #Lettermullan (b_lettermullan)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1014 = {      #Lettermore (b_lettermore)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Cartoor (c_cartoor)
+
+1015 = {      #Cartoor (b_cartoor)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1016 = {      #Oughterard (b_oughterard)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1017 = {      #Rinnerroon (b_rinnerroon)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1018 = {      #Tullaghboy (b_tullaghboy)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Bailena (c_bailena)
+
+1019 = {      #Bailena (b_bailena)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1020 = {      #Rossaveel (b_rossaveel)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1021 = {      #Inverin (b_inverin)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1022 = {      #Cartronkeel (b_cartronkeel)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Maamcross (c_maamcross)
+
+1023 = {      #Maamcross (b_maamcross)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1024 = {      #Peacockes (b_peacockes)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1025 = {      #Maamcrossmart (b_maamcrossmart)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Spiddal (c_spiddal)
+
+1026 = {      #Spiddal (b_spiddal)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1027 = {      #Cathair (b_cathair)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1028 = {      #Furbogh (b_furbogh)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Clare (d_clare)
+##            Headford (c_headford)
+
+1041 = {      #Headford (b_headford)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1042 = {      #Eaglewood (b_eaglewood)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1043 = {      #Ballyburke (b_ballyburke)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1044 = {      #Keekill (b_keekill)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1045 = {      #Luimnagh (b_luimnagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1046 = {      #Bella (b_bella)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Biggera (c_biggera)
+
+1047 = {      #Biggera (b_biggera)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1048 = {      #Dawros (b_dawros)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1049 = {      #Manusflynn (b_manusflynn)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1050 = {      #Cahernaheerick (b_cahernaheerick)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1051 = {      #Belclare (b_belclare)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Corrofin (c_corrofin)
+
+1052 = {      #Corrofin (b_corrofin)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1053 = {      #Pollinore (b_pollinore)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1054 = {      #Cummer (b_cummer)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1055 = {      #Kilcurriv (b_kilcurriv)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1056 = {      #Currandrum (b_currandrum)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Corrandulla (c_corrandulla)
+
+1057 = {      #Corrandulla (b_corrandulla)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1058 = {      #Stripe (b_stripe)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1059 = {      #Castlequarter (b_castlequarter)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1060 = {      #Annaghdown (b_annaghdown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Caherlistrane (c_caherlistrane)
+
+1061 = {      #Caherlistrane (b_caherlistrane)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1062 = {      #Kilgreana (b_kilgreana)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1063 = {      #Wakefield (b_wakefield)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1064 = {      #Uggool (b_uggool)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Dunmore (d_dunmore)
+##            Kilconly (c_kilconly)
+
+1065 = {      #Kilconly (b_kilconly)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1066 = {      #Ratesh (b_ratesh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1067 = {      #Lacklea (b_lacklea)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1068 = {      #Cloonaglasha (b_cloonaglasha)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Tuam (c_tuam)
+
+1069 = {      #Tuam (b_tuam)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1070 = {      #Kilbannon (b_kilbannon)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1071 = {      #Sylane (b_sylane)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1072 = {      #Cloghermore (b_cloghermore)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Knocknagur (c_knocknagur)
+
+1073 = {      #Knocknagur (b_knocknagur)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1074 = {      #Liskeavy (b_liskeavy)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1075 = {      #Clonacurry (b_clonacurry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Milltown (c_milltown)
+
+1076 = {      #Milltown (b_milltown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1077 = {      #Bohalas (b_bohalas)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+##            Dunmore (c_dunmore)
+
+1078 = {      #Dunmorecastle (b_dunmorecastle)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1079 = {      #Garrafrauns (b_garrafrauns)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+###           Loughrea (d_loughrea)
+##            Ballyglass (c_ballyglass)
+
+1080 = {      #Ballyglass (b_ballyglass)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1081 = {      #Isserkelly (b_isserkelly)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1082 = {      #Boley (b_boley)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1083 = {      #Pullagh (b_pullagh)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Peterswell (c_peterswell)
+
+1084 = {      #Peterswell (b_peterswell)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1085 = {      #Loughinwadda (b_loughinwadda)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1086 = {      #Shandrum (b_shandrum)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Gortnahown (c_gortnahown)
+
+1087 = {      #Gortnahown (b_gortnahown)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1088 = {      #Knockandoe (b_knockandoe)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1089 = {      #Cnoc (b_cnoc)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+###           Letrim (d_letrim)
+##            Rosaglanna (c_rosaglanna)
+
+1090 = {      #Rosaglanna (b_rosaglanna)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1091 = {      #Stonefield (b_stonefield)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1092 = {      #Brogue (b_brogue)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1093 = {      #Drumkeary (b_drumkeary)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1094 = {      #Micknagh (b_micknagh)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1095 = {      #Ballynakill (b_ballynakill)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Bushypark (c_bushypark)
+
+1096 = {      #Bushypark (b_bushypark)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1097 = {      #Gorteeny (b_gorteeny)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1098 = {      #Barkhill (b_barkhill)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1099 = {      #Aghanvally (b_aghanvally)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Fearglass (c_fearglass)
+
+1100 = {      #Fearglass (b_fearglass)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1101 = {      #Derrybrien (b_derrybrien)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1102 = {      #Airyhill (b_airyhill)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1103 = {      #Ballycourheen (b_ballycourheen)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Barnaculla (c_barnaculla)
+
+1104 = {      #Barnaculla (b_barnaculla)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1105 = {      #Rayconor (b_rayconor)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1106 = {      #Fortyacres (b_fortyacres)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1107 = {      #Tynagh (b_tynagh)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+###           Gallongford (d_gallongford)
+##            Eyrecourt (c_eyrecourt)
+
+1108 = {      #Eyrecourt (b_eyrecourt)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1109 = {      #Tashinny (b_tashinny)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1110 = {      #Feaghmore (b_feaghmore)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1111 = {      #Ballynaslee (b_ballynaslee)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1112 = {      #Mayour (b_mayour)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Clonfert (c_clonfert)
+
+1113 = {      #Clonfert (b_clonfert)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1114 = {      #Cloncondra (b_cloncondra)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1115 = {      #Kilmacshane (b_kilmacshane)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1116 = {      #Cloonachase (b_cloonachase)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Killimor (c_killimor)
+
+1117 = {      #Killimor (b_killimor)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1118 = {      #Hearnsbrook (b_hearnsbrook)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1119 = {      #Thornfort (b_thornfort)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1120 = {      #Kylecrow (b_kylecrow)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Portumna (c_portumna)
+
+1121 = {      #Portumna (b_portumna)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1122 = {      #Earlstown (b_earlstown)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1123 = {      #Stoneyisland (b_stoneyisland)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1124 = {      #Ballyshrule (b_ballyshrule)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+###           Athenry (d_athenry)
+##            Athenry (c_athenry)
+
+1125 = {      #Athenry (b_athenry)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+1126 = {      #Ballydavid (b_ballydavid)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+1127 = {      #Blain (b_blain)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = none
+}
+
+##            Kiltullagh (c_kiltullagh)
+
+1128 = {      #Kiltullagh (b_kiltullagh)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+1129 = {      #Bresk (b_bresk)
+    culture = newgrange_builders
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+###           Aran (d_aran)
+##            Aran (c_aran)
+
+1130 = {      #Kilronan (b_kilronan)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_dun_duchathair_01
+				special_building = wonder_dun_duchathair_01
+			}
+}
+
+1131 = {      #Shrawn (b_shrawn)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1132 = {      #Carrownlisheen (b_carrownlisheen)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Clonmacnowen (d_clonmacnowen)
+##            Laurencetown (c_laurencetown)
+
+1133 = {      #Laurencetown (b_laurencetown)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1134 = {      #Oghill (b_oghill)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1135 = {      #Huntly (b_huntly)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Aughagreagh (c_aughagreagh)
+
+1136 = {      #Aughagreagh (b_aughagreagh)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1137 = {      #Lismany (b_lismany)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+##            Atticoffey (c_atticoffey)
+
+1138 = {      #Atticoffey (b_atticoffey)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1139 = {      #Clontuskert (b_clontuskert)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+###           Killian (d_killian)
+##            Rookhill (c_rookhill)
+
+1140 = {      #Rookhill (b_rookhill)
+    culture = sogain
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1141 = {      #Killine (b_killine)
+    culture = sogain
+    religion = great_barrows
+    holding = church_holding
+}
+
+1142 = {      #Lisquell (b_lisquell)
+    culture = sogain
+    religion = great_barrows
+    holding = none
+}
+
+1143 = {      #Cloonascarberry (b_cloonascarberry)
+    culture = sogain
+    religion = great_barrows
+    holding = none
+}
+
+##            Ballygar (c_ballygar)
+
+1144 = {      #Ballygar (b_ballygar)
+    culture = sogain
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1145 = {      #Rathcash (b_rathcash)
+    culture = sogain
+    religion = great_barrows
+    holding = church_holding
+}
+
+1146 = {      #Aughrane (b_aughrane)
+    culture = sogain
+    religion = great_barrows
+    holding = none
+}
+
+##            Ruane (c_ruane)
+
+1147 = {      #Ruane (b_ruane)
+    culture = sogain
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1148 = {      #Islandcase (b_islandcase)
+    culture = sogain
+    religion = great_barrows
+    holding = church_holding
+}
+
+###           Tiaquin (d_tiaquin)
+##            Tiquin (c_tiquin)
+
+1149 = {      #Tiquin (b_tiquin)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1150 = {      #Briarhill (b_briarhill)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1151 = {      #Derrough (b_derrough)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1152 = {      #Cormacugh (b_cormacugh)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1153 = {      #Licklea (b_licklea)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1154 = {      #Derrydonnell (b_derrydonnell)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Colmanstown (c_colmanstown)
+
+1155 = {      #Colmanstown (b_colmanstown)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1156 = {      #Cuddoo (b_cuddoo)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1157 = {      #Lackaghmore (b_lackaghmore)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1158 = {      #Skehana (b_skehana)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1159 = {      #Guilka (b_guilka)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Monivea (c_monivea)
+
+1160 = {      #Monivea (b_monivea)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1161 = {      #Ryehill (b_ryehill)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1162 = {      #Turlicar (b_turlicar)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1163 = {      #Mullaghhill (b_mullaghhill)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Ballymannion (c_ballymannion)
+
+1164 = {      #Ballymannion (b_ballymannion)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1165 = {      #Glentane (b_glentane)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1166 = {      #Dooras (b_dooras)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1167 = {      #Caltrascreen (b_caltrascreen)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Carnacregg (c_carnacregg)
+
+1168 = {      #Carnacregg (b_carnacregg)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1169 = {      #Ballinruane (b_ballinruane)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1170 = {      #Brierfield (b_brierfield)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Coiscuain (c_coiscuain)
+
+1171 = {      #Coiscuain (b_coiscuain)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1172 = {      #Ballygraney (b_ballygraney)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1173 = {      #Danganmore (b_danganmore)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+###           Ballymore (d_ballymore)
+##            Glenamaddy (c_glenamaddy)
+
+1174 = {      #Glenamaddy (b_glenamaddy)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1175 = {      #Killeenrevagh (b_killeenrevagh)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1176 = {      #Stoolpark (b_stoolpark)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1177 = {      #Boyounagh (b_boyounagh)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1178 = {      #Lisheen (b_lisheen)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1179 = {      #Mullauns (b_mullauns)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Tample (c_tample)
+
+1180 = {      #Tample (b_tample)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1181 = {      #Cloonlee (b_cloonlee)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1182 = {      #Farmhill (b_farmhill)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1183 = {      #Timiduane (b_timiduane)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1184 = {      #Kippanagh (b_kippanagh)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Crumlin (c_crumlin)
+
+1185 = {      #Crumlin (b_crumlin)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1186 = {      #Williamstown (b_williamstown)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1187 = {      #Ballymoe (b_ballymoe)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1188 = {      #Glinskcastle (b_glinskcastle)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Tavanagh (c_tavanagh)
+
+1189 = {      #Tavanagh (b_tavanagh)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1190 = {      #Bellwell (b_bellwell)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1191 = {      #Ballymaglancy (b_ballymaglancy)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+###           Kilconnell (d_kilconnell)
+##            Kilconnell (c_kilconnell)
+
+1192 = {      #Kilconnell (b_kilconnell)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1193 = {      #Cromagh (b_cromagh)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1194 = {      #Slieveroe (b_slieveroe)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1195 = {      #Rushlake (b_rushlake)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Lisavahane (c_lisavahane)
+
+1196 = {      #Lisavahane (b_lisavahane)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1197 = {      #Gortaderry (b_gortaderry)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1198 = {      #Banefield (b_banefield)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+1199 = {      #Garrynamisane (b_garrynamisane)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Dowras (c_dowras)
+
+1200 = {      #Dowras (b_dowras)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1201 = {      #Ardranney (b_ardranney)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1202 = {      #Loughturk (b_loughturk)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+##            Ballylouge (c_ballylouge)
+
+1203 = {      #Ballylouge (b_ballylouge)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = castle_holding
+}
+
+1204 = {      #Killoran (b_killoran)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = church_holding
+}
+
+1205 = {      #Elfeet (b_elfeet)
+    culture = newgrange_builders
+    religion = newgrange_faith
+    holding = none
+}
+
+###           Ross (d_ross)
+##            Maum (c_maum)
+
+1206 = {      #Maum (b_maum)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1207 = {      #Terrnakill (b_terrnakill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1208 = {      #Maam (b_maam)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1209 = {      #Glentraigue (b_glentraigue)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1210 = {      #Ballinacorriga (b_ballinacorriga)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Killateeaun (c_killateeaun)
+
+1211 = {      #Killateeaun (b_killateeaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1212 = {      #Derreenmanus (b_derreenmanus)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1213 = {      #Glensaulloop (b_glensaulloop)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Cornamona (c_cornamona)
+
+1214 = {      #Cornamona (b_cornamona)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1215 = {      #Clonbur (b_clonbur)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1216 = {      #Cloghbrack (b_cloghbrack)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Ballynahinch (d_ballynahinch)
+##            Glassillaun (c_glassillaun)
+
+1217 = {      #Glassillaun (b_glassillaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1218 = {      #Derrynasliggaun (b_derrynasliggaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1219 = {      #Leenaun (b_leenaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1220 = {      #Illaunroe (b_illaunroe)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1221 = {      #Creagha (b_creagha)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1222 = {      #Rinavore (b_rinavore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Inver (c_inver)
+
+1223 = {      #Inver (b_inver)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1224 = {      #Levalllinree (b_levalllinree)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1225 = {      #Glenloshvalley (b_glenloshvalley)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ard (c_ard)
+
+1226 = {      #Ard (b_ard)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1227 = {      #Glynsk (b_glynsk)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1228 = {      #Kilkieran (b_kilkieran)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1229 = {      #Kinturk (b_kinturk)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Recess (c_recess)
+
+1230 = {      #Recess (b_recess)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1231 = {      #Glenturkeen (b_glenturkeen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1232 = {      #Doonreaghan (b_doonreaghan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Claddaghduff (d_claddaghduff)
+##            Claddaghduff (c_claddaghduff)
+
+1233 = {      #Claddaghduff (b_claddaghduff)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1234 = {      #Cleggan (b_cleggan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1235 = {      #Leagun (b_leagun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1236 = {      #Sheeauns (b_sheeauns)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1237 = {      #Kingstown (b_kingstown)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1238 = {      #Clifden (b_clifden)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Letterfrack (c_letterfrack)
+
+1239 = {      #Letterfrack (b_letterfrack)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1240 = {      #Rinvyle (b_rinvyle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1241 = {      #Gowlaun (b_gowlaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1242 = {      #Moyard (b_moyard)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1243 = {      #Connemara (b_connemara)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballyconneely (c_ballyconneely)
+
+1244 = {      #Ballyconneely (b_ballyconneely)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1245 = {      #Mannin (b_mannin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1246 = {      #Derrygimla (b_derrygimla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Coogla (c_coogla)
+
+1247 = {      #Coogla (b_coogla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1248 = {      #Funachree (b_funachree)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1249 = {      #Roundstone (b_roundstone)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Toremoreislands (d_toremoreislands)
+##            Inishbofin (c_inishbofin)
+
+1250 = {      #Inishbofin (b_inishbofin)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1251 = {      #Inishshark (b_inishshark)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+##            Inishturk (c_inishturk)
+
+1252 = {      #Inishturk (b_inishturk)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1253 = {      #Toremore (b_toremore)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+####          Mayo (k_mayo)
+###           Murrisk (d_murrisk)
+##            Louisburgh (c_louisburgh)
+
+1257 = {      #Louisburgh (b_louisburgh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1258 = {      #Roonith (b_roonith)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1259 = {      #Oldhead (b_oldhead)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1260 = {      #Carrownisky (b_carrownisky)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1261 = {      #Ashleamconnacht (b_ashleamconnacht)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1262 = {      #Cregganbaun (b_cregganbaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Killadoon (c_killadoon)
+
+1263 = {      #Killadoon (b_killadoon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1264 = {      #Fahy (b_fahy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1265 = {      #Thullabaun (b_thullabaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1266 = {      #Cloonamanagh (b_cloonamanagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1267 = {      #Mweelrea (b_mweelrea)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1268 = {      #Delphi (b_delphi)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Kilsallagh (c_kilsallagh)
+
+1269 = {      #Kilsallagh (b_kilsallagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1270 = {      #Leckanvy (b_leckanvy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1271 = {      #Kinnock (b_kinnock)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1272 = {      #Corragaun (b_corragaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1273 = {      #Furrigal (b_furrigal)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Murrisk (c_murrisk)
+
+1274 = {      #Murrisk (b_murrisk)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1275 = {      #Gloshpatrick (b_gloshpatrick)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1276 = {      #Glenco (b_glenco)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1277 = {      #Tiernacroagha (b_tiernacroagha)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Erriff (c_erriff)
+
+1278 = {      #Erriff (b_erriff)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1279 = {      #Cushlough (b_cushlough)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1280 = {      #Derryulra (b_derryulra)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1281 = {      #Aasleagh (b_aasleagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Leacta (c_leacta)
+
+1282 = {      #Leacta (b_leacta)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1283 = {      #Townyslinnaun (b_townyslinnaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Burrishoole (d_burrishoole)
+##            Westport (c_westport)
+
+1284 = {      #Westport (b_westport)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1285 = {      #Carrowholly (b_carrowholly)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1286 = {      #Inishcottle (b_inishcottle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1287 = {      #Sheean (b_sheean)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1288 = {      #Slogger (b_slogger)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1289 = {      #Aughagowla (b_aughagowla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Comploon (c_comploon)
+
+1290 = {      #Comploon (b_comploon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1291 = {      #Roy (b_roy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1292 = {      #Furnace (b_furnace)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1293 = {      #Lettermaghera (b_lettermaghera)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1294 = {      #Teevemore (b_teevemore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1295 = {      #Tawnameeltoge (b_tawnameeltoge)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carrowbeg (c_carrowbeg)
+
+1296 = {      #Carrowbeg (b_carrowbeg)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1297 = {      #Rockfleetcastle (b_rockfleetcastle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1298 = {      #Mallaranny (b_mallaranny)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1299 = {      #Thechalet (b_thechalet)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Knockranny (c_knockranny)
+
+1300 = {      #Knockranny (b_knockranny)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1301 = {      #Drummindoo (b_drummindoo)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1302 = {      #Cushin (b_cushin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Knappagh (c_knappagh)
+
+1303 = {      #Knappagh (b_knappagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1304 = {      #Liscarney (b_liscarney)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Carra (d_carra)
+##            Castlebar (c_castlebar)
+
+1305 = {      #Castlebar (b_castlebar)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1306 = {      #Derrywash (b_derrywash)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1307 = {      #Frenchill (b_frenchill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1308 = {      #Breaffy (b_breaffy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1309 = {      #Clooneen (b_clooneen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1310 = {      #Ballyhean (b_ballyhean)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1311 = {      #Ballycarra (b_ballycarra)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carnacon (c_carnacon)
+
+1312 = {      #Carnacon (b_carnacon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1313 = {      #Culleen (b_culleen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1314 = {      #Rostigue (b_rostigue)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1315 = {      #Ballyglassconnacht (b_ballyglassconnacht)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1316 = {      #Cloonboro (b_cloonboro)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Manulla (c_manulla)
+
+1317 = {      #Manulla (b_manulla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1318 = {      #Drimdough (b_drimdough)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1319 = {      #Drumcorrabawn (b_drumcorrabawn)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1320 = {      #Ballinalassa (b_ballinalassa)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Glenisland (c_glenisland)
+
+1321 = {      #Glenisland (b_glenisland)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1322 = {      #Ashbridge (b_ashbridge)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1323 = {      #Drumgarve (b_drumgarve)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1324 = {      #Tawnyculawee (b_tawnyculawee)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Pontoon (c_pontoon)
+
+1325 = {      #Pontoon (b_pontoon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1326 = {      #Caurans (b_caurans)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1327 = {      #Fauleens (b_fauleens)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Partry (c_partry)
+
+1328 = {      #Partry (b_partry)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1329 = {      #Ballintleva (b_ballintleva)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1330 = {      #Toormakeady (b_toormakeady)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Kilmaine (d_kilmaine)
+##            Lisloughrey (c_lisloughrey)
+
+1331 = {      #Lisloughrey (b_lisloughrey)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1332 = {      #Clerhaun (b_clerhaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1333 = {      #Billypark (b_billypark)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1334 = {      #Glencorrib (b_glencorrib)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Theneale (c_theneale)
+
+1335 = {      #Theneale (b_theneale)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1336 = {      #Muckersaune (b_muckersaune)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1337 = {      #Kilmaine (b_kilmaine)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1338 = {      #Carranturley (b_carranturley)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Cloonkeary (c_cloonkeary)
+
+1339 = {      #Cloonkeary (b_cloonkeary)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1340 = {      #Barnfield (b_barnfield)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1341 = {      #Ballinrobe (b_ballinrobe)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1342 = {      #Ruslara (b_ruslara)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Hollymount (c_hollymount)
+
+1343 = {      #Hollymount (b_hollymount)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1344 = {      #Roundfort (b_roundfort)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1345 = {      #Lisseveleen (b_lisseveleen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Brodella (c_brodella)
+
+1346 = {      #Brodella (b_brodella)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1347 = {      #Cloughmoyne (b_cloughmoyne)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1348 = {      #Dalgan (b_dalgan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Clanmorris (d_clanmorris)
+##            Claremorris (c_claremorris)
+
+1349 = {      #Claremorris (b_claremorris)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1350 = {      #Knockthomas (b_knockthomas)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1351 = {      #Backfox (b_backfox)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1352 = {      #Pollawarla (b_pollawarla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1353 = {      #Gorlough (b_gorlough)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballindine (c_ballindine)
+
+1354 = {      #Ballindine (b_ballindine)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1355 = {      #Scardaune (b_scardaune)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1356 = {      #Irishtown (b_irishtown)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1357 = {      #Ardcrone (b_ardcrone)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Brickens (c_brickens)
+
+1358 = {      #Brickens (b_brickens)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1359 = {      #Ballykinave (b_ballykinave)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1360 = {      #Ranaghard (b_ranaghard)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Costello (d_costello)
+##            Ballyhaunis (c_ballyhaunis)
+
+1361 = {      #Ballyhaunis (b_ballyhaunis)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1362 = {      #Westland (b_westland)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1363 = {      #Reisk (b_reisk)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1364 = {      #Carrowclogher (b_carrowclogher)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1365 = {      #Bekan (b_bekan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1366 = {      #Bushisland (b_bushisland)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1367 = {      #Gurrane (b_gurrane)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballaghaderreen (c_ballaghaderreen)
+
+1368 = {      #Ballaghaderreen (b_ballaghaderreen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1369 = {      #Cartron (b_cartron)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1370 = {      #Ardvarnagh (b_ardvarnagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1371 = {      #Cloonawillin (b_cloonawillin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1372 = {      #Tibohine (b_tibohine)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1373 = {      #Ardvarney (b_ardvarney)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Garrynagran (c_garrynagran)
+
+1374 = {      #Garrynagran (b_garrynagran)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1375 = {      #Ballindrehid (b_ballindrehid)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1376 = {      #Carton (b_carton)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1377 = {      #Coogue (b_coogue)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1378 = {      #Aghamore (b_aghamore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1379 = {      #Brackloon (b_brackloon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Cloongoonagh (c_cloongoonagh)
+
+1380 = {      #Cloongoonagh (b_cloongoonagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1381 = {      #Carrownageeragh (b_carrownageeragh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1382 = {      #Urlaur (b_urlaur)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1383 = {      #Culcastle (b_culcastle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1384 = {      #Culclare (b_culclare)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Gallen (d_gallen)
+##            Kiltimagh (c_kiltimagh)
+
+1385 = {      #Kiltimagh (b_kiltimagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1386 = {      #Derrynalecka (b_derrynalecka)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1387 = {      #Lisnamonaghie (b_lisnamonaghie)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1388 = {      #Ballinvoley (b_ballinvoley)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1389 = {      #Carrowdine (b_carrowdine)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Currower (c_currower)
+
+1390 = {      #Currower (b_currower)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1391 = {      #Carracrum (b_carracrum)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1392 = {      #Bofield (b_bofield)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1393 = {      #Mullahowney (b_mullahowney)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1394 = {      #Attymass (b_attymass)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Bonniconlon (c_bonniconlon)
+
+1395 = {      #Bonniconlon (b_bonniconlon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1396 = {      #Carralavin (b_carralavin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1397 = {      #Rathreedane (b_rathreedane)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1398 = {      #Glenree (b_glenree)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Corballa (c_corballa)
+
+1399 = {      #Corballa (b_corballa)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1400 = {      #Carradoogan (b_carradoogan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1401 = {      #Ellaghamore (b_ellaghamore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1402 = {      #Chaffhill (b_chaffhill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Killasser (c_killasser)
+
+1403 = {      #Killasser (b_killasser)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1404 = {      #Attimachugh (b_attimachugh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1405 = {      #Tievemore (b_tievemore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1406 = {      #Muckroe (b_muckroe)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Glenhest (d_glenhest)
+##            Glenhest (c_glenhest)
+
+1407 = {      #Glenhest (b_glenhest)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1408 = {      #Shanvalley (b_shanvalley)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1409 = {      #Cloondaff (b_cloondaff)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1410 = {      #Bofeenaun (b_bofeenaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1411 = {      #Boggey (b_boggey)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Massbrook (c_massbrook)
+
+1412 = {      #Massbrook (b_massbrook)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1413 = {      #Freaghillan (b_freaghillan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1414 = {      #Gortlogh (b_gortlogh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1415 = {      #Cunnagher (b_cunnagher)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Dooleeg (c_dooleeg)
+
+1416 = {      #Dooleeg (b_dooleeg)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1417 = {      #Moylaw (b_moylaw)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1418 = {      #Eskeragh (b_eskeragh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1419 = {      #Corvaderra (b_corvaderra)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Templenagalliaghdoo (c_templenagalliaghdoo)
+
+1420 = {      #Templenagalliaghdoo (b_templenagalliaghdoo)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1421 = {      #Castlehill (b_castlehill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1422 = {      #Lahardaun (b_lahardaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Crossmolina (c_crossmolina)
+
+1423 = {      #Crossmolina (b_crossmolina)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1424 = {      #Enniscoe (b_enniscoe)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1425 = {      #Mountcormack (b_mountcormack)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Keenagh (c_keenagh)
+
+1426 = {      #Keenagh (b_keenagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1427 = {      #Tawnacran (b_tawnacran)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1428 = {      #Letterneevogue (b_letterneevogue)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Tirawley (d_tirawley)
+##            Muingreevagh (c_muingreevagh)
+
+1429 = {      #Muingreevagh (b_muingreevagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1430 = {      #Rathlackan (b_rathlackan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1431 = {      #Glenurla (b_glenurla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1432 = {      #Glenlossera (b_glenlossera)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1433 = {      #Balycastle (b_balycastle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1434 = {      #Aghoose (b_aghoose)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1435 = {      #Gortmore (b_gortmore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Killala (c_killala)
+
+1436 = {      #Killala (b_killala)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1437 = {      #Knockatinole (b_knockatinole)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1438 = {      #Ballina (b_ballina)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1439 = {      #Kincon (b_kincon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1440 = {      #Ballymachola (b_ballymachola)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1441 = {      #Rhans (b_rhans)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carbed (c_carbed)
+
+1442 = {      #Carbed (b_carbed)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1443 = {      #Lissadrone (b_lissadrone)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1444 = {      #Carrowcullen (b_carrowcullen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1445 = {      #Belsallagh (b_belsallagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Corroy (c_corroy)
+
+1446 = {      #Corroy (b_corroy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1447 = {      #Garracloon (b_garracloon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1448 = {      #Derrymoneen (b_derrymoneen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1449 = {      #Knockmorenorth (b_knockmorenorth)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Moygownagh (c_moygownagh)
+
+1450 = {      #Moygownagh (b_moygownagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1451 = {      #Garranard (b_garranard)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1452 = {      #Callaghadoo (b_callaghadoo)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Erris (d_erris)
+##            Barnatra (c_barnatra)
+
+1453 = {      #Barnatra (b_barnatra)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1454 = {      #Shrataggle (b_shrataggle)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1455 = {      #Munhin (b_munhin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1456 = {      #Bangorerris (b_bangorerris)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1457 = {      #Glencullen (b_glencullen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Shralaghy (c_shralaghy)
+
+1458 = {      #Shralaghy (b_shralaghy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1459 = {      #Glenamoy (b_glenamoy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1460 = {      #Crocknacolly (b_crocknacolly)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1461 = {      #Shrameen (b_shrameen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carrowteige (c_carrowteige)
+
+1462 = {      #Carrowteige (b_carrowteige)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1463 = {      #Knockadaff (b_knockadaff)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1464 = {      #Cornboy (b_cornboy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Graughill (c_graughill)
+
+1465 = {      #Graughill (b_graughill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1466 = {      #Kilcommonmayo (b_kilcommonmayo)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1467 = {      #Leenamore (b_leenamore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Belderrig (c_belderrig)
+
+1468 = {      #Belderrig (b_belderrig)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1469 = {      #Glencalry (b_glencalry)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+##            Largan (c_largan)
+
+1470 = {      #Largan (b_largan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1471 = {      #Ballymunnelly (b_ballymunnelly)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+##            Bellacorick (c_bellacorick)
+
+1472 = {      #Bellacorick (b_bellacorick)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1473 = {      #Oweninney (b_oweninney)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Doohoma (d_doohoma)
+##            Doohoma (c_doohoma)
+
+1474 = {      #Doohoma (b_doohoma)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1475 = {      #Tubridgemore (b_tubridgemore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1476 = {      #Sranacolly (b_sranacolly)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1477 = {      #Doodaun (b_doodaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1478 = {      #Tubridgebeg (b_tubridgebeg)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Dooriel (c_dooriel)
+
+1479 = {      #Dooriel (b_dooriel)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1480 = {      #Drumslide (b_drumslide)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1481 = {      #Crosshill (b_crosshill)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1482 = {      #Ballycroy (b_ballycroy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Srahnamanragh (c_srahnamanragh)
+
+1483 = {      #Srahnamanragh (b_srahnamanragh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1484 = {      #Aughness (b_aughness)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1485 = {      #Driminiffrin (b_driminiffrin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1486 = {      #Darrcough (b_darrcough)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carrowniskey (c_carrowniskey)
+
+1487 = {      #Carrowniskey (b_carrowniskey)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1488 = {      #Srahmore (b_srahmore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1489 = {      #Leena (b_leena)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Bullaunmore (c_bullaunmore)
+
+1490 = {      #Bullaunmore (b_bullaunmore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1491 = {      #Drumleen (b_drumleen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Achill (d_achill)
+##            Bunacurry (c_bunacurry)
+
+1492 = {      #Bunacurry (b_bunacurry)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1493 = {      #River (b_river)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1494 = {      #Dooega (b_dooega)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1495 = {      #Ashleam (b_ashleam)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1496 = {      #Ailt (b_ailt)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Dooagh (c_dooagh)
+
+1497 = {      #Dooagh (b_dooagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1498 = {      #Keembay (b_keembay)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1499 = {      #Dugort (b_dugort)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1500 = {      #Bullsmouth (b_bullsmouth)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Corraun (c_corraun)
+
+1501 = {      #Corraun (b_corraun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1502 = {      #Tonregee (b_tonregee)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Belmullet (d_belmullet)
+##            Belmullet (c_belmullet)
+
+1503 = {      #Belmullet (b_belmullet)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1504 = {      #Aughalasheen (b_aughalasheen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1505 = {      #Gortaneoin (b_gortaneoin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1506 = {      #Binghamstown (b_binghamstown)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1507 = {      #Monaghrory (b_monaghrory)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Bunnahowen (c_bunnahowen)
+
+1508 = {      #Bunnahowen (b_bunnahowen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1509 = {      #Pullagurrane (b_pullagurrane)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1510 = {      #Bunnawillian (b_bunnawillian)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Gweesalia (c_gweesalia)
+
+1511 = {      #Gweesalia (b_gweesalia)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1512 = {      #Bunafolly (b_bunafolly)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1513 = {      #Tallagh (b_tallagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Tirraun (c_tirraun)
+
+1514 = {      #Tirraun (b_tirraun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1515 = {      #Aghleam (b_aghleam)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+####          Sligo (k_sligo)
+###           Tireragh (d_tireragh)
+##            Easky (c_easky)
+
+1526 = {      #Easky (b_easky)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1527 = {      #Rathlee (b_rathlee)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1528 = {      #Glenhola (b_glenhola)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1529 = {      #Kilglass (b_kilglass)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1530 = {      #Gurtaheen (b_gurtaheen)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Enniscrone (c_enniscrone)
+
+1531 = {      #Enniscrone (b_enniscrone)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1532 = {      #Carrowcarden (b_carrowcarden)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1533 = {      #Attychree (b_attychree)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1534 = {      #Sheeanmore (b_sheeanmore)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1535 = {      #Bunnanurla (b_bunnanurla)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Portavade (c_portavade)
+
+1536 = {      #Portavade (b_portavade)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1537 = {      #Shemagh (b_shemagh)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1538 = {      #Saltport (b_saltport)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1539 = {      #Carroweilpatrick (b_carroweilpatrick)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Meenashammer (c_meenashammer)
+
+1540 = {      #Meenashammer (b_meenashammer)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1541 = {      #Skreen (b_skreen)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1542 = {      #Drumnagoal (b_drumnagoal)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Doonalton (c_doonalton)
+
+1543 = {      #Doonalton (b_doonalton)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1544 = {      #Donaghintra (b_donaghintra)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1545 = {      #Leharrow (b_leharrow)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Leyny (d_leyny)
+##            Rinbaun (c_rinbaun)
+
+1546 = {      #Rinbaun (b_rinbaun)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1547 = {      #Barroe (b_barroe)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1548 = {      #Carrownateewaun (b_carrownateewaun)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1549 = {      #Lavagh (b_lavagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1550 = {      #Carnyara (b_carnyara)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1551 = {      #Achonry (b_achonry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Lisduff (c_lisduff)
+
+1552 = {      #Lisduff (b_lisduff)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1553 = {      #Ballysadare (b_ballysadare)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1554 = {      #Coolaney (b_coolaney)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1555 = {      #Laragan (b_laragan)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1556 = {      #Rathnarrow (b_rathnarrow)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Knocknaganny (c_knocknaganny)
+
+1557 = {      #Knocknaganny (b_knocknaganny)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1558 = {      #Chaffpool (b_chaffpool)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1559 = {      #Tobercurry (b_tobercurry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1560 = {      #Cloonrane (b_cloonrane)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1561 = {      #Bunnacrannagh (b_bunnacrannagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Toorlestraun (c_toorlestraun)
+
+1562 = {      #Toorlestraun (b_toorlestraun)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1563 = {      #Masshill (b_masshill)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1564 = {      #Kilmacteige (b_kilmacteige)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1565 = {      #Aclare (b_aclare)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1566 = {      #Treankeel (b_treankeel)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Cloonacool (c_cloonacool)
+
+1567 = {      #Cloonacool (b_cloonacool)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1568 = {      #Fortland (b_fortland)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1569 = {      #Mollagh (b_mollagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1570 = {      #Ballynaboll (b_ballynaboll)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Corran (d_corran)
+##            Keash (c_keash)
+
+1571 = {      #Keash (b_keash)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1572 = {      #Ballinacarrow (b_ballinacarrow)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1573 = {      #Kingsfort (b_kingsfort)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1574 = {      #Carrickrathmullen (b_carrickrathmullen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1575 = {      #Bunnamuck (b_bunnamuck)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Bunnanadden (c_bunnanadden)
+
+1576 = {      #Bunnanadden (b_bunnanadden)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1577 = {      #Shancarrigeen (b_shancarrigeen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1578 = {      #Doobeg (b_doobeg)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballymote (c_ballymote)
+
+1579 = {      #Ballymote (b_ballymote)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1580 = {      #Carrowkeel (b_carrowkeel)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Coolavin (d_coolavin)
+##            Monasteraden (c_monasteraden)
+
+1581 = {      #Monasteraden (b_monasteraden)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1582 = {      #Kilfree (b_kilfree)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1583 = {      #Tonnagh (b_tonnagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1584 = {      #Moygara (b_moygara)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Aghalateeve (c_aghalateeve)
+
+1585 = {      #Aghalateeve (b_aghalateeve)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1586 = {      #Cloonloo (b_cloonloo)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+###           Tirerryl (d_tirerryl)
+##            Kilmactranny (c_kilmactranny)
+
+1587 = {      #Kilmactranny (b_kilmactranny)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1588 = {      #Ballindoon (b_ballindoon)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1589 = {      #Kilnamonagh (b_kilnamonagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1590 = {      #Geevagh (b_geevagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1591 = {      #Foyoges (b_foyoges)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1592 = {      #Killamey (b_killamey)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Riverstown (c_riverstown)
+
+1593 = {      #Riverstown (b_riverstown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1594 = {      #Tobernaglashy (b_tobernaglashy)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1595 = {      #Doonsheheen (b_doonsheheen)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1596 = {      #Ummeryroe (b_ummeryroe)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1597 = {      #Rooghan (b_rooghan)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Ballintogher (c_ballintogher)
+
+1598 = {      #Ballintogher (b_ballintogher)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1599 = {      #Ballygawlley (b_ballygawlley)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1600 = {      #Sooey (b_sooey)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1601 = {      #Cloonamahon (b_cloonamahon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Hollybrook (c_hollybrook)
+
+1602 = {      #Hollybrook (b_hollybrook)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1603 = {      #Castlebaldwin (b_castlebaldwin)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1604 = {      #Ballinafad (b_ballinafad)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Carburry (d_carburry)
+##            Sligo (c_sligo)
+
+1605 = {      #Sligo (b_sligo)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1606 = {      #Calry (b_calry)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1607 = {      #Scarden (b_scarden)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1608 = {      #Strandhill (b_strandhill)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1609 = {      #Ransboro (b_ransboro)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1610 = {      #Cranmore (b_cranmore)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Drumcliff (c_drumcliff)
+
+1611 = {      #Drumcliff (b_drumcliff)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1612 = {      #Cloghboley (b_cloghboley)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1613 = {      #Ballyscannel (b_ballyscannel)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1614 = {      #Munninane (b_munninane)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Mullaghmore (c_mullaghmore)
+
+1615 = {      #Mullaghmore (b_mullaghmore)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1616 = {      #Cliffony (b_cliffony)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1617 = {      #Castlegal (b_castlegal)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Creggconnell (c_creggconnell)
+
+1618 = {      #Creggconnell (b_creggconnell)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_01
+				special_building = wonder_round_tower_01
+			}
+}
+
+1619 = {      #Rathbraughan (b_rathbraughan)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1620 = {      #Clogherevagh (b_clogherevagh)
+    culture = sea_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+####          Roscommon (k_roscommon)
+###           Moycarn (d_moycarn)
+##            Kidlawn (c_kidlawn)
+
+1627 = {      #Kidlawn (b_kidlawn)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1628 = {      #Curraghlahan (b_curraghlahan)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1629 = {      #Aghanoran (b_aghanoran)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Raherbeg (c_raherbeg)
+
+1630 = {      #Raherbeg (b_raherbeg)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1631 = {      #Rathbaun (b_rathbaun)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+###           Athlone (d_athlone)
+##            Athlone (c_athlone)
+
+1632 = {      #Athlone (b_athlone)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1633 = {      #Cushla (b_cushla)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1634 = {      #Hodson (b_hodson)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1635 = {      #Lisbrock (b_lisbrock)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1636 = {      #Ardnanure (b_ardnanure)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1637 = {      #Cornafulla (b_cornafulla)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Knockcroghery (c_knockcroghery)
+
+1638 = {      #Knockcroghery (b_knockcroghery)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1639 = {      #Ballymurray (b_ballymurray)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1640 = {      #Tullyroe (b_tullyroe)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1641 = {      #Lugboy (b_lugboy)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1642 = {      #Corboley (b_corboley)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Ballydangan (c_ballydangan)
+
+1643 = {      #Ballydangan (b_ballydangan)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1644 = {      #Beaghtrench (b_beaghtrench)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1645 = {      #Attyrory (b_attyrory)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1646 = {      #Lehinch (b_lehinch)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Purts (c_purts)
+
+1647 = {      #Purts (b_purts)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1648 = {      #Lecarrow (b_lecarrow)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1649 = {      #Ardmullen (b_ardmullen)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1650 = {      #Carrowloughan (b_carrowloughan)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Cornapallis (c_cornapallis)
+
+1651 = {      #Cornapallis (b_cornapallis)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1652 = {      #Knockadangan (b_knockadangan)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1653 = {      #Dysart (b_dysart)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+1654 = {      #Lismaha (b_lismaha)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Taghmaconnell (c_taghmaconnell)
+
+1655 = {      #Taghmaconnell (b_taghmaconnell)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1656 = {      #Bellaneeny (b_bellaneeny)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1657 = {      #Glashar (b_glashar)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+##            Carranure (c_carranure)
+
+1658 = {      #Carranure (b_carranure)
+    culture = ui_maine
+    religion = great_barrows
+    holding = castle_holding
+}
+
+1659 = {      #Tirconnellbeg (b_tirconnellbeg)
+    culture = ui_maine
+    religion = great_barrows
+    holding = church_holding
+}
+
+1660 = {      #Cregganaharna (b_cregganaharna)
+    culture = ui_maine
+    religion = great_barrows
+    holding = none
+}
+
+###           Ballinthober (d_ballinthober)
+##            Cloontimullan (c_cloontimullan)
+
+1661 = {      #Cloontimullan (b_cloontimullan)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1662 = {      #Portrunny (b_portrunny)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1663 = {      #Kileenboy (b_kileenboy)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1664 = {      #Clooncraff (b_clooncraff)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Slatta (c_slatta)
+
+1665 = {      #Slatta (b_slatta)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1666 = {      #Drummanbeg (b_drummanbeg)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1667 = {      #Drummanmore (b_drummanmore)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Clooncolry (c_clooncolry)
+
+1668 = {      #Clooncolry (b_clooncolry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1669 = {      #Carrowbawn (b_carrowbawn)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+##            Kilbarry (c_kilbarry)
+
+1670 = {      #Kilbarry (b_kilbarry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1671 = {      #Termonbarry (b_termonbarry)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+##            Ballycummin (c_ballycummin)
+
+1672 = {      #Ballycummin (b_ballycummin)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1673 = {      #Kilmor (b_kilmor)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+###           Rabradagh (d_rabradagh)
+##            Rabradagh (c_rabradagh)
+
+1674 = {      #Rabradagh (b_rabradagh)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+1675 = {      #Carrowduff (b_carrowduff)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+1676 = {      #Ballintober (b_ballintober)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = none
+}
+
+##            Toberkeagh (c_toberkeagh)
+
+1677 = {      #Toberkeagh (b_toberkeagh)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = castle_holding
+			  2500.1.1 = {
+				special_building_slot = wonder_round_tower_02
+				special_building = wonder_round_tower_02
+			}
+}
+
+1678 = {      #Ballymacfarrane (b_ballymacfarrane)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+##            Smaghraan (c_smaghraan)
+
+1679 = {      #Smaghraan (b_smaghraan)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = castle_holding
+}
+
+1680 = {      #Taughboy (b_taughboy)
+    culture = ui_maine
+    religion = fomorian_worship
+    holding = church_holding
+}
+
+###           Roscommon (d_roscommon)
+##            Roscommon (c_roscommon)
+
+1681 = {      #Roscommon (b_roscommon)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1682 = {      #Nure (b_nure)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1683 = {      #Tulsk (b_tulsk)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1684 = {      #Cargins (b_cargins)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1685 = {      #Clashaganny (b_clashaganny)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1686 = {      #Dooherty (b_dooherty)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Strokestown (c_strokestown)
+
+1687 = {      #Strokestown (b_strokestown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1688 = {      #Curraghmore (b_curraghmore)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1689 = {      #Cloonycarron (b_cloonycarron)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1690 = {      #Scramoge (b_scramoge)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1691 = {      #Borefield (b_borefield)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Creta (c_creta)
+
+1692 = {      #Creta (b_creta)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1693 = {      #Streamstown (b_streamstown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1694 = {      #Creeve (b_creeve)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Hillstreet (c_hillstreet)
+
+1695 = {      #Hillstreet (b_hillstreet)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1696 = {      #Corsiff (b_corsiff)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1697 = {      #Toomore (b_toomore)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Castlerea (d_castlerea)
+##            Castlerea (c_castlerea)
+
+1698 = {      #Castlerea (b_castlerea)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1699 = {      #Skeheen (b_skeheen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1700 = {      #Cloonsheever (b_cloonsheever)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1701 = {      #Lissalway (b_lissalway)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1702 = {      #Castleplunket (b_castleplunket)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1703 = {      #Farranawillin (b_farranawillin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Clonalis (c_clonalis)
+
+1704 = {      #Clonalis (b_clonalis)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1705 = {      #Aghalour (b_aghalour)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1706 = {      #Cloonfower (b_cloonfower)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1707 = {      #Cloonelt (b_cloonelt)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1708 = {      #Trien (b_trien)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Garranlahan (c_garranlahan)
+
+1709 = {      #Garranlahan (b_garranlahan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1710 = {      #Cloonfad (b_cloonfad)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1711 = {      #Ballinlough (b_ballinlough)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1712 = {      #Clooncrim (b_clooncrim)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Castlecole (c_castlecole)
+
+1713 = {      #Castlecole (b_castlecole)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1714 = {      #Rathkineely (b_rathkineely)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1715 = {      #Bellanagare (b_bellanagare)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Frenchpark (d_frenchpark)
+##            Carrowbehy (c_carrowbehy)
+
+1716 = {      #Carrowbehy (b_carrowbehy)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1717 = {      #Tawnaghbeg (b_tawnaghbeg)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1718 = {      #Cloonargid (b_cloonargid)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1719 = {      #Carrownaknocraun (b_carrownaknocraun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1720 = {      #Lisacul (b_lisacul)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Moyner (c_moyner)
+
+1721 = {      #Moyner (b_moyner)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1722 = {      #Toomanagh (b_toomanagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1723 = {      #Lissergool (b_lissergool)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1724 = {      #Fairymount (b_fairymount)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballinameen (c_ballinameen)
+
+1725 = {      #Ballinameen (b_ballinameen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1726 = {      #Runnaroddan (b_runnaroddan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1727 = {      #Runnaboll (b_runnaboll)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1728 = {      #Croghan (b_croghan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Frenchpark (c_frenchpark)
+
+1729 = {      #Frenchpark (b_frenchpark)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1730 = {      #Clegernagh (b_clegernagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1731 = {      #Cloonshanville (b_cloonshanville)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Boyle (d_boyle)
+##            Drumharlow (c_drumharlow)
+
+1732 = {      #Drumharlow (b_drumharlow)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1733 = {      #Cootehall (b_cootehall)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1734 = {      #Ballykeevican (b_ballykeevican)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1735 = {      #Ardcarne (b_ardcarne)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1736 = {      #Emlach (b_emlach)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1737 = {      #Lung (b_lung)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Ardkeenagh (c_ardkeenagh)
+
+1738 = {      #Ardkeenagh (b_ardkeenagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1739 = {      #Boyle (b_boyle)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1740 = {      #Assylin (b_assylin)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1741 = {      #Eastersnow (b_eastersnow)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Knockvicar (c_knockvicar)
+
+1742 = {      #Knockvicar (b_knockvicar)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1743 = {      #Corrigeenroe (b_corrigeenroe)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1744 = {      #Aughoo (b_aughoo)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1745 = {      #Ballyfarnon (b_ballyfarnon)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Arigna (c_arigna)
+
+1746 = {      #Arigna (b_arigna)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1747 = {      #Tawlagh (b_tawlagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1748 = {      #Corlisheen (b_corlisheen)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1749 = {      #Poundtown (b_poundtown)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+####          Leitrim (k_leitrim)
+###           Rosclogher (d_rosclogher)
+##            Kinlough (c_kinlough)
+
+1750 = {      #Kinlough (b_kinlough)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = castle_holding
+}
+
+1751 = {      #Ards (b_ards)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = church_holding
+}
+
+1752 = {      #Tullaghan (b_tullaghan)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+1753 = {      #Tawley (b_tawley)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+1754 = {      #Glenade (b_glenade)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+1755 = {      #Carntullagh (b_carntullagh)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+##            Manorhamilton (c_manorhamilton)
+
+1756 = {      #Manorhamilton (b_manorhamilton)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = castle_holding
+}
+
+1757 = {      #Mullies (b_mullies)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = church_holding
+}
+
+1758 = {      #Sraud (b_sraud)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+1759 = {      #Kiltyclogher (b_kiltyclogher)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+1760 = {      #Ballinaglera (b_ballinaglera)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+##            Drumdillure (c_drumdillure)
+
+1761 = {      #Drumdillure (b_drumdillure)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = castle_holding
+}
+
+1762 = {      #Glencarnorth (b_glencarnorth)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = church_holding
+}
+
+1763 = {      #Lurganboy (b_lurganboy)
+    culture = luighne 
+    religion = sea_dwellers
+    holding = none
+}
+
+###           Drumahaire (d_drumahaire)
+##            Drumkeeran (c_drumkeeran)
+
+1764 = {      #Drumkeeran (b_drumkeeran)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1765 = {      #Drumee (b_drumee)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1766 = {      #Derrylustia (b_derrylustia)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1767 = {      #Cloonmeone (b_cloonmeone)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1768 = {      #Tullymurray (b_tullymurray)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1769 = {      #Listuiltaghan (b_listuiltaghan)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1770 = {      #Bargowla (b_bargowla)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Dromahair (c_dromahair)
+
+1771 = {      #Dromahair (b_dromahair)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1772 = {      #Darkvalley (b_darkvalley)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1773 = {      #Tullycooley (b_tullycooley)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1774 = {      #Mullaghdoo (b_mullaghdoo)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Ballinode (c_ballinode)
+
+1775 = {      #Ballinode (b_ballinode)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1776 = {      #Fivemilebourne (b_fivemilebourne)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1777 = {      #Leckaun (b_leckaun)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1778 = {      #Sracummer (b_sracummer)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Killargue (c_killargue)
+
+1779 = {      #Killargue (b_killargue)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1780 = {      #Townahosey (b_townahosey)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1781 = {      #Leamascally (b_leamascally)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+1782 = {      #Tawnylea (b_tawnylea)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Glenfarne (c_glenfarne)
+
+1783 = {      #Glenfarne (b_glenfarne)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1784 = {      #Stranagress (b_stranagress)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1785 = {      #Carrickrevagh (b_carrickrevagh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+##            Ballinagleragh (c_ballinagleragh)
+
+1786 = {      #Ballinagleragh (b_ballinagleragh)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = castle_holding
+}
+
+1787 = {      #Cortober (b_cortober)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = church_holding
+}
+
+1788 = {      #Drumristin (b_drumristin)
+    culture = underground_fomorians
+    religion = dark_gods
+    holding = none
+}
+
+###           Carrigallen (d_carrigallen)
+##            Carrigallen (c_carrigallen)
+
+1789 = {      #Carrigallen (b_carrigallen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1790 = {      #Dohern (b_dohern)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1791 = {      #Corrawallen (b_corrawallen)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1792 = {      #Killegar (b_killegar)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1793 = {      #Kilbrackan (b_kilbrackan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Ballinamore (c_ballinamore)
+
+1794 = {      #Ballinamore (b_ballinamore)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1795 = {      #Knockanroe (b_knockanroe)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1796 = {      #Derrylahan (b_derrylahan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1797 = {      #Ardunsaghan (b_ardunsaghan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Aughnasheelin (c_aughnasheelin)
+
+1798 = {      #Aughnasheelin (b_aughnasheelin)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1799 = {      #Drumreagh (b_drumreagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1800 = {      #Scrabby (b_scrabby)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+###           Leitrim (d_leitrim)
+##            Leitrim (c_leitrim)
+
+1801 = {      #Leitrim (b_leitrim)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1802 = {      #Drumshanbo (b_drumshanbo)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1803 = {      #Greaghfarnagh (b_greaghfarnagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1804 = {      #Greaghnaguillaun (b_greaghnaguillaun)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1805 = {      #Edenavow (b_edenavow)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1806 = {      #Keshcarrigan (b_keshcarrigan)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1807 = {      #Kilclare (b_kilclare)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Lisnagea (c_lisnagea)
+
+1808 = {      #Lisnagea (b_lisnagea)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1809 = {      #Effrinagh (b_effrinagh)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+1810 = {      #Drumgowla (b_drumgowla)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+1811 = {      #Drumsna (b_drumsna)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = none
+}
+
+##            Carrickonshannon (c_carrickonshannon)
+
+1812 = {      #Carrickonshannon (b_carrickonshannon)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = castle_holding
+}
+
+1813 = {      #Drumlumman (b_drumlumman)
+    culture = fir_bolg
+    religion = ancient_greek_slave
+    holding = church_holding
+}
+
+###           Mohill (d_mohill)
+##            Drumod (c_drumod)
+
+1814 = {      #Drumod (b_drumod)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = castle_holding
+}
+
+1815 = {      #Aughintass (b_aughintass)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = church_holding
+}
+
+1816 = {      #Cloonfinnan (b_cloonfinnan)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1817 = {      #Breenross (b_breenross)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1818 = {      #Cloonoghill (b_cloonoghill)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1819 = {      #Johnstonsbridge (b_johnstonsbridge)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1820 = {      #Meelragh (b_meelragh)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+##            Camber (c_camber)
+
+1821 = {      #Camber (b_camber)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = castle_holding
+}
+
+1822 = {      #Aughavas (b_aughavas)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = church_holding
+}
+
+1823 = {      #Correagh (b_correagh)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1824 = {      #Lisboy (b_lisboy)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1825 = {      #Clooncose (b_clooncose)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+##            Tooma (c_tooma)
+
+1826 = {      #Tooma (b_tooma)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = castle_holding
+}
+
+1827 = {      #Aghalough (b_aghalough)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = church_holding
+}
+
+1828 = {      #Drumdarkan (b_drumdarkan)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}
+
+1829 = {      #Drumderg (b_drumderg)
+    culture = conmaicne
+    religion = the_old_gods
+    holding = none
+}

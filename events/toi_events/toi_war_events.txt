@@ -12,63 +12,198 @@ toi_war.0001 = {
 	}
 	
 	immediate = {
-		every_child = {
+		if = {
 			limit = {
-				AND = {
-					is_adult = yes
-					is_female = no
-					is_landed = no
+				scope:attacker.faith = {
+					has_doctrine = doctrine_gender_male_dominated
 				}
 			}
-			if = {
+			every_child = {
 				limit = {
-					NOT = {
-						exists = scope:son_1
+					AND = {
+						is_adult = yes
+						is_female = no
+						is_landed = no
 					}
 				}
-				save_scope_as = son_1
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_2
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:son_1
+						}
 					}
+					save_scope_as = son_1
 				}
-				save_scope_as = son_2
-			}
-			else_if  = {
-				limit = {
-					NOT = {
-						exists = scope:son_3
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_2
+						}
 					}
+					save_scope_as = son_2
 				}
-				save_scope_as = son_3
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_4
+				else_if  = {
+					limit = {
+						NOT = {
+							exists = scope:son_3
+						}
 					}
+					save_scope_as = son_3
 				}
-				save_scope_as = son_4
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_5
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_4
+						}
 					}
+					save_scope_as = son_4
 				}
-				save_scope_as = son_5
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						exists = scope:son_6
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_5
+						}
 					}
+					save_scope_as = son_5
 				}
-				save_scope_as = son_6
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_6
+						}
+					}
+					save_scope_as = son_6
+				}
 			}
 		}
+		if = {
+			limit = {
+				scope:attacker.faith = {
+					has_doctrine = doctrine_gender_female_dominated
+				}
+			}
+			every_child = {
+				limit = {
+					AND = {
+						is_adult = yes
+						is_female = yes
+						is_landed = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:son_1
+						}
+					}
+					save_scope_as = son_1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_2
+						}
+					}
+					save_scope_as = son_2
+				}
+				else_if  = {
+					limit = {
+						NOT = {
+							exists = scope:son_3
+						}
+					}
+					save_scope_as = son_3
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_4
+						}
+					}
+					save_scope_as = son_4
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_5
+						}
+					}
+					save_scope_as = son_5
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_6
+						}
+					}
+					save_scope_as = son_6
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:attacker.faith = {
+					has_doctrine = doctrine_gender_equal
+				}
+			}
+			every_child = {
+				limit = {
+					AND = {
+						is_adult = yes
+						is_landed = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = scope:son_1
+						}
+					}
+					save_scope_as = son_1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_2
+						}
+					}
+					save_scope_as = son_2
+				}
+				else_if  = {
+					limit = {
+						NOT = {
+							exists = scope:son_3
+						}
+					}
+					save_scope_as = son_3
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_4
+						}
+					}
+					save_scope_as = son_4
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_5
+						}
+					}
+					save_scope_as = son_5
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							exists = scope:son_6
+						}
+					}
+					save_scope_as = son_6
+				}
+			}
+		}
+		
 	}
 	option = {
 		name = toi_war.0001.a
@@ -82,6 +217,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_1
 				change = scope:change
@@ -125,6 +263,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_2
 				change = scope:change
@@ -168,6 +309,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_3
 				change = scope:change
@@ -211,6 +355,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_4
 				change = scope:change
@@ -254,6 +401,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_5
 				change = scope:change
@@ -297,6 +447,9 @@ toi_war.0001 = {
 		}
 		every_in_global_list  = {
 			variable = tracked_titles_for_son
+			limit = {
+				NOT = { tier = tier_barony }
+			}
 			change_title_holder = {
 				holder = scope:son_6
 				change = scope:change
@@ -367,9 +520,17 @@ toi_war.0002 = {
 				remove_character_flag = is_target_raid
 			}
 		}
-		start_war = {
-			cb = cattle_raiding_cb
-			target = scope:target_ruler
+		if = {
+			limit = {
+				exists = scope:target_ruler
+				scope:target_ruler = {
+					is_landed = yes
+				}
+			}
+			start_war = {
+				cb = cattle_raiding_cb
+				target = scope:target_ruler
+			}
 		}
 	}
 }	

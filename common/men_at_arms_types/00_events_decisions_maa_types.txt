@@ -23,7 +23,7 @@ gladiators = {
 	icon = heavy_infantry
 	
 	allowed_in_hired_troops = no
-	can_recruit = no
+	can_recruit = { always = no }
 }
 
 wolf_pack = {
@@ -56,5 +56,5 @@ wolf_pack = {
 	icon = light_cavalry
 	
 	allowed_in_hired_troops = no
-	can_recruit = no
+	can_recruit = { always = no }
 }

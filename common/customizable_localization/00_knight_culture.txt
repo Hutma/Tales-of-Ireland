@@ -2,25 +2,6 @@
 	type = character
 
 	text = {
-		trigger = {
-			
-			always = no
-		}
-		localization_key = knight_maryannu
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_hekwetai
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer
-	}
-	text = {
 		localization_key = knight_hero
 		fallback = yes
 	}
@@ -28,19 +9,17 @@
 
 KnightCulturePlural = {
 	type = character
-
+	
 	text = {
 		trigger = {
-			
-			always = no
+			OR = {
+				culture = { has_cultural_pillar = language_picthish }
+				culture = { has_cultural_pillar = language_cumbric }
+				culture = { has_cultural_pillar = language_fooar }
+				culture = { has_cultural_pillar = language_northern_bell_beakers }
+			}
 		}
-		localization_key = knight_maryannu_plural
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_plural
+		localization_key = knight_alba_plural
 	}
 	text = {
 		localization_key = knight_hero_plural
@@ -52,18 +31,6 @@ KnightCultureNoTooltip = {
 	type = character
 
 	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_maryannu_no_tooltip
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip
-	}
-	text = {
 		localization_key = knight_hero_no_tooltip
 		fallback = yes
 	}
@@ -71,18 +38,17 @@ KnightCultureNoTooltip = {
 
 KnightCulturePluralNoTooltip = {
 	type = character
-
+	
 	text = {
 		trigger = {
-			always = no
+			OR = {
+				culture = { has_cultural_pillar = language_picthish }
+				culture = { has_cultural_pillar = language_cumbric }
+				culture = { has_cultural_pillar = language_fooar }
+				culture = { has_cultural_pillar = language_northern_bell_beakers }
+			}
 		}
-		localization_key = knight_maryannu_no_tooltip_plural
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip_plural
+		localization_key = knight_alba_no_tooltip_plural
 	}
 	text = {
 		localization_key = knight_hero_no_tooltip_plural
@@ -94,18 +60,6 @@ KnightCultureNoTooltipLowercase = {
 	type = character
 
 	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_maryannu_no_tooltip_lowercase
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip_lowercase
-	}
-	text = {
 		localization_key = knight_hero_no_tooltip_lowercase
 		fallback = yes
 	}
@@ -113,18 +67,17 @@ KnightCultureNoTooltipLowercase = {
 
 KnightCulturePluralNoTooltipLowercase = {
 	type = character
-
+	
 	text = {
 		trigger = {
-			always = no
+			OR = {
+				culture = { has_cultural_pillar = language_picthish }
+				culture = { has_cultural_pillar = language_cumbric }
+				culture = { has_cultural_pillar = language_fooar }
+				culture = { has_cultural_pillar = language_northern_bell_beakers }
+			}
 		}
-		localization_key = knight_maryannu_no_tooltip_lowercase_plural
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip_lowercase_plural
+		localization_key = knight_alba_no_tooltip_lowercase_plural
 	}
 	text = {
 		localization_key = knight_hero_no_tooltip_lowercase_plural
@@ -134,18 +87,17 @@ KnightCulturePluralNoTooltipLowercase = {
 
 KnightCulturePluralPossessiveNoTooltipLowercase = {
 	type = character
-
+	
 	text = {
 		trigger = {
-			always = no
+			OR = {
+				culture = { has_cultural_pillar = language_picthish }
+				culture = { has_cultural_pillar = language_cumbric }
+				culture = { has_cultural_pillar = language_fooar }
+				culture = { has_cultural_pillar = language_northern_bell_beakers }
+			}
 		}
-		localization_key = knight_maryannu_no_tooltip_lowercase_plural_possessive
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip_lowercase_plural_possessive
+		localization_key = knight_alba_no_tooltip_lowercase_plural_possessive
 	}
 	text = {
 		localization_key = knight_hero_no_tooltip_lowercase_plural_possessive
@@ -156,18 +108,6 @@ KnightCulturePluralPossessiveNoTooltipLowercase = {
 KnightCultureAdjectiveNoTooltipLowercase = {
 	type = character
 
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_maryannu_no_tooltip_lowercase_adjective
-	}
-	text = {
-		trigger = {
-			always = no
-		}
-		localization_key = knight_charioteer_no_tooltip_lowercase_adjective
-	}
 	text = {
 		localization_key = knight_hero_no_tooltip_lowercase_adjective
 		fallback = yes

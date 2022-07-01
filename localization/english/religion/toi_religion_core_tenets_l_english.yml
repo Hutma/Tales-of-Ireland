@@ -41,6 +41,17 @@
  tenet_manx_legacy_name:0 "Manx Legacy"
  tenet_manx_legacy_desc:0 "Our island's ancient megaliths, unique myths and rich history has granted us rituals and beliefs unlike anywhere else."
  
+ tenet_le_cheile_name:0 "Le chéile"
+ tenet_le_cheile_desc:0 "We share many different origins and we have learned to live together as mercenary brothers in arms."
+  
+ tenet_seasonal_gods_name:0 "Seasonal Deities"
+ tenet_seasonal_gods_desc:0 "Beira, Queen of Winter and her son Angus, King of Summer are locked in a neverending struggle to shape our world. It is their advances and retreats that cycle the seasons, so we must pay heed for Angus' blessing and Beira's mercy."
+ 
+ overworld_hostility_doctrine_name: "Otherworld"
+ overworld_hostility_doctrine_desc:0 "The following religions are Otherworld:\n[GetReligionFamily('rf_overworld').GetReligions]"
+ travelers_hostility_doctrine_name: "Travelers"
+ travelers_hostility_doctrine_desc:0 "The following religions are Travelers:\n[GetReligionFamily('rf_travelers').GetReligions]"
+ 
  doctrine_parameter_cattle_raiding_cb_disable:0 "Can not use [cattle_raiding_cb|E]"
  doctrine_parameter_purification_cb_enabled:0 "Can use the Purification casus belli"
  doctrine_parameter_to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"
@@ -51,3 +62,4 @@
  sea_fomorian_opinion:0 "Sea Fomorian opinion"
  underground_fomorian_opinion:0 "Underground Fomorian opinion"
  doctrine_parameter_can_go_on_great_hunt_decision_active:0 "Can go on a great ceremonial hunt"
+ de_danann_opinion:0 "Tuatha De Danann culture opinion"

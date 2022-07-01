@@ -1,0 +1,63 @@
+﻿namespace = toi_fairy_event
+
+toi_fairy_event.0001 = { #call king of fairy in war
+	title = toi_fairy_event.0001.t
+	desc = toi_fairy_event.0001.desc
+	theme = war
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = scope:fairy_to_defend
+		animation = personality_rational
+	}
+	
+	option = { #I will help
+		name = toi_fairy_event.0001.a
+		save_scope_as = denfender_king
+		add_prestige = 50
+		
+		if = {
+			limit = {
+				exists = scope:war_to_call
+			}
+			scope:war_to_call = {
+				add_defender = root
+				
+				primary_attacker = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.toi_fairy_event.0001.attacker
+					}
+				}
+			}
+			
+			scope:fairy_to_defend = {
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_fairy_event.0001.a
+				}
+			}
+		}
+		ai_chance = {
+			base = 85
+		}
+	}
+	option = { #I won't help
+		name = toi_fairy_event.0001.b
+		add_prestige = -250
+		
+		scope:fairy_to_defend = {
+			send_interface_toast = {
+				left_icon = root
+				title = tooltip.toi_fairy_event.0001.b
+			}
+		}
+		
+		ai_chance = {
+			base = 15
+		}
+	}
+}

@@ -1,0 +1,640 @@
+﻿namespace = toi_lifestyle_event
+
+# Spear training 
+
+toi_lifestyle_event.0001 = {
+    type = character_event
+    title = toi_lifestyle_event.0001.t
+    desc = toi_lifestyle_event.0001.desc
+    theme = martial
+    override_background = { 
+        event_background = round_tower
+    }
+    
+    left_portrait = {
+        character = root 
+        animation = personality_bold
+    }
+
+    option = { #I’m rapidly becoming more proficient.
+        name = toi_lifestyle_event.0001.a
+        add_prowess_skill = 1
+    }
+
+    option = {  #To improve my form I need my Marshal.
+        name = toi_lifestyle_event.0001.b
+        add_prowess_skill = 1 
+        add_character_modifier = {
+            modifier = intensive_training
+        }
+        trigger_event = {
+            id = toi_lifestyle_event.1001
+            years = { 1 5 }
+        }
+    }
+}
+
+# Halloween/Samhain (manque réecriture de redbirdzzz)
+
+toi_lifestyle_event.0002 = {
+    type = character_event
+    title = toi_lifestyle_event.0002.t
+    desc = toi_lifestyle_event.0002.desc
+    theme = friendly
+    override_background = {
+        event_background = farmland
+    }
+
+    left_portrait = {
+        character = root 
+        animation = happiness
+    }
+
+    trigger = {
+        time_of_year = {
+            min = 10.1
+            max = 11.15
+        }
+    }
+    option = { #Collect our harvest and prepare the fire
+        name = toi_lifestyle_event.0002.a
+        remove_short_term_gold = 25
+        capital_county = {
+            change_development_level = { 4 8 }
+        }
+        add_character_modifier = {
+            modifier = celebrating_samhain
+            years = 2
+        }
+    }
+
+    option = { #I won't waste money on this ! 
+        name = toi_lifestyle_event.0002.b
+        add_prestige = -50
+        every_vassal = {
+            add_opinion = {
+                opinion = -5
+                target = root
+                years = 5
+            }
+        }
+        capital_county = {
+            change_development_level = 5
+        }
+        if = {
+            limit = { 
+                OR = { 
+                    has_trait =  generous
+                    has_trait = gregarious
+                }
+            }
+            add_stress = 20
+        }
+    }
+
+    option = { #I'll even make a sacrifice for the gods tonight !
+        name = toi_lifestyle_event.0002.c
+        trigger = {
+            OR = {
+                has_trait = milesian
+                has_trait = celtic_human
+            }
+        }
+        add_piety = 3
+        every_vassal = {
+            add_opinion = {
+                opinion = -5
+                target = root
+            }
+        }
+        add_character_modifier = {
+            modifier = celebrating_samhain
+            years = 2
+        }
+        if = { 
+            limit = { 
+                has_trait = zealous
+            }
+            add_stress = -20
+        }
+    }
+
+    option = { # I'll go and visit the druids to foresee my future 
+        name = toi_lifestyle_event.0002.d
+        trigger = {
+            OR = {
+                has_trait = milesian
+                has_trait = celtic_human
+            }
+        }
+        add_gold = 50
+        capital_county = {
+            change_development_level = { 4 8 }
+        }
+        add_character_modifier = {
+            modifier = celebrating_samhain
+            years = 2
+        }
+        trigger_event = {
+            id = toi_lifestyle_event.0003
+        }
+    }
+}
+
+#Foreseeing my future (manque réecriture de redbirdzzz)
+
+toi_lifestyle_event.0003 = {
+    type = character_event
+    title = toi_lifestyle_event.0003.t
+    desc = toi_lifestyle_event.0003.desc
+    theme = faith
+
+    left_portrait = {
+        character = root
+        animation = personality_zealous
+    }
+
+    trigger = {
+        OR = {
+            has_trait = milesian
+            has_trait = celtic_human
+        }
+    }
+
+    option = { #I let my future in the hands of the gods! 
+        name = toi_lifestyle_event.0003.a
+        random_list = {
+            30 = {
+                trigger_event = {
+                    id = toi_lifestyle_event.0004
+                    weeks = { 1 2 }
+                }
+            }
+            30 = {
+                trigger_event = {
+                    id = toi_lifestyle_event.0005
+                    weeks = { 1 2 }
+                }
+            }
+            30 = { 
+                trigger_event = {
+                    id = toi_lifestyle_event.0006
+                    weeks = { 1 2 }
+                }
+            }
+        }
+    }
+}
+
+# Bright fighting future (pas de réecriture proposée, non reservé)
+
+toi_lifestyle_event.0004 = {
+    type = character_event
+    title = toi_lifestyle_event.0004.t
+    desc = toi_lifestyle_event.0004.desc
+    theme = war
+
+    left_portrait = {
+        character = root 
+        animation = personality_bold
+    }
+
+    trigger = { 
+        OR = { 
+            has_trait = milesian
+            has_trait = celtic_human
+        }
+    }
+
+    option = { #The gods be praised! 
+        name = toi_lifestyle_event.0004.a
+        add_character_modifier = {
+            modifier = war_future_modif
+            years = { 10 15 }
+        }
+        add_tales_of_war_lifestyle_perk_points = 1
+        remove_character_flag = used_lifetime_subjugation
+    }
+}
+
+# Bright future of peace (pas de réecriture proposée, non reservé)
+
+toi_lifestyle_event.0005 = {
+    type = character_event
+    title = toi_lifestyle_event.0005.t
+    desc = toi_lifestyle_event.0005.desc
+    theme = friendly
+
+    left_portrait = { 
+        character = root 
+        animation = personality_honorable
+    }
+
+    trigger = { 
+        OR = { 
+            has_trait = milesian
+            has_trait = celtic_human
+        }
+    }
+
+    option = { #You are blessed with a future of peace and prosperity, the gods trust you
+        name = toi_lifestyle_event.0005.a
+        add_character_modifier = {
+            modifier = peace_future
+            years = { 10 15 }
+        }
+        add_tales_of_abundance_lifestyle_perk_points = 1
+        every_vassal = {
+            add_opinion = {
+                opinion = 5
+                target = root
+            }
+        }
+        add_stress = -30
+    }
+}
+
+# Dark future (pas de réecriture proposée, non reservé)
+
+toi_lifestyle_event.0006 = {
+    type = character_event
+    title = toi_lifestyle_event.0006.t
+    desc = toi_lifestyle_event.0006.desc
+    theme = skull
+
+    left_portrait = {
+        character = root
+        animation = fear
+    }
+
+    trigger = {
+        OR = {
+            has_trait = milesian
+            has_trait = celtic_human
+        }
+    }
+
+    immediate = {
+        set_variable = {
+            name = original_piety_level
+            value = root.piety_level
+        } 
+    }
+    option = { #I'm cursed...
+        name = toi_lifestyle_event.0006.a
+        add_character_modifier ={ 
+            modifier = dark_future
+        }
+        add_piety_level = -1
+        trigger_event = {
+            id = toi_lifestyle_event.0007
+            years = 1
+        }
+    }
+}
+
+toi_lifestyle_event.0007 = {
+    hidden = yes
+
+    immediate = {
+        if = { 
+            limit =  {
+                piety_level >= var:original_piety_level
+            }
+            remove_character_modifier = dark_future
+        }
+        if = {
+            limit = {
+                has_character_modifier = dark_future
+            }
+            trigger_event = {
+                id = toi_lifestyle_event.0007
+                years = 1
+            }
+        }
+    }
+}
+
+# Spring Festival (pas de réecriture proposée, non reservé)
+
+toi_lifestyle_event.0008 = {
+    type = character_event
+    title = toi_lifestyle_event.0008.t
+    desc = toi_lifestyle_event.0008.desc
+    theme = feast_activity
+    override_background = {
+        event_background = garden
+    }
+
+    left_portrait= {
+        character = root 
+        animation = personality_rational
+    }
+
+    trigger = { 
+        time_of_year = {
+            min = 21.03
+            max = 21.04
+        }
+    }
+
+    option = { #Let's make the festival
+        name = toi_lifestyle_event.0008.a
+        capital_county = {
+            change_development_level = -1
+        }
+        every_vassal = {
+			capital_county = {
+				change_development_level = -1
+			}
+		}
+        add_tales_of_abundance_lifestyle_xp = 200
+        add_character_modifier = {
+            modifier = spring_festival
+            years = 5
+        }
+        add_prestige = 150
+    }
+
+    option = { # It would be better to use these ressource for our army
+        name = toi_lifestyle_event.0008.b 
+        capital_county ={
+            change_development_level = -1
+        }
+        every_vassal = {
+			capital_county = {
+				change_development_level = -1
+			}
+        }
+        add_tales_of_war_lifestyle_xp = 150
+        add_prestige = 100
+    	spawn_army = {
+		    uses_supply = no
+		    inheritable = no
+		    name = event_troop_default_name
+		    levies = {
+			    value = 50
+		    }
+		    men_at_arms = {
+			    type = light_footmen_leinster
+			    stacks = 1
+		    }
+		    location = capital_province
+	    }
+        add_character_modifier = {
+            modifier = war_ressource
+            years = 5
+        }
+    }
+
+    option = { # All of this is useless, we shall keep our cattle
+        name = toi_lifestyle_event.0008.c
+        add_tales_of_abundance_lifestyle_xp = -50
+        capital_county ={
+            change_development_level = 2
+        }
+        add_prestige = -50
+        add_character_modifier = {
+            modifier = useless_festival
+            years = 3
+        }
+    }
+}
+
+#Starfalling night prayer (pas de réecriture proposée, non reservé)
+
+toi_lifestyle_event.0009 = {
+    type = character_event
+    title = toi_lifestyle_event.0009.t
+    desc = toi_lifestyle_event.0009.desc
+    theme = faith
+    override_background = { 
+        event_background = alley_night
+    }
+
+    left_portrait = {
+        character = root
+        animation = personality_zealous
+    }
+
+    option = { #I pray WarGodName for strength and victory
+        name = toi_lifestyle_event.0009.a
+        add_tales_of_war_lifestyle_xp = 100
+        add_character_modifier = {
+            modifier = pray_wargod
+            years = 5
+        }
+    }
+
+    option = { # I pray GodOfFertily for peace and calm winter
+        name = toi_lifestyle_event.0009.b
+        add_tales_of_abundance_lifestyle_xp = 100
+        add_character_modifier = {
+            modifier = pray_god_of_fertility
+            years = 5
+        }
+    }
+
+    option = { #I pray HighGodName to grant me a prestigious reign
+        name = toi_lifestyle_event.0009.c
+        add_tales_of_abundance_lifestyle_xp = 75
+        add_tales_of_war_lifestyle_xp = 75
+        add_prestige = 50
+    }
+}
+
+# Lessons of the past
+
+toi_lifestyle_event.0010 = {
+    type = character_event
+    title = toi_lifestyle_event.0010.t
+    desc = toi_lifestyle_event.0010.desc
+    theme = faith 
+
+    left_portrait = {
+        character = root
+        animation = admiration
+    }
+
+    immediate = {
+			realm_priest = {
+            save_scope_as = your_druid
+        }
+    }
+
+    right_portrait = {
+        character = scope:your_druid
+        animation = personality_honorable
+    }
+
+    option = { #Tell me about the greatest CultureName ruler
+        name = toi_lifestyle_event.0010.a
+        add_piety = 50
+        add_tales_of_abundance_lifestyle_xp = 200
+    }
+
+    option = { #Tell me about the greatest warrior of CultureName
+        name = toi_lifestyle_event.0010.b
+        add_tales_of_war_lifestyle_xp = 200
+        add_piety = 50
+    }
+
+    option = { #I know stories too and I will tell him one.
+        name = toi_lifestyle_event.0010.c
+        duel = {
+            skill = diplomacy
+            target = scope:your_druid
+            50 = {
+                root = { 
+                    add_tales_of_war_lifestyle_xp = 125
+                    add_tales_of_abundance_lifestyle_xp = 125
+                    add_prestige = 50
+                }
+            }
+            50 = {
+                root = {
+                    add_tales_of_war_lifestyle_xp = 50
+                    add_tales_of_abundance_lifestyle_xp = 50
+                    add_prestige = -50
+                }
+            }
+        }
+    }
+}
+
+# Forging my legend
+
+toi_lifestyle_event.0011 = {
+    type = character_event
+    title = toi_lifestyle_event.0011.t
+    desc = toi_lifestyle_event.0011.desc
+    theme = feast_activity
+
+    left_portrait = {
+        character = root
+        animation = personality_bold
+    }
+
+    trigger = {
+        highest_held_title_tier >= 4
+        prestige_level >= 2
+    }
+
+    option = { # I will bring my Ridrí as a show of strength.
+        name = toi_lifestyle_event.0011.a
+        add_tales_of_war_lifestyle_xp = 200
+        if = {
+            limit = {
+                OR = {
+                    has_trait = shy
+                    has_trait = craven
+                }
+            }
+            add_stress = 40
+        }
+    }
+
+    option = { # I will bring artists and bards to show I am cultured.
+        name = toi_lifestyle_event.0011.b
+        add_tales_of_abundance_lifestyle_xp = 200
+        if = {
+            limit = {
+                OR = {
+                    has_trait = shy
+                    has_trait = wrathful
+                }
+            }
+            add_stress = 40
+        }
+    }
+
+    option = { # I won't go, what if I embarass myself ?
+        name = toi_lifestyle_event.0011.c
+        add_piety = -50
+        if = {
+            limit = {
+                has_trait = shy
+            }
+            add_stress = -60 
+        }
+    }
+
+    option = { # These outsiders aren't worth my time.
+        name = toi_lifestyle_event.0011.d
+        add_prestige = 100
+        if = {
+            limit = {
+                OR = {
+                    has_trait = wrathful
+                    has_trait = arrogant
+                }
+            }
+            add_stress = -20
+        }
+        every_neighboring_top_liege_realm_owner = {
+            add_opinion = {
+                modifier = disappointed_opinion
+                target = root
+                opinion = -15
+            }
+        }
+    }
+}
+
+# Assisted spear training
+
+toi_lifestyle_event.1001 = {
+    type = character_event
+    title = toi_lifestyle_event.1001.t
+    desc = toi_lifestyle_event.1001.desc
+    theme = martial
+    override_background = { 
+        event_background = round_tower
+    }
+
+    left_portrait = {
+        character = root 
+        animation = personality_bold
+    }
+
+    option = { # My skill in handling the spear has increased tremendously, I might’ve trained a bit too hard though...
+        name = toi_lifestyle_event.1001.a 
+        random_list = {
+            40 = {
+                add_prowess_skill = 4
+            }
+            60 = {
+                add_prowess_skill = 1
+                add_diplomacy_skill = -1
+                add_stewardship_skill = -2
+            }
+        }
+    }
+
+    option = { # The improvements I felt might’ve just been due to the good company of my marshall.
+        name = toi_lifestyle_event.1001.b
+        random_list = {
+            60 = {
+                add_prowess_skill = 1
+            }
+            40 = {
+                add_stewardship_skill = -2
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

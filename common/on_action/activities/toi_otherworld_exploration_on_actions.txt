@@ -1,0 +1,194 @@
+﻿# On actions for the toi_otherworld_exploration activity
+
+#To send an appropriate start event
+otherworld_exploration_setup = {
+	events = {
+		toi_otherworld_exploration.1001 # Start of generic otherworld_exploration
+	}
+}
+
+otherworld_exploration_activity_limit_hub = {
+	effect = {
+		activity = {
+			remove_variable = is_having_otherworld_exploration_2001
+			remove_variable = is_having_otherworld_exploration_2002
+			remove_variable = is_having_otherworld_exploration_2003
+			remove_variable = is_having_otherworld_exploration_2004
+			remove_variable = is_having_otherworld_exploration_2005
+			remove_variable = is_having_otherworld_exploration_2006
+			remove_variable = is_having_otherworld_exploration_2007
+		}
+		if = {
+			limit =  {
+				exists = root.activity.var:number_of_places_counter
+				OR = {
+					root.activity.var:number_of_places_counter = 4
+					root.activity.var:number_of_places_counter > 4
+				}
+			}
+			trigger_event = {
+				on_action = otherworld_exploration_return_events
+				days = 5
+			}
+		}
+		else = {
+			trigger_event = {
+				on_action = otherworld_exploration_place_choice_events
+				days = 5
+			}
+			activity = {
+				change_variable = {
+					name = number_of_places_counter
+					add = 1
+				}
+				if = { 
+					limit = { exists = root.activity.var:number_of_core_events_counter }
+					remove_variable = number_of_core_events_counter
+				}
+				set_variable = {
+					name = number_of_core_events_counter
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+# On-action counting the core event for that place
+otherworld_exploration_count_events = {
+	effect = {
+		if = {
+			limit = {
+				exists = root.activity.var:number_of_core_events_counter
+				OR = {
+					root.activity.var:number_of_core_events_counter = 4
+					root.activity.var:number_of_core_events_counter > 4
+				}
+			}
+			trigger_event = {
+				on_action = otherworld_exploration_activity_limit_hub
+				days = 5
+			}
+		}
+		else_if = {
+			limit = {
+				exists = root.activity.var:number_of_core_events_counter
+				root.activity.var:number_of_core_events_counter = 3
+			}
+			random_list = {
+				25 = {
+					trigger_event = {
+						on_action = otherworld_exploration_core_events
+						days = 1
+					}
+					activity = {
+						change_variable = {
+							name = number_of_core_events_counter
+							add = 1
+						}
+					}
+				}
+				75 = {
+					trigger_event = {
+						on_action = otherworld_exploration_activity_limit_hub
+						days = 5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = root.activity.var:number_of_core_events_counter
+				root.activity.var:number_of_core_events_counter = 2
+			}
+			random_list = {
+				60 = {
+					trigger_event = {
+						on_action = otherworld_exploration_core_events
+						days = 1
+					}
+					activity = {
+						change_variable = {
+							name = number_of_core_events_counter
+							add = 1
+						}
+					}
+				}
+				40 = {
+					trigger_event = {
+						on_action = otherworld_exploration_activity_limit_hub
+						days = 5
+					}
+				}
+			}				
+		}
+		else_if = {
+			limit = {
+				exists = root.activity.var:number_of_core_events_counter
+				OR = {
+					root.activity.var:number_of_core_events_counter = 1
+					root.activity.var:number_of_core_events_counter = 0
+				}
+			}
+			trigger_event = {
+				on_action = otherworld_exploration_core_events
+				days = 1
+			}
+			activity = {
+				change_variable = {
+					name = number_of_core_events_counter
+					add = 1
+				}
+			}
+		}
+	}
+}
+# On-action managing possible journey events
+otherworld_exploration_core_events = {
+	random_events = {
+		# Generic toi_otherworld_core Events
+		100 = toi_otherworld_core.0001 # Land and Chest of Silver
+		100 = toi_otherworld_core.0002 # 
+		100 = toi_otherworld_core.0003 # 
+		100 = toi_otherworld_core.0004 # 
+		100 = toi_otherworld_core.0005 # 
+		100 = toi_otherworld_core.0006 # 
+		100 = toi_otherworld_core.0007 # 
+		100 = toi_otherworld_core.0008 # 
+		100 = toi_otherworld_core.0009 # Meet a Mystic (chain)
+		100 = toi_otherworld_core.0010 # Rakish or Lustful character considers making a pit stop, or perhaps, a detour to the local brothels
+		100 = toi_otherworld_core.0011 # Persistent Beggar
+		100 = toi_otherworld_core.0012 # Cocky Lordling
+		100 = toi_otherworld_core.0013 # Stand in the torrential rain to listen to a priest, or take shelter?
+		100 = toi_otherworld_core.0014 # Naked preacher claims to have recovered Adam & Eve's innocence
+		100 = toi_otherworld_core.0015 # Doomsayer promises the end is night!
+		100 = toi_otherworld_core.0016 # Why am I taking this toi_otherworld_core?
+		100 = toi_otherworld_core.0017 # Ritual purification in a river
+		100 = toi_otherworld_core.0018 # Contemplating the universe
+		100 = toi_otherworld_core.0019 # Contemplating the universe
+		100 = toi_otherworld_core.0020 # Contemplating the universe
+		100 = toi_otherworld_core.0021 # Contemplating the universe
+		100 = toi_otherworld_core.0022 # Contemplating the universe
+		100 = toi_otherworld_core.0023 # Contemplating the universe
+		100 = toi_otherworld_core.0024 # Contemplating the universe
+		100 = toi_otherworld_core.0025 # Contemplating the universe
+	}
+}
+
+otherworld_exploration_place_choice_events = {
+	random_events = {
+		100 = toi_otherworld_exploration.2001 #Land of youth
+		100 = toi_otherworld_exploration.2002 #Land under the wave
+		100 = toi_otherworld_exploration.2003 #Plain of delight
+		100 = toi_otherworld_exploration.2004 #Multicolored place
+		100 = toi_otherworld_exploration.2005 #Isle of the apple trees
+		100 = toi_otherworld_exploration.2006 #White silver land
+		100 = toi_otherworld_exploration.2007 #Land of the dead
+	}
+}
+
+otherworld_exploration_return_events = {
+	random_events = {
+		100 = toi_otherworld_exploration.3000
+	}
+}

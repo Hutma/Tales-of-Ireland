@@ -2,7 +2,7 @@
 # History database id:2000000
 bookmark_manxs_fate_caoimhin={
 	type=male
-	id=292
+	id=354
 	age=0.310000
 	genes={ 		hair_color={ 131 242 111 89 }
  		skin_color={ 155 54 37 79 }
@@ -91,14 +91,14 @@ bookmark_manxs_fate_caoimhin={
  		face_detail_nose_tip_def={ "nose_tip_def" 178 "nose_tip_def" 109 }
  		face_detail_temple_def={ "temple_def" 230 "temple_def" 230 }
  		expression_brow_wrinkles={ "brow_wrinkles_02" 36 "brow_wrinkles_02" 36 }
- 		expression_eye_wrinkles={ "eye_wrinkles_01" 180 "eye_wrinkles_01" 16 }
+ 		expression_eye_wrinkles={ "eye_wrinkles_01" 218 "eye_wrinkles_01" 16 }
  		expression_forehead_wrinkles={ "forehead_wrinkles_03" 218 "forehead_wrinkles_03" 218 }
  		expression_other={ "cheek_wrinkles_both_01" 0 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_7" 142 "complexion_1" 218 }
  		gene_height={ "normal_height" 177 "normal_height" 124 }
- 		gene_bs_body_type={ "body_fat_head_fat_medium" 72 "body_fat_head_fat_medium" 116 }
+ 		gene_bs_body_type={ "body_fat_head_fat_medium" 138 "body_fat_head_fat_medium" 116 }
  		gene_bs_body_shape={ "body_shape_average_clothed" 255 "body_shape_apple_half" 10 }
- 		gene_bs_bust={ "bust_clothes" 255 "bust_shape_3_half" 115 }
+ 		gene_bs_bust={ "bust_clothes" 204 "bust_shape_3_half" 115 }
  		gene_age={ "old_4" 146 "old_4" 146 }
  		gene_eyebrows_shape={ "avg_spacing_avg_thickness" 156 "avg_spacing_avg_thickness" 124 }
  		gene_eyebrows_fullness={ "layer_2_avg_thickness" 255 "layer_2_low_thickness" 179 }
@@ -110,9 +110,10 @@ bookmark_manxs_fate_caoimhin={
  		eyelashes_accessory={ "normal_eyelashes" 142 "normal_eyelashes" 142 }
  		pose={ "" 255 "" 0 }
  		beards={ "western_beards_straight" 44 "no_beard" 0 }
- 		clothes={ "western_low_nobility_clothes" 81 "most_clothes" 0 }
+ 		clothes={ "byzantine_low_nobility_clothes" 72 "most_clothes" 0 }
  		hairstyles={ "fp1_hairstyles_straight" 190 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 170 "all_legwear" 0 }
+ 		headgear={ "fp1_nobility" 243 "no_headgear" 0 }
+ 		legwear={ "western_common_legwear" 199 "all_legwear" 0 }
  }
 	override={
 		portrait_modifier_overrides={

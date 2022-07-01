@@ -4,3 +4,9 @@
  setting_default_timing_desc:0 "Each Invasion will start during their right era."
  setting_random_invasions:0 "#N Random#!"
  setting_random_invasions_desc:0 "The Invasions will each start at a random date, usually earlier than they should. This might break the game balance but can also be fun."
+ 
+ rule_toi_ram_era_rule:0 "Ram Era"
+ setting_first_era:0 "Fall of Milesians Era"
+ setting_first_era_desc:0 "Rams will be unlocked on the first era of the game."
+ setting_second_era:0 "The Heroic Era"
+ setting_second_era_desc:0 "Rams will be unlocked during the second era of the game."

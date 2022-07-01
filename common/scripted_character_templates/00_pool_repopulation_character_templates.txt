@@ -162,67 +162,83 @@ pool_repopulate_prowess = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -361,67 +377,83 @@ pool_repopulate_diplomacy = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-				if = {
+				else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -553,67 +585,83 @@ pool_repopulate_martial = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -748,66 +796,82 @@ pool_repopulate_stewardship = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -946,67 +1010,83 @@ pool_repopulate_intrigue = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -1163,67 +1243,83 @@ pool_repopulate_learning = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 ###TALES OF IRELAND###
@@ -1344,6 +1440,7 @@ pool_repopulate_spouse = {
 		remove_trait = latin_human
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = fomorian
 				}
@@ -1352,6 +1449,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = cessarian
 				}
@@ -1360,6 +1458,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = partholonian
 				}
@@ -1368,6 +1467,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = nemedian
 				}
@@ -1376,6 +1476,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = fir_bolg
 				}
@@ -1384,6 +1485,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = tuatha_de_danann
 				}
@@ -1392,6 +1494,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = milesian
 				}
@@ -1400,6 +1503,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = celtic_human
 				}
@@ -1408,6 +1512,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = megalith_human
 				}
@@ -1416,6 +1521,7 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = hy_brazylian
 				}
@@ -1424,73 +1530,91 @@ pool_repopulate_spouse = {
 		}
 		if 	= {
 			limit = {
+				exists = root.court_owner
 				root.court_owner = {
 					has_trait = latin_human
 				}
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				exists = root.court_owner
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 	}
@@ -1542,7 +1666,7 @@ pool_repopulate_local_flavor = {
 	after_creation = {
 		if = {
 			limit = {
-				religion = { is_in_family = rf_all }
+				always = no
 			}
 			random_list = {
 				10 = {
@@ -1701,67 +1825,83 @@ pool_repopulate_local_flavor = {
 			}
 			add_trait = latin_human
 		}
+		if 	= {
+			limit = {
+				root.court_owner = {
+					has_trait = scottish_fairy
+				}
+			}
+			add_trait = scottish_fairy
+		}
 		
 		
 		if = {
-			limit = {has_culture_group = culture_group:toi_fomorian_group}
+			limit = {this.culture = { has_cultural_pillar = heritage_fomorian }}
 				add_trait = fomorian
 			}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cessarian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cessarian }}
 			add_trait = cessarian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_cruithin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_cruithin}}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_de_danann_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_de_danann }}
 			add_trait = tuatha_de_danann
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_erainn_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_errain }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_laigin_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_laigin }}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_fir_bolg_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fir_bolg }}
 			add_trait = fir_bolg
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_meghalithic_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_megalithic }}
 			add_trait = megalith_human
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_milesian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_milesian }}
 			add_trait = milesian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_nemedian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_nemedian }}
 			add_trait = nemedian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_partholonian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_partholonian }}
 			add_trait = partholonian
 		}
-		if = {
-		limit = {has_culture_group = culture_group:toi_hy_brazylian_group}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_hy_brazylian }}
 			add_trait = hy_brazylian
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:bann_culture}
 			add_trait = megalith_human
 		}
-		if = {
+		else_if = {
 		limit = {has_culture = culture:brythonic_mann}
 			add_trait = celtic_human
 		}
-		if = {
-		limit = {has_culture = culture:roman}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_latin }}
 			add_trait = latin_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_brythonic }}
+			add_trait = celtic_human
+		}
+		else_if = {
+		limit = {this.culture = { has_cultural_pillar = heritage_fairy }}
+			add_trait = scottish_fairy
 		}
 		add_trait = celtic_human
 ### TALES OF IRELAND ###

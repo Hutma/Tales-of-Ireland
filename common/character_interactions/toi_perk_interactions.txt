@@ -11,7 +11,7 @@ poison_cattle_interaction = {
 
 	desc = poison_cattle_interaction_desc
 	
-		is_shown = {
+	is_shown = {
 		scope:actor = {
 			OR = {
 				has_perk = swift_execution_perk
@@ -181,7 +181,7 @@ froce_cattle_trade_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		is_landed = yes
+		scope:recipient = { is_landed = yes }
 		scope:actor = {
 			can_start_scheme = {
 				type = force_cattle_trade
@@ -252,28 +252,6 @@ froce_cattle_trade_interaction = {
 		max = 30
 	}
 	
-	ai_potential = {
-		is_adult = yes
-		ai_greed >= low_positive_ai_value
-		intrigue >= medium_skill_rating
-		NOR = {
-			has_trait = content
-			any_scheme = {
-				OR = {
-					scheme_type = befriend
-					scheme_type = sway
-					scheme_type = seduce
-					scheme_type = courting
-					scheme_type = elope
-					scheme_type = force_cattle_trade
-				}
-			}
-		}
-	}
-	
-	ai_target_quick_trigger = {
-		adult = yes
-	}
 
 	ai_frequency = 36
 
@@ -323,5 +301,123 @@ froce_cattle_trade_interaction = {
 			}
 		}
 		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
+	}
+}
+
+make_magician_interaction = {
+	category = interaction_category_vassal
+
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+
+	desc = make_magician_interaction_desc
+	
+	is_shown = {
+		scope:actor = {
+			has_character_flag = can_make_magician_flag
+		}
+		NOT = { scope:recipient = scope:actor }
+	}
+
+	is_valid = {
+		scope:recipient = {
+			NOT = { has_trait = magician_good }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_available_adult = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			send_interface_toast = {
+				left_icon = scope:actor
+				title = tooltip.magic.made_magician.target
+				add_trait = magician_good_2
+			}
+		}
+		custom_description = {
+			text = can_only_be_done_once_desc
+		}
+		scope:actor = { remove_character_flag = can_make_magician_flag }
+	}
+
+	ai_targets = {
+		ai_recipients = children
+		max = 20
+	}
+	
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 24
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+killing_blow_interaction = {
+	category = interaction_category_hostile
+
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+
+	desc = killing_blow_interaction_desc
+	
+	icon = vampire_interaction
+	
+	is_shown = {
+		scope:actor = {
+			has_character_flag = killer_blow_magic_perk_flag
+		}
+		NOT = { scope:recipient = scope:actor }
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_available_adult = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			death = natural
+		}
+		custom_description = {
+			text = can_only_be_done_once_desc
+		}
+		scope:actor = { remove_character_flag = killer_blow_magic_perk_flag }
+	}
+
+	ai_targets = {
+		ai_recipients = primary_war_enemies
+		max = 20
+	}
+	
+	ai_potential = {
+		is_adult = yes
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency = 24
+
+	ai_will_do = {
+		base = 100
 	}
 }
