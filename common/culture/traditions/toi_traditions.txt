@@ -1,0 +1,39 @@
+﻿tradition_superior_tribe = {
+	category = societal
+
+	layers = {
+		0 = intrigue
+		1 = western
+		4 = shield.dds
+	}
+	
+	can_pick = {
+		has_trait = fomorian
+	}
+	
+	culture_modifier = {
+		cultural_acceptance_gain_mult = -0.95
+	}
+	character_modifier = {
+		different_culture_opinion = -15
+		same_culture_mercenary_hire_cost_mult = -0.1
+		dread_baseline_add = 10
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 25	
+	}
+}

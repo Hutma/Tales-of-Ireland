@@ -99,6 +99,17 @@ region_leinster = {
 	}
 }
 
+wolfwalker_region = {
+	duchies = {
+		#Kilkenny
+		d_iverk d_ida d_knocktopher d_callan d_shillelogher d_crannagh d_galmoy d_fassadinin d_gowran
+		#Laois
+		d_slievemargy d_ballyadams d_stradbally d_cullenagh d_portlaoise d_porthnahinch d_tinnahinch d_upper_woods d_clandonagh d_clarmallagh
+		#Offaly
+		d_clonlisk d_ballybritt d_eglish d_garrycastle d_ballycowan d_geashill d_daingean d_coolestown d_warrenstown
+	}
+}
+
 ireland_region = {
 	regions = {
 		region_connacht region_leinster region_munster region_ulster

@@ -194,7 +194,7 @@ hy_brasylian_invasion_effect = {
 					
 					spawn_army = {
 						levies = {
-							value = 25
+							value = 200
 						}
 						men_at_arms = {
 							type = hy_brazylian_adventurers
@@ -237,7 +237,7 @@ hy_brasylian_invasion_effect = {
 					
 					spawn_army = {
 						levies = {
-							value = 25
+							value = 200
 						}
 						men_at_arms = {
 							type = hy_brazylian_adventurers
@@ -280,7 +280,7 @@ hy_brasylian_invasion_effect = {
 					
 					spawn_army = {
 						levies = {
-							value = 25
+							value = 200
 						}
 						men_at_arms = {
 							type = hy_brazylian_adventurers
@@ -304,16 +304,17 @@ hy_brasylian_invasion_effect = {
 		# Work out how many event troops we should give the adventurer for a 60:40 fight.
 		spawn_army = {
 			levies = {
-				value = 500
+				value = 800
 			}
 			men_at_arms = {
 				type = hy_brazylian_adventurers
 				stacks = {
-					value = 2
+					value = 4
 					add = scope:adventurer_target.holder.top_liege.primary_title.tier
 				}
 			}
 			uses_supply = no
+			inheritable = yes
 			location = title:b_kilronan.title_province
 			name = hy_brasil_adventurers_event_troops
 		}

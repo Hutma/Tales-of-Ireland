@@ -1086,6 +1086,9 @@ has_tolerant_faith_or_culture_trigger = {
 	}
 }
 
+is_mainstream_jewish_faith = {
+	always = no
+}
 ### SYNCRETIC TRIGGERS ###
 
 islam_or_syncretic_with_islam_trigger = {

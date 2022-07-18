@@ -120,7 +120,23 @@ fp2_struggle_compromise_create_new_kingdom_effect = {
 		tier = kingdom
 		name = $TYPE$_CREATED_TITLE_NAME
 	}
-	scope:old_title = { set_de_jure_liege_title = scope:new_title }
+	scope:old_title = {
+		# Edge case for kingdoms which do not control their own capital duchy
+		if = {
+			limit = {
+				title_capital_county = de_jure_liege.title_capital_county
+				exists = de_jure_liege.holder
+				NOT = { holder = de_jure_liege.holder }
+			}
+			de_jure_liege = {
+				# So kingdom has a capital
+				set_capital_county = this.holder.capital_county
+				# So titles do not share CoAs
+				set_coa = this.holder.house
+			}
+		}
+		set_de_jure_liege_title = scope:new_title
+	}
 	scope:new_title = {
 		set_coa = $FETCH$
 		set_color_from_title = $FETCH$
@@ -136,7 +152,17 @@ fp2_struggle_compromise_duchies_to_kingdoms_effect = {
 		title:e_spain = {
 			# Cycle through de jure duchies held by independent dukes
 			every_in_de_jure_hierarchy = {
-				limit = { fp2_struggle_ending_compromise_independent_duchy_trigger = yes }
+				# Prefer primary titles
+				limit = {
+					this = this.holder.primary_title
+					fp2_struggle_ending_compromise_independent_duchy_trigger = yes
+				}
+				# Then capital titles
+				alternative_limit = {
+					this.title_capital_county = this.kingdom.title_capital_county
+					fp2_struggle_ending_compromise_independent_duchy_trigger = yes
+				}
+				alternative_limit = { fp2_struggle_ending_compromise_independent_duchy_trigger = yes }
 				save_scope_as = old_title
 				fp2_struggle_compromise_create_new_kingdom_effect = { TYPE = NEW FETCH = scope:old_title }
 			}
@@ -163,7 +189,6 @@ fp2_struggle_compromise_duchies_to_kingdoms_effect = {
 				}
 			}
 			# Cycle through uncreated de jure duchies to split if needed (e.g. Coimbra)
-			# TODO_CD_FP2 (JP) added to avoid exclaves, may not be intended by design
 			every_in_de_jure_hierarchy = {
 				limit = { fp2_struggle_ending_compromise_split_duchy_trigger = yes }
 			    save_scope_as = old_title
@@ -173,7 +198,7 @@ fp2_struggle_compromise_duchies_to_kingdoms_effect = {
 	}
 }
 
-# Creates a new de jure empire from a kingdom
+# Moves duchies to another kingdom
 fp2_struggle_compromise_transfer_duchies_effect = {
 	title:e_spain = {
 		while = {
@@ -182,6 +207,30 @@ fp2_struggle_compromise_transfer_duchies_effect = {
 			}
 			every_in_de_jure_hierarchy = {
 				limit = { fp2_struggle_compromise_transfer_duchy_trigger = yes }
+				add_to_list = transferred_duchies
+				# To ensure kingdom's capitals are always inside them
+				if = {
+					limit = { title_capital_county = kingdom.title_capital_county }
+					kingdom = {
+						save_scope_as = old_kingdom
+						if = {
+							limit = {
+								any_direct_de_jure_vassal_title = {
+									NOT = { is_in_list = transferred_duchies }
+									title_capital_county.kingdom = scope:old_kingdom
+								}
+							}
+							random_direct_de_jure_vassal_title = {
+								limit = {
+									NOT = { is_in_list = transferred_duchies }
+									title_capital_county.kingdom = scope:old_kingdom
+								}
+								title_capital_county = { save_scope_as = new_capital }
+							}
+							set_capital_county = scope:new_capital
+						}
+					}
+				}
 				if = {
 					limit = { title_capital_county.holder.top_liege.primary_title.tier = tier_kingdom }
 					set_de_jure_liege_title = title_capital_county.holder.top_liege.primary_title
@@ -191,7 +240,6 @@ fp2_struggle_compromise_transfer_duchies_effect = {
 		}
 	}
 }
-
 
 # Creates a new de jure empire from a kingdom
 fp2_struggle_compromise_create_new_empire_effect = {
@@ -203,6 +251,7 @@ fp2_struggle_compromise_create_new_empire_effect = {
 	}
 	scope:old_title = { set_de_jure_liege_title = scope:new_title }
 	scope:new_title = {
+		add_to_list = new_empire_list
 		set_coa = scope:old_title
 		set_color_from_title = scope:old_title
 		set_capital_county = scope:old_title.title_capital_county
@@ -1913,9 +1962,7 @@ fp2_struggle_found_kingdom_toledo_empire_effect = {
 		}
 		set_de_jure_liege_title = title:k_toledo
 	}
-	hidden_effect = {
-		title:k_toledo = { set_de_jure_liege_title = title:e_spain }
-	}
+	#hidden_effect = { title:k_toledo = { set_de_jure_liege_title = title:e_spain } }
 	every_in_list = {
 		list = kingdom_toledo_opinion_list
 		limit = { is_ai = yes }
@@ -1947,7 +1994,19 @@ fp2_struggle_compromise_tooltip_effect = {
 	custom_tooltip = fp2_struggle_compromise_create_new_empires_tt
 	# RIP Hispania
 	custom_tooltip = fp2_struggle_compromise_destroy_hispania_tt
-	
+	if = {
+		limit = {
+			struggle:iberian_struggle = {
+				any_involved_ruler = {
+					count > 1
+					is_independent_ruler = yes
+					primary_title = { is_mercenary_company = no }
+				}
+			}
+			# Every Involved ruler gets a 10 year truce with every other
+			custom_tooltip = fp2_struggle_compromise_truce_tt
+		}
+	}
 	custom_tooltip = fp2_struggle_compromise_war_cost_tt
 }
 

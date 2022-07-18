@@ -14,6 +14,7 @@
 		tradition_isolationist
 		tradition_ruling_caste
 		tradition_quarrelsome
+		tradition_superior_tribe
 	}
 	
 	name_list = name_list_pictish
@@ -44,6 +45,7 @@ underground_fomorians = {
 		tradition_mystical_ancestors
 		tradition_isolationist
 		tradition_ruling_caste
+		tradition_superior_tribe
 	}
 	
 	name_list = name_list_khanty
@@ -74,6 +76,7 @@ sea_fomorians = {
 		tradition_isolationist
 		tradition_seafaring
 		tradition_hereditary_hierarchy
+		tradition_superior_tribe
 	}
 	
 	name_list = name_list_khanty

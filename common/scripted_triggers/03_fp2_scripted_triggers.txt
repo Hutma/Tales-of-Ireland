@@ -36,7 +36,6 @@ eligible_for_fp2_dynasty_legacies_trigger = {
 					involvement = involved
 				}
 			}
-			has_dynasty_perk = fp2_urbanism_legacy_1
 		}
 	}
 }

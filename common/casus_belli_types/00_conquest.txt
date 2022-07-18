@@ -46,9 +46,14 @@
 		scope:target = {
 			neighboring_county_or_viking_conquest_trigger = { CHARACTER = root }
 		}
+	}
 
-		# Struggle constraint
-		struggle_blocks_invasion_conquest_cb_trigger = yes
+	allowed_for_character_display_regardless = {
+		# Struggle constraint - Note: This is the CB you get in FP2 opportunity, if you need to debug, test it here first.
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
 	}
 
 	should_invalidate = {
@@ -69,8 +74,7 @@
 	}
 
 	on_invalidated_desc = msg_county_conquest_war_invalidated_message
-	on_invalidated = {
-	}
+	on_invalidated = {}
 
 	cost = {
 		piety = {
@@ -309,6 +313,12 @@ duchy_conquest_cb = {
 		trigger_else = {
 			prestige_level >= 3
 		}
+
+		# Struggle constraint
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
 	}
 
 	allowed_against_character = {
@@ -352,9 +362,6 @@ duchy_conquest_cb = {
 				neighboring_county_or_viking_conquest_trigger = { CHARACTER = root }
 			}
 		}
-
-		# Struggle constraint
-		struggle_blocks_invasion_conquest_cb_trigger = yes
 	}
 
 	should_invalidate = {
@@ -725,8 +732,14 @@ ducal_conquest_cb = {
 				}
 			}
 		}
+	}
+
+	allowed_for_character_display_regardless = {
 		# Struggle constraint
-		struggle_blocks_invasion_conquest_cb_trigger = yes
+		custom_tooltip = {
+			text = struggle_involvement_cb_check_failure
+			struggle_blocks_invasion_conquest_cb_trigger = yes
+		}
 	}
 
 	should_invalidate = {

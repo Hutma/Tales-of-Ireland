@@ -321,7 +321,7 @@ artifact_should_use_gfx_type_trigger = {
 
 artifact_low_rarity_trigger = {
 	trigger_if = {
-		limit = { exists = scope:artifact}
+		limit = { exists = scope:artifact }
 		scope:artifact = {
 			OR = {
 				rarity = masterwork
@@ -339,7 +339,7 @@ artifact_low_rarity_trigger = {
 
 artifact_medium_rarity_trigger = {
 	trigger_if = {
-		limit = { exists = scope:artifact}
+		limit = { exists = scope:artifact }
 		scope:artifact = {
 			OR = {
 				rarity = masterwork
@@ -357,7 +357,7 @@ artifact_medium_rarity_trigger = {
 
 artifact_high_rarity_trigger = {
 	trigger_if = {
-		limit = { exists = scope:artifact}
+		limit = { exists = scope:artifact }
 		scope:artifact = {
 			OR = {
 				rarity = famed

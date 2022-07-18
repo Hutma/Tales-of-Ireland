@@ -345,20 +345,11 @@ investigate_on_wolfwalkers_decision = {
 		is_ruler = yes
 		is_landed = yes
 		exists = dynasty # Everyone should have a dynasty, but in case they don't...
-		OR = {
-			capital_county = {
-				kingdom = title:k_kilkenny
-			}
-			capital_county = {
-				kingdom = title:k_laois
-			}
-			capital_county = {
-				kingdom = title:k_offaly
-			}
-			capital_county = {
-				kingdom = title:k_ossory
-			}
+
+		capital_province = {
+			geographical_region = wolfwalker_region
 		}
+
 		NOT = {
 			OR = {
 				has_trait = wolfwalker
@@ -369,6 +360,9 @@ investigate_on_wolfwalkers_decision = {
 	}
 
 	is_valid = {
+		capital_province = {
+			geographical_region = wolfwalker_region
+		}
 		NOT = { has_trait = fomorian }
 		NOT = { has_trait = tuatha_de_danann }
 		OR = {
