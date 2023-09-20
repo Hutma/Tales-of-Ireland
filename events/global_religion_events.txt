@@ -27,8 +27,8 @@ global_religion.0001 = {
 					any_neighboring_top_liege_realm_owner = {
 						faith = { NOT = { has_doctrine_parameter = unreformed } }
 						OR = {
-							has_government = clan_government
-							has_government = feudal_government
+							government_has_flag = government_is_clan
+							government_has_flag = government_is_feudal
 						}
 					}
 				}
@@ -36,8 +36,8 @@ global_religion.0001 = {
 					limit = {
 						faith = { NOT = { has_doctrine_parameter = unreformed } }
 						OR = {
-							has_government = clan_government
-							has_government = feudal_government
+							government_has_flag = government_is_clan
+							government_has_flag = government_is_feudal
 						}
 					}
 					alternative_limit = {
@@ -48,7 +48,7 @@ global_religion.0001 = {
 			}
 			5 = {
 				trigger = {
-					any_spouse = {
+					any_consort = {
 						faith = { NOT = { has_doctrine_parameter = unreformed } }
 						NOR = {
 							has_relation_potential_rival = root
@@ -56,7 +56,7 @@ global_religion.0001 = {
 						}
 					}
 				}
-				random_spouse = {
+				random_consort = {
 					limit = {
 						faith = { NOT = { has_doctrine_parameter = unreformed } }
 						NOR = {
@@ -109,6 +109,57 @@ global_religion.0001 = {
 					save_scope_as = actor #for the effect to work properly
 				}
 			}
+			2 = {
+				trigger = {
+					any_relation = {
+						type = lover
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+					}
+				}
+				modifier = {
+					add = 2
+					any_relation = {
+						type = lover
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+						has_relation_best_friend = root
+					}
+				}
+				random_relation = {
+					type = lover
+					limit = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+						has_relation_best_friend = root
+					}
+					alternative_limit = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+					}
+					save_scope_as = actor #for the effect to work properly
+				}
+			}
+			2 = {
+				trigger = {
+					any_councillor = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+					}
+				}
+				modifier = {
+					add = 2
+					any_councillor = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+						has_relation_best_friend = root
+					}
+				}
+				random_councillor = {
+					limit = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+						has_relation_best_friend = root
+					}
+					alternative_limit = {
+						faith = { NOT = { has_doctrine_parameter = unreformed } }
+					}
+					save_scope_as = actor #for the effect to work properly
+				}
+			}
 			#Geographical regions to also push extra for
 			2 = {
 				trigger = { #Russia - orthodox
@@ -148,11 +199,19 @@ global_religion.0001 = {
 					current_date >= 868.1.1
 				}
 				modifier = {
-					add = -40
+					add = -15
+					current_date >= 900.1.1
+				}
+				modifier = {
+					add = -25
 					current_date >= 950.1.1
 				}
+				modifier = {
+					add = -10
+					current_date >= 1000.1.1
+				}
 				modifier = { #100 % that something happens if it can
-					add = -20
+					add = -10
 					current_date >= 1100.1.1
 				}
 			}
@@ -163,6 +222,39 @@ global_religion.0001 = {
 				exists = scope:actor
 			}
 			save_scope_as = recipient #for the effect to work properly
+			
+			every_vassal = {
+				limit = {
+					faith = root.faith
+				}
+
+				demand_conversion_interaction_effect = yes
+
+				if = { #If you converted to a neighboring faith your government and capital county also converts
+					limit = {
+						root = {
+							any_neighboring_top_liege_realm_owner = {
+								this = scope:recipient
+							}
+						}
+						NAND = { # The Steppes convert, but stay tribal
+							exists = capital_province
+							always = no
+							#capital_province = { geographical_region = world_steppe }
+						}
+					}
+					if = {
+						limit = {
+							faith = { religion_tag = islam_religion }
+						}
+						change_government = clan_government
+					}
+					else = { change_government = feudal_government }
+					capital_county = {
+						set_county_faith = prev.faith
+					}
+				}
+			}
 
 			demand_conversion_interaction_effect = yes
 
@@ -172,7 +264,7 @@ global_religion.0001 = {
 						this = scope:recipient
 					}
 				}
-				#change_government = feudal_government
+				else = { change_government = feudal_government }
 				capital_county = {
 					set_county_faith = root.faith
 				}

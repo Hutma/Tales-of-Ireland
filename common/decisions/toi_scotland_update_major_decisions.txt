@@ -102,7 +102,7 @@ the_empire_of_dal_riata_decision = {
 		is_landed = yes
 		NOT = { highest_held_title_tier = 5 }
 		has_culture = culture:dal_riata
-		is_indepedent_ruler = yes
+		is_independent_ruler = yes
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions

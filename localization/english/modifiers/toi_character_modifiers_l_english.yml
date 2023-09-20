@@ -38,3 +38,6 @@
  
  weak_body:0 "Weak Body"
  no_more_land:0 "No more land"
+ 
+ beat_up_fianna_modifier:0 "Beat up the Fianna"
+ abandonned_subjects_for_fianna_modifier:0 "Prefered Fianna over their subjects"

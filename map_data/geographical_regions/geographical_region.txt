@@ -3,14 +3,89 @@
 #	duchies = { }, takes duchy title names declared in landed_titles.txt
 #	counties = { }, takes county title names declared in landed_titles.txt
 #	provinces = { }, takes province id numbers declared in /history/provinces
-#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region. 
+#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region.
 #		E.g. If the region world_europe contains the region world_europe_west then world_europe_west needs to be declared as a region before (i.e. higher up in this file) world_europe.
+
+# Regions provide the following modifiers:
+# key + _development_growth
+# key + _development_growth_factor
+# This requires "generate_modifiers = yes" in the region
 
 ###########################################################################
 # World Regions
 #	These groups are mutually exclusive on the same tier & should cover every part of the map
 ###########################################################################
 
+# world_europe
+# > world_europe_west
+# >> world_europe_west_britannia
+# >> world_europe_west_germania
+# >> world_europe_west_francia
+# >> world_europe_west_iberia
+# > world_europe_north
+# > world_europe_south
+# >> world_europe_south_east
+# >> world_europe_south_italy
+# > world_europe_east
+
+# world_asia_minor
+
+# world_middle_east
+# > world_middle_east_jerusalem
+# > world_middle_east_arabia
+# > world_middle_east_persia
+
+# world_india
+# > world_india_deccan
+# > world_india_bengal
+# > world_india_rajastan
+# > custom_lanka
+
+# world_africa
+# > world_africa_north
+# >> world_africa_north_west
+# >> world_africa_north_east
+# > world_africa_west
+# > world_africa_east
+
+# world_steppe
+# > world_steppe_tarim
+# > world_steppe_west
+# > world_steppe_east
+
+# world_tibet
+
+# world_burma
+# > custom_arakan_mountains
+
+# sea_atlantic_ocean
+# > sea_north_atlantic
+# >> sea_baltic_sea
+# >> sea_north_sea
+# >> sea_english_channel
+# >> sea_irish_sea
+# >> sea_bay_of_biscay
+# >> sea_macaronesia
+# >> sea_mediterranean_sea
+# >>> sea_western_mediterranean_sea
+# >>> sea_ionian_sea
+# >>> sea_adriatic_sea
+# >>> sea_aegean_sea
+# >>> sea_black_sea
+# > sea_south_atlantic
+# >> sea_gulf_of_guinea
+
+# sea_indian_ocean
+# > sea_bay_of_somalia
+# > sea_red_sea
+# > sea_gulf_of_aden
+# > sea_persian_gulf
+# > sea_arabian_sea
+# > sea_bay_of_bengal
+
+# sea_inland_steppe_seas
+# > sea_caspian_sea
+# > sea_aral_sea
 
 region_munster = {
 	duchies = {
@@ -567,3 +642,98 @@ dlc_ep1_east_africa_trade_region = {}
 dlc_ep1_west_africa_trade_region = {}
 dlc_ep1_indian_trade_region = {}
 dlc_ep1_southwest_silk_road_trade_region = {}
+
+### SEAZONES ###
+
+sea_atlantic_ocean = {}
+sea_north_atlantic = {}
+sea_baltic_sea = {}
+sea_north_sea = {}
+sea_white_sea = {}
+sea_english_channel = {}
+sea_irish_sea = {
+	provinces = {
+		4337 4338 4339 4340 4341 4342 4343 4344 4345 4346 4347 4348 4349 4350 4351 4352 4353 4354 4355 4356 4357 4358 4359 4360 4361 4362 4363 4364 4365 4366 4367 4368 4369 4370 4371 4372 4373 4374 4375 4376 4377 4378 4379 4380 4381 4382 4383 4384 4385 4386 4387 4388 4389 4390 4391 4392 4393 4394 4395 4396 4397 4398 4399 4400 4401 4402 4403 4404 4405 4406 4407 4408 4409 4410 4411 4412 4413 4414
+		4416 4417 4418 4419 4420
+		4459 4460 4461 4462 4463 4464 4465 4466 4467
+		5024 5025 5026 5027 5028 5029 5030 5031 5032
+	}
+}
+sea_bay_of_biscay = {}
+sea_macaronesia = {}
+sea_mediterranean_sea = {}
+sea_western_mediterranean_sea = {}
+sea_ionian_sea = {}
+sea_adriatic_sea = {}
+sea_aegean_sea = {}
+sea_black_sea = {}
+sea_south_atlantic = {}
+sea_gulf_of_guinea = {}
+
+sea_indian_ocean = {}
+sea_bay_of_somalia = {}
+sea_red_sea = {}
+sea_gulf_of_aden = {}
+sea_persian_gulf = {}
+sea_arabian_sea = {}
+sea_bay_of_bengal = {}
+sea_inland_steppe_seas = {}
+sea_caspian_sea = {}
+sea_aral_sea = {}
+### Hunts
+
+# Deer Spread
+hunt_animal_deer_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+# Antelope Spread
+hunt_animal_antelope_region = {}
+
+# Gazelle Spread
+hunt_animal_gazelle_region = {}
+
+
+# Boar Spread
+hunt_animal_boar_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+# Bear Spread
+hunt_animal_bear_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+# Big Cat Spread
+hunt_animal_big_cat_region = {}
+
+# Bison Spread
+hunt_animal_bison_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+# Aurochs Spread
+hunt_animal_aurochs_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+hunt_animal_reindeer_region = {}
+
+hunt_animal_elk_region = {}
+
+# Chiefly the Celtic Rim.
+board_game_fidchell_region = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}

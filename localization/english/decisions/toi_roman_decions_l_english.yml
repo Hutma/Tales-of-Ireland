@@ -1,0 +1,11 @@
+﻿l_english:
+#####################
+#Made by tom5667 - Polytheism Reborn
+######################
+
+#choose your main deity 
+choose_main_deity_cdr_decision:0 "Choose your main deity"
+cdr_cmd_decision_desc:0 "For most of the old roman polytheists there was one particualar god who was important for their family, for farmer Ceres, Mars for soldiers."
+choose_main_deity_cdr_decision_tooltip:1 "this can only be done once in a lifetime so choose wisely"
+choose_main_deity_cdr_decision_confirm:1 "Let's see"
+

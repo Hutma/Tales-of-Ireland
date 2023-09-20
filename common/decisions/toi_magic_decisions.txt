@@ -163,6 +163,16 @@ ai_magic = {
 			}
 			add_to_list = possible_targets
 		}
+		if = {
+			limit = {
+				has_character_flag = targeted_a_player
+			}
+			any_in_list = {
+				list = possible_targets
+				is_ai = no
+				remove_from_list = possible_targets
+			}
+		}
 		random_in_list = {
 			list = possible_targets
 			save_scope_as = ai_target
@@ -193,6 +203,18 @@ ai_magic = {
 					list = possible_targets
 					save_scope_as = ai_target
 				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:ai_target
+				scope:ai_target = {
+					is_ai = no
+				}
+			}
+			add_character_flag = {
+				flag = targeted_a_player
+				years = 10
 			}
 		}
 		random_list = {

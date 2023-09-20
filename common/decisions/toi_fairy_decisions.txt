@@ -39,7 +39,7 @@
 			limit = {
 				is_landed = yes
 				AND = {
-					has_government = feudal_government
+					government_has_flag = government_is_feudal
 					has_trait = seelie_fairy
 				}
 			}
@@ -50,7 +50,7 @@
 			limit = {
 				is_landed = yes
 				AND = {
-					has_government = feudal_government
+					government_has_flag = government_is_feudal
 					has_trait = unseelie_fairy
 				}
 			}
@@ -111,7 +111,7 @@ determine_fairy_court_decision = {
 				limit = {
 					is_landed = yes
 					AND = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 						has_trait = seelie_fairy
 					}
 				}
@@ -122,7 +122,7 @@ determine_fairy_court_decision = {
 				limit = {
 					is_landed = yes
 					AND = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 						has_trait = unseelie_fairy
 					}
 				}

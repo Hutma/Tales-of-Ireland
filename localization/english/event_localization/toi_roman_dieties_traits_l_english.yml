@@ -1,0 +1,45 @@
+﻿l_english:
+#####################
+#Made by tom5667 - Polytheism Reborn
+######################
+  
+  #State religion trait
+  trait_cdr_state_religion:0 "State religion Cultus Deorum"
+  trait_cdr_state_religion_desc:0 "Reinstated state religion Cultus Deorum"
+
+  #choose main deity traits localization 
+  trait_cdr_cmd1_religion:0 "Devoted to Iupiter"
+  trait_cdr_cmd1_religion_desc:0 "Devotee of Iupiter, god of thunder and Husband of Iuno"
+
+  trait_cdr_cmd2_religion:0 "Devoted to Iuno"
+  trait_cdr_cmd2_religion_desc:0 "Devotee of Juno, protector of the woman of Rome and wife of Jupiter"
+
+  trait_cdr_cmd3_religion:0 "Devoted to Mars"
+  trait_cdr_cmd3_religion_desc:0 "Devotee of Mars, god of war"
+
+  trait_cdr_cmd4_religion:0 "Devoted to Venus"
+  trait_cdr_cmd4_religion_desc:0 "Devotee of Venus, goddess of love and fertility"
+
+  trait_cdr_cmd5_religion:0 "Devoted to Lares"
+  trait_cdr_cmd5_religion_desc:0 "Devotee of the Lares, protector of the household"
+
+  trait_cdr_cmd6_religion:0 "Devoted to Mercurius"
+  trait_cdr_cmd6_religion_desc:0 "Devotee of Mercurius, god of trade"
+
+  #choose main deity traits hellenic localization 
+  trait_h_cmd1_religion:0 "Devoted to Zeus"
+  trait_h_cmd1_religion_desc:0 "Devotee of Zeus, god of thunder and highest God. Husband of Hera"
+
+  trait_h_cmd2_religion:0 "Devoted to Hera"
+  trait_h_cmd2_religion_desc:0 "Devotee of Hera, Wife of Zeus and protector of Woman"
+
+  trait_h_cmd3_religion:0 "Devoted to Ares"
+  trait_h_cmd3_religion_desc:0 "Devotee of Ares, god of war"
+
+  trait_h_cmd4_religion:0 "Devoted to Aphrodite"
+  trait_h_cmd4_religion_desc:0 "Devotee of Aphrodite, Godess of love and fertility"
+
+  trait_h_cmd5_religion:0 "Devoted to Hermes"
+  trait_h_cmd5_religion_desc:0 "Devotee of Hermes, God of trade"
+
+  

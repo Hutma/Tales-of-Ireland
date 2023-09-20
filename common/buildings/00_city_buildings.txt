@@ -30,7 +30,6 @@ city_01 = {
 	}
 
 	can_construct_potential = {
-		building_requirement_tribal = no
 		barony_cannot_construct_holding = no
 	}
 	
@@ -41,15 +40,17 @@ city_01 = {
 	}
 	
 	can_construct_showing_failures_only = {
-		building_requirement_tribal_holding_in_county = no
+		building_requirement_tribal = no
+		building_requirement_tribal_holding_in_county = yes
 	}
 	cost_gold = main_building_tier_1_cost
 	
-	levy = poor_building_levy_tier_1
+	levy = poor_building_levy_tier_2
 	max_garrison = normal_building_max_garrison_tier_1
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_1
 	province_modifier = {
-		monthly_income = poor_building_tax_tier_1
+		monthly_income = good_building_tax_tier_2
+		travel_danger = -10
 	}
 
 	province_culture_modifier = {
@@ -78,6 +79,12 @@ city_01 = {
 		parameter = city_buildings_less_control
 		monthly_county_control_change_factor = -0.25
 	}
+	
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
 
 	province_terrain_modifier = {
 		parameter = coastal_holdings_give_defensive_bonus
@@ -85,10 +92,40 @@ city_01 = {
 		defender_holding_advantage = 2
 	}
 	
+	county_dynasty_modifier = {
+		county_holder_dynasty_perk = fp2_urbanism_legacy_1 # check if the dynasty of the county holder has a specific perk
+    	development_growth_factor = fp2_urbanism_legacy_1_bonus_value
+	}
+
 	flag = city
 	next_building = city_02
 
 	type_icon = "icon_building_guild_halls.dds"
+	
+	on_complete = {
+		county.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_construction
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_construction_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	ai_value = {
 		base = 0
@@ -101,7 +138,7 @@ city_01 = {
 		modifier = {
 			factor = 0
 			scope:holder = {
-				has_government = theocracy_government
+				government_has_flag = government_is_theocracy
 			}
 		}
 		modifier = {
@@ -160,7 +197,8 @@ city_02 = {
 	max_garrison = normal_building_max_garrison_tier_2
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_2
 	province_modifier = {
-		monthly_income = poor_building_tax_tier_3
+		monthly_income = good_building_tax_tier_4
+		travel_danger = -12
 	}
 
 	province_culture_modifier = {
@@ -191,13 +229,49 @@ city_02 = {
 	}
 	
 	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
+	province_terrain_modifier = {
 		parameter = coastal_holdings_give_defensive_bonus
 		is_coastal = yes
 		defender_holding_advantage = 3
 	}
+
+	county_dynasty_modifier = {
+		county_holder_dynasty_perk = fp2_urbanism_legacy_1 # check if the dynasty of the county holder has a specific perk
+    	development_growth_factor = fp2_urbanism_legacy_1_bonus_value
+	}
 	
 	flag = city
 	next_building = city_03
+	
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	ai_value = {
 		base = 6
 		modifier = {
@@ -207,6 +281,14 @@ city_02 = {
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 0.2
+			free_building_slots >= 1
+		}
+		modifier = {
+			factor = 0.3
+			years_from_game_start <= 0.01
 		}
 	}
 }
@@ -249,7 +331,8 @@ city_03 = {
 	max_garrison = normal_building_max_garrison_tier_3
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_3
 	province_modifier = {
-		monthly_income = poor_building_tax_tier_5
+		monthly_income = good_building_tax_tier_6
+		travel_danger = -14
 	}
 
 	province_culture_modifier = {
@@ -279,14 +362,50 @@ city_03 = {
 		parameter = city_buildings_less_control
 		monthly_county_control_change_factor = -0.25
 	}
+	
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
 
 	province_terrain_modifier = {
 		parameter = coastal_holdings_give_defensive_bonus
 		is_coastal = yes
 		defender_holding_advantage = 4
 	}
+
+	county_dynasty_modifier = {
+		county_holder_dynasty_perk = fp2_urbanism_legacy_1 # check if the dynasty of the county holder has a specific perk
+    	development_growth_factor = fp2_urbanism_legacy_1_bonus_value
+	}
 	
 	flag = city
+	
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	ai_value = {
 		base = 5
 		modifier = {
@@ -346,7 +465,8 @@ city_04 = {
 	max_garrison = normal_building_max_garrison_tier_7
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_4
 	province_modifier = {
-		monthly_income = poor_building_tax_tier_7
+		monthly_income = good_building_tax_tier_8
+		travel_danger = -16
 	}
 
 	province_culture_modifier = {
@@ -377,12 +497,48 @@ city_04 = {
 	}
 	
 	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
+	province_terrain_modifier = {
 		parameter = coastal_holdings_give_defensive_bonus
 		is_coastal = yes
 		defender_holding_advantage = 5
 	}
+
+	county_dynasty_modifier = {
+		county_holder_dynasty_perk = fp2_urbanism_legacy_1 # check if the dynasty of the county holder has a specific perk
+    	development_growth_factor = fp2_urbanism_legacy_1_bonus_value
+	}
 	
 	flag = city
+	
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	ai_value = {
 		base = 4
 		modifier = {
@@ -402,6 +558,7 @@ city_04 = {
 # City Buildings
 #
 ####
+
 
 ### Guild Halls
 
@@ -431,10 +588,11 @@ guild_halls_01 = {
 	
 	ai_value = {
 		base = 500
+		ai_tier_1_building_modifier = yes
 		modifier = {
 			add = 500
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -472,7 +630,7 @@ guild_halls_02 = {
 		modifier = {
 			add = 9
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -482,15 +640,27 @@ guild_halls_03 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_02
-		culture = {
-			OR = {
-				has_innovation = innovation_manorialism
-				AND = {
-					has_innovation = innovation_crop_rotation
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
 		}
 	}
 
@@ -513,7 +683,7 @@ guild_halls_03 = {
 		modifier = {
 			add = 8
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -523,15 +693,28 @@ guild_halls_04 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_02
-		culture = {
-			OR = {
-				has_innovation = innovation_manorialism
-				AND = {
-					has_innovation = innovation_crop_rotation
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
 		}
 	}
 
@@ -554,7 +737,7 @@ guild_halls_04 = {
 		modifier = {
 			add = 7
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -564,15 +747,27 @@ guild_halls_05 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_03
-		culture = {
-			OR = {
-				has_innovation = innovation_windmills
-				AND = {
-					has_innovation = innovation_manorialism
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
 		}
 	}
 
@@ -595,7 +790,7 @@ guild_halls_05 = {
 		modifier = {
 			add = 6
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -605,15 +800,27 @@ guild_halls_06 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_03
-		culture = {
-			OR = {
-				has_innovation = innovation_windmills
-				AND = {
-					has_innovation = innovation_manorialism
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
 		}
 	}
 
@@ -636,7 +843,7 @@ guild_halls_06 = {
 		modifier = {
 			add = 5
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -646,15 +853,27 @@ guild_halls_07 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_04
-		culture = {
-			OR = {
-				has_innovation = innovation_cranes
-				AND = {
-					has_innovation = innovation_windmills
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
 		}
 	}
 
@@ -677,7 +896,7 @@ guild_halls_07 = {
 		modifier = {
 			add = 4
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}
@@ -687,15 +906,27 @@ guild_halls_08 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_04
-		culture = {
-			OR = {
-				has_innovation = innovation_cranes
-				AND = {
-					has_innovation = innovation_windmills
-					has_cultural_parameter = next_level_guild_halls
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
 				}
 			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
 		}
 	}
 
@@ -717,7 +948,7 @@ guild_halls_08 = {
 		modifier = {
 			add = 3
 			scope:holder = {
-				has_government = republic_government
+				government_has_flag = government_is_republic
 			}
 		}
 	}

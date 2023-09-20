@@ -600,6 +600,7 @@ cattle.0005 = {
 					has_trait = education_intrigue_2
 					has_trait = education_intrigue_3
 					has_trait = education_intrigue_4
+					has_trait = education_intrigue_5
 				 }
 			}
 		}
@@ -790,7 +791,7 @@ cattle.0007 = {
 				}
 				random_knight = {
 					limit = {
-						NOT = { exists  = scope:hurt_knight1 }
+						NOT = { exists = scope:hurt_knight1 }
 					}
 					increase_wounds_effect = { REASON = battle }
 					save_scope_as = hurt_knight1 
@@ -2996,7 +2997,7 @@ cattle.0601 = {
 	theme = realm
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3058,7 +3059,7 @@ cattle.0602 = {
 	theme = realm
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3124,7 +3125,7 @@ cattle.0603 = {
 	theme = stewardship_domain_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3188,7 +3189,7 @@ cattle.0604 = {
 	theme = stewardship_domain_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3247,7 +3248,7 @@ cattle.0605 = {
 	theme = stewardship_duty_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3280,7 +3281,7 @@ cattle.0606 = {
 	theme = stewardship_duty_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3309,7 +3310,7 @@ cattle.0607 = {
 	theme = stewardship_duty_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {
@@ -3340,7 +3341,7 @@ cattle.0608 = {
 	theme = stewardship_duty_focus
 	
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	left_portrait = {

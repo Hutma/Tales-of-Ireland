@@ -1,4 +1,5 @@
 ﻿hy_brazil_invasion_cb = {
+	icon = invasion
 	group = invasion
 	
 	defender_ticking_warscore_delay = { months = 24 }
@@ -234,6 +235,7 @@
 }
 
 ducal_triggered_invasion_cb = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes
@@ -456,6 +458,7 @@ ducal_triggered_invasion_cb = {
 }
 
 kingdom_triggered_invasion_cb = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes

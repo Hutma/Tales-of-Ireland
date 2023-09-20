@@ -70,7 +70,7 @@ disinherit_interaction = {
 		scope:actor.dynasty = {
 			dynasty_prestige >= medium_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		trigger_if = {
 			limit = {
@@ -87,6 +87,10 @@ disinherit_interaction = {
 				text = "same_realm_as"
 			}
 		}
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
+		}
 	}
 
 	on_auto_accept = {
@@ -101,6 +105,12 @@ disinherit_interaction = {
 				forgiving = minor_stress_impact_gain
 				compassionate = minor_stress_impact_gain
 			}
+
+			add_character_modifier = {
+				modifier = parent_disinherited_child_modifier
+				years = 5
+			}
+
 			hidden_effect = {
 				send_interface_toast = {
 					title = disinherit_interaction_notification
@@ -119,6 +129,26 @@ disinherit_interaction = {
 
 		scope:recipient = {
 			disinherit_effect = { DISINHERITOR = scope:actor }
+		}
+
+		if = {
+			limit = {
+				scope:recipient = {
+					any_secret = {
+						secret_type = secret_disputed_heritage
+						is_known_by = scope:actor
+						save_temporary_scope_as = secret_to_reveal
+					}
+				}
+			}
+
+			scope:secret_to_reveal = {
+				expose_secret = scope:recipient.mother
+			}
+
+			scope:recipient = {
+				add_trait = disputed_heritage
+			}
 		}
 	}
 	
@@ -145,11 +175,26 @@ disinherit_interaction = {
 					}
 					add = medium_dynasty_prestige_value
 				}
+				if = {
+					limit = {
+						scope:recipient = {
+							OR = {
+								has_trait = disputed_heritage
+								any_secret = {
+									secret_type = secret_disputed_heritage
+									is_known_by = scope:actor
+								}
+								has_trait = bastard
+							}
+						}
+					}
+					multiply = 0
+				}
 			}
 		}
 		prestige = {
 			value = {
-				add = major_dynasty_prestige_value
+				add = medium_prestige_value
 				if = {
 					limit = {
 						scope:recipient = {
@@ -167,7 +212,22 @@ disinherit_interaction = {
 							}
 						}
 					}
-					add = major_dynasty_prestige_value
+					add = medium_prestige_value
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							OR = {
+								has_trait = disputed_heritage
+								any_secret = {
+									secret_type = secret_disputed_heritage
+									is_known_by = scope:actor
+								}
+								has_trait = bastard
+							}
+						}
+					}
+					multiply = 0
 				}
 			}
 		}
@@ -380,7 +440,7 @@ disinherit_children_interaction = {
 		scope:actor = {
 			prestige >= major_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		trigger_if = {
 			limit = {
@@ -396,6 +456,10 @@ disinherit_children_interaction = {
 				scope:recipient.top_liege = scope:actor.top_liege
 				text = "same_realm_as"
 			}
+		}
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
 		}
 	}
 
@@ -624,7 +688,7 @@ restore_inheritance_interaction = {
 		scope:actor.dynasty ={
 			dynasty_prestige >= miniscule_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 
 	on_auto_accept = {
@@ -737,8 +801,12 @@ denounce_interaction = {
 		scope:actor.dynasty = {
 			dynasty_prestige >= minor_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
+		}
 	}
 
 	on_auto_accept = {
@@ -969,7 +1037,7 @@ forgive_interaction = {
 		scope:actor.dynasty = {
 			dynasty_prestige >= miniscule_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 
 	on_auto_accept = {
@@ -1112,8 +1180,8 @@ call_dynasty_member_to_war_interaction = {
 	is_valid_showing_failures_only = {
 		scope:actor.dynasty = { dynasty_prestige >= medium_dynasty_prestige_value }
 		scope:recipient = {
-			NOT = { has_government = mercenary_government }
-			NOT = { has_government = holy_order_government }
+			NOT = { government_has_flag = government_is_mercenary }
+			NOT = { government_has_flag = government_is_holy_order }
 		}
 		custom_description = {
 			text = "is_already_in_all_wars"
@@ -1479,7 +1547,7 @@ dynast_end_dynasty_wars_interaction = {
 		scope:actor.dynasty = {
 			dynasty_prestige >= medium_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:actor = {
 			NOT = {
 				is_at_war_with = scope:recipient
@@ -1535,7 +1603,7 @@ dynast_legitimize_bastard_interaction = {
 		scope:actor.dynasty = {
 			dynasty_prestige >= medium_dynasty_prestige_value
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 
 	auto_accept = yes

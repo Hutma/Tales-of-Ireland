@@ -251,7 +251,7 @@ call_gladiators_decision = {
 }
 
 buy_mercenaries_with_cattle_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_cattle.dds"
 	
 	desc = buy_mercenaries_with_cattle_decision_desc
 	
@@ -289,5 +289,325 @@ buy_mercenaries_with_cattle_decision = {
 
 	ai_will_do = {
 		base = 50
+	}
+}
+
+cattle_for_a_feast_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_cattle.dds"
+	
+	desc = cattle_for_a_feast_decision_desc
+	
+	ai_check_interval = 100
+	
+	cooldown = { years = 15 }
+
+	is_shown = {
+		is_independent_ruler = yes
+		is_landed = yes
+		capital_county = {
+			development_level > 20
+		}
+	}
+
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			development_level > 25
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		piety = 100
+	}
+
+	effect = {
+		trigger_event = {
+			id = toi_decisions.019
+		}
+		capital_province = {
+			spawn_activity = {
+				type = activity_feast
+				owner = root
+			}
+		}
+		custom_tooltip = host_feast_decision_desc_vassals
+		if = {
+			limit = {
+				is_independent_ruler = no
+			}
+			custom_tooltip = host_feast_decision_desc_liege_opinion
+		}
+		if = {
+			limit = {
+				employs_court_position = court_musician_court_position
+				any_court_position_holder = {
+			        type = court_musician_court_position
+			        is_physically_able = yes
+			    }
+			}
+			custom_tooltip = host_feast_decision_desc_court_musician_opinion
+		}
+
+		#Piety gain
+		if = {
+			limit = {
+				faith = {
+					OR = {
+						has_doctrine_parameter = piety_from_feasts_active
+						AND = {
+							has_doctrine_parameter = summer_festivals_active
+							# Only during 'summer' (May 1st through July 31st).
+							current_month >= 5
+							current_month <= 7
+						}
+					}
+				}
+			}
+			add_piety = {
+				value = 0
+
+				faith = {
+					if = {
+						limit = {
+							has_doctrine_parameter = summer_festivals_active
+							# Only during 'summer' (May 1st through July 31st).
+							current_month >= 5
+							current_month <= 7
+						}
+						add = major_piety_value
+					}
+					if = {
+						limit = {
+							has_doctrine = tenet_ritual_celebrations
+						}
+						add = medium_piety_value
+					}
+					if = {
+						limit = {
+							has_doctrine = tenet_hedonistic
+						}
+						add = medium_piety_value
+					}
+				}
+				if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 5 }
+					}
+					multiply = 2.5
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 4 }
+					}
+					multiply = 2
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 3 }
+					}
+					multiply = 1.5
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 2 }
+					}
+					multiply = 1
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value <= 1 }
+					}
+					multiply = 0.5
+				}
+
+				min = medium_piety_value # Always give some piety, even if we don't have any of the specified tenets.
+			}
+		}
+
+		#Prestige gain from Tradition or Struggle
+		if = {
+			limit = {
+				OR = {
+					culture = {
+						has_cultural_parameter = refined_feasts
+					}
+					any_character_struggle = {
+						involvement = involved
+						is_struggle_type = iberian_struggle
+						has_struggle_phase_parameter = struggle_prestige_from_feast
+					}
+				}
+			}
+			add_prestige = {
+				value = medium_prestige_value
+				if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 5 }
+					}
+					multiply = 2.5
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 4 }
+					}
+					multiply = 2
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 3 }
+					}
+					multiply = 1.5
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value >= 2 }
+					}
+					multiply = 1
+				}
+				else_if = {
+					limit = {
+						has_royal_court = yes
+						amenity_level = { type = court_food_quality value <= 1 }
+					}
+					multiply = 0.5
+				}
+				if = {
+					limit = {
+						any_character_struggle = {
+							involvement = involved
+							is_struggle_type = iberian_struggle
+							has_struggle_phase_parameter = struggle_prestige_from_feast
+						}
+					}
+					multiply = 1.25
+				}
+			}
+		}
+
+		#Stress loss
+		if = {
+			limit = {
+				OR = {
+					has_trait = shy
+				}
+			}
+			custom_tooltip = host_feast_decision_desc_shy
+		}
+		else = {
+			if = {
+				limit = {
+					has_royal_court = yes
+					amenity_level = { type = court_food_quality value >= 5 }
+				}
+				stress_impact = {
+					base = exotic_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					reveler_1 = feast_stress_loss_value
+					reveler_2 = feast_stress_loss_value
+					reveler_3 = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
+					greedy = activity_stress_gain_impact
+				}
+			}
+			else_if = {
+				limit = {
+					has_royal_court = yes
+					amenity_level = { type = court_food_quality value >= 4 }
+				}
+				stress_impact = {
+					base = lavish_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					reveler_1 = feast_stress_loss_value
+					reveler_2 = feast_stress_loss_value
+					reveler_3 = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
+					greedy = activity_stress_gain_impact
+				}
+			}
+			else_if = {
+				limit = {
+					has_royal_court = yes
+					amenity_level = { type = court_food_quality value >= 3 }
+				}
+				stress_impact = {
+					base = medium_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					reveler_1 = feast_stress_loss_value
+					reveler_2 = feast_stress_loss_value
+					reveler_3 = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
+					greedy = activity_stress_gain_impact
+				}
+			}
+			else_if = {
+				limit = {
+					has_royal_court = yes
+					amenity_level = { type = court_food_quality value <= 1 }
+				}
+				stress_impact = {
+					base = meager_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					reveler_1 = feast_stress_loss_value
+					reveler_2 = feast_stress_loss_value
+					reveler_3 = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
+					greedy = activity_stress_gain_impact
+				}
+			}
+			else = {
+				stress_impact = {
+					base = feast_stress_loss_value
+					gluttonous = activity_stress_loss_impact
+					gregarious = activity_stress_loss_impact
+					reveler_1 = activity_stress_loss_impact
+					reveler_2 = activity_stress_loss_impact
+					reveler_3 = activity_stress_loss_impact
+					drunkard = activity_stress_loss_impact
+					comfort_eater = activity_stress_loss_impact
+					generous = activity_stress_loss_impact
+					greedy = activity_stress_gain_impact
+				}
+			}
+		}
+		if = {
+			limit = { exists = var:protected_alcohol_stores }
+			set_variable = {
+				name = protected_alcohol_stores
+				value = 0
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
 	}
 }

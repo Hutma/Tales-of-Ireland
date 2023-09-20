@@ -1,16 +1,19 @@
 ﻿invasion_war = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
 	mutually_exclusive_titles = { always = yes }
+	allow_hostages = no
 
 	allowed_for_character = {
 		OR = {
-			has_government = tribal_government
+			government_has_flag = government_is_tribal
 			faith = {
 				has_doctrine_parameter = invasion_cb_enabled
 			}
+			has_character_flag = bp2_inspired_culture_for_conquest
 		}
 		NOT = {
 			has_character_flag = used_lifetime_invasion
@@ -19,6 +22,12 @@
 
 	allowed_for_character_display_regardless = {
 		trigger_if = {
+			limit = {
+				has_character_flag =  bp2_inspired_culture_for_conquest
+			}
+			prestige_level >= 0
+		}
+		trigger_else_if = {
 			limit = {
 				culture = {
 					has_cultural_parameter = cb_lower_prestige_level_requirement
@@ -130,6 +139,10 @@
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
+
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -177,6 +190,10 @@
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for doing ok against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
@@ -216,6 +233,9 @@
 	
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
 
 		# Prestige loss for the attacker
 		scope:attacker = {
@@ -273,17 +293,22 @@
 	use_de_jure_wargoal_only = yes
 	
 	attacker_wargoal_percentage = 0.8
+	
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
 }
 
 clan_invasion_war = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
 	mutually_exclusive_titles = { always = yes }
 
+	allow_hostages = no
 	allowed_for_character = {
-		has_government = clan_government
+		government_has_flag = government_is_clan
 		NOR = {
 			has_character_flag = used_lifetime_invasion
 			faith = { has_doctrine_parameter = invasion_cb_enabled }
@@ -396,6 +421,10 @@ clan_invasion_war = {
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
+
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -487,6 +516,10 @@ clan_invasion_war = {
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for doing ok against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
@@ -526,6 +559,9 @@ clan_invasion_war = {
 	
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
 
 		# Prestige loss for the attacker
 		scope:attacker = {
@@ -583,23 +619,25 @@ clan_invasion_war = {
 	use_de_jure_wargoal_only = yes
 	
 	attacker_wargoal_percentage = 0.8
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
 	
 	max_ai_diplo_distance_to_title = 500
 }
 
 mongol_invasion_war = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
 	mutually_exclusive_titles = { always = yes }
 
+	allow_hostages = no
 	allowed_for_character = {
-		this = title:e_mongol_empire.holder
-		has_government = tribal_government
-		prestige_level >= 1
+		always = no
 	}
-	
+
 	allowed_against_character = {
 		scope:attacker = {
 			ALL_FALSE = {
@@ -678,6 +716,10 @@ mongol_invasion_war = {
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
+
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -803,6 +845,10 @@ mongol_invasion_war = {
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for doing ok against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
@@ -842,6 +888,9 @@ mongol_invasion_war = {
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:defender # Not important as the scales are identical
@@ -865,17 +914,22 @@ mongol_invasion_war = {
 			scope:attacker = {
 				if = {
 					limit = {
-						monthly_character_income > 0
+						scope:defender = { is_ai = no }
 					}
-					pay_short_term_income = {
-						years = 3
-						target = scope:defender
+					if = {
+						limit = {
+							monthly_character_income > 0
+						}
+						pay_short_term_income = {
+							years = 3
+							target = scope:defender
+						}
 					}
-				}
-				else = {
-					pay_short_term_gold = {
-						target = scope:defender
-						gold = medium_gold_value
+					else = {
+						pay_short_term_gold = {
+							target = scope:defender
+							gold = medium_gold_value
+						}
 					}
 				}
 			}
@@ -912,17 +966,21 @@ mongol_invasion_war = {
 	use_de_jure_wargoal_only = yes
 	
 	attacker_wargoal_percentage = 0.8
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
 	
 	max_ai_diplo_distance_to_title = 500
 }
 
 mongol_realm_invasion_war = {
+	icon = invasion
 	group = invasion
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
 	mutually_exclusive_titles = { always = yes }
 
+	allow_hostages = no
 	allowed_for_character = {
 		this = title:e_mongol_empire.holder
 		is_ai = yes # To keep it clean and simple for players
@@ -1021,6 +1079,10 @@ mongol_realm_invasion_war = {
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_very_high_effect = yes }
+
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -1137,6 +1199,10 @@ mongol_realm_invasion_war = {
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for doing ok against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_med_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
@@ -1176,6 +1242,9 @@ mongol_realm_invasion_war = {
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_very_high_effect = yes }
+
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:defender
@@ -1199,17 +1268,22 @@ mongol_realm_invasion_war = {
 			scope:attacker = {
 				if = {
 					limit = {
-						monthly_character_income > 0
+						scope:defender = { is_ai = no }
 					}
-					pay_short_term_income = {
-						years = 3
-						target = scope:defender
+					if = {
+						limit = {
+							monthly_character_income > 0
+						}
+						pay_short_term_income = {
+							years = 3
+							target = scope:defender
+						}
 					}
-				}
-				else = {
-					pay_short_term_gold = {
-						target = scope:defender
-						gold = medium_gold_value
+					else = {
+						pay_short_term_gold = {
+							target = scope:defender
+							gold = medium_gold_value
+						}
 					}
 				}
 			}
@@ -1246,6 +1320,8 @@ mongol_realm_invasion_war = {
 	use_de_jure_wargoal_only = yes
 	
 	attacker_wargoal_percentage = 0.8
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
 	
 	max_ai_diplo_distance_to_title = 500
 }

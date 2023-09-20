@@ -60,7 +60,7 @@ hy_brasylian_invasion_effect = {
 	}
 	scope:hy_brazilan_invader = {
 		add_gold = 100
-		add_prestige = 2500
+		add_prestige = 10000
 		add_character_modifier = {
 			modifier = invader_modifier
 		}
@@ -329,8 +329,8 @@ fianna_invasion_effect = {
 					has_character_flag = paid_the_fianna
 				}
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				this.capital_county.title_province = { geographical_region = ireland_region }
 			}
@@ -378,7 +378,7 @@ fianna_invasion_effect = {
 	}
 	scope:fianna_invader = {
 		add_gold = 300
-		add_prestige = 5000
+		add_prestige = 10000
 		add_character_modifier = {
 			modifier = invader_modifier
 		}
@@ -523,8 +523,8 @@ fianna_minor_invasion_effect = {
 					has_character_flag = paid_the_fianna
 				}
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				this.capital_county.title_province = { geographical_region = ireland_region }
 			}
@@ -754,7 +754,7 @@ roman_invasion_scripted_effect = {
 	}
 	scope:martial_roman = {
 		add_gold = 800
-		add_prestige = 10000
+		add_prestige = 15000
 		add_character_modifier = {
 			modifier = invader_modifier
 		}

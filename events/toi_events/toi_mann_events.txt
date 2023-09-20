@@ -7,7 +7,7 @@ toi_mann.0001 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -46,7 +46,7 @@ toi_mann.0002 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -169,7 +169,7 @@ toi_mann.0031 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -229,7 +229,7 @@ toi_mann.0032 = {
 	type = character_event
 	theme = battle
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -263,7 +263,7 @@ toi_mann.0004 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -296,7 +296,7 @@ toi_mann.0005 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -333,7 +333,7 @@ toi_mann.0042 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -387,7 +387,7 @@ toi_mann.0043 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -472,7 +472,7 @@ toi_mann.0431 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -494,7 +494,7 @@ toi_mann.0432 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -535,7 +535,7 @@ toi_mann.0044 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -733,7 +733,7 @@ toi_mann.0451 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -793,7 +793,7 @@ toi_mann.0452 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -851,7 +851,7 @@ toi_mann.0453 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -880,7 +880,7 @@ toi_mann.0046 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -910,7 +910,7 @@ toi_mann.0007 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -930,7 +930,7 @@ toi_mann.0008 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -950,7 +950,7 @@ toi_mann.0009 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root
@@ -970,7 +970,7 @@ toi_mann.0010 = {
 	type = character_event
 	theme = faith
 	override_background = {
-		event_background = manx_megaliths
+		reference = manx_megaliths
 	}
 	right_portrait = {
 		character = root

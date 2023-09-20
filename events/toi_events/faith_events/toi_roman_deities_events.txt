@@ -1,0 +1,56 @@
+﻿#####################
+#Made by tom5667 - Polytheism Reborn
+######################
+namespace = cdr_cmd
+
+#choose your main deity events
+cdr_cmd.001 = {
+	type = character_event
+	title = cdr_cmd.001.t
+	desc = cdr_cmd.001.desc
+	theme = learning_scholarship_focus
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	option = {
+		name = cdr_cmd.001.a
+		#Iupiter
+		add_trait = cdr_cmd1_religion
+	}
+	option = {
+		name = cdr_cmd.001.b
+		#Iuno
+		add_trait = cdr_cmd2_religion
+	}
+	option = {
+		name = cdr_cmd.001.c
+		#Mars
+		add_trait = cdr_cmd3_religion
+	}
+	option = {
+		name = cdr_cmd.001.d
+		#Venus
+		add_trait = cdr_cmd4_religion
+	}
+	option = {
+		name = cdr_cmd.001.e
+		#House Lares
+		add_trait = cdr_cmd5_religion
+	}
+	option = {
+		name = cdr_cmd.001.f
+		#Mercurius
+		add_trait = cdr_cmd6_religion
+	}
+	option = {
+		name = cdr_cmd.001.g
+		add_piety = 100
+		
+		ai_chance = {
+			base = 0
+		}	
+	}
+	#option for more in the future 
+}

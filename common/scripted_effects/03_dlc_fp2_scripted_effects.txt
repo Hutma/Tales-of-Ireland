@@ -278,83 +278,7 @@ fp2_struggle_compromise_kingdoms_to_empires_effect = {
 
 # Distribute remaining Kingdoms to neighboring empires
 fp2_struggle_compromise_distribute_kingdoms_to_neighbouring_empires_effect = {
-	hidden_effect = {
-		while = {
-			count = 100 # should be more than enough. Weirdly it doesn't seem to stop even when the limit becomes false
-			limit = {
-				title:e_spain = {
-					any_in_de_jure_hierarchy = {
-						count > 0
-						tier = tier_kingdom
-					}
-				}
-			}
-			title:e_spain = {
-				every_in_de_jure_hierarchy = {
-					limit = { tier = tier_kingdom }
-					save_scope_as = kingdom_to_distribute
-					random_title_to_title_neighboring_and_across_water_kingdom = {
-						limit = {
-							any_this_title_or_de_jure_above = {
-								tier = tier_empire
-								NOT = { this = title:e_spain }
-							}
-							# we don't want to use water connexion if there are de jure within iberia to avoid weird set up
-							trigger_if = {
-								limit = {
-									any_in_de_jure_hierarchy = {
-  				 						tier = tier_county
-										title_province = { geographical_region = world_europe_west_iberia }
-									}
-								}
-								any_title_to_title_neighboring_kingdom = {
-									this = scope:kingdom_to_distribute
-								}
-							}
-						}
-						weight = {
-							modifier = { # Value one from Iberia for small empire
-								add = {
-									value = 2
-									subtract = {
-										value = 0
-										every_in_de_jure_hierarchy = {
-											add = 0.25
-										}
-									}
-									min = 0
-								}
-								any_in_de_jure_hierarchy = {
-  				 					tier = tier_county
-									title_province = { geographical_region = world_europe_west_iberia }
-								}
-							}
-							modifier = { # Value smaller empire
-								add = {
-									value = 2
-									subtract = {
-										value = 0
-										every_in_de_jure_hierarchy = {
-											limit = { tier = tier_kingdom }
-											add = 0.5
-										}
-									}
-									min = 0
-								}
-							}
-						}
-						random_this_title_or_de_jure_above = {
-							limit = {
-								tier = tier_empire
-								NOT = { this = title:e_spain }
-							}
-							scope:kingdom_to_distribute = { set_de_jure_liege_title = prev }
-						}
-					}
-				}
-			}
-		}
-	}
+	
 }
 
 fp2_struggle_compromise_distribute_the_actual_titles = {
@@ -1151,7 +1075,7 @@ fp2_contract_assistance_war_pay_effect = {
 					scope:war = {
 						war_contribution = {
 							target = scope:contract_assistance_helper
-							value >= offer_assistance_interaction_war_contribution_value # 100
+							value >= scope:contract_assistance_helper.var:owed_contract_assistance_contribution
 						}
 					}
 				}
@@ -1163,7 +1087,7 @@ fp2_contract_assistance_war_pay_effect = {
 						custom_tooltip = contract_assistance_war_msg_hirer_paid_desc
 						pay_short_term_gold = {
 							target = scope:contract_assistance_helper
-							gold = offer_assistance_interaction_gold_value
+							gold = scope:contract_assistance_helper.var:owed_contract_assistance_gold
 						}
 					}
 				}
@@ -1177,7 +1101,7 @@ fp2_contract_assistance_war_pay_effect = {
 							scope:contract_assistance_hirer = {
 								pay_short_term_gold = {
 									target = scope:contract_assistance_helper
-									gold = offer_assistance_interaction_gold_value
+									gold = scope:contract_assistance_helper.var:owed_contract_assistance_gold
 								}
 							}
 						}
@@ -1206,6 +1130,8 @@ fp2_contract_assistance_war_pay_effect = {
 					}
 				}
 			}
+			remove_variable = owed_contract_assistance_contribution
+			remove_variable = owed_contract_assistance_gold
 		}
 	}
 }
@@ -1225,6 +1151,8 @@ fp2_contract_assistance_invalidated_effect = {
 				var:owed_contract_assistance_war = scope:war
 			}
 			remove_variable = owed_contract_assistance_war
+			remove_variable = owed_contract_assistance_contribution
+			remove_variable = owed_contract_assistance_gold
 			save_scope_as = contract_assistance_helper
 			if = {
 				limit = { is_attacker_in_war = scope:war }
@@ -1253,31 +1181,30 @@ fp2_contract_assistance_invalidated_effect = {
 	}
 }
 		
-	invite_special_guest_to_activity_effect = {
-		if = {
-			limit = {
-				exists = var:special_guest
-			}
-
-			var:special_guest = {
-				save_scope_as = the_special_guest
-			}
-
-			scope:activity = {
-				invite_character_to_activity = scope:the_special_guest
-				accept_invitation_for_character = scope:the_special_guest
-			}
-
-			save_scope_as = sender
-			 scope:the_special_guest = {
-				set_variable = {
-					name = booked_for_a_party
-					value = scope:sender
-					days = 20
-				}
-			}
-			remove_variable = special_guest
+invite_special_guest_to_activity_effect = {
+	if = {
+		limit = {
+			exists = var:special_guest
 		}
+
+		var:special_guest = {
+			save_scope_as = the_special_guest
+		}
+
+		save_scope_as = sender
+
+		scope:the_special_guest = {
+			add_to_activity = scope:activity
+
+			set_variable = {
+				name = booked_for_a_party
+				value = scope:sender
+				days = 20
+			}
+		}
+		
+		remove_variable = special_guest
+	}
 }
 
 ##################################################
@@ -1314,8 +1241,9 @@ gifting_leads_towards_friendship_effect = {
 			}
 		}
 		progress_towards_friend_effect = {
+			REASON = friend_struggle_gift
 			CHARACTER = scope:actor
-			OPINION = no
+			OPINION = 0
 		}
 	}
 }
@@ -1587,7 +1515,7 @@ create_artifact_fp2_armillary_sphere_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$MAKER$ = { save_scope_as = maker }
 	# Begin creating.
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		# Get artifact quality, wealth, and materials.
 		get_artifact_quality_effect = yes
 		get_artifact_wealth_effect = yes
@@ -1708,7 +1636,7 @@ create_artifact_fp2_andalusian_aquamanile_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$SMITH$ = { save_scope_as = maker }
 	# Begin creating.
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		# Get artifact quality, wealth, and materials.
 		get_artifact_quality_effect = yes
 		get_artifact_wealth_effect = yes
@@ -1926,30 +1854,31 @@ fp2_struggle_found_kingdom_toledo_empire_effect = {
 	}
 	resolve_title_and_vassal_change = scope:title_change
 	title:d_toledo = { add_to_list = kingdom_toledo_absorb_list }
-	ordered_held_title = {
-		limit = {
-			tier = tier_duchy
-			is_titular = no
-			NOT = { this = title:d_toledo }
-			root = { completely_controls = prev }
-			any_title_to_title_neighboring_and_across_water_duchy = { this = title:d_toledo }
-			de_jure_liege = {
-				any_in_de_jure_hierarchy = {
-					count > 2
-					tier = tier_duchy
+	if = {
+		limit = { NOT = { exists = scope:has_kingdom_toledo_absorb_list_been_created } }
+		ordered_held_title = {
+			limit = {
+				tier = tier_duchy
+				is_titular = no
+				NOT = { this = title:d_toledo }
+				root = { completely_controls = prev }
+				any_title_to_title_neighboring_and_across_water_duchy = { this = title:d_toledo }
+				de_jure_liege = {
+					any_in_de_jure_hierarchy = {
+						count > 2
+						tier = tier_duchy
+					}
 				}
 			}
-		}
-		order_by = {
-			value = 0
-			every_de_jure_county = {
-				limit = {
-					any_neighboring_county = { de_jure_liege = title:d_toledo }
+			order_by = {
+				value = 0
+				every_de_jure_county = {
+					limit = { any_neighboring_county = { de_jure_liege = title:d_toledo } }
+					add = 1
 				}
-				add = 1
 			}
+			add_to_list = kingdom_toledo_absorb_list
 		}
-		add_to_list = kingdom_toledo_absorb_list
 	}
 	every_in_list = {
 		list = kingdom_toledo_absorb_list
@@ -2026,4 +1955,6 @@ fp2_struggle_conciliation_tooltip_effect = {
 	custom_tooltip = fp2_struggle_conciliation_holy_war_disabled_tt 
 	# Involved cultures/faiths can offer to join defensive wars with outsiders targetting Iberia
 	custom_tooltip = fp2_struggle_conciliation_join_war_tt
+	# Caravanserai line of buildings unlocked for Iberia
+	custom_tooltip = fp2_struggle_conciliation_caravanserai_unlock_tt
 }

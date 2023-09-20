@@ -245,7 +245,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = 0 }
+							var:prestige_clan_modifier = 0
 						}
 					}
 					dynasty = {
@@ -264,7 +264,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = -5 }
+							var:prestige_clan_modifier = -5
 						}
 					}
 					dynasty = {
@@ -294,7 +294,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = 0 }
+							var:prestige_clan_modifier = 0
 						}
 					}
 					dynasty = {
@@ -313,7 +313,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = 10 }
+							var:prestige_clan_modifier = 10
 						}
 					}
 					dynasty = {
@@ -356,7 +356,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = 10 }
+							var:prestige_clan_modifier = 10
 						}
 					}
 					dynasty = {
@@ -375,7 +375,7 @@ dynasty_unity_maintenance = {
 				if = {
 					limit = {
 						dynasty = {
-							var:prestige_clan_modifier = { compare_value = -5 }
+							var:prestige_clan_modifier = -5
 						}
 					}
 					dynasty = {
@@ -422,7 +422,7 @@ dynasty_unity_maintenance = {
 				limit = {
 					root.dynasty = { exists = var:clan_unity_value }
 					root.dynasty = {
-						var:clan_unity_value = { compare_value > 85 }
+						var:clan_unity_value > 85
 					}
 				}
 				if = {
@@ -455,8 +455,8 @@ dynasty_unity_maintenance = {
 					root.dynasty = { exists = var:clan_unity_value }
 					root.dynasty = {
 						AND = {
-							var:clan_unity_value = { compare_value <= 85 }
-							var:clan_unity_value = { compare_value > 60 }
+							var:clan_unity_value <= 85
+							var:clan_unity_value > 60
 						}
 					}
 				}
@@ -490,8 +490,8 @@ dynasty_unity_maintenance = {
 					root.dynasty = { exists = var:clan_unity_value }
 					root.dynasty = {
 						AND = {
-							var:clan_unity_value = { compare_value <= 60 }
-							var:clan_unity_value = { compare_value >= 30 }
+							var:clan_unity_value <= 60
+							var:clan_unity_value >= 30
 						}
 					}
 				}
@@ -525,8 +525,8 @@ dynasty_unity_maintenance = {
 					root.dynasty = { exists = var:clan_unity_value }
 					root.dynasty = {
 						AND = {
-							var:clan_unity_value = { compare_value < 30 }
-							var:clan_unity_value = { compare_value >= 15 }
+							var:clan_unity_value < 30
+							var:clan_unity_value >= 15
 						}
 					}
 				}
@@ -559,7 +559,7 @@ dynasty_unity_maintenance = {
 				limit = {
 					root.dynasty = { exists = var:clan_unity_value }
 					root.dynasty = {
-						var:clan_unity_value = { compare_value < 15 }
+						var:clan_unity_value < 15
 					}
 				}
 				if = {

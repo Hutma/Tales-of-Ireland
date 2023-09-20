@@ -8,7 +8,7 @@ toi_place_event.0001 = {
     desc = toi_place_event.0001.desc
     theme = witchcraft
     override_background = {
-        event_background = carrick_a_rede
+        reference = carrick_a_rede
     }
     
     left_portrait = {
@@ -66,7 +66,7 @@ toi_place_event.0002 = {
     desc = toi_place_event.0002.desc
     theme = witchcraft
     override_background =  {
-        event_background = cliffs_of_moher
+        reference = cliffs_of_moher
     }
 
     left_portrait = {
@@ -129,7 +129,7 @@ toi_place_event.0003 = {
     desc = toi_place_event.0003.desc 
     theme = witchcraft
     override_background = {
-        event_background = gap_of_dunloe
+        reference = gap_of_dunloe
     }
 
     left_portrait = {
@@ -175,7 +175,7 @@ toi_place_event.0004 = {
     desc = toi_place_event.0004.desc
     theme = witchcraft
     override_background = { 
-        event_background = connemara
+        reference = connemara
     }
 
     left_portrait = {

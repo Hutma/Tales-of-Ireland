@@ -1,5 +1,6 @@
 ﻿#Land for son cb
 land_child_son_cb = {
+	icon = invasion
 	group = conquest
 	
 	allowed_for_character = {
@@ -15,7 +16,7 @@ land_child_son_cb = {
 						is_adult = yes
 					}
 				}
-				has_government = feudal_government
+				government_has_flag = government_is_feudal
 			}
 		}
 	}
@@ -357,6 +358,7 @@ land_child_son_cb = {
 
 #Land for daughter cb
 land_child_daughter_cb = {
+	icon = invasion
 	group = conquest
 	
 	allowed_for_character = {
@@ -372,7 +374,7 @@ land_child_daughter_cb = {
 						is_adult = yes
 					}
 				}
-				has_government = feudal_government
+				government_has_flag = government_is_feudal
 			}
 		}
 	}
@@ -714,6 +716,7 @@ land_child_daughter_cb = {
 
 #Land for child (boy OR girl) cb
 land_child_equi_cb = {
+	icon = invasion
 	group = conquest
 	
 	allowed_for_character = {
@@ -728,7 +731,7 @@ land_child_equi_cb = {
 						is_adult = yes
 					}
 				}
-				has_government = feudal_government
+				government_has_flag = government_is_feudal
 			}
 		}
 	}

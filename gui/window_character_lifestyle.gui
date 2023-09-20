@@ -295,6 +295,7 @@ window = {
 		allow_outside = no
 
 		portrait_lifestyles = {
+			alwaystransparent = "[Not(Lifestyle.IsValid)]"
 			parentanchor = bottom|left
 			position = { -110 0 }
 		}

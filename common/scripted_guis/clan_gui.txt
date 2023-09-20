@@ -176,7 +176,7 @@ clan_decision_effect_gui = {
 			limit = { exists = var:decision_selected_value }
 			if = { #clan gold tax
 				limit = {
-					var:decision_selected_value = { compare_value = 1  }
+					var:decision_selected_value = 1
 				}
 				every_in_list = {
 					variable = clan_rulers
@@ -211,7 +211,7 @@ clan_decision_effect_gui = {
 			}
 			if = { #Clan cattle tax
 				limit = {
-					var:decision_selected_value = { compare_value = 2  }
+					var:decision_selected_value = 2
 				}
 				
 				set_variable = {
@@ -268,7 +268,7 @@ clan_decision_effect_gui = {
 			}
 			if = { #Force clan leader
 				limit = {
-					var:decision_selected_value = { compare_value = 3  }
+					var:decision_selected_value = 3
 				}
 				add_hook = {
 					type = loyalty_hook
@@ -297,7 +297,7 @@ clan_decision_effect_gui = {
 			}
 			if = { #call clan into defensive war
 				limit = {
-					var:decision_selected_value = { compare_value = 4  }
+					var:decision_selected_value = 4
 				}
 				custom_description = {
 					text = call_clan_to_war_effect_desc
@@ -321,7 +321,7 @@ clan_decision_effect_gui = {
 			}
 			if = { #call leader into war
 				limit = {
-					var:decision_selected_value = { compare_value = 5  }
+					var:decision_selected_value = 5
 				}
 				custom_description = {
 					text = call_leader_to_war_effect_desc
@@ -356,7 +356,7 @@ can_use_clan_action_tax = {
 			text = at_least_medium_unity
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value >= 30 }
+				var:clan_unity_value >= 30
 			}
 		}
 	}
@@ -377,7 +377,7 @@ can_use_clan_action_force = {
 			text = low_unity_or_lower
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value < 30 }
+				var:clan_unity_value < 30
 			}
 		}
 	}
@@ -391,7 +391,7 @@ can_use_clan_action_call = {
 			text = at_least_high_unity
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value > 60 }
+				var:clan_unity_value > 60
 			}
 		}
 	}
@@ -417,7 +417,7 @@ can_use_clan_action_call_leader_war = {
 			text = medium_unity_or_lower
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value <= 60 }
+				var:clan_unity_value <= 60
 			}
 		}
 	}

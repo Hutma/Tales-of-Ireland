@@ -1,4 +1,6 @@
 ﻿##################################################
+# Decisions
+##################################################
 
 secure_high_kingdom_north_sea_scripted_effect = {
 	
@@ -6,7 +8,9 @@ secure_high_kingdom_north_sea_scripted_effect = {
 
 found_capital_of_rus_scripted_effect = {
 	#Reward fame to compensate for reduced development gain.
-	add_prestige_experience = major_prestige_gain
+	scope:new_rus_capital.holder = {
+		add_prestige_experience = major_prestige_gain
+	}
 	scope:new_rus_capital = {
 		#Boost local development a few levels; majority of development gain is handled in the modifiers now.
 		if = {
@@ -172,10 +176,11 @@ forge_the_jomsvikings_scripted_effect = {
 		save_scope_as = leader
 	}
 	# Create the actual holy order.
-	create_holy_order = {
-		leader = scope:leader
-		capital = scope:leased_barony
-		save_scope_as = new_holy_order
+	create_holy_order_neutral_effect = {
+		LEADER = scope:leader
+		CAPITAL = scope:leased_barony
+		NEW_HO_SCOPE = new_holy_order
+		FOUNDER = scope:founder
 	}
 	hidden_effect = {
 		scope:leader = {
@@ -199,7 +204,7 @@ forge_the_jomsvikings_scripted_effect = {
 				# If it doesn't have a free building slot, give it one.
 				if = {
 					limit = { free_building_slots = 0 }
-					add_building_slot = 1
+					add_province_modifier = extra_building_slot
 				}
 				# Add the building.
 				add_building = curtain_walls_01
@@ -212,7 +217,7 @@ forge_the_jomsvikings_scripted_effect = {
 				# If it doesn't have a free building slot, give it one.
 				if = {
 					limit = { free_building_slots = 0 }
-					add_building_slot = 1
+					add_province_modifier = extra_building_slot
 				}
 				# Add the building.
 				add_building = barracks_01
@@ -225,7 +230,7 @@ forge_the_jomsvikings_scripted_effect = {
 				# If it doesn't have a free building slot, give it one.
 				if = {
 					limit = { free_building_slots = 0 }
-					add_building_slot = 1
+					add_province_modifier = extra_building_slot
 				}
 				# Add the building.
 				add_building = military_camps_01
@@ -240,7 +245,7 @@ forge_the_jomsvikings_scripted_effect = {
 	# And the Grandmaster of Jomsberg certainly looks favourably on their patron.
 	## Hidden because the title doesn't play nicely with characters created in the same immediate block.
 	hidden_effect = {
-		scope:founder = { set_relation_friend = scope:leader }
+		scope:founder = { set_relation_friend = { reason = friend_forging_jomsvikings target = scope:leader } }
 	}
 	# Mark the Jomsvikings as existing & make them easily accessible
 	set_global_variable = {
@@ -404,6 +409,10 @@ replace_with_learning_trait_effect = {
 		remove_trait = education_intrigue_4
 	}
 	else_if = {
+		limit = { has_trait = education_intrigue_5 }
+		remove_trait = education_intrigue_5
+	}
+	else_if = {
 		limit = { has_trait = education_diplomacy_1 }
 		remove_trait = education_diplomacy_1
 	}
@@ -418,6 +427,10 @@ replace_with_learning_trait_effect = {
 	else_if = {
 		limit = { has_trait = education_diplomacy_4 }
 		remove_trait = education_diplomacy_4
+	}
+	else_if = {
+		limit = { has_trait = education_diplomacy_5 }
+		remove_trait = education_diplomacy_5
 	}
 	else_if = {
 		limit = { has_trait = education_stewardship_1 }
@@ -436,6 +449,10 @@ replace_with_learning_trait_effect = {
 		remove_trait = education_stewardship_4
 	}
 	else_if = {
+		limit = { has_trait = education_stewardship_5 }
+		remove_trait = education_stewardship_5
+	}
+	else_if = {
 		limit = { has_trait = education_martial_1 }
 		remove_trait = education_martial_1
 	}
@@ -450,6 +467,10 @@ replace_with_learning_trait_effect = {
 	else_if = {
 		limit = { has_trait = education_martial_4 }
 		remove_trait = education_martial_4
+	}
+	else_if = {
+		limit = { has_trait = education_martial_5 }
+		remove_trait = education_martial_5
 	}
 	random_list = {
 		2 = { add_trait = education_learning_2 }
@@ -715,7 +736,7 @@ calculate_authority_cooldown_break_effect = {
 	else_if = {
 		limit = {
 			has_variable = tribal_authority_cooldown
-			realm_law_use_crown_authority = no
+			realm_law_use_tribal_authority = yes
 		}
 		# Set it up if it doesn't exist.
 		if = {

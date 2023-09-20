@@ -50,6 +50,7 @@ ask_for_conversion_interaction = {
 
 ask_for_conversion_courtier_interaction = {
 	category = interaction_category_religion
+	icon = religious
 
 	special_interaction = request_conversion_interaction
 	
@@ -275,6 +276,7 @@ ask_for_conversion_courtier_interaction = {
 
 # House head demand conversion
 demand_conversion_interaction = {
+	icon = religious
 	category = interaction_category_religion
 	popup_on_receive = yes
 	pause_on_receive = yes
@@ -439,6 +441,7 @@ demand_conversion_interaction = {
 
 demand_conversion_vassal_ruler_interaction = {
 	category = interaction_category_religion
+	icon = religious
 
 	ai_maybe = yes
 	ai_min_reply_days = 4
@@ -570,7 +573,7 @@ demand_conversion_vassal_ruler_interaction = {
 										}
 									}
 									this.liege = scope:actor
-									has_government = feudal_government
+									government_has_flag = government_is_feudal
 								}
 								scope:actor = {
 									trigger_event = {
@@ -820,6 +823,7 @@ demand_conversion_player_ruler_interaction = {
 	notification_text = LIEGE_DEMAND_CONVERSION
 	popup_on_receive = yes
 	pause_on_receive = yes
+	icon = religious
 	
 	ai_targets = {
 		ai_recipients = vassals
@@ -1057,6 +1061,7 @@ demand_conversion_player_ruler_interaction = {
 
 convert_to_religion_interaction = {
 	category = interaction_category_religion
+	icon = religious
 
 
 	desc = convert_to_religion_interaction_desc
@@ -1086,7 +1091,7 @@ convert_to_religion_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		scope:actor = { is_diplomatically_available = yes }
+		scope:actor = { is_busy_in_events_localised = yes }
 	}
 
 	auto_accept = yes
@@ -1115,6 +1120,7 @@ convert_to_religion_interaction = {
 
 convert_at_war_interaction = {
 	category = interaction_category_religion
+	icon = religious
 
 
 	desc = convert_at_war_interaction_desc
@@ -1139,7 +1145,7 @@ convert_at_war_interaction = {
 				}
 				#They can convert
 				scope:actor = scope:actor.faith.religious_head
-				has_government = holy_order_government
+				government_has_flag = government_is_holy_order
 				# And you've never HumSac'd a tolerated HoF.
 				AND = {
 					has_variable_list = humsacd_hofs
@@ -1154,7 +1160,7 @@ convert_at_war_interaction = {
 	
 
 	is_valid_showing_failures_only = {
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 
 	
@@ -1321,6 +1327,7 @@ convert_at_war_interaction = {
 ####################
 
 seek_indulgences_interaction = {
+	icon = religious
 	category = interaction_category_religion
 
 	desc = seek_indulgences_interaction_desc
@@ -1409,7 +1416,7 @@ seek_indulgences_interaction = {
 				is_at_war_with = scope:recipient
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	ai_accept = {
@@ -1505,6 +1512,7 @@ seek_indulgences_interaction = {
 }
 
 declaration_of_repentance_interaction = {
+	icon = religious
 	category = interaction_category_religion
 
 	desc = {
@@ -1539,7 +1547,7 @@ declaration_of_repentance_interaction = {
 				is_at_war_with = scope:recipient
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	send_option = {
@@ -1676,6 +1684,7 @@ declaration_of_repentance_interaction = {
 excommunicate_interaction = {
 	category = interaction_category_hostile
 	common_interaction = yes #suppress error
+	icon = excommunication
 
 	desc = excommunicate_interaction_desc
 
@@ -1725,6 +1734,10 @@ excommunicate_interaction = {
 			}
 		}
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
+		}
 	}
 
 	auto_accept = yes
@@ -1806,6 +1819,7 @@ excommunicate_interaction = {
 
 lift_excommunication_interaction = {
 	category = interaction_category_religion
+	icon = excommunication
 
 	common_interaction = yes
 
@@ -1820,7 +1834,7 @@ lift_excommunication_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:actor = {
 			NOT = {
 				is_at_war_with = scope:recipient
@@ -1881,6 +1895,7 @@ lift_excommunication_interaction = {
 
 request_excommunication_interaction = {
 	category = interaction_category_hostile
+	icon = excommunication
 
 	desc = request_excommunication_interaction_desc
 	redirect = {
@@ -1941,8 +1956,12 @@ request_excommunication_interaction = {
 				is_at_war_with = scope:recipient
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:secondary_recipient = { NOT = { has_strong_hook = scope:actor } }
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
+		}
 	}
 
 	send_option = {
@@ -2135,6 +2154,7 @@ request_excommunication_interaction = {
 #by Linnéa Thimrén & Bianca Savazzi
 send_to_holy_order_interaction = {
 	category = interaction_category_friendly
+	icon = holy_order
 
 	ai_maybe = yes
 	ai_min_reply_days = 4
@@ -2190,13 +2210,17 @@ send_to_holy_order_interaction = {
 				object = scope:recipient
 				scope:actor.faith = {
 					any_faith_holy_order = {
-					leader = {
+						leader = {
 							NOT = { has_relation_rival = scope:recipient }
 						}
 					}
 				}
 			}
-		}	
+		}
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
+		}
 	}
 	
 	#Use hook
@@ -2803,6 +2827,7 @@ send_to_holy_order_interaction = {
 #by Linnéa Thimrén & Bianca Savazzi
 take_vows_interaction = {
 	category = interaction_category_friendly
+	icon = religious
 
 	ai_maybe = yes
 	ai_min_reply_days = 4
@@ -2844,6 +2869,10 @@ take_vows_interaction = {
 		scope:recipient = {
 			age >= 10
 			can_take_religious_vows_trigger = yes #Triggers that applies to both Monastery or Holy Order requirements
+		}
+		custom_tooltip = {
+			text = cannot_take_overt_hostile_actions_against_diarch.tt
+			NOT = { scope:recipient ?= scope:actor.diarch }
 		}
 	}
 	
@@ -2903,7 +2932,7 @@ take_vows_interaction = {
 					limit = {
 						scope:actor.top_liege = {
 							any_vassal_or_below = {
-								has_government = theocracy_government
+								government_has_flag = government_is_theocracy
 								primary_title.tier > tier_barony
 								faith = scope:actor.faith
 							}
@@ -2912,7 +2941,7 @@ take_vows_interaction = {
 					scope:actor.top_liege = {
 						random_vassal_or_below = {
 							limit = {
-								has_government = theocracy_government
+								government_has_flag = government_is_theocracy
 								primary_title.tier > tier_barony
 								faith = scope:actor.faith
 							}
@@ -3658,6 +3687,7 @@ take_vows_interaction = {
 temporal_condemnation_interaction = {
 	category = interaction_category_religion
 	desc = temporal_condemnation_interaction_desc
+	icon = religious
 
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
@@ -3727,7 +3757,7 @@ temporal_condemnation_interaction = {
 			is_adult = yes
 		}
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 
 	auto_accept = yes
@@ -3773,6 +3803,7 @@ temporal_condemnation_interaction = {
 #########################
 
 host_honored_guest_interaction = {
+	icon = religious
 	category = interaction_category_friendly
 
 	desc = host_honored_guest_interaction_desc
@@ -4036,6 +4067,7 @@ host_honored_guest_interaction = {
 # Spiritual Head of Faith Actions
 
 hof_ask_for_gold_interaction = {
+	icon = icon_gold
 	category = interaction_category_religion
 
 	desc = hof_ask_for_gold_interaction_desc
@@ -4085,7 +4117,7 @@ hof_ask_for_gold_interaction = {
 				}
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	ai_accept = {
@@ -4415,7 +4447,6 @@ hof_ask_for_gold_interaction = {
 	ai_potential = {
 		is_landed = yes
 		piety >= major_piety_value
-		is_landed = yes
 		NOT = { has_trait = excommunicated }
 		highest_held_title_tier > tier_barony
 		exists = faith.religious_head
@@ -4479,11 +4510,29 @@ hof_ask_for_gold_interaction = {
 			}
 			scope:recipient.gold >= 3000
 		}
+		
+		modifier = {
+			add = 100
+			scope:actor = {
+				ai_has_economical_boom_personality = yes
+			}
+			scope:recipient.gold >= 1000
+		}
+		
+		modifier = {
+			add = 100
+			scope:actor = {
+				ai_has_warlike_personality = yes
+				war_chest_gold < war_chest_gold_maximum
+			}
+			scope:recipient.gold >= 1000
+		}
 	}
 }
 
 hof_ask_for_claim_interaction = {
 	category = interaction_category_diplomacy
+	icon = religious_claim
 
 	desc = hof_ask_for_claim_interaction_desc
 	target_type = title
@@ -4520,7 +4569,7 @@ hof_ask_for_claim_interaction = {
 		scope:secondary_recipient = {
 			is_landed = yes
 			primary_title = { tier >= tier_county }
-			NOT = { has_government = holy_order_government }
+			NOT = { government_has_flag = government_is_holy_order }
 		}
 	}
 	
@@ -4557,7 +4606,7 @@ hof_ask_for_claim_interaction = {
 		trigger_if = { # Can't request claims on theocratic lessees or theocracies (= Prince-Bishops)
 			limit = {
 				scope:secondary_recipient = { 
-					has_government = theocracy_government
+					government_has_flag = government_is_theocracy
 				}
 			}
 			custom_description = {
@@ -4588,8 +4637,62 @@ hof_ask_for_claim_interaction = {
 				}
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:secondary_recipient = { NOT = { has_strong_hook = scope:actor } }
+	}
+	
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		ai_recipients = liege
+	}
+	ai_frequency = 36
+	
+	ai_potential = {
+		is_landed = yes
+		OR = {
+			ai_greed >= 50
+			ai_has_warlike_personality = yes
+		}
+		piety >= major_piety_value
+		NOT = { has_trait = excommunicated }
+		exists = faith.religious_head
+		highest_held_title_tier > tier_barony
+	}
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = scope:actor.ai_greed
+		}
+
+		modifier = {
+			add = scope:target.tier
+		}
+
+		modifier = {
+			add = -100
+			scope:actor = {
+				OR = {
+					has_relation_friend = scope:secondary_recipient
+					has_relation_lover = scope:secondary_recipient
+					opinion = {
+						target = scope:secondary_recipient
+						value >= high_positive_opinion
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0
+			NOT = {
+				scope:target = {
+					is_neighbor_to_realm = scope:actor
+				}
+			}
+		}
 	}
 	
 	ai_accept = {
@@ -5087,7 +5190,7 @@ hof_redirect_great_holy_war_interaction = {
 	is_valid_showing_failures_only = {
 		scope:actor = { piety >= faith.great_holy_war.var:redirect_cost }
 		scope:actor.faith.great_holy_war = { days_until_ghw_launch >= 100 } #No last minute changes.
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	has_valid_target_showing_failures_only = {
@@ -5208,6 +5311,7 @@ hof_redirect_great_holy_war_interaction = {
 
 select_ghw_beneficiary_interaction = {
 	category = interaction_category_religion
+	icon = religious
 
 	
 	populate_recipient_list = {
@@ -5215,6 +5319,10 @@ select_ghw_beneficiary_interaction = {
 			#Any member of your own house.
 			house = {
 				every_house_member = {
+					limit = {
+						# Cannot select them self as beneficiary
+						NOT = { this = scope:recipient }
+					}
 					add_to_list = characters
 				}
 			}
@@ -5259,14 +5367,20 @@ select_ghw_beneficiary_interaction = {
 		is_adult = yes
 		is_ruler = no
 		faith = scope:actor.faith
-		NOT = {
-			any_heir_title = {} # Not heir to anything
-		}
-		OR = { #Either not married, or not married to a ruler.
-			is_married = no
+		custom_tooltip = {
+			text = ghw_heir_to_a_title
 			NOT = {
-				any_spouse = {
-					is_ruler = yes
+				any_heir_title = {} # Not heir to anything
+			}
+		}
+		custom_tooltip = {
+			text = ghw_married_to_a_ruler
+			OR = { #Either not married, or not married to a ruler.
+				is_married = no
+				NOT = {
+					any_spouse = {
+						is_ruler = yes
+					}
 				}
 			}
 		}
@@ -5302,7 +5416,7 @@ select_ghw_beneficiary_interaction = {
 				}
 			}
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 	}
 	
 	on_accept = {
@@ -5323,6 +5437,7 @@ select_ghw_beneficiary_interaction = {
 
 sun_trial_interaction = {
 	interface_priority = 30
+	icon = religious
 
 	category = interaction_category_prison
 
@@ -5395,6 +5510,7 @@ sun_trial_interaction = {
 #Engage in literalist debate.
 #by Ewan Cowhig Croft
 literalist_debate_interaction = {
+	icon = religious
 	category = interaction_category_religion
 	desc = literalist_debate_interaction_desc
 
@@ -5440,7 +5556,7 @@ literalist_debate_interaction = {
 		scope:recipient = {
 			NOT = { has_strong_hook = scope:actor }
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		scope:recipient = { is_busy_in_events_localised = yes }
 		scope:actor = {
 			NOT = {
 				is_at_war_with = scope:recipient

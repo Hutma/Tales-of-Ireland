@@ -1,4 +1,5 @@
-﻿##################################################
+﻿
+##################################################
 # Winter Triggers
 county_has_winter_trigger = {
 	title_province = {
@@ -18,6 +19,20 @@ culture_uses_frequent_winter_transportation_trigger = {
 	OR = {
 		culture = { has_cultural_pillar = heritage_partholonian }
 		# We exclude Normans as being pretty distant from this part of their heritage.
+	}
+}
+
+location_has_harsh_winter_trigger = {
+	location = { has_province_modifier = winter_harsh_modifier }
+}
+
+location_has_winter_trigger = {
+	location = {
+		OR = {
+			has_province_modifier = winter_mild_modifier
+			has_province_modifier = winter_normal_modifier
+			has_province_modifier = winter_harsh_modifier
+		}
 	}
 }
 

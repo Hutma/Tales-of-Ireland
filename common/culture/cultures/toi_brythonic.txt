@@ -1,8 +1,5 @@
 ﻿toi_pictish = {
-	# graphical_cultures = {
-		# western_building_gfx
-	# }
-	
+
 	color = { 178 28 0 }
 	
 	ethos = ethos_bellicose
@@ -20,7 +17,7 @@
 	
 	coa_gfx = { irish_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { fp1_norse_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	
 	ethnicities = {
@@ -33,9 +30,6 @@
 
 
 brythonic_scotland = {
-	# graphical_cultures = {
-		# western_building_gfx
-	# }
 	
 	color = { 0 120 90 }
 	
@@ -53,7 +47,7 @@ brythonic_scotland = {
 	
 	coa_gfx = { irish_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { fp1_norse_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 	
 	ethnicities = {
@@ -65,9 +59,6 @@ brythonic_scotland = {
 }
 
 toi_cumbrian = {
-	# graphical_cultures = {
-		# western_building_gfx
-	# }
 	
 	color = { 30 134 151 }
 	

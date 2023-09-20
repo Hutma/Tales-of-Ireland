@@ -98,7 +98,7 @@ toi_otherworld_exploration.1001 = {
 	}
 	theme = learning_scholarship_focus
 	left_portrait = root
-	override_background = { event_background = terrain }
+	override_background = { reference = terrain }
 
 	option = {
 		name = toi_otherworld_exploration.1001.a
@@ -120,7 +120,7 @@ toi_otherworld_exploration.2001 = { #Tír na nÓg, the Lands of Youth
     desc = toi_otherworld_exploration.2001.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = lands_of_youth
+		reference = lands_of_youth
 	}
     right_portrait = {
         character = root 
@@ -162,7 +162,7 @@ toi_otherworld_exploration.2002 = { #Tír fo Thuinn, the Realm Beneath the Sea
     desc = toi_otherworld_exploration.2002.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = realm_beneath_the_sea
+		reference = realm_beneath_the_sea
 	}
     right_portrait = {
         character = root 
@@ -204,7 +204,7 @@ toi_otherworld_exploration.2003 = { #Mag Mell, the Delightful Plains
     desc = toi_otherworld_exploration.2003.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = the_delightful_plains
+		reference = the_delightful_plains
 	}
     right_portrait = {
         character = root 
@@ -247,7 +247,7 @@ toi_otherworld_exploration.2004 = { #Ildathach, the Place of Many Colours
     desc = toi_otherworld_exploration.2004.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = place_of_many_colours
+		reference = place_of_many_colours
 	}
     right_portrait = {
         character = root 
@@ -289,7 +289,7 @@ toi_otherworld_exploration.2005 = { #Emain Ablach, the Island of the Apples
     desc = toi_otherworld_exploration.2005.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = the_island_of_the_apples
+		reference = the_island_of_the_apples
 	}
     right_portrait = {
         character = root 
@@ -331,7 +331,7 @@ toi_otherworld_exploration.2006 = { #Mag Findargat, Land of Silver
     desc = toi_otherworld_exploration.2006.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = land_of_silver
+		reference = land_of_silver
 	}
     right_portrait = {
         character = root 
@@ -373,7 +373,7 @@ toi_otherworld_exploration.2007 = { #Tír na Marbh, the Land of the Dead
     desc = toi_otherworld_exploration.2007.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = land_of_the_dead
+		reference = land_of_the_dead
 	}
     right_portrait = {
         character = root 

@@ -65,7 +65,7 @@ major_decisions.0002 = { #by Linnéa Thimrén
 
 #####################################
 
-#Consecrating Family Decision, by Flavio Verna.
+#Consecrating Family Decision, by Flavio Verna & Bianca Savazzi
 
 major_decisions.0100 = {
 	type = character_event
@@ -102,6 +102,7 @@ major_decisions.0100 = {
 			save_scope_as = scoped_ruler
 			if = {
 				limit = {
+					exists = root.faith.religious_head
 					NOT = { root = root.faith.religious_head }
 				}
 				root.faith.religious_head = { save_scope_as = scoped_pope }
@@ -115,6 +116,7 @@ major_decisions.0100 = {
 		}
 	}
 	option = {
+		#Pick what text to display
 		name = { #Temporal.
 			trigger = {
 				root.faith.religious_head = root
@@ -127,6 +129,8 @@ major_decisions.0100 = {
 			}
 			text = major_decisions.0100.b
 		}
+
+		#Next, what nickname is given
 		if = {
 			limit = {
 				root.faith.religious_head = root
@@ -139,7 +143,9 @@ major_decisions.0100 = {
 			}
 			set_nickname_effect = { NICKNAME = nick_the_anointed }
 		}
+		#All live descendants get the descendant trait
 		declare_bloodline_holy_decision_effect = yes
+		#Notifications
 		every_player = {
 			limit = {
 				faith = root.faith
@@ -170,7 +176,6 @@ major_decisions.0101 = {
 			AND = {
 				exists = mother
 				mother = {
-					faith = root.faith
 					OR = {
 						has_trait = savior
 						has_trait = paragon
@@ -182,7 +187,6 @@ major_decisions.0101 = {
 			AND = {
 				exists = father
 				father = {
-					faith = root.faith
 					OR = {
 						has_trait = savior
 						has_trait = paragon
@@ -214,7 +218,6 @@ major_decisions.0101 = {
 					AND = {
 						exists = mother
 						mother = {
-							faith = root.faith
 							OR = {
 								has_trait = savior
 								has_trait = divine_blood
@@ -224,7 +227,6 @@ major_decisions.0101 = {
 					AND = {
 						exists = father
 						father = {
-							faith = root.faith
 							OR = {
 								has_trait = savior
 								has_trait = divine_blood
@@ -356,6 +358,28 @@ major_decisions.0103 = {
 	}
 }
 
+##################################################
+# Convert to Tribalims
+##################################################
+
+major_decisions.0200 = {
+	type = character_event
+	title = major_decisions.0200.t
+	desc = major_decisions.0200.desc
+	theme = realm
+	left_portrait =	{
+		character = root
+		animation = personality_honorable
+	}
+
+	option = {
+		name = major_decisions.0200.a
+		ai_chance = {	#The AI should always do this.
+			base = 100
+		}
+	}
+}
+
 #I have strengthened our bloodline
 major_decisions.0500 = { #by Mathilda Bjarnehed
 	type = character_event
@@ -366,7 +390,7 @@ major_decisions.0500 = { #by Mathilda Bjarnehed
 		character = root
 		animation = personality_bold
 	}
-	override_background = { event_background = throne_room }
+	override_background = { reference = throne_room }
 	
 	immediate = {
 		play_music_cue = "mx_cue_positive_effect"
@@ -473,7 +497,7 @@ major_decisions.1001 = {
 		character = scope:court_chaplain
 		animation = admiration
 	}
-	override_background = { event_background = feast }
+	override_background = { reference = feast }
 
 	immediate = {
 		play_music_cue = "mx_cue_meadandwine"
@@ -516,7 +540,7 @@ major_decisions.1002 = {
 		character = scope:cannibal
 		animation = personality_greedy
 	}
-	override_background = { event_background = feast }
+	override_background = { reference = feast }
 
 	option = {
 		name = major_decisions.1002.a
@@ -838,7 +862,6 @@ major_decisions.2011 = {
 		character = scope:new_courtier
 		animation = personality_rational
 	}
-	override_background = { event_background = throne_room }
 
 	immediate = {
 		create_character = {
@@ -882,7 +905,7 @@ major_decisions.3001 = {
 		character = scope:builder
 		animation = personality_irrational
 	}
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 
 	immediate = {
 		lunatic_building_decision_effect = yes
@@ -905,7 +928,7 @@ major_decisions.3002 = {
 		character = scope:builder
 		animation = personality_irrational
 	}
-	override_background = { event_background = garden }
+	override_background = { reference = garden }
 
 	option = {
 		name = major_decisions.3002.a

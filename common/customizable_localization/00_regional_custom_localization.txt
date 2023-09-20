@@ -35,6 +35,29 @@ MartialTournamentAdjective = {
 
 	text = {
 		trigger = {
+			government_has_flag = government_is_feudal
+			capital_province = {
+				geographical_region = world_europe_west
+			}
+		}
+		localization_key = tournament_jousting
+	}
+	text = {
+		trigger = {
+			OR = {		
+				government_has_flag = government_is_tribal
+				faith = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				capital_province = {
+					geographical_region = world_europe_north
+				}
+			}
+		}
+		localization_key = tournament_wrestling
+	}
+	text = {
+		trigger = {
 			always = no
 		}
 		localization_key = tournament_sparring
@@ -65,6 +88,7 @@ FortifiedBuilding = { #Castle, Fort, Kasbah etc.
 
 	text = {
 		localization_key = castle
+		fallback = yes
 	}
 }
 
@@ -73,7 +97,7 @@ ResidenceBuilding = { #Castle, Palace, etc.
 
 	text = {
 		trigger = {
-			has_government = republic_government
+			government_has_flag = government_is_republic
 		}
 		localization_key = mansion
 	}
@@ -81,7 +105,7 @@ ResidenceBuilding = { #Castle, Palace, etc.
 	text = {
 		trigger = {
 			OR = {
-				has_government = theocracy_government
+				government_has_flag = government_is_theocracy
 				is_theocratic_lessee = yes
 			}
 		}
@@ -91,8 +115,8 @@ ResidenceBuilding = { #Castle, Palace, etc.
 	text = {
 		trigger = {
 			NOR = {
-				has_government = republic_government
-				has_government = theocracy_government
+				government_has_flag = government_is_republic
+				government_has_flag = government_is_theocracy
 				is_theocratic_lessee = yes
 			}
 		}
@@ -100,6 +124,40 @@ ResidenceBuilding = { #Castle, Palace, etc.
 		fallback = yes
 	}
 }
+
+ResidenceBuildingPlural = { #Castles, Palaces, etc.
+	type = character
+
+	text = {
+		trigger = {
+			government_has_flag = government_is_republic
+		}
+		localization_key = mansions
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				government_has_flag = government_is_theocracy
+				is_theocratic_lessee = yes
+			}
+		}
+		localization_key = temples
+	}
+
+	text = {
+		trigger = {
+			NOR = {
+				government_has_flag = government_is_republic
+				government_has_flag = government_is_theocracy
+				is_theocratic_lessee = yes
+			}
+		}
+		localization_key = castles
+		fallback = yes
+	}
+}
+
 
 OutdoorsHidingPlace = { #Something you can find in nature / by the road
 	type = character
@@ -141,17 +199,124 @@ ObjectToClimb = {
 
 IndefiniteBodyOfWater = { #Lake, River, Oasis, etc.
 	type = character
+	random_valid = yes
 
 	text = {
-		trigger = { location = { terrain = oasis } }
+		trigger = {
+			location = { terrain = oasis }
+		}
 		localization_key = body_of_water_an_oasis
 	}
 	text = {
-		trigger = { location.county = { is_coastal_county = yes } }
+		trigger = {
+			location = { is_coastal = yes }
+		}
 		localization_key = body_of_water_the_ocean
 	}
 	text = {
+		trigger = {
+			location = { is_riverside_province = yes }
+		}
+		localization_key = body_of_water_a_river
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = farmlands
+					terrain = jungle
+					terrain = wetlands
+				}
+			}
+		}
+		localization_key = body_of_water_a_large_pond
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = floodplains
+					terrain = wetlands
+				}
+			}
+		}
+		localization_key = body_of_water_a_lagoon
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = plains
+					terrain = hills
+					terrain = forest
+					terrain = taiga
+					terrain = steppe
+				}
+			}
+		}
 		localization_key = body_of_water_a_lake
+	}
+	text = {
+		trigger = { always = no }
+		# For the areas with no good source of water.
+		fallback = yes
+		localization_key = body_of_water_a_watering_hole
+	}
+}
+
+# As above, but excluding rivers'n'seas.
+IndefiniteBodyOfWater_Static = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = {
+			location = { terrain = oasis }
+		}
+		localization_key = body_of_water_an_oasis
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = farmlands
+					terrain = jungle
+					terrain = wetlands
+				}
+			}
+		}
+		localization_key = body_of_water_a_large_pond
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = floodplains
+					terrain = wetlands
+				}
+			}
+		}
+		localization_key = body_of_water_a_lagoon
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					terrain = plains
+					terrain = hills
+					terrain = forest
+					terrain = taiga
+					terrain = steppe
+				}
+			}
+		}
+		localization_key = body_of_water_a_lake
+	}
+	text = {
+		trigger = { always = no }
+		# For the areas with no good source of water.
+		fallback = yes
+		localization_key = body_of_water_a_watering_hole
 	}
 }
 
@@ -163,27 +328,27 @@ RandomExampleName = {
 	}
 }
 
-TerrainType = {
-	type = character
+TerrainTypeCountyScope = {
+	type = landed_title
 
 	text = {	
-		trigger = { capital_province = { terrain = plains } }
+		trigger = { title_province = { terrain = plains } }
 		localization_key = terrain_plains
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = farmlands } }
+		trigger = { title_province = { terrain = farmlands } }
 		localization_key = terrain_farmlands
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = hills } }
+		trigger = { title_province = { terrain = hills } }
 		localization_key = terrain_hills
 	}
 
 	text = {	
 		trigger = {
-			capital_province = {
+			title_province = {
 				OR = {
 					terrain = mountains
 					terrain = desert_mountains
@@ -194,295 +359,198 @@ TerrainType = {
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = desert } }
+		trigger = { title_province = { terrain = desert } }
 		localization_key = terrain_desert
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = oasis } }
+		trigger = { title_province = { terrain = oasis } }
 		localization_key = terrain_oasis
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = jungle } }
+		trigger = { title_province = { terrain = jungle } }
 		localization_key = terrain_jungle
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = forest } }
+		trigger = { title_province = { terrain = forest } }
 		localization_key = terrain_forest
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = taiga } }
+		trigger = { title_province = { terrain = taiga } }
 		localization_key = terrain_taiga
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = wetlands } }
+		trigger = { title_province = { terrain = wetlands } }
 		localization_key = terrain_wetlands
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = steppe } }
+		trigger = { title_province = { terrain = steppe } }
 		localization_key = terrain_steppe
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = floodplains } }
+		trigger = { title_province = { terrain = floodplains } }
 		localization_key = terrain_floodplains
 	}
 
 	text = {	
-		trigger = { capital_province = { terrain = drylands } }
+		trigger = { title_province = { terrain = drylands } }
 		localization_key = terrain_drylands
 	}
 }
 
-LocalAnimal = {
+TerrainType = {
 	type = character
 
-	text = {
-		localization_key = animal_hart
-		trigger = {
-			var:local_animal = flag:hart
-		}
-		fallback = yes
+	text = {	
+		trigger = { location = { terrain = plains } }
+		localization_key = terrain_plains
 	}
 
-	text = {
-		localization_key = animal_stag
-		trigger = {
-			var:local_animal = flag:stag
-		}
+	text = {	
+		trigger = { location = { terrain = farmlands } }
+		localization_key = terrain_farmlands
 	}
 
-	text = {
-		localization_key = animal_boar
-		trigger = {
-			var:local_animal = flag:boar
-		}
+	text = {	
+		trigger = { location = { terrain = hills } }
+		localization_key = terrain_hills
 	}
 
-	text = {
-		localization_key = animal_wolf
+	text = {	
 		trigger = {
-			var:local_animal = flag:wolf
+			location = {
+				OR = {
+					terrain = mountains
+					terrain = desert_mountains
+				}
+			}
 		}
+		localization_key = terrain_mountains
 	}
 
-	text = {
-		localization_key = animal_fox
-		trigger = {
-			var:local_animal = flag:fox
-		}
+	text = {	
+		trigger = { location = { terrain = desert } }
+		localization_key = terrain_desert
 	}
 
-	text = {
-		localization_key = animal_hare
-		trigger = {
-			var:local_animal = flag:hare
-		}
+	text = {	
+		trigger = { location = { terrain = oasis } }
+		localization_key = terrain_oasis
 	}
 
-	text = {
-		localization_key = animal_lion
-		trigger = {
-			var:local_animal = flag:lion
-		}
+	text = {	
+		trigger = { location = { terrain = jungle } }
+		localization_key = terrain_jungle
 	}
 
-	text = {
-		localization_key = animal_tiger
-		trigger = {
-			var:local_animal = flag:tiger
-		}
+	text = {	
+		trigger = { location = { terrain = forest } }
+		localization_key = terrain_forest
 	}
 
-	text = {
-		localization_key = animal_bear
-		trigger = {
-			var:local_animal = flag:bear
-		}
+	text = {	
+		trigger = { location = { terrain = taiga } }
+		localization_key = terrain_taiga
 	}
 
-	text = {
-		localization_key = animal_unicorn
-		trigger = {
-			var:local_animal = flag:unicorn
-		}
+	text = {	
+		trigger = { location = { terrain = wetlands } }
+		localization_key = terrain_wetlands
 	}
 
-	text = {
-		localization_key = animal_dragon
-		trigger = {
-			var:local_animal = flag:dragon
-		}
+	text = {	
+		trigger = { location = { terrain = steppe } }
+		localization_key = terrain_steppe
+	}
+
+	text = {	
+		trigger = { location = { terrain = floodplains } }
+		localization_key = terrain_floodplains
+	}
+
+	text = {	
+		trigger = { location = { terrain = drylands } }
+		localization_key = terrain_drylands
 	}
 }
 
-LocalAnimalMultiple = {
-	type = character
+TerrainTypeProvince = {
+	type = province
 
-	text = {
-		localization_key = animal_harts
-		trigger = {
-			var:local_animal = flag:hart
-		}
-		fallback = yes
+	text = {	
+		trigger = { terrain = plains }
+		localization_key = terrain_plains
 	}
 
-	text = {
-		localization_key = animal_stags
-		trigger = {
-			var:local_animal = flag:stag
-		}
+	text = {	
+		trigger = { terrain = farmlands }
+		localization_key = terrain_farmlands
 	}
 
-	text = {
-		localization_key = animal_boars
-		trigger = {
-			var:local_animal = flag:boar
-		}
+	text = {	
+		trigger = { terrain = hills }
+		localization_key = terrain_hills
 	}
 
-	text = {
-		localization_key = animal_wolfs
-		trigger = {
-			var:local_animal = flag:wolf
-		}
-	}
-
-	text = {
-		localization_key = animal_foxes
-		trigger = {
-			var:local_animal = flag:fox
-		}
-	}
-
-	text = {
-		localization_key = animal_hares
-		trigger = {
-			var:local_animal = flag:hare
-		}
-	}
-
-	text = {
-		localization_key = animal_lions
-		trigger = {
-			var:local_animal = flag:lion
-		}
-	}
-
-	text = {
-		localization_key = animal_tigers
-		trigger = {
-			var:local_animal = flag:tiger
-		}
-	}
-
-	text = {
-		localization_key = animal_bears
-		trigger = {
-			var:local_animal = flag:bear
-		}
-	}
-
-	text = {
-		localization_key = animal_unicorns
-		trigger = {
-			var:local_animal = flag:unicorn
-		}
-	}
-
-	text = {
-		localization_key = animal_dragons
-		trigger = {
-			var:local_animal = flag:dragon
-		}
-	}
-}
-
-LocalAnimalDesc = {
-	type = character
-
-	text = {
-		localization_key = animal_flighty_desc
+	text = {	
 		trigger = {
 			OR = {
-				var:local_animal = flag:hart
-				var:local_animal = flag:hare
+				terrain = mountains
+				terrain = desert_mountains
 			}
 		}
-		fallback = yes
+		localization_key = terrain_mountains
 	}
 
-	text = {
-		localization_key = animal_majestic_desc
-		trigger = {
-			OR = {
-				var:local_animal = flag:stag
-				var:local_animal = flag:dragon
-				var:local_animal = flag:lion
-			}
-		}
+	text = {	
+		trigger = { terrain = desert }
+		localization_key = terrain_desert
 	}
 
-	text = {
-		localization_key = animal_powerful_desc
-		trigger = {
-			OR = {
-				var:local_animal = flag:boar
-				var:local_animal = flag:tiger
-				var:local_animal = flag:lion
-				var:local_animal = flag:wolf
-				var:local_animal = flag:bear
-			}
-		}
+	text = {	
+		trigger = { terrain = oasis }
+		localization_key = terrain_oasis
 	}
 
-	text = {
-		localization_key = animal_sly_desc
-		trigger = {
-			var:local_animal = flag:fox
-		}
+	text = {	
+		trigger = { terrain = jungle }
+		localization_key = terrain_jungle
 	}
 
-	text = {
-		localization_key = animal_quick_desc
-		trigger = {
-			OR = {
-				var:local_animal = flag:hare
-				var:local_animal = flag:hart
-			}
-		}
+	text = {	
+		trigger = { terrain = forest }
+		localization_key = terrain_forest
 	}
 
-	text = {
-		localization_key = animal_cunning_desc
-		trigger = {
-			var:local_animal = flag:fox
-		}
+	text = {	
+		trigger = { terrain = taiga }
+		localization_key = terrain_taiga
 	}
 
-	text = {
-		localization_key = animal_fabled_desc
-		trigger = {
-			OR = {
-				var:local_animal = flag:unicorn
-				var:local_animal = flag:dragon
-			}
-		}
+	text = {	
+		trigger = { terrain = wetlands }
+		localization_key = terrain_wetlands
 	}
 
-	text = {
-		localization_key = animal_mystical_desc
-		trigger = {
-			OR = {
-				var:local_animal = flag:dragon
-				var:local_animal = flag:unicorn
-			}
-		}
+	text = {	
+		trigger = { terrain = steppe }
+		localization_key = terrain_steppe
+	}
+
+	text = {	
+		trigger = { terrain = floodplains }
+		localization_key = terrain_floodplains
+	}
+
+	text = {	
+		trigger = { terrain = drylands }
+		localization_key = terrain_drylands
 	}
 }
 
@@ -497,63 +565,146 @@ Abortifacient = {
 			base = 3
 		}
 		#Europe, North Africa, Middle East
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_africa_north
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_catmint
 		#Europe, Asia, Africa
+		trigger = { always = yes }
 	}
 
 	text = {
 		localization_key = abortifacient_thymbra
 		#North Africa, Southern Europe, Middle East, Central Asia
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+					geographical_region = world_steppe
+					geographical_region = world_africa_north
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_broadleaf_sage
 		#Mediterranean
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_south
+					geographical_region = world_asia_minor
+					geographical_region = world_africa_north
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_soapwort
 		#Europe and Asia
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_steppe
+					geographical_region = world_middle_east
+					geographical_region = world_india
+					geographical_region = world_tibet
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_galingales
 		#Africa, Asia
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_africa
+					geographical_region = world_steppe
+					geographical_region = world_middle_east
+					geographical_region = world_india
+					geographical_region = world_tibet
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_bishops_lace
 		#Christian only
 		#Europe and Southwest Asia
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_wild_carrot
 		#Same as Bishop's Lace
 		#Europe and Southwest Asia
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_asia_minor
+					geographical_region = world_middle_east
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_bitter_melon
 		#India
+		trigger = {
+			location = { geographical_region = world_india }
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_nutmeg
-		#Moluccas/Indonesia, India
+		#India
+		trigger = {
+			location = { geographical_region = world_india }
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_saffron
 		#India
+		trigger = {
+			location = { geographical_region = world_india }
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_vervain
 		#Europe
+		trigger = {
+			location = { geographical_region = world_europe }
+		}
 	}
 
 	#text = {
@@ -565,17 +716,45 @@ Abortifacient = {
 		localization_key = abortifacient_herb_of_grace
 		#Christian only
 		#Balkans, Anatolia, Mediterranean
+		trigger = {
+			religion = religion:christianity_religion
+			location = {
+				OR = {
+					geographical_region = world_europe_south
+					geographical_region = world_africa_north
+					geographical_region = world_asia_minor
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_rue
 		#Same as herb-of-grace
 		#Balkans, Anatolia, Mediterranean
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe_south
+					geographical_region = world_africa_north
+					geographical_region = world_asia_minor
+				}
+			}
+		}
 	}
 
 	text = {
 		localization_key = abortifacient_tansy
 		#Europe, Mediterranean
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_europe
+					geographical_region = world_africa_north
+					geographical_region = world_asia_minor
+				}
+			}
+		}
 	}
 
 	text = {
@@ -584,6 +763,9 @@ Abortifacient = {
 			base = 3
 		}
 		#Europe
+		trigger = {
+			location = { geographical_region = world_europe }
+		}
 	}
 }
 
@@ -1080,7 +1262,29 @@ MusicalPerformerPossessive = {
 }
 
 #NOTE! All of these nouns should work with "a" (not "an")
-RegionalDrink = {
+RegionalGameObject = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = deck_of_cards
+	}
+
+	text = {
+		trigger = {
+			location = {
+				geographical_region = world_india
+			}
+		}
+		localization_key = pachisi_board #indian
+	}
+
+	text = {
+		localization_key = chess_set
+	}
+}
+
+CulturalCurse = {
 	type = character
 	random_valid = yes
 

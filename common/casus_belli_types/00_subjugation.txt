@@ -1,15 +1,10 @@
 ﻿tribal_subjugation_cb = {
+	icon = vassalization
 	group = subjugation
 	ai_only_against_neighbors = yes
 
 	allowed_for_character = {
-		OR = {
-			has_government = feudal_government
-			AND = {
-				faith.religious_head = this
-				faith = { has_doctrine = doctrine_temporal_head }
-			}
-		}
+		always = yes
 	}
 	
 	# Root is the title
@@ -19,9 +14,8 @@
 		scope:attacker = {
 			trigger_if = {
 				limit = {
-					has_government = feudal_government
 					scope:defender = {
-						has_government = feudal_government
+						is_independent_ruler = yes
 					}
 				}
 				trigger_if = {
@@ -39,7 +33,8 @@
 			trigger_else_if = {
 				limit = {
 					faith.religious_head = scope:attacker
-					scope:defender.faith = scope:attacker.faith
+					exists = scope:defender.faith.religious_head
+					scope:defender.faith.religious_head = scope:attacker.faith.religious_head
 					scope:attacker.faith = { has_doctrine = doctrine_temporal_head }
 				}
 				trigger_if = {
@@ -66,7 +61,19 @@
 					piety_level >= 3
 				}
 			}
-			
+			trigger_else = {
+				trigger_if = {
+					limit = {
+						culture = {
+							has_cultural_parameter = cb_lower_prestige_level_requirement
+						}
+					}
+					prestige_level >= 3
+				}
+				trigger_else = {
+					prestige_level >= 4
+				}
+			}
 			custom_description = {
 				text = has_used_lifetime_subjugation
 				subject = scope:attacker
@@ -83,14 +90,12 @@
 		scope:attacker = {
 			OR = {
 				AND = { # Tribal Subjugation
-					has_government = feudal_government
-					scope:defender = {
-						has_government = feudal_government
-					}
+					always = yes
 				}
 				AND = { # Temporal Subjugation
 					faith.religious_head = scope:attacker
-					scope:defender.faith = scope:attacker.faith
+					exists = scope:defender.faith.religious_head
+					scope:defender.faith.religious_head = scope:attacker.faith.religious_head
 					scope:attacker.faith = { has_doctrine = doctrine_temporal_head }
 				}
 			}
@@ -198,10 +203,18 @@
 				}
 			}
 		}
+		triggered_desc = {
+			trigger = { scope:attacker = { is_local_player = yes } }
+			desc = subjugation_war_warning_desc
+		}
 	}
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
+		
 		create_title_and_vassal_change = {
 			type = swear_fealty
 			save_scope_as = change
@@ -300,7 +313,9 @@
 		
 		# Truce
 		add_truce_attacker_victory_effect = yes
-				
+
+		# FP1: note the victory for future memorialisation via stele (if applicable).
+		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
 	}
 
 	on_white_peace_desc = {
@@ -315,6 +330,11 @@
 	
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for doing ok against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		# Prestige loss for the attacker
 		scope:attacker = {
 			add_prestige = {
@@ -366,6 +386,9 @@
 	
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
 		
 		# Prestige loss for the attacker
 		scope:attacker = {

@@ -6,7 +6,7 @@ toi_decisions.001 =  {
 	desc = toi_decisions.001.desc
 	theme = hunt_activity
 	override_background = {
-		event_background = giant_causeway
+		reference = giant_causeway
 	}
 
 	left_portrait = {
@@ -65,7 +65,7 @@ toi_decisions.002 =  { #Nice giant
 	desc = toi_decisions.002.desc
 	theme = hunt_activity
 	override_background = {
-		event_background = giant_causeway
+		reference = giant_causeway
 	}
 	
 	right_portrait = {
@@ -126,7 +126,7 @@ toi_decisions.003 =  { #Demanding giant
 	desc = toi_decisions.003.desc
 	theme = hunt_activity
 	override_background = {
-		event_background = giant_causeway
+		reference = giant_causeway
 	}
 	
 	right_portrait = {
@@ -196,7 +196,7 @@ toi_decisions.004 =  { #Angry giant
 	desc = toi_decisions.004.desc
 	theme = hunt_activity
 	override_background = {
-		event_background = giant_causeway
+		reference = giant_causeway
 	}
 	
 	right_portrait = {
@@ -302,7 +302,7 @@ toi_decisions.010 =  {
 	desc = toi_decisions.010.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -643,7 +643,7 @@ toi_decisions.011 =  { #Great blessing war
 	desc = toi_decisions.011.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -667,7 +667,7 @@ toi_decisions.012 =  { #Great blessing peace
 	desc = toi_decisions.012.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -691,7 +691,7 @@ toi_decisions.013 =  { #Sidhe visit war
 	desc = toi_decisions.013.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -715,7 +715,7 @@ toi_decisions.014 =  { #Sidhe visit peace
 	desc = toi_decisions.014.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -739,7 +739,7 @@ toi_decisions.015 =  { #Good omen war
 	desc = toi_decisions.015.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -763,7 +763,7 @@ toi_decisions.016 =  { #Good omen peace
 	desc = toi_decisions.016.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -787,7 +787,7 @@ toi_decisions.017 =  { #Bad omen war
 	desc = toi_decisions.017.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -811,7 +811,7 @@ toi_decisions.018 =  { #Bad omen peace
 	desc = toi_decisions.018.desc
 	theme = faith
 	override_background = {
-		event_background = religious_passage_tomb
+		reference = religious_passage_tomb
 	}
 
 	left_portrait = {
@@ -827,5 +827,96 @@ toi_decisions.018 =  { #Bad omen peace
 			modifier = bad_omen_peace
 			years = 5
 		}
+	}
+}
+
+toi_decisions.019 =  { #Cattle feast event
+	title = toi_decisions.019.t
+	desc = toi_decisions.019.desc
+	theme = stewardship
+	override_background = {
+		reference = round_tower
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	immediate = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				development_level > 25
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:cattle_county_1
+					}
+				}
+				save_scope_as = cattle_county_1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:cattle_county_2
+					}
+				}
+				save_scope_as = cattle_county_2
+			}
+			else_if  = {
+				limit = {
+					NOT = {
+						exists = scope:cattle_county_3
+					}
+				}
+				save_scope_as = cattle_county_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = scope:cattle_county_4
+					}
+				}
+				save_scope_as = cattle_county_4
+			}
+		}
+	}
+	option = {
+		name = toi_decisions.019.a #county 1
+		trigger = {
+			exists = scope:cattle_county_1
+		}
+		change_development_level = -20
+	}
+	option = {
+		name = toi_decisions.019.b #county 2
+		trigger = {
+			exists = scope:cattle_county_2
+		}
+		change_development_level = -20
+	}
+	option = {
+		name = toi_decisions.019.c #county 3
+		trigger = {
+			exists = scope:cattle_county_3
+		}
+		change_development_level = -20
+	}
+	option = {
+		name = toi_decisions.019.d #county 4
+		trigger = {
+			exists = scope:cattle_county_4
+		}
+		change_development_level = -20
+	}
+	option = {
+		name = toi_decisions.019.e #vassals
+		every_vassal = {
+			capital_county = {
+				change_development_level = -5
+			}
+		}
+		add_tyranny = 20
 	}
 }

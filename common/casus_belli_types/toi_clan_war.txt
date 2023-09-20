@@ -1,4 +1,5 @@
 ﻿clan_subjugation_cb = {
+	icon = vassalization
 	group = subjugation
 
 	allowed_for_character = {
@@ -11,7 +12,7 @@
 				exists = var:clan_unity_value
 			}
 			scope:attacker.dynasty = {
-				var:clan_unity_value = { compare_value > 85 }
+				var:clan_unity_value > 85
 			}
 		}
 	}
@@ -390,6 +391,7 @@
 }
 
 dismantle_leader_cb = {
+	icon = vassalization
 	group = conquest
 
 	combine_into_one = yes
@@ -406,7 +408,7 @@ dismantle_leader_cb = {
 				exists = var:clan_unity_value
 			}
 			scope:attacker.dynasty = {
-				var:clan_unity_value = { compare_value < 15 }
+				var:clan_unity_value < 15
 			}
 		}
 	}

@@ -56,7 +56,7 @@
  CUSTOMIZE_HOUSE:0 "#T Customize House#!"
  CUSTOMIZE_HOUSE_PLAYER_NOT_ALLOWED:0 "@warning_icon!#X House [DYNASTY_HOUSE.GetBaseNameNoTooltip] is not yours to customize#!"
  HOUSE_MEMBERS_TITLE:0 "Members of [house|E] $NAME$"
- DYNASTY_MEMBERS_TITLE:0 "Members of $NAME$ [dynasty|E]"
+ DYNASTY_MEMBERS_TITLE:0 "Members of the $NAME$ [dynasty|E]"
  HOUSE_SORT_FOUNDATION_DATE:0 "Founding Date"
  HOUSE_SORT_MEMBERS_COUNT:0 "Living Members"
  HOUSE_SORT_HEAD_POWER:0 "House Head Military Strength"

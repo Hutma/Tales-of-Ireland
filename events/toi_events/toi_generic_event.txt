@@ -1,0 +1,138 @@
+﻿namespace = toi_generic_event
+
+toi_generic_event.0001 = { # Fianna in my land
+    type = character_event
+    title = toi_generic_event.0001.t
+    desc = toi_generic_event.0001.desc
+    theme = martial
+    override_background = { 
+        reference = round_tower
+    }
+    
+    left_portrait = {
+        character = root
+        animation = personality_bold
+    }
+
+    option = { #Let them be.
+        name = toi_generic_event.0001.a
+        add_prestige = -50
+		random_list = {
+			10 = { #they hunt
+				
+			}
+			10 = { #they eat cattle
+				every_held_title = {
+					limit = {
+						tier = tier_county
+					}
+					add_to_list = counties_targeted
+				}
+				random_in_list = {
+					name = counties_targeted
+					change_development_level = -5
+				}
+			}
+		}
+		
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			add_county_modifier = { 
+				modifier = roamed_by_fianna_modifier 
+				years = 5
+			}
+		}
+    }
+
+    option = {  #Feed them in exchange for service.
+        name = toi_generic_event.0001.b
+        trigger = {
+			capital_county.development_level >= 15
+		}
+		capital_county = {
+			change_development_level = -10
+		}
+		remove_short_term_gold = 25
+		
+		spawn_army = {
+			levies = 50
+			men_at_arms = {
+				type = kern_warriors
+				stacks = 1
+			}
+			men_at_arms = {
+				type = kern_cavalry
+				stacks = 1
+			}
+			location = root.capital_province
+			name = fianna_army_event_troops
+			inheritable = no
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			add_county_modifier = { 
+				modifier = paying_the_fianna_modifier 
+				years = 3
+			}
+		}
+    }
+	
+	option = { #Convince them to leave.
+        name = toi_generic_event.0001.c
+        add_prestige = -200
+    }
+	
+	option = { #Drive them out, by force.
+        name = toi_generic_event.0001.d
+        add_prestige = 50
+		random_list = {
+			10 = {
+				
+			}
+			10 = {
+				random_knight = {
+					increase_wounds_effect = { REASON = battle }
+				}
+			}
+			10 = {
+				random_knight = {
+					increase_wounds_effect = { REASON = battle }
+				}
+				random_knight = {
+					increase_wounds_effect = { REASON = battle }
+				}
+			}
+		}
+		add_character_modifier = {
+			modifier = beat_up_fianna_modifier
+			years = 3
+		}
+    }
+	
+	option = { #Feed and shelter them instead of your subjects.
+        name = toi_generic_event.0001.e
+        spawn_army = {
+			levies = 50
+			men_at_arms = {
+				type = kern_warriors
+				stacks = 1
+			}
+			men_at_arms = {
+				type = kern_cavalry
+				stacks = 1
+			}
+			location = root.capital_province
+			name = fianna_army_event_troops
+			inheritable = no
+		}
+		add_prestige = -75
+		add_character_modifier = {
+			modifier = abandonned_subjects_for_fianna_modifier
+			years = 5
+		}
+    }
+}

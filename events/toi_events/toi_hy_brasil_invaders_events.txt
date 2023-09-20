@@ -3,7 +3,7 @@
 #Hy Brasylian hidden triggers 0001
 toi_hybrazil.1001 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -26,7 +26,7 @@ toi_hybrazil.0001 = {
 	type = character_event
 	theme = learning_scholarship_focus
 	override_background = {
-		event_background = hy_brazil_island
+		reference = hy_brazil_island
 	}
 	
 	right_portrait = {
@@ -45,7 +45,7 @@ toi_hybrazil.0001 = {
 #Hy Brasylian hidden triggers 0002
 toi_hybrazil.1002 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_independent_ruler = {
@@ -92,7 +92,7 @@ toi_hybrazil.0002 = {
 	type = character_event
 	theme = learning_scholarship_focus
 	override_background = {
-		event_background = hy_brazil_island
+		reference = hy_brazil_island
 	}
 	
 	right_portrait = {
@@ -128,7 +128,7 @@ toi_hybrazil.0002 = {
 #Hy Brasylian hidden triggers 0003 launch the invasions
 toi_hybrazil.1003 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -154,7 +154,7 @@ toi_hybrazil.0003 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = hy_brazil_island
+		reference = hy_brazil_island
 	}
 	
 	right_portrait = {
@@ -175,7 +175,7 @@ toi_hybrazil.0003 = {
 #launch invasions 5 armies
 toi_hybrazil.1500 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		hy_brasylian_invasion_effect = yes
@@ -187,7 +187,7 @@ toi_hybrazil.1500 = {
 }
 toi_hybrazil.1501 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		hy_brasylian_invasion_effect = yes
@@ -199,7 +199,7 @@ toi_hybrazil.1501 = {
 }
 toi_hybrazil.1502 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		#5th army??
@@ -219,7 +219,7 @@ toi_hybrazil.1502 = {
 }
 toi_hybrazil.1503 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		#sixth army??
@@ -239,7 +239,7 @@ toi_hybrazil.1503 = {
 }
 toi_hybrazil.1504 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		#7th army??
@@ -259,7 +259,7 @@ toi_hybrazil.1504 = {
 }
 toi_hybrazil.1505 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		#8th army??

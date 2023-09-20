@@ -97,6 +97,32 @@ start_murder_interaction = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = murder
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
+					}
+				}
+				# Plus any on_start modifiers we may need.
+				if = {
+					limit = { var:feast_events_ewan_0001_bonus_value ?= scope:recipient }
+					# Hand over the modifier.
+					random_scheme = {
+						limit = {
+							scheme_type = murder
+							scheme_target = scope:recipient
+						}
+						add_scheme_modifier = { type = feast_learnt_habits_modifier }
+					}
+					# Remove the variable now that we're done with it.
+					remove_variable = feast_events_ewan_0001_bonus_value
+				}
 			}
 		}
 	}
@@ -107,7 +133,7 @@ start_murder_interaction = {
 }
 
 start_abduct = {
-	icon = icon_hostile
+	icon = icon_scheme_abduct
 	interface_priority = 70
 	category = interaction_category_hostile
 
@@ -220,6 +246,18 @@ start_abduct = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = abduct
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
+					}
+				}
 			}
 		}
 	}
@@ -245,7 +283,7 @@ end_scheme = {
 }
 
 befriend_interaction = {
-	icon = icon_personal
+	icon = icon_scheme_befriend
 	category = interaction_category_friendly
 
 	interface_priority = 90
@@ -263,7 +301,7 @@ befriend_interaction = {
 		ai_recipients = peer_vassals
 		chance = 0.25
 	}
-	ai_frequency = 36
+	ai_frequency = 20
 
 	is_shown = {
 		scope:actor = {
@@ -308,6 +346,18 @@ befriend_interaction = {
 					start_scheme = {
 						type = befriend
 						target = scope:recipient
+					}
+				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = befriend
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
 					}
 				}
 			}
@@ -384,7 +434,7 @@ befriend_interaction = {
 			any_scheme = {
 				OR = {
 					scheme_type = befriend
-					scheme_type = sway
+					#scheme_type = sway # We allow the AI to override Sway with Befriend
 					scheme_type = seduce
 					scheme_type = courting
 					scheme_type = elope
@@ -402,6 +452,40 @@ befriend_interaction = {
 	
 	ai_will_do = {
 		base = 50
+
+		modifier = { # Try to befriend those who you might want to vassalize
+			add = 30
+			scope:actor = {
+				is_independent_ruler = yes
+				primary_title.tier >= tier_county
+				NOT = {
+					any_targeting_faction = {
+						exists = yes
+						OR = {
+							faction_is_type = liberty_faction
+							faction_is_type = claimant_faction
+							faction_is_type = independence_faction
+						}
+					}
+				}
+			}
+			scope:recipient = {
+				is_independent_ruler = yes
+				is_landed = yes
+				primary_title.tier < scope:actor.primary_title.tier
+				OR = {
+					faith.religion = scope:actor.faith.religion
+					AND = {
+						faith = {
+							has_doctrine = doctrine_pluralism_pluralistic
+						}
+						scope:actor.faith = {
+							has_doctrine = doctrine_pluralism_pluralistic
+						}
+					}
+				}
+			}
+		}
 
 		modifier = {
 			factor = 0.1
@@ -534,7 +618,7 @@ befriend_interaction = {
 
 
 seduce_interaction = {
-	icon = icon_personal
+	icon = icon_scheme_seduce
 	category = interaction_category_friendly
 	interface_priority = 90
 	scheme = seduce
@@ -594,6 +678,93 @@ seduce_interaction = {
 				}
 			}
 		}
+		scope:actor = { # Some early filtering for the AI to focus it towards fruitful seductions
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				trigger_if = { # Deviants will seduce anyone
+					limit = {
+						is_deviant_trigger = yes
+					}
+				}
+				trigger_else_if = { # It's always fine to seduce your spouse
+					limit = {
+						scope:recipient = { is_consort_of = scope:actor }
+					}
+				}
+				trigger_else_if = { # If the target is a close family member, only certain AI's will seduce much older members
+					limit = {
+						ai_rationality <= -50
+						is_close_family_of = scope:recipient
+						OR = {
+							has_trait = lustful
+							has_trait = rakish
+							is_incestuous_trigger = yes
+							has_opinion_modifier = {
+								modifier = childhood_crush
+								target = scope:recipient
+							}
+						}
+					}
+					scope:recipient.age <= scope:actor.age_plus_25
+				}
+				trigger_else_if = { # Lustful/seduction-focused characters have a wider range
+					limit = {
+						OR = {
+							has_trait = lustful
+							has_trait = rakish
+							has_focus = intrigue_temptation_focus
+						}
+					}
+					OR = {
+						scope:recipient.age <= scope:actor.age_plus_10
+						AND = { # Seducing your vassals/liege/realm priest is good realm management, AND drama!
+							has_focus = intrigue_temptation_focus
+							OR = {
+								scope:recipient = {
+									is_vassal_of = scope:actor
+								}
+								AND = {
+									exists = liege
+									liege = scope:recipient
+								}
+								scope:recipient = {
+									is_theocratic_lessee = yes
+									is_courtier_of = scope:actor
+								}
+							}
+						}
+					}
+					trigger_if = { # The AI should focus on bastard-producing seductions, it's more dramatic
+						limit = {
+							is_male = yes
+							scope:recipient = {
+								is_female = yes
+							}
+						}
+						scope:recipient.age <= scope:recipient.marriage_female_fertility_cutoff_age_value
+					}
+				}
+				trigger_else_if = { # Male characters with no children that are seducing women want to produce bastards
+					limit = {
+						is_male = yes
+						scope:recipient = { is_female = yes }
+						any_child = {
+							count <= 1
+						}
+					}
+					scope:recipient.age <= scope:actor.age_plus_5
+					scope:recipient.age <= scope:recipient.marriage_female_fertility_cutoff_age_value
+				}
+				trigger_else = { # Otherwise, try to not seduce with *too* large an age gap
+					scope:recipient.age <= scope:actor.age_plus_5
+					scope:recipient.age >= scope:actor.age_minus_10
+				}
+			}
+			trigger_else = {
+			}
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -631,6 +802,18 @@ seduce_interaction = {
 					}
 
 					show_as_tooltip = { seduce_interaction_stress_effect = yes }
+				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = seduce
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
+					}
 				}
 			}
 		}
@@ -687,6 +870,16 @@ seduce_interaction = {
 			add = 50
 			scope:actor = {
 				has_focus = intrigue_temptation_focus
+			}
+		}
+		
+		modifier = {
+			add = 50
+			scope:actor = {
+				has_opinion_modifier = {
+					modifier = childhood_crush
+					target = scope:recipient
+				}
 			}
 		}
 		
@@ -988,11 +1181,30 @@ seduce_interaction = {
 				num_of_relation_soulmate > 0
 			}
 		}
+
+		modifier = { # Family Feud
+			add = 50
+			exists = scope:actor.house
+			exists = scope:recipient.primary_spouse.house
+			scope:actor = {
+				house.house_head = {
+					any_owned_story = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+						var:house_feud_house = scope:recipient.primary_spouse.house
+					}
+				}
+				has_opinion_modifier = {
+					modifier = house_feud_opinion
+					target = scope:recipient.primary_spouse.house.house_head
+				}
+			}
+		}
 	}
 }
 
 court_interaction = {
-	icon = icon_personal
+	icon = icon_scheme_romance
 	category = interaction_category_friendly
 
 	send_name = START_SCHEME
@@ -1031,7 +1243,7 @@ court_interaction = {
 		attracted_to_owner = yes
 		owner_attracted = yes
 	}
-	ai_frequency = 36
+	ai_frequency = 25
 
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
@@ -1039,6 +1251,94 @@ court_interaction = {
 		scope:actor = { is_adult = yes }
 		scope:actor = { is_attracted_to_gender_of = scope:recipient }
 		scope:recipient = { is_attracted_to_gender_of = scope:actor }
+		
+		scope:actor = { # Some early filtering for the AI to focus it towards fruitful romance
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				trigger_if = { # Deviants will romance anyone
+					limit = {
+						is_deviant_trigger = yes
+					}
+				}
+				trigger_else_if = { # It's always fine to romance your spouse
+					limit = {
+						scope:recipient = { is_consort_of = scope:actor }
+					}
+				}
+				trigger_else_if = { # If the target is a close family member, only certain AI's will romance much older members
+					limit = {
+						ai_rationality <= -50
+						is_close_family_of = scope:recipient
+						OR = {
+							has_trait = lustful
+							has_trait = rakish
+							is_incestuous_trigger = yes
+							has_opinion_modifier = {
+								modifier = childhood_crush
+								target = scope:recipient
+							}
+						}
+					}
+					scope:recipient.age <= scope:actor.age_plus_25
+				}
+				trigger_else_if = { # Lustful/seduction-focused characters have a wider range
+					limit = {
+						OR = {
+							has_trait = lustful
+							has_trait = rakish
+							has_focus = intrigue_temptation_focus
+						}
+					}
+					OR = {
+						scope:recipient.age <= scope:actor.age_plus_10
+						AND = { # Romancing your vassals/liege/realm priest is good realm management, AND drama!
+							has_focus = intrigue_temptation_focus
+							OR = {
+								scope:recipient = {
+									is_vassal_of = scope:actor
+								}
+								AND = {
+									exists = liege
+									liege = scope:recipient
+								}
+								scope:recipient = {
+									is_theocratic_lessee = yes
+									is_courtier_of = scope:actor
+								}
+							}
+						}
+					}
+					trigger_if = { # The AI should focus on bastard-producing romances, it's more dramatic
+						limit = {
+							is_male = yes
+							scope:recipient = {
+								is_female = yes
+							}
+						}
+						scope:recipient.age <= scope:recipient.marriage_female_fertility_cutoff_age_value
+					}
+				}
+				trigger_else_if = { # Male characters with no children that are romancing women want to produce children
+					limit = {
+						is_male = yes
+						scope:recipient = { is_female = yes }
+						any_child = {
+							count <= 1
+						}
+					}
+					scope:recipient.age <= scope:actor.age_plus_5
+					scope:recipient.age <= scope:recipient.marriage_female_fertility_cutoff_age_value
+				}
+				trigger_else = { # Otherwise, try to not seduce with *too* large an age gap
+					scope:recipient.age <= scope:actor.age_plus_5
+					scope:recipient.age >= scope:actor.age_minus_10
+				}
+			}
+			trigger_else = {
+			}
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -1092,6 +1392,18 @@ court_interaction = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = courting
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
+					}
+				}
 			}
 			scope:recipient = {
 				if = {
@@ -1111,9 +1423,17 @@ court_interaction = {
 		is_adult = yes
 		trigger_if = {
 			limit = {
-				NOT = {
+				NOR = {
 					culture = {
 						has_cultural_parameter = ai_romance_scheme_increase
+					}
+					AND = {
+						has_character_flag = agenda_towards_deescalation
+						any_character_struggle = {
+							involvement = involved
+							is_struggle_type = iberian_struggle
+							phase_has_catalyst = catalyst_became_best_friend_soulmate_with_very_important_character
+						}
 					}
 				}
 			}
@@ -1167,6 +1487,16 @@ court_interaction = {
 		modifier = {
 			factor = 25
 			has_focus = martial_chivalry_focus
+		}
+		
+		modifier = {
+			add = 50
+			scope:actor = {
+				has_opinion_modifier = {
+					modifier = childhood_crush
+					target = scope:recipient
+				}
+			}
 		}
 		
 		modifier = {
@@ -1262,13 +1592,17 @@ sway_interaction = {
 
 	ai_targets = {
 		ai_recipients = liege
+		ai_recipients = neighboring_rulers
 	}
 	ai_targets = {
 		ai_recipients = vassals
 		ai_recipients = peer_vassals
 		chance = 0.25
 	}
-	ai_frequency = 36
+	ai_targets = {
+		ai_recipients = councillors
+	}
+	ai_frequency = 12
 
 	is_shown = {
 		NOT = { scope:actor = scope:recipient }
@@ -1299,6 +1633,18 @@ sway_interaction = {
 						target = scope:recipient
 					}
 				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = sway
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
+					}
+				}
 			}
 		}
 	}
@@ -1306,8 +1652,6 @@ sway_interaction = {
 	ai_potential = {
 		primary_title.tier >= tier_county
 		NOR = {
-			has_trait = shy
-			has_trait = callous
 			any_scheme = {
 				OR = {
 					scheme_type = befriend
@@ -1329,17 +1673,51 @@ sway_interaction = {
 	ai_will_do = {
 		base = 10
 		
-		modifier = { # Focus on befriending if that's the path you've chosen
-			add = -50
-			scope:actor = {
-				has_perk = befriend_perk
-			}
-		}
-		
 		modifier = { # Prefer seducing if you've got the focus for it
 			add = -20
 			scope:actor = {
 				has_focus = intrigue_temptation_focus
+			}
+		}
+
+		modifier = {
+			add = 10
+			scope:recipient = {
+				is_vassal_of = scope:actor
+			}
+		}
+
+		modifier = { # Try to sway those who you might want to vassalize
+			add = 30
+			scope:actor = {
+				is_independent_ruler = yes
+				primary_title.tier >= tier_county
+				NOT = {
+					any_targeting_faction = {
+						exists = yes
+						OR = {
+							faction_is_type = liberty_faction
+							faction_is_type = claimant_faction
+							faction_is_type = independence_faction
+						}
+					}
+				}
+			}
+			scope:recipient = {
+				is_independent_ruler = yes
+				is_landed = yes
+				primary_title.tier < scope:actor.primary_title.tier
+				OR = {
+					faith.religion = scope:actor.faith.religion
+					AND = {
+						faith = {
+							has_doctrine = doctrine_pluralism_pluralistic
+						}
+						scope:actor.faith = {
+							has_doctrine = doctrine_pluralism_pluralistic
+						}
+					}
+				}
 			}
 		}
 
@@ -1388,7 +1766,7 @@ sway_interaction = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			scope:recipient = {
 				is_vassal_of = scope:actor
 				opinion = {
@@ -1399,7 +1777,7 @@ sway_interaction = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 4
 			scope:recipient = {
 				is_powerful_vassal_of = scope:actor
 				opinion = {
@@ -1407,11 +1785,6 @@ sway_interaction = {
 					value < 0
 				}
 			}
-		}
-
-		modifier = {
-			factor = 2
-			scope:recipient.liege = scope:actor
 		}
 
 		modifier = {
@@ -1428,9 +1801,12 @@ sway_interaction = {
 					value > 2
 				}
 			}
+			scope:recipient = {
+				is_theocratic_lessee = no
+			}
 		}
 		modifier = {
-			factor = 0.35
+			factor = 0.5
 			scope:actor = {
 				has_personality_malicious_trigger = yes
 			}
@@ -1466,11 +1842,67 @@ sway_interaction = {
 				}
 			}
 		}
+		modifier = { # Butter up the realm priest
+			factor = 10
+			scope:recipient = {
+				is_theocratic_lessee = yes
+				opinion = {
+					target = scope:actor
+					value <= 50
+				}
+			}
+		}
+
+		modifier = { # No point in swaying if opinion is already at 100
+			factor = 0
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value >= 100
+				}
+			}
+		}
+
+		modifier = { # If they are unlanded, they have to be a realm priest or spymaster
+			factor = 0
+			scope:recipient = {
+				is_ruler = no
+				NOR = {
+					is_theocratic_lessee = yes
+					has_council_position = councillor_spymaster
+				}
+			}
+		}
+		
+		modifier = { # Ignore rivals unless forgiving
+			factor = 0
+			scope:actor = {
+				has_relation_rival = scope:recipient
+				NOT = { has_trait = forgiving }
+			}
+		}
+		
+		modifier = { # Ignore non-councillor barons
+			factor = 0
+			scope:recipient = {
+				primary_title.tier = tier_barony
+				is_councillor = no
+			}
+		}
+		
+		modifier = { # Ignore neighboring Kings+
+			factor = 0
+			scope:recipient = {
+				is_independent_ruler = yes
+				is_landed = yes
+				primary_title.tier >= tier_kingdom
+			}
+		}
 	}
 }
 
 learn_language_interaction = {
-	icon = icon_culture
+	icon = icon_scheme_learn_language
 	category = interaction_category_friendly
 	common_interaction = yes
 
@@ -1495,7 +1927,7 @@ learn_language_interaction = {
 		ai_recipients = neighboring_rulers
 		max = 5
 	}
-	ai_frequency = 60
+	ai_frequency = 48
 
 	is_shown = {
 		scope:actor = {
@@ -1531,6 +1963,18 @@ learn_language_interaction = {
 					start_scheme = {
 						type = learn_language
 						target = scope:recipient
+					}
+				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = learn_language
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
 					}
 				}
 			}

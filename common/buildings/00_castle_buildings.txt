@@ -3,6 +3,7 @@
 @holding_illustration_india = "gfx/interface/illustrations/holding_types/castle_india.dds"
 @holding_illustration_mediterranean = "gfx/interface/illustrations/holding_types/castle_mediterranean.dds"
 @holding_illustration_norse = "gfx/interface/illustrations/holding_types/fp1_castle_norse.dds"
+@holding_illustration_iberian= "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
 
 castle_01 = {
 	construction_time = slow_construction_time
@@ -28,11 +29,10 @@ castle_01 = {
 	
 	
 	can_construct_potential = {
-		building_requirement_tribal = no
 		barony_cannot_construct_holding = no
 	}
 	
-	can_construct = {	
+	can_construct = {
 		culture = {
 			has_innovation = innovation_battlements
 		}
@@ -40,6 +40,7 @@ castle_01 = {
 	
 	can_construct_showing_failures_only = {
 		building_requirement_tribal_holding_in_county = no
+		building_requirement_tribal_holding_in_county = yes
 	}
 	
 	cost_gold = main_building_tier_3_cost
@@ -51,8 +52,18 @@ castle_01 = {
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_2
 		fort_level = great_building_fort_level_tier_1
+		stationed_maa_damage_mult = normal_maa_damage_tier_1
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_1
+		travel_danger = -10
 	}
 	
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
 	province_culture_modifier = {
 		parameter = castle_fortifications_increase
 		defender_holding_advantage = 5
@@ -60,8 +71,8 @@ castle_01 = {
 
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
-		monthly_prestige = 0.1
-		monthly_dynasty_prestige = 0.1
+		monthly_prestige = 0.02
+		monthly_dynasty_prestige = 0.01
 	}
 
 	province_terrain_modifier = {
@@ -84,12 +95,37 @@ castle_01 = {
 
 	flag = castle
 	
+		on_complete = {
+		county.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_construction
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_construction_opinion
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	ai_value = {
 		base = 100
 		modifier = {
 			factor = 0
 			scope:holder = {
-				has_government = theocracy_government
+				government_has_flag = government_is_theocracy
 			}
 		}
 
@@ -148,8 +184,18 @@ castle_02 = {
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_4
 		fort_level = great_building_fort_level_tier_2
+		stationed_maa_damage_mult = normal_maa_damage_tier_2
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_2
+		travel_danger = -12
 	}
-	
+
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
 	province_culture_modifier = {
 		parameter = castle_fortifications_increase
 		defender_holding_advantage = 10
@@ -157,8 +203,8 @@ castle_02 = {
 
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
-		monthly_prestige = 0.1
-		monthly_dynasty_prestige = 0.1
+		monthly_prestige = 0.03
+		monthly_dynasty_prestige = 0.02
 	}
 
 	province_terrain_modifier = {
@@ -178,8 +224,33 @@ castle_02 = {
 		is_coastal = yes
 		defender_holding_advantage = 3
 	}
-	
+
 	flag = castle
+
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	ai_value = {
 		base = 9
@@ -189,13 +260,26 @@ castle_02 = {
 			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_castle }
 		}
 		modifier = {
+			add = 10
+			scope:holder.culture = { has_cultural_era_or_later = culture_era_high_medieval }
+		}
+		modifier = {
 			factor = 3
 			scope:holder.capital_province = this
 		}
 		modifier = {
 			factor = 0.2
-			combined_building_level <= 4
+			free_building_slots >= 1
 			years_from_game_start >= 1
+		}
+		modifier = {
+			factor = 0.2
+			combined_building_level <= 10
+			years_from_game_start >= 1
+		}
+		modifier = {
+			factor = 0.3
+			years_from_game_start <= 0.01
 		}
 	}
 }
@@ -228,20 +312,28 @@ castle_03 = {
 			has_innovation = innovation_hoardings
 		}
 	}
-	
+
 	cost_gold = main_building_tier_3_cost
 	next_building = castle_04
-	
+
 	levy = normal_building_levy_tier_6
 	max_garrison = good_building_max_garrison_tier_5
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_6
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_6
 		fort_level = great_building_fort_level_tier_3
+		stationed_maa_damage_mult = normal_maa_damage_tier_3
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_3
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_3
+		travel_danger = -14
 	}
 
-	
-	
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
 	province_culture_modifier = {
 		parameter = castle_fortifications_increase
 		defender_holding_advantage = 15
@@ -249,8 +341,8 @@ castle_03 = {
 
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
-		monthly_prestige = 0.2
-		monthly_dynasty_prestige = 0.1
+		monthly_prestige = 0.04
+		monthly_dynasty_prestige = 0.03
 	}
 
 	province_terrain_modifier = {
@@ -270,8 +362,33 @@ castle_03 = {
 		is_coastal = yes
 		defender_holding_advantage = 4
 	}
-	
+
 	flag = castle
+
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	ai_value = {
 		base = 8
@@ -279,14 +396,18 @@ castle_03 = {
 		modifier = {
 			add = 1
 			scope:holder.culture = { has_cultural_parameter = ai_more_likely_to_castle }
-		}		
+		}
+		modifier = {
+			add = 10
+			scope:holder.culture = { has_cultural_era_or_later = culture_era_late_medieval }
+		}
 		modifier = {
 			factor = 3
 			scope:holder.capital_province = this
 		}
 		modifier = {
 			factor = 0.2
-			combined_building_level <= 9
+			combined_building_level <= 20
 			years_from_game_start >= 1
 		}
 	}
@@ -320,19 +441,27 @@ castle_04 = {
 			has_innovation = innovation_machicolations
 		}
 	}
-	
+
 	cost_gold = main_building_tier_4_cost
-	
+
 	levy = normal_building_levy_tier_8
 	max_garrison = good_building_max_garrison_tier_7
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_8
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_8
 		fort_level = great_building_fort_level_tier_4
+		stationed_maa_damage_mult = normal_maa_damage_tier_4
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_4
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_4
+		travel_danger = -16
 	}
 
-	
-	
+	province_terrain_modifier = {
+		parameter = coastal_holding_bonuses
+		is_coastal = yes
+		build_speed = -0.1
+	}
+
 	province_culture_modifier = {
 		parameter = castle_fortifications_increase
 		defender_holding_advantage = 20
@@ -340,8 +469,8 @@ castle_04 = {
 
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
-		monthly_prestige = 0.2
-		monthly_dynasty_prestige = 0.1
+		monthly_prestige = 0.05
+		monthly_dynasty_prestige = 0.04
 	}
 
 	province_terrain_modifier = {
@@ -361,13 +490,38 @@ castle_04 = {
 		is_coastal = yes
 		defender_holding_advantage = 5
 	}
-	
+
 	flag = castle
 
 	type_icon = "icon_building_ramparts.dds"
+
+	on_complete = {
+		barony.holder = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = parochial
+					}
+					save_temporary_scope_as = holder_scope
+				}
+				custom_tooltip = parochial_vassal_approves_holding_upgrade
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = parochial
+						}
+						add_opinion = {
+							target = prev
+							modifier = parochial_approves_holding_upgrade_opinion
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	ai_value = {
-		base = 7
+		base = 17
 		ai_general_building_modifier = yes
 		modifier = {
 			add = 1
@@ -379,7 +533,7 @@ castle_04 = {
 		}
 		modifier = {
 			factor = 0.2
-			combined_building_level <= 12
+			combined_building_level <= 30
 			years_from_game_start >= 1
 		}
 	}

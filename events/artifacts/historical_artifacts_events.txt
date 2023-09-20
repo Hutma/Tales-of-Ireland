@@ -3,7 +3,7 @@
 
 #Historical artifacts generator at game start
 historical_artifacts.0023 = {
-	type = empty
+	scope = none
 	hidden = yes
 
 	immediate = {
@@ -174,7 +174,7 @@ historical_artifacts.0023 = {
 				# create_artifact_konagamana_effect = { OWNER = this }
 				# create_artifact_robe_kassapa_effect = { OWNER = this }
 			# }
-			
+
 		# }
 		# if = {
 			# limit = {
@@ -284,15 +284,15 @@ historical_artifacts.0100 = {
 			any_in_list = {
 				list = slain_combatants
 				OR = {
-					this = enemy_side.side_primary_participant
-					is_heir_of = enemy_side.side_primary_participant
+					this = root.enemy_side.side_primary_participant
+					is_heir_of = root.enemy_side.side_primary_participant
 				}
 			}
 			any_in_list = {
 				list = prisoners_of_war
 				OR = {
-					this = enemy_side.side_primary_participant
-					is_heir_of = enemy_side.side_primary_participant
+					this = root.enemy_side.side_primary_participant
+					is_heir_of = root.enemy_side.side_primary_participant
 				}
 			}
 			troops_ratio <= 0.5
@@ -329,10 +329,12 @@ historical_artifacts.0100 = {
 			set_variable = {
 				name = epic_battle_location
 				value = root.combat.location
+				years = 5
 			}
 			set_variable = {
 				name = epic_loser
 				value = root.enemy_side.side_primary_participant
+				years = 5
 			}
 		}
 	}

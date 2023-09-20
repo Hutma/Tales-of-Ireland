@@ -402,3 +402,53 @@ celtic_troops_decision = {
 		base = 100
 	}
 }
+
+banish_fomorians_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+
+	ai_check_interval = 55
+
+	desc = banish_fomorians_decision_desc
+
+	cooldown = { years = 5 }
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		NOT = { has_trait = fomorian }
+		any_courtier = {
+			has_trait = fomorian
+		}
+	}
+
+	is_valid = {
+		NOT = { has_trait = fomorian }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		every_courtier = {
+			limit = { has_trait = fomorian }
+			banish = yes
+		}
+	}
+
+	cost = {
+		piety = 75
+	}
+
+	ai_potential = {
+		OR = {
+			has_trait = fir_bolg
+			has_trait = tuatha_de_danann
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

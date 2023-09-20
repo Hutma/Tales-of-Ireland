@@ -138,6 +138,20 @@ on_character_faith_change = {
 				}
 			}
 		}
+
+		# Hostage story cycle
+		if = {
+			limit = {
+				is_hostage = yes
+				is_adult = no
+				# Did they just change to their captor's culture
+				faith = warden.faith
+			}
+			save_scope_as = hostage
+			warden = {
+				trigger_event = bp2_yearly.8050
+			}
+		}
 	}
 	events = {
 		faith_conversion.0002 # Remove obsolete modifiers
@@ -160,7 +174,6 @@ on_faith_monthly = {
 	}
 	events = {
 	}
-	
 }
 
 faith_holy_order_land_acquisition_pulse = {
@@ -246,7 +259,6 @@ faith_fervor_events_pulse = {
 	}
 }
 
-
 pagan_conversion_pulse = {
 	trigger = { #Is the character ready to convert?
 		always = no
@@ -255,7 +267,6 @@ pagan_conversion_pulse = {
 	events = {
 	}
 }
-
 
 # Code on-action: when a great holy war no longer has a valid target, and there was no one left in the target kingdom to replace them. The target scopes will still point to the last target at this point
 # If a new target is not picked in script, the GHW will be invalidated

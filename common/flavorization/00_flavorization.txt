@@ -40,7 +40,7 @@
 #	tier = empire
 #	
 #	governments = { feudal_government }
-#	culture_groups = { central_germanic_group }
+#	heritages = { heritage_central_germanic }
 #}
 empress_mother = {
 	type = character

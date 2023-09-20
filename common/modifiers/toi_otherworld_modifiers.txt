@@ -81,3 +81,22 @@ generous_to_the_poor_modifier = {
 	monthly_piety = 0.15
 	county_opinion_add = 10
 }
+
+studied_ants_modifier = {
+	icon = learning_positive
+	learning = 1
+}
+
+venemous_ants_modifier = {
+	icon = cockroach_positive
+	murder_scheme_power_mult = 0.1
+}
+
+otherworld_beast_slay_modifier = {
+	icon = prowess_positive
+	general_opinion = 5
+	monthly_piety = 0.5
+	monthly_prestige = 0.75
+	diplomacy_per_prestige_level = 2
+	prowess = 2
+}

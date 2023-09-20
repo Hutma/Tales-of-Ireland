@@ -1,0 +1,47 @@
+﻿#####################
+#Made by tom5667 - Polytheism Reborn
+######################
+choose_main_deity_cdr_decision = {
+	picture = "gfx/interface/illustrations/decisions/roman_temple.dds"
+	desc = cdr_cmd_decision_desc
+	major = yes
+	#selection_tooltip = choose_main_deity_cdr_decision_tooltip
+	
+	is_shown = {
+		faith = faith:hellenic_pagan
+		is_ruler = yes
+		is_adult = yes
+		 NOR ={	
+			has_trait = cdr_cmd1_religion
+			has_trait = cdr_cmd2_religion
+			has_trait = cdr_cmd3_religion
+			has_trait = cdr_cmd4_religion 
+			has_trait = cdr_cmd5_religion
+			has_trait = cdr_cmd6_religion
+		 }
+	}
+
+	is_valid = {
+		
+	}
+	cost = {
+		piety = 150
+	}
+	cooldown = { years = 1 }
+
+	effect = {
+		trigger_event = cdr_cmd.001 
+
+	}
+
+	ai_check_interval = 90
+	
+	ai_potential = {
+		always = yes
+
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

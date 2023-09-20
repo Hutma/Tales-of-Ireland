@@ -138,9 +138,6 @@ embassies_perk = {
 		custom_description_no_bullet = {
 			text = embassies_perk_effect
 		}
-		custom_description_no_bullet = {
-			text = embassies_perk_froce_trade_scheme_effect #ToI
-		}
 		hidden_effect = {
 			update_embassies_effect = yes
 		}	
@@ -165,6 +162,9 @@ accomplished_forger_perk = {
 	effect = {
 		custom_description_no_bullet = {
 			text = accomplished_forger_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = red_wedding_perk_effect
 		}
 	}
 }

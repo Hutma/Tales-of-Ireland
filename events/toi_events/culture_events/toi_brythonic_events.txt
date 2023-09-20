@@ -37,7 +37,7 @@ toi_brythonic_event.0002 = {
 	desc = toi_brythonic_event.0002.desc
 	theme = family
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 
 	left_portrait = {
@@ -86,7 +86,7 @@ toi_brythonic_event.0003 = {
 	desc = toi_brythonic_event.0003.desc
 	theme = family
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 	
 	left_portrait = {

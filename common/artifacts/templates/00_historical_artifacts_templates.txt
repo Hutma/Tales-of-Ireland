@@ -48,7 +48,7 @@ babr_template = {
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
-	fallback = { 
+	fallback = {
 	}
 
 	unique = yes
@@ -117,7 +117,7 @@ cup_jamshid_template = {
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
-	fallback = { 
+	fallback = {
 	}
 
 	unique = yes
@@ -133,8 +133,7 @@ david_harp_template = {
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
-	fallback = { 
-		
+	fallback = {
 	}
 
 	unique = yes
@@ -150,7 +149,7 @@ crown_iron_template = {
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
-	fallback = { 
+	fallback = {
 	}
 
 	unique = yes
@@ -166,7 +165,7 @@ reichskrone_template = {
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
-	fallback = { 
+	fallback = {
 
 	}
 
@@ -675,7 +674,7 @@ general_unique_template = {
 }
 
 child_toy_template = {
-	can_equip = {	
+	can_equip = {
 		trigger_if = {
 			limit = {
 				NOT = {
@@ -698,7 +697,7 @@ child_toy_template = {
 }
 
 adults_only_template = {
-	can_equip = {		
+	can_equip = {
 		age > 18
 	}
 

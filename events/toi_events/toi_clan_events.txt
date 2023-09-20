@@ -7,7 +7,7 @@ toi_clan.0001 = {
 	type = character_event
 	theme = diplomacy
 	override_background = {
-		event_background = connemara
+		reference = connemara
 	}
 	right_portrait = {
 		character = scope:founder
@@ -808,7 +808,7 @@ toi_clan.0008 = {
 	type = character_event
 	theme = diplomacy
 	override_background = {
-		event_background = connemara
+		reference = connemara
 	}
 	right_portrait = {
 		character = root
@@ -861,7 +861,7 @@ toi_clan.0009 = {
 	type = character_event
 	theme = diplomacy
 	override_background = {
-		event_background = connemara
+		reference = connemara
 	}
 	right_portrait = {
 		character = root

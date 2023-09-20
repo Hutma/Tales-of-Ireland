@@ -52,6 +52,15 @@ you_ask_the_sidhe_to_change_you = {
 	third_past = YOU_ASK_THE_SIDHE_TO_CHANGE_YOU	
 }
 
+knights_have_a_chance_to_get_better_desc = {
+	global = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC
+	global_past = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC
+	first = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC
+	first_past = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC
+	third = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC
+	third_past = KNIGHTS_HAVE_A_CHANCE_TO_GET_BETTER_DESC	
+}
+
 add_tales_of_abundance_lifestyle_xp = {
 	global = ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP
 	global_past = ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP

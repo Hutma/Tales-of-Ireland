@@ -6,7 +6,7 @@ toi_otherworld_core.0001 = { #Land and Chest of Silver
     desc = toi_otherworld_core.0001.desc
     theme = learning_scholarship_focus
 	override_background = {
-		event_background = land_of_silver
+		reference = land_of_silver
 	}
     right_portrait = {
         character = root 
@@ -120,7 +120,7 @@ toi_otherworld_core.0002 = { #Breeze of Winter
 	desc = toi_otherworld_core.0002.desc
 	theme = learning_scholarship_focus
 	override_background = {
-		event_background = land_of_silver
+		reference = land_of_silver
 	}
 	right_portrait = {
 		character = root
@@ -232,7 +232,7 @@ toi_otherworld_core.0003 = { #Endless snow
 	
 	theme = learning_scholarship_focus 
 	override_background = {
-		event_background = land_of_silver
+		reference = land_of_silver
 	}
 	right_portrait = {
 		character = root
@@ -394,7 +394,7 @@ toi_otherworld_core.0004 = { #The Greedy Sidhe
 	
 	theme = learning_scholarship_focus
 	override_background = {
-		event_background = land_of_silver
+		reference = land_of_silver
 	}
 	right_portrait = {
 		character = root
@@ -499,7 +499,7 @@ toi_otherworld_core.0004 = { #The Greedy Sidhe
 						}
 						15 = {
 							death = {
-								death_reason = death_disappeared
+								death_reason = death_disappearance
 							}
 						}
 					}
@@ -568,7 +568,7 @@ toi_otherworld_core.0005 = { #Otherworldly Creature
 		scripted_animation = duel_wield_weapon
 	}
 	override_background = {
-		event_background = generic_otherworld
+		reference = generic_otherworld
 	}
 	
 	trigger = {
@@ -616,7 +616,7 @@ toi_otherworld_core.0005 = { #Otherworldly Creature
 						}
 						15 = {
 							death = {
-								death_reason = death_disappeared
+								death_reason = death_disappearance
 							}
 						}
 					}
@@ -647,7 +647,7 @@ toi_otherworld_core.0005 = { #Otherworldly Creature
 	option = {
 		name = toi_otherworld_core.0005.b
 		duel = {
-			skill = diplomay
+			skill = diplomacy
 			value = 14
 			20 = {
 				desc = toi_otherworld_core.0005.b.success
@@ -673,7 +673,7 @@ toi_otherworld_core.0005 = { #Otherworldly Creature
 						}
 						15 = {
 							death = {
-								death_reason = death_disappeared
+								death_reason = death_disappearance
 							}
 						}
 					}
@@ -741,7 +741,7 @@ toi_otherworld_core.0006 = { #Otherworldly Obsessions
 	}
 	
 	override_background = {
-		event_background = generic_otherworld
+		reference = generic_otherworld
 	}
 	
 	trigger = {
@@ -908,7 +908,7 @@ toi_otherworld_core.0007 = { #Lost!
 	}
 	
 	override_background = {
-		event_background = generic_otherworld
+		reference = generic_otherworld
 	}
 	
 	trigger = {
@@ -1013,7 +1013,7 @@ toi_otherworld_core.0008 = { #Healed of Sickness
 	}
 	
 	override_background = {
-		event_background = generic_otherworld
+		reference = generic_otherworld
 	}
 	
 	trigger = {
@@ -1111,7 +1111,7 @@ toi_otherworld_core.0008 = { #Healed of Sickness
 				add = 1
 			}
 		}
-		change_age = -10
+		change_age = -8
 		
 		ai_chance = {
 			base = 200
@@ -1138,7 +1138,7 @@ toi_otherworld_core.0009 = { #Forefathers
 	}
 	
 	override_background = {
-		event_background = land_of_the_dead
+		reference = land_of_the_dead
 	}
 	
 	trigger = {
@@ -1248,7 +1248,7 @@ toi_otherworld_core.0010 = { #Lost Souls
 	}
 	
 	override_background = {
-		event_background = land_of_the_dead
+		reference = land_of_the_dead
 	}
 	
 	trigger = {
@@ -1337,7 +1337,7 @@ toi_otherworld_core.0011 = { #Rewrite your destiny
 	}
 	
 	override_background = {
-		event_background = land_of_the_dead
+		reference = land_of_the_dead
 	}
 	
 	trigger = {
@@ -1479,7 +1479,7 @@ toi_otherworld_core.0012 = { #The Colour out of the otherworld
 	}
 	
 	override_background = {
-		event_background = place_of_many_colours
+		reference = place_of_many_colours
 	}
 	
 	trigger = {
@@ -1594,7 +1594,7 @@ toi_otherworld_core.0013 = { #Visual Vices
 	}
 	
 	override_background = {
-		event_background = place_of_many_colours
+		reference = place_of_many_colours
 	}
 	
 	trigger = {
@@ -1719,7 +1719,7 @@ toi_otherworld_core.0014 = { #Meet Niamh
 	}
 	
 	override_background = {
-		event_background = lands_of_youth
+		reference = lands_of_youth
 	}
 	
 	trigger = {
@@ -1836,7 +1836,7 @@ toi_otherworld_core.0015 = { #Feast with the gods
 	}
 	
 	override_background = {
-		event_background = lands_of_youth
+		reference = lands_of_youth
 	}
 	
 	trigger = {
@@ -1961,7 +1961,7 @@ toi_otherworld_core.0016 = { #women of Tir Na nog
 	}
 	
 	override_background = {
-		event_background = lands_of_youth
+		reference = lands_of_youth
 	}
 	
 	trigger = {
@@ -2078,7 +2078,7 @@ toi_otherworld_core.0016 = { #women of Tir Na nog
 		}
 			
 		stress_impact = {
-			lusfful = medium_stress_loss
+			lustful = medium_stress_loss
 			chaste = medium_stress_gain
 		}
 		
@@ -2095,7 +2095,7 @@ toi_otherworld_core.0016 = { #women of Tir Na nog
 	option = { #don't go
 		name = toi_otherworld_core.0016.b
 		stress_impact = {
-			lusfful = medium_stress_gain
+			lustful = medium_stress_gain
 			chaste = medium_stress_loss
 		}
 		
@@ -2115,7 +2115,7 @@ toi_otherworld_core.0016 = { #women of Tir Na nog
 			}
 		}
 		stress_impact = {
-			lusfful = medium_stress_gain
+			lustful = medium_stress_gain
 		}
 		add_learning_skill = 1
 		add_prestige = 75
@@ -2151,7 +2151,7 @@ toi_otherworld_core.0017 = { #the mystic fountain
 	}
 	
 	override_background = {
-		event_background = lands_of_youth
+		reference = lands_of_youth
 	}
 	
 	trigger = {
@@ -2310,7 +2310,7 @@ toi_otherworld_core.0018 = { #Trees of Tir Fo Thuinn
 	}
 	
 	override_background = {
-		event_background = realm_beneath_the_sea
+		reference = realm_beneath_the_sea
 	}
 	
 	trigger = {
@@ -2436,7 +2436,7 @@ toi_otherworld_core.0019 = { #Fishes in the sky
 	}
 	
 	override_background = {
-		event_background = realm_beneath_the_sea
+		reference = realm_beneath_the_sea
 	}
 	
 	trigger = {
@@ -2564,7 +2564,7 @@ toi_otherworld_core.0019 = { #Fishes in the sky
 					random_list = {
 						66 = {
 							death = {
-								death_reason = death_disappeared
+								death_reason = death_disappearance
 							}
 						}
 						33 = {
@@ -2607,7 +2607,7 @@ toi_otherworld_core.0020 = { #salmon of knowledge Brasan Feasa
 	}
 	
 	override_background = {
-		event_background = realm_beneath_the_sea
+		reference = realm_beneath_the_sea
 	}
 	
 	trigger = {
@@ -2757,7 +2757,7 @@ toi_otherworld_core.0021 = { #lost at sea!
 	}
 	
 	override_background = {
-		event_background = realm_beneath_the_sea
+		reference = realm_beneath_the_sea
 	}
 	
 	trigger = {
@@ -2829,7 +2829,7 @@ toi_otherworld_core.0022 = { #Tethra the fomorian
 	}
 	
 	override_background = {
-		event_background = the_delightful_plains
+		reference = the_delightful_plains
 	}
 	
 	trigger = {
@@ -2970,7 +2970,7 @@ toi_otherworld_core.0023 = { #Manannan Mac Lir
 	}
 	
 	override_background = {
-		event_background = the_island_of_the_apples
+		reference = the_island_of_the_apples
 	}
 	
 	trigger = {
@@ -3088,7 +3088,7 @@ toi_otherworld_core.0024 = { #Delight treasure
 	}
 	
 	override_background = {
-		event_background = the_delightful_plains
+		reference = the_delightful_plains
 	}
 	
 	trigger = {
@@ -3139,14 +3139,13 @@ toi_otherworld_core.0024 = { #Delight treasure
 		add_gold = 150
 		random = {
 			chance = 25
-			desc = tooltip.toi_otherworld_core.0024.b
 			random_list = {
 				90 = {
 					increase_wounds_effect = { REASON = fight }
 				}
 				10 = {
 					death = {
-						death_reason = death_disappeared
+						death_reason = death_disappearance
 					}
 				}
 			}
@@ -3215,7 +3214,7 @@ toi_otherworld_core.0025 = { #Fishes in the sky
 	}
 	
 	override_background = {
-		event_background = the_island_of_the_apples
+		reference = the_island_of_the_apples
 	}
 	
 	trigger = {
@@ -3313,6 +3312,586 @@ toi_otherworld_core.0025 = { #Fishes in the sky
 		ai_chance = {
 			base = 50
 		}
+	}
+	
+	after = {
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+}
+
+
+toi_otherworld_core.0026 = { #The Nine Boats of Bran Mac Febail
+	type = character_event
+	title = toi_otherworld_core.0026.t
+	desc = toi_otherworld_core.0026.desc
+	
+	theme = martial_strategy_focus 
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	override_background = {
+		reference = the_island_of_the_apples
+	}
+	
+	trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_core_0026
+		}
+		exists = activity.var:is_having_otherworld_exploration_2005
+	}
+    
+    immediate = {
+        activity = {
+			set_variable = {
+				name = had_otherworld_core_0026
+				value = yes
+			}
+		}
+    }
+	
+	option = { #We will heed your warning
+		name = toi_otherworld_core.0026.a
+		
+		if = {
+			limit = { has_trait = magician_good }
+			add_tales_of_magic_lifestyle_xp = 100
+		}
+		else = {
+			add_tales_of_abundance_lifestyle_xp = 100
+		}
+		
+		ai_chance = {
+			base = 25
+		}
+	}
+	
+	option = { #Ireland has changed much in your absence
+		name = toi_otherworld_core.0026.b
+		duel = {
+			skill = diplomacy
+			value = 10
+			20 = {
+				desc = toi_otherworld_core.0026.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0026.b.success
+					
+					add_diplomacy_lifestyle_perk_points = 1
+					add_piety = 50
+					
+				}
+				if = {
+					limit = { exists = activity.var:trip_quality }
+					activity = {
+						change_variable = {
+							name = trip_quality
+							add = 2
+						}
+					}
+				}
+			}
+			20 = {
+				desc = toi_otherworld_core.0026.b.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0026.b.failure
+					
+					add_tales_of_abundance_lifestyle_xp = -100
+				}
+			}
+		}	
+		
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_compassion = 0.1
+			}
+			modifier = {
+				add = -50
+				diplomacy < 8
+			}
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+}
+
+toi_otherworld_core.0027 = { #The palace of tame birds
+	type = character_event
+	title = toi_otherworld_core.0027.t
+	desc = toi_otherworld_core.0027.desc
+	
+	theme = intrigue_temptation_focus 
+	right_portrait = {
+		character = root
+		animation = throne_room_one_handed_passive_1
+	}
+	
+	override_background = {
+		reference = generic_otherworld
+	}
+	
+	trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_core_0028
+		}
+	}
+    
+    immediate = {
+        activity = {
+			set_variable = {
+				name = had_otherworld_core_0028
+				value = yes
+			}
+		}
+		
+		root.primary_spouse = {
+			save_scope_as = my_spouse
+		}
+		random_ruler = {
+			limit = { has_relation_friend = root }
+			save_scope_as = my_friend
+		}
+		if = { 
+			limit = { NOT = { exists = scope:my_friend } }
+			random_courtier = {
+				limit = { has_relation_friend = root }
+				save_scope_as = my_friend
+			}
+		}
+		random_vassal = {
+			save_scope_as = my_vassal
+		}
+    }
+	
+	option = {
+		name = toi_otherworld_core.0027.a
+		trigger = {
+			exists = scope:my_spouse
+		}
+		add_prestige = 20
+		reverse_add_opinion	= {
+			opinion = 25
+			modifier = kindness_opinion
+			target = scope:my_spouse
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0027.b
+		trigger = {
+			exists = scope:my_friend
+		}
+		add_prestige = 20
+		reverse_add_opinion	= {
+			opinion = 25
+			modifier = kindness_opinion
+			target = scope:my_friend
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0027.c
+		trigger = {
+			exists = scope:my_vassal
+		}
+		scope:my_vassal = {
+			add_prestige = 50
+		}
+		reverse_add_opinion	= {
+			opinion = 25
+			modifier = kindness_opinion
+			target = scope:my_vassal
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0027.d
+		change_current_court_grandeur = 15
+		remove_short_term_gold = 35
+		capital_county = {
+			change_development_level = -5
+			add_county_modifier = {
+				modifier = birds_from_otherworld_modifier
+				years = 10
+			}
+		}
+		add_stress = 25
+	}
+	
+	after = {
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+}
+
+toi_otherworld_core.0028 = { #The palace of ants
+	type = character_event
+	title = toi_otherworld_core.0028.t
+	desc = toi_otherworld_core.0028.desc
+	
+	theme = intrigue_temptation_focus 
+	right_portrait = {
+		character = root
+		animation = throne_room_one_handed_passive_1
+	}
+	
+	override_background = {
+		reference = generic_otherworld
+	}
+	
+	trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_core_0028
+		}
+	}
+    
+    immediate = {
+        activity = {
+			set_variable = {
+				name = had_otherworld_core_0028
+				value = yes
+			}
+		}
+    }
+	
+	option = {
+		name = toi_otherworld_core.0028.a
+		
+	}
+	
+	option = {
+		name = toi_otherworld_core.0028.b
+		add_piety = 25
+		random_list = {
+			70 = {
+				desc = toi_otherworld_core.0028.b.success
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0028.b.success
+					
+					add_character_modifier = {
+						modifier = studied_ants_modifier
+						years = 10
+					}
+				}
+			}
+			30 = {
+				desc = toi_otherworld_core.0028.b.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0028.b.failure
+					
+					add_prestige = -50
+					remove_short_term_gold = 20
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0028.c
+		random_list = {
+			79 = {
+				desc = toi_otherworld_core.0028.c.success
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0028.c.success
+					
+					add_character_modifier = {
+						modifier = venemous_ants_modifier
+						years = 10
+					}
+				}
+			}
+			20 = {
+				desc = toi_otherworld_core.0028.c.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0028.c.failure
+					
+					add_prestige = -50
+					remove_short_term_gold = 20
+				}
+			}
+			1 = {
+				desc = toi_otherworld_core.0028.c.critical_failure
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+}
+
+toi_otherworld_core.0029 = { #The cat in the ringfort
+	type = character_event
+	title = toi_otherworld_core.0029.t
+	desc = toi_otherworld_core.0029.desc
+	
+	theme = intrigue_skulduggery_focus 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	override_background = {
+		reference = generic_otherworld
+	}
+	
+	trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_core_0029
+		}
+	}
+    
+    immediate = {
+        activity = {
+			set_variable = {
+				name = had_otherworld_core_0029
+				value = yes
+			}
+		}
+    }
+	
+	option = {
+		name = toi_otherworld_core.0029.a
+		
+	}
+	
+	option = {
+		name = toi_otherworld_core.0029.b
+		if = {
+			limit = {
+				has_trait = wounded_2
+			}
+			remove_trait = wounded_2
+			add_trait = wounded_1
+		}
+		if = {
+			limit = {
+				has_trait = wounded_3
+			}
+			remove_trait = wounded_3
+			add_trait = wounded_2
+		}
+		remove_trait = wounded_1
+		
+		random_list = {
+			80 = {
+				
+			}
+			20 =  {
+				change_age = 1
+			}
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0029.c
+		add_gold = 50
+		capital_county = {
+			change_development_level = { 2 5 }
+		}
+		add_prestige = 25
+		hidden_effect = {
+			random_list = {
+				60 = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.toi_otherworld_core.0029.c.success
+					}
+				}
+				25 = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.toi_otherworld_core.0029.c.failure
+						
+						increase_wounds_effect = { REASON = beaten }
+					}
+				}
+				15 = {
+					send_interface_toast = {
+						left_icon = root
+						title = tooltip.toi_otherworld_core.0029.c.critical_failure
+						
+						increase_wounds_effect = { REASON = beaten }
+						add_stress = 65
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0029.d
+		trigger = {
+			has_trait = magician_good
+		}
+		add_tales_of_magic_lifestyle_xp = 250
+	}
+	
+	after = {
+		trigger_event = {
+			on_action = otherworld_exploration_count_events
+			days = 30
+		}
+	}
+}
+
+toi_otherworld_core.0030 = { #The revolting beast
+	type = character_event
+	title = toi_otherworld_core.0030.t
+	desc = toi_otherworld_core.0030.desc
+	
+	theme = hunt_activity 
+	right_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	override_background = {
+		reference = generic_otherworld
+	}
+	
+	trigger = {
+		exists = activity
+		NOT = {
+			exists = activity.var:had_otherworld_core_0030
+		}
+	}
+    
+    immediate = {
+        activity = {
+			set_variable = {
+				name = had_otherworld_core_0030
+				value = yes
+			}
+		}
+    }
+	
+	option = {
+		name = toi_otherworld_core.0030.a
+		duel = {
+			skill = prowess
+			value = 18
+			25 = {
+				desc = toi_otherworld_core.0030.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0030.success
+					
+					add_character_modifier = {
+						modifier = otherworld_beast_slay_modifier
+						years = 10
+					}
+				}
+			}
+			25 = {
+				desc = toi_otherworld_core.0030.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0030.failure
+					
+					add_prestige = -25
+					
+					random_list = {
+						85 = {
+							increase_wounds_effect = { REASON = fight }
+						}
+						15 = {
+							death = {
+								death_reason = death_disappearance
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_otherworld_core.0030.b
+		trigger = {
+			has_trait = magician_good
+		}
+		duel = {
+			skill = prowess
+			value = 12
+			25 = {
+				desc = toi_otherworld_core.0030.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0030.success
+					
+					add_character_modifier = {
+						modifier = otherworld_beast_slay_modifier
+						years = 10
+					}
+				}
+			}
+			25 = {
+				desc = toi_otherworld_core.0030.failure
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_otherworld_core.0030.failure
+					
+					add_prestige = -25
+					
+					random_list = {
+						85 = {
+							increase_wounds_effect = { REASON = fight }
+						}
+						15 = {
+							death = {
+								death_reason = death_disappearance
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = toi_otherworld_core.0030.c
+		add_prestige = -75
 	}
 	
 	after = {

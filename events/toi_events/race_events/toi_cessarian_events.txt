@@ -5,7 +5,7 @@ toi_cessarian_event.0001 = {
 	desc = toi_cessarian_event.0001.desc
 	theme = faith
 	override_background = {
-		event_background = fp1_beached_longships
+		reference = fp1_beached_longships
 	}
 	left_portrait = {
 		character = root
@@ -61,7 +61,7 @@ toi_cessarian_event.0002 = {
 	desc = toi_cessarian_event.0002.desc
 	theme = faith
 	override_background = {
-		event_background = fp1_beached_longships
+		reference = fp1_beached_longships
 	}
 	left_portrait = {
 		character = root
@@ -116,7 +116,7 @@ toi_cessarian_event.0003 = {
 	desc = toi_cessarian_event.0003.desc
 	theme = faith
 	override_background = {
-		event_background = wilderness
+		reference = wilderness
 	}
 	left_portrait = {
 		character = root
@@ -182,7 +182,7 @@ toi_cessarian_event.0004 = {
 	desc = toi_cessarian_event.0004.desc
 	theme = faith
 	override_background = {
-		event_background = wilderness
+		reference = wilderness
 	}
 	left_portrait = {
 		character = root

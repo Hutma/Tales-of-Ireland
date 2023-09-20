@@ -36,7 +36,7 @@ learning_theology.1301 = {
 	}
 	theme = learning_theology_focus
 	left_portrait = scope:bishop
-	
+
 	trigger = {
 		NOT = {
 			has_character_flag = had_event_learning_theology_1301
@@ -121,10 +121,10 @@ learning_theology.2020 = { #by Mathilda Bjarnehed
 	type = character_event
 	title = learning_theology.2020.t
 	desc = learning_theology.2020.desc
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:court_chaplain
-	
+
 	trigger = {
 		any_learning_councillor = {
 			is_available_ai = yes
@@ -661,24 +661,24 @@ learning_theology.2020 = { #by Mathilda Bjarnehed
 		remove_character_flag = virtue_ambitious
 		remove_character_flag = virtue_gluttonous
 	}
-}	
+}
 
 #What, that's not even a virtue!
 learning_theology.2021 = { #by Mathilda Bjarnehed
 	type = character_event
 	title = learning_theology.2020.t
 	desc = learning_theology.2021.desc
-	
+
 	theme = learning_theology_focus
 	left_portrait = {
 		character = scope:court_chaplain
 		animation = personality_vengeful
 	}
-	
+
 
 	option = {
 		name = learning_theology.2021.a
-		
+
 		reverse_add_opinion = {
 			target = scope:court_chaplain
 			modifier = impious_opinion
@@ -694,10 +694,10 @@ learning_theology.3002 = {
 	type = character_event
 	title = learning_theology.3002.t
 	desc = learning_theology.3002.desc
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:chaplain
-	
+
 	trigger = {
 		NOT = { has_character_flag = had_event_learning_theology_3002 }
 		exists = cp:councillor_court_chaplain
@@ -760,10 +760,10 @@ learning_theology.3003 = {
 	type = character_event
 	title = learning_theology.3003.t
 	desc = learning_theology.3003.desc
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:chaplain
-	
+
 	trigger = {
 		NOT = { has_character_flag = had_event_learning_theology_3003 }
 		NOR = {
@@ -869,10 +869,10 @@ learning_theology.3011 = {
 		}
 		desc = learning_theology.3011.ending
 	}
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:believer
-	
+
 	trigger = {
 		is_ai = no # Develops the world a tad too fast
 		NOT = {
@@ -1039,11 +1039,11 @@ learning_theology.3021 = {
 			}
 		}
 	}
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:compliment_receiver
 	right_portrait = scope:believer
-	
+
 	trigger = {
 		NOT = {
 			has_character_flag = had_event_learning_theology_3021
@@ -1431,7 +1431,7 @@ learning_theology.3022 = {
 	}
 	desc = learning_theology.3022.desc
 	sender = scope:compliment_receiver
-	
+
 	immediate = {
 		save_scope_as = letter_receiver
 		if = {
@@ -1481,7 +1481,7 @@ learning_theology.3023 = {
 	}
 	desc = learning_theology.3023.desc
 	sender = scope:compliment_receiver
-	
+
 	immediate = {
 		add_diplomacy_lifestyle_xp = minor_lifestyle_xp
 	}
@@ -1499,14 +1499,14 @@ learning_theology.3024 = {
 	}
 	desc = learning_theology.3024.desc
 	sender = scope:compliment_receiver
-	
+
 	immediate = {
 		if = {
 			limit = {
 				scope:compliment_receiver = { is_alive = yes }
 			}
 			theology_3021_a_failure_effect = yes
-		}	
+		}
 	}
 
 	option = {
@@ -1544,14 +1544,14 @@ learning_theology.3031 = {
 			desc = learning_theology.3031.desc
 		}
 	}
-	
+
 	theme = learning_theology_focus
 	left_portrait = {
 		character = root
 		animation = personality_cynical
 	}
 	right_portrait = scope:bishop
-	
+
 	trigger = {
 		NOT = {
 			has_character_flag = had_event_learning_theology_3031
@@ -1676,7 +1676,7 @@ learning_theology.3041 = {
 		character = root
 		animation = personality_cynical
 	}
-	
+
 	trigger = {
 		NOT = { has_trait = lifestyle_mystic }
 		NOT = {
@@ -1728,7 +1728,7 @@ learning_theology.3042 = {
 	desc = learning_theology.3042.desc
 	theme = learning_theology_focus
 	left_portrait = root
-	
+
 	option = { # This is what I have been looking for
 		name = learning_theology.3042.a
 		custom_tooltip = learning_theology.3042.a.tt
@@ -1772,7 +1772,7 @@ learning_theology.3043 = {
 	
 	option = { # This is what I have been looking for
 		name = learning_theology.3043.a
-		add_trait = mystic_1
+		add_trait = lifestyle_mystic
 		stress_impact = {
 			lazy = minor_stress_impact_gain
 		}
@@ -1811,7 +1811,7 @@ learning_theology.3044 = {
 		character = root
 		animation = happiness
 	}
-	
+
 	option = { # This is what I have been looking for
 		name = learning_theology.3044.a
 		add_learning_skill = 1
@@ -1844,7 +1844,7 @@ learning_theology.3045 = {
 		character = root
 		animation = personality_cynical
 	}
-	
+
 	option = { # I have to recapture the feeling!
 		name = learning_theology.3045.a
 		add_learning_lifestyle_xp = medium_lifestyle_xp
@@ -1901,7 +1901,7 @@ learning_theology.3046 = {
 		is_available = yes
 		has_character_modifier = theology_dangerous_habits_modifier
 	}
-	
+
 	option = { # Let's see where it leads
 		name = learning_theology.3046.a
 		random_list = {
@@ -1936,7 +1936,7 @@ learning_theology.3046 = {
 			}
 		}
 	}
-	
+
 	option = { # It is time to give up
 		name = learning_theology.3046.b
 		add_stress = medium_stress_loss
@@ -1968,7 +1968,7 @@ learning_theology.3047 = {
 			has_trait = lunatic
 		}
 	}
-	
+
 	option = { # This is what I have been looking for
 		name = learning_theology.3047.a
 		add_trait = lunatic_1
@@ -1991,7 +1991,7 @@ learning_theology.3051 = {
 		desc = learning_theology.3051.desc.intro
 		random_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = passion_flag
 					}
@@ -1999,7 +1999,7 @@ learning_theology.3051 = {
 				desc = learning_theology.3051.desc.passion
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = nights_flag
 					}
@@ -2007,7 +2007,7 @@ learning_theology.3051 = {
 				desc = learning_theology.3051.desc.arabian_nights
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = inferno_flag
 					}
@@ -2015,7 +2015,7 @@ learning_theology.3051 = {
 				desc = learning_theology.3051.desc.inferno
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = ravenway_flag
 					}
@@ -2034,7 +2034,7 @@ learning_theology.3051 = {
 		character = scope:passion_playwright
 		animation = personality_honorable
 	}
-	
+
 	trigger = {
 		NOT = {
 			has_character_flag = had_event_learning_theology_3051
@@ -2258,7 +2258,7 @@ learning_theology.3052 = {
 	title = {
 		random_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = passion_flag
 					}
@@ -2266,7 +2266,7 @@ learning_theology.3052 = {
 				desc = learning_theology.3051.passion
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = nights_flag
 					}
@@ -2274,7 +2274,7 @@ learning_theology.3052 = {
 				desc = learning_theology.3051.arabian_nights
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = inferno_flag
 					}
@@ -2282,7 +2282,7 @@ learning_theology.3052 = {
 				desc = learning_theology.3051.inferno
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						has_character_flag = ravenway_flag
 					}
@@ -2427,8 +2427,8 @@ learning_theology.3053 = {
 		}
 		name = learning_theology.3053.c
 		add_piety = minor_piety_loss
-		recruit_courtier = scope:passion_playwright
-		set_relation_friend = scope:passion_playwright
+		add_courtier = scope:passion_playwright
+		set_relation_friend = { reason = friend_passion_play target = scope:passion_playwright }
 		stress_impact = {
 			deviant = minor_stress_impact_loss
 			lustful = minor_stress_impact_loss
@@ -2448,7 +2448,7 @@ learning_theology.3054 = {
 		desc = learning_theology.3054.desc.intro
 		random_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						NOT = { has_character_flag = passion_flag }
 					}
@@ -2456,7 +2456,7 @@ learning_theology.3054 = {
 				desc = learning_theology.3051.passion
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						NOT = { has_character_flag = nights_flag }
 					}
@@ -2464,7 +2464,7 @@ learning_theology.3054 = {
 				desc = learning_theology.3051.arabian_nights
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:passion_playwright = {
 						NOT = { has_character_flag = inferno_flag }
 					}
@@ -2498,9 +2498,11 @@ learning_theology.3054 = {
 						multiplier = 3.5
 						min = -49
 					}
-					add_character_flag = {
-						flag = superior_passion_play_flag
-						years = 5
+					root = {
+						add_character_flag = {
+							flag = superior_passion_play_flag
+							years = 5
+						}
 					}
 				}
 				# Your writing was not as good as the Playwright
@@ -2510,9 +2512,11 @@ learning_theology.3054 = {
 						multiplier = -3.5
 						min = -49
 					}
-					add_character_flag = {
-						flag = inferior_passion_play_flag
-						years = 5
+					root = {
+						add_character_flag = {
+							flag = inferior_passion_play_flag
+							years = 5
+						}
 					}
 				}
 			}
@@ -2581,10 +2585,17 @@ learning_theology.3054 = {
 
 	option = { # Myself, of course!
 		name = learning_theology.3054.a
+		show_as_tooltip = {
+			duel = {
+				skill = diplomacy
+				target = scope:passion_playwright
+			}
+		}
 		custom_tooltip = {
 			text = learning_theology.3054.a.tt
 			save_scope_as = lead_actor
 		}
+
 		stress_impact = {
 			shy = medium_stress_impact_gain
 			humble = medium_stress_impact_gain
@@ -2613,6 +2624,12 @@ learning_theology.3054 = {
 		name = learning_theology.3054.b
 		trigger = {
 			exists = scope:family_actor
+		}
+		show_as_tooltip = {
+			duel = {
+				skill = diplomacy
+				target = scope:passion_playwright
+			}
 		}
 		custom_tooltip = {
 			text = learning_theology.3054.b.tt
@@ -2649,6 +2666,12 @@ learning_theology.3054 = {
 		trigger = {
 			exists = scope:random_actor
 		}
+		show_as_tooltip = {
+			duel = {
+				skill = diplomacy
+				target = scope:passion_playwright
+			}
+		}
 		custom_tooltip = {
 			text = learning_theology.3054.c.tt
 			scope:random_actor = { save_scope_as = lead_actor }
@@ -2666,11 +2689,7 @@ learning_theology.3054 = {
 				target = scope:random_actor
 				gold = minor_gold_value
 			}
-			recruit_courtier = scope:random_actor
-		}
-		trigger_event = {
-			id = learning_theology.3055
-			days = 10
+			add_courtier = scope:random_actor
 		}
 		stress_impact = {
 			arrogant = medium_stress_impact_gain
@@ -2706,13 +2725,13 @@ learning_theology.3055 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:lead_actor = root
 				}
 				desc = learning_theology.3055.desc.intro.solo
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					NOT = { scope:lead_actor = root }
 				}
 				desc = learning_theology.3055.desc.intro.hired_actor
@@ -2720,7 +2739,7 @@ learning_theology.3055 = {
 		}
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:lead_actor = root
 					root = {
 						has_character_flag = superior_passion_play_flag
@@ -2730,7 +2749,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.victory.solo
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:lead_actor = root
 					root = {
 						has_character_flag = inferior_passion_play_flag
@@ -2740,7 +2759,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.defeat_writing.solo
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:lead_actor = root
 					root = {
 						has_character_flag = inferior_acting_flag
@@ -2749,7 +2768,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.defeat_acting.solo
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					NOT = { scope:lead_actor = root }
 					root = {
 						has_character_flag = superior_passion_play_flag
@@ -2759,7 +2778,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.victory.hired_actor
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					NOT = { scope:lead_actor = root }
 					root = {
 						has_character_flag = inferior_passion_play_flag
@@ -2769,7 +2788,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.defeat_writing.hired_actor
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					NOT = { scope:lead_actor = root }
 					root = {
 						has_character_flag = inferior_acting_flag
@@ -2780,7 +2799,7 @@ learning_theology.3055 = {
 		}
 		first_valid = {
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					root = {
 						has_character_flag = superior_acting_flag
 						has_character_flag = superior_passion_play_flag
@@ -2789,7 +2808,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.victory_outro
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:lead_actor = root
 					root = {
 						OR = {
@@ -2801,7 +2820,7 @@ learning_theology.3055 = {
 				desc = learning_theology.3055.desc.defeat_outro.solo
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					NOT = { scope:lead_actor = root }
 					root = {
 						OR = {
@@ -2874,13 +2893,15 @@ learning_theology.3055 = {
 
 	option = { # I made the better play
 		trigger = {
-			has_character_flag = superior_passion_play_flag
-			has_character_flag = superior_acting_flag
+			root = {
+				has_character_flag = superior_passion_play_flag
+				has_character_flag = superior_acting_flag
+			}
 		}
 		name = learning_theology.3055.a
 		add_learning_lifestyle_perk_points = 1
 		add_piety = medium_piety_gain
-		# Give prestige for 
+		# Give prestige for
 		if = {
 			limit = {
 				scope:lead_actor = root
@@ -2898,15 +2919,46 @@ learning_theology.3055 = {
 	option = { # I failed at making a better play
 		name = learning_theology.3055.b
 		trigger = {
-			OR = {
-				has_character_flag = inferior_passion_play_flag
-				has_character_flag = inferior_acting_flag
+			root = {
+				OR = {
+					has_character_flag = inferior_passion_play_flag
+					has_character_flag = inferior_acting_flag
+				}
 			}
 		}
 		add_piety = minor_piety_loss
 		add_stress = medium_stress_impact_gain
 		ai_chance = {
 			base = 50
+		}
+	}
+
+	after = {
+		root = {
+			if = {
+				limit = {
+					has_character_flag = superior_passion_play_flag
+				}
+				remove_character_flag = superior_passion_play_flag
+			}
+			if = {
+				limit = {
+					has_character_flag = superior_acting_flag
+				}
+				remove_character_flag = superior_acting_flag
+			}
+			if = {
+				limit = {
+					has_character_flag = inferior_passion_play_flag
+				}
+				remove_character_flag = inferior_passion_play_flag
+			}
+			if = {
+				limit = {
+					has_character_flag = inferior_acting_flag
+				}
+				remove_character_flag = inferior_acting_flag
+			}
 		}
 	}
 }
@@ -2934,7 +2986,7 @@ learning_theology_special.1001 = {
 		faith = {
 			NOR = {
 				exists = var:variable_changed_doctrine_learning_theology_special_1001
-				has_doctrine = unreformed_faith_doctrine
+				has_doctrine_parameter = unreformed
 			}
 		}
 		OR = {
@@ -3052,7 +3104,7 @@ learning_theology_special.1001 = {
 				}
 				10 = {
 					trigger = {
-						NOT = { faith = { has_doctrine = doctrine_witchcraft_accepted } }
+						NOT = { faith = { has_doctrine_parameter = witchcraft_accepted } }
 					}
 					save_scope_value_as = {
 						name = witchcraft_doctrine
@@ -3266,7 +3318,7 @@ learning_theology_special.1002 = {
 	}
 	theme = learning_theology_focus
 	right_portrait = scope:portrait
-	
+
 	immediate = {
 		learning_theology_special_1001_doctrine_effect = yes
 		add_learning_lifestyle_perk_points = 1
@@ -3308,7 +3360,7 @@ learning_theology_special.1003 = {
 		}
 	}
 	theme = learning_theology_focus
-	
+
 	left_portrait = scope:portrait
 
 	immediate = {
@@ -3344,13 +3396,13 @@ learning_theology_special.1101 = {
 			desc = learning_theology_special.1101.desc.fallback
 		}
 	}
-	
+
 	theme = learning_theology_focus
 	override_background = {
-		event_background = throne_room
+		reference = throne_room
 	}
 	left_portrait = scope:scholar
-	
+
 	trigger = {
 		has_focus = learning_theology_focus
 		NOT = { has_character_flag = had_learning_theology_special_1101_this_lifetime }
@@ -3455,21 +3507,21 @@ learning_theology_special.1102 = {
 		}
 		desc = learning_theology_special.1102.desc_ending
 	}
-	
+
 	theme = learning_theology_focus
 	left_portrait = scope:scholar
-	
+
 	option = { #Give credit to scholar
 		trigger = {
 			scope:scholar = { is_alive = yes }
 		}
 		name = learning_theology_special.1102.c
-		
+
 		if = {
 			limit = {
 				can_set_relation_friend_trigger = { CHARACTER = scope:scholar }
 			}
-			set_relation_friend = scope:scholar
+			set_relation_friend = { reason = friend_bible_commentary target = scope:scholar }
 		}
 
 		random_list = {
@@ -3521,9 +3573,12 @@ learning_theology_special.1102 = {
 		}
 		name = learning_theology_special.1102.b
 
-		set_relation_rival = scope:scholar
+		set_relation_rival = {
+			target = scope:scholar
+			reason = rival_academic_dispute
+		}
 		scope:scholar = { select_and_move_to_pool_effect = yes }
-		
+
 		duel = {
 			skill = intrigue
 			target = scope:scholar
@@ -3535,7 +3590,7 @@ learning_theology_special.1102 = {
 				}
 				add_learning_lifestyle_perk_points = 1
 				add_prestige = medium_prestige_gain
-				
+
 			}
 			40 = {
 				desc = learning_theology_special.1102.b.failure

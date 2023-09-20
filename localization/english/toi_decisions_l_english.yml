@@ -31,6 +31,11 @@
  celtic_troops_decision_confirm:0 "Send for the Warband"
  celtic_warband:0 "Celtic Warband"
  
+ banish_fomorians_decision:0 "Banish The Fomorians"
+ banish_fomorians_decision_desc:0 "Fomorians consider us as inferior, they consider us as their servants. We shouldn't have to suffer their presence in my court!"
+ banish_fomorians_decision_tooltip:0 "Banish the Fomorians"
+ banish_fomorians_decision_confirm:0 "Banish them ALL!"
+ 
  #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
  reform_high_kingship_decision_desc:0 "Irish law once held that its people were ruled by a mighty [high_king|E]. They shall be once again!"
@@ -117,6 +122,11 @@
  establish_sean_bar_decision_desc:0 "The only thing better than enjoying a bit of ale in the evening is having good company to enjoy it with. Maybe I could build some sort of establishment where people could gather and share a pint (or two). Some sort of public house? \n\nHistorically, Athlone's Sean's Bar is known as the oldest pub in Europe."
  establish_sean_bar_decision_tooltip:0 "Build the pub"
  establish_sean_bar_decision_confirm:0 "Everyone raise your cup. Sláinte!"
+ 
+ cattle_for_a_feast_decision:0 "Consume our cattle in a feast"
+ cattle_for_a_feast_decision_desc:0 "We have too much cattle roaming our land and I'm sure my vassals would be delighted if I would organize a feast. We could eat some of our extra cattle in during the festivities."
+ cattle_for_a_feast_decision_tooltip:0 "Organise a feast"
+ cattle_for_a_feast_decision_confirm:0 "Preapre the cattle!"
  
  #Religious decisions
  truce_with_de_danann_decision:0 "Truce with the gods"

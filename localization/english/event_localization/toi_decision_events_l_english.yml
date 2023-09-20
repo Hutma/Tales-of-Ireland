@@ -61,6 +61,15 @@
  toi_decisions.018.desc:0 "The offering is complete. We waited… and waited… and it became clear nothing would happen. There are no Sidhe to heed our call, and no blessing for us to receive. Some cry out in anguish. Have the Sidhe abandoned us, or were they insulted by my offering?\n\nOur bond with the spirits broken, we return to our homes in despair.\n\nOur livestock are sick, our buildings crumble, and the druids see only ruin in the future."
  toi_decisions.018.a:0 "A large sacrifice will show my devotion."
  
+ toi_decisions.019.t:0 "Eating the cattle"
+ toi_decisions.019.desc:0 "The feast I have ordered to organize is in preparation and the cook is waiting for the cattle to be delivered, to preapre the meat. I have to choose from which part  of my realm the cattle will be eaten during that feast."
+ toi_decisions.019.a:0 "We will take the cattle from [cattle_county_1.GetBaseName]."
+ toi_decisions.019.b:0 "We will take the cattle from [cattle_county_2.GetBaseName]."
+ toi_decisions.019.c:0 "We will take the cattle from [cattle_county_3.GetBaseName]."
+ toi_decisions.019.d:0 "We will take the cattle from [cattle_county_4.GetBaseName]."
+ toi_decisions.019.e:0 "My vassals' have too much cattle, they should learn to share."
+ 
+ 
  #Found kingdom
  toi_ancient_kingdom_formed.0001.t:0 "The Founder of [kingdom_founded.GetName]"
  toi_ancient_kingdom_formed.0001.desc:0 "The work of many years has finally been rewarded. I have founded the kingdom of [kingdom_founded.GetName], uniting my formerly divided subjects under a single banner. This achievement will lend its radiance to my dynasty for generations to come, and ensure its bright and glorious future.\n\nThe news has travelled far beyond our borders, reaching ears both high and low. Many new allies have sent their envoys to treat with us, and existing ones have sought to strengthen our bonds of friendship. Still, our vigilance cannot waver. Many new rivals and would-be usurpers have also risen from the shadows, ready to strike at the first sign of weakness. I will stand ready to defend my realm against any who would threaten it, and will lead my newly united people to greatness and prosperity."

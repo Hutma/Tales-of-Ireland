@@ -147,8 +147,8 @@ scripted_effect inspiration_completion_removal_basic_effect = {
 		remove_variable = book_content_quality
 	}
 	if = {
-		limit = { has_variable = local_animal }
-		remove_variable = local_animal
+		limit = { has_variable = animal_type }
+		remove_variable = animal_type
 	}
 	if = {
 		limit = { has_variable = book_topic_cat_name }
@@ -195,12 +195,76 @@ scripted_effect inspiration_completion_removal_basic_effect = {
 		remove_variable = artifact_artisan_type
 	}
 	if = {
+		limit = { has_variable = adventure_destination }
+		remove_variable = adventure_destination
+	}
+	if = {
 		limit = { has_variable = artifact_smith_type }
 		remove_variable = artifact_smith_type
 	}
 	if = {
 		limit = { has_variable = adventure_type }
 		remove_variable = adventure_type
+	}
+	if = {
+		limit = { has_variable = local_artisan }
+		remove_variable = local_artisan
+	}
+	if = {
+		limit = { has_variable = wealth }
+		remove_variable = wealth
+	}
+	if = {
+		limit = { has_variable = quality }
+		remove_variable = quality
+	}
+	if = {
+		limit = { has_variable = artifact_quality }
+		remove_variable = artifact_quality
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_var }
+		remove_variable = artifact_dedication_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_a_var }
+		remove_variable = artifact_dedication_a_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_b_var }
+		remove_variable = artifact_dedication_b_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_d_var }
+		remove_variable = artifact_dedication_d_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_e_var }
+		remove_variable = artifact_dedication_e_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_f_var }
+		remove_variable = artifact_dedication_f_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_g1_var }
+		remove_variable = artifact_dedication_g1_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_g2_var }
+		remove_variable = artifact_dedication_g2_var
+	}
+	if = {
+		limit = { has_variable = artifact_dedication_h_var }
+		remove_variable = artifact_dedication_h_var
+	}
+	if = {
+		limit = { has_variable = artifact_inscribe_motto_var }
+		remove_variable = artifact_inscribe_motto_var
+	}
+	if = {
+		limit = { has_variable = gone_adventuring }
+		remove_variable = gone_adventuring
 	}
 }
 
@@ -957,6 +1021,11 @@ scripted_trigger fund_inspiration_0031_title_based_option_trigger = {
 			NOT = { exists = scope:book_topic_creation }
 		}
 		AND = {
+			exists = global_var:form_toledo_decision
+			global_var:form_toledo_decision = root
+			NOT = { exists = scope:book_topic_creation }
+		}
+		AND = {
 			exists = global_var:found_kingdom_decision
 			global_var:found_kingdom_decision = root
 			exists = global_var:found_kingdom_decision_kingdom
@@ -1381,7 +1450,7 @@ scripted_effect fund_inspiration_0031_pick_options_to_show_effect = {
 					value = yes
 				}
 				set_variable = {
-					name = local_animal
+					name = animal_type
 					value = root.var:hunted_mystical_animal
 				}
 			}
@@ -1711,22 +1780,27 @@ fund_inspiration.0031 = {
 		trait = education_martial_2
 		trait = education_martial_3
 		trait = education_martial_4
+		trait = education_martial_5
 		trait = education_diplomacy_1
 		trait = education_diplomacy_2
 		trait = education_diplomacy_3
 		trait = education_diplomacy_4
+		trait = education_diplomacy_5
 		trait = education_learning_1
 		trait = education_learning_2
 		trait = education_learning_3
 		trait = education_learning_4
+		trait = education_learning_5
 		trait = education_stewardship_1
 		trait = education_stewardship_2
 		trait = education_stewardship_3
 		trait = education_stewardship_4
+		trait = education_stewardship_5
 		trait = education_intrigue_1
 		trait = education_intrigue_2
 		trait = education_intrigue_3
 		trait = education_intrigue_4
+		trait = education_intrigue_5
 		if = {
 			limit = {
 				has_education_martial_trigger = yes
@@ -1862,23 +1936,13 @@ fund_inspiration.0031 = {
 		trigger = {
 			exists = scope:lifestyle_option
 		}
-		trait = reveler_1
-		trait = reveler_2
-		trait = reveler_3
-		trait = blademaster_1
-		trait = blademaster_2
-		trait = blademaster_3
-		trait = hunter_1
-		trait = hunter_2
-		trait = hunter_3
-		trait = mystic_1
-		trait = mystic_2
-		trait = mystic_3
+		trait = lifestyle_reveler
+		trait = lifestyle_blademaster
+		trait = lifestyle_hunter
+		trait = lifestyle_mystic
 		trait = lifestyle_herbalist
 		trait = torturer
-		trait = physician_1
-		trait = physician_2
-		trait = physician_3
+		trait = lifestyle_physician
 		trait = cannibal
 		trait = witch
 		trait = deviant
@@ -2464,7 +2528,7 @@ fund_inspiration.0031 = {
 		name = fund_inspiration.0031.mystical_animal
 		trigger = {
 			exists = scope:mystical_animal_option
-			exists = var:local_animal
+			exists = var:animal_type
 		}
 		scope:inspiration_owner = {
 			set_variable = {
@@ -2472,7 +2536,7 @@ fund_inspiration.0031 = {
 				value = flag:mystical_animal
 			}
 		}
-		remove_variable = local_animal
+		remove_variable = animal_type
 		custom_tooltip = fund_inspiration.you_decide_option_tt
 		ai_chance = {
 			base = 10 #Not common if you don't have the personality for it
@@ -2809,6 +2873,7 @@ fund_inspiration.0041 = {
 			999 = { # A tribute to my victory at [location].
 				trigger = {
 					exists = var:epic_battle_location
+					exists = var:epic_loser
 				}
 				save_scope_value_as = {
 					name = option_battle
@@ -2882,6 +2947,7 @@ fund_inspiration.0041 = {
 		trigger = {
 			exists = scope:option_battle
 			exists = var:epic_battle_location
+			exists = var:epic_loser
 		}
 		name = fund_inspiration.0041.option_battle
 
@@ -3225,40 +3291,40 @@ fund_inspiration.0043 = {
 	option = { # Dynasty
 		name = fund_inspiration.0043.option_dynasty
 		trigger = {
-            AND = {
-                OR = {
-                    this = dynasty.dynast # Dynasty Head
-                    any_parent = { # Parent landless
-                        employer = prev
-                        dynasty = prev.dynasty
-                        this = dynasty.dynast
-                    }
-                }
-                NOR = {
-                    any_artifact = {
-                    	trigger_if = {
-                        	limit = { exists = var:banner_dynasty }
-                        	var:banner_dynasty = root.dynasty
-                        }
-                        trigger_else = { always = no }
-                        OR = {
-                            artifact_owner = root
-                            artifact_owner = { in_diplomatic_range = root }
-                        }
-                    }
-                    any_inspiration = {
-                    	inspiration_sponsor.dynasty = root.dynasty
-                    	inspiration_owner = {
-                    		has_variable = banner_commission
-                    		trigger_if = {
-	                        	limit = { exists = var:artifact_banner_type }
-	                        	var:artifact_banner_type = flag:dynasty
-	                        }
-	                        trigger_else = { always = no }
-                    	}
-                    }
-                }
-            }
+			AND = {
+				OR = {
+					this = dynasty.dynast # Dynasty Head
+					any_parent = { # Parent landless
+						employer = prev
+						dynasty = prev.dynasty
+						this = dynasty.dynast
+					}
+				}
+				NOR = {
+					any_artifact = {
+						trigger_if = {
+							limit = { exists = var:banner_dynasty }
+							var:banner_dynasty = root.dynasty
+						}
+						trigger_else = { always = no }
+						OR = {
+							artifact_owner = root
+							artifact_owner = { in_diplomatic_range = root }
+						}
+					}
+					any_inspiration = {
+						inspiration_sponsor.dynasty = root.dynasty
+						inspiration_owner = {
+							has_variable = banner_commission
+							trigger_if = {
+								limit = { exists = var:artifact_banner_type }
+								var:artifact_banner_type = flag:dynasty
+							}
+							trigger_else = { always = no }
+						}
+					}
+				}
+			}
 		}
 		scope:inspiration_owner = {
 			set_variable = {
@@ -3287,7 +3353,7 @@ fund_inspiration.0044 = {
 	desc = fund_inspiration.0044.desc
 	theme = realm
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = scope:antiquarian
@@ -3702,19 +3768,20 @@ scripted_effect fund_inspiration_0051_pick_options_to_show_effect = {
 	}
 }
 
-scripted_effect fund_adventure_inspiration_start_activity_effect = {
+scripted_effect fund_adventure_inspiration_start_effect = {
 	hidden_effect = {
 		if = { #Should always exists, but we add this check to avoid the tooltip errors
 			limit = {
 				exists = $ADVENTURER$.var:adventure_destination
 			}
-			get_adventure_inspiration_start_location = { ADVENTURER = $ADVENTURER$ } #To save the location so we can use it in the effect to start the activity
+			get_adventure_inspiration_start_location = { ADVENTURER = $ADVENTURER$ } #To save the location so we can use it in the effect
 		}
 		if = { #Should always exists, but we add this check to avoid the tooltip errors
 			limit = {
 				exists = scope:location
+				exists = scope:location.title_province
 			}
-			start_adventure_activity_effect = {
+			start_adventure_effect = {
 				ADVENTURER = $ADVENTURER$
 				LOCATION = scope:location.title_province
 			}
@@ -4159,6 +4226,7 @@ fund_inspiration.0052 = {
 		save_scope_as = actor
 		scope:inspiration_owner = {
 			save_scope_as = recipient
+			set_variable = gone_adventuring
 		}
 		send_interface_toast = {
 			title = fund_inspiration.0052.t
@@ -4173,14 +4241,14 @@ fund_inspiration.0052 = {
 
 # Adventure maintenance, to make sure the inspiration progresses and to trigger the completion event 
 
-scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
+scripted_effect fund_adventure_inspiration_travel_progress_effect = {
 	if = { # Africa
 		limit = {
 			var:adventure_destination = flag:africa
 		}
 		random_county_in_region = {
 			region = world_africa
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # West Africa
@@ -4189,7 +4257,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_africa_west
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # North Africa
@@ -4198,7 +4266,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_africa_north
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # East Africa
@@ -4207,7 +4275,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_africa_east
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Europe
@@ -4216,7 +4284,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_europe
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # North Europe
@@ -4225,7 +4293,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_europe_north
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # South Europe
@@ -4234,7 +4302,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_europe_south
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # West Europe
@@ -4243,7 +4311,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_europe_west
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # East Europe
@@ -4252,7 +4320,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_europe_east
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Middle East
@@ -4261,7 +4329,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_middle_east
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Middle East - Jerusalem
@@ -4270,7 +4338,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_middle_east_jerusalem
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Middle East - Arabia
@@ -4279,7 +4347,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_middle_east_arabia
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Middle East - Persia
@@ -4288,7 +4356,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_middle_east_persia
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # India
@@ -4297,7 +4365,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_india
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # India - Deccan
@@ -4306,7 +4374,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_india_deccan
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # India - Bengal
@@ -4315,7 +4383,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_india_bengal
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # India - Rajastan
@@ -4324,7 +4392,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_india_rajastan
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # The Steppe
@@ -4333,7 +4401,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_steppe
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # The Steppe - West
@@ -4342,7 +4410,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_steppe_west
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # The Steppe - East
@@ -4351,7 +4419,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_steppe_east
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # The Steppe - Tarim
@@ -4360,7 +4428,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_steppe_tarim
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Asia - Minor
@@ -4369,7 +4437,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_asia_minor
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Burma
@@ -4378,7 +4446,7 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_burma
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
 	else_if = { # Tibet
@@ -4387,34 +4455,20 @@ scripted_effect fund_adventure_inspiration_travel_progress_activity_effect = {
 		}
 		random_county_in_region = {
 			region = world_tibet
-			save_scope_as = location
+			title_province = { save_scope_as = location }
 		}
 	}
-	#Fallback
-	if = { # Fallback Tales of Ireland
-		limit = {
-			NOT = {
-				exists = scope:location
-			}
-		}
-		random_county_in_region = {
-			region = tales_of_ireland_global_region
-			save_scope_as = location
-		}
-	}
-	
-	if = {
-		limit = {
-			exists = scope:inspiration_owner.activity
-		}
-		scope:inspiration_owner.activity = {
-			move_activity = scope:location.title_province
+
+	scope:inspiration_owner = {
+		set_location = {
+			location = scope:location
+			stick_to_location = yes
 		}
 	}
 }
 
 
-# Triggered from the activity - to mimic progress happening over the years
+# Triggered from on_progress_increased in the adventurer inspiration script - to mimic progress happening over the years
 # by Linnéa Thimrén
 fund_inspiration.0053 = {
 	hidden = yes
@@ -4427,15 +4481,14 @@ fund_inspiration.0053 = {
 			inspiration_sponsor = { is_alive = yes }
 			inspiration_progress < 10
 		}
-		exists = scope:inspiration_owner.activity
 	}
 
 	immediate = {
-		fund_adventure_inspiration_travel_progress_activity_effect = yes #Adventurer moves on to a new location in the targeted region.
+		fund_adventure_inspiration_travel_progress_effect = yes #Adventurer moves on to a new location in the targeted region.
 	}
 }
 
-# Adventure - Fallback to end it all if it's been going on for too long. Triggered from the activity
+# Adventure - Fallback to end it all if it's been going on for too long. Triggered from start_adventure_effect
 # by Linnéa Thimrén
 fund_inspiration.0054 = {
 	hidden = yes
@@ -4451,10 +4504,6 @@ fund_inspiration.0054 = {
 
 	on_trigger_fail = { #If something has gone wrong we do some cleanup
 		if = {
-			limit = { exists = scope:activity }
-			scope:activity = { complete_activity = yes }
-		}
-		if = {
 			limit = { exists = scope:inspiration }
 			save_scope_as = inspiration_owner
 			inspiration_completion_effect = yes
@@ -4466,10 +4515,9 @@ fund_inspiration.0054 = {
 	}
 
 	immediate = {
-		#Finish the activity
-		if = {
-			limit = { exists = scope:activity }
-			scope:activity = { complete_activity = yes }
+		# Send adventurer back home 
+		scope:inspiration_owner = {
+			set_location_to_default = yes
 		}
 		#Finish the inspiration
 		inspiration = { change_inspiration_progress = 10 }
@@ -4493,6 +4541,16 @@ scripted_trigger fund_inspiration_0061_option_cabinet_trigger = {
 }
 scripted_trigger fund_inspiration_0061_option_throne_trigger = {
 	NOT = { exists = scope:artisan_type_throne_option }
+}
+scripted_trigger fund_inspiration_0061_option_scientific_apparatus_trigger = {
+	# Currently the only available apparatus is DLC-locked - mildly rework this trigger if we add more.
+	has_fp2_dlc_trigger = yes
+	# We need to verify that the character is eligible
+	eligible_for_scientific_apparatus_armillary_sphere_trigger = { CHARACTER = root }
+	NOT = { exists = scope:artisan_type_scientific_apparatus_option }
+}
+scripted_trigger fund_inspiration_0061_option_urn_trigger = {
+	NOT = { exists = scope:artisan_type_urn_option }
 }
 scripted_effect fund_inspiration_0061_pick_options_to_show_effect = {
 	#What options do we show?
@@ -4540,6 +4598,25 @@ scripted_effect fund_inspiration_0061_pick_options_to_show_effect = {
 				}
 				save_scope_value_as = {
 					name = artisan_type_throne_option
+					value = yes
+				}
+			}
+			# DLC options get a boost to make them more visible.
+			50 = {
+				trigger = {
+					fund_inspiration_0061_option_scientific_apparatus_trigger = yes
+				}
+				save_scope_value_as = {
+					name = artisan_type_scientific_apparatus_option
+					value = yes
+				}
+			}
+			10 = {
+				trigger = {
+					fund_inspiration_0061_option_urn_trigger = yes
+				}
+				save_scope_value_as = {
+					name = artisan_type_urn_option
 					value = yes
 				}
 			}
@@ -4647,8 +4724,8 @@ fund_inspiration.0061 = {
 			exists = scope:artisan_type_cabinet_option
 			scope:inspiration_owner = {
 				NOR = {
-					artifact_should_use_gfx_type_trigger = { TYPE = indian_building }
-					artifact_should_use_gfx_type_trigger = { TYPE = mena_building }
+					artifact_use_indian_building_visuals_trigger = yes
+					artifact_use_mena_building_visuals_trigger = yes
 				}
 			}
 		}
@@ -4670,9 +4747,7 @@ fund_inspiration.0061 = {
 		name = fund_inspiration.0061.diwan
 		trigger = {
 			exists = scope:artisan_type_cabinet_option
-			scope:inspiration_owner = {
-				artifact_should_use_gfx_type_trigger = { TYPE = indian_building }
-			}
+			scope:inspiration_owner = { artifact_use_indian_building_visuals_trigger = yes }
 		}
 		custom_tooltip = fund_inspiration.you_decide_option_tt
 		scope:inspiration_owner = {
@@ -4692,9 +4767,7 @@ fund_inspiration.0061 = {
 		name = fund_inspiration.0061.table
 		trigger = {
 			exists = scope:artisan_type_cabinet_option
-			scope:inspiration_owner = {
-				artifact_should_use_gfx_type_trigger = { TYPE = mena_building }
-			}
+			scope:inspiration_owner = { artifact_use_mena_building_visuals_trigger = yes }
 		}
 		custom_tooltip = fund_inspiration.you_decide_option_tt
 		scope:inspiration_owner = {
@@ -4744,6 +4817,43 @@ fund_inspiration.0061 = {
 			}
 		}
 	}
+
+	#Scientific Apparatus
+	option = {
+		name = fund_inspiration.0061.scientific_apparatus
+		trigger = {
+			exists = scope:artisan_type_scientific_apparatus_option
+		}
+		custom_tooltip = fund_inspiration.you_decide_option_tt
+		scope:inspiration_owner = {
+			roll_scientific_apparatus_effect = { CHARACTER = root }
+			set_variable = {
+				name = artifact_artisan_type
+				value = flag:artisan_type_scientific_apparatus
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	#Urn
+	option = {
+		name = fund_inspiration.0061.urn
+		trigger = {
+			exists = scope:artisan_type_urn_option
+		}
+		custom_tooltip = fund_inspiration.you_decide_option_tt
+		scope:inspiration_owner = {
+			set_variable = {
+				name = artifact_artisan_type
+				value = flag:artisan_type_urn
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
 }
 
 # Artisan - they know what they want to make
@@ -4791,6 +4901,12 @@ scripted_trigger fund_inspiration_0071_option_crown_trigger = {
 scripted_trigger fund_inspiration_0071_option_goblet_trigger = {
 	NOT = { exists = scope:smith_type_goblet_option }
 }
+scripted_trigger fund_inspiration_0071_option_aquamanile_trigger = {
+	has_fp2_dlc_trigger = yes
+	NOT = { exists = scope:smith_type_aquamanile_option }
+	# These occurred in other faiths too, so we don't restrict their religious usage, but were much more ubiquitous in Islam.
+	religion = religion:islam_religion
+}
 scripted_effect fund_inspiration_0071_pick_options_to_show_effect = {
 	#What options do we show?
 	hidden_effect = {
@@ -4828,6 +4944,16 @@ scripted_effect fund_inspiration_0071_pick_options_to_show_effect = {
 				}
 				save_scope_value_as = {
 					name = smith_type_goblet_option
+					value = yes
+				}
+			}
+			# DLC options get a boost to make them more visible.
+			50 = {
+				trigger = {
+					fund_inspiration_0071_option_aquamanile_trigger = yes
+				}
+				save_scope_value_as = {
+					name = smith_type_aquamanile_option
 					value = yes
 				}
 			}
@@ -4994,6 +5120,25 @@ fund_inspiration.0071 = {
 			set_variable = {
 				name = artifact_smith_type
 				value = flag:smith_type_goblet
+			}
+		}
+		ai_chance = {
+			base = 10
+			
+		}
+	}
+
+	#Aquamanile
+	option = {
+		name = fund_inspiration.0071.aquamanile
+		trigger = {
+			exists = scope:smith_type_aquamanile_option
+		}
+		custom_tooltip = fund_inspiration.you_decide_option_tt
+		scope:inspiration_owner = {
+			set_variable = {
+				name = artifact_smith_type
+				value = flag:smith_type_aquamanile
 			}
 		}
 		ai_chance = {
@@ -5307,16 +5452,16 @@ fund_inspiration.1001 = {
 		desc = fund_inspiration.1001.desc
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:tapestry
-			    }
-			    desc = artifact_wall_tapestry_description
+				}
+				desc = artifact_wall_tapestry_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:small_hide
-			    }
-			    desc = artifact_small_hide_description
+				}
+				desc = artifact_small_hide_description
 			}
 			desc = artifact_crown_description 
 		}
@@ -5327,9 +5472,9 @@ fund_inspiration.1001 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -5393,9 +5538,11 @@ fund_inspiration.1001 = {
 			limit = {
 				has_character_flag = trigger_adventure_completion_event
 			}
-			create_artifact_animal_hide_small_effect = {
+			create_artifact_animal_hide_effect = {
 				OWNER = root
 				HUNTER = scope:inspiration_owner
+				LEGENDARY = no
+				ANIMAL = flag:none
 			}
 			save_scope_value_as = {
 				name = small_hide
@@ -5535,9 +5682,9 @@ fund_inspiration.1011 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_weapon_completion_event
@@ -5725,9 +5872,9 @@ fund_inspiration.1021 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_armor_completion_event
@@ -5915,7 +6062,7 @@ fund_inspiration.1031 = {
 			desc = fund_inspiration.1031.desc_opening
 			first_valid = {
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						OR = {
 							AND = {
 								scope:newly_created_artifact = { has_artifact_feature = book_subject_witch }
@@ -5930,27 +6077,27 @@ fund_inspiration.1031 = {
 								trait_is_criminal_in_faith_trigger = { TRAIT = deviant FAITH = root.faith GENDER_CHARACTER = root }
 							}
 						}
-				    }
-				    desc = fund_inspiration.1031.desc_crime
+					}
+					desc = fund_inspiration.1031.desc_crime
 				}
 				triggered_desc = {
-				    trigger = { # Soulmate has passed away :(
+					trigger = { # Soulmate has passed away :(
 						exists = scope:portrait_2_soulmate
 						exists = scope:soulmate
 						scope:soulmate = { is_alive = no }
-				    }
-				    desc = fund_inspiration.1031.desc_soulmate_died
+					}
+					desc = fund_inspiration.1031.desc_soulmate_died
 				}
 				triggered_desc = {
-				    trigger = { # Nemesis has passed away
+					trigger = { # Nemesis has passed away
 						exists = scope:portrait_2_nemesis
 						exists = scope:nemesis
 						scope:nemesis = { is_alive = no }
-				    }
-				    desc = fund_inspiration.1031.desc_nemesis_died
+					}
+					desc = fund_inspiration.1031.desc_nemesis_died
 				}
 				triggered_desc = {
-				    trigger = { # Cat has passed away
+					trigger = { # Cat has passed away
 						scope:newly_created_artifact = { has_artifact_feature = book_subject_animals }
 						exists = scope:topic
 						scope:topic = flag:animals_your_cat
@@ -5969,11 +6116,11 @@ fund_inspiration.1031 = {
 								}
 							}
 						}
-				    }
-				    desc = fund_inspiration.1031.desc_cat_died
+					}
+					desc = fund_inspiration.1031.desc_cat_died
 				}
 				triggered_desc = {
-				    trigger = { # Dog has passed away
+					trigger = { # Dog has passed away
 						scope:newly_created_artifact = { has_artifact_feature = book_subject_animals }
 						exists = scope:topic
 						scope:topic = flag:animals_your_dog
@@ -5990,14 +6137,14 @@ fund_inspiration.1031 = {
 								}
 							}
 						}
-				    }
-				    desc = fund_inspiration.1031.desc_dog_died
+					}
+					desc = fund_inspiration.1031.desc_dog_died
 				}
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						scope:book_content_quality < 40
-				    }
-				    desc = fund_inspiration.1031.desc_low_content_quality
+					}
+					desc = fund_inspiration.1031.desc_low_content_quality
 				}
 				desc = fund_inspiration.1031.desc
 			}
@@ -6028,9 +6175,9 @@ fund_inspiration.1031 = {
 		}
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_book_completion_event
@@ -6256,60 +6403,60 @@ fund_inspiration.1031 = {
 # Book artifact - notification for soulmate that you wrote a book about them
 # by Linnéa Thimrén
 fund_inspiration.1032 = {
-    type = character_event
-    title = fund_inspiration.1032.t
-    desc = fund_inspiration.1032.desc
-    theme = inspiration_complete
+	type = character_event
+	title = fund_inspiration.1032.t
+	desc = fund_inspiration.1032.desc
+	theme = inspiration_complete
 	left_portrait = {
 		character = scope:inspiration_sponsor
 		animation = flirtation
 	}
 
-    immediate = {
-    	add_prestige = medium_prestige_gain
-    }
+	immediate = {
+		add_prestige = medium_prestige_gain
+	}
 
-    option = {
-        name = fund_inspiration.1032.a
-    }
+	option = {
+		name = fund_inspiration.1032.a
+	}
 }
 
 # Book artifact - notification for nemesis that you wrote a book about them
 # by Linnéa Thimrén
 fund_inspiration.1033 = {
-    type = character_event
-    title = fund_inspiration.1032.t
-    desc = fund_inspiration.1033.desc
-    theme = inspiration_complete
+	type = character_event
+	title = fund_inspiration.1032.t
+	desc = fund_inspiration.1033.desc
+	theme = inspiration_complete
 	left_portrait = {
 		character = scope:inspiration_sponsor
 		animation = flirtation
 	}
 
-    immediate = {
-    	add_prestige = medium_prestige_loss
-    }
+	immediate = {
+		add_prestige = medium_prestige_loss
+	}
 
-    option = {
-        name = {
-        	trigger = {
-        		OR = {
-        			dread >= medium_dread
-        			tyranny >= medium_tyranny
-        		}
-        	}
-        	text = fund_inspiration.1033.a_proud
-        }
-        name = {
-        	trigger = {
-        		NOR = {
-        			dread >= medium_dread
-        			tyranny >= medium_tyranny
-        		}
-        	}
-        	text = fund_inspiration.1033.a
-        }
-    }
+	option = {
+		name = {
+			trigger = {
+				OR = {
+					dread >= medium_dread
+					tyranny >= medium_tyranny
+				}
+			}
+			text = fund_inspiration.1033.a_proud
+		}
+		name = {
+			trigger = {
+				NOR = {
+					dread >= medium_dread
+					tyranny >= medium_tyranny
+				}
+			}
+			text = fund_inspiration.1033.a
+		}
+	}
 }
 
 # Weaver artifact
@@ -6327,9 +6474,9 @@ fund_inspiration.1041 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_tapestry_completion_event
@@ -6345,7 +6492,6 @@ fund_inspiration.1041 = {
 				var:artifact_tapestry_scene = {
 					save_scope_as = tapestry_scene
 				}
-				remove_variable = artifact_tapestry_scene
 			}
 		}
 		create_artifact_tapestry_effect = {
@@ -6520,9 +6666,9 @@ fund_inspiration.1042 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_banner_completion_event
@@ -6813,11 +6959,7 @@ fund_inspiration.1051 = {
 			}
 			triggered_desc = {
 				trigger = {
-					OR = {
-						exists = scope:hide_big
-						exists = scope:hide_small
-						exists = scope:hide_medium
-					}
+					exists = scope:animal_hide_size
 				}
 				desc = fund_inspiration.1051.desc.hide
 			}
@@ -6835,10 +6977,10 @@ fund_inspiration.1051 = {
 		animation = ecstasy
 	}
 	artifact = { # To display the artifact in the event-window
-        trigger = { exists = scope:newly_created_artifact }
-        target = scope:newly_created_artifact
-        position = lower_right_portrait
-    }
+		trigger = { exists = scope:newly_created_artifact }
+		target = scope:newly_created_artifact
+		position = lower_right_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_adventure_completion_event
@@ -6876,19 +7018,7 @@ fund_inspiration.1051 = {
 		}
 		else_if = {
 			limit = {
-				exists = scope:hide_big
-			}
-			custom_tooltip = create_artifact_big_hide_tooltip
-		}
-		else_if = {
-			limit = {
-				exists = scope:hide_medium
-			}
-			custom_tooltip = create_artifact_medium_hide_tooltip
-		}
-		else_if = {
-			limit = {
-				exists = scope:hide_small
+				exists = scope:animal_hide_size
 			}
 			custom_tooltip = create_artifact_small_hide_tooltip
 		}
@@ -6947,8 +7077,15 @@ fund_inspiration.1051 = {
 			}
 		}
 		inspiration_completion_effect = yes
-		scope:inspiration_owner.activity = {
-			complete_activity = yes
+
+		# Remove the adventuring variable if the inspired character is an adventurer
+		scope:inspiration_owner = {
+			if = {
+				limit = { has_variable = gone_adventuring }
+				remove_variable = gone_adventuring
+			}
+			# Send them back home 
+			set_location_to_default = yes
 		}
 		hidden_effect = {
 			if = {
@@ -6965,40 +7102,40 @@ fund_inspiration.1061 = {
 	type = character_event
 	title = fund_inspiration.1001.t
 	desc = {
-    	desc = fund_inspiration.1061.desc_floor_bound_artifact
-    	first_valid = {
-    		triggered_desc = {
-			    trigger = {
+		desc = fund_inspiration.1061.desc_floor_bound_artifact
+		first_valid = {
+			triggered_desc = {
+				trigger = {
 					exists = scope:small_box
-			    }
-			    desc = artifact_box_small_description
+				}
+				desc = artifact_box_small_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:medium_box
-			    }
-			    desc = artifact_box_medium_description
+				}
+				desc = artifact_box_medium_description
 			}
-    		triggered_desc = {
+			triggered_desc = {
 				trigger = {
 					exists = scope:sculpture_chest
-			    }
-			    desc = artifact_chest_description
+				}
+				desc = artifact_chest_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:sculpture
 					faith = {
 						NOR = {
 							has_doctrine = tenet_aniconism
-							always = no
+							religion = religion:islam_religion
 						}
 					}
-			    }
-			    desc = artifact_sculpture_description
+				}
+				desc = artifact_sculpture_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:sculpture
 					faith = {
 						OR = {
@@ -7006,56 +7143,58 @@ fund_inspiration.1061 = {
 							always = no
 						}
 					}
-			    }
-			    desc = artifact_sculpture_animal_description
+				}
+				desc = artifact_sculpture_animal_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:sculpture_cabinet
 					scope:inspiration_owner = {
 						NOR = {
-							artifact_should_use_gfx_type_trigger = { TYPE = indian_building }
-							artifact_should_use_gfx_type_trigger = { TYPE = mena_building }
+							artifact_use_indian_building_visuals_trigger = yes
+							artifact_use_mena_building_visuals_trigger = yes
 						}
 					}
-			    }
-			    desc = artifact_cabinet_description
+				}
+				desc = artifact_cabinet_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:sculpture_cabinet
-					scope:inspiration_owner = {
-						artifact_should_use_gfx_type_trigger = { TYPE = indian_building }
-					}
-			    }
-			    desc = artifact_diwan_description
+					scope:inspiration_owner = { artifact_use_indian_building_visuals_trigger = yes }
+				}
+				desc = artifact_diwan_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:sculpture_cabinet
-					scope:inspiration_owner = {
-						artifact_should_use_gfx_type_trigger = { TYPE = mena_building }
-					}
-			    }
-			    desc = artifact_table_description
+					scope:inspiration_owner = { artifact_use_mena_building_visuals_trigger = yes }
+				}
+				desc = artifact_table_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:throne
-			    }
-			    desc = artifact_throne_description
+				}
+				desc = artifact_throne_description
 			}
-    	}
-    }
+			triggered_desc = {
+				trigger = {
+					exists = scope:armillary_sphere
+				}
+				desc = fp2_armillary_sphere_desc
+			}
+		}
+	}
 	theme = inspiration_complete
 	left_portrait = {
 		character = scope:inspiration_owner
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_artisan_completion_event
@@ -7143,6 +7282,32 @@ fund_inspiration.1061 = {
 			}
 			save_scope_value_as = {
 				name = throne
+				value = yes
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner.var:artifact_artisan_type = flag:artisan_type_scientific_apparatus
+			}
+			create_artifact_fp2_armillary_sphere_effect = {
+				OWNER = root
+				MAKER = scope:inspiration_owner
+			}
+			save_scope_value_as = {
+				name = armillary_sphere
+				value = yes
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner.var:artifact_artisan_type = flag:artisan_type_urn
+			}
+			create_artifact_urn_effect = {
+				OWNER = root
+				POTTER = scope:inspiration_owner
+			}
+			save_scope_value_as = {
+				name = urn
 				value = yes
 			}
 		}
@@ -7295,28 +7460,34 @@ fund_inspiration.1071 = {
 			desc = fund_inspiration.1061.desc
 			first_valid = {
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						exists = scope:brooch
-				    }
-				    desc = artifact_brooch_description
+					}
+					desc = artifact_brooch_description
 				}
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						exists = scope:regalia
-				    }
-				    desc = artifact_regalia_description
+					}
+					desc = artifact_regalia_description
 				}
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						exists = scope:crown
-				    }
-				    desc = artifact_crown_description
+					}
+					desc = artifact_crown_description
 				}
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						exists = scope:goblet
-				    }
-				    desc = artifact_goblet_description
+					}
+					desc = artifact_goblet_description
+				}
+				triggered_desc = {
+					trigger = {
+						exists = scope:aquamanile
+					}
+					desc = fp2_andalusian_aquamanile_desc
 				}
 			}
 		}
@@ -7327,9 +7498,9 @@ fund_inspiration.1071 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_smith_completion_event
@@ -7388,6 +7559,19 @@ fund_inspiration.1071 = {
 			}
 			save_scope_value_as = {
 				name = goblet
+				value = yes
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner.var:artifact_smith_type = flag:smith_type_aquamanile
+			}
+			create_artifact_fp2_andalusian_aquamanile_effect = {
+				OWNER = root
+				SMITH = scope:inspiration_owner
+			}
+			save_scope_value_as = {
+				name = aquamanile
 				value = yes
 			}
 		}
@@ -7539,118 +7723,118 @@ fund_inspiration.1081 = {
 		desc = fund_inspiration.1081.desc_opening
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:immortality
 					scope:newly_created_artifact = {
 						has_artifact_feature = elixir_youth
 					}
-			    }
-			    desc = {
-			    	desc = fund_inspiration.1081.immortality_fail_desc_opening
-			    	first_valid = {
-			    		triggered_desc = {
-			    			trigger = { age < 25 }
-			    			desc = fund_inspiration.1081.immortality_fail_desc_young
-			    		}
-			    		desc = fund_inspiration.1081.immortality_fail_desc_old
-			    	}
-			    }
+				}
+				desc = {
+					desc = fund_inspiration.1081.immortality_fail_desc_opening
+					first_valid = {
+						triggered_desc = {
+							trigger = { age < 25 }
+							desc = fund_inspiration.1081.immortality_fail_desc_young
+						}
+						desc = fund_inspiration.1081.immortality_fail_desc_old
+					}
+				}
 			}
 			triggered_desc = {
-			    trigger = {
-			    	OR = {
+				trigger = {
+					OR = {
 						exists = scope:elixirs
 						exists = scope:immortality
 					}
-			    }
-			    desc = {
-			    	first_valid = {
-			    		triggered_desc = {
-			    			trigger = { age < 25 }
-			    			desc = fund_inspiration.1081.elixir_desc_desc_young
-			    		}
-			    		desc = fund_inspiration.1081.elixir_desc_desc_old
-			    	}
-			    }
+				}
+				desc = {
+					first_valid = {
+						triggered_desc = {
+							trigger = { age < 25 }
+							desc = fund_inspiration.1081.elixir_desc_desc_young
+						}
+						desc = fund_inspiration.1081.elixir_desc_desc_old
+					}
+				}
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:panacea
-			    }
-			    desc = fund_inspiration.1081.panacea_desc
+				}
+				desc = fund_inspiration.1081.panacea_desc
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:metals
-			    }
-			    desc = {
-			    	first_valid = {
-			    		triggered_desc = {
-			    			trigger = {
-			    				exists = scope:philosophers_stone
-			    			}
-			    			desc = fund_inspiration.1081.metals_philosophers_stone_desc
-			    		}
-			    		triggered_desc = {
-			    			trigger = {
-			    				exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
-			    				scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:mercury
-			    			}
-			    			desc = fund_inspiration.1081.metals_mercury_desc
-			    		}
-			    		triggered_desc = {
-			    			trigger = {
-			    				exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
-			    				scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:arsenic
-			    			}
-			    			desc = fund_inspiration.1081.metals_arsenic_desc
-			    		}
-			    		triggered_desc = {
-			    			trigger = {
-			    				exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
-			    				scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:gold
-			    			}
-			    			desc = fund_inspiration.1081.metals_gold_desc
-			    		}
-			    		triggered_desc = {
-			    			trigger = {
-			    				exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
-			    				scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:silver
-			    			}
-			    			desc = fund_inspiration.1081.metals_silver_desc
-			    		}
-			    		desc = fund_inspiration.1081.metals_fallback_desc
-			    	}
-			    }
+				}
+				desc = {
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								exists = scope:philosophers_stone
+							}
+							desc = fund_inspiration.1081.metals_philosophers_stone_desc
+						}
+						triggered_desc = {
+							trigger = {
+								exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
+								scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:mercury
+							}
+							desc = fund_inspiration.1081.metals_mercury_desc
+						}
+						triggered_desc = {
+							trigger = {
+								exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
+								scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:arsenic
+							}
+							desc = fund_inspiration.1081.metals_arsenic_desc
+						}
+						triggered_desc = {
+							trigger = {
+								exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
+								scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:gold
+							}
+							desc = fund_inspiration.1081.metals_gold_desc
+						}
+						triggered_desc = {
+							trigger = {
+								exists = scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype
+								scope:inspiration_owner.var:artifact_alchemy_type_metal_subtype = flag:silver
+							}
+							desc = fund_inspiration.1081.metals_silver_desc
+						}
+						desc = fund_inspiration.1081.metals_fallback_desc
+					}
+				}
 			}
 		}
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:philosophers_stone
-			    }
-			    desc = artifact_philosophers_stone_description
+				}
+				desc = artifact_philosophers_stone_description
 			}
 			triggered_desc = {
-			    trigger = {
-			    	OR = {
+				trigger = {
+					OR = {
 						exists = scope:elixirs
 						exists = scope:immortality
 					}
-			    }
-			    desc = artifact_elixir_description
+				}
+				desc = artifact_elixir_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:metals
-			    }
-			    desc = artifact_book_description
+				}
+				desc = artifact_book_description
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:panacea
-			    }
-			    desc = artifact_panacea_description
+				}
+				desc = artifact_panacea_description
 			}
 		}
 	}
@@ -7660,9 +7844,9 @@ fund_inspiration.1081 = {
 		animation = personality_honorable
 	}
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 
 	trigger = {
 		has_character_flag = trigger_alchemy_completion_event
@@ -7671,7 +7855,7 @@ fund_inspiration.1081 = {
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
 		remove_character_flag = trigger_alchemy_completion_event
-		capital_barony = { save_scope_as = location } #For artifact creation
+		capital_province = { save_scope_as = location } #For artifact creation
 		if = {
 			limit = {
 				scope:inspiration_owner.var:artifact_alchemy_type = flag:alchemy_type_elixirs
@@ -7889,52 +8073,52 @@ fund_inspiration.9001 = {
 		desc = fund_inspiration.9001.desc
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weapon_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_weapon
+				}
+				desc = fund_inspiration.9001.desc_weapon
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:armor_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_armor
+				}
+				desc = fund_inspiration.9001.desc_armor
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:book_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_book
+				}
+				desc = fund_inspiration.9001.desc_book
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weaver_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_weaver
+				}
+				desc = fund_inspiration.9001.desc_weaver
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:adventure_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_adventurer
+				}
+				desc = fund_inspiration.9001.desc_adventurer
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:artisan_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_artisan
+				}
+				desc = fund_inspiration.9001.desc_artisan
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:smith_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_smith
+				}
+				desc = fund_inspiration.9001.desc_smith
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:alchemy_inspiration
-			    }
-			    desc = fund_inspiration.9001.desc_alchemy
+				}
+				desc = fund_inspiration.9001.desc_alchemy
 			}
 		}
 	}
@@ -7967,52 +8151,52 @@ fund_inspiration.9002 = {
 		desc = fund_inspiration.9002.desc
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weapon_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_weapon
+				}
+				desc = fund_inspiration.9002.desc_weapon
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:armor_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_armor
+				}
+				desc = fund_inspiration.9002.desc_armor
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:book_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_book
+				}
+				desc = fund_inspiration.9002.desc_book
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weaver_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_weaver
+				}
+				desc = fund_inspiration.9002.desc_weaver
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:adventure_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_adventurer
+				}
+				desc = fund_inspiration.9002.desc_adventurer
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:artisan_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_artisan
+				}
+				desc = fund_inspiration.9002.desc_artisan
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:smith_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_smith
+				}
+				desc = fund_inspiration.9002.desc_smith
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:alchemy_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_alchemy
+				}
+				desc = fund_inspiration.9002.desc_alchemy
 			}
 		}
 	}
@@ -8044,52 +8228,52 @@ fund_inspiration.9003 = {
 		desc = fund_inspiration.9003.desc
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weapon_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_weapon
+				}
+				desc = fund_inspiration.9002.desc_weapon
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:armor_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_armor
+				}
+				desc = fund_inspiration.9002.desc_armor
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:book_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_book
+				}
+				desc = fund_inspiration.9002.desc_book
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:weaver_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_weaver
+				}
+				desc = fund_inspiration.9002.desc_weaver
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:adventure_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_adventurer
+				}
+				desc = fund_inspiration.9002.desc_adventurer
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:artisan_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_artisan
+				}
+				desc = fund_inspiration.9002.desc_artisan
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:smith_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_smith
+				}
+				desc = fund_inspiration.9002.desc_smith
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					exists = scope:alchemy_inspiration
-			    }
-			    desc = fund_inspiration.9002.desc_alchemy
+				}
+				desc = fund_inspiration.9002.desc_alchemy
 			}
 		}
 	}
@@ -8149,6 +8333,10 @@ fund_inspiration.9004 = {
 	}
 
 	immediate = {
+		# Move the adventurer back to their default location
+		scope:inspiration_owner = {
+			set_location_to_default = yes
+		}
 		end_inspiration_sponsorship = scope:inspiration
 	}
 	option = {
@@ -8180,19 +8368,19 @@ fund_inspiration.9005 = {
 		desc = fund_inspiration.9005.desc_intro
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					any_in_list = {
 						list = inherited_inspiration_list
 						count > 1
 					}
-			    }
-			    desc = fund_inspiration.9005.desc_multiple
+				}
+				desc = fund_inspiration.9005.desc_multiple
 			}
 			desc = fund_inspiration.9005.desc_single
 		}
 	}
 	theme = realm
-	override_background = { event_background = study }
+	override_background = { reference = study }
 	left_portrait = scope:inherited_insp_owner
 	
 	trigger = {
@@ -8753,6 +8941,7 @@ fund_inspiration.2002 = {
 							left_icon = scope:neighbouring_county_for_material.holder
 							scope:neighbouring_county_for_material.holder = {
 								progress_towards_rival_effect = {
+									REASON = rival_kidnapped_peasants
 									CHARACTER = root
 									OPINION = -50
 								}
@@ -8823,7 +9012,7 @@ fund_inspiration.2003 = {
 
 	theme = realm
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -8913,11 +9102,13 @@ fund_inspiration.2003 = {
 					left_icon = root
 					scope:inspiration_owner = {
 						progress_towards_rival_effect = {
+							REASON = rival_dispute_inspiration
 							CHARACTER = root
-							OPINION = no
+							OPINION = 0
 						}
 						progress_towards_rival_effect = {
 							CHARACTER = scope:previous_inspired
+							REASON = rival_dispute_inspiration
 							OPINION = -30
 						}
 					}
@@ -9014,8 +9205,9 @@ fund_inspiration.2003 = {
 		name = fund_inspiration.2003.c
 		scope:previous_inspired = {
 			progress_towards_rival_effect = {
+				REASON = rival_dispute_inspiration
 				CHARACTER = scope:inspiration_owner
-				OPINION = no
+				OPINION = 0
 			}
 			add_opinion = {
 				target = root
@@ -9026,6 +9218,7 @@ fund_inspiration.2003 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:inspiration_owner
 			OPINION = 30
+			REASON = friend_new_inspiration_owner
 		}
 		
 		stress_impact = {
@@ -9070,8 +9263,8 @@ fund_inspiration.2004 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
-			    	# For artifacts that use metal in some way
+				trigger = {
+					# For artifacts that use metal in some way
 					scope:inspiration = {
 						OR = {
 							has_inspiration_type = weapon_inspiration
@@ -9079,12 +9272,12 @@ fund_inspiration.2004 = {
 							has_inspiration_type = armor_inspiration
 						}
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_metal
+				}
+				desc = fund_inspiration.2004.desc_metal
 			}
 			triggered_desc = {
-			    trigger = {
-			    	# For artifacts that use fabric in some way
+				trigger = {
+					# For artifacts that use fabric in some way
 					scope:inspiration = {
 						OR = {
 							AND = {
@@ -9103,12 +9296,12 @@ fund_inspiration.2004 = {
 							}
 						}
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_fabric
+				}
+				desc = fund_inspiration.2004.desc_fabric
 			}
 			triggered_desc = {
-			    trigger = {
-			    	# For artifacts that use thread in some way
+				trigger = {
+					# For artifacts that use thread in some way
 					scope:inspiration = {
 						OR = {
 							has_inspiration_type = weaver_inspiration
@@ -9124,49 +9317,49 @@ fund_inspiration.2004 = {
 							}
 						}
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_thread
+				}
+				desc = fund_inspiration.2004.desc_thread
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = {
 						has_inspiration_type = artisan_inspiration
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_wood
+				}
+				desc = fund_inspiration.2004.desc_wood
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = {
 						has_inspiration_type = book_inspiration
 					}
-			    }
-			    desc = {
-			    	random_valid = {
-			    		desc = fund_inspiration.2004.desc_paper
-			    		desc = fund_inspiration.2004.desc_ink
-			    	}
-			    }
+				}
+				desc = {
+					random_valid = {
+						desc = fund_inspiration.2004.desc_paper
+						desc = fund_inspiration.2004.desc_ink
+					}
+				}
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = {
 						has_inspiration_type = alchemy_inspiration
 						exists = scope:inspiration_owner.var:artifact_alchemy_type
 						scope:inspiration_owner.var:artifact_alchemy_type = flag:alchemy_type_metals
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_alchemy_metal
+				}
+				desc = fund_inspiration.2004.desc_alchemy_metal
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = {
 						has_inspiration_type = alchemy_inspiration
 						exists = scope:inspiration_owner.var:artifact_alchemy_type
 						scope:inspiration_owner.var:artifact_alchemy_type = flag:alchemy_type_elixirs
 					}
-			    }
-			    desc = fund_inspiration.2004.desc_elixirs
+				}
+				desc = fund_inspiration.2004.desc_elixirs
 			}
 			desc = fund_inspiration.2004.desc_fallback
 		}
@@ -9174,7 +9367,7 @@ fund_inspiration.2004 = {
 	}
 	theme = realm
 	override_background = {
-		event_background = market
+		reference = market
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -9371,29 +9564,29 @@ fund_inspiration.2005 = {
 		desc = fund_inspiration.2005.desc_opening
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = { has_inspiration_type = weapon_inspiration }
-			    }
-			    desc = fund_inspiration.2005.desc_weapon
+				}
+				desc = fund_inspiration.2005.desc_weapon
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = { has_inspiration_type = armor_inspiration }
-			    }
-			    desc = fund_inspiration.2005.desc_armor
+				}
+				desc = fund_inspiration.2005.desc_armor
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					scope:inspiration = { has_inspiration_type = smith_inspiration }
-			    }
-			    desc = fund_inspiration.2005.desc_smith
+				}
+				desc = fund_inspiration.2005.desc_smith
 			}
 		}
 		desc = fund_inspiration.2005.desc_ending
 	}
 	theme = realm
 	override_background = {
-		event_background = armory
+		reference = armory
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -9742,7 +9935,7 @@ fund_inspiration.2030 = {
 	desc = fund_inspiration.2030.desc
 	theme = realm
 	override_background = {
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	left_portrait = {
 		character = scope:friend
@@ -9781,7 +9974,7 @@ fund_inspiration.2030 = {
 			type = friend
 			limit = { fund_inspiration_court_relation_trigger = yes }
 			save_scope_as = friend
-			progress_towards_friend_effect = { CHARACTER = scope:inspiration_owner OPINION = yes }
+			progress_towards_friend_effect = { CHARACTER = scope:inspiration_owner REASON = friend_helped_inspiration OPINION = default_friend_opinion }
 		}
 		random_list = {
 			2 = {
@@ -9811,7 +10004,7 @@ fund_inspiration.2040 = {
 	desc = fund_inspiration.2040.desc
 	theme = realm
 	override_background = {
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -10197,7 +10390,7 @@ fund_inspiration.2050 = {
 	desc = fund_inspiration.2050.desc
 	theme = realm
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -10290,22 +10483,27 @@ fund_inspiration.2050 = {
 		trait = education_diplomacy_2
 		trait = education_diplomacy_3
 		trait = education_diplomacy_4
+		trait = education_diplomacy_5
 		trait = education_martial_1
 		trait = education_martial_2
 		trait = education_martial_3
 		trait = education_martial_4
+		trait = education_martial_5
 		trait = education_stewardship_1
 		trait = education_stewardship_2
 		trait = education_stewardship_3
 		trait = education_stewardship_4
+		trait = education_stewardship_5
 		trait = education_intrigue_1
 		trait = education_intrigue_2
 		trait = education_intrigue_3
 		trait = education_intrigue_4
+		trait = education_intrigue_5
 		trait = education_learning_1
 		trait = education_learning_2
 		trait = education_learning_3
 		trait = education_learning_4
+		trait = education_learning_5
 		if = { # Martial
 			limit = {
 				fund_inspiration_martial_trigger = no
@@ -10477,94 +10675,94 @@ fund_inspiration.2060 = {
 	title = fund_inspiration.2060.t
 	desc = {
 		random_valid = {
-		    triggered_desc = {
-		        trigger = {
+			triggered_desc = {
+				trigger = {
 					OR = {
 						piety_level >= high_piety_level
 						has_trait = saoshyant
 						has_trait = savior
 						has_trait = saint
 					}
-		        }
-		        desc =  fund_inspiration.2060.desc.religious
-		    }
-		    triggered_desc = {
-		        trigger = { prestige_level >= high_prestige_level }
-		        desc =  fund_inspiration.2060.desc.fame
-		    }
-		    triggered_desc = {
-		        trigger = { court_grandeur_current_level >= 8 }
-		        desc =  fund_inspiration.2060.desc.court
-		    }
+				}
+				desc =  fund_inspiration.2060.desc.religious
+			}
+			triggered_desc = {
+				trigger = { prestige_level >= high_prestige_level }
+				desc =  fund_inspiration.2060.desc.fame
+			}
+			triggered_desc = {
+				trigger = { court_grandeur_current_level >= 8 }
+				desc =  fund_inspiration.2060.desc.court
+			}
 		}
 		desc = fund_inspiration.2060.desc
 		random_valid = {
-		    triggered_desc = {
-		        trigger = {
-		        	OR = {
-		        		piety_level >= high_piety_level
-			       		has_trait = saoshyant
-			        	has_trait = savior
-			        	has_trait = saint
-			        }
-		        }
-		        desc =  fund_inspiration.2060.desc.brotherhood
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	OR = {
-		        		piety_level >= high_piety_level
-			       		has_trait = saoshyant
-			        	has_trait = savior
-			        	has_trait = saint
-			        }
-		        }
-		        desc =  fund_inspiration.2060.desc.abbey
-		    }
-		    triggered_desc = {
-		        trigger = {
-			        OR = {
-			        	prestige_level >= high_prestige_level
-			        	court_grandeur_current_level >= 8
-			        }
-			    }
-		        desc =  fund_inspiration.2060.desc.mercenary
-		    }
-		    triggered_desc = {
-		        trigger = {
-			        OR = {
-			        	prestige_level >= high_prestige_level
-			        	court_grandeur_current_level >= 8
-			        }
-			    }
-		        desc =  fund_inspiration.2060.desc.guild
-		    }
+			triggered_desc = {
+				trigger = {
+					OR = {
+						piety_level >= high_piety_level
+				   		has_trait = saoshyant
+						has_trait = savior
+						has_trait = saint
+					}
+				}
+				desc =  fund_inspiration.2060.desc.brotherhood
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						piety_level >= high_piety_level
+				   		has_trait = saoshyant
+						has_trait = savior
+						has_trait = saint
+					}
+				}
+				desc =  fund_inspiration.2060.desc.abbey
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						prestige_level >= high_prestige_level
+						court_grandeur_current_level >= 8
+					}
+				}
+				desc =  fund_inspiration.2060.desc.mercenary
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						prestige_level >= high_prestige_level
+						court_grandeur_current_level >= 8
+					}
+				}
+				desc =  fund_inspiration.2060.desc.guild
+			}
 		}
 		random_valid = {
-		    triggered_desc = {
-		        trigger = { piety_level >= high_piety_level }
-		        desc =  fund_inspiration.2060.piety
-		    }
-		    triggered_desc = {
-		        trigger = { has_trait = saoshyant }
-		        desc =  fund_inspiration.2060.saoshyant
-		    }
-		    triggered_desc = {
-		        trigger = { has_trait = savior }
-		        desc =  fund_inspiration.2060.savior
-		    }
-		    triggered_desc = {
-		        trigger = { has_trait = saint }
-		        desc =  fund_inspiration.2060.saint
-		    }
-		    triggered_desc = {
-		        trigger = { prestige_level >= high_prestige_level }
-		        desc =  fund_inspiration.2060.prestige
-		    }
-		    triggered_desc = {
-		        trigger = { court_grandeur_current_level >= 8 }
-		        desc =  fund_inspiration.2060.grandeur
-		    }
+			triggered_desc = {
+				trigger = { piety_level >= high_piety_level }
+				desc =  fund_inspiration.2060.piety
+			}
+			triggered_desc = {
+				trigger = { has_trait = saoshyant }
+				desc =  fund_inspiration.2060.saoshyant
+			}
+			triggered_desc = {
+				trigger = { has_trait = savior }
+				desc =  fund_inspiration.2060.savior
+			}
+			triggered_desc = {
+				trigger = { has_trait = saint }
+				desc =  fund_inspiration.2060.saint
+			}
+			triggered_desc = {
+				trigger = { prestige_level >= high_prestige_level }
+				desc =  fund_inspiration.2060.prestige
+			}
+			triggered_desc = {
+				trigger = { court_grandeur_current_level >= 8 }
+				desc =  fund_inspiration.2060.grandeur
+			}
 		}
 		desc = fund_inspiration.2060.desc_outro
 	}
@@ -10807,124 +11005,124 @@ fund_inspiration.2070 = {
 	desc = {
 		desc = fund_inspiration.2070.desc
 		first_valid = {
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = {
-		        		OR = {
-		        			has_trait = profligate
-		        			has_trait = improvident
-		        			has_trait = depressed
-		        			has_trait = drunkard
-		        			has_trait = hashishiyah
-		        			has_trait = rakish
-		        			has_trait = comfort_eater
-		        			has_trait = wounded
-		        			has_trait = pregnant
-		        			has_treatable_disease_trigger = yes
-		        		}
-		        	}
-		        }
-		        desc = fund_inspiration.2070.desc.stalled
-		    }
-		    triggered_desc = {
-		       trigger = {
-		        	scope:inspiration_owner = {
-		        		OR = {
-		        			has_trait = lunatic
-		        			has_trait = possessed
-		        			has_trait = reclusive
-		        			has_trait = irritable
-		        		}
-		        	}
-		        }
-		        desc = fund_inspiration.2070.desc.wasted
-		    }	
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = {
+						OR = {
+							has_trait = profligate
+							has_trait = improvident
+							has_trait = depressed
+							has_trait = drunkard
+							has_trait = hashishiyah
+							has_trait = rakish
+							has_trait = comfort_eater
+							has_trait = wounded
+							has_trait = pregnant
+							has_treatable_disease_trigger = yes
+						}
+					}
+				}
+				desc = fund_inspiration.2070.desc.stalled
+			}
+			triggered_desc = {
+			   trigger = {
+					scope:inspiration_owner = {
+						OR = {
+							has_trait = lunatic
+							has_trait = possessed
+							has_trait = reclusive
+							has_trait = irritable
+						}
+					}
+				}
+				desc = fund_inspiration.2070.desc.wasted
+			}	
 		}
 		first_valid = {
 			triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = profligate }
-		        }
-		        desc = fund_inspiration.2070.desc.profligate
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = improvident }
-		        }
-		        desc = fund_inspiration.2070.desc.improvident
-		    }
+				trigger = {
+					scope:inspiration_owner = { has_trait = profligate }
+				}
+				desc = fund_inspiration.2070.desc.profligate
+			}
 			triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = depressed }
-		        }
-		        desc = fund_inspiration.2070.desc.depressed
-		    }
-		    triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = improvident }
+				}
+				desc = fund_inspiration.2070.desc.improvident
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = depressed }
+				}
+				desc = fund_inspiration.2070.desc.depressed
+			}
+			triggered_desc = {
 		   		trigger = {
-		        	scope:inspiration_owner = { has_trait = drunkard }
-		        }
-		        desc = fund_inspiration.2070.desc.drunkard
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = hashishiyah }
-		        }
-		        desc = fund_inspiration.2070.desc.hashishiyah
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = rakish }
-		        }
-		        desc = fund_inspiration.2070.desc.rakish
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = comfort_eater }
-		        }
-		        desc = fund_inspiration.2070.desc.comfort_eater
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = lunatic }
-		        }
-		        desc = fund_inspiration.2070.desc.lunatic
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = possessed }
-		        }
-		        desc = fund_inspiration.2070.desc.possessed
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = reclusive }
-		        }
-		        desc = fund_inspiration.2070.desc.reclusive
-		    }		
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = irritable }
-		        }
-		        desc = fund_inspiration.2070.desc.irritable
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = wounded }
-		        }
-		        desc = fund_inspiration.2070.desc.wounded
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_trait = pregnant }
-		        }
-		        desc = fund_inspiration.2070.desc.pregnant
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:inspiration_owner = { has_treatable_disease_trigger = yes }
-		        }
-		        desc = fund_inspiration.2070.desc.sick
-		    }		    
+					scope:inspiration_owner = { has_trait = drunkard }
+				}
+				desc = fund_inspiration.2070.desc.drunkard
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = hashishiyah }
+				}
+				desc = fund_inspiration.2070.desc.hashishiyah
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = rakish }
+				}
+				desc = fund_inspiration.2070.desc.rakish
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = comfort_eater }
+				}
+				desc = fund_inspiration.2070.desc.comfort_eater
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = lunatic }
+				}
+				desc = fund_inspiration.2070.desc.lunatic
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = possessed }
+				}
+				desc = fund_inspiration.2070.desc.possessed
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = reclusive }
+				}
+				desc = fund_inspiration.2070.desc.reclusive
+			}		
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = irritable }
+				}
+				desc = fund_inspiration.2070.desc.irritable
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = wounded }
+				}
+				desc = fund_inspiration.2070.desc.wounded
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_trait = pregnant }
+				}
+				desc = fund_inspiration.2070.desc.pregnant
+			}
+			triggered_desc = {
+				trigger = {
+					scope:inspiration_owner = { has_treatable_disease_trigger = yes }
+				}
+				desc = fund_inspiration.2070.desc.sick
+			}			
 		}
 		desc = fund_inspiration.2070.desc_outro
 	}
@@ -11152,18 +11350,18 @@ fund_inspiration.2080 = {
 	title = fund_inspiration.2080.t
 	desc = {
 		first_valid = {
-		    triggered_desc = {
-		        trigger = {
+			triggered_desc = {
+				trigger = {
 					scope:rival = { has_court_position = antiquarian_court_position }
 				}
-		        desc = fund_inspiration.2080.antiquarian
-		    }
-		    triggered_desc = {
-		        trigger = {
+				desc = fund_inspiration.2080.antiquarian
+			}
+			triggered_desc = {
+				trigger = {
 					scope:rival = { has_court_position = court_artificer_court_position }
 				}
-		        desc = fund_inspiration.2080.artificer
-		    }
+				desc = fund_inspiration.2080.artificer
+			}
 		}
 		desc = fund_inspiration.2080.desc
 	}
@@ -11221,8 +11419,9 @@ fund_inspiration.2080 = {
 				limit = { fi_2080_antiquarian_trigger = yes }
 				save_scope_as = antiquarian
 				progress_towards_rival_effect = {
+					REASON = rival_dispute_inspiration
 					CHARACTER = scope:inspiration_owner
-					OPINION = no
+					OPINION = 0
 				}
 			}
 		}
@@ -11285,7 +11484,7 @@ fund_inspiration.2080 = {
 		}
 		random_list = {
 			5 = {
-				modifier = { factor = scope:antiquarian.aptitude:antiquarian_court_position }
+				modifier = { factor = scope:rival.aptitude:antiquarian_court_position }
 				send_interface_toast = {
 					title = fund_inspiration.2080.success
 					left_icon = scope:rival
@@ -11360,8 +11559,9 @@ fund_inspiration.2080 = {
 		}
 		scope:rival = {
 			progress_towards_rival_effect = {
+				REASON = rival_dispute_inspiration
 				CHARACTER = scope:inspiration_owner
-				OPINION = no
+				OPINION = 0
 			}
 		}
 		if = {
@@ -11597,7 +11797,7 @@ fund_inspiration.2100 = {
 		animation = admiration
 	}
 	override_background = {
-		event_background = feast
+		reference = feast
 	}
 	cooldown = { years = 2 }
 
@@ -11779,8 +11979,9 @@ fund_inspiration.2100 = {
 							opinion = -10
 						}
 						progress_towards_rival_effect = {
+							REASON = rival_dispute_inspiration
 							CHARACTER = scope:other_inspiration_owner
-							OPINION = no
+							OPINION = 0
 						}
 						change_artifact_quality_effect = { AMOUNT = -4 }
 					}
@@ -11882,8 +12083,8 @@ fund_inspiration.2110 = {
 	desc = {
 		desc = fund_inspiration.2110.desc
 		random_valid = {
-		    triggered_desc = {
-		        trigger = {
+			triggered_desc = {
+				trigger = {
 					scope:generous_vassal = {
 						OR = {
 							has_trait = profligate
@@ -11891,11 +12092,11 @@ fund_inspiration.2110 = {
 							has_trait = improvident
 						}
 					}
-		        }
-		        desc = fund_inspiration.2110.desc.generous
-		    }
-		    triggered_desc = {
-		        trigger = {
+				}
+				desc = fund_inspiration.2110.desc.generous
+			}
+			triggered_desc = {
+				trigger = {
 					scope:generous_vassal = {
 						OR = {
 							has_trait = scholar
@@ -11903,31 +12104,31 @@ fund_inspiration.2110 = {
 					 		has_trait = diligent
 					 	}
 					 }
-		        }
-		        desc = fund_inspiration.2110.desc.dweeb
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:generous_vassal = { has_any_good_relationship_with_root_trigger = yes }
-		        }
-		        desc = fund_inspiration.2110.desc.friend
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	scope:generous_vassal = {
-			        	NOR = {
-			        		has_trait = profligate
+				}
+				desc = fund_inspiration.2110.desc.dweeb
+			}
+			triggered_desc = {
+				trigger = {
+					scope:generous_vassal = { has_any_good_relationship_with_root_trigger = yes }
+				}
+				desc = fund_inspiration.2110.desc.friend
+			}
+			triggered_desc = {
+				trigger = {
+					scope:generous_vassal = {
+						NOR = {
+							has_trait = profligate
 						 	has_trait = generous
 							has_trait = improvident
 							has_trait = scholar
 					 		has_trait = theologian
 					 		has_trait = diligent
 					 		has_any_good_relationship_with_root_trigger = yes
-			        	}
-			        }
-		        }
-		        desc = fund_inspiration.2110.desc.rich
-		    }
+						}
+					}
+				}
+				desc = fund_inspiration.2110.desc.rich
+			}
 		}
 	}
 	theme = realm
@@ -12065,69 +12266,69 @@ fund_inspiration.2120 = {
 	desc = {
 		desc = fund_inspiration.2120.desc
 		first_valid = {
-		    triggered_desc = {
-		        trigger = { has_character_flag = fund_inspiration_2070_instigator }
-		        desc = fund_inspiration.2120.desc.me
-		    }
-		    desc = fund_inspiration.2120.desc.them
+			triggered_desc = {
+				trigger = { has_character_flag = fund_inspiration_2070_instigator }
+				desc = fund_inspiration.2120.desc.me
+			}
+			desc = fund_inspiration.2120.desc.them
 		}
 		first_valid = {
 			# THEY react
-        	triggered_desc = {
-		        trigger = {
-		        	has_character_flag = fund_inspiration_2070_instigator
+			triggered_desc = {
+				trigger = {
+					has_character_flag = fund_inspiration_2070_instigator
 					scope:inspiration_owner = { has_trait = lustful }
 				}
 				desc = fund_inspiration.2120.desc.them_into_alot
 			}
-        	triggered_desc = {
-        		trigger = { has_character_flag = fund_inspiration_2070_instigator }
-        		desc = fund_inspiration.2120.desc.them_into
-        	}
-        	# ROOT reacts
-        	triggered_desc = {
-        		trigger = {
-        			NOT = { is_attracted_to_gender_of = scope:inspiration_owner }
-        		}
-        		desc = fund_inspiration.2120.desc.me_unattracted
-        	}
+			triggered_desc = {
+				trigger = { has_character_flag = fund_inspiration_2070_instigator }
+				desc = fund_inspiration.2120.desc.them_into
+			}
+			# ROOT reacts
+			triggered_desc = {
+				trigger = {
+					NOT = { is_attracted_to_gender_of = scope:inspiration_owner }
+				}
+				desc = fund_inspiration.2120.desc.me_unattracted
+			}
   			triggered_desc = {
-        		trigger = {
-        			has_trait = zealous
+				trigger = {
+					has_trait = zealous
 					sex_same_as = scope:inspiration_owner
 					NOT = {
 						faith = { has_doctrine = doctrine_homosexuality_accepted }
 					}
-        		}
-        		desc = fund_inspiration.2120.desc.me_zealous_homosexuality
-        	}
-        	triggered_desc = {
-        		trigger = {
-        			has_trait = zealous
-        			OR = {
+				}
+				desc = fund_inspiration.2120.desc.me_zealous_homosexuality
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = zealous
+					OR = {
 						would_be_sinful_adulterer_trigger = yes
 						scope:inspiration_owner = { would_be_sinful_adulterer_trigger = yes }
 					}
-        		}
-        		desc = fund_inspiration.2120.desc.me_zealous_adultery
-        	}
-        	triggered_desc = {
-        		trigger = { has_trait = chaste }
-        		desc = fund_inspiration.2120.desc.me_chaste
-        	}
-        	triggered_desc = {
-		        trigger = { has_trait = lustful }
+				}
+				desc = fund_inspiration.2120.desc.me_zealous_adultery
+			}
+			triggered_desc = {
+				trigger = { has_trait = chaste }
+				desc = fund_inspiration.2120.desc.me_chaste
+			}
+			triggered_desc = {
+				trigger = { has_trait = lustful }
 				desc = fund_inspiration.2120.desc.me_into_alot
 			}
-        	triggered_desc = {
-        		trigger = { is_attracted_to_gender_of = scope:inspiration_owner }
-        		desc = fund_inspiration.2120.desc.me_into
-        	}
+			triggered_desc = {
+				trigger = { is_attracted_to_gender_of = scope:inspiration_owner }
+				desc = fund_inspiration.2120.desc.me_into
+			}
 		}
 	}
 	theme = realm
 	override_background = {
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -12174,11 +12375,13 @@ fund_inspiration.2120 = {
 	trigger = {
 		is_adult = yes
 		exists = scope:inspiration
+		might_cheat_on_every_partner_trigger = yes
 		scope:inspiration_owner = {
 			#These flags are set on the inspiration owner since the sponsor might be sponsoring multiple inspirations at once
 			fund_inspiration_court_inspiration_owner_trigger = yes
 			has_no_inspiration_event_cooldown = yes
 			is_attracted_to_gender_of = root
+			might_cheat_on_every_partner_trigger = yes
 			NOR = {
 				has_trait = chaste
 				is_consort_of = root
@@ -12186,11 +12389,13 @@ fund_inspiration.2120 = {
 				has_relation_soulmate = root
 				is_close_family_of = root
 				has_any_bad_relationship_with_character_trigger = { CHARACTER = root }
+				has_trait = celibate
 			}
 			opinion = {
 				target = root
 				value > 0
 			}
+			might_cheat_on_every_partner_trigger = yes
 		}
 	}
 
@@ -12217,6 +12422,8 @@ fund_inspiration.2120 = {
 					trigger = {
 						NOT = { has_trait = chaste }
 						is_attracted_to_gender_of = scope:inspiration_owner
+						might_cheat_on_every_partner_trigger = yes
+						scope:inspiration_owner = { might_cheat_on_every_partner_trigger = yes }
 					}
 					modifier = {
 						factor = 2
@@ -12269,16 +12476,7 @@ fund_inspiration.2120 = {
 					}
 				}
 				scope:inspiration_owner = {
-					if = {
-						limit = {
-							NOT = {
-								any_secret = { secret_type = secret_homosexual }
-							}
-						}
-						hidden_effect = {
-							add_secret = { type = secret_homosexual }
-						}	
-					}
+					hidden_effect = { give_homosexual_secret_or_nothing_effect = yes }
 					random_secret = {
 						limit = { secret_type = secret_homosexual }
 						save_scope_as = secret_scope
@@ -12299,16 +12497,7 @@ fund_inspiration.2120 = {
 						NOT = { has_trait = sodomite }
 					}
 				}
-				if = {
-					limit = {
-						NOT = {
-							any_secret = { secret_type = secret_homosexual }
-						}
-					}
-					hidden_effect = {
-						add_secret = { type = secret_homosexual }
-					}
-				}
+				hidden_effect = { give_homosexual_secret_or_nothing_effect = yes }
 				random_secret = {
 					limit = { secret_type = secret_homosexual }
 					save_scope_as = secret_scope
@@ -12331,7 +12520,7 @@ fund_inspiration.2120 = {
 			limit = {
 				can_set_relation_lover_trigger = { CHARACTER = scope:inspiration_owner }
 			}
-			set_relation_lover = scope:inspiration_owner
+			set_relation_lover = { reason = lover_inspiration_working_late target = scope:inspiration_owner }
 		}
 		scope:inspiration_owner = {
 			add_opinion = {
@@ -12362,14 +12551,37 @@ fund_inspiration.2120 = {
 		name = fund_inspiration.2120.e
 		trigger = {
 			NOT = { has_character_flag = fund_inspiration_2070_instigator } # Did not initiate seduction
-			is_attracted_to_gender_of = scope:inspiration_owner
+			OR = {
+				is_ai = no
+				AND = {
+					OR = {
+						has_perk = unshackled_lust_perk
+						is_attracted_to_gender_of = scope:inspiration_owner
+					}
+					trigger_if = {
+						limit = { relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:inspiration_owner } }
+						OR = {
+							has_perk = unshackled_lust_perk
+							freely_accepts_sodomy_with_trigger = { CHARACTER = scope:inspiration_owner }
+						}
+					}
+					trigger_if = {
+						limit = { relation_with_character_is_incestuous_in_my_faith_trigger = { CHARACTER = scope:inspiration_owner } }
+						OR = {
+							has_perk = subtle_desire_perk
+							accepts_incest_with_trigger = { CHARACTER = scope:inspiration_owner }
+						}
+					}
+					might_cheat_on_every_partner_trigger = yes
+				}
+			}
 		}
 		had_sex_with_effect = { CHARACTER = scope:inspiration_owner PREGNANCY_CHANCE = seduce_pregnancy_chance }
 		if = {
 			limit = {
 				can_set_relation_lover_trigger = { CHARACTER = scope:inspiration_owner }
 			}
-			set_relation_lover = scope:inspiration_owner
+			set_relation_lover = { reason = lover_inspiration_working_late target = scope:inspiration_owner }
 		}
 		scope:inspiration_owner = {
 			add_opinion = {
@@ -12404,7 +12616,12 @@ fund_inspiration.2120 = {
 
 	option = { # No to their seduction, generic
 		name = {
-			trigger = { has_trait = chaste }
+			trigger = { 
+				OR = {
+					has_trait = chaste
+					has_trait = celibate
+				}
+			}
 			text = fund_inspiration.2120.f.chaste
 		}
 		name = {
@@ -12433,6 +12650,12 @@ fund_inspiration.2120 = {
 				scope:secret_scope = { reveal_to = root }
 			}
 		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_sociability = -1
+			}
+		}
 	}
 
 	option = { # Lustful attracted to instigator
@@ -12448,7 +12671,7 @@ fund_inspiration.2120 = {
 			limit = {
 				can_set_relation_lover_trigger = { CHARACTER = scope:inspiration_owner }
 			}
-			set_relation_lover = scope:inspiration_owner
+			set_relation_lover = { reason = lover_inspiration_working_late target = scope:inspiration_owner }
 		}
 		scope:inspiration_owner = {
 			add_opinion = {
@@ -12470,6 +12693,12 @@ fund_inspiration.2120 = {
 				scope:secret_scope = { reveal_to = root }
 			}
 		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_sociability = 1
+			}
+		}
 	}
 
 	option = { # No, because not attracted to them
@@ -12488,6 +12717,12 @@ fund_inspiration.2120 = {
 			}
 			stress_impact = {
 				zealous = medium_stress_impact_gain
+			}
+		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_sociability = -0.5
 			}
 		}
 	}
@@ -12634,6 +12869,44 @@ fund_inspiration.2120 = {
 		}
 	}
 
+	option = { # Back out of seduction, generic
+		name = fund_inspiration.2120.f
+		trigger = {
+			has_character_flag = fund_inspiration_2070_instigator
+			NOR = {
+				AND = {
+					is_attracted_to_gender_of = scope:inspiration_owner
+					fi_2120_homosexuality_not_accepted_trigger = no
+					OR = {
+						would_be_sinful_adulterer_trigger = yes
+						scope:inspiration_owner = { would_be_sinful_adulterer_trigger = yes }
+					}
+				}
+				AND = {
+					is_attracted_to_gender_of = scope:inspiration_owner
+					fi_2120_homosexuality_not_accepted_trigger = yes
+				}
+			}
+		}
+		flavor = fund_inspiration.2120.leave_flavor
+		stress_impact = {
+			lustful = medium_stress_impact_gain
+		}
+		if = {
+			limit = { exists = scope:secret_scope }
+			show_as_tooltip = {
+				scope:secret_scope = { reveal_to = scope:inspiration_owner }
+			}
+		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_sociability = -1
+				ai_boldness = -0.5
+			}
+		}
+	}
+
 	after = {
 		if = {
 			limit = { has_character_flag = fund_inspiration_2070_instigator }
@@ -12650,18 +12923,8 @@ scripted_effect fi_2130_lifestyle_effect = {
 		scope:inspiration_owner = { add_trait = $TRAIT$ }
 		progress_towards_friend_effect = {
 			CHARACTER = root
-			OPINION = no
-		}
-	}
-}
-
-scripted_effect fi_2130_lifestyle_1_effect = {
-	random = {
-		chance = 33
-		scope:inspiration_owner = { add_trait = $TRAIT$_1 }
-		progress_towards_friend_effect = {
-			CHARACTER = root
-			OPINION = no
+			OPINION = 0
+			REASON = friend_inspired_craftsman
 		}
 	}
 }
@@ -12672,7 +12935,7 @@ fund_inspiration.2130 = {
 	desc = fund_inspiration.2130.desc
 	theme = realm
 	override_background = {
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	left_portrait = {
 		character = root 
@@ -12862,11 +13125,11 @@ fund_inspiration.2130 = {
 			}
 			else_if = {
 				limit = { has_trait = lifestyle_reveler }
-				fi_2130_lifestyle_1_effect = { TRAIT = reveler }
+				fi_2130_lifestyle_effect = { TRAIT = lifestyle_reveler }
 			}
 			else_if = {
 				limit = { has_trait = lifestyle_hunter }
-				fi_2130_lifestyle_1_effect = { TRAIT = hunter }
+				fi_2130_lifestyle_effect = { TRAIT = lifestyle_hunter }
 			}
 			else_if = {
 				limit = { has_trait = athletic }
@@ -12993,7 +13256,7 @@ fund_inspiration.2130 = {
 					title = fund_inspiration.2130.b.bad
 					left_icon = scope:inspiration_owner
 					scope:inspiration_owner = {
-						add_trait = ill
+						contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
 						inspiration = { change_inspiration_progress = -1 }
 					}
 				}
@@ -13103,9 +13366,9 @@ scripted_trigger fi_2131_artifact_type_trigger = {
 		trigger_else = {
 			OR = {
 				artifact_type = cabinet
-    			artifact_type = chest
-    			artifact_type = throne
-    		}
+				artifact_type = chest
+				artifact_type = throne
+			}
 		}
 	}
 }
@@ -13115,63 +13378,62 @@ fund_inspiration.2131 = {
 	title = fund_inspiration.2131.t
 	desc = {
 		first_valid = {
-		    triggered_desc = {
-		    	trigger = {
-		    		exists = scope:fi_2130_room
+			triggered_desc = {
+				trigger = {
+					exists = scope:fi_2130_room
 					scope:fi_2130_room = flag:fi_2130_library
-		    		NOR = {
-		        		has_trait = education_learning
-		        		has_lifestyle = learning_lifestyle
-		        		learning >= decent_skill_rating
-		        		has_trait = scholar
-		        		has_trait = theologian
-		        		has_trait = lifestyle_mystic
-		        		has_trait = lifestyle_physician
-		        		has_trait = lifestyle_herbalist
-		        	}
-		        }
+					NOR = {
+						has_trait = education_learning
+						has_lifestyle = learning_lifestyle
+						learning >= decent_skill_rating
+						has_trait = scholar
+						has_trait = theologian
+						has_trait = lifestyle_mystic
+						has_trait = lifestyle_physician
+						has_trait = lifestyle_herbalist
+					}
+				}
 				desc = fund_inspiration.2131.desc_library_unused
 			}
 			triggered_desc = {
-		    	trigger = {
-		    		exists = scope:fi_2130_room
+				trigger = {
+					exists = scope:fi_2130_room
 					scope:fi_2130_room = flag:fi_2130_library
 				}
 				desc = fund_inspiration.2131.desc_library
 			}
 			triggered_desc = {
-		        trigger = {
-		        	exists = scope:fi_2130_room
+				trigger = {
+					exists = scope:fi_2130_room
 					scope:fi_2130_room = flag:fi_2130_armory
-		        	NOR = {
-		        		has_trait = education_martial
-		        		has_lifestyle = martial_lifestyle
-		        		martial >= decent_skill_rating
-		        		prowess >= decent_skill_rating
-		        		has_trait = viking
-		        		has_trait = faith_warrior
-						has_trait = crusader_king
+					NOR = {
+						has_trait = education_martial
+						has_lifestyle = martial_lifestyle
+						martial >= decent_skill_rating
+						prowess >= decent_skill_rating
 						has_trait = viking
+						has_trait = faith_warrior
+						has_trait = crusader_king
 						has_trait = lifestyle_blademaster
-			     		has_trait = lifestyle_hunter
-			    		has_trait = berserker
-			     		has_trait = shieldmaiden
-		        	}
-		        }
-		        desc = fund_inspiration.2131.desc_armory_unused 
-		    }
-		    triggered_desc = {
-		        trigger = {
-		        	exists = scope:fi_2130_room
+				 		has_trait = lifestyle_hunter
+						has_trait = berserker
+				 		has_trait = shieldmaiden
+					}
+				}
+				desc = fund_inspiration.2131.desc_armory_unused 
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:fi_2130_room
 					scope:fi_2130_room = flag:fi_2130_armory
 				}
-		        desc = fund_inspiration.2131.desc_armory 
-		    }
-		    triggered_desc = {
-		        trigger = { court_grandeur_current_level < court_grandeur_minimum_expected_level }
-		        desc = fund_inspiration.2131.desc_great_hall_low 
-		    }
-		    desc = fund_inspiration.2131.desc_great_hall 
+				desc = fund_inspiration.2131.desc_armory 
+			}
+			triggered_desc = {
+				trigger = { court_grandeur_current_level < court_grandeur_minimum_expected_level }
+				desc = fund_inspiration.2131.desc_great_hall_low 
+			}
+			desc = fund_inspiration.2131.desc_great_hall 
 		}
 		first_valid = {
 			triggered_desc = {
@@ -13190,18 +13452,18 @@ fund_inspiration.2131 = {
 			}
 		}
 		first_valid = {
-		    triggered_desc = {
-		        trigger = {
-		        	exists = scope:artifact_1
-		        	scope:artifact_1 = { is_equipped = yes }
-		        }
-		        desc = fund_inspiration.2131.desc_equipped
-		    }
-		    triggered_desc = {
-		        trigger = { exists = scope:artifact_1 }
-		        desc = fund_inspiration.2131.desc_unequipped
-		    }
-		    desc = fund_inspiration.2131.desc_fallback
+			triggered_desc = {
+				trigger = {
+					exists = scope:artifact_1
+					scope:artifact_1 = { is_equipped = yes }
+				}
+				desc = fund_inspiration.2131.desc_equipped
+			}
+			triggered_desc = {
+				trigger = { exists = scope:artifact_1 }
+				desc = fund_inspiration.2131.desc_unequipped
+			}
+			desc = fund_inspiration.2131.desc_fallback
 		}
 	}
 	theme = realm
@@ -13210,20 +13472,20 @@ fund_inspiration.2131 = {
 			exists = scope:fi_2130_room
 			scope:fi_2130_room = flag:fi_2130_library
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			exists = scope:fi_2130_room
 			scope:fi_2130_room = flag:fi_2130_armory
 		}
-		event_background = armory
+		reference = armory
 	}
 	override_background = {
 		trigger = {
 			NOT = { exists = scope:fi_2130_room }
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -13250,12 +13512,12 @@ fund_inspiration.2131 = {
  		}
 	}
 	artifact = { # To display the artifact in the event-window
-	    target = scope:artifact_1
-	    position = lower_center_portrait
+		target = scope:artifact_1
+		position = lower_center_portrait
 	}
 	artifact = { # To display the artifact in the event-window
-	    target = scope:artifact_2
-	    position = lower_right_portrait
+		target = scope:artifact_2
+		position = lower_right_portrait
 	}
 
 	trigger = {
@@ -13320,27 +13582,35 @@ fund_inspiration.2131 = {
 				2 = {
 					trigger = {
 						any_court_position_holder = {
-					        type = antiquarian_court_position
+							type = antiquarian_court_position
 							is_available_healthy_ai_adult = yes
+							NOT = { this = scope:inspiration_owner }
 						}
 					}
 					random_court_position_holder = {
 					 	type = antiquarian_court_position
-						limit = { is_available_healthy_ai_adult = yes }
-				        save_scope_as = second
+						limit = {
+							is_available_healthy_ai_adult = yes
+							NOT = { this = scope:inspiration_owner }
+						}
+						save_scope_as = second
 					}
 				}
 				2 = {
 					trigger = {
 						any_court_position_holder = {
-					        type = court_artificer_court_position
+							type = court_artificer_court_position
 							is_available_healthy_ai_adult = yes
+							NOT = { this = scope:inspiration_owner }
 						}
 					}
 					random_court_position_holder = {
 					 	type = court_artificer_court_position
-						limit = { is_available_healthy_ai_adult = yes }
-				        save_scope_as = second
+						limit = {
+							is_available_healthy_ai_adult = yes
+							NOT = { this = scope:inspiration_owner }
+						}
+						save_scope_as = second
 					}
 				}
 			}
@@ -13691,31 +13961,31 @@ fund_inspiration.3001 = {
 		desc = fund_inspiration.3001.desc_opening
 		first_valid = {
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					fund_inspiration_3001_witch_topic_trigger = yes
-			    }
-			    desc = fund_inspiration.3001.desc_witch
+				}
+				desc = fund_inspiration.3001.desc_witch
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					fund_inspiration_3001_cannibal_topic_trigger = yes
-			    }
-			    desc = fund_inspiration.3001.desc_cannibal
+				}
+				desc = fund_inspiration.3001.desc_cannibal
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					fund_inspiration_3001_torturer_topic_trigger = yes
-			    }
-			    desc = fund_inspiration.3001.desc_torturer
+				}
+				desc = fund_inspiration.3001.desc_torturer
 			}
 			triggered_desc = {
-			    trigger = {
+				trigger = {
 					OR = {
 						fund_inspiration_3001_lustful_topic_trigger = yes
 						fund_inspiration_3001_deviant_topic_trigger = yes
 					}
-			    }
-			    desc = fund_inspiration.3001.desc_lustful
+				}
+				desc = fund_inspiration.3001.desc_lustful
 			}
 			desc = fund_inspiration.3001.desc_other
 		}
@@ -13723,7 +13993,7 @@ fund_inspiration.3001 = {
 	}
 	theme = realm
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = scope:court_chaplain
@@ -14382,10 +14652,10 @@ fund_inspiration.3030 = {
 		desc = {
 			first_valid = {
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						scope:prev_nemesis = { is_alive = yes }
-				    }
-				    desc = fund_inspiration.3030.desc
+					}
+					desc = fund_inspiration.3030.desc
 				}
 				desc = fund_inspiration.3030.desc_dead
 			}
@@ -14462,10 +14732,10 @@ fund_inspiration.3031 = {
 		desc = {
 			first_valid = {
 				triggered_desc = {
-				    trigger = {
+					trigger = {
 						scope:prev_soulmate = { is_alive = yes }
-				    }
-				    desc = fund_inspiration.3031.desc
+					}
+					desc = fund_inspiration.3031.desc
 				}
 				desc = fund_inspiration.3031.desc_dead
 			}
@@ -14576,7 +14846,7 @@ fund_inspiration.4001 = {
 		}
 		
 		NOT = {
-			has_government = tribal_government # No changing amenities above what's legal for tribals
+			government_has_flag = government_is_tribal # No changing amenities above what's legal for tribals
 		}
 	}
 
@@ -14699,7 +14969,7 @@ fund_inspiration.5011 = {
 			has_inspiration_type = adventure_inspiration
 		}
 		scope:inspiration_owner = {
-			is_available_ai_adult = yes
+			is_physically_able_ai_adult = yes
 			has_no_inspiration_event_cooldown = yes
 			NOR = {
 				exists = var:adventure_type
@@ -14879,11 +15149,9 @@ fund_inspiration.5011 = {
 		}
 	}
 
-	
-
 	after = {
-		#To start the adventure activity for the inspiration owner
-		fund_adventure_inspiration_start_activity_effect = { ADVENTURER = scope:inspiration_owner }
+		#To start the adventure for the inspiration owner
+		fund_adventure_inspiration_start_effect = { ADVENTURER = scope:inspiration_owner }
 	}
 }
 
@@ -14914,7 +15182,6 @@ fund_inspiration.5021 = {
 			NOT = { has_character_flag = had_event_fund_inspiration_5021 }
 			adventure_inspiration_average_skill_value < high_inspiration_skill
 		}
-		exists = scope:inspiration_owner.activity
 	}
 
 	weight_multiplier = {
@@ -15446,8 +15713,11 @@ fund_inspiration.5021 = {
 				}
 			}
 			hidden_effect = {
-				scope:inspiration_owner.activity = {
-					move_activity = scope:adventuring_location.title_province
+				scope:inspiration_owner = {
+					set_location = {
+						location = scope:adventuring_location.title_province
+						stick_to_location = yes 
+					}
 				}
 			}
 		}
@@ -15540,7 +15810,7 @@ fund_inspiration.6001 = {
 				location = scope:inspiration_owner.location
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:morin_khuur_ornament = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -15658,7 +15928,7 @@ fund_inspiration.6002 = {
 				location = scope:inspiration_owner.location
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:animal_ring = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -15876,7 +16146,7 @@ fund_inspiration.6004 = {
 				location = scope:inspiration_owner.location
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:pilgrimage_figurine = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -15969,7 +16239,7 @@ fund_inspiration.6005 = {
 				location = scope:inspiration_owner.location
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:saint_margaret_fingernails = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16173,7 +16443,7 @@ fund_inspiration.6100 = {
 				template = child_toy_template
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:tiny_chest_trinket = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16268,7 +16538,7 @@ fund_inspiration.6101 = {
 				template = child_toy_template
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:tiny_box_trinket = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16288,7 +16558,7 @@ fund_inspiration.6101 = {
 	option = { 
 		name = fund_inspiration.6101.a
 		add_diplomacy_lifestyle_xp = medium_lifestyle_xp
-		root.dynasty = {
+		root.dynasty ?= {
 			add_dynasty_prestige = miniscule_dynasty_prestige_gain
 		}
 		ai_chance = {
@@ -16339,7 +16609,7 @@ fund_inspiration.6102 = {
 	theme = realm
 
 	override_background = {
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -16379,7 +16649,7 @@ fund_inspiration.6102 = {
 				template = child_toy_template
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:tiny_sculpture_trinket = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16547,8 +16817,8 @@ fund_inspiration.6103 = {
 			var:artifact_artisan_type = flag:artisan_type_cabinet
 			#Mena and Indian cabinets are tables and diwans!
 			NOR = {
-				artifact_should_use_gfx_type_trigger = { TYPE = indian_building }
-				artifact_should_use_gfx_type_trigger = { TYPE = mena_building }
+				artifact_use_indian_building_visuals_trigger = yes
+				artifact_use_mena_building_visuals_trigger = yes
 			}
 		}
 		NOT = {
@@ -16565,13 +16835,13 @@ fund_inspiration.6103 = {
 				name = tiny_cabinet_trinket_name
 				description = tiny_cabinet_trinket_description
 				type = miscellaneous
-				visuals = cabinet
+				visuals = cabinet_trinket
 				modifier = artifact_build_time_2_modifier
 				save_scope_as = tiny_cabinet_trinket
 				template = child_toy_template
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:tiny_cabinet_trinket = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16662,7 +16932,7 @@ fund_inspiration.6104 = {
 				template = child_toy_template
 			}
 		}
-		hidden_effect_new_artifact = {
+		hidden_effect_new_object = {
 			scope:tiny_throne_trinket = {
 				flag_as_trash_artifact = yes
 				set_variable = {
@@ -16749,7 +17019,7 @@ fund_inspiration.6105 = {
 		animation = happiness
 	}
 	override_background = {
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	trigger = {
 		AND = {
@@ -16780,7 +17050,8 @@ fund_inspiration.6105 = {
 		name = fund_inspiration.6105.a
 		progress_towards_friend_effect = {
 			CHARACTER = scope:inspiration_owner
-			OPINION = yes
+			OPINION = default_friend_opinion
+			REASON = friend_miniature_game
 		}
 		add_character_modifier = {
 			modifier = playing_with_miniatures
@@ -16892,7 +17163,7 @@ fund_inspiration.6200 = {
 		name = fund_inspiration.6200.a
 		trigger = {
 			NOT = {
-				has_government = tribal_government # No changing amenities above what's legal for tribals
+				government_has_flag = government_is_tribal # No changing amenities above what's legal for tribals
 			}
 		}
 		add_learning_lifestyle_xp = medium_lifestyle_xp
@@ -17008,7 +17279,7 @@ fund_inspiration.6300 = {
 	type = character_event
 	title = fund_inspiration.6300.t
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	desc = {
 		desc = fund_inspiration.6300.intro
@@ -17056,6 +17327,7 @@ fund_inspiration.6300 = {
 						always = yes
 					}
 					has_sexuality = asexual
+					has_trait = celibate
 				}
 			}
 		}
@@ -17126,8 +17398,10 @@ fund_inspiration.6300 = {
 				homosexual_poet_trigger = no
 				unloved_poet_trigger = yes
 				is_attracted_to_gender_of = root
+				might_cheat_on_every_partner_trigger = yes
 			}
 			is_attracted_to_gender_of = scope:inspiration_owner
+			might_cheat_on_every_partner_trigger = yes
 		}
 		had_sex_with_effect = {
 			CHARACTER = scope:inspiration_owner
@@ -17136,7 +17410,8 @@ fund_inspiration.6300 = {
 		scope:inspiration_owner = {
 			progress_towards_lover_effect = {
 				CHARACTER = root
-				OPINION = yes
+				REASON = lover_inspiration_help
+				OPINION = default_lover_opinion
 			}
 			change_artifact_book_content_quality_effect = { AMOUNT = 4 }
 		}
@@ -17156,6 +17431,7 @@ fund_inspiration.6300 = {
 		}
 		progress_towards_lover_effect = {
 			CHARACTER = scope:inspiration_owner
+			REASON = lover_inspiration_strikes
 			OPINION = 20
 		}
 		scope:inspiration_owner = {
@@ -17194,6 +17470,7 @@ fund_inspiration.6300 = {
 		}
 		progress_towards_lover_effect = {
 			CHARACTER = scope:inspiration_owner
+			REASON = lover_inspiration_allowed
 			OPINION = 20
 		}
 		add_character_flag = fund_inspiration_6301_lover
@@ -17215,6 +17492,7 @@ fund_inspiration.6300 = {
 		progress_towards_friend_effect = {
 			CHARACTER = scope:inspiration_owner
 			OPINION = 20
+			REASON = friend_supported_poet
 		}
 		add_character_flag = fund_inspiration_6301_friend
 		trigger_event = {
@@ -17374,6 +17652,7 @@ fund_inspiration.6301 = {
 			limit = { has_character_flag = fund_inspiration_6301_lover }
 			progress_towards_lover_effect = {
 				CHARACTER = scope:inspiration_owner
+				REASON = lover_inspiration_treasure
 				OPINION = 20
 			}
 		}
@@ -17424,6 +17703,7 @@ fund_inspiration.6301 = {
 			progress_towards_friend_effect = {
 				CHARACTER = scope:inspiration_owner
 				OPINION = 20
+				REASON = friend_arranged_reading
 			}
 		}
 	}
@@ -17443,7 +17723,7 @@ fund_inspiration.6500 = {
 
 	theme = hunting
 	override_background = {
-		event_background = wilderness_forest
+		reference = wilderness_forest
 	}
 
 	left_portrait = { 
@@ -17456,8 +17736,8 @@ fund_inspiration.6500 = {
 	}
 
 	artifact = {
-	    target = scope:leopard_hat
-	    position = lower_center_portrait
+		target = scope:leopard_hat
+		position = lower_center_portrait
 	}
 	
 	cooldown = { years = 15 }
@@ -17534,7 +17814,7 @@ fund_inspiration.6500 = {
 					modifier = artifact_prowess_2_modifier
 					save_scope_as = leopard_hat
 				}
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					scope:leopard_hat = {
 						flag_as_trash_artifact = yes
 						set_variable = {
@@ -17719,7 +17999,7 @@ fund_inspiration.6501 = {
 
 	theme = hunting
 	override_background = {
-		event_background = wilderness_mountains
+		reference = wilderness_mountains
 	}
 
 	left_portrait = { 
@@ -17825,6 +18105,14 @@ fund_inspiration.6501 = {
 			ai_value_modifier = {
 				ai_boldness = 0.5
 			}
+			modifier = {
+				short_term_gold < massive_gold_value
+				factor = 0
+			}
+			modifier = {
+				is_at_war = yes
+				factor = 0
+			}
 		}
 	}
 
@@ -17837,7 +18125,11 @@ fund_inspiration.6501 = {
 				ai_greed = -0.5
 			}
 			modifier = {
-				short_term_gold < medium_gold_value
+				short_term_gold < major_gold_value
+				factor = 0
+			}
+			modifier = {
+				is_at_war = yes
 				factor = 0
 			}
 		}
@@ -17856,7 +18148,7 @@ fund_inspiration.6502 = {
 
 	theme = hunting
 	override_background = {
-		event_background = wilderness_desert 
+		reference = wilderness_desert 
 	}
 	left_portrait = { 
 		character = scope:inspiration_owner
@@ -17894,6 +18186,7 @@ fund_inspiration.6502 = {
 		}
 		progress_towards_lover_effect = {
 			CHARACTER = scope:inspiration_owner
+			REASON = lover_adventurer_thirst
 			OPINION = 20
 		}
 		ai_chance = {
@@ -17916,6 +18209,7 @@ fund_inspiration.6502 = {
 		}
 		progress_towards_lover_effect = {
 			CHARACTER = scope:inspiration_owner
+			REASON = lover_adventurer_thirst
 			OPINION = 20
 		}
 		ai_chance = {
@@ -17961,7 +18255,7 @@ fund_inspiration.6503 = {
 	}
 	
 	override_background = {
-		event_background = wilderness_steppe
+		reference = wilderness_steppe
 	}
 
 	left_portrait = { 
@@ -18007,7 +18301,7 @@ fund_inspiration.6503 = {
 					save_scope_as = kurgan_ornament
 				}
 			}
-			hidden_effect_new_artifact = {
+			hidden_effect_new_object = {
 				scope:kurgan_ornament = {
 					flag_as_trash_artifact = yes
 					set_variable = {
@@ -18028,7 +18322,7 @@ fund_inspiration.6503 = {
 					save_scope_as = kurgan_saddle
 				}
 			}
-			hidden_effect_new_artifact = {
+			hidden_effect_new_object = {
 				scope:kurgan_saddle = {
 					flag_as_trash_artifact = yes
 					set_variable = {
@@ -18166,7 +18460,7 @@ fund_inspiration.6504 = {
 	}
 	
 	override_background = {
-		event_background = farmland
+		reference = farmland
 	}
 
 	left_portrait = { 
@@ -18191,7 +18485,9 @@ fund_inspiration.6504 = {
 			NOR = { 
 				has_trait = chaste
 				has_trait = infertile
+				has_trait = celibate
 			}
+			might_cheat_on_every_partner_trigger = yes
 		}
 	}
 
@@ -18296,7 +18592,7 @@ fund_inspiration.6504 = {
 		}
 		hidden_effect = {
 			scope:inspiration_owner = {
-				set_relation_lover = scope:adventurer_lover
+				set_random_lover_reason = { TARGET = scope:adventurer_lover }
 			}
 		}
 	}
@@ -18400,7 +18696,7 @@ fund_inspiration.6505 = {
 	}
 	theme = hunting
 	override_background = {
-		event_background = wilderness_desert
+		reference = wilderness_desert
 	}
 	left_portrait = {
 		character = scope:inspiration_owner
@@ -18411,8 +18707,8 @@ fund_inspiration.6505 = {
 		}
 	}
 	artifact = {
-	    target = scope:naked_tapestry
-	    position = lower_center_portrait
+		target = scope:naked_tapestry
+		position = lower_center_portrait
 	}
 	
 	cooldown = { years = 10 }
@@ -18453,7 +18749,7 @@ fund_inspiration.6505 = {
 					save_scope_as = naked_tapestry
 				}
 				add_character_flag = is_naked
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					scope:naked_tapestry = {
 						flag_as_trash_artifact = yes
 						set_variable = {
@@ -18601,7 +18897,7 @@ fund_inspiration.6400 = {
 	desc = fund_inspiration.6400.desc
 	theme = realm
 	override_background = {
-		event_background = tavern
+		reference = tavern
 	}
 	left_portrait = { 
 		character = scope:inspiration_owner
@@ -18656,8 +18952,11 @@ fund_inspiration.6400 = {
 			add_character_flag = was_deadbeat
 		}
 		hidden_effect = {
-			scope:inspiration_owner.activity = {
-				move_activity = root.capital_province
+			scope:inspiration_owner = {
+				set_location = {
+					location = root.capital_province
+					stick_to_location = yes
+				}
 			}
 		}
 	}
@@ -18741,7 +19040,7 @@ fund_inspiration.6506 = {
 
 	theme = hunting
 	override_background = {
-		event_background = wilderness_steppe
+		reference = wilderness_steppe
 	}
 
 	left_portrait = { 
@@ -18807,7 +19106,7 @@ fund_inspiration.6506 = {
 					location = scope:inspiration_owner.location
 				}
 			}
-			hidden_effect_new_artifact = {
+			hidden_effect_new_object = {
 				scope:frogspawn_jar = {
 					flag_as_trash_artifact = yes
 					set_variable = {
@@ -18901,7 +19200,7 @@ fund_inspiration.6507 = {
 
 	theme = hunting
 	override_background = {
-		event_background = wilderness_steppe
+		reference = wilderness_steppe
 	}
 
 	left_portrait = { 
@@ -19110,7 +19409,7 @@ fund_inspiration.6508 = {
 	}
 	theme = hunting
 	override_background = {
-		event_background = wilderness_steppe
+		reference = wilderness_steppe
 	}
 
 	left_portrait = { 
@@ -19178,7 +19477,7 @@ fund_inspiration.6508 = {
 					location = scope:inspiration_owner.location
 				}
 			}
-			hidden_effect_new_artifact = {
+			hidden_effect_new_object = {
 				scope:beaver_book = {
 					flag_as_trash_artifact = yes
 					set_variable = {
@@ -19315,7 +19614,7 @@ fund_inspiration.6509 = {
 	}
 	theme = hunting
 	override_background = {
-		event_background = wilderness_steppe
+		reference = wilderness_steppe
 	}
 
 	left_portrait = { 
@@ -19371,7 +19670,7 @@ fund_inspiration.6509 = {
 					location = scope:inspiration_owner.location
 				}
 			}
-			hidden_effect_new_artifact = {
+			hidden_effect_new_object = {
 				scope:crocodile_tapestry = {
 					flag_as_trash_artifact = yes
 					set_variable = {
@@ -19438,7 +19737,7 @@ fund_inspiration.6510 = {
 	}
 	theme = hunting
 	override_background = {
-		event_background = wilderness_forest
+		reference = wilderness_forest
 	}
 
 	left_portrait = { 
@@ -19602,7 +19901,7 @@ fund_inspiration.6511 = {
 	}
 	theme = death
 	override_background = {
-		event_background = wilderness_mountains
+		reference = wilderness_mountains
 	}
 
 	left_portrait = { 
@@ -19661,7 +19960,7 @@ fund_inspiration.6512 = {
 	}
 	theme = hunting
 	override_background = {
-		event_background = wilderness_mountains
+		reference = wilderness_mountains
 	}
 
 	left_portrait = { 
@@ -19720,7 +20019,7 @@ fund_inspiration.6512 = {
 						location = scope:inspiration_owner.location
 					}
 				}
-				hidden_effect_new_artifact = {
+				hidden_effect_new_object = {
 					scope:mountain_rock = {
 						flag_as_trash_artifact = yes
 						set_variable = {
@@ -19871,7 +20170,7 @@ fund_inspiration.6512 = {
 			limit = {
 				can_set_relation_soulmate_trigger = { CHARACTER = scope:lover }
 			}
-			set_relation_soulmate = scope:lover
+			set_relation_soulmate = { reason = soulmate_named_mountain copy_reason = lover target = scope:lover }
 		}
 		else = {
 			reverse_add_opinion = {
@@ -19934,8 +20233,9 @@ fund_inspiration.6512 = {
 		name = fund_inspiration.6512.h
 		trigger = { exists = scope:rival }
 		progress_towards_rival_effect = {
+			REASON = rival_name_inspiration
 			CHARACTER = scope:rival
-			OPINION = no
+			OPINION = 0
 		}
 		stress_impact = {
 			forgiving = medium_stress_impact_gain
@@ -20413,9 +20713,9 @@ fund_inspiration.8013 = {
 	theme = learning_medicine_focus
 	right_portrait = scope:inspiration_owner
 	artifact = { # To display the artifact in the event-window
-        target = scope:newly_created_artifact
-        position = lower_center_portrait
-    }
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}
 	
 	cooldown = { days = 1825 }
 	
@@ -20523,7 +20823,8 @@ fund_inspiration.8013 = {
 				}
 				progress_towards_friend_effect = {
 					CHARACTER = root
-					OPINION = no
+					OPINION = 0
+					REASON = friend_given_book
 				}
 			}
 		}
@@ -20700,7 +21001,7 @@ fund_inspiration.8014 = {
 
 	option = { #Fire them
 		name = fund_inspiration.8014.c
-		name = fund_inspiration.8014.c.tt
+		custom_tooltip = fund_inspiration.8014.c.tt
 		add_gold = medium_gold_value
 		end_inspiration_sponsorship = scope:inspiration
 		#To clean out flags and stuff
@@ -20951,7 +21252,8 @@ fund_inspiration.8017 = {
 			add_learning_skill = 1
 			progress_towards_friend_effect = {
 				CHARACTER = scope:inspiration_owner
-				OPINION = no
+				OPINION = 0
+				REASON = friend_shared_knowledge
 			}
 		}
 		stress_impact = {
@@ -21531,10 +21833,20 @@ fund_inspiration.7003 = {
 			limit = {
 				any_relation = {
 					type = potential_lover
+					NAND = {
+						exists = scope:dedication_e
+						this = scope:dedication_e
+					}
 				}
 			}
 			random_relation = {
 				type = potential_lover
+				limit = {
+					NAND = {
+						exists = scope:dedication_e
+						this = scope:dedication_e
+					}
+				}
 				save_scope_as = dedication_f
 			}
 		}
@@ -21553,7 +21865,7 @@ fund_inspiration.7003 = {
 			}
 		}
 		scope:dedication_e = {
-			set_relation_friend = root
+			set_relation_friend = { reason = friend_dedicated_artifact target = root }
 			add_opinion = {
 				target = root
 				modifier = impressed_opinion
@@ -21582,7 +21894,7 @@ fund_inspiration.7003 = {
 			}
 		}
 		scope:dedication_f = {
-			set_relation_lover = root
+			set_relation_lover = { reason = lover_dedicated_artifact target = root involved_character = scope:inspiration_owner }
 			add_opinion = {
 				target = root
 				modifier = impressed_opinion

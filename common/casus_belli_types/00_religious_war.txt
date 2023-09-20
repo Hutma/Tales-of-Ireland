@@ -1,5 +1,7 @@
 ﻿undirected_great_holy_war = {
 	group = religious_script_only
+	interface_priority = 1000
+	icon = undirected_great_holy_war
 
 	war_name = "GREAT_HOLY_WAR_WAR_NAME"
 
@@ -19,6 +21,7 @@
 	defender_capital_gives_war_score = no
 	is_great_holy_war = yes
 	landless_attacker_needs_armies = no
+	allow_hostages = no
 	
 	defender_score_from_battles_scale = 125
 	attacker_score_from_battles_scale = 125
@@ -30,6 +33,7 @@
 	battle_participation_mult = 7.5
 	on_primary_attacker_death = inherit
 	on_primary_defender_death = inherit
+	transfer_behavior = transfer
 
 	white_peace_possible = no
 
@@ -103,6 +107,10 @@
 		debug_log = undirected_ghw_debug_loc
 	}
 
+	should_invalidate = {
+		scope:attacker.faith = scope:defender.faith # Primary defender has converted
+	}
+
 	on_invalidated_desc = msg_invalidate_war_title
 	
 	on_invalidated = {
@@ -150,6 +158,10 @@
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 Accolade glory gain to the holy knights of the faith head
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+
 		create_title_and_vassal_change = {
 			type = conquest_holy_war
 			save_scope_as = change
@@ -519,6 +531,10 @@
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 Accolade glory gain to the noble native defenders
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		scope:attacker.faith.great_holy_war = {
 			divide_war_chest = {
 				defenders = yes
@@ -526,11 +542,6 @@
 			}
 		}
 
-		# scope:attacker = {
-			# faith = {
-				# change_fervor = -15
-			# }
-		# }
 		scope:attacker.faith.great_holy_war.ghw_target_title = { #Loc keys for localization fluff.
 			save_scope_as = target_kingdom
 		}
@@ -592,6 +603,8 @@
 
 directed_great_holy_war = {
 	group = religious
+	icon = directed_great_holy_war
+	interface_priority = 1000
 
 	war_name = "GREAT_HOLY_WAR_WAR_NAME"
 	cb_name = "GREAT_HOLY_WAR_WAR_CB_NAME"
@@ -613,6 +626,7 @@ directed_great_holy_war = {
 	defender_capital_gives_war_score = no
 	is_great_holy_war = yes
 	ai_only_against_neighbors = yes
+	allow_hostages = no
 
 	occupation_participation_mult = 0.5
 	siege_participation_mult = 1
@@ -623,13 +637,28 @@ directed_great_holy_war = {
 	gui_defender_faith_might_join = yes
 	on_primary_attacker_death = inherit
 	on_primary_defender_death = inherit
+	transfer_behavior = transfer
 
 	allowed_for_character = {
 		faith = {
 			exists = religious_head
 			suitable_faith_for_directed_ghw_trigger = yes #Right Doctrines
-			scope:attacker = this.religious_head
+			OR = {
+				scope:attacker = this.religious_head
+				scope:attacker = {
+					any_vassal = {
+						this = scope:attacker.faith.religious_head
+					}
+				}
+			}
 			religion = { exists = var:variable_ghw_unlocked } #Activated by event for every religion.
+		}
+	}
+
+	allowed_for_character_display_regardless = {
+		custom_description = {
+			text = great_holy_war_cooldown
+			NOT = {	scope:attacker.faith = { exists = var:variable_ghw_cooldown }}
 		}
 	}
 
@@ -642,11 +671,13 @@ directed_great_holy_war = {
 	valid_to_start = {
 		scope:attacker.faith = {
 			NOR = {
-				exists = great_holy_war
-				exists = var:variable_ghw_cooldown
-				AND = {
-					religion = { exists = var:variable_first_ghw_cooldown } # Do not event spam after Jihads have been just unlocked.
-					scope:attacker = { is_ai = yes } #If the player is the Caliph, he can bypass this and call the GHW immediately.
+				# No active GHW already.
+				exists = great_holy_war 
+
+				# If GHWs have just been unlocked, AI rulers will wait a little bit before declaring them.
+				trigger_if = {
+					limit = { scope:attacker = { is_ai = yes } }
+					religion = { exists = var:variable_first_ghw_cooldown }
 				}
 			}
 		}
@@ -661,6 +692,9 @@ directed_great_holy_war = {
 				}
 			}
 		}
+
+		#The war seems to be launching without a valid defender sometimes, so we double-check that one is set here
+		exists = scope:defender
 	}
 
 	on_declaration = {
@@ -762,12 +796,22 @@ directed_great_holy_war = {
 		debug_log = directed_ghw_debug_loc
 	}
 
+	should_invalidate = {
+		scope:attacker.faith = scope:defender.faith # Primary defender has converted
+	}
+
+	on_invalidated_desc = msg_invalidate_war_title
+
 	on_victory_desc = {
 		desc = great_holy_war_directed_victory_desc
 	}
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 Accolade glory gain to the holy warriors of the faith head
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+
 		scope:attacker.faith.great_holy_war.ghw_target_title = { #Loc keys for localization fluff.
 			save_scope_as = target_kingdom
 		}
@@ -923,6 +967,10 @@ directed_great_holy_war = {
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 Accolade glory gain to the noble native defenders
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
+
 		scope:attacker.faith.great_holy_war.ghw_target_title = { #Loc keys for localization fluff.
 			save_scope_as = target_kingdom
 		}

@@ -1,0 +1,748 @@
+﻿namespace = toi_celt_event
+
+toi_celt_event.0001 = { #A celtic grave for me
+	title = toi_celt_event.0001.t
+	desc = toi_celt_event.0001.desc
+	theme = faith
+	override_background = {
+		reference = celtic_grave_background
+	}
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = celtic_human
+			faith = faith:great_barrows
+			faith = faith:fathers_of_manx
+		}
+		OR = {
+			AND = {
+				health < 3
+				effective_age >= 60
+			}
+			health <= 1.5
+		}
+		NOT = { has_character_flag = had_celtic_grave }
+	}
+	
+	immediate = {
+		add_character_flag = had_celtic_grave
+	}
+	
+	option = {
+		name = toi_celt_event.0001.a
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -5
+		}
+		pay_reserved_income = {
+			target = realm_priest
+			years = 2
+		}
+		add_piety = 50
+		add_tales_of_abundance_lifestyle_xp = 200
+		dynasty = {
+			add_dynasty_prestige = 75
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0001.b
+		capital_county = {
+			change_development_level = -5
+		}
+		pay_reserved_income = {
+			target = realm_priest
+			years = 1
+		}
+		add_piety = 50
+		dynasty = {
+			add_dynasty_prestige = 50
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0001.c
+		capital_county = {
+			change_development_level = -2
+		}
+		remove_short_term_gold = 15
+		dynasty = {
+			add_dynasty_prestige = 20
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0001.d
+		add_piety = -50
+		add_prestige = 25
+	}
+}
+
+toi_celt_event.0002 = { #Tailteann games
+	title = toi_celt_event.0002.t
+	desc = toi_celt_event.0002.desc
+	theme = party
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = celtic_human
+			has_trait = tuatha_de_danann
+			culture = { has_cultural_pillar = heritage_cruithin }
+			culture = { has_cultural_pillar = heritage_de_danann }
+			culture = { has_cultural_pillar = heritage_errain }
+			culture = { has_cultural_pillar = heritage_laigin }
+		}
+		NOT = { has_character_flag = had_tailteann_games }
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = had_tailteann_games
+			years = 10
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0002.a
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -2
+		}
+		remove_short_term_gold = 25
+		add_stress = -30
+		add_tales_of_abundance_lifestyle_xp = 100
+		add_tales_of_war_lifestyle_xp = 100
+		custom_description = {
+			text = knights_have_a_chance_to_get_better_desc
+			every_knight = {
+				random_list = {
+					5 = {
+						add_prowess_skill = 1
+					}
+					5 = {
+						add_prowess_skill = 2
+					}
+					5 = {
+						
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0002.b
+		every_held_title = {
+			limit = {
+				tier = tier_county
+			}
+			change_development_level = -2
+		}
+		remove_short_term_gold = 25
+		add_stress = -30
+		add_tales_of_abundance_lifestyle_xp = 100
+		add_tales_of_war_lifestyle_xp = 125
+		add_prowess_skill = 1
+		custom_description = {
+			text = knights_have_a_chance_to_get_better_desc
+			every_knight = {
+				random_list = {
+					5 = {
+						add_prowess_skill = 1
+					}
+					5 = {
+						add_prowess_skill = 2
+					}
+					5 = {
+						
+					}
+				}
+			}
+		}
+		random_list = {
+			10 = {
+				
+			}
+			5 = {
+				increase_wounds_effect = { REASON = fight }
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0002.c
+		add_tales_of_abundance_lifestyle_xp = -25
+		add_tales_of_war_lifestyle_xp = -25
+		dynasty = {
+			add_dynasty_prestige = -20
+		}
+	}
+}
+
+toi_celt_event.0003 = { #Horse Racing
+	title = toi_celt_event.0003.t
+	desc = toi_celt_event.0003.desc
+	theme = hunt_activity
+
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = celtic_human
+			culture = { has_cultural_pillar = heritage_cruithin }
+			culture = { has_cultural_pillar = heritage_de_danann }
+			culture = { has_cultural_pillar = heritage_errain }
+			culture = { has_cultural_pillar = heritage_laigin }
+		}
+		NOT = { has_character_flag = has_horse_ridden }
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = has_horse_ridden
+			years = 3
+		}
+		random_neighboring_realm_same_rank_owner = {
+			save_scope_as = rival_noble
+		}
+		random_sibling = {
+			save_scope_as = rival_sibling
+		}
+		random_vassal = {
+			save_scope_as = rival_vassal
+		}
+		random_knight = {
+			save_scope_as = rival_knight
+		}
+		random_courtier = {
+			save_scope_as = rival_courtier
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.a
+		trigger = {
+			exists = scope:rival_noble
+		}
+		duel = {
+			skill = prowess
+			target = scope:rival_noble
+			50 = {
+				desc = toi_celt_event.0003.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.success
+					
+					add_prestige = 75
+					add_tales_of_war_lifestyle_xp = 75
+					add_tales_of_abundance_lifestyle_xp = 50
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0003.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.failure
+					
+					add_prestige = -100
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.b
+		trigger = {
+			exists = scope:rival_vassal
+		}
+		duel = {
+			skill = prowess
+			target = scope:rival_vassal
+			50 = {
+				desc = toi_celt_event.0003.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.success
+					
+					add_prestige = 75
+					add_tales_of_war_lifestyle_xp = 50
+					add_tales_of_abundance_lifestyle_xp = 50
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0003.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.failure
+					
+					add_prestige = -100
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.c
+		trigger = {
+			exists = scope:rival_sibling
+		}
+		duel = {
+			skill = prowess
+			target = scope:rival_sibling
+			50 = {
+				desc = toi_celt_event.0003.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.success
+					
+					add_prestige = 50
+					add_tales_of_war_lifestyle_xp = 25
+					add_tales_of_abundance_lifestyle_xp = 50
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0003.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.failure
+					
+					add_prestige = -100
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.d
+		trigger = {
+			exists = scope:rival_knight
+		}
+		duel = {
+			skill = prowess
+			target = scope:rival_knight
+			50 = {
+				desc = toi_celt_event.0003.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.success
+					
+					add_prestige = 50
+					add_tales_of_war_lifestyle_xp = 50
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0003.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.failure
+					
+					add_prestige = -100
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.e
+		trigger = {
+			exists = scope:rival_courtier
+		}
+		duel = {
+			skill = prowess
+			target = scope:rival_courtier
+			50 = {
+				desc = toi_celt_event.0003.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.success
+					
+					add_prestige = 10
+					add_tales_of_war_lifestyle_xp = 10
+					add_tales_of_abundance_lifestyle_xp = 10
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0003.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0003.failure
+					
+					add_prestige = -100
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0003.f
+		add_prestige = -15
+	}
+}
+
+
+toi_celt_event.0004 = { #Tribal Gathering
+	title = toi_celt_event.0004.t
+	desc = toi_celt_event.0004.desc
+	theme = party
+	
+	override_background = {
+		reference = religious_passage_tomb
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		OR = {
+			has_trait = celtic_human
+			culture = { has_cultural_pillar = heritage_cruithin }
+			culture = { has_cultural_pillar = heritage_errain }
+			culture = { has_cultural_pillar = heritage_laigin }
+			faith = faith:the_old_gods
+		}
+		is_independent_ruler = yes
+		NOT = { has_character_flag = had_tribal_gathering }
+		any_neighboring_and_across_water_top_liege_realm_owner = {
+			culture = root.culture
+		}
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = had_tribal_gathering
+			years = 10
+		}
+		random_neighboring_and_across_water_top_liege_realm_owner = {
+			limit = { culture = root.culture }
+			save_scope_as = diplomacy_neighbor
+		}
+		random_neighboring_and_across_water_top_liege_realm_owner = {
+			limit = { 
+				culture = root.culture
+				NOT = { has_relation_rival = root }
+			}
+			save_scope_as = friendly_neighbor
+		}
+		random_neighboring_and_across_water_top_liege_realm_owner = {
+			limit = { 
+				culture = root.culture
+				NOT = { has_relation_friend = root }
+			}
+			save_scope_as = rival_neighbor
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0004.a
+		add_stress = -10
+		add_prestige = 10
+	}
+	
+	option = {
+		name = toi_celt_event.0004.b
+		trigger = {
+			exists = scope:diplomacy_neighbor
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:diplomacy_neighbor
+			50 = {
+				desc = toi_celt_event.0004.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.b.success
+					
+					add_tales_of_abundance_lifestyle_xp = 50
+				}
+				every_neighboring_and_across_water_top_liege_realm_owner = {
+					limit = {
+						culture = root.culture
+					}
+					add_truce_both_ways = {
+						character = root
+						years = 5
+						override = no
+						name = TRUCE_TRADE_DEAL
+					}
+				}
+			}
+			50 = {
+				desc = toi_celt_event.0004.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.b.failure
+					
+					add_prestige = -50
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0004.c
+		trigger = {
+			exists = scope:friendly_neighbor
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:friendly_neighbor
+			50 = {
+				desc = toi_celt_event.0004.c.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.c.success
+					
+					add_tales_of_abundance_lifestyle_xp = 15
+				}
+				set_relation_friend = scope:friendly_neighbor
+			}
+			50 = {
+				desc = toi_celt_event.0004.c.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.c.failure
+					
+					add_prestige = -5
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0004.d
+		trigger = {
+			exists = scope:rival_neighbor
+		}
+		duel = {
+			skill = diplomacy
+			target = scope:rival_neighbor
+			50 = {
+				desc = toi_celt_event.0004.d.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.d.success
+					
+					add_tales_of_war_lifestyle_xp = 15
+					add_prestige = 50
+				}
+				set_relation_rival = scope:rival_neighbor
+				add_pressed_claim = scope:rival_neighbor.capital_county
+				add_pressed_claim = scope:rival_neighbor.capital_county.duchy
+			}
+			50 = {
+				desc = toi_celt_event.0004.d.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -2
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = tooltip.toi_celt_event.0004.d.failure
+					
+					add_prestige = -75
+					add_tales_of_abundance_lifestyle_xp = -15
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0004.e
+		add_prestige = 250
+		add_tales_of_war_lifestyle_xp = 350
+		every_neighboring_and_across_water_top_liege_realm_owner = {
+			limit = {
+				culture = root.culture
+			}
+			add_pressed_claim = root.capital_county
+		}
+	}
+}
+
+toi_celt_event.0005 = { #Druidic Gathering
+	title = toi_celt_event.0005.t
+	desc = toi_celt_event.0005.desc
+	theme = learning_theology_focus
+	
+	override_background = {
+		reference = irish_megalith_chamber
+	}
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	
+	right_portrait = {
+		character = scope:my_druid
+		animation = chaplain
+	}
+	
+	trigger = {
+		OR = {
+			faith = faith:great_barrows
+			faith = faith:sea_dwellers
+			faith = faith:le_cheile_faith
+			faith = faith:seasonal_gods
+			faith = faith:the_old_gods
+		}
+		is_independent_ruler = yes
+		exists = root.realm_priest
+	}
+	
+	immediate = {
+		random_independent_ruler = {
+			limit = {
+				OR = {
+					faith = faith:great_barrows
+					faith = faith:sea_dwellers
+					faith = faith:le_cheile_faith
+					faith = faith:seasonal_gods
+					faith = faith:the_old_gods
+				}
+				exists = this.realm_priest
+			}
+			this.realm_priest = {
+				save_scope_as = rival_druid
+			}
+		}
+		root.realm_priest = {
+			save_scope_as = my_druid
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0005.a
+		scope:my_druid = {
+			duel = {
+				skill = diplomacy
+				target = scope:rival_druid
+				50 = {
+					desc = toi_celt_event.0005.a.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3
+					}
+					root = {
+						send_interface_toast = {
+							left_icon = root
+							title = tooltip.toi_celt_event.0005.a.success
+							
+							add_tales_of_abundance_lifestyle_xp = 200
+							add_prestige = 50
+						}
+					}
+				}
+				50 = {
+					desc = toi_celt_event.0005.a.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2
+					}
+					root = {
+						send_interface_toast = {
+							left_icon = root
+							title = tooltip.toi_celt_event.0005.a.failure
+							
+							add_prestige = -75
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = toi_celt_event.0005.b
+		add_piety = -50
+		add_prestige = 25
+	}
+	
+	option = {
+		name = toi_celt_event.0005.c
+		add_prestige = -50
+		reverse_add_opinion = {
+			target = scope:my_druid
+			modifier = disappointed_opinion
+			opinion = -25
+		}
+	}
+}

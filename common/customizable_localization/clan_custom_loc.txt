@@ -5,7 +5,7 @@
 		trigger = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value > 85 }
+				var:clan_unity_value > 85
 			}
 		}
 	}
@@ -16,8 +16,8 @@
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value <= 85 }
-					var:clan_unity_value = { compare_value > 60 }
+					var:clan_unity_value <= 85
+					var:clan_unity_value > 60
 				}
 			}
 		}
@@ -29,8 +29,8 @@
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value <= 60 }
-					var:clan_unity_value = { compare_value >= 30 }
+					var:clan_unity_value <= 60
+					var:clan_unity_value >= 30
 				}
 			}
 		}
@@ -42,8 +42,8 @@
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value < 30 }
-					var:clan_unity_value = { compare_value >= 15 }
+					var:clan_unity_value < 30
+					var:clan_unity_value >= 15
 				}
 			}
 		}
@@ -54,7 +54,7 @@
 		trigger = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value < 15 }
+				var:clan_unity_value < 15
 			}
 		}
 	}
@@ -67,7 +67,7 @@ clan_unity_level_effect_custom_loc = {
 		trigger = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value > 85 }
+				var:clan_unity_value > 85
 			}
 		}
 	}
@@ -78,8 +78,8 @@ clan_unity_level_effect_custom_loc = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value <= 85 }
-					var:clan_unity_value = { compare_value > 60 }
+					var:clan_unity_value <= 85
+					var:clan_unity_value > 60
 				}
 			}
 		}
@@ -91,8 +91,8 @@ clan_unity_level_effect_custom_loc = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value <= 60 }
-					var:clan_unity_value = { compare_value >= 30 }
+					var:clan_unity_value <= 60
+					var:clan_unity_value >= 30
 				}
 			}
 		}
@@ -104,8 +104,8 @@ clan_unity_level_effect_custom_loc = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
 				AND = {
-					var:clan_unity_value = { compare_value < 30 }
-					var:clan_unity_value = { compare_value >= 15 }
+					var:clan_unity_value < 30
+					var:clan_unity_value >= 15
 				}
 			}
 		}
@@ -116,7 +116,7 @@ clan_unity_level_effect_custom_loc = {
 		trigger = {
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value < 15 }
+				var:clan_unity_value < 15
 			}
 		}
 	}
@@ -128,7 +128,7 @@ clan_decision_selected_custom_loc = {
 		localization_key = collect_clan_tax_decision
 		trigger = {
 			root = { exists = var:decision_selected_value }
-			var:decision_selected_value = { compare_value = 1  }
+			var:decision_selected_value = 1
 		}
 	}
 	
@@ -136,7 +136,7 @@ clan_decision_selected_custom_loc = {
 		localization_key = collect_clan_cattle_decision
 		trigger = {
 			root = { exists = var:decision_selected_value }
-			var:decision_selected_value = { compare_value = 2 }
+			var:decision_selected_value = 2
 		}
 	}
 	
@@ -144,7 +144,7 @@ clan_decision_selected_custom_loc = {
 		localization_key = force_clan_leader_decision
 		trigger = {
 			root = { exists = var:decision_selected_value }
-			var:decision_selected_value = { compare_value = 3 }
+			var:decision_selected_value = 3
 		}
 	}
 	
@@ -152,7 +152,7 @@ clan_decision_selected_custom_loc = {
 		localization_key = leader_call_in_war_decision
 		trigger = {
 			root = { exists = var:decision_selected_value }
-			var:decision_selected_value = { compare_value = 4 }
+			var:decision_selected_value = 4
 		}
 	}
 	
@@ -160,7 +160,7 @@ clan_decision_selected_custom_loc = {
 		localization_key = force_leader_into_war_decision
 		trigger = {
 			root = { exists = var:decision_selected_value }
-			var:decision_selected_value = { compare_value = 5 }
+			var:decision_selected_value = 5
 		}
 	}
 	

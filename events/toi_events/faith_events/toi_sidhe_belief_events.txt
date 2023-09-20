@@ -5,7 +5,7 @@ sidhe_belief.0001 = { #the spring maiden
 	desc = sidhe_belief.0001.desc
 	theme = seduction
 	override_background = {
-		event_background = terrain_scope
+		reference = terrain_scope
 	}
 	left_portrait = {
 		character = root
@@ -193,7 +193,7 @@ sidhe_belief.0002 = { #offended maiden
 	}
 	
 	override_background = {
-		event_background = terrain_scope
+		reference = terrain_scope
 	}
 	
 	option = {

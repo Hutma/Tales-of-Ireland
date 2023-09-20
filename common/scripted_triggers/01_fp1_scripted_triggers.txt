@@ -14,7 +14,7 @@ eligible_for_fp1_dynasty_legacies_trigger = {
 
 fp1_can_raise_stele_trigger = {
 	OR = {
-		culture = { has_cultural_pillar = heritage_partholonian }
+		culture = { has_cultural_parameter = has_access_to_runestones }
 		has_character_modifier = embraced_local_traditions_modifier
 	}
 	culture = {
@@ -23,8 +23,8 @@ fp1_can_raise_stele_trigger = {
 }
 
 fp1_can_raise_stele_title_scope_trigger = {
-	culture = { has_cultural_pillar = heritage_partholonian }
 	culture = {
+		has_cultural_pillar = heritage_partholonian
 		NOT = { has_cultural_era_or_later = culture_era_high_medieval }
 	}
 }
@@ -57,7 +57,7 @@ fp1_is_norse = {
 
 fp1_is_norse_tribal = {
 	fp1_is_norse = yes
-	has_government = tribal_government
+	government_has_flag = government_is_tribal
 }
 
 fp1_is_coastal_norse_tribal = {
@@ -85,12 +85,18 @@ fp1_remove_stele_new_holder_trigger = {
 	# And would the new holder want to tear down the stele?
 	$NEW_HOLDER$ = {
 		OR = {
-			# E.g., because they're a different family and won't maintain it.
-			NOT = { dynasty = $PREVIOUS_HOLDER$.dynasty }
-			# Or because they're subject of the runestone, which means it's memorialising their defeat.
+			AND = {
+				exists = dynasty
+				# E.g., because they're a different family and won't maintain it.
+				NOT = { dynasty = $PREVIOUS_HOLDER$.dynasty }
+			}
+			# Or because they're a subject of the runestone, which means it's memorialising their defeat.
 			## ... Unless they're a ghost. Damned proctors, I guess.
 			AND = {
 				exists = $TITLE$.var:stele_container
+				exists = $TITLE$.var:stele_scope_type
+				# Remember not to compare a character with a title.
+				$TITLE$.var:stele_scope_type = flag:character
 				this = $TITLE$.var:stele_container
 			}
 		}
@@ -113,7 +119,7 @@ fp1_va_eligible_for_scandinavian_troops_trigger = {
 
 fp1_should_use_norse_graphics_trigger = {
 	has_fp1_dlc_trigger = yes
-	culture = { has_graphical_culture = norse_building_gfx }
+	culture = { has_building_gfx = norse_building_gfx }
 }
 
 fp1_should_use_extra_tribal_graphics_trigger = {
@@ -227,7 +233,10 @@ trial_by_combat_is_valid_trigger = {
 
 gruesome_sacrifices_grand_blot_can_continue_trigger = {
 	# Standard checks. Using a more lenient trigger here because we don't want to cancel the blot if you're in events or go on a hunt
-	is_available_at_peace_adult_lenient = yes
+	#is_available_at_peace_adult_lenient = yes
+	scope:activity ?= {
+		has_activity_type = activity_gruesome_festival
+	}
 }
 
 fp1_valid_norse_faith_for_jomsvikings_trigger = {

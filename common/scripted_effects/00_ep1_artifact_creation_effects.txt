@@ -6,328 +6,621 @@
 #################################################
 
 get_artifact_quality_effect = {
-	# Some random variance is added so artifact quality isn't completely deterministic
 	if = {
 		limit = {
-			NOT = {
-				exists = scope:inspiration_owner
+			NOT = { exists = scope:quality }
+		}
+		# Some random variance is added so artifact quality isn't completely deterministic
+		if = {
+			limit = {
+				NOR = {
+					exists = scope:inspiration_owner
+					exists = scope:random_quality_bonus
+				}
+			}
+			random_list = {
+				20 = {
+					save_scope_value_as = {
+						name = random_quality_bonus
+						value = 4
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_quality_bonus
+						value = 8
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_quality_bonus
+						value = 12
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_quality_bonus
+						value = 16
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_quality_bonus
+						value = 20
+					} 
+				}
 			}
 		}
-		random_list = {
-			20 = {
-				save_scope_value_as = {
-					name = random_quality_bonus
-					value = 4
-				} 
+		else_if = {
+			limit = {
+				NOT = { exists = scope:random_inspired_skill_quality_bonus }
 			}
-			20 = {
-				save_scope_value_as = {
-					name = random_quality_bonus
-					value = 8
-				} 
+			random_list = {
+				20 = {
+					save_scope_value_as = {
+						name = random_inspired_skill_quality_bonus
+						value = 0.5
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_inspired_skill_quality_bonus
+						value = 1
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_inspired_skill_quality_bonus
+						value = 2
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_inspired_skill_quality_bonus
+						value = 2.5
+					} 
+				}
+				20 = {
+					save_scope_value_as = {
+						name = random_inspired_skill_quality_bonus
+						value = 3
+					} 
+				}
 			}
-			20 = {
-				save_scope_value_as = {
-					name = random_quality_bonus
-					value = 12
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_quality_bonus
-					value = 16
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_quality_bonus
-					value = 20
-				} 
-			}
-		}
-	}
-	else = {
-		random_list = {
-			20 = {
-				save_scope_value_as = {
-					name = random_inspired_skill_quality_bonus
-					value = 0.5
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_inspired_skill_quality_bonus
-					value = 1
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_inspired_skill_quality_bonus
-					value = 2
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_inspired_skill_quality_bonus
-					value = 2.5
-				} 
-			}
-			20 = {
-				save_scope_value_as = {
-					name = random_inspired_skill_quality_bonus
-					value = 3
-				} 
+			save_scope_value_as = {
+				name = random_quality_bonus
+				value = 0
 			}
 		}
+
+		# Calculate the final quality of the artifact
 		save_scope_value_as = {
-			name = random_quality_bonus
-			value = 0
-		}
-	}
+			name = quality
+			value = {
+				value = scope:random_quality_bonus
 
-	# Calculate the final quality of the artifact
-	save_scope_value_as = {
-		name = quality
-		value = {
-			value = scope:random_quality_bonus
-
-			# Bonus Quality from the Court Owner's Amenities
-			if = {
-				limit = {
-					exists = court_owner
-					court_owner = {
-						has_royal_court = yes
-						amenity_level = { type = court_lodging_standards value > low_amenity_level }
-					}
-				}
+				# Bonus Quality from the Court Owner's Amenities
 				if = {
-					limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= max_amenity_level } } }
-					add = 10
-				}
-				else_if = {
-					limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= very_high_amenity_level } } }
-					add = 8
-				}
-				else_if = {
-					limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= high_amenity_level } } }
-					add = 6
-				}
-				else_if = {
-					limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= medium_amenity_level } } }
-					add = 4
-				}
-				else = {
-					add = 2
-				}
-			}
-
-			# Bonus quality from Inspiration Owner
-			if = {
-				limit = { exists = scope:inspiration_owner }
-				scope:inspiration_owner = {
-					# Bonus quality from high skills, depending on inspiration type.
-					add = {	
-						if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = armor } }
-							value = armor_inspiration_average_skill_value
+					limit = {
+						exists = court_owner
+						court_owner = {
+							has_royal_court = yes
+							amenity_level = { type = court_lodging_standards value > low_amenity_level }
 						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon } }
-							value = weapon_inspiration_average_skill_value
-						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = adventure } }
-							value = adventure_inspiration_average_skill_value
-						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = smith } }
-							value = smith_inspiration_average_skill_value
-						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = book } }
-							value = book_inspiration_average_skill_value
-						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weaver } }
-							value = weaver_inspiration_average_skill_value
-						}
-						else_if = {
-							limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan } }
-							value = artisan_inspiration_average_skill_value
-						}
-						multiply = {
-							value = quality_bonus_per_skill_level_value
-							add = scope:random_inspired_skill_quality_bonus # Replaces the random_quality_bonus when an artifact is created by a character so that skill matters more
-						}
-					}
-
-					# Bonus quality from Cultural Traditions
-					if = {
-						limit = {
-							ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon }
-							culture = { has_cultural_parameter = improved_weapon_inspiration }
-						}
-						add = 20
 					}
 					if = {
-						limit = {
-							ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan }
-							culture = { has_cultural_parameter = improved_artisan_inspiration }
-						}
-						add = 20
-					}
-					if = {
-						limit = {
-							ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weaver }
-							culture = { has_cultural_parameter = improved_weaver_inspiration }
-						}
-						add = 20
-					}
-
-					# Bonus quality from event outcomes involving the Inspiration Owner
-					if = {
-						limit = { exists = var:artifact_quality }
-						add = {
-							value = var:artifact_quality
-							multiply = 3
-						}
-					}
-
-					# Cap on quality for 'local artisans', who should only produce lower quality artifacts
-					if = {
-						limit = {
-							has_character_flag = local_artisan
-						}
-						max = 20
-					}
-					# Other inspiration owners get a small bonus in quality to help distinguish them from 'local artisans'
-					else = {
+						limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= max_amenity_level } } }
 						add = 10
 					}
+					else_if = {
+						limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= very_high_amenity_level } } }
+						add = 8
+					}
+					else_if = {
+						limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= high_amenity_level } } }
+						add = 6
+					}
+					else_if = {
+						limit = { court_owner = { amenity_level = { type = court_lodging_standards value >= medium_amenity_level } } }
+						add = 4
+					}
+					else = {
+						add = 2
+					}
 				}
-			}
 
-			#If it is worth bringing home from an adventure it is not common.
-			if = {
-				limit = {
-					exists = scope:adventurer
-				}
-				add = 20
-			}
-
-			# Family Epic base quality 
-			if = {
-				limit = {
-					exists = scope:owner
-					scope:owner = { has_variable = commission_epic_quality }
-				}
-				add = scope:owner.var:commission_epic_quality
-			}
-			# Old Ledger should not be too fancy (stewardship_wealth.1061)
-			if = {
-				limit = {
-					exists = scope:low_quality
-				}
-				max = 20
-			}
-
-			# Exotic Arms event
-			if = {
-				limit = { exists = scope:exotic_blade_quality }
+				# Bonus quality from Inspiration Owner
 				if = {
-					limit = { scope:exotic_blade_quality = no }
+					limit = { exists = scope:inspiration_owner }
+					scope:inspiration_owner = {
+						# Bonus quality from high skills, depending on inspiration type.
+						add = {	
+							if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = armor } }
+								value = armor_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon } }
+								value = weapon_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = adventure } }
+								value = adventure_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = smith } }
+								value = smith_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = book } }
+								value = book_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weaver } }
+								value = weaver_inspiration_average_skill_value
+							}
+							else_if = {
+								limit = { ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan } }
+								value = artisan_inspiration_average_skill_value
+							}
+							multiply = {
+								value = quality_bonus_per_skill_level_value
+								add = scope:random_inspired_skill_quality_bonus # Replaces the random_quality_bonus when an artifact is created by a character so that skill matters more
+							}
+						}
+
+						# Bonus quality from Cultural Traditions
+						if = {
+							limit = {
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon }
+								culture = { has_cultural_parameter = improved_weapon_inspiration }
+							}
+							add = 20
+						}
+						if = {
+							limit = {
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan }
+								culture = { has_cultural_parameter = improved_artisan_inspiration }
+							}
+							add = 20
+						}
+						if = {
+							limit = {
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weaver }
+								culture = { has_cultural_parameter = improved_weaver_inspiration }
+							}
+							add = 20
+						}
+
+						# Bonus quality from event outcomes involving the Inspiration Owner
+						if = {
+							limit = { exists = var:artifact_quality }
+							add = {
+								value = var:artifact_quality
+								multiply = 3
+							}
+						}
+
+						# Reduction on quality for 'local artisans', who should produce lower quality artifacts
+						if = {
+							limit = {
+								has_character_flag = local_artisan
+							}
+							add = -10
+						}
+						# Other inspiration owners get a small bonus in quality to help distinguish them from 'local artisans'
+						else = {
+							add = 20
+						}
+					}
+					
+					# Bonuses from Buildings
+					if = { #Smiths line
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_building_or_higher = smiths_05
+								}
+							}
+						}
+						court_owner = {
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = smiths_05
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = smiths_06
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = smiths_07
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = smiths_08
+								}
+								add = 2
+							}
+						}
+					}
+					if = { #blacksmiths duchy building
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_building_or_higher = blacksmiths_01
+								}
+							}
+						}
+						court_owner = {
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = blacksmiths_01
+								}
+								add = 4
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = blacksmiths_02
+								}
+								add = 8
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = blacksmiths_03
+								}
+								add = 12
+							}
+						}
+					}
+					if = { #caravanserai line
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_building_or_higher = caravanserai_04
+								}
+							}
+						}
+						court_owner = {
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = caravanserai_04
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = caravanserai_05
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = caravanserai_06
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = caravanserai_07
+								}
+								add = 2
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = caravanserai_08
+								}
+								add = 2
+							}
+						}
+					}
+					if = { #Wind Furnaces line
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_building_or_higher = wind_furnace_04
+								}
+							}
+							OR = {
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = armor }
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon }
+							}
+						}
+						court_owner = {
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = wind_furnace_04
+								}
+								add = 6
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = wind_furnace_05
+								}
+								add = 4
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = wind_furnace_06
+								}
+								add = 4
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = wind_furnace_07
+								}
+								add = 4
+							}
+							every_directly_owned_province = {
+								limit = {
+									has_building_or_higher = wind_furnace_08
+								}
+								add = 4
+							}
+						}
+					}
+					if = { # Universities boost Book Inspirations
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_university_building_trigger = yes
+								}
+							}
+							ep1_character_had_or_has_inspiration_type_trigger = { TYPE = book }
+						}
+						add = 20
+					}
+					if = { # Special Mines boost things significantly
+						limit = {
+							exists = court_owner
+							court_owner = {
+								any_directly_owned_province = {
+									has_any_special_mine_trigger = yes
+								}
+							}
+							OR = {
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = armor }
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon }
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = smith }
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan }
+							}
+						}
+						add = 20
+					}
+				}
+
+				#If it is worth bringing home from an adventure it is not common.
+				if = {
+					limit = {
+						exists = scope:adventurer
+					}
+					add = 20
+				}
+				
+
+				# Family Epic base quality 
+				if = {
+					limit = {
+						exists = scope:owner
+						scope:owner = { has_variable = commission_epic_quality }
+					}
+					add = scope:owner.var:commission_epic_quality
+				}
+				# Old Ledger should not be too fancy (stewardship_wealth.1061)
+				if = {
+					limit = {
+						exists = scope:low_quality
+					}
 					max = 20
 				}
-				else = { max = 60 }
-			}
 
-			# Can't have negative quality
-			min = 1
+				# Exotic Arms event
+				if = {
+					limit = { exists = scope:exotic_blade_quality }
+					if = {
+						limit = { scope:exotic_blade_quality = no }
+						max = 20
+					}
+					else = { max = 60 }
+				}
+
+				# Can't have negative quality
+				min = 1
+			}
 		}
 	}
 }
 
 get_artifact_wealth_effect = {
-	save_scope_value_as = {
-		name = wealth
-		value = {
-			if = {
-				# If our artifact already has a quality, set base wealth equal to 1/4th quality value.
-				limit = { exists = scope:quality }
-				add = scope:quality
-				multiply = 0.25
-				round = yes
+	if = {
+		limit = {
+			NOT = { exists = scope:wealth }
+		}
+		save_scope_value_as = {
+			name = wealth
+			value = {
+				if = {
+					# If our artifact already has a quality, set base wealth equal to 1/4th quality value.
+					limit = { exists = scope:quality }
+					add = scope:quality
+					multiply = 0.25
+					round = yes
 
-			}
-			else = {
-				add = 10 # Otherwise, set base wealth value to 10.
-			}
-
-			if = {
-				limit = {
-					exists = scope:owner
-					scope:owner.highest_held_title_tier >= 0
 				}
-				add = {
-					# Add 10 wealth per character tier (up to a max of 50 wealth for emperors)
-					value = scope:owner.highest_held_title_tier
-					multiply = 10
+				else = {
+					add = 10 # Otherwise, set base wealth value to 10.
 				}
 
-				# Add up to 25 wealth, scaling with capital's development
 				if = {
 					limit = {
-						exists = scope:owner.capital_county
+						exists = scope:owner
+						scope:owner.highest_held_title_tier >= 0
 					}
-					scope:owner.capital_county = {
-						add = {
-							value = development_level
-							multiply = 0.25
+					add = {
+						# Add 10 wealth per character tier (up to a max of 50 wealth for emperors)
+						value = scope:owner.highest_held_title_tier
+						multiply = 10
+					}
+
+					# Add up to 25 wealth, scaling with capital's development
+					if = {
+						limit = {
+							exists = scope:owner.capital_county
+						}
+						scope:owner.capital_county = {
+							add = {
+								value = development_level
+								multiply = 0.25
+							}
+						}
+					}
+
+					# Tribal rulers get a final 50% penalty of all wealth modifiers for crafted artifacts.
+					if = {
+						limit = { scope:owner = { government_has_flag = government_is_tribal } }
+						multiply = 0.50
+					}
+				}
+				
+				if = {
+					limit = {
+						exists = scope:inspiration_owner
+					}
+					scope:inspiration_owner = {
+						# Bonuses from Buildings
+						if = {
+							limit = {
+								exists = court_owner
+								court_owner = {
+									any_directly_owned_province = {
+										has_building_or_higher = smiths_05
+									}
+								}
+							}
+							court_owner = {
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = smiths_05
+									}
+									add = 2
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = smiths_06
+									}
+									add = 2
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = smiths_07
+									}
+									add = 2
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = smiths_08
+									}
+									add = 2
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = blacksmiths_01
+									}
+									add = 4
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = blacksmiths_02
+									}
+									add = 8
+								}
+								every_directly_owned_province = {
+									limit = {
+										has_building_or_higher = blacksmiths_03
+									}
+									add = 12
+								}
+							}
+						}
+						if = { # Special Mines boost things significantly
+							limit = {
+								exists = court_owner
+								court_owner = {
+									any_directly_owned_province = {
+										has_any_special_mine_trigger = yes
+									}
+								}
+								OR = {
+									ep1_character_had_or_has_inspiration_type_trigger = { TYPE = armor }
+									ep1_character_had_or_has_inspiration_type_trigger = { TYPE = weapon }
+									ep1_character_had_or_has_inspiration_type_trigger = { TYPE = smith }
+									ep1_character_had_or_has_inspiration_type_trigger = { TYPE = artisan }
+								}
+							}
+							add = 20
+						}
+						if = { # Universities boost Book Inspirations
+							limit = {
+								exists = court_owner
+								court_owner = {
+									any_directly_owned_province = {
+										has_university_building_trigger = yes
+									}
+								}
+								ep1_character_had_or_has_inspiration_type_trigger = { TYPE = book }
+							}
+							add = 20
 						}
 					}
 				}
 
-				# Tribal rulers get a final 50% penalty of all wealth modifiers for crafted artifacts.
+				#If it is worth bringing home from an adventure it is not common.
 				if = {
-					limit = { scope:owner = { has_government = tribal_government } }
-					multiply = 0.50
-				}
-			}
-
-			#If it is worth bringing home from an adventure it is not common.
-			if = {
-				limit = {
-					exists = scope:adventurer
-				}
-				add = 20
-			}
-
-			# Cap on wealth for 'local artisans', who should only produce lower-quality artifacts.
-			if = {
-				limit = { 
-					exists = scope:inspiration_owner
-					scope:inspiration_owner = {
-						has_character_flag = local_artisan
+					limit = {
+						exists = scope:adventurer
 					}
+					add = 20
 				}
-				max = 25
-			}
-			# Old Ledger should not be too fancy (stewardship_wealth.1061)
-			if = {
-				limit = {
-					exists = scope:low_quality
-				}
-				max = 20
-			}
-			
-			# Exotic Arms event
-			if = {
-				limit = { exists = scope:exotic_blade_quality }
+
+				# Lower wealth for 'local artisans', who should produce lower-quality artifacts.
 				if = {
-					limit = { scope:exotic_blade_quality = no }
+					limit = { 
+						exists = scope:inspiration_owner
+						scope:inspiration_owner = {
+							has_character_flag = local_artisan
+						}
+					}
+					add = -20
+				}
+				# Old Ledger should not be too fancy (stewardship_wealth.1061)
+				if = {
+					limit = {
+						exists = scope:low_quality
+					}
 					max = 20
 				}
-				else = { max = 60 }
+				
+				# Exotic Arms event
+				if = {
+					limit = { exists = scope:exotic_blade_quality }
+					if = {
+						limit = { scope:exotic_blade_quality = no }
+						max = 20
+					}
+					else = { max = 60 }
+				}
+				min = 1 #Can't have negative Wealth
 			}
 		}
 	}
@@ -433,7 +726,7 @@ get_artifact_feature_references_effect = {
 			has_artifact_feature = decoration_pattern_local_animal
 		}
 		scope:owner = {
-			select_local_animal_effect = yes
+			select_local_animal_effect = { TYPE = any } # Save scope to limit possible animals: any/big/small/dangerous/harmless/prowling
 		}
 	}
 }
@@ -481,6 +774,7 @@ get_cloth_type_sturdy_effect = {
 				trigger = {
 					artifact_value_trigger = { VALUE = scope:wealth MIN = 40 MAX = 999 }
 					artifact_region_trigger = { CHARACTER = scope:owner REGION = material_cloth_cotton }
+					#NOT = { scope:owner.religion = religion:judaism_religion }
 				}		
 				save_scope_value_as = { name = $SCOPE_NAME$	value = flag:fustian }
 			}
@@ -1073,6 +1367,47 @@ add_scaled_artifact_modifier_combat_effect = {
 						add_artifact_modifier = artifact_levy_reinforcement_rate_same_faith_12_modifier
 					}
 				}
+			}
+		}
+		
+		# zealot_levy_contribution_mult — exclusive to weapons with religious decorations
+		40 = {
+			trigger = { artifact_has_religious_decorations_trigger = yes }
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_zealot_levy_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_zealot_levy_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_zealot_levy_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_zealot_levy_contribution_mult_4_modifier
+			}
+		}
+		
+		# glory_hound_levy_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_glory_hound_levy_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_glory_hound_levy_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_glory_hound_levy_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_glory_hound_levy_contribution_mult_4_modifier
 			}
 		}
 
@@ -4029,6 +4364,46 @@ add_scaled_artifact_modifier_majesty_effect = {
 			}
 		}
 		
+		# courtly_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_4_modifier
+			}
+		}
+		
+		# glory_hound_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_4_modifier
+			}
+		}
+		
 		# mercenary_hire_cost_mult
 		20 = {
 			trigger = {
@@ -4061,66 +4436,57 @@ add_scaled_artifact_modifier_majesty_effect = {
 			}
 		}
 		
-		# vassal_opinion
+		# courtly_opinion
 		20 = {
-			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
-			}
 			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_2_modifier
+			}
+			else_if = {
 				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_opinion_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_opinion_2_modifier
-					}
-				}
+				add_artifact_modifier = artifact_courtly_vassal_opinion_3_modifier
 			}
 			else_if = {
 				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_opinion_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_opinion_4_modifier
-					}
-				}
+				add_artifact_modifier = artifact_courtly_vassal_opinion_4_modifier
+			}
+		}
+		
+		# glory_hound_opinion
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_4_modifier
 			}
 		}
 		
 		# vassal_tax_contribution_mult
 		20 = {
 			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
+				rarity = illustrious
 			}
-			if = {
-				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_2_modifier
-					}
+			random_list = {
+				20 = {
+					add_artifact_modifier = artifact_vassal_tax_contribution_mult_2_modifier
 				}
-			}
-			else_if = {
-				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_4_modifier
-					}
+				10 = {
+					add_artifact_modifier = artifact_vassal_tax_contribution_mult_4_modifier
 				}
 			}
 		}
@@ -4517,6 +4883,46 @@ add_2_scaled_artifact_modifier_majesty_effect = {
 			}
 		}
 		
+		# courtly_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_courtly_tax_contribution_mult_4_modifier
+			}
+		}
+		
+		# glory_hound_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_glory_hound_tax_contribution_mult_4_modifier
+			}
+		}
+		
 		# mercenary_hire_cost_mult
 		20 = {
 			trigger = {
@@ -4549,66 +4955,57 @@ add_2_scaled_artifact_modifier_majesty_effect = {
 			}
 		}
 		
-		# vassal_opinion
+		# courtly_opinion
 		20 = {
-			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
-			}
 			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_2_modifier
+			}
+			else_if = {
 				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_opinion_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_opinion_2_modifier
-					}
-				}
+				add_artifact_modifier = artifact_courtly_vassal_opinion_3_modifier
 			}
 			else_if = {
 				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_opinion_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_opinion_4_modifier
-					}
-				}
+				add_artifact_modifier = artifact_courtly_vassal_opinion_4_modifier
+			}
+		}
+		
+		# glory_hound_opinion
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_glory_hound_vassal_opinion_4_modifier
 			}
 		}
 		
 		# vassal_tax_contribution_mult
 		20 = {
 			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
+				rarity = illustrious
 			}
-			if = {
-				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_2_modifier
-					}
+			random_list = {
+				20 = {
+					add_artifact_modifier = artifact_vassal_tax_contribution_mult_2_modifier
 				}
-			}
-			else_if = {
-				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_vassal_tax_contribution_mult_4_modifier
-					}
+				10 = {
+					add_artifact_modifier = artifact_vassal_tax_contribution_mult_4_modifier
 				}
 			}
 		}
@@ -4739,6 +5136,56 @@ add_scaled_artifact_modifier_rulership_effect = {
 						add_artifact_modifier = artifact_powerful_vassal_opinion_8_modifier
 					}
 				}
+			}
+		}
+		
+		# courtly_opinion
+		20 = {
+			modifier = {
+				exists = scope:inspiration_owner
+				scope:inspiration_owner = { has_variable = chosen_vassals_mod }
+				add = 160
+			}
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_4_modifier
+			}
+		}
+		
+		# parochial_opinion
+		20 = {
+			modifier = {
+				exists = scope:inspiration_owner
+				scope:inspiration_owner = { has_variable = chosen_vassals_mod }
+				add = 160
+			}
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_4_modifier
 			}
 		}
 		
@@ -4900,47 +5347,19 @@ add_scaled_artifact_modifier_rulership_effect = {
 		20 = {
 			if = {
 				limit = { rarity = common }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_2_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_1_modifier
 			}
 			else_if = {
 				limit = { rarity = masterwork }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_4_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_2_modifier
 			}
 			else_if = {
 				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_5_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_6_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_3_modifier
 			}
 			else_if = {
 				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_7_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_8_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_4_modifier
 			}
 		}
 		
@@ -4973,6 +5392,26 @@ add_scaled_artifact_modifier_rulership_effect = {
 						add_artifact_modifier = artifact_domain_tax_mult_4_modifier
 					}
 				}
+			}
+		}
+		
+		# parochial_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_4_modifier
 			}
 		}
 		
@@ -5116,6 +5555,56 @@ add_2_scaled_artifact_modifier_rulership_effect = {
 			}
 		}
 		
+		# courtly_opinion
+		20 = {
+			modifier = {
+				exists = scope:inspiration_owner
+				scope:inspiration_owner = { has_variable = chosen_vassals_mod }
+				add = 160
+			}
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_courtly_vassal_opinion_4_modifier
+			}
+		}
+		
+		# parochial_opinion
+		20 = {
+			modifier = {
+				exists = scope:inspiration_owner
+				scope:inspiration_owner = { has_variable = chosen_vassals_mod }
+				add = 160
+			}
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_parochial_vassal_opinion_4_modifier
+			}
+		}
+		
 		# Independent Ruler Opinion
 		20 = {
 			modifier = {
@@ -5274,47 +5763,19 @@ add_2_scaled_artifact_modifier_rulership_effect = {
 		20 = {
 			if = {
 				limit = { rarity = common }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_1_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_2_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_1_modifier
 			}
 			else_if = {
 				limit = { rarity = masterwork }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_3_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_4_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_2_modifier
 			}
 			else_if = {
 				limit = { rarity = famed }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_5_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_6_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_3_modifier
 			}
 			else_if = {
 				limit = { rarity = illustrious }
-				random_list = {
-					20 = {
-						add_artifact_modifier = artifact_build_gold_cost_7_modifier
-					}
-					10 = {
-						add_artifact_modifier = artifact_build_gold_cost_8_modifier
-					}
-				}
+				add_artifact_modifier = artifact_build_gold_cost_4_modifier
 			}
 		}
 		
@@ -5347,6 +5808,26 @@ add_2_scaled_artifact_modifier_rulership_effect = {
 						add_artifact_modifier = artifact_domain_tax_mult_4_modifier
 					}
 				}
+			}
+		}
+		
+		# parochial_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_parochial_tax_contribution_mult_4_modifier
 			}
 		}
 		
@@ -5503,10 +5984,7 @@ add_scaled_artifact_modifier_devotion_effect = {
 		# same_faith_opinion
 		20 = {
 			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
+				rarity = illustrious
 			}
 			if = {
 				limit = {
@@ -5533,6 +6011,25 @@ add_scaled_artifact_modifier_devotion_effect = {
 						add_artifact_modifier = artifact_same_faith_opinion_4_modifier
 					}
 				}
+			}
+		}
+		# zealot_opinion
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_4_modifier
 			}
 		}
 		# clergy_opinion
@@ -5918,6 +6415,25 @@ add_scaled_artifact_modifier_devotion_effect = {
 			else_if = {
 				limit = { rarity = illustrious }
 				add_artifact_modifier = artifact_monthly_piety_gain_per_knight_add_2_modifier
+			}
+		}
+		# zealot_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_4_modifier
 			}
 		}
 		# learning_per_piety_level
@@ -6059,10 +6575,7 @@ add_2_scaled_artifact_modifier_devotion_effect = {
 		# same_faith_opinion
 		20 = {
 			trigger = {
-				OR = {
-					rarity = famed
-					rarity = illustrious
-				}
+				rarity = illustrious
 			}
 			if = {
 				limit = {
@@ -6089,6 +6602,25 @@ add_2_scaled_artifact_modifier_devotion_effect = {
 						add_artifact_modifier = artifact_same_faith_opinion_4_modifier
 					}
 				}
+			}
+		}
+		# zealot_opinion
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_zealot_vassal_opinion_4_modifier
 			}
 		}
 		# clergy_opinion
@@ -6474,6 +7006,25 @@ add_2_scaled_artifact_modifier_devotion_effect = {
 			else_if = {
 				limit = { rarity = illustrious }
 				add_artifact_modifier = artifact_monthly_piety_gain_per_knight_add_2_modifier
+			}
+		}
+		# zealot_tax_contribution_mult
+		20 = {
+			if = {
+				limit = { rarity = common }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_1_modifier
+			}
+			else_if = {
+				limit = { rarity = masterwork }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_2_modifier
+			}
+			else_if = {
+				limit = { rarity = famed }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_3_modifier
+			}
+			else_if = {
+				limit = { rarity = illustrious }
+				add_artifact_modifier = artifact_zealot_tax_contribution_mult_4_modifier
 			}
 		}
 		# learning_per_piety_level
@@ -7485,6 +8036,102 @@ add_scaled_artifact_modifier_learning_lifestyle_xp_effect = {
 	}
 }
 
+# EP2
+
+add_scaled_artifact_modifier_archers_screen_add_effect = {
+	if = {
+		limit = { rarity = common }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_screen_add_1_modifier }
+			5 = { add_artifact_modifier = artifact_archers_screen_add_2_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = masterwork }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_screen_add_2_modifier }
+			5 = { add_artifact_modifier = artifact_archers_screen_add_3_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = famed }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_screen_add_3_modifier }
+			5 = { add_artifact_modifier = artifact_archers_screen_add_4_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = illustrious }
+		add_artifact_modifier = artifact_archers_screen_add_4_modifier
+	}
+}
+
+add_scaled_artifact_modifier_archers_toughness_mult_effect = {
+	if = {
+		limit = { rarity = common }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_toughness_mult_1_modifier }
+			5 = { add_artifact_modifier = artifact_archers_toughness_mult_2_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = masterwork }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_toughness_mult_2_modifier }
+			5 = { add_artifact_modifier = artifact_archers_toughness_mult_3_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = famed }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archers_toughness_mult_3_modifier }
+			5 = { add_artifact_modifier = artifact_archers_toughness_mult_4_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = illustrious }
+		add_artifact_modifier = artifact_archers_toughness_mult_4_modifier
+	}
+}
+
+add_scaled_artifact_modifier_archer_cavalry_screen_add_effect = {
+	if = {
+		limit = { rarity = common }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_1_modifier }
+			5 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_2_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = masterwork }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_2_modifier }
+			5 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_3_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = famed }
+		random_list = {
+			20 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_3_modifier }
+			5 = { add_artifact_modifier = artifact_archer_cavalry_screen_add_4_modifier }
+		}
+	}
+	else_if = {
+		limit = { rarity = illustrious }
+		add_artifact_modifier = artifact_archer_cavalry_screen_add_4_modifier
+	}
+}
+
+add_scaled_artifact_modifier_stress_gain_effect = {
+	switch = {
+		trigger = rarity
+		common = { add_artifact_modifier = artifact_stress_gain_1_modifier }
+		masterwork = { add_artifact_modifier = artifact_stress_gain_2_modifier }
+		famed = { add_artifact_modifier = artifact_stress_gain_3_modifier }
+		illustrious = { add_artifact_modifier = artifact_stress_gain_4_modifier }
+	}
+}
+
 #################################################
 #												#
 # 		WEAPON CREATION AND DECORATION  		#
@@ -7737,7 +8384,7 @@ create_artifact_weapon_effect = {
 		clear_saved_scope = dummy_gender
 	}
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		if = {
 			limit = {
 				scope:weapon_type_is_set = flag:no
@@ -7788,7 +8435,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -7808,6 +8455,13 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_weapon_prize_effect = { VISUALS = axe TYPE = axe }
 			}
 			else = {
 				create_artifact = {	
@@ -7842,7 +8496,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -7862,6 +8516,13 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_weapon_prize_effect = { VISUALS = hammer TYPE = hammer }
 			}
 			else = {
 				create_artifact = {	
@@ -7896,7 +8557,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -7916,6 +8577,13 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_weapon_prize_effect = { VISUALS = spear TYPE = spear }
 			}
 			else = {
 				create_artifact = {	
@@ -7950,7 +8618,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -7970,6 +8638,13 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_weapon_prize_effect = { VISUALS = mace TYPE = mace }
 			}
 			else = {
 				create_artifact = {	
@@ -8003,7 +8678,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8023,6 +8698,13 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_weapon_prize_effect = { VISUALS = dagger TYPE = dagger }
 			}
 			else = {
 				create_artifact = {	
@@ -8056,7 +8738,7 @@ create_artifact_weapon_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8064,7 +8746,7 @@ create_artifact_weapon_effect = {
 				}
 			}
 			else_if = {
-				limit = { exists = scope:smith }
+				limit = { exists = scope:bowyer }
 				create_artifact = {	
 					name = artifact_sword_name
 					creator = scope:smith
@@ -8077,17 +8759,50 @@ create_artifact_weapon_effect = {
 					save_scope_as = newly_created_artifact
 				}
 			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+					NOT = { $OWNER$ = { has_character_flag = event_4500_happening } }
+				}
+				random_list = {
+					1 = {
+						tournament_contest_weapon_prize_effect = { VISUALS = longsword TYPE = sword }
+					}
+					1 = {
+						tournament_contest_weapon_prize_effect = { VISUALS = sword TYPE = sword }
+					}
+				}
+			}
 			else = {
-				create_artifact = {	
-					name = artifact_sword_name
-					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
-					visuals = sword
-					type = sword 
-					modifier = artifact_prowess_1_modifier
-					wealth = scope:wealth
-					quality = scope:quality
-					save_scope_as = newly_created_artifact
-					history = { type = created_before_history } 
+				random_list = {
+					1 = {
+						trigger = { sword_could_be_longsword_trigger = yes }
+						create_artifact = {
+							name = artifact_longsword_name
+							description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+							visuals = longsword
+							type = sword 
+							modifier = artifact_prowess_1_modifier
+							wealth = scope:wealth
+							quality = scope:quality
+							save_scope_as = newly_created_artifact
+							history = { type = created_before_history } 
+						}
+					}
+					1 = {
+						create_artifact = {
+							name = artifact_sword_name
+							description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+							visuals = sword
+							type = sword 
+							modifier = artifact_prowess_1_modifier
+							wealth = scope:wealth
+							quality = scope:quality
+							save_scope_as = newly_created_artifact
+							history = { type = created_before_history } 
+						}
+					}
 				}
 			}
 			scope:newly_created_artifact = {
@@ -8318,7 +9033,7 @@ create_artifact_armor_effect = {
 		clear_saved_scope = dummy_gender
 	}
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		if = {
 			limit = {
 				scope:armor_type_is_set = flag:no
@@ -8370,7 +9085,7 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8390,6 +9105,13 @@ create_artifact_armor_effect = {
 					modifier = artifact_prowess_1_modifier
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = plate }
 			}
 			else = {
 				create_artifact = {	
@@ -8419,7 +9141,7 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8439,6 +9161,13 @@ create_artifact_armor_effect = {
 					modifier = artifact_prowess_1_modifier
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = scale }
 			}
 			else = {
 				create_artifact = {	
@@ -8468,7 +9197,7 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8488,6 +9217,13 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = lamellar }
 			}
 			else = {
 				create_artifact = {	
@@ -8517,7 +9253,7 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8537,6 +9273,13 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = laminar }
 			}
 			else = {
 				create_artifact = {	
@@ -8566,7 +9309,7 @@ create_artifact_armor_effect = {
 					quality = scope:quality
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8586,6 +9329,13 @@ create_artifact_armor_effect = {
 					modifier = artifact_prowess_1_modifier
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = brigandine }
 			}
 			else = {
 				create_artifact = {	
@@ -8615,7 +9365,7 @@ create_artifact_armor_effect = {
 					modifier = artifact_prowess_1_modifier
 					save_scope_as = newly_created_artifact
 					history = {
-						location = scope:location.title_province
+						location = scope:location
 						actor = scope:adventurer
 						recipient = root
 						type = discovered
@@ -8635,6 +9385,13 @@ create_artifact_armor_effect = {
 					modifier = artifact_prowess_1_modifier
 					save_scope_as = newly_created_artifact
 				}
+			}
+			else_if = {
+				limit = {
+					exists = scope:host
+					exists = scope:activity
+				}
+				tournament_contest_armor_prize_effect = { TYPE = mail }
 			}
 			else = {
 				create_artifact = {	
@@ -8729,7 +9486,7 @@ create_artifact_regalia_effect = {
 			quality = scope:quality
 			save_scope_as = newly_created_artifact
 			history = {
-				location = scope:location.title_province
+				location = scope:location
 				actor = scope:adventurer
 				recipient = root
 				type = given
@@ -8750,7 +9507,7 @@ create_artifact_regalia_effect = {
 		}
 	}
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		scope:newly_created_artifact = {
 			# Prestige modifier is scaled based on the Wealth of the artifact (opulence).
 			add_scaled_artifact_modifier_minor_prestige_effect = yes
@@ -8808,7 +9565,7 @@ create_artifact_crown_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$SMITH$ = { save_scope_as = goldsmith }
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		# Get artifact quality, wealth, materials, and decorations
 		get_artifact_quality_effect = yes
 		get_artifact_wealth_effect = yes
@@ -8901,22 +9658,85 @@ create_artifact_brooch_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$SMITH$ = { save_scope_as = goldsmith }
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		# Get artifact quality, wealth, materials, and decorations
 		get_artifact_quality_effect = yes
 		get_artifact_wealth_effect = yes
-
+		if = { #Any existing dummy character gets turned into the goldsmith
+			limit = {
+				exists = scope:dummy_gender
+				scope:goldsmith = scope:dummy_gender
+			}
+			clear_saved_scope = goldsmith
+			clear_saved_scope = dummy_gender
+		}
 		# Create the artifact
-		create_artifact = {	
-			name = artifact_brooch_name
-			creator = scope:goldsmith
-			description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
-			visuals = brooch
-			type = brooch
-			modifier = artifact_placeholder_modifier
-			wealth = scope:wealth
-			quality = scope:quality
-			save_scope_as = newly_created_artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_brooch_name
+				description = placeholder
+				visuals = brooch
+				type = brooch
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch
+				type = brooch
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:goldsmith
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch
+				type = brooch
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_brooch_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch
+				type = brooch
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
 		}
 
 		scope:newly_created_artifact = {
@@ -8945,6 +9765,130 @@ create_artifact_brooch_effect = {
 			# Add artifact modifiers
 			add_scaled_artifact_modifier_minor_prestige_effect = yes
 			add_scaled_artifact_modifier_attractiveness_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
+
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+create_artifact_brooch_pedestal_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality, wealth, materials, and decorations
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Create the artifact
+		if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch_pedestal
+				type = brooch_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:goldsmith
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch_pedestal
+				type = brooch_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_brooch_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch_pedestal
+				type = brooch_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+
+		scope:newly_created_artifact = {
+			# Finish generating decorations and update description
+			if = {
+				limit = {
+					OR = {
+						has_artifact_feature = brooch_decoration_adornment
+						has_artifact_feature = brooch_decoration_centerpiece_and_adornment
+					}
+				}
+				set_artifact_feature_group = brooch_adornment
+			}
+			if = {
+				limit = {
+					OR = {
+						has_artifact_feature = brooch_decoration_centerpiece
+						has_artifact_feature = brooch_decoration_centerpiece_and_adornment
+					}
+				}
+				set_artifact_feature_group = brooch_centerpiece
+			}
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_brooch_description
+
+			# Add artifact modifiers
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			add_scaled_artifact_modifier_attractiveness_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
 
 			set_variable = {
 				name = quality
@@ -8967,78 +9911,103 @@ create_artifact_brooch_effect = {
 create_artifact_necklace_effect = {
 	# Get the character the artifact is being made for.
 	$OWNER$ = { save_scope_as = owner }
-	# Get artifact quality and wealth
-	get_artifact_quality_effect = yes
-	get_artifact_wealth_effect = yes
-
-	
-	# Create the artifact
-	if = {
-		limit = { exists = scope:adventurer }
-		create_artifact = {	
-			name = artifact_necklace_name
-			description = placeholder #properly set later
-			visuals = necklace
-			type = necklace
-			modifier = artifact_placeholder_modifier
-			wealth = scope:wealth
-			quality = scope:quality
-			save_scope_as = newly_created_artifact
-			history = {
-				location = scope:location.title_province
-				actor = scope:adventurer
-				recipient = root
-				type = given
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality and wealth
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_necklace_name
+				description = placeholder #properly set later
+				visuals = necklace
+				type = necklace
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
 			}
 		}
-	}
-	else = {
-		create_artifact = {	
-			name = artifact_necklace_name
-			creator = scope:owner
-			description = placeholder #properly set later
-			visuals = necklace
-			type = necklace
-			modifier = artifact_placeholder_modifier
-			wealth = scope:wealth
-			quality = scope:quality
-			save_scope_as = newly_created_artifact
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = necklace
+				type = necklace
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
 		}
-	}
-
-	hidden_effect_new_artifact = {
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {	
+				name = artifact_necklace_name
+				creator = scope:goldsmith
+				description = placeholder #properly set later
+				visuals = necklace
+				type = necklace
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {	
+				name = artifact_necklace_name
+				description = placeholder #properly set later
+				visuals = necklace
+				type = necklace
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
 		scope:newly_created_artifact = {
 			#Loc
 			get_artifact_feature_references_effect = yes
 			set_artifact_description = artifact_necklace_description
 			remove_artifact_modifier = artifact_placeholder_modifier
 			add_scaled_artifact_modifier_minor_prestige_effect = yes
-
+			add_scaled_artifact_modifier_attractiveness_effect = yes
 			if = {
 				limit = {
-					rarity = illustrious
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
 				}
-				add_artifact_modifier = artifact_attraction_opinion_4_modifier
+				add_scaled_artifact_modifier_majesty_effect = yes
 			}
-			else_if = {
-				limit = {
-					rarity = famed
-				}
-				add_artifact_modifier = artifact_attraction_opinion_3_modifier
-			}
-			else_if = {
-				limit = {
-					rarity = masterwork
-				}
-				add_artifact_modifier = artifact_attraction_opinion_2_modifier
-			} 
-			else_if = {
-				limit = {
-					rarity = common
-				}
-				add_artifact_modifier = artifact_attraction_opinion_1_modifier
-			}
-
 			set_variable = {
 				name = quality
 				value = scope:quality
@@ -9047,7 +10016,119 @@ create_artifact_necklace_effect = {
 				name = wealth
 				value = scope:wealth
 			}
-			save_scope_as = newly_created_artifact
+		}
+	}
+}
+
+create_artifact_necklace_pedestal_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality and wealth
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_necklace_name
+				creator = scope:goldsmith
+				description = placeholder #properly set later
+				visuals = necklace_pedestal
+				type = necklace_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = given
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_brooch_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = brooch
+				type = brooch
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {	
+				name = artifact_necklace_name
+				creator = scope:goldsmith
+				description = placeholder #properly set later
+				visuals = necklace_pedestal
+				type = necklace_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {	
+				name = artifact_necklace_name
+				description = placeholder #properly set later
+				visuals = necklace_pedestal
+				type = necklace_pedestal
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+		scope:newly_created_artifact = {
+			#Loc
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_necklace_description
+			remove_artifact_modifier = artifact_placeholder_modifier
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			add_scaled_artifact_modifier_attractiveness_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_majesty_effect = yes
+			}
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
 		}
 	}
 }
@@ -9084,7 +10165,7 @@ get_pressed_flower_species_effect = {
 				# Europe or Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = {
 							geographical_region = world_europe_south
 							geographical_region = world_africa_north
@@ -9103,7 +10184,7 @@ get_pressed_flower_species_effect = {
 				# Asia 
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_asia_minor
 							geographical_region = world_middle_east
@@ -9120,7 +10201,7 @@ get_pressed_flower_species_effect = {
 				# Mediterranean sea + arid Asia 
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe_south
 							geographical_region = world_africa_north
@@ -9139,7 +10220,7 @@ get_pressed_flower_species_effect = {
 				# Europe, North Africa + parts of Asia 
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_africa_north
@@ -9158,7 +10239,7 @@ get_pressed_flower_species_effect = {
 				# Africa + parts of Asia 
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_india
 							geographical_region = world_middle_east
@@ -9176,7 +10257,7 @@ get_pressed_flower_species_effect = {
 				# parts of Africa + India 
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_india
 							geographical_region = world_africa_west
@@ -9193,7 +10274,7 @@ get_pressed_flower_species_effect = {
 				# parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_steppe_east
 							geographical_region = world_steppe_tarim
@@ -9211,7 +10292,7 @@ get_pressed_flower_species_effect = {
 				# parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_steppe_east
 							geographical_region = world_steppe_tarim
@@ -9229,7 +10310,7 @@ get_pressed_flower_species_effect = {
 				# parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_india
 							geographical_region = world_middle_east
@@ -9247,7 +10328,7 @@ get_pressed_flower_species_effect = {
 				# Europe, Africa, and parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9266,7 +10347,7 @@ get_pressed_flower_species_effect = {
 				# Europe and Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9284,7 +10365,7 @@ get_pressed_flower_species_effect = {
 				# Europe and Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9302,7 +10383,7 @@ get_pressed_flower_species_effect = {
 				# Europe and Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9320,7 +10401,7 @@ get_pressed_flower_species_effect = {
 				# Europe and Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9339,7 +10420,7 @@ get_pressed_flower_species_effect = {
 				# Europe and parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9357,7 +10438,7 @@ get_pressed_flower_species_effect = {
 				# Europe and parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9375,7 +10456,7 @@ get_pressed_flower_species_effect = {
 				# Europe and parts of Asia
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe
 							geographical_region = world_middle_east
@@ -9394,7 +10475,7 @@ get_pressed_flower_species_effect = {
 				# Southern Europe and Northen Africa
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe_south
 							geographical_region = world_africa_north
@@ -9410,7 +10491,7 @@ get_pressed_flower_species_effect = {
 				# Southern Europe and Northen Africa
 				modifier = {
 					factor = 0
-					scope:location.title_province = { 
+					$LOCATION$ = { 
 						NOR = { 
 							geographical_region = world_europe_south
 							geographical_region = world_africa_north
@@ -9429,6 +10510,7 @@ get_pressed_flower_species_effect = {
 create_artifact_pressed_flower_effect = {
 	# Get the character the artifact is being made for.
 	$OWNER$ = { save_scope_as = owner }
+	scope:owner = { save_scope_as = creator }
 	hidden_effect = {
 		# Get artifact quality and wealth
 		get_artifact_quality_effect = yes
@@ -9436,7 +10518,6 @@ create_artifact_pressed_flower_effect = {
 
 		#Get flower 
 		get_animal_hunt_location_effect = yes #not hunting, but need the location in a similar way
-		get_pressed_flower_species_effect = yes
 	}
 	
 	# Create the artifact
@@ -9444,6 +10525,9 @@ create_artifact_pressed_flower_effect = {
 			if = {
 				limit = {
 					exists = scope:flower_picker
+				}
+				hidden_effect = {
+					get_pressed_flower_species_effect = { LOCATION = scope:flower_picker.location }
 				}
 				# Create the artifact
 				create_artifact = {	
@@ -9459,6 +10543,9 @@ create_artifact_pressed_flower_effect = {
 				}
 			}
 			else = {
+				hidden_effect = {
+					get_pressed_flower_species_effect = { LOCATION = scope:owner.location }
+				}
 				# Create the artifact
 				create_artifact = {	
 					name = artifact_pressed_flower_name
@@ -9477,7 +10564,7 @@ create_artifact_pressed_flower_effect = {
 
 	
 
-	hidden_effect_new_artifact = {
+	hidden_effect_new_object = {
 		scope:newly_created_artifact = {
 			#Loc
 			get_artifact_feature_references_effect = yes
@@ -9520,6 +10607,10 @@ create_artifact_pressed_flower_effect = {
 				name = wealth
 				value = scope:wealth
 			}
+			set_variable = {
+				name = flower_species
+				value = scope:flower_species
+			}
 		}
 	}
 }
@@ -9533,7 +10624,7 @@ roll_scientific_apparatus_effect = {
 			}
 			save_scope_value_as = {
 				name = artefact_scientific_apparatus_type
-				value = flag:artisan_type_armillary_sphere
+				value = flag:artisan_type_scientific_apparatus
 			}
 		}
 	}
@@ -9564,7 +10655,6 @@ generate_trinket_effect = {
 			name = grab_all_trinkets
 			value = flag:$GRAB_ALL_TRINKETS$
 		}
-		#TODO:FGK Add Rarity check	
 	}
 	random_list = {
 		#BAD
@@ -9827,6 +10917,10 @@ generate_trinket_effect = {
 						}
 						##stewardship_general.2001
 						has_character_flag = used_in_stewardship_general.2001
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -9856,6 +10950,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_fancy_case
 				modifier = artifact_clergy_opinion_1_modifier
+				modifier = artifact_zealot_vassal_opinion_2_modifier
 				save_scope_as = new_trinket
 				wealth = 15
 				quality = 15
@@ -9898,6 +10993,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_figurine
 				modifier = artifact_stress_gain_2_modifier
+				modifier = artifact_scheme_resistance_add_2_modifier
 				save_scope_as = new_trinket
 				wealth = 25
 				quality = 25
@@ -9924,6 +11020,10 @@ generate_trinket_effect = {
 						}
 						##stewardship_general.2001
 						has_character_flag = used_in_stewardship_general.2001
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##Add more/other trigger flags below
 					}
 				}
@@ -9953,6 +11053,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_figurine
 				modifier = artifact_monthly_prestige_1_modifier
+				modifier = artifact_learning_1_modifier
 				save_scope_as = new_trinket
 				wealth = 15
 				quality = 15
@@ -9978,6 +11079,10 @@ generate_trinket_effect = {
 						}
 						##stewardship_general.2001
 						has_character_flag = used_in_stewardship_general.2001
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##Add more/other trigger flags below
 					}
 				}
@@ -10010,6 +11115,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = rock
 				modifier = artifact_clergy_opinion_1_modifier
+				modifier = artifact_zealot_vassal_opinion_2_modifier
 				save_scope_as = new_trinket
 				wealth = 15
 				quality = 15
@@ -10035,6 +11141,10 @@ generate_trinket_effect = {
 						}
 						##stewardship_general.2001
 						has_character_flag = used_in_stewardship_general.2001
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10066,6 +11176,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_goblet
 				modifier = artifact_monthly_prestige_1_modifier
+				modifier = artifact_learning_1_modifier
 				save_scope_as = new_trinket
 				wealth = 15
 				quality = 15
@@ -10091,6 +11202,10 @@ generate_trinket_effect = {
 						}
 						##stewardship_general.2001
 						has_character_flag = used_in_stewardship_general.2001
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10122,6 +11237,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_figurine
 				modifier = artifact_stress_gain_1_modifier
+				modifier = artifact_different_faith_opinion_4_modifier
 				save_scope_as = new_trinket
 				wealth = 15
 				quality = 15
@@ -10150,6 +11266,10 @@ generate_trinket_effect = {
 						has_character_flag = used_in_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10180,6 +11300,7 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_pouch
 				modifier = artifact_fertility_gain_2_modifier
+				modifier = artifact_spouse_opinion_add_2_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10206,6 +11327,10 @@ generate_trinket_effect = {
 						has_character_flag = used_in_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10220,7 +11345,19 @@ generate_trinket_effect = {
 			}
 			##^^Add more/other modifier flags above^^##
 			#DO NOT edit this part##
+			###For localization
+			if = {
+				limit = { exists = location }
+				location = { save_scope_as = target_location }
+			}
+			else = {
+				#You should not end up here, something is wrong
+				random_province = {
+					save_scope_as = target_location
+				}
+			}
 			set_up_trinket_adjective_effect = yes
+			#set_up_regional_mythical_creature_effect = { LOCATION = scope:target_location }
 			set_up_regional_mythical_creature_effect = yes
 			create_artifact = {
 				name = mythical_creature_figurine
@@ -10228,6 +11365,8 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = pocket_figurine
 				modifier = artifact_monthly_learning_lifestyle_xp_1_modifier
+				modifier = artifact_learning_1_modifier
+				modifier = artifact_health_gain_1_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10276,6 +11415,7 @@ generate_trinket_effect = {
 				visuals = pocket_basic_case
 				modifier = artifact_monthly_piety_1_modifier
 				modifier = artifact_health_gain_1_modifier
+				modifier = artifact_zealot_vassal_opinion_2_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10306,6 +11446,10 @@ generate_trinket_effect = {
 						has_character_flag = used_in_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10322,7 +11466,9 @@ generate_trinket_effect = {
 				description = jira_stick.desc
 				type = miscellaneous
 				visuals = regalia
+				modifier = artifact_monthly_learning_lifestyle_xp_1_modifier
 				modifier = artifact_learning_1_modifier
+				modifier = artifact_prowess_2_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10349,6 +11495,10 @@ generate_trinket_effect = {
 						has_character_flag = used_in_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10382,12 +11532,22 @@ generate_trinket_effect = {
 			}
 			##^^Add more/other modifier flags above^^##
 			#DO NOT edit this part##
+			###For localization
+			if = {
+				limit = { exists = location }
+				location = { save_scope_as = target_location }
+			}
+			else = {
+				#You should not end up here, something is wrong
+			}
 			create_artifact = {
 				name = lucky_coin
 				description = lucky_coin.desc
 				type = miscellaneous
 				visuals = medallion
 				modifier = artifact_monthly_stewardship_lifestyle_xp_1_modifier
+				modifier = artifact_domain_tax_mult_2_modifier
+				modifier = artifact_stewardship_per_stress_level_1_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10418,6 +11578,10 @@ generate_trinket_effect = {
 						has_character_flag = used_in_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10430,7 +11594,8 @@ generate_trinket_effect = {
 				description = lavender_jade_pendant.desc
 				type = miscellaneous
 				visuals = necklace
-				modifier = artifact_monthly_piety_1_modifier
+				modifier = artifact_monthly_piety_2_modifier
+				modifier = artifact_monthly_piety_from_buildings_mult_3_modifier
 				save_scope_as = new_trinket
 				wealth = 45
 				quality = 45
@@ -10463,6 +11628,10 @@ generate_trinket_effect = {
 						has_character_flag = has_extremely_high_stewardship_skill_stewardship_general.2001
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10485,6 +11654,8 @@ generate_trinket_effect = {
 				visuals = ring
 				modifier = artifact_monthly_prestige_2_modifier
 				modifier = artifact_monthly_stewardship_lifestyle_xp_1_modifier
+				modifier = artifact_stewardship_1_modifier
+				modifier = artifact_monthly_dynasty_prestige_3_modifier
 				save_scope_as = new_trinket
 				wealth = 65
 				quality = 65
@@ -10522,6 +11693,10 @@ generate_trinket_effect = {
 						}
 						##feast_default.1016
 						has_character_flag = used_in_feast_default.1016
+						
+						###bp1_yearly.1021
+						has_character_flag = 1021_token
+					
 						##^^Add more/other trigger flags above^^##
 					}
 				}
@@ -10535,7 +11710,9 @@ generate_trinket_effect = {
 				type = miscellaneous
 				visuals = brooch
 				modifier = artifact_health_gain_2_modifier
-				modifier = artifact_fertility_gain_1_modifier
+				modifier = artifact_fertility_gain_2_modifier
+				modifier = artifact_negate_health_penalty_add_2_modifier
+				modifier = artifact_prowess_3_modifier
 				save_scope_as = new_trinket
 				wealth = 65
 				quality = 65
@@ -10704,8 +11881,8 @@ generate_trinket_effect = {
 					location = scope:trinket_giver.location
 				}
 			}
-			##TODO:FGK Taken in battle
-			##TODO:FGK Won in duel
+			##TODO_CD_FGK Taken in battle
+			##TODO_CD_FGK Won in duel
 		}
 	}
 	#Clean up the grab all flag, in case it was used
@@ -10724,5 +11901,1050 @@ generate_trinket_effect = {
 	if = {
 		limit = { exists = var:trinket_adjective_followup }
 		remove_variable = trinket_adjective_followup
+	}
+}
+
+
+# EP2
+# If the type of weapon hasn't been decided yet we set it here
+set_bow_artifact_type_effect = {
+	save_temporary_scope_value_as = {
+		name = allow_no_type_option
+		value = $NO_TYPE$
+	}
+	# Historically many of these types of weapon were used in some combination, but to give a clearer portrayal to the player we have to simplify it a bit
+	hidden_effect = {
+		$BASE_SCOPE$ = {
+			#The type has been decided in events, when the character got inspired, or now. Let's save it! (might still leave it up to the sponsor if allow_no_type_option = yes!)
+			if = {
+				limit = {
+					NOT = { exists = var:artifact_bow_type }
+				}
+				random_list = { #What weapon do they want to forge?
+					25 = {
+						trigger = {
+							culture = { has_cultural_tradition = tradition_longbow_competitions }
+						}
+						set_variable = {
+							name = artifact_bow_type
+							value = flag:artifact_bow_type_longbow
+						}
+					}
+					10 = {
+						trigger = {
+							culture = { has_innovation = innovation_advanced_bowmaking }
+						}
+						set_variable = {
+							name = artifact_bow_type
+							value = flag:artifact_bow_type_crossbow
+						}
+					}
+					5 = {
+						set_variable = {
+							name = artifact_bow_type
+							value = flag:artifact_bow_type_bow
+						}
+					}
+					25 = {
+						trigger = {
+							culture = {
+								OR = {
+									has_cultural_tradition = tradition_horse_lords
+									has_cultural_pillar = heritage_byzantine
+									has_cultural_pillar = heritage_turkic
+									has_cultural_pillar = heritage_mongolic
+								}
+							}
+						}
+						set_variable = {
+							name = artifact_bow_type
+							value = flag:artifact_bow_type_composite
+						}
+					}
+					50 = { #They don't care and you can decide!
+						trigger = { scope:allow_no_type_option = yes }
+						modifier = {
+							add = 30
+							has_personality_submissive_trigger = yes
+						}
+						modifier = {
+							add = 9890 # ~1% chance of being predetermined if comissioning from a local artisan.
+							has_character_flag = local_artisan
+						}
+						ai_value_modifier = {
+							ai_boldness = -0.25
+							ai_energy = -0.25
+						}
+						# Don't set on creation so that the player has more input on what gets forged in inspiration start events, like fund_inspiration.0015
+					}
+				}
+			}
+		}
+	}
+}
+
+create_artifact_bow_effect = {
+	# Get the character the artifact is being made for.
+	# If scope:adventurer exists this will result in the history entry reading that the weapon was discovered instead of made.
+	$OWNER$ = { save_scope_as = owner }
+	$CREATOR$ = { save_scope_as = bowyer }
+	save_temporary_scope_value_as = {
+		name = bow_type_is_set
+		value = $SET_BOW_TYPE$
+	}
+	if = { #Any existing dummy character gets turned into the bowyer
+		limit = {
+			exists = scope:dummy_gender
+			scope:bowyer = scope:dummy_gender
+		}
+		clear_saved_scope = bowyer
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		if = {
+			limit = { scope:bow_type_is_set = flag:no }
+			if = {
+				limit = { exists = scope:bowyer }
+				set_bow_artifact_type_effect = {
+					BASE_SCOPE = scope:bowyer
+					NO_TYPE = no
+				}
+				scope:bowyer = {
+					var:artifact_bow_type = { save_scope_as = bow_type }
+					remove_variable = artifact_bow_type
+				}
+			}
+			else = {
+				set_bow_artifact_type_effect = {
+					BASE_SCOPE = scope:owner
+					NO_TYPE = no
+				}
+				scope:owner = {
+					var:artifact_bow_type = { save_scope_as = bow_type }
+					remove_variable = artifact_bow_type
+				}
+			}
+		}
+		else = {
+			scope:bow_type_is_set = { save_scope_as = bow_type }
+		}
+		# Get artifact quality and wealth.
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Get the type of weapon to forge. Defaults to bow if an invalid type is provided.
+		if = { # Longbow
+			limit = { scope:bow_type = flag:artifact_bow_type_longbow }
+			if = {
+				limit = { exists = scope:adventurer }
+				create_artifact = {
+					name = artifact_longbow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = longbow
+					type = longbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = {
+						location = scope:location
+						actor = scope:adventurer
+						recipient = root
+						type = discovered
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_bow_prize_effect = { TYPE = longbow }
+			}
+			else_if = {
+				limit = { exists = scope:bowyer }
+				create_artifact = {
+					name = artifact_longbow_name
+					creator = scope:bowyer
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = longbow
+					type = longbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+				}
+			}
+			else = {
+				create_artifact = {
+					name = artifact_longbow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = longbow
+					type = longbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = { type = created_before_history } 
+				}
+			}
+			scope:newly_created_artifact = {
+				get_artifact_feature_references_effect = yes
+				set_artifact_description = artifact_longbow_description
+			}
+		}
+		else_if = { # Composite
+			limit = { scope:bow_type = flag:artifact_bow_type_composite }
+			if = {
+				limit = { exists = scope:adventurer }
+				create_artifact = {
+					name = artifact_composite_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = composite
+					type = composite
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = {
+						location = scope:location
+						actor = scope:adventurer
+						recipient = root
+						type = discovered
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_bow_prize_effect = { TYPE = composite }
+			}
+			else_if = {
+				limit = { exists = scope:bowyer }
+				create_artifact = {
+					name = artifact_composite_name
+					creator = scope:bowyer
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = composite
+					type = composite
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+				}
+			}
+			else = {
+				create_artifact = {
+					name = artifact_composite_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = composite
+					type = composite
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = { type = created_before_history } 
+				}
+			}
+			scope:newly_created_artifact = {
+				get_artifact_feature_references_effect = yes
+				set_artifact_description = artifact_composite_description
+			}
+		}
+		else_if = { # Crossbow
+			limit = { scope:bow_type = flag:artifact_bow_type_crossbow }
+			if = {
+				limit = { exists = scope:adventurer }
+				create_artifact = {
+					name = artifact_crossbow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = crossbow
+					type = crossbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = {
+						location = scope:location
+						actor = scope:adventurer
+						recipient = root
+						type = discovered
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_bow_prize_effect = { TYPE = crossbow }
+			}
+			else_if = {
+				limit = { exists = scope:bowyer }
+				create_artifact = {
+					name = artifact_crossbow_name
+					creator = scope:bowyer
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = crossbow
+					type = crossbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+				}
+			}
+			else = {
+				create_artifact = {
+					name = artifact_crossbow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = crossbow
+					type = crossbow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = { type = created_before_history } 
+				}
+			}
+			scope:newly_created_artifact = {
+				get_artifact_feature_references_effect = yes
+				set_artifact_description = artifact_crossbow_description
+			}
+		}
+		else_if = { # Standard
+			limit = { scope:bow_type = flag:artifact_bow_type_bow }
+			if = {
+				limit = { exists = scope:adventurer }
+				create_artifact = {
+					name = artifact_bow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = bow
+					type = bow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = {
+						location = scope:location
+						actor = scope:adventurer
+						recipient = root
+						type = discovered
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					scope:host ?= $OWNER$
+					scope:activity ?= { has_activity_type = activity_tournament }
+				}
+				tournament_contest_bow_prize_effect = { TYPE = bow }
+			}
+			else_if = {
+				limit = { exists = scope:smith }
+				create_artifact = {
+					name = artifact_bow_name
+					creator = scope:smith
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = bow
+					type = bow
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+				}
+			}
+			else = {
+				create_artifact = {
+					name = artifact_bow_name
+					description = placeholder # Will be re-generated once decorations are added in the post-creation effects.
+					visuals = bow
+					type = bow 
+					modifier = artifact_prowess_1_modifier
+					wealth = scope:wealth
+					quality = scope:quality
+					save_scope_as = newly_created_artifact
+					history = { type = created_before_history } 
+				}
+			}
+			scope:newly_created_artifact = {
+				get_artifact_feature_references_effect = yes
+				set_artifact_description = artifact_bow_description
+			}
+		}
+		scope:newly_created_artifact = {
+			# Prowess from weapon rarity
+			add_scaled_artifact_modifier_prowess_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_composite }
+					add_scaled_artifact_modifier_archer_cavalry_screen_add_effect = yes
+				}
+				else_if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_longbow }
+					add_scaled_artifact_modifier_archers_screen_add_effect = yes
+				}
+				else = { add_2_scaled_artifact_modifier_combat_effect = yes }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						rarity = common
+						rarity = masterwork
+					}
+				}
+				if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_composite }
+					add_scaled_artifact_modifier_archer_cavalry_screen_add_effect = yes
+				}
+				else_if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_longbow }
+					add_scaled_artifact_modifier_archers_screen_add_effect = yes
+				}
+				else = { add_2_scaled_artifact_modifier_combat_effect = yes }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+					# No decorations
+				}
+				if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_composite }
+					add_scaled_artifact_modifier_archer_cavalry_screen_add_effect = yes
+				}
+				else_if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_longbow }
+					add_scaled_artifact_modifier_archers_screen_add_effect = yes
+				}
+				else = { add_2_scaled_artifact_modifier_combat_effect = yes }
+			}
+			else_if = {
+				limit = {
+					rarity = masterwork
+					# No decorations
+				}
+				if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_composite }
+					add_scaled_artifact_modifier_archer_cavalry_screen_add_effect = yes
+				}
+				else_if = {
+					limit = { scope:bow_type = flag:artifact_bow_type_longbow }
+					add_scaled_artifact_modifier_archers_screen_add_effect = yes
+				}
+				else = { add_2_scaled_artifact_modifier_combat_effect = yes }
+			}
+			else = { add_artifact_modifier = artifact_prowess_no_decorations_modifier }
+			# Save the quality and wealth of this artifact in case we need to reference it later. 
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+create_artifact_ring_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality, wealth, materials, and decorations
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_ring_name
+				description = placeholder
+				visuals = ring
+				type = ring
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_ring_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = ring
+				type = ring
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+			}
+		}
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {
+				name = artifact_ring_name
+				creator = scope:goldsmith
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = ring
+				type = ring
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_ring_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = ring
+				type = ring
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+		scope:newly_created_artifact = {
+			# Finish generating decorations and update description
+			if = {
+				limit = {
+					OR = {
+						has_artifact_feature = ring_decoration_adornment
+						has_artifact_feature = ring_decoration_centerpiece_and_adornment
+					}
+				}
+				set_artifact_feature_group = ring_adornment
+			}
+			if = {
+				limit = {
+					OR = {
+						has_artifact_feature = ring_decoration_centerpiece
+						has_artifact_feature = ring_decoration_centerpiece_and_adornment
+					}
+				}
+				set_artifact_feature_group = ring_centerpiece
+			}
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_ring_description
+
+			# Add artifact modifiers
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			if = {
+				limit = {
+					OR = {
+						has_artifact_feature = ring_adornment_motto
+						has_artifact_feature = ring_centerpiece_signet
+					}
+				}
+				add_scaled_artifact_modifier_majesty_effect = yes
+			}
+			else = { add_scaled_artifact_modifier_attractiveness_effect = yes }
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+create_artifact_bowl_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality, wealth, materials, and decorations
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_bowl_name
+				description = placeholder
+				visuals = bowl
+				type = bowl
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_bowl_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = bowl
+				type = bowl
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			limit = { exists = scope:goldsmith }
+			create_artifact = {
+				name = artifact_bowl_name
+				creator = scope:goldsmith
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = bowl
+				type = bowl
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_bowl_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = bowl
+				type = bowl
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+
+		scope:newly_created_artifact = {
+			# Finish generating decorations and update description
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_bowl_description
+			# Add artifact modifiers
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			add_scaled_artifact_modifier_grandeur_small_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+create_artifact_plate_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$SMITH$ = { save_scope_as = goldsmith }
+	if = { #Any existing dummy character gets turned into the goldsmith
+		limit = {
+			exists = scope:dummy_gender
+			scope:goldsmith = scope:dummy_gender
+		}
+		clear_saved_scope = goldsmith
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality, wealth, materials, and decorations
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_plate_name
+				description = placeholder
+				visuals = plate
+				type = plate
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_plate_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = plate
+				type = plate
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			trigger = { exists = scope:goldsmith }
+			create_artifact = {
+				name = artifact_plate_name
+				creator = scope:goldsmith
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = plate
+				type = plate
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_plate_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = plate
+				type = plate
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+		scope:newly_created_artifact = {
+			# Finish generating decorations and update description
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_plate_description
+			# Add artifact modifiers
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			add_scaled_artifact_modifier_grandeur_small_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+create_artifact_urn_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	$POTTER$ = { save_scope_as = potter }
+	if = { #Any existing dummy character gets turned into the potter
+		limit = {
+			exists = scope:dummy_gender
+			scope:potter = scope:dummy_gender
+		}
+		clear_saved_scope = potter
+		clear_saved_scope = dummy_gender
+	}
+	hidden_effect_new_object = {
+		# Get artifact quality, wealth, materials, and decorations
+		get_artifact_quality_effect = yes
+		get_artifact_wealth_effect = yes
+
+		# Create the artifact
+		if = {
+			limit = { exists = scope:adventurer }
+			create_artifact = {	
+				name = artifact_urn_name
+				description = placeholder
+				visuals = urn
+				type = urn
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = {
+					location = scope:location
+					actor = scope:adventurer
+					recipient = root
+					type = discovered
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:host ?= $OWNER$
+				scope:activity ?= { has_activity_type = activity_tournament }
+			}
+			create_artifact = {
+				name = artifact_urn_name
+				creator = scope:host
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = urn
+				type = urn
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				history = {
+					type = prize_created
+					recipient = scope:host
+				}
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else_if = {
+			limit = { exists = scope:potter }
+			create_artifact = {
+				name = artifact_urn_name
+				creator = scope:potter
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = urn
+				type = urn
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+			}
+		}
+		else = {
+			create_artifact = {
+				name = artifact_urn_name
+				description = placeholder # Will be updated in the post-creation effects after decorations are assigned.
+				visuals = urn
+				type = urn
+				modifier = artifact_placeholder_modifier
+				wealth = scope:wealth
+				quality = scope:quality
+				save_scope_as = newly_created_artifact
+				history = { type = created_before_history }
+			}
+		}
+		scope:newly_created_artifact = {
+			# Finish generating decorations and update description
+			get_artifact_feature_references_effect = yes
+			set_artifact_description = artifact_urn_description
+			# Add artifact modifiers
+			add_scaled_artifact_modifier_grandeur_small_effect = yes
+			add_scaled_artifact_modifier_minor_prestige_effect = yes
+			if = {
+				limit = {
+					OR = {
+						rarity = famed
+						rarity = illustrious
+					}
+				}
+				add_scaled_artifact_modifier_majesty_effect = yes
+			}
+			set_variable = {
+				name = quality
+				value = scope:quality
+			}
+			set_variable = {
+				name = wealth
+				value = scope:wealth
+			}
+		}
+	}
+}
+
+hunt_animal_artifact_modifier_selection_effect = {
+	if = {
+		limit = {
+			OR = {
+				rarity = masterwork
+				rarity = famed
+				rarity = illustrious
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:owner.var:animal_type ?= flag:hare
+				}
+			}
+			add_scaled_artifact_modifier_attractiveness_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_intrigue_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:owner.var:animal_type ?= flag:roe
+					scope:owner.var:animal_type ?= flag:reindeer
+					scope:owner.var:animal_type ?= flag:stag
+					scope:owner.var:animal_type ?= flag:antelope
+					scope:owner.var:animal_type ?= flag:saiga
+					scope:owner.var:animal_type ?= flag:hart
+					scope:owner.var:animal_type ?= flag:elk
+					scope:owner.var:animal_type ?= flag:horse
+				}
+			}
+			add_scaled_artifact_modifier_majesty_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_minor_prestige_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:owner.var:animal_type ?= flag:aurochs
+					scope:owner.var:animal_type ?= flag:bison
+					scope:owner.var:animal_type ?= flag:boar
+				}
+			}
+			add_scaled_artifact_modifier_rulership_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_majesty_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:owner.var:animal_type ?= flag:bear
+					scope:owner.var:animal_type ?= flag:leopard
+					scope:owner.var:animal_type ?= flag:lion
+					scope:owner.var:animal_type ?= flag:tiger
+					scope:owner.var:animal_type ?= flag:wolf
+					scope:owner.var:animal_type ?= flag:lynx
+					scope:owner.var:animal_type ?= flag:wolf
+					scope:owner.var:animal_type ?= flag:dog
+				}
+			}
+			add_scaled_artifact_modifier_combat_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_majesty_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:owner.var:animal_type ?= flag:hyena
+					scope:owner.var:animal_type ?= flag:unicorn
+					scope:owner.var:animal_type ?= flag:fox
+					scope:owner.var:animal_type ?= flag:dragon
+					scope:owner.var:animal_type ?= flag:cat
+				}
+			}
+			add_scaled_artifact_modifier_intrigue_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_scholarship_effect = yes
+			}
+		}
+		else = {
+			add_scaled_artifact_modifier_majesty_effect = yes
+			if = {
+				limit = {
+					rarity = illustrious
+				}
+				add_scaled_artifact_modifier_rulership_effect = yes
+			}
+		}
 	}
 }

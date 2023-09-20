@@ -378,7 +378,7 @@ spouse_martial_event_troop_size = {
 		multiply = 1.5
 	}
 
-	multiply = 2
+	multiply = 2 #ToI
 
 	round = yes
 }

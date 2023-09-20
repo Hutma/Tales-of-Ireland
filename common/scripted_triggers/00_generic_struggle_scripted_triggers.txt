@@ -27,6 +27,13 @@ is_important_or_vip_struggle_character = {
 	}
 }
 
+is_semi_important_ruler_struggle_character = {
+	OR = {
+		highest_held_title_tier >= tier_county
+		is_important_or_vip_struggle_character = yes
+	}
+}
+
 is_secondary_character_involvement_involved_trigger = {
 	save_temporary_scope_as = struggle_temp
 	$CHAR$ = {
@@ -98,15 +105,15 @@ catalyst_gave_independence_to_powerful_diff_faith_culture_vassal_preliminary_tri
 
 catalyst_granted_powerful_diff_faith_vassal_religious_protection_preliminary_trigger = {
 	$CHAR$ = {
-		OR = {
-			AND = {
-				local_var:religious_rights != vassal_contract_obligation_level:religious_rights
-				local_var:religious_rights >= 1
+		any_in_list = {
+			list = changed_obligations
+			vassal_contract_type = {
+				OR = {
+					this = vassal_contract:religious_rights
+					this = vassal_contract:jizya_special_rights
+				}
 			}
-			AND = {
-				local_var:jizya_special_rights != vassal_contract_obligation_level:jizya_special_rights
-				local_var:jizya_special_rights >= 1
-			}
+			obligation_level_score >= 1
 		}
 		is_powerful_vassal = yes
 	}
@@ -114,15 +121,15 @@ catalyst_granted_powerful_diff_faith_vassal_religious_protection_preliminary_tri
 
 catalyst_revoked_powerful_diff_faith_vassal_religious_protection_preliminary_trigger = {
 	$CHAR$ = {
-		OR = {
-			AND = {
-				local_var:religious_rights != vassal_contract_obligation_level:religious_rights
-				local_var:religious_rights <= 0
+		any_in_list = {
+			list = changed_obligations
+			vassal_contract_type = {
+				OR = {
+					this = vassal_contract:religious_rights
+					this = vassal_contract:jizya_special_rights
+				}
 			}
-			AND = {
-				local_var:jizya_special_rights != vassal_contract_obligation_level:jizya_special_rights
-				local_var:jizya_special_rights <= 0
-			}
+			obligation_level_score >= 1
 		}
 		is_powerful_vassal = yes
 	}
@@ -315,10 +322,22 @@ is_large_conquest_war_for_struggle_trigger = {
 # Can conquest holy wars be accessed in the current phase of the struggle?
 are_holy_wars_disabled_in_struggle_phase_trigger = {
 	exists = scope:target
-	scope:target.tier = tier_county
-	scope:target = {
-		any_county_struggle = {
-			NOT = {	has_struggle_phase_parameter = holy_wars_in_region_cannot_be_declared }
+	trigger_if = {
+		scope:target.tier = tier_county
+		scope:target = {
+			any_county_struggle = {
+				NOT = {	has_struggle_phase_parameter = holy_wars_in_region_cannot_be_declared }
+			}
+		}
+	}
+	trigger_else = { # For Duchy and Kingdom Holy War
+		scope:target = {
+			any_in_de_facto_hierarchy = {  # We only consider county within the realm of the target's holder
+					tier = tier_county
+				any_county_struggle = {
+					NOT = {	has_struggle_phase_parameter = holy_wars_in_region_cannot_be_declared }
+				}
+			}
 		}
 	}
 }

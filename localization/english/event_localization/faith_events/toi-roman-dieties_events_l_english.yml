@@ -1,0 +1,14 @@
+﻿l_english:
+#####################
+#Made by tom5667 - Polytheism Reborn
+######################
+#choose your main deity event localization 
+cdr_cmd.001.t:0 "Choose main deity"
+cdr_cmd.001.desc:0 "To help me in the struggle to rule my realm I could devote to one of the gods or godesses."
+cdr_cmd.001.a:0 "Iupiter"
+cdr_cmd.001.b:0 "Iuno"
+cdr_cmd.001.c:0 "Mars"
+cdr_cmd.001.d:0 "Venus"
+cdr_cmd.001.e:0 "the house lares"
+cdr_cmd.001.f:0 "Mercurius"
+cdr_cmd.001.g:0 "Maybe now isn't the right time"

@@ -3,7 +3,7 @@
 #pict hidden triggers 0001
 toi_pictish_invasion.1001 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -34,7 +34,7 @@ toi_pictish_invasion.0001 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 	
 	right_portrait = {
@@ -50,7 +50,7 @@ toi_pictish_invasion.0001 = {
 #pictish hidden triggers 0002
 toi_pictish_invasion.1002 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -78,7 +78,7 @@ toi_pictish_invasion.0002 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 	
 	right_portrait = {
@@ -94,7 +94,7 @@ toi_pictish_invasion.0002 = {
 #pictish hidden triggers 0003, after failing
 toi_pictish_invasion.1003 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -122,7 +122,7 @@ toi_pictish_invasion.0003 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 	
 	right_portrait = {
@@ -138,7 +138,7 @@ toi_pictish_invasion.0003 = {
 #pictish hidden triggers 0004, finish
 toi_pictish_invasion.1004 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -165,7 +165,7 @@ toi_pictish_invasion.0004 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = picts_background
+		reference = picts_background
 	}
 	
 	right_portrait = {

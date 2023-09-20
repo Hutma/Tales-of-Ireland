@@ -81,8 +81,8 @@
  trait_three_quarter_celtic_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is more [celt|E] than anything else."
  
  trait_megalith_human:0 "Ancient Human"
- trait_megalith_human_desc:0 "The [ancient_humans|E] were the peoples who built all the megaliths of Ireland. They have faced every invasion of their Irish homeland, and have stuggled to survive. They still hold onto the knowledge used by their ancestors to build Newgrange."
- trait_megalith_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an Ancient Human. [ancient_humans|E] were the peoples who built all the megaliths of Ireland. They have faced every invasion of their Irish homeland, and have stuggled to survive. They still hold onto the knowledge used by their ancestors to build Newgrange."
+ trait_megalith_human_desc:0 "The [ancient_humans|E] were the peoples who built all the megaliths of Ireland. They have faced every invasion of their Irish homeland, and have struggled to survive. They still hold onto the knowledge used by their ancestors to build Newgrange."
+ trait_megalith_human_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an Ancient Human. [ancient_humans|E] were the peoples who built all the megaliths of Ireland. They have faced every invasion of their Irish homeland, and have struggled to survive. They still hold onto the knowledge used by their ancestors to build Newgrange."
  trait_half_megalith_human:0 "Half-blooded Ancient Human"
  trait_half_megalith_human_desc:0 "Half the blood of this character is [ancient_human|E] blood."
  trait_half_megalith_human_character_desc:0 "Half the blood of [ROOT.GetCharacter.GetFirstNameNoTooltip] is [ancient_human|E] blood."

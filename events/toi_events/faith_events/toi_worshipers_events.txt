@@ -5,7 +5,7 @@ toi_worshipers.0001 = { #truce with de danann
 	desc = toi_worshipers.0001.desc
 	theme = faith
 	override_background = {
-		event_background = irish_megalith_chamber
+		reference = irish_megalith_chamber
 	}
 	left_portrait = {
 		character = root
@@ -22,7 +22,7 @@ toi_worshipers.0002 = { #truce with fomorians
 	desc = toi_worshipers.0002.desc
 	theme = faith
 	override_background = {
-		event_background = irish_megalith_chamber
+		reference = irish_megalith_chamber
 	}
 	left_portrait = {
 		character = root

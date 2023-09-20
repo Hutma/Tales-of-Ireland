@@ -26,6 +26,11 @@ seelie_elective = { #seelie Elective.
 			add = 3
 			has_character_flag = more_vote_weight_perk_flag
 		}
+		modifier = { #Regent Influence
+			desc = tooltip_feudal_vote_strength_is_diarch
+			add = 1
+			is_diarch_of_target = scope:holder
+		}
 	}
 	
 	electors = {
@@ -34,8 +39,8 @@ seelie_elective = { #seelie Elective.
 			limit = {
 				is_independent_ruler = yes
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				has_trait = seelie_fairy
 			}
@@ -44,8 +49,8 @@ seelie_elective = { #seelie Elective.
 			type = holder_direct_vassals
 			limit = {
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				has_trait = seelie_fairy
 			}
@@ -85,8 +90,8 @@ seelie_elective = { #seelie Elective.
 			limit = {
 				is_independent_ruler = yes
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				has_trait = seelie_fairy
 			}
@@ -95,8 +100,8 @@ seelie_elective = { #seelie Elective.
 			type = holder_direct_vassals
 			limit = {
 				NOT = {
-					has_government = mercenary_government
-					has_government = holy_order_government
+					government_has_flag = government_is_mercenary
+					government_has_flag = government_is_holy_order
 				}
 				has_trait = seelie_fairy
 			}

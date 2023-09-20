@@ -253,17 +253,31 @@ fp2_struggle_ending_compromise_independent_duchy_trigger = {
 	tier = tier_duchy
 	# Is created
 	exists = holder
-	# Is not the heartland of an existing kingdom
-	NOT = { title_capital_county = de_jure_liege.title_capital_county }
+	OR = {
+		# Is not the heartland of an existing kingdom
+		NOT = { title_capital_county = de_jure_liege.title_capital_county }
+		# Capital duke doesn't control kingdom, edge case
+		AND = {
+			exists = de_jure_liege.holder
+			NOT = { holder = de_jure_liege.holder }
+		}
+	}
 	# Is ruled by an independent duke
 	holder = {
 		is_independent_ruler = yes
+		save_temporary_scope_as = duchy_holder
 		primary_title = {
 			is_mercenary_company = no
-			tier = tier_duchy
+			OR = {
+				tier = tier_duchy
+				tier = tier_kingdom
+			}
 		}
-		save_temporary_scope_as = duchy_holder
 	}
+	OR = {
+		this = holder.primary_title
+		holder.primary_title.tier = tier_kingdom
+	} 
 	# Duke rules at least half the de jure duchy
 	any_direct_de_jure_vassal_title = {
 		percent >= 0.5
@@ -286,9 +300,10 @@ fp2_struggle_ending_compromise_split_duchy_trigger = {
 		limit = { exists = scope:duchy.de_jure_liege.holder }
 		any_direct_de_jure_vassal_title = {
 			percent < 0.5
-			holder.top_liege = scope:duchy.de_jure_liege.holder
+			holder.top_liege = scope:duchy.de_jure_liege.holder.top_liege
 		}
 	}
+	trigger_else = { always = no }
 }
 
 # Checks titular duchy should be made into de jure kingdom
@@ -313,6 +328,20 @@ fp2_struggle_ending_compromise_titular_trigger = {
 				percent >= 0.5
 				holder.top_liege = scope:special_duchy.holder
 			}
+		}
+	}
+}
+
+# Should title be created by ststus quo decision?
+fp2_struggle_ending_compromise_create_title_trigger = {
+	NOR = {
+		# this = title:e_spain
+		exists = holder
+		is_in_list = assigned_title
+		# Only if no other same rank rulers in title (e.g. multiple kings under empire)
+		any_direct_de_jure_vassal_title = {
+			exists = holder
+			NOT = { holder = scope:new_owner_temp }
 		}
 	}
 }
@@ -362,6 +391,9 @@ fp2_struggle_conciliation_scope_uninvolved_trigger = {
 				this = $SCOPE$.culture
 			}
 		}
+		NOT = {
+			$SCOPE$.capital_province = { geographical_region = world_europe_west_iberia }
+		}
 	}
 }
 
@@ -404,6 +436,7 @@ fp2_struggle_council_toledo_attendee_trigger = {
 	OR = {
 		has_trait = education_learning_3
 		has_trait = education_learning_4
+		has_trait = education_learning_5
 	}
 }
 
@@ -548,4 +581,8 @@ fp2_lyonese_monk_0000_out_of_faith_trigger = {
 		NOT = { scope:acolyte.faith.religious_head = scope:story.var:base_faith.religious_head }
 		NOT = { scope:acolyte_host.faith.religious_head = scope:story.var:base_faith.religious_head }
 	}
+}
+
+fp2_does_this_player_care_about_the_fate_of_iberia = {
+	always = no
 }

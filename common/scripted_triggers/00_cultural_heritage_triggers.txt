@@ -59,7 +59,7 @@ culture_has_north_european_heritage_pillar_trigger = {
 	culture = { has_cultural_pillar = heritage_partholonian }
 }
 culture_has_south_european_heritage_pillar_trigger = {
-	culture = { 
+	culture = {
 		OR = {
 			has_cultural_pillar = heritage_latin
 			has_cultural_pillar = heritage_fir_bolg

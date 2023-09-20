@@ -1,0 +1,13 @@
+﻿#event modifiers
+beat_up_fianna_modifier = {
+	icon = hunt_negative
+	levy_size = -0.05
+	county_opinion_add = -5
+}
+
+abandonned_subjects_for_fianna_modifier = {
+	icon = hunt_negative
+	monthly_piety = -0.25
+	county_opinion_add = -5
+	general_opinion = -5
+}

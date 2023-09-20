@@ -164,14 +164,19 @@ otherworld_exploration_core_events = {
 		100 = toi_otherworld_core.0015 # Doomsayer promises the end is night!
 		100 = toi_otherworld_core.0016 # Why am I taking this toi_otherworld_core?
 		100 = toi_otherworld_core.0017 # Ritual purification in a river
-		100 = toi_otherworld_core.0018 # Contemplating the universe
-		100 = toi_otherworld_core.0019 # Contemplating the universe
-		100 = toi_otherworld_core.0020 # Contemplating the universe
-		100 = toi_otherworld_core.0021 # Contemplating the universe
-		100 = toi_otherworld_core.0022 # Contemplating the universe
-		100 = toi_otherworld_core.0023 # Contemplating the universe
-		100 = toi_otherworld_core.0024 # Contemplating the universe
-		100 = toi_otherworld_core.0025 # Contemplating the universe
+		100 = toi_otherworld_core.0018 # 
+		100 = toi_otherworld_core.0019 # 
+		100 = toi_otherworld_core.0020 # 
+		100 = toi_otherworld_core.0021 # 
+		100 = toi_otherworld_core.0022 # 
+		100 = toi_otherworld_core.0023 # 
+		100 = toi_otherworld_core.0024 # 
+		100 = toi_otherworld_core.0025 # 
+		100 = toi_otherworld_core.0026 # 
+		100 = toi_otherworld_core.0027 #Palace of tame birds 
+		100 = toi_otherworld_core.0028 #Palace of ants 
+		100 = toi_otherworld_core.0029 #Cat in the ringfort
+		100 = toi_otherworld_core.0030 #Revoting beast
 	}
 }
 

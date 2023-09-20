@@ -28,184 +28,73 @@ on_join_court = {
 					}
 				}
 			}
-#No race = employer race
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = fomorian
-					}
-				}
+			if = {
+				limit = { culture = { has_cultural_pillar = heritage_fomorian } }
 				add_trait = fomorian
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = cessarian
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_cessarian} }
 				add_trait = cessarian
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = partholonian
-					}
-				}
-				add_trait = partholonian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = nemedian
-					}
-				}
-				add_trait = nemedian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = fir_bolg
-					}
-				}
-				add_trait = fir_bolg
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = tuatha_de_danann
-					}
-				}
-				add_trait = tuatha_de_danann
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = milesian
-					}
-				}
-				add_trait = milesian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = celtic_human
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_cruithin} }
 				add_trait = celtic_human
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = megalith_human
-					}
-				}
-				add_trait = megalith_human
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = hy_brazylian
-					}
-				}
-				add_trait = hy_brazylian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-						has_trait = latin_human
-					}
-				}
-				add_trait = latin_human
-			}
-	#No race + no employer race = liege race
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = fomorian
-					}
-				}
-				add_trait = fomorian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = cessarian
-					}
-				}
-				add_trait = cessarian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = partholonian
-					}
-				}
-				add_trait = partholonian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = nemedian
-					}
-				}
-				add_trait = nemedian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = fir_bolg
-					}
-				}
-				add_trait = fir_bolg
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = tuatha_de_danann
-
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_de_danann } }
 				add_trait = tuatha_de_danann
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = milesian
-					}
-				}
-				add_trait = milesian
-			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = celtic_human
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_errain } }
 				add_trait = celtic_human
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = megalith_human
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_laigin } }
+				add_trait = celtic_human
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_fir_bolg } }
+				add_trait = fir_bolg
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_megalithic } }
 				add_trait = megalith_human
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = hy_brazylian
-					}
-				}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_milesian } }
+				add_trait = milesian
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_nemedian } }
+				add_trait = nemedian
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_partholonian } }
+				add_trait = partholonian
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_hy_brazylian } }
 				add_trait = hy_brazylian
 			}
-			if 	= {
-				limit = {
-					scope:new_employer = {
-							has_trait = latin_human
-					}
-				}
+			else_if = {
+				limit = { has_culture = culture:bann_culture }
+				add_trait = megalith_human
+			}
+			else_if = {
+				limit = { has_culture = culture:brythonic_mann }
+				add_trait = celtic_human
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_latin } }
 				add_trait = latin_human
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_brythonic } }
+				add_trait = celtic_human
+			}
+			else_if = {
+				limit = { culture = { has_cultural_pillar = heritage_fairy } }
+				add_trait = scottish_fairy
 			}
 		}
 	}

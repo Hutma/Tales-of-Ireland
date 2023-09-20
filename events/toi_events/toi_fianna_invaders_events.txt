@@ -3,7 +3,7 @@
 #Fianna hidden triggers 0001
 toi_fianna.1001 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -26,7 +26,7 @@ toi_fianna.0001 = {
 	type = character_event
 	theme = unfriendly
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	right_portrait = {
@@ -42,7 +42,7 @@ toi_fianna.0001 = {
 #Fianna hidden triggers 0002
 toi_fianna.1002 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -68,7 +68,7 @@ toi_fianna.0002 = {
 	type = character_event
 	theme = unfriendly
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	right_portrait = {
@@ -84,7 +84,7 @@ toi_fianna.0002 = {
 #Fianna hidden triggers 0003
 toi_fianna.1003 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {
@@ -110,7 +110,7 @@ toi_fianna.0003 = {
 	type = character_event
 	theme = war
 	override_background = {
-		event_background = round_tower
+		reference = round_tower
 	}
 	
 	right_portrait = {
@@ -138,7 +138,7 @@ toi_fianna.0003 = {
 #Fianna hidden triggers 0004
 toi_fianna.1004 = {
 	hidden = yes
-	type = empty
+	scone = none
 	
 	immediate = {
 		every_ruler = {

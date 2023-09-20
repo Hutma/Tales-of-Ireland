@@ -35,7 +35,7 @@ warhorse.0001 = {
 	desc = warhorse.0001.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -74,7 +74,7 @@ warhorse.0002 = {
 	desc = warhorse.0002.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -187,7 +187,7 @@ warhorse.0003 = {
 	desc = warhorse.0003.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -220,7 +220,7 @@ warhorse.0003 = {
 	option = {
 		name = warhorse.0003.sleipnir
 		trigger = {
-			always = no
+			faith = { religion_tag = northern_legacy_religion }
 		}
 		hidden_effect = {
 			scope:story= {
@@ -425,7 +425,7 @@ warhorse.0004 = {
 	desc = warhorse.0004.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -512,7 +512,7 @@ warhorse.1001 = {
 	desc = warhorse.1001.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = root
 	
@@ -717,7 +717,7 @@ warhorse.1002 = {
 	desc = warhorse.1002.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -740,7 +740,7 @@ warhorse.1101 = {
 	desc = warhorse.1101.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -808,7 +808,7 @@ warhorse.1201 = {
 	desc = warhorse.1201.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -884,7 +884,7 @@ warhorse.1301 = {
 	desc = warhorse.1301.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = scope:horse_vassal
@@ -998,7 +998,7 @@ warhorse.1401 = {
 	desc = warhorse.1401.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -1054,7 +1054,7 @@ warhorse.1402 = {
 	desc = warhorse.1402.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -1102,7 +1102,7 @@ warhorse.1499 = {
 	desc = warhorse.1499.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -1130,7 +1130,7 @@ warhorse.8001 = {
 	desc = warhorse.8001.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = root
 
@@ -1221,7 +1221,7 @@ warhorse.8002 = {
 	desc = warhorse.8002.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root
@@ -1252,7 +1252,7 @@ warhorse.8003 = {
 	desc = warhorse.8003.desc
 	theme = martial_chivalry_focus
 	override_background = {
-		event_background = courtyard
+		reference = courtyard
 	}
 	left_portrait = {
 		character = root

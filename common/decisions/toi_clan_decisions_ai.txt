@@ -18,7 +18,7 @@
 		dynasty.dynast = root
 		root.dynasty = { exists = var:clan_unity_value }
 		root.dynasty = {
-			var:clan_unity_value = { compare_value >= 30 }
+			var:clan_unity_value >= 30
 		}
 	}
 
@@ -92,7 +92,7 @@ ai_collect_clan_cattle_decision = {
 		dynasty.dynast = root
 		root.dynasty = { exists = var:clan_unity_value }
 		root.dynasty = {
-			var:clan_unity_value = { compare_value >= 30 }
+			var:clan_unity_value >= 30
 		}
 	}
 
@@ -191,7 +191,7 @@ ai_force_clan_ruler_decision = {
 			text = low_unity_or_lower
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value < 30 }
+				var:clan_unity_value < 30
 			}
 		}
 	}
@@ -261,7 +261,7 @@ ai_call_clan_rulers_into_war_decision = {
 			text = at_least_high_unity
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value > 60 }
+				var:clan_unity_value > 60
 			}
 		}
 	}
@@ -338,7 +338,7 @@ ai_call_clan_leader_into_war_decision = {
 			text = medium_unity_or_lower
 			root.dynasty = { exists = var:clan_unity_value }
 			root.dynasty = {
-				var:clan_unity_value = { compare_value <= 60 }
+				var:clan_unity_value <= 60
 			}
 		}
 	}

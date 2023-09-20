@@ -1,10 +1,11 @@
 ﻿#Fairy War
 fairy_war_cb = {
+	icon = vassalization
 	group = subjugation
 
 	allowed_for_character = {
 		AND = {
-			has_government = feudal_government
+			government_has_flag = government_is_feudal
 			has_trait = scottish_fairy
 			is_independent_ruler = yes
 		}

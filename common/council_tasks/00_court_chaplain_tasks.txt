@@ -196,6 +196,16 @@ task_conversion = {
 
 	effect_desc = {
 		desc = task_conversion_effect_desc
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = {
+					any_vassal = {
+						has_vassal_stance = minority
+					}
+				}
+			}
+			desc = minority_disapproves_conversion_tooltip
+		}
 		desc = {
 			desc = council_task_possible_side_effects
 			triggered_desc = {
@@ -232,7 +242,7 @@ task_conversion = {
 	}
 
 	progress = {
-		value = 0.25
+		value = 0
 		#Base conversion speed
 		add = {
 			value = court_chaplain_conversion_base
@@ -325,6 +335,8 @@ task_conversion = {
 				desc = GAME_RULE_FASTER_REASON
 			}
 		}
+		
+		# Conversion speed game rules
 		if = {
 			limit = {
 				has_game_rule = significantly_faster_faith_conversion_speed
@@ -400,7 +412,10 @@ task_conversion = {
 			NOT = { faith = scope:councillor.faith }
 			trigger_if = {
 				limit = {
-					scope:councillor_liege = { has_variable = hold_court_8120_religion_block }
+					scope:councillor_liege = {
+						is_alive = yes
+						has_variable = hold_court_8120_religion_block
+					}
 				}
 				custom_tooltip = {
 					text = hold_court_8120_conversion_tt
@@ -435,6 +450,27 @@ task_conversion = {
 	}
 
 	on_finish_task_county = {
+		scope:councillor_liege = {
+			if = {
+				limit = {
+					any_vassal = {
+						has_vassal_stance = minority
+					}
+				}
+				custom_tooltip = minority_disapproves_conversion
+				hidden_effect = {
+					every_vassal = {
+						limit = {
+							has_vassal_stance = minority
+						}
+						add_opinion = {
+							target = scope:councillor_liege
+							modifier = minority_disapproves_of_conversion_opinion
+						}
+					}
+				}
+			}
+		}
 		scope:county = {
 			set_county_faith = scope:councillor.faith
 		}
@@ -712,10 +748,7 @@ task_fabricate_claim = {
 							this = scope:county.holder.liege
 						}
 					}
-					scope:county.holder.max_military_strength > {
-						value = scope:councillor_liege.max_military_strength
-						multiply = 1.2
-					}
+					scope:county.holder.max_military_strength > scope:councillor_liege.council_task_fabricate_claim_relative_strength
 				}
 				subtract = 10000
 			}
@@ -742,10 +775,7 @@ task_fabricate_claim = {
 							this = scope:county.holder.liege.liege
 						}
 					}
-					scope:county.holder.liege.max_military_strength > {
-						value = scope:councillor_liege.max_military_strength
-						multiply = 1.2
-					}
+					scope:county.holder.liege.max_military_strength > scope:councillor_liege.council_task_fabricate_claim_relative_strength
 				}
 				subtract = 10000
 			}
@@ -772,10 +802,7 @@ task_fabricate_claim = {
 							this = scope:county.holder.liege.liege.liege
 						}
 					}
-					scope:county.holder.liege.liege.max_military_strength > {
-						value = scope:councillor_liege.max_military_strength
-						multiply = 1.2
-					}
+					scope:county.holder.liege.liege.max_military_strength > scope:councillor_liege.council_task_fabricate_claim_relative_strength
 				}
 				subtract = 10000
 			}
@@ -802,10 +829,7 @@ task_fabricate_claim = {
 							this = scope:county.holder.liege.liege.liege.liege
 						}
 					}
-					scope:county.holder.liege.liege.liege.max_military_strength > {
-						value = scope:councillor_liege.max_military_strength
-						multiply = 1.2
-					}
+					scope:county.holder.liege.liege.liege.max_military_strength > scope:councillor_liege.council_task_fabricate_claim_relative_strength
 				}
 				subtract = 10000
 			}
@@ -826,10 +850,7 @@ task_fabricate_claim = {
 		}
 		else_if = {
 			limit = {
-				scope:county.holder.top_liege.max_military_strength > {
-					value = scope:councillor_liege.max_military_strength
-					multiply = 1.2
-				}
+				scope:county.holder.top_liege.max_military_strength > scope:councillor_liege.council_task_fabricate_claim_relative_strength
 			}
 			subtract = 10000
 		}

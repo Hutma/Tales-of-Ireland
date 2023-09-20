@@ -76,7 +76,6 @@ coa_switch_to_norse_trigger = {
 
 coa_feudal_trigger = {
 	always = no
-	has_government = feudal_government
 }
 
 coa_french_trigger = {
@@ -116,9 +115,7 @@ coa_indian_trigger = {
 }
 
 coa_jewish_trigger = {
-	OR = {
-		scope:culture = { has_coa_gfx = israelite_group_coa_gfx }
-	}
+	always = no
 }
 
 coa_leonese_trigger = {
@@ -153,7 +150,7 @@ coa_scottish_trigger = {
 coa_theocratic_trigger = {
 	exists = root
 	OR = {
-		has_government = theocracy_government
+		government_has_flag = government_is_theocracy
 		AND = {
 			exists = liege
 			liege = {

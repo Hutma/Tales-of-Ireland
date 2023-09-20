@@ -200,7 +200,7 @@ toi_fomorian_event.0003 = {
     desc = toi_fomorian_event.0003.desc
     theme = faith
     override_background = {
-        event_background = fp1_runestone_circle
+        reference = fp1_runestone_circle
     }
     
     left_portrait = {

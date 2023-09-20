@@ -1,8 +1,9 @@
 ﻿unite_the_sept_cb = {
+	icon = vassalization
 	group = subjugation
 
 	allowed_for_character = {
-		has_government = feudal_government
+		government_has_flag = government_is_feudal
 		culture = { has_cultural_pillar = heritage_brythonic}
 	}
 	
@@ -13,9 +14,9 @@
 		scope:attacker = {
 			trigger_if = {
 				limit = {
-					has_government = feudal_government
+					government_has_flag = government_is_feudal
 					scope:defender = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 					}
 				}
 				trigger_if = {
@@ -77,9 +78,9 @@
 		scope:attacker = {
 			OR = {
 				AND = { # Tribal Subjugation
-					has_government = feudal_government
+					government_has_flag = government_is_feudal
 					scope:defender = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 					}
 				}
 				AND = { # Temporal Subjugation

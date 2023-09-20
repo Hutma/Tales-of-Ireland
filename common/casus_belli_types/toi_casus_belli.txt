@@ -1,5 +1,6 @@
 ﻿#Partholonian CB once per lifetime
 to_new_land_cb = {
+	icon = county_conquest_cb
 	group = conquest
 
 	combine_into_one = yes
@@ -282,6 +283,7 @@ to_new_land_cb = {
 
 #Unite Ireland decision casus belli
 unite_ireland_cb = {
+	icon = vassalization
 	group = subjugation
 	ai_only_against_neighbors = yes
 
@@ -298,9 +300,9 @@ unite_ireland_cb = {
 		scope:attacker = {
 			OR = {
 				AND = { # Tribal Subjugation
-					has_government = feudal_government
+					government_has_flag = government_is_feudal
 					scope:defender = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 					}
 				}
 				AND = { # Temporal Subjugation
@@ -369,7 +371,7 @@ unite_ireland_cb = {
 				limit = {
 					scope:attacker.faith = scope:defender.faith
 					scope:defender = {
-						has_government = theocracy_government
+						government_has_flag = government_is_theocracy
 					}
 				}
 				add = {
@@ -417,7 +419,7 @@ unite_ireland_cb = {
 			if = {
 				limit = {
 					scope:attacker = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 					}
 				}
 				multiply = {
@@ -924,12 +926,13 @@ unite_ireland_cb = {
 
 #Cattle raiding
 cattle_raiding_cb = {
+	icon = artifact_war
 	group = subjugation
 	ai_only_against_neighbors = yes
 
 	allowed_for_character = {
 		AND = {
-			has_government = feudal_government
+			government_has_flag = government_is_feudal
 			NOT = {
 				OR = {
 					has_trait = cessarian
@@ -1349,6 +1352,7 @@ cattle_raiding_cb = {
 
 #Lure on cattle raiding for AI
 lure_to_cattle_raid_cb = {
+	icon = artifact_war
 	group = conquest
 
 	combine_into_one = yes
@@ -1357,7 +1361,7 @@ lure_to_cattle_raid_cb = {
 
 	allowed_for_character = {
 		AND = {
-			has_government = feudal_government
+			government_has_flag = government_is_feudal
 			is_ai = yes
 			NOT = {
 				has_trait = cessarian
@@ -1637,6 +1641,7 @@ lure_to_cattle_raid_cb = {
 
 #Fomorian religion special cb Purification
 purification_cb = {
+	icon = minor_religious_war
 	group = religious
 
 	defender_faith_can_join = yes
@@ -2093,6 +2098,7 @@ purification_cb = {
 
 #Same for duchies
 purification_duchy_cb = {
+	icon = minor_religious_war
 	group = religious
 
 	defender_faith_can_join = yes
@@ -2565,6 +2571,7 @@ purification_duchy_cb = {
 
 #Tributary fomorian cb
 fomorian_tributary_cb = {
+	icon = vassalization
 	group = vassalization
 	ai_only_against_neighbors = yes
 	
@@ -2637,7 +2644,7 @@ fomorian_tributary_cb = {
 				limit = {
 					scope:attacker.faith = scope:defender.faith
 					scope:defender = {
-						has_government = theocracy_government
+						government_has_flag = government_is_theocracy
 					}
 				}
 				add = {
@@ -3020,6 +3027,7 @@ fomorian_tributary_cb = {
 
 #Humiliate candidate cb
 humiliate_candidate_cb = {
+	icon = vassalization
 	group = vassalization
 	
 	allowed_for_character = {
@@ -3356,6 +3364,7 @@ humiliate_candidate_cb = {
 
 #attack outlaw
 outlaw_conquest_cb = {
+	icon = county_conquest_cb
 	group = conquest
 
 	combine_into_one = yes
@@ -3434,7 +3443,7 @@ outlaw_conquest_cb = {
 			}
 			if = {
 				limit = {
-					scope:attacker = { has_government = tribal_government }
+					scope:attacker = { government_has_flag = government_is_tribal }
 				}
 				multiply = {
 					value = 0.5
@@ -3523,7 +3532,7 @@ outlaw_conquest_cb = {
 			}
 			if = {
 				limit = {
-					scope:attacker = { has_government = tribal_government }
+					scope:attacker = { government_has_flag = government_is_tribal }
 				}
 				multiply = {
 					value = 0.5

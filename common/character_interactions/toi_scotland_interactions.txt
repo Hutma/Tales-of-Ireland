@@ -58,7 +58,7 @@ recall_sept_interaction = {
 			scope:recipient = {
 				if = {
 					limit = {
-						has_government = feudal_government
+						government_has_flag = government_is_feudal
 					}
 					hidden_effect = {
 						if = {

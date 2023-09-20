@@ -8,7 +8,7 @@ toi_lifestyle_event.0001 = {
     desc = toi_lifestyle_event.0001.desc
     theme = martial
     override_background = { 
-        event_background = round_tower
+        reference = round_tower
     }
     
     left_portrait = {
@@ -42,7 +42,7 @@ toi_lifestyle_event.0002 = {
     desc = toi_lifestyle_event.0002.desc
     theme = friendly
     override_background = {
-        event_background = farmland
+        reference = farmland
     }
 
     left_portrait = {
@@ -323,7 +323,7 @@ toi_lifestyle_event.0008 = {
     desc = toi_lifestyle_event.0008.desc
     theme = feast_activity
     override_background = {
-        event_background = garden
+        reference = garden
     }
 
     left_portrait= {
@@ -409,7 +409,7 @@ toi_lifestyle_event.0009 = {
     desc = toi_lifestyle_event.0009.desc
     theme = faith
     override_background = { 
-        event_background = alley_night
+        reference = alley_night
     }
 
     left_portrait = {
@@ -589,7 +589,7 @@ toi_lifestyle_event.1001 = {
     desc = toi_lifestyle_event.1001.desc
     theme = martial
     override_background = { 
-        event_background = round_tower
+        reference = round_tower
     }
 
     left_portrait = {

@@ -558,8 +558,8 @@ fp1_islamic_explorer_character = {
 		diplomat = {}
 		scholar = {}
 		theologian = {}
-		mystic_2 = {}
-		physician_2 = {}
+		lifestyle_mystic = {}
+		lifestyle_physician = {}
 	}
 	#Misc
 	random_traits = no
@@ -587,6 +587,32 @@ fp1_islamic_explorer_character = {
 	intrigue = { min_template_low_skill max_template_decent_skill }
 	learning = { max_template_average_skill max_template_high_skill }
 	prowess = { min_template_low_skill max_template_decent_skill }
+	after_creation = {
+		if = {
+			limit = { has_trait = lifestyle_mystic }
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = lifestyle_physician }
+			add_trait_xp = {
+				trait = lifestyle_physician
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
 }
 
 #Capital County Nithing
@@ -676,7 +702,7 @@ fp1_capital_county_orphan_character = {
 	prowess = { min_template_low_skill max_template_low_skill }
 }
 
-
+##################################################
 # #Raid-Trade Templates
 
 fp1_trade_partner_merchant = {
@@ -990,6 +1016,7 @@ fp1_trade_partner_warrior = {
 	learning = { min_template_low_skill max_template_average_skill }
 	prowess = { min_template_decent_skill max_template_high_skill }
 }
+
 ##################################################
 # #Innovation Templates
 

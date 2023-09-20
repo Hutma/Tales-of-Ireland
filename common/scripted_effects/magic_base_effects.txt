@@ -234,7 +234,7 @@ run_bad_effects_spell = {
 								add_stress = 100
 							}
 						}
-						20 = {
+						24 = {
 							send_interface_toast = {
 								left_icon = root
 								title = tooltip.magic.fail.sick
@@ -254,7 +254,7 @@ run_bad_effects_spell = {
 								}
 							}
 						}
-						20 = {
+						25 = {
 							send_interface_toast = {
 								left_icon = root
 								title = tooltip.magic.fail.stress

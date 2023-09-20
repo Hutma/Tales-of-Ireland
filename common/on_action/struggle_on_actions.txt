@@ -5,14 +5,17 @@ yearly_struggle_playable_pulse = {}
 # root: is involved (or interloper) character
 # Scope:struggle is the currently pulsing struggle.
 five_year_struggle_playable_pulse = {
+	trigger = {
+		basic_is_valid_for_yearly_events_trigger = yes
+	}
 	random_events = {
 		chance_to_happen = 95
 		1 = 0
 
-		80 = fp2_struggle.1000
-		50 = fp2_struggle.1001
-		50 = fp2_struggle.1010
-		45 = fp2_struggle.1020
+		80 = fp2_struggle.1000 #Stoking the Fire 
+		50 = fp2_struggle.1001 #War Widows 
+		50 = fp2_struggle.1010 #Soul of Iron
+		45 = fp2_struggle.1020 #Death of a Councilman 
 		70 = fp2_struggle.2001
 		80 = fp2_struggle.2003
 		25 = fp2_struggle.2004 # The weights inside this event are a bit high, but since the event is struggle-exclusive it will probably not be an issue

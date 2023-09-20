@@ -115,6 +115,8 @@ sicilian_parliament_kingdom_split_scripted_effect = { #If the decision is taken 
 }
 
 empower_sicilian_parliament_decision_scripted_effect = {
+	
+}
 
 promote_gothic_innovations_decision_scripted_effect = {
 	
@@ -155,6 +157,8 @@ unite_bene_israel_effect = {
 }
 
 hre_elector_list_save_effect = {
+	
+}
 
 favour_the_countryside_basques_decision_generic_effects_scripted_effect = {
 	
