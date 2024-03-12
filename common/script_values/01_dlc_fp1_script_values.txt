@@ -12,7 +12,13 @@ defiant_high_monarch_conversion_boost_value = {
 }
 
 hold_gruesome_festival_decision_value = {
-	value = 10
+	value = 0
+	if = {
+		limit = { religion = religion:northern_legacy_religion }
+		# This actually probably *isn't* Biblical numerology creeping into accounts of pagan worship, since we have records of fighting in Sweden that was probably about this around every nine years or so between Christians and pagans.
+		add = 9
+	}
+	else = { add = 10 }
 }
 
 gruesome_festival_prestige_cost_value = 200
@@ -582,6 +588,10 @@ scandinavian_adventurer_target_title_priority_value = {
 		add = -50
 	}
 	#Mark up Northern Germanic culture group counties.
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_partholonian } }
+		add = 20
+	}
 	#Mark up farmland, as it's good terrain.
 	if = {
 		limit = {
@@ -934,10 +944,10 @@ fp1_jomsvikings_coup_priority_value = {
 	value = 0
 
 	# Weight up the Jomsvikings historical home, Walin.
-	if = {
-		limit = { this = title:c_kolobrzeg }
-		add = 1000
-	}
+	# if = {
+		# limit = { this = title:c_kolobrzeg }
+		# add = 1000
+	# }
 	# Weight up OCMs.
 	if = {
 		limit = {

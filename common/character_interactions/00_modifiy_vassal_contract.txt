@@ -157,7 +157,6 @@
 						is_diff_faith_or_culture_trigger = {
 							CHAR = scope:recipient
 							STATUS = involved
-							STRUGGLE_TYPE = iberian_struggle
 						}
 						any_character_struggle = {
 							involvement = involved
@@ -224,6 +223,7 @@
 							level = scope:obligation
 						}
 					}
+
 				}
 			}
 		}
@@ -421,7 +421,6 @@ vassal_modify_vassal_contract_interaction = {
 						is_diff_faith_or_culture_trigger = {
 							CHAR = scope:recipient
 							STATUS = involved
-							STRUGGLE_TYPE = iberian_struggle
 						}
 						any_character_struggle = {
 							involvement = involved

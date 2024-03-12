@@ -1015,53 +1015,53 @@ create_artifact_pedestal_branch_relic_hinduism_effect = {
 
 create_artifact_pedestal_branch_relic_general_effect = {
 	# Get the character the artifact is being made for.
-	# $OWNER$ = { save_scope_as = owner }
-	# set_artifact_rarity_illustrious = yes
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
 
-	# save_scope_value_as = {
-		# name = branch_name
-		# value = flag:general
-	# }
+	save_scope_value_as = {
+		name = branch_name
+		value = flag:general
+	}
 
 	# Create the artifact
-	# create_artifact = {	
-		# name = artifact_pedestal_branch_name
-		# description = artifact_pedestal_branch_description
-		# type = pedestal
-		# template = branch_general_template
-		# visuals = pedestal_branch_relic_hinduism
-		# wealth = scope:wealth
-		# quality = scope:quality
-		# history = {
-			# type = created_before_history
-		# }
-		# modifier = artifact_placeholder_modifier
-		# save_scope_as = newly_created_artifact
-	# }
+	create_artifact = {	
+		name = artifact_pedestal_branch_name
+		description = artifact_pedestal_branch_description
+		type = pedestal
+		template = branch_general_template
+		visuals = pedestal_branch_relic_hinduism
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created_before_history
+		}
+		modifier = artifact_placeholder_modifier
+		save_scope_as = newly_created_artifact
+	}
 
-	# scope:newly_created_artifact = {
-		# set_variable = {	#This is needed to determine what religion the branch will work for.
-			# name = relic_religion
-			# value = $RELIGION$
-		# }
-		# set_variable = { name = historical_unique_artifact value = yes }
-		# add_scaled_artifact_modifier_piety_effect = yes
-		# add_scaled_artifact_modifier_grandeur_small_effect = yes
-		# if = {
-			# limit = {
-				# OR = {
-					# rarity = famed
-					# rarity = illustrious
-				# }
-			# }
-			# add_2_scaled_artifact_modifier_devotion_effect = yes
+	scope:newly_created_artifact = {
+		set_variable = {	#This is needed to determine what religion the branch will work for.
+			name = relic_religion
+			value = $RELIGION$
+		}
+		set_variable = { name = historical_unique_artifact value = yes }
+		add_scaled_artifact_modifier_piety_effect = yes
+		add_scaled_artifact_modifier_grandeur_small_effect = yes
+		if = {
+			limit = {
+				OR = {
+					rarity = famed
+					rarity = illustrious
+				}
+			}
+			add_2_scaled_artifact_modifier_devotion_effect = yes
 			
-		# }
-		# else = {
-			# add_scaled_artifact_modifier_devotion_effect = yes
-		# }
-		# save_scope_as = epic
-	# }
+		}
+		else = {
+			add_scaled_artifact_modifier_devotion_effect = yes
+		}
+		save_scope_as = epic
+	}
 }
 
 #Common Artifacts
@@ -1262,39 +1262,39 @@ create_artifact_throne_charlemagne_effect = { #Create at start
 
 create_artifact_throne_solomon_effect = {
 	# Get the character the artifact is being made for.
-	# $OWNER$ = { save_scope_as = owner }
+	$OWNER$ = { save_scope_as = owner }
 	# Not really used, but if we don't set the scopes we get errors in the feature selection
-	# set_artifact_rarity_illustrious = yes
+	set_artifact_rarity_illustrious = yes
 
 	# Create the artifact
-	# create_artifact = {	
-		# name = artifact_throne_solomon_name
-		# description = artifact_throne_solomon_description
-		# type = throne_special
-		# visuals = throne_solomon
-		# wealth = scope:wealth
-		# quality = scope:quality
-		# template = throne_solomon_template
-		# history = {
-			# type = created_before_history
-		# }
-		# modifier = throne_solomon_modifier
-		# save_scope_as = newly_created_artifact
-		# decaying = no
-	# }
+	create_artifact = {	
+		name = artifact_throne_solomon_name
+		description = artifact_throne_solomon_description
+		type = throne_special
+		visuals = throne_solomon
+		wealth = scope:wealth
+		quality = scope:quality
+		template = throne_solomon_template
+		history = {
+			type = created_before_history
+		}
+		modifier = throne_solomon_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
 
-	# scope:newly_created_artifact = {
-		# set_variable = { name = historical_unique_artifact value = yes }
-		# set_variable = throne_of_solomon
-		# save_scope_as = epic
-		# add_scaled_artifact_modifier_majesty_effect = yes
-		# add_scaled_artifact_modifier_rulership_effect = yes
-		# add_scaled_artifact_modifier_devotion_effect = yes
-		# save_scope_value_as = {
-			# name = throne
-			# value = yes
-		# }
-	# }
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = throne_of_solomon
+		save_scope_as = epic
+		add_scaled_artifact_modifier_majesty_effect = yes
+		add_scaled_artifact_modifier_rulership_effect = yes
+		add_scaled_artifact_modifier_devotion_effect = yes
+		save_scope_value_as = {
+			name = throne
+			value = yes
+		}
+	}
 }
 
 create_artifact_throne_scone_effect = {
@@ -3967,7 +3967,7 @@ create_artifact_sculpture_babr_e_bayan_effect = {
 create_artifact_pedestal_justinian_effect = {
 	# Get the character the artifact is being made for.
 	$OWNER$ = { save_scope_as = owner }
-	Not really used, but if we don't set the scopes we get errors in the feature selection
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
 	set_artifact_rarity_illustrious = yes
 
 	# Create the artifact

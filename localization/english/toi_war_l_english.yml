@@ -88,6 +88,7 @@
  FAIRY_WAR_NAME: "[ATTACKER.GetName] war to humiliate [DEFENDER.GetName]"
  FAIRY_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
  fairy_war_cb_victory_desc_attacker:1 "You humiliate the target and gain reputation among the fairies"
+ fairy_war_cb_defeat_desc_attacker:1 "You are humiliated and lose reputation among the fairies"
  fairy_war_cb_defeat_desc:1 "Your enemy gains reputation among the fairies"
  fairy_war_cb_victory_desc:1 "You are humiliated"
  fairy_war_cb_white_peace_desc:1 "White peace"

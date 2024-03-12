@@ -1,0 +1,16 @@
+﻿l_french:
+ force_cattle_trade.0001.t: ""
+ force_cattle_trade.0001.desc: "Quelle belle journée. Comme je l'avais prévu, ma cible et moi avons passé l'après-midi à discuter d'un éventuel échange de son bétail en échange de mon or. Nous avons tous les deux passé un moment très agréable ensemble et j'ai réussi à convaincre [name of target] que l'échange de son bétail serait avantageux pour nous deux. Je l’ai parfaitement manipulé, alors quand nous sommes allés dans ses fermes et ses pâturages à la fin de la journée, il n’avait qu’une seule question : « Combien aimeriez-vous en acheter ?"
+ force_cattle_trade.0001.a: ""
+  
+ force_cattle_trade.0002.t: ""
+ force_cattle_trade.0002.desc: "Tout s'est mal passé ! J'ai rencontré [name of target] aujourd'hui pour lui faire réfléchir à ma proposition de commerce de bétail. Il semblait très réceptif à l’idée et j’ai été amené à penser que tout se déroulerait comme prévu. Cependant, lorsque la journée s'est terminée et que j'ai proposé de régler les choses, il s'est avéré que j'avais été dupé. [name of target] s'est moqué de moi et a dit : « Pensez-vous vraiment que je serais assez stupide pour vous échanger ne serait-ce qu'une seule vache de mon magnifique troupeau ?"
+ force_cattle_trade.0002.a: ""
+  
+ force_cattle_trade.0003.t: ""
+ force_cattle_trade.0003.desc: "Quelle belle journée. Mon invité et moi avons passé tout notre temps en conversation agréable et nous nous entendions à merveille. J'avais cruellement besoin d'une journée paisible comme celle-ci, et [name of guest] l'a rendu encore meilleur en proposant un excellent arrangement. Il a proposé d'échanger une partie de mon bétail en échange de son or, ce qui profiterait à tous les deux. Nous avons troqué, puis bu pour un échange réussi. Après avoir échangé du bétail contre de l'or, j'ai conseillé à mon hôte de bon voyage et il a repris son chemin."
+ force_cattle_trade.0003.a: ""
+  
+ force_cattle_trade.0004.t: ""
+ force_cattle_trade.0004.desc: "Le sale rat [name of schemer] a essayé de me convaincre d'échanger certains de mes bovins les plus précieux et les plus productifs contre de l'or. Avec des paroles flatteuses et de faux compliments, il a essayé de m'arracher un marché. Le misérable courtisans a dû me trouver trop stupide pour voir clair dans ses flatteries. J'ai envoyé [name of schemer] en route et je l'ai prévenu de ne pas revenir."
+ force_cattle_trade.0004.a: ""

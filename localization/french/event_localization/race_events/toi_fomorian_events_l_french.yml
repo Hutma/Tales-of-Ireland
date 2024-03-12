@@ -1,0 +1,29 @@
+﻿l_french:
+ toi_fomorian_event.0001.t: "Un enfant au cœur faible"
+ toi_fomorian_event.0001.desc: "Mon enfant est devenu une personne embarrassante. [weak_child.GetFirstName] a prouvé que [weak_child.GetHerselfHimself] était doux et faible, une honte pour notre fière lignée. Il y a quelques jours, j'ai surpris [weak_child.GetHerHim] en train de partager [weak_child.GetHerHis] de la nourriture avec un sale esclave, indifférent au [weak_child.GetHerHis] rang supérieur. Lorsque [weak_child.GetSheHe] a assisté au conseil de la semaine dernière, ma décision d'extraire bientôt l'hommage fomorien de nos vassaux païens n'a pas non plus plu à [weak_child.GetHerHim] comme il le devrait. [weak_child.GetSheHe] s'est fortement opposé à moi et a qualifié cette ancienne tradition de pratique dégoûtante et barbare devant tous les membres du conseil. \n\nLa punition a bien sûr été rapide après cette démonstration humiliante, mais je devrai trouver une solution plus durable. [weak_child.GetFirstName] ternit notre nom de famille, et cela ne peut pas continuer."
+ toi_fomorian_event.0001.a: "Je lui ferai voir les véritables voies de nos ancêtres."
+ toi_fomorian_event.0001.b: "Il n'a pas sa place ici..."
+ toi_fomorian_event.0001.c: "Ce n'est qu'une phase. Ça va passer."
+ toi_fomorian_event.0001.d: "Je vais mettre fin à cela. En permanence."
+  
+ toi_fomorian_event.0002.t: "Rassemblement de Balor"
+ toi_fomorian_event.0002.desc: "Nos puissants ancêtres sont vénérés par notre peuple, et le grand Balor était parmi les plus puissants de tous. Il mena ses armées conquérantes à travers l'Irlande, dominant tous les peuples les plus faibles qu'il rencontra. Ce n'est que par lâcheté qu'il fut finalement vaincu, touché à son œil brûlant par le maudit païen Lugh. Personne ne pouvait résister à Balor en combat direct, c'est pourquoi nous le prions pour qu'il nous donne de la force au combat.\n\nAujourd'hui, Balor a entendu nos appels. Lorsque notre druide éleva la voix pour commencer la prière commune, un air étrange sembla l'envahir. S'arrêtant au milieu d'un mot, ses yeux révulsèrent soudainement et son corps commença à trembler violemment. Lorsqu'il recouvra enfin la vue, il nous regarda avec les yeux rouges de Balor. Notre ancêtre lui avait murmuré des mots de guerre et de gloire, et le druide les partageait avec empressement avec nous."
+ toi_fomorian_event.0002.a: "Se battre!"
+ toi_fomorian_event.0002.b: "Si nous sacrifions notre meilleur bétail, Balor pourrait nous rendre visite à nouveau."
+ toi_fomorian_event.0002.b.fail: "Cela n'a pas fonctionné"
+  
+ toi_fomorian_event.0003.t: "Balor a répondu"
+ toi_fomorian_event.0003.desc: "Nous avons sacrifié notre meilleur bétail, chanté nos prières les plus ferventes et accompli avec diligence chaque rituel pour garantir la faveur de Balor sur nous. \n\nEnsuite, nous avons attendu. \n\nL'obscurité de la nuit s'approfondit et les flammes de nos torches commencèrent à crépiter et à s'éteindre une à une. Aucune réponse n'est venue. Certains devinrent agités, leur regard oscillant avec incertitude entre l'autel et leurs propres pieds. Un regard aigu du druide les calma. \n\nSeules quelques torches brûlaient maintenant, projetant de longues ombres. La nuit avait atteint ses heures les plus sombres. Puis soudain, le sol s’est mis à trembler sous nos pieds. Doucement au début, mais j'ai tout de suite su que nos prières avaient été exaucées. La température a grimpé brusquement, la sueur s’accumulait sur les sourcils de tout le monde, comme si nous nous tenions près d’un feu ardent, et je pouvais voir une lumière rouge brûler au plus profond de mon esprit. Et puis une voix. Une voix claire et imposante qui semblait venir de toutes les directions et qui se répercutait sur elle-même. \n\nAucun de nous ne se souvient de ce qui s'est passé après cela, ni de ce que la voix a dit. Mais quand je me suis réveillé le lendemain matin, ma tête lourde était remplie de visions de grandeur future."
+ toi_fomorian_event.0003.a: "Nous avons été bénis."
+  
+ toi_fomorian_event.0004.t: "Sang choisi"
+ toi_fomorian_event.0004.desc: "Une fois la cérémonie de prière d’aujourd’hui terminée, mon druide se précipite à mes côtés, un regard ardent et déterminé dans les yeux. Il insiste sur le fait qu'une affaire urgente s'est produite.\n\n« Les dieux m'ont fait comprendre que votre prisonnier [prisoner_to_kill.GetName] devait être sacrifié en leur honneur. Il faut le faire aujourd’hui, car leur soif de sang est grande, et tout retard signifierait risquer leur disgrâce. J’ai pris toutes les dispositions nécessaires et, sur votre parole, nous pourrons commencer le sacrifice dans l’heure."
+ toi_fomorian_event.0004.a: "Notre druide connaît sûrement mieux la volonté des dieux."
+ toi_fomorian_event.0004.b: "Je déciderai qui sacrifier, si les dieux exigent du sang."
+ toi_fomorian_event.0004.c: "Personne n’est sacrifié aujourd’hui."
+  
+ toi_fomorian_event.0006.t: "Résurgence des Fomoriens de la mer"
+ toi_fomorian_event.0006.desc: "Depuis des millénaires, les Fomoriens de la mer dominent et terrifient les tribus d'Irlande.\n\nMais désormais, la menace qu'ils représentent n'appartient plus qu'aux légendes du passé. Ils doivent désormais se battre pour survivre et même si leur cruauté est toujours légendaire, ils n'inspirent plus la peur aux yeux de leurs ennemis.\n\nVoyant leur disparition si proche, un grand chef des Sea Fomorian s'est réuni et une armée prête à re- instaure la grandeur du peuple [fomorian_chosen.GetHerHis].\n\nCe chef est [fomorian_chosen.GetFirstName], des jours sombres attendent les ennemis des Fomoriens de la mer."
+ toi_fomorian_event.0006.a: "Le pouvoir fomorien augmente à nouveau."
+  
+ fomorian_revenge_troops: "Troupes de vengeance des Fomoriens de la mer"

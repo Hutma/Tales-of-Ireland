@@ -94,3 +94,86 @@ toi_decision_race.0004 = {
 		name = toi_decision_race.0004.a
 	}
 }
+
+
+#A fir bolgs goes to war for Maige Turied
+toi_decision_race.0005 = {
+	type = character_event
+	title = toi_decision_race.0005.t
+	desc = toi_decision_race.0005.desc
+	theme = war
+	left_portrait = {
+		character = root
+		animation = war_attacker
+	}
+	right_portrait = {
+		character = scope:ballyhooly_holder
+		animation = war_defender
+	}
+
+	immediate = {
+		add_pressed_claim = title:c_ballyhooly
+	}
+
+	#let's go to war
+	option = {
+		name = toi_decision_race.0005.a
+		add_prestige = medium_prestige_gain
+		root.capital_county = {
+			change_development_level = -5
+		}
+		start_war = {
+			cb = claim_cb
+			target = scope:ballyhooly_holder
+			claimant = root
+			target_title = title:c_ballyhooly
+		}
+		spawn_army = {
+			uses_supply = no
+			inheritable = no
+			name = fir_bolg_event_troops
+			levies = {
+				value = 0
+				add = root.max_military_strength
+				divide = 4
+			}
+			men_at_arms = {
+				type = the_brave_ones
+				stacks = {
+					value = 1
+				}
+			}
+			location = capital_province
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	#back down
+	option = {
+		name = toi_decision_race.0005.b
+		add_prestige = -75
+		remove_decision_cooldown = reclaim_maige_tuired_decision
+		remove_claim = title:c_ballyhooly
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Inform everyone.
+toi_decision_race.0006 = {
+	type = character_event
+	title = toi_decision_race.0006.t
+	desc = toi_decision_race.0006.desc
+	theme = realm
+	theme = diplomacy
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	option = {
+		name = toi_decision_race.0006.a
+	}
+}

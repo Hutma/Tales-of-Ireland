@@ -1,0 +1,37 @@
+﻿l_french:
+ nuada_story.0001.t: "Le prétendant"
+ nuada_story.0001.desc: "Depuis que les Tuatha Dé Danann ont fui l'Irlande et sont entrés dans l'Autre Monde, je les ai dirigés. Pour cette raison, je suis reconnu ici comme le roi légitime, l'élu pour gouverner et conduire notre peuple vers la grandeur. En quelques années, nous avons réussi à prendre la quasi-totalité de Derry et à nous installer sur les terres de ce royaume prospère. Tout s'est passé pour le mieux... jusqu'à maintenant. Un messager est venu au ring aujourd'hui et il a apporté des nouvelles inquiétantes. J'ai appris qu'un autre groupe de Tuatha Dé Danann avait réussi à s'espacer mais dans une autre partie de l'Autre Monde, à Tír fo Thuinn, la Terre Sous La Vague. Le chef de ce groupe s'appelle Ler et il prétend avoir autant de droit que moi de gouverner les Tuatha Dé Danann. Il viendra dans mon fort avec un défi que je devrai relever, si j'échoue, il prendra mon trône. Mais je réussis, il s'inclinera devant moi et me donnera ses hommes. Dois-je accepter le défi ?"
+ nuada_story.0001.a: "Je dois faire mes preuves en acceptant"
+ nuada_story.0001.b: "Je m'en fiche de cet homme, je n'accepterai pas"
+  
+ nuada_story.0011.t: "Ler attaque !"
+ nuada_story.0011.desc: "Qu'il soit damné. Il a rallié ses hommes et marche désormais contre moi avec son armée. Il veut prendre Derry pour lui ! Rassemblez l'armée et écrasons cet imbécile arrogant !"
+ nuada_story.0011.a: "Je vais vaincre cet insolent"
+  
+ nuada_story.0012.t: "Ler attaque Derry"
+ nuada_story.0012.desc: "Depuis que j'ai perdu Derry, Ler s'estime plus légitime que le nouveau roi et attaque maintenant Derry avec tous ses hommes."
+ nuada_story.0012.a: "Je me demande s'il va gagner"
+  
+ nuada_story.0013.t: "Roi Ler"
+ nuada_story.0013.desc: "Il l'a fait... Ler a pris ma place sur le trône de Derry... C'est fini, il mérite sa victoire et je dois reculer. Il a un destin plus grand que moi et les dieux sont avec lui, espérons qu'il mènera les Tuatha Dé Danann vers la grandeur."
+ nuada_story.0013.a: "Il était meilleur que moi..."
+  
+ nuada_story.0014.t: "Ler a échoué"
+ nuada_story.0014.desc: "Ler a été écrasé. Il a perdu la guerre pour Derry et s'enfuit maintenant."
+ nuada_story.0014.a: "C'était un digne adversaire"
+  
+ nuada_story.0002.t: "Le défi du temps"
+ nuada_story.0002.desc: "Ler est là et avec lui tous ses hommes. J'ai choisi un groupe de gardes et suis entré dans mon ringfort à mon invitation. Il marche maintenant vers moi, la tête haute et le sourire aux lèvres. 'Nuada des Tuatha Dé Danann ! Je suis heureux de vous trouver et de vous défier. Vous auriez pu penser que je trouverais un défi inventif pour vous mettre à l'épreuve, et c'est ce que j'ai fait. Je te défie de relever un défi d'endurance, si tu meurs avant moi, j'aurai ta couronne. Si je meurs avant toi, tu auras mes hommes."
+ nuada_story.0002.a: "C'est un défi intéressant"
+ nuada_story.0002.b: "Je rejette ce défi, pars"
+  
+ nuada_story.0003.t: "Le défi de la force"
+ nuada_story.0003.desc: "Ler est là et avec lui tous ses hommes. J'ai choisi un groupe de gardes et suis entré dans mon ringfort à mon invitation. Il marche maintenant vers moi, la tête haute et le sourire aux lèvres. 'Nuada des Tuatha Dé Danann ! Je suis heureux de vous trouver et de vous défier. Vous auriez pu penser que je trouverais un défi inventif pour vous mettre à l'épreuve, mais ce n'est pas le cas. Je vous défie dans une épreuve par le combat, le vainqueur sera couronné roi !'"
+ nuada_story.0003.a: "Je suis un grand combattant, je te battrai facilement"
+ nuada_story.0003.b: "Je ne te combattrai pas, va-t'en"
+  
+ nuada_story.0004.t: "Les hommes de Ler"
+ nuada_story.0004.desc: "J'ai gagné le défi et j'ai prouvé que je suis le roi légitime. Comme promis, les hommes de Ler sont désormais à mon service et combattront et mourront pour moi. Maintenant qu'il n'y a plus aucun prétendant à mon titre, je peux librement me concentrer sur la restauration de l'ancienne gloire de mon peuple."
+ nuada_story.0004.a: "Le destin attend !"
+  
+  

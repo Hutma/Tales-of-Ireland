@@ -100,14 +100,16 @@ many_crowns_for_galway_decision = {
 		custom_description = {
 			text = serve_galway_decision_effect
 			
-			every_dynasty_member = {
-				limit = {
-					is_landed = yes
-					highest_held_title_tier = 4
-				}
-				add_character_modifier = {
-					modifier = serves_galway
-					years = 10
+			dynasty = {
+				every_dynasty_member = {
+					limit = {
+						is_landed = yes
+						highest_held_title_tier = 4
+					}
+					add_character_modifier = {
+						modifier = serves_galway
+						years = 10
+					}
 				}
 			}
 		}
@@ -370,10 +372,8 @@ investigate_on_wolfwalkers_decision = {
 			has_trait = education_learning_2
 			has_trait = education_learning_3
 			has_trait = education_learning_4
-			has_trait = hunter_1
-			has_trait = hunter_2
-			has_trait = hunter_3
-			has_trait = hunter_1
+			has_trait = education_learning_5
+			has_trait = lifestyle_hunter
 			has_trait = scholar			
 		}
 	}

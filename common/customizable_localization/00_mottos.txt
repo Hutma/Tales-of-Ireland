@@ -1,9 +1,46 @@
 ﻿GetAppropriateGodname = {
 	type = character
 
+	text = {
+		trigger = {
+			house.last_house_head.faith = {
+				OR = {
+					always = no
+				}
+			}
+		}
+		localization_key = motto_god
+	}
 
 	text = {
 		trigger = {
+			house.last_house_head.faith = {
+				always = no
+			}
+		}
+		localization_key = motto_the_perfected_ones
+	}
+
+	text = {
+		trigger = {
+			house.last_house_head.faith = {
+				OR = {
+					always = no
+				}
+			}
+		}
+		localization_key = motto_the_divine
+	}
+
+	text = {
+		trigger = {
+			house.last_house_head.faith = {
+				NOR = {
+					always = no
+					always = no
+					always = no
+				}
+			}
 		}
 		localization_key = motto_the_gods
 	}

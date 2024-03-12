@@ -3,14 +3,11 @@
 ######################
 #Iupiter
 cdr_cmd1_religion = {
-	index = 57422
-	fame = yes 
+	# index = 57422
 	same_faith_opinion = 10
 	diplomacy = 2
 	monthly_prestige = 0.2
 	monthly_piety = 0.3
-	christianity_religion_opinion = -5
-	islam_religion_opinion = -5
 	icon = {
 		first_valid = {
 			triggered_desc = {
@@ -23,14 +20,11 @@ cdr_cmd1_religion = {
 }
 #Iuno
 cdr_cmd2_religion = {
-	index = 57423
-	fame = yes 
+	# index = 57423
 	same_faith_opinion = 5
 	monthly_prestige = 0.25
 	spouse_opinion = 20
 	monthly_piety = 0.5
-	christianity_religion_opinion = -5
-	islam_religion_opinion  = -5
 	icon = {
 		first_valid = {
 			triggered_desc = {
@@ -43,14 +37,11 @@ cdr_cmd2_religion = {
 }
 #Mars
 cdr_cmd3_religion = {
-	index = 57424
-	fame = yes 
+	# index = 57424
 	same_faith_opinion = 5
 	monthly_prestige = 0.3
 	prowess = 1
 	martial = 1
-	christianity_religion_opinion = -5
-	islam_religion_opinion  = -5
 	icon = {
 		first_valid = {
 			triggered_desc = {
@@ -63,14 +54,11 @@ cdr_cmd3_religion = {
 }
 #Venus
 cdr_cmd4_religion = {
-	index = 57425
-	fame = yes 
+	# index = 57425
 	same_faith_opinion = 5
 	monthly_piety = 0.5
 	attraction_opinion = 20
 	fertility = 0.2
-	christianity_religion_opinion = -10
-	islam_religion_opinion  = -10
 	icon = {
 		first_valid = {
 			triggered_desc = {
@@ -83,15 +71,12 @@ cdr_cmd4_religion = {
 }
 #House Lares
 cdr_cmd5_religion = {
-	index = 57426
-	fame = yes 
+	# index = 57426
 	same_faith_opinion = 5
 	monthly_prestige = 0.3
 	monthly_piety = 0.5
 	close_relative_opinion = 10
 	#dynasty_house_opinion = 10
-	christianity_religion_opinion = -5
-	islam_religion_opinion  = -5
 
 	icon = {
 		first_valid = {
@@ -106,14 +91,11 @@ cdr_cmd5_religion = {
 
 # Mercurius
 cdr_cmd6_religion = {
-	index = 57427
-	fame = yes 
+	# index = 57427 
 	same_faith_opinion = 5
 	monthly_income = 0.1
 	monthly_piety = 0.5
 	stewardship = 2
-	christianity_religion_opinion = -5
-	islam_religion_opinion  = -5
 
 	icon = {
 		first_valid = {
@@ -125,6 +107,6 @@ cdr_cmd6_religion = {
 		}
 	}
 
-	same_faith = yes
+	# same_faith = yes
 
 }

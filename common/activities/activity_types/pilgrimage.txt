@@ -50,16 +50,16 @@
 		}
 		trigger_else = { always = yes }
 		#Are you mandatory Hajj and Mecca is your capital?
-		trigger_if = {
-			limit = { 
-				faith = { has_doctrine_parameter = mandatory_hajj }
-				capital_province.barony ?= title:b_makka
-			}
-			custom_tooltip = {
-				text = activity_pilgrimage.is_location_valid.capital_is_mecca
-				has_trait = hajjaj
-			}
-		}
+		# trigger_if = {
+			# limit = { 
+				# faith = { has_doctrine_parameter = mandatory_hajj }
+				# capital_province.barony ?= title:b_makka
+			# }
+			# custom_tooltip = {
+				# text = activity_pilgrimage.is_location_valid.capital_is_mecca
+				# has_trait = hajjaj
+			# }
+		# }
 		#Are you a diarch forbidden from leaving the realm?
 		trigger_if = {
 			limit = { bannable_serving_diarch_trigger = yes }
@@ -205,16 +205,16 @@
 	#Filtering for Mecca will not work if put under Phase instead of the Activity setup
 	is_location_valid = {
 		#Hajj only goes to Mecca
-		trigger_if = {
-			limit = {
-				scope:special_option = flag:pilgrimage_type_hajj
-				exists = barony
-			}
-			custom_tooltip = {
-				text = activity_pilgrimage.is_location_valid.hajj_mecca
-				barony = title:b_makka
-			}
-		}
+		# trigger_if = {
+			# limit = {
+				# scope:special_option = flag:pilgrimage_type_hajj
+				# exists = barony
+			# }
+			# custom_tooltip = {
+				# text = activity_pilgrimage.is_location_valid.hajj_mecca
+				# barony = title:b_makka
+			# }
+		# }
 		#You only get to visit any particular holy site once every 5 years
 		custom_tooltip = { 
 			text = activity_pilgrimage.is_location_valid.recently_visited
@@ -580,6 +580,56 @@
 				desc = "Has maxed out Pilgrim"
 			}
 		}
+		# Plague
+		if = {
+			limit = {
+				any_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+							outbreak_intensity < apocalyptic
+						}
+					}
+				}
+				would_follow_social_distancing_value >= -1
+			}
+			add = {
+				value = -40
+				desc = "Plague in Top Realm"
+			}
+		}
+		if = {
+			limit = {
+				any_sub_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+				would_follow_social_distancing_value >= -1
+			}
+			add = {
+				value = -60
+				desc = "Plague in Realm"
+			}
+		}
+		if = {
+			limit = {
+				any_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+							outbreak_intensity = apocalyptic
+						}
+					}
+				}
+			}
+			add = {
+				value = -200
+				desc = "Apocalyptic Plague"
+			}
+		}
 	}
 
 	ai_check_interval = 60
@@ -680,6 +730,61 @@
 				desc = "Holy site is super far away 1"
 			}
 		}
+		# Plague
+		if = {
+        	limit = {
+        	    any_province_epidemic = {
+        	   	    count >= 1
+        	   	    outbreak_intensity < apocalyptic
+        	   	}
+        	   	scope:host = {
+        	    	would_follow_social_distancing_value >= -1
+        	   	}
+        	}
+        	add = {
+        	    value = -60
+        	    desc = "Plague in Realm"
+        	}
+    	}
+    	else_if = {
+    	    limit = {
+    	        any_province_epidemic = {
+    	            count >= 1
+    	            outbreak_intensity < apocalyptic
+    	        }
+    	        scope:host = {
+    	        	would_follow_social_distancing_value >= -1
+    	        }
+    	    }
+    	    add = {
+    	        value = -40
+    	        desc = "Plague in Top Realm"
+    	    }
+    	}
+    	if = {
+    	    limit = {
+    	       any_province_epidemic = {
+    	            count >= 1
+    	            outbreak_intensity = apocalyptic
+    	        }
+    	    }
+    	    add = {
+    	        value = -200
+    	        desc = "Apocalyptic Plague in Realm"
+    	    }
+    	}
+    	else_if = {
+    	    limit = {
+    	       any_province_epidemic = {
+    	            count >= 1
+    	            outbreak_intensity = major
+    	        }
+    	    }
+    	    add = {
+    	        value = -100
+    	        desc = "Major Plague in Realm"
+    	    }
+    	}
 	}
 
 	###################
@@ -913,7 +1018,7 @@
 			min = minor_gold_value
 			
 			# Make it a multiple of 5 (rounded up)
-			divide = 5
+			divide = 8
 			ceiling = yes 
 			multiply = 5
 		}
@@ -1033,33 +1138,33 @@
 				}
 				is_valid = {
 					# You only get to Hajj every X years.
-					trigger_if = {
-						limit = {
-							exists = capital_province
-							NOT = { capital_province.barony = title:b_makka }
-						}
-						custom_tooltip = {
-							text = activity_pilgrimage.is_valid.hajjed_recently
-							NOT = {
-								any_memory = {
-									has_memory_type = completed_hajj_memory
-									memory_age_years < hajj_cooldown_value
-								}
-							}
-						}
-					}
-					OR = {
-						faith = { has_doctrine_parameter = mandatory_hajj }
-						can_perform_the_hajj_trigger = yes
-					}
+					# trigger_if = {
+						# limit = {
+							# exists = capital_province
+							# NOT = { capital_province.barony = title:b_makka }
+						# }
+						# custom_tooltip = {
+							# text = activity_pilgrimage.is_valid.hajjed_recently
+							# NOT = {
+								# any_memory = {
+									# has_memory_type = completed_hajj_memory
+									# memory_age_years < hajj_cooldown_value
+								# }
+							# }
+						# }
+					# }
+					# OR = {
+						# faith = { has_doctrine_parameter = mandatory_hajj }
+						# can_perform_the_hajj_trigger = yes
+					# }
 					#Is Mecca your capital?
-					custom_tooltip = {
-						text = activity_pilgrimage.is_location_valid.capital_is_mecca
-						NAND = {
-							exists = capital_province
-							capital_province.barony = title:b_makka
-						}
-					}
+					# custom_tooltip = {
+						# text = activity_pilgrimage.is_location_valid.capital_is_mecca
+						# NAND = {
+							# exists = capital_province
+							# capital_province.barony = title:b_makka
+						# }
+					# }
 				}
 				ai_will_do = {
 					value = 50
@@ -1260,15 +1365,15 @@
 								desc = pilgrimage_cost_pomp_ceremonial
 							}
 							add = {
-								value = 10 
+								value = 5 
 								multiply = activity_cost_scale_by_tier
-								subtract = 10
+								subtract = 5
 								desc = activity_cost_scale_by_tier_desc
 							}
 							add = {
-								value = 10 
+								value = 5 
 								multiply = activity_cost_scale_by_era
-								subtract = 10 
+								subtract = 5 
 								desc = activity_cost_scale_by_era_desc
 							}
 						}
@@ -1650,32 +1755,32 @@
 				if = {
 					limit = { this = scope:host }
 					#If this is our first Hajj
-					if = {
-						limit = {
-							scope:activity = {
-								has_activity_option = {
-									category = special_type
-									option = pilgrimage_type_hajj
-								}
-							}
-							scope:activity.activity_location.county = title:c_mecca
-						}
-						if = {
-							limit = {
-								NOT = {
-									has_trait = hajjaj
-									any_memory = {
-										has_memory_type = completed_hajj_memory
-										has_variable = first_hajj
-									}
-								}
-							}
-							add_character_flag = {
-								flag = should_get_first_hajj_memory
-								days = 10 #Fallback in case activity invalidates between here and on_completion
-							}
-						}
-					}
+					# if = {
+						# limit = {
+							# scope:activity = {
+								# has_activity_option = {
+									# category = special_type
+									# option = pilgrimage_type_hajj
+								# }
+							# }
+							# scope:activity.activity_location.county = title:c_mecca
+						# }
+						# if = {
+							# limit = {
+								# NOT = {
+									# has_trait = hajjaj
+									# any_memory = {
+										# has_memory_type = completed_hajj_memory
+										# has_variable = first_hajj
+									# }
+								# }
+							# }
+							# add_character_flag = {
+								# flag = should_get_first_hajj_memory
+								# days = 10 #Fallback in case activity invalidates between here and on_completion
+							# }
+						# }
+					# }
 					#Resolve how we did with our type so we can bake that into the total reward
 					resolve_pilgrimage_type_reward_effect = yes 
 					#Conclusion event
@@ -1793,30 +1898,29 @@
 			activity_setup_special_type_progression_effect = yes
 
 			#Sets the departure activity log entry
-			if = {
-				limit = {
-					scope:activity = {
-						has_activity_option = {
-							category = special_type
-							option = pilgrimage_type_hajj
-						}
-					}
-					scope:activity.activity_location.county = title:c_mecca
-				}
-				add_activity_log_entry = {
-					key = hajj_departed_log
-					score = 25
-					tags = { departure }
-					character = scope:activity.activity_host
-				}
-			}
-			else = {
-				add_activity_log_entry = {
-					key = pilgrimage_departed_log
-					score = 25
-					tags = { departure }
-					character = scope:activity.activity_host
-				}
+			# if = {
+				# limit = {
+					# scope:activity = {
+						# has_activity_option = {
+							# category = special_type
+							# option = pilgrimage_type_hajj
+						# }
+					# }
+					# scope:activity.activity_location.county = title:c_mecca
+				# }
+				# add_activity_log_entry = {
+					# key = hajj_departed_log
+					# score = 25
+					# tags = { departure }
+					# character = scope:activity.activity_host
+				# }
+			# }
+
+			add_activity_log_entry = {
+				key = pilgrimage_departed_log
+				score = 25
+				tags = { departure }
+				character = scope:activity.activity_host
 			}
 
 			# Check what faith the pilgrimage is supposed to be for.
@@ -1952,54 +2056,54 @@
 
 		#Set up Hajj memories
 		if = {
-			limit = {
-				scope:activity = {
-					has_activity_option = {
-						category = special_type
-						option = pilgrimage_type_hajj
-					}
-				}
-				scope:activity.activity_location.county = title:c_mecca
-			}
+			limit = { always = no }
+				# scope:activity = {
+					# has_activity_option = {
+						# category = special_type
+						# option = pilgrimage_type_hajj
+					# }
+				# }
+				# scope:activity.activity_location.county = title:c_mecca
+			# }
 			#For the follow-up reflective event when back home, triggered through travel_plan_completion on_action
-			set_variable = {
-				name = has_completed_pilgrimage
-				value = flag:hajj
-			}
+			# set_variable = {
+				# name = has_completed_pilgrimage
+				# value = flag:hajj
+			# }
 			#Add first-Hajj completed memory
-			if = {
-				limit = { has_character_flag = should_get_first_hajj_memory }
-				create_character_memory = { type = completed_hajj_memory }
-				remove_character_flag = should_get_first_hajj_memory
-				scope:new_memory = {
-					set_variable = {
-						name = first_hajj
-						value = flag:completed_hajj
-					}
-					set_variable = {
-						name = hajj_destination
-						value = scope:activity.activity_location
-					}
-					if = {
-						limit = { exists = var:hajj_destination }
-						#To prevent 'unused except in loc' errors :catto:
-					}
-				}
-			}
+			# if = {
+				# limit = { has_character_flag = should_get_first_hajj_memory }
+				# create_character_memory = { type = completed_hajj_memory }
+				# remove_character_flag = should_get_first_hajj_memory
+				# scope:new_memory = {
+					# set_variable = {
+						# name = first_hajj
+						# value = flag:completed_hajj
+					# }
+					# set_variable = {
+						# name = hajj_destination
+						# value = scope:activity.activity_location
+					# }
+					# if = {
+						# limit = { exists = var:hajj_destination }
+						# To prevent 'unused except in loc' errors :catto:
+					# }
+				# }
+			# }
 			#Add second-Hajj+ completed memory
-			else = {
-				create_character_memory = { type = completed_hajj_memory }
-				scope:new_memory = {
-					set_variable = {
-						name = hajj_destination
-						value = scope:activity.activity_location
-					}
-					if = {
-						limit = { exists = var:hajj_destination }
-						#To prevent 'unused except in loc' errors :catto:
-					}
-				}
-			}
+			# else = {
+				# create_character_memory = { type = completed_hajj_memory }
+				# scope:new_memory = {
+					# set_variable = {
+						# name = hajj_destination
+						# value = scope:activity.activity_location
+					# }
+					# if = {
+						# limit = { exists = var:hajj_destination }
+						# To prevent 'unused except in loc' errors :catto:
+					# }
+				# }
+			# }
 		}
 		#Otherwise set up Pilgrimage memories
 		else = {
@@ -2411,7 +2515,7 @@
 	#Unique holy sites
 	background = {
 		trigger = {
-			activity_location.county = title:c_mecca
+			always = no
 		}
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_mecca.dds"
 		environment = "environment_mecca"
@@ -2419,7 +2523,7 @@
 	}
 	background = {
 		trigger = {
-			activity_location.county = title:c_jerusalem
+			always = no
 		}
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_jerusalem.dds"
 		environment = "environment_jerusalem"
@@ -2427,8 +2531,16 @@
 	}
 	#Generic holy sites
 	background = {
+		trigger = { 
+			always = no
+		}
+		texture = "gfx/interface/illustrations/event_scenes/fp3_temple.dds"
+		environment = "environment_event_fp3_temple"
+		ambience = "event:/DLC/FP1/SFX/Events/event_temple"
+	}
+	background = {
 		trigger = {
-			activity_location.culture = { has_graphical_mena_culture_group_trigger = yes }
+			always = no
 		}
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_mena.dds"
 		environment = "environment_generic_holy_site_mena"
@@ -2463,8 +2575,8 @@
 			OR = {
 				activity_location.province_owner ?= { 
 					OR = {
-						has_government = clan_government
-						has_government = tribal_government
+						government_has_flag = government_is_clan
+						government_has_flag = government_is_tribal
 					} 
 				}
 				activity_location.culture = { has_graphical_steppe_culture_group_trigger = yes }
@@ -2512,7 +2624,7 @@
 	window_characters = {
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2550,7 +2662,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				every_attending_character = {
@@ -2580,7 +2692,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2613,7 +2725,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				every_attending_character = {
@@ -2638,7 +2750,7 @@
 		}
 		
 		host = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2672,7 +2784,7 @@
 		}
 		
 		travel_host = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2699,7 +2811,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				every_attending_character = {
@@ -2729,7 +2841,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2767,7 +2879,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				every_attending_character = {
@@ -2792,7 +2904,7 @@
 		}
 
 		pilgrim = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {

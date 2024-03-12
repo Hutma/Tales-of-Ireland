@@ -1990,30 +1990,30 @@ accolade_leader_of_the_lieges_maa = {
 			}
 			triggered_desc = {
 				trigger = {
-					OR = {
+					# OR = {
 						AND = {
 							scope:accolade_type = {
 								this = accolade_type:archer_attribute
 							}
 							culture = {
 								OR = {
-									has_cultural_parameter = unlock_maa_archers_of_the_nile
-									has_cultural_parameter = unlock_maa_bush_hunter
-									has_cultural_parameter = unlock_maa_metsanvartija
+									# has_cultural_parameter = unlock_maa_archers_of_the_nile
+									# has_cultural_parameter = unlock_maa_bush_hunter
+									# has_cultural_parameter = unlock_maa_metsanvartija
 									has_cultural_parameter = unlock_maa_longbowmen
-									has_innovation = innovation_bamboo_bows
+									# has_innovation = innovation_bamboo_bows
 								}
 							}
 						}
-						AND = {
-							scope:accolade_type = {
-								this = accolade_type:crossbowmen_attribute
-							}
-							culture = {
-								has_innovation = innovation_repeating_crossbow
-							}
-						}
-					}
+						# AND = {
+							# scope:accolade_type = {
+								# this = accolade_type:crossbowmen_attribute
+							# }
+							# culture = {
+								# has_innovation = innovation_repeating_crossbow
+							# }
+						# }
+					# }
 				}
 				desc = accolade_cultural_archers
 			}
@@ -2026,17 +2026,18 @@ accolade_leader_of_the_lieges_maa = {
 							}
 							culture = {
 								OR = {
-									has_cultural_parameter = unlock_maa_ayyar
-									has_cultural_parameter = unlock_maa_mubarizun
-									has_cultural_parameter = unlock_maa_druzhina
-									has_cultural_parameter = unlock_maa_khandayat
-									has_cultural_parameter = unlock_maa_garudas
-									has_cultural_parameter = unlock_maa_palace_guards
-									has_cultural_parameter = unlock_maa_huscarls
-									has_cultural_parameter = unlock_maa_mountaineer
-									has_cultural_parameter = unlock_maa_zbrojnosh
-									has_innovation = innovation_sarawit
-									has_innovation = innovation_legionnaires
+									# has_cultural_parameter = unlock_maa_ayyar
+									# has_cultural_parameter = unlock_maa_mubarizun
+									# has_cultural_parameter = unlock_maa_druzhina
+									# has_cultural_parameter = unlock_maa_khandayat
+									# has_cultural_parameter = unlock_maa_garudas
+									# has_cultural_parameter = unlock_maa_palace_guards
+									# has_cultural_parameter = unlock_maa_huscarls
+									# has_cultural_parameter = unlock_maa_mountaineer
+									# has_cultural_parameter = unlock_maa_zbrojnosh
+									# has_innovation = innovation_sarawit
+									# has_innovation = innovation_legionnaires
+									always = no
 								}
 							}
 						}
@@ -2046,9 +2047,10 @@ accolade_leader_of_the_lieges_maa = {
 							}
 							culture = {
 								OR = {
-									has_innovation = innovation_rectilinear_schiltron
-									has_innovation = innovation_pike_columns
-									has_innovation = innovation_zweihanders
+									# has_innovation = innovation_rectilinear_schiltron
+									# has_innovation = innovation_pike_columns
+									# has_innovation = innovation_zweihanders
+									always = no
 								}
 							}
 						}
@@ -2065,9 +2067,10 @@ accolade_leader_of_the_lieges_maa = {
 							}
 							culture = {
 								OR = {
-									has_cultural_parameter = unlock_maa_cataphract
-									has_cultural_parameter = unlock_maa_monaspa
-									has_innovation = innovation_valets
+									# has_cultural_parameter = unlock_maa_cataphract
+									# has_cultural_parameter = unlock_maa_monaspa
+									# has_innovation = innovation_valets
+									always = no
 								}
 							}
 						}
@@ -2077,12 +2080,13 @@ accolade_leader_of_the_lieges_maa = {
 							}
 							culture = {
 								OR = {
-									has_cultural_parameter = unlock_maa_mulaththamun
-									has_cultural_parameter = unlock_maa_hussar
-									has_innovation = innovation_desert_tactics
-									has_innovation = innovation_caballeros
-									has_innovation = innovation_hobbies
-									has_innovation = innovation_sahel_horsemen
+									# has_cultural_parameter = unlock_maa_mulaththamun
+									# has_cultural_parameter = unlock_maa_hussar
+									# has_innovation = innovation_desert_tactics
+									# has_innovation = innovation_caballeros
+									# has_innovation = innovation_hobbies
+									# has_innovation = innovation_sahel_horsemen
+									always = no
 								}
 							}
 						}
@@ -2097,11 +2101,12 @@ accolade_leader_of_the_lieges_maa = {
 					}
 					culture = {
 						OR = {
-							has_cultural_parameter = unlock_maa_horn_warrior
-							has_cultural_parameter = unlock_maa_shomer
-							has_cultural_parameter = unlock_maa_abudrar
-							has_cultural_parameter = unlock_maa_guinea_warrior
-							has_innovation = innovation_adaptive_militia
+							# has_cultural_parameter = unlock_maa_horn_warrior
+							# has_cultural_parameter = unlock_maa_shomer
+							# has_cultural_parameter = unlock_maa_abudrar
+							# has_cultural_parameter = unlock_maa_guinea_warrior
+							# has_innovation = innovation_adaptive_militia
+							always = no
 						}
 					}
 				}

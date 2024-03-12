@@ -887,28 +887,28 @@ toi_decisions.019 =  { #Cattle feast event
 		trigger = {
 			exists = scope:cattle_county_1
 		}
-		change_development_level = -20
+		scope:cattle_county_1 = { change_development_level = -20 }
 	}
 	option = {
 		name = toi_decisions.019.b #county 2
 		trigger = {
 			exists = scope:cattle_county_2
 		}
-		change_development_level = -20
+		scope:cattle_county_2 = { change_development_level = -20 }
 	}
 	option = {
 		name = toi_decisions.019.c #county 3
 		trigger = {
 			exists = scope:cattle_county_3
 		}
-		change_development_level = -20
+		scope:cattle_county_3 = { change_development_level = -20 }
 	}
 	option = {
 		name = toi_decisions.019.d #county 4
 		trigger = {
 			exists = scope:cattle_county_4
 		}
-		change_development_level = -20
+		scope:cattle_county_4 = { change_development_level = -20 }
 	}
 	option = {
 		name = toi_decisions.019.e #vassals

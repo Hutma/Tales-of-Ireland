@@ -531,17 +531,17 @@ travel_events_cities.1010 = {
 				else = {
 					add = very_high_skill_rating
 				}
-				if = {
-					limit = {
-						scope:city_province = { #Arabic has a special status in Baghdad but we still need to account for if it somehow changed
-							culture = {
-								has_cultural_pillar = language_arabic
-							}
-						}
-						knows_language_of_culture = scope:city_province.culture
-					}
-					add = -5
-				}
+				# if = {
+					# limit = {
+						# scope:city_province = { #Arabic has a special status in Baghdad but we still need to account for if it somehow changed
+							# culture = {
+								# has_cultural_pillar = language_arabic
+							# }
+						# }
+						# knows_language_of_culture = scope:city_province.culture
+					# }
+					# add = -5
+				# }
 			}
 			# Success: Great Success - You get a Perk
 			15 = {
@@ -2008,19 +2008,19 @@ travel_events_cities.1020 = {
 					}
 				}
 			}
-			else = { #If Christian you get a relic
-				hidden_effect_new_object = {
-					create_artifact_pedestal_christian_relic_effect_hist = { OWNER = this }
-					scope:epic = {
-						save_scope_as = souvenir
-					}
-					send_interface_toast = {
-						title = souvenir_bought
-						left_icon = root
-						right_icon = scope:souvenir
-					}
-				}
-			}
+			# else = { #If Christian you get a relic
+				# hidden_effect_new_object = {
+					# create_artifact_pedestal_christian_relic_effect_hist = { OWNER = this }
+					# scope:epic = {
+						# save_scope_as = souvenir
+					# }
+					# send_interface_toast = {
+						# title = souvenir_bought
+						# left_icon = root
+						# right_icon = scope:souvenir
+					# }
+				# }
+			# }
 		}
 
 		stress_impact = {

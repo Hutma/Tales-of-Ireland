@@ -320,6 +320,9 @@ is_alliance_valid = {
 				}
 			}
 		}
+		# FP3 struggle case
+		has_character_flag = fp3_is_a_loyalist_puppet
+		scope:second = { has_character_flag = fp3_is_a_loyalist_puppet }
 	}
 }
 
@@ -871,6 +874,11 @@ can_be_activity_guest = {
 				is_diarch = yes
 				is_designated_diarch = yes
 			}
+			#If you have promised a grand wedding, you must be able to go through with it!
+			NOR = {
+				has_promised_a_grand_wedding = yes
+				has_been_promised_grand_wedding = yes
+			}
 		}
 		scope:host.involved_activity.activity_location.county.holder ?= {
 			OR = {
@@ -929,5 +937,57 @@ is_hostage_valid = {
 		is_grandchild_of = home_court
 		is_sibling_of = home_court
 		is_nibling_of = home_court
+		AND = {
+			age < 16
+			OR = {
+				mother = {
+					is_hostage_of = root.warden
+				}
+				father = {
+					is_hostage_of = root.warden
+				}
+			}
+		}
 	}
+}
+
+# root = the character creating a legend
+can_create_legend = {
+	age >= 12
+}
+
+# root = the character promoting a legend
+# scope:legend = the legend to promote
+can_promote_legend = {
+	is_landed = yes
+	age >= 12
+	custom_tooltip = {
+		text = legend_can_not_promote_tt
+		OR = {
+			root.dynasty = scope:legend.legend_owner.dynasty
+			knows_language_of_culture = scope:legend.legend_owner.culture
+			scope:legend.legend_owner = {
+				has_friendly_relationship_with_character_trigger = { CHARACTER = root }
+			}
+			any_character_to_title_neighboring_county = {
+				any_county_province = {
+					any_province_legend = {
+						this = scope:legend
+					}
+				}
+			}
+			scope:legend.legend_owner = {
+				knows_language_of_culture = root.culture
+			}
+		}
+	}
+}
+
+# If the ai character wants to create their own legend as well as just supporting another one
+# root = the character creating a legend
+# scope:num_legends = The number of existing legends this character could support
+ai_wants_to_create_own_legend = {
+	is_independent_ruler = yes
+	highest_held_title_tier >= tier_kingdom
+	scope:num_legends <= 5
 }

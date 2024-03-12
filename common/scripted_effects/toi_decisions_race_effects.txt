@@ -76,7 +76,7 @@ restore_aran_kingship_decision_scripted_effect = {
 	
 	title:c_aran = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}
@@ -151,7 +151,7 @@ restore_nemedian_kingdom_decision_scripted_effect = {
 	
 	title:c_castlepollard = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}

@@ -70,11 +70,12 @@ bp2_yearly.5000 = {
 
 		if = {
 			limit = {
-				any_held_county = {
-					any_county_province = {
-						has_building = the_tower_of_london_01
-					}
-				}
+				# any_held_county = {
+					# any_county_province = {
+						# has_building = the_tower_of_london_01
+					# }
+				# }
+				always = no
 			}
 			add_internal_flag = special
 			custom_tooltip = bp2_yearly.5000.a.flavor
@@ -84,11 +85,12 @@ bp2_yearly.5000 = {
 
 		if = {
 			limit = {
-				any_held_county = {
-					any_county_province = {
-						has_building = the_tower_of_london_01
-					}
-				}
+				# any_held_county = {
+					# any_county_province = {
+						# has_building = the_tower_of_london_01
+					# }
+				# }
+				always = no
 			}
 			hard_imprison_character_effect = {
 				TARGET = scope:tower_prince
@@ -3715,10 +3717,18 @@ bp2_yearly.5107 = {
 	option = {
 		name = bp2_yearly.5107.b
 
-		if = {
-			random = {
-				chance = 50
-				add_prowess_skill = 1
+		send_interface_toast = {
+			title = bp2_yearly.5107.b.tt
+			left_icon = scope:child
+			random_list = {
+				1 = {
+					desc = bp2_yearly.5107.b.tt_success
+					add_prowess_skill = 1
+				}
+				1 = {
+					desc = bp2_yearly.5107.b.tt_fail
+					custom_tooltip = bp2_yearly.5107.b_tt_fail
+				}
 			}
 		}
 

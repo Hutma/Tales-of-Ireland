@@ -232,9 +232,8 @@ a_claim_in_manx_decision = {
 								has_trait = education_learning_2
 								has_trait = education_learning_3
 								has_trait = education_learning_4
-								has_trait = hunter_1
-								has_trait = hunter_2
-								has_trait = hunter_3
+								has_trait = education_learning_5
+								has_trait = lifestyle_hunter
 								has_trait = lustful
 							}
 						}
@@ -338,6 +337,7 @@ visit_ballaharra_stones_decision = {
 								has_trait = education_martial_2
 								has_trait = education_martial_3
 								has_trait = education_martial_4
+								has_trait = education_martial_5
 							}
 						}
 					}
@@ -361,6 +361,7 @@ visit_ballaharra_stones_decision = {
 								has_trait = education_learning_2
 								has_trait = education_learning_3
 								has_trait = education_learning_4
+								has_trait = education_learning_5
 							}
 						}
 					}
@@ -421,7 +422,7 @@ fir_mannin_decision = {
 	is_shown = {
 		has_title = title:k_mann
 		NOT = {
-			cuulture= { has_cultural_pillar = heritage_manx }
+			culture= { has_cultural_pillar = heritage_manx }
 		}
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
@@ -439,7 +440,7 @@ fir_mannin_decision = {
 			is_powerful_vassal = yes
 			opinion = {
 				target = root
-				value >= positive_opinion
+				value >= 0
 			}
 		}
 	}

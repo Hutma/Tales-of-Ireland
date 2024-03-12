@@ -26,6 +26,100 @@ ShieldPersonsFemaleMale = {
 	}	
 }
 
+GruesomeFestivalName = {
+	type = character
+
+	text = {
+		localization_key = gruesomefestivalname_blot
+		trigger = { always = no }
+	}
+
+	text = {
+		localization_key = gruesomefestivalname_festival
+		trigger = {
+			NOT = { always = no }
+		}
+		fallback = yes
+	}
+}
+
+GruesomeFestivalNamePlural = {
+	type = character
+
+	text = {
+		localization_key = gruesomefestivalname_blot
+		trigger = { always = no }
+	}
+
+	text = {
+		localization_key = gruesomefestivalname_festivals
+		trigger = {
+			NOT = { always = no }
+		}
+		fallback = yes
+	}
+}
+
+GruesomeFestivalAnimalPreference = {
+	type = character
+
+	# Generic, patterned off of standard Norse preferences.
+	text = {
+		localization_key = gruesomefestivalanimalpreference_pigs_cattle_horses
+		trigger = { always = no }
+		fallback = yes
+	}
+	# Islamic syncretics.
+	text = {
+		localization_key = gruesomefestivalanimalpreference_cleananimals_cattle_horses
+		trigger = {
+			var:gf_faith = {
+				OR = {
+					has_doctrine = tenet_islamic_syncretism
+					# Islam is actually forbidden from this by default, but if someone mods it in, make sure the loc syncs up nicely.
+					always = no
+				}
+				# Exempting Hindu syncretics, who get their own loc key to avoid cattle.
+				NOT = { always = no }
+			}
+		}
+	}
+	# Jewish syncretics.
+	text = {
+		localization_key = gruesomefestivalanimalpreference_cleananimals_cattle
+		trigger = {
+			var:gf_faith = {
+				OR = {
+					has_doctrine = tenet_jewish_syncretism
+					# Islam is actually forbidden from this by default, but if someone mods it in, make sure the loc syncs up nicely.
+					always = no
+				}
+				# Exempting Hindu syncretics, who get their own loc key to avoid cattle.
+				NOT = { always = no }
+			}
+		}
+		
+	}
+	# Hindu.
+	text = {
+		localization_key = gruesomefestivalanimalpreference_cleananimals_horses_pigs
+		trigger = { always = no }
+	}
+	# And, for the sake of simplicity, syncretised Hindus.
+	text = {
+		localization_key = gruesomefestivalanimalpreference_cleananimals_goats
+		trigger = {
+			var:gf_faith = {
+				always = no
+				OR = {
+					has_doctrine = tenet_islamic_syncretism
+					has_doctrine = tenet_jewish_syncretism
+				}
+			}
+		}
+	}
+}
+
 SacrificeTerm = {
 	type = character
 

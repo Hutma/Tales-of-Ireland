@@ -6,16 +6,16 @@
 	
 	dna = 5_king_rudraige
 	
-    diplomacy =  1 
-    martial =  10 
-    stewardship =  10 
-    intrigue =  9 
-    learning =  1 
-    prowess =  5 
+    diplomacy = 6
+    martial = 10
+    stewardship = 10
+    intrigue = 10
+    learning = 4
+    prowess = 14
 
     trait = education_martial_3
     trait = just
-    trait = honest
+    trait = brave
     trait = stubborn
     trait = fir_bolg
 
@@ -23,13 +23,19 @@
     4782.1.1 = {
         birth = yes
     }
+	4799.1.1 = {
+		effect = {
+			set_relation_rival = { target = character:540002 reason = rival_historical }
+			set_relation_friend = { reason = friend_generic_history target = character:540001 }
+			set_relation_friend = { reason = friend_generic_history target = character:540004 }
+		}
+	}
 }
 540001 = {
-    name = "Melissa"
+    name = "Slanga"
     dynasty =  73 
     religion = ancient_greek_slave
     culture = fir_bolg
-    female = yes
 
     diplomacy =  12 
     martial =  5 
@@ -46,6 +52,60 @@
 
     disallow_random_traits = yes
     4765.1.1 = {
+        birth = yes
+    }
+	4799.1.1 = {
+		effect = {
+			set_relation_rival = { target = character:540004 reason = rival_historical }
+			# set_relation_friend = { reason = friend_generic_history target = character:540000 }
+		}
+	}
+}
+540024 = {
+    name = "Fallaman"
+    dynasty = 262
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 5
+    martial = 1
+    stewardship = 9 
+    intrigue = 11
+    learning = 11
+    prowess = 19
+
+    trait = education_learning_2
+    trait = callous
+    trait = temperate
+    trait = humble
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4778.1.1 = {
+        birth = yes
+    }
+}
+540025 = {
+    name = "Constans"
+    dynasty = 263
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 10
+    martial = 11
+    stewardship = 7 
+    intrigue = 8
+    learning = 5 
+    prowess = 8
+
+    trait = education_intrigue_2
+    trait = zealous
+    trait = arrogant
+    trait = deceitful
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4757.1.1 = {
         birth = yes
     }
 }
@@ -70,6 +130,60 @@
 
     disallow_random_traits = yes
     4782.1.1 = {
+        birth = yes
+		add_pressed_claim = title:k_mayo
+    }
+	# 4799.1.1 = {
+		# effect = {
+			# set_relation_rival = { target = character:540000 reason = rival_historical }
+		# }
+	# }
+}
+540021 = {
+    name = "Philotheos"
+    dynasty = 261 
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 12 
+    martial = 1
+    stewardship = 6 
+    intrigue = 11
+    learning = 9 
+    prowess = 7 
+
+    trait = education_stewardship_2
+    trait = craven
+    trait = fickle
+    trait = forgiving
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4762.1.1 = {
+        birth = yes
+    }
+}
+540022 = {
+    name = "Folachtach"
+    dynasty = 79
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy =  10 
+    martial =  8 
+    stewardship =  12 
+    intrigue =  11 
+    learning =  3 
+    prowess =  7 
+
+    trait = education_martial_3
+    trait = vengeful
+    trait = compassionate
+    trait = brave
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4777.1.1 = {
         birth = yes
     }
 }
@@ -120,6 +234,36 @@
     4776.1.1 = {
         birth = yes
     }
+	# 4799.1.1 = {
+		# effect = {
+			# set_relation_rival = { target = character:540001 reason = rival_historical }
+			# set_relation_friend = { reason = friend_generic_history target = character:540000 }
+		# }
+	# }
+}
+540023 = {
+    name = "Eochaid"
+    dynasty = 262
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 11
+    martial = 5
+    stewardship = 2 
+    intrigue = 12
+    learning = 5 
+    prowess = 9 
+
+    trait = education_stewardship_3
+    trait = paranoid
+    trait = chaste
+    trait = arbitrary
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4769.1.1 = {
+        birth = yes
+    }
 }
 540005 = {
     name = "Sengann"
@@ -142,6 +286,30 @@
 
     disallow_random_traits = yes
     4757.1.1 = {
+        birth = yes
+    }
+}
+540026 = {
+    name = "Sergios"
+    dynasty = 263
+    religion = ancient_greek_slave
+    culture = fir_bolg
+	
+    diplomacy = 7
+    martial = 11
+    stewardship = 3
+    intrigue = 4
+    learning = 4
+    prowess = 14
+
+    trait = education_martial_1
+    trait = brave
+    trait = ambitious
+    trait = honest
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4774.1.1 = {
         birth = yes
     }
 }
@@ -351,7 +519,7 @@
 
     diplomacy =  12 
     martial =  8 
-    stewardship =  5 
+    stewardship = 15 
     intrigue =  2 
     learning =  6 
     prowess =  3 
@@ -366,6 +534,54 @@
     4780.1.1 = {
         birth = yes
         add_pressed_claim = title:k_mayo
+    }
+}
+540019 = {
+    name = "Antonios"
+    dynasty = 260
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 12 
+    martial = 10
+    stewardship = 12 
+    intrigue = 10
+    learning = 1 
+    prowess = 6 
+
+    trait = education_intrigue_1
+    trait = shy
+    trait = temperate
+    trait = just
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4760.1.1 = {
+        birth = yes
+    }
+}
+540020 = {
+    name = "Flaithem"
+    dynasty = 261
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy = 7
+    martial = 2
+    stewardship = 7 
+    intrigue = 9
+    learning = 5 
+    prowess = 6 
+
+    trait = education_learning_2
+    trait = fickle
+    trait = gregarious
+    trait = lustful
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4772.1.1 = {
+        birth = yes
     }
 }
 540015 = {
@@ -437,6 +653,30 @@
 
     disallow_random_traits = yes
     4765.1.1 = {
+        birth = yes
+    }
+}
+540018 = {
+    name = "Theodoulos"
+    dynasty = 77
+    religion = ancient_greek_slave
+    culture = fir_bolg
+
+    diplomacy =  12 
+    martial =  9
+    stewardship =  8
+    intrigue =  5 
+    learning = 7
+    prowess =  15
+
+    trait = education_martial_3
+    trait = impatient
+    trait = forgiving
+    trait = compassionate
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4755.1.1 = {
         birth = yes
     }
 }

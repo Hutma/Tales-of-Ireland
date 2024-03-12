@@ -172,7 +172,7 @@ innovation_ermine_cloaks = {
 	icon = @majesty_03
 	
 	character_modifier = {
-		monthly_prestige_gain_mult = 0.1
+		vassal_limit = 20
 	}
 
 	flag = global_regular
@@ -184,7 +184,7 @@ innovation_court_officials = {
 	culture_era = culture_era_late_medieval
 	icon = @nobility_02
 	
-	modifier = {
+	character_modifier = {
 		domain_tax_mult = 0.05
 		levy_size = 0.05
 	}
@@ -200,7 +200,7 @@ innovation_development_04 = {
 	culture_era = culture_era_late_medieval
 	icon = @misc_inventions
 
-	modifier = {
+	character_modifier = {
 		build_gold_cost = -0.05
 		character_capital_county_monthly_development_growth_add = 0.2
 	}

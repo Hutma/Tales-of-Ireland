@@ -143,7 +143,9 @@ innovation_divine_right = {
 	group = culture_group_civic
 	culture_era = culture_era_high_medieval
 	icon = @majesty_03
-
+	
+	custom = multiple_claim_wars_others
+	
 	custom = multiple_claim_wars
 
 	custom = unlock_palatinate_contract
@@ -195,10 +197,7 @@ innovation_guilds = {
 
 	custom = unlock_high_medieval_economic_buildings
 	unlock_building = caravanserai_01
-	county_modifier = {
-		building_slot_add = 1
-	}
-
+	
 	flag = global_regular
 	flag = high_medieval_era_regular
 }

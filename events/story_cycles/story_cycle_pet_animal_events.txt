@@ -2379,7 +2379,7 @@ pet_animal.1109 = {
 	override_background = {
 		trigger = {
 			culture = { has_cultural_pillar = heritage_partholonian }
-			religion = religion:germanic_religion
+			religion = religion:northern_legacy_religion
 		}
 		reference = fp1_runestone
 	}

@@ -1311,13 +1311,13 @@ tour_grounds_events.1008 = {
 	desc = {
 		desc = tour_grounds_events.1008.desc.intro
 		first_valid = {
-			triggered_desc = {
-				trigger = {
+			# triggered_desc = {
+				# trigger = {
 					# scope:storyteller_scope.culture = { has_cultural_pillar = heritage_goidelic }
-					NOT = { has_cultural_pillar = heritage_brythonic }
-				}
-				desc = tour_grounds_events.1008.desc.mid.banshee
-			}
+					# NOT = { has_cultural_pillar = heritage_brythonic }
+				# }
+				# desc = tour_grounds_events.1008.desc.mid.banshee
+			# }
 			triggered_desc = {
 				trigger = {
 					# scope:storyteller_scope.culture = { has_cultural_pillar = heritage_arabic }
@@ -1559,13 +1559,13 @@ tour_grounds_events.1009 = {
 	desc = {
 		desc = tour_grounds_events.1009.desc.intro
 		first_valid = {
-			triggered_desc = {
-				trigger = {
+			# triggered_desc = {
+				# trigger = {
 					# scope:storyteller_scope.culture = { has_cultural_pillar = heritage_goidelic }
-					NOT = { has_cultural_pillar = heritage_brythonic }
-				}
-				desc = tour_grounds_events.1008.desc.mid.banshee
-			}
+					# NOT = { has_cultural_pillar = heritage_brythonic }
+				# }
+				# desc = tour_grounds_events.1008.desc.mid.banshee
+			# }
 			triggered_desc = {
 				trigger = {
 					# scope:storyteller_scope.culture = { has_cultural_pillar = heritage_arabic }

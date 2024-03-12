@@ -4,11 +4,97 @@
 # Designate someone as your chief sacrifice at a blot.
 # by Ewan Cowhig Croft
 ##################
+designate_gruesome_festivals_sacrifice_interaction = {
+	icon = icon_scheme_abduct
+	interface_priority = 30
+	category = interaction_category_religion
+	desc = designate_gruesome_festivals_sacrifice_interaction_desc
+
+	is_shown = {
+		scope:actor = { has_character_flag = gruesome_festivals_can_pick_human_sacrifice }
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			NOT = { has_character_modifier = gruesome_festivals_designated_sacrifice_fp1_modifier }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	on_accept = {
+		scope:actor = {
+			hidden_effect = {
+				every_prisoner = {
+					limit = { has_character_modifier = gruesome_festivals_designated_sacrifice_fp1_modifier }
+					save_scope_value_as = {
+						name = removal_type
+						value = flag:override
+					}
+					designate_gruesome_festivals_sacrifice_modifier_removed_effect = { DESIGNATOR = scope:actor }
+				}
+			}
+		}
+		scope:recipient = {
+			send_interface_toast = {
+				title = designate_gruesome_festivals_sacrifice_interaction.recipient.notification.t
+				left_icon = scope:actor
+				designate_gruesome_festivals_sacrifice_interaction_effect = yes
+				custom_tooltip = designate_gruesome_festivals_sacrifice_interaction.recipient.notification.tt
+			}
+		}
+
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = medium_unity_loss
+			DESC = clan_unity_human_sacrifice.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+	}
+
+	auto_accept = yes
+}
 
 ##################
 # Give someone reprieve from being HumSac'd.
 # by Ewan Cowhig Croft
 ##################
+remove_designated_gruesome_festivals_sacrifice_interaction = {
+	icon = icon_scheme_abduct
+	interface_priority = 30
+	category = interaction_category_religion
+	desc = remove_designated_gruesome_festivals_sacrifice_interaction_desc
+
+	is_shown = {
+		scope:actor = { has_character_flag = gruesome_festivals_can_pick_human_sacrifice }
+		scope:recipient = { has_character_modifier = gruesome_festivals_designated_sacrifice_fp1_modifier }
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	on_accept = {
+		scope:recipient = {
+			save_scope_value_as = {
+				name = removal_type
+				value = flag:manual
+			}
+			designate_gruesome_festivals_sacrifice_modifier_removed_effect ={ DESIGNATOR = scope:actor }
+		}
+
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = medium_unity_gain
+			DESC = clan_unity_human_sacrifice_removal.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+	}
+
+	auto_accept = yes
+}
 
 ##################
 # Challenge a cur to combat for their crimes!
@@ -209,6 +295,15 @@ challenge_to_trial_by_combat_interaction = {
 				scope:actor = { has_character_flag = flag_hostile_actions_disabled_delay }
 			}
 			scope:actor = { remove_character_flag = flag_hostile_actions_disabled_delay }
+		}
+
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = medium_unity_loss
+			DESC = clan_unity_trial_by_combat.desc
+			REVERSE_NON_HOUSE_TARGET = no
 		}
 	}
 

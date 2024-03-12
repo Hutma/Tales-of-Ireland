@@ -1,13 +1,35 @@
 ﻿l_french:
- #Are negative values in these loc keys showing for you? Don't add new negative ones, just come out of debug mode and they're fine.
- CHANGE_DEVELOPMENT_LEVEL:2 "Le [development|E] dans [TITLE.GetName] changera de $VALUE|=0+$"
- CHANGE_DEVELOPMENT_LEVEL_NEG:0 "[development|E] baissera de $VALUE|0-$"
- THEY_CHANGE_DEVELOPMENT_LEVEL:2 "Le [development|E] dans [TITLE.GetName] augmentera de $VALUE|0+$"
- THEY_CHANGE_DEVELOPMENT_LEVEL_NEG:0 "Le [development|E] dans [TITLE.GetName] baissera de $VALUE|0-$"
- 
- GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
- GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "Gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
- I_GAIN_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gain $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
- I_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "You gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
- TARGET_GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
- TARGET_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT:2 "[CHARACTER.GetShortUIName|U] gained $VALUE|V0$ [tales_of_abundance|E] [perk|E] Unlock"
+  #Are negative values in these loc keys showing for you? Don't add new negative ones, just come out of debug mode and they're fine. 
+ CHANGE_DEVELOPMENT_LEVEL: "Le niveau [development|E] dans [TITLE.GetName] changera d'ici $VALUE|=0+$"
+ CHANGE_DEVELOPMENT_LEVEL_NEG: "[development|E] diminue de $VALUE|0-$"
+ THEY_CHANGE_DEVELOPMENT_LEVEL: "Le [development|E] dans [TITLE.GetName] augmentera de $VALUE|0+$"
+ THEY_CHANGE_DEVELOPMENT_LEVEL_NEG: "Le [development|E] dans [TITLE.GetName] diminuera de $VALUE|0-$"
+  
+ GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "Gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Débloqué"
+ GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "Gagné $VALUE|V0$ [tales_of_abundance|E] [perk|E] Débloqué"
+ I_GAIN_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "Vous gagnez $VALUE|V0$ [tales_of_abundance|E] [perk|E] Déverrouillage"
+ I_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "Vous avez gagné $VALUE|V0$ [tales_of_abundance|E] [perk|E] Déverrouillage"
+ TARGET_GAINS_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_abundance|E] [perk|E] Déverrouillage"
+ TARGET_GAINED_A_TALES_OF_ABUNDANCE_LIFESTYLE_PERKPOINT: "[CHARACTER.GetShortUIName|U] gagné $VALUE|V0$ [tales_of_abundance|E] [perk|E] Débloqué"
+  
+ GAINS_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "Gains $VALUE|V0$ [tales_of_war|E] [perk|E] Débloqué"
+ GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "Gagné $VALUE|V0$ [tales_of_war|E] [perk|E] Débloqué"
+ I_GAIN_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "Vous gagnez $VALUE|V0$ [tales_of_war|E] [perk|E] Déverrouillage"
+ I_GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "Vous avez gagné $VALUE|V0$ [tales_of_war|E] [perk|E] Déverrouillage"
+ TARGET_GAINS_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "[CHARACTER.GetShortUIName|U] gains $VALUE|V0$ [tales_of_war|E] [perk|E] Déverrouillage"
+ TARGET_GAINED_A_TALES_OF_WAR_LIFESTYLE_PERKPOINT: "[CHARACTER.GetShortUIName|U] gagné $VALUE|V0$ [tales_of_war|E] [perk|E] Débloqué"
+  
+ ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP: "Vous avez acquis $VALUE|V0$ [tales_of_abundance|E] d'expérience"
+ TARGET_ADD_TALES_OF_ABUNDANCE_LIFESTYLE_XP: "[CHARACTER.GetShortUIName|U] a acquis $VALUE|V0$ [tales_of_abundance|E] d'expérience"
+  
+ ADD_TALES_OF_WAR_LIFESTYLE_XP: "Vous avez acquis $VALUE|V0$ [tales_of_war|E] d'expérience"
+ TARGET_ADD_TALES_OF_WAR_LIFESTYLE_XP: "[CHARACTER.GetShortUIName|U] a acquis $VALUE|V0$ [tales_of_war|E] d'expérience"
+  
+ ADD_TALES_OF_MAGIC_LIFESTYLE_XP: "Vous avez acquis $VALUE|V0$ [tales_of_magic|E] d'expérience"
+ TARGET_ADD_TALES_OF_MAGIC_LIFESTYLE_XP: "[CHARACTER.GetShortUIName|U] a acquis $VALUE|V0$ [tales_of_magic|E] d'expérience"
+  
+ CAN_ONLY_BE_DONE_ONCE_DESC: "#N Ne peut être effectué qu'une seule fois#!"
+  
+ REGAIN_ABILITY_TO_USE_SEPT_STUFF: "#P Vous retrouverez la possibilité d'utiliser rappeler le Sept et Unire les Sept cb#!"
+  
+ CHANGE_AGE_LOC: "Votre âge changera d'ici $VALUE|0-$"

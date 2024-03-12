@@ -313,6 +313,7 @@ can_be_knight_trigger = {
 		}
 	}
 	is_ai = yes
+
 }
 
 can_be_commander_basic_trigger = {
@@ -430,10 +431,10 @@ using_de_jure_cb_trigger = {
 		using_cb = individual_county_de_jure_cb
 		using_cb = individual_duchy_de_jure_cb
 		using_cb = imperial_reconquest_cb
-		using_cb = dismantle_holy_pretender_cb
-		using_cb = dismantle_byz_pretender_cb
-		using_cb = norman_conquest_cb
-		using_cb = norwegian_invasion_cb
+		# using_cb = dismantle_holy_pretender_cb
+		# using_cb = dismantle_byz_pretender_cb
+		# using_cb = norman_conquest_cb
+		# using_cb = norwegian_invasion_cb
 	}
 }
 
@@ -450,6 +451,20 @@ using_hierarchical_cb_trigger = {
 	OR = {
 		using_cb = tribal_subjugation_cb
 		using_cb = vassalization_cb
+	}
+}
+
+# In case is_civil_war is causing issues.
+using_civil_war_cb_trigger = {
+	OR = {
+		using_cb = independence_faction_war
+		using_cb = liberty_faction_war
+		using_cb = populist_war
+		using_cb = claimant_faction_war
+		using_cb = depose_war
+		using_cb = refused_liege_demand_war
+		using_cb = nation_fracturing_faction_war
+		using_cb = peasant_war
 	}
 }
 

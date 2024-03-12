@@ -679,10 +679,10 @@ cattle.0006 = {
 			}
 		}
 		
-		add_opinion = { 
-			opinion = -25
-			target = root.cp:councillor_steward 
-		}
+		# add_opinion = { 
+			# opinion = -25
+			# target = root.cp:councillor_steward 
+		# }
 
 		fire_councillor = cp:councillor_steward
 		
@@ -1061,7 +1061,8 @@ cattle.2001 = {
 
 	immediate = {
 		random_courtier = {
-			save_scope_as = scope:farmer_fertilizer 
+			limit = { is_adult = yes }
+			save_scope_as = farmer_fertilizer 
 		}
 	}
 

@@ -1,0 +1,8 @@
+﻿l_french:
+ toi_fairy_event.0001.t: "Une fée qui a besoin d'aide"
+ toi_fairy_event.0001.desc: "En tant que dirigeant de la Cour, il est de mon devoir d’aider ses membres contre les menaces et les agressions extérieures. Pour cette raison, [fairy_to_defend.GetName] demande mon aide pour [war_to_call.GetName]. Comment dois-je répondre ?"
+ toi_fairy_event.0001.a: "J'honorerai mes devoirs."
+ toi_fairy_event.0001.b: "Je ne peux pas aider tout le monde."
+ tooltip.toi_fairy_event.0001.attacker: "[denfender_king.GetFirstNameNoTooltip] a décidé de défendre le Royaume des Fées"
+ tooltip.toi_fairy_event.0001.a: "[denfender_king.GetFirstNameNoTooltip] a décidé de défendre votre Royaume"
+ tooltip.toi_fairy_event.0001.b: "[denfender_king.GetFirstNameNoTooltip] nous a trahis et ne rejoindra pas notre guerre"

@@ -1,0 +1,104 @@
+﻿l_french:
+  ## GUI 
+ CLAN_MENU: "#bold #highClan Menu#!#!"
+ UNITY_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('clan_unity')|0]#!#!"
+ VERY_HIGH_CLAN_UNITY: "#bold #high #P TRÈS ÉLEVÉ #!#!#!"
+ HIGH_CLAN_UNITY: "#bold #high #P ÉLEVÉ #!#!#!"
+ MEDIUM_CLAN_UNITY: "#bold #high MOYEN #!#!"
+ LOW_CLAN_UNITY: "#bold #high #N FAIBLE #!#!#!"
+ VERY_LOW_CLAN_UNITY: "#bold #high #N TRÈS FAIBLE #!#!#!"
+ VERY_HIGH_CLAN_UNITY_EFFECTS: "Tous les membres du clan : #P +10 % de revenus fiscaux, +5 opinions de puissants vassaux #! \n Dirigeants du clan : #N -20 % du montant des prélèvements #! \n Chef de clan : #P +30 % du montant des prélèvements, +1 prestige mensuel #! \n #bold Le chef de clan peut soumettre un chef de clan #!"
+ HIGH_CLAN_UNITY_EFFECTS: "Tous les membres du clan : #P +5 % de revenus fiscaux, +5 opinions de puissants vassaux #! \n Dirigeants du clan : #N -10 % du montant des prélèvements #! \n Chef de clan : #P +20 % du montant des prélèvements, +0,5 prestige mensuel #!"
+ MEDIUM_CLAN_UNITY_EFFECTS: "Tous les membres du clan : #P +5 % de revenus fiscaux #! \n Dirigeants du clan : #N -10 % du montant des prélèvements #! \n Chef de clan : #P +20 % du montant des prélèvements #!"
+ LOW_CLAN_UNITY_EFFECTS: "Dirigeants du clan : #P +10 % du montant du prélèvement #! \n Chef de clan : #N -15 % du montant du prélèvement #!"
+ VERY_LOW_CLAN_UNITY_EFFECTS: "Tous les membres du clan : #N -15 % de prestige mensuel #! \n Dirigeants du clan : #P +10 % du montant du prélèvement #! \n Chef de clan : #N -20 % du montant du prélèvement, -5 avis de puissants vassaux #! \n § _6 Les dirigeants du clan peuvent démanteler le chef du clan #!"
+ CLAN_DECISIONS: "#bold #high Actions des clans #!#!"
+ EFFECTS_CLAN: "#bold #high Effets #!#!"
+ CLAN_UNITY: "#bold #high Unité du clan #!#!"
+ CLAN_RULERS: "#bold #high Dirigeants du clan #!#!"
+ DERBFINE: "#bold #high Derbfine #!#!"
+ CLAN_LEADER: "#bold #high Chef de clan #!#! et héritier de [clan|E]"
+ TAKE_ACTION: "#bold Passer à l'action #!"
+  
+  #Decisions 
+ collect_clan_tax_decision: "Collecter la taxe de clan"
+ collect_clan_cattle_decision: "Récupérez le bétail du clan"
+ force_clan_leader_decision: "Chef de clan de force"
+ leader_call_in_war_decision: "Appelez le clan à une guerre défensive"
+ force_leader_into_war_decision: "Forcer le chef à la guerre"
+ clan_decision_generic_name: "Actions de clans"
+  
+  #AI decisions 
+ ai_collect_clan_tax_decision: "Collecter la taxe de clan"
+ ai_collect_clan_tax_decision_desc: "Collecter la taxe de clan"
+ ai_collect_clan_tax_decision_tooltip: "Collecter la taxe de clan"
+ ai_collect_clan_tax_decision_confirm: "Collecter la taxe de clan"
+ ai_collect_clan_cattle_decision: "Récupérez le bétail du clan"
+ ai_collect_clan_cattle_decision_desc: "Récupérez le bétail du clan"
+ ai_collect_clan_cattle_decision_tooltip: "Récupérez le bétail du clan"
+ ai_collect_clan_cattle_decision_confirm: "Récupérez le bétail du clan"
+ ai_force_clan_ruler_decision: "Chef de clan de force"
+ ai_force_clan_ruler_decision_desc: "Chef de clan de force"
+ ai_force_clan_ruler_decision_tooltip: "Chef de clan de force"
+ ai_force_clan_ruler_decision_confirm: "Chef de clan de force"
+ ai_call_clan_rulers_into_war_decision: "Appelez le clan à une guerre défensive"
+ ai_call_clan_rulers_into_war_decision_desc: "Appelez le clan à une guerre défensive"
+ ai_call_clan_rulers_into_war_decision_tooltip: "Appelez le clan à une guerre défensive"
+ ai_call_clan_rulers_into_war_decision_confirm: "Appelez le clan à une guerre défensive"
+ ai_call_clan_leader_into_war_decision: "Forcer le chef à la guerre"
+ ai_call_clan_leader_into_war_decision_desc: "Forcer le chef à la guerre"
+ ai_call_clan_leader_into_war_decision_tooltip: "Forcer le chef à la guerre"
+ ai_call_clan_leader_into_war_decision_confirm: "Forcer le chef à la guerre"
+  
+  #Custom effects loc 
+ DIMINISH_CLAN_VALUE_BY_FIVE: "Lâche #N 5 #!Clan Unité"
+ USED_CLAN_ACTION_FIVE_COOLDOWN: "#N Ne pourra pas entreprendre d'action de clan pendant 5 ans#!"
+ INCREASE_CATTLE_CLAN_LEADER: "#P Gagnez du bétail dans votre capitale, 3 fois le nombre de dirigeants de clan #!"
+ UP_CLAN_VALUE_BY_THREE: "#P Le clan gagne 3 unités en unité de clan #!"
+ DOWN_CLAN_VALUE_BY_TWO: "Lâche #N 3 #!Clan Unité"
+ CALL_CLAN_TO_WAR_EFFECT_DESC: "#bold Appelez tous les dirigeants de clan dans l'une de vos guerres défensives #!"
+ CALL_LEADER_TO_WAR_EFFECT_DESC: "#bold Appelez votre chef de clan à une guerre #!"
+ DOWN_CLAN_VALUE_BY_FIFTEEN: "Loose #N 15 #!Clan L'unité quand tu déclares la guerre"
+ UP_CLAN_VALUE_BY_TEN: "#P Le clan gagne 10 en unité de clan #!"
+ ALL_CLAN_MEMBERS_ARE_CALLED_INTO_WAR: "#bold Tous les membres du clan seront appelés aux armes ! #!"
+  
+  #Custom triggers loc 
+ WAIT_FIVE_YEARS_BETWEEN_USE: "#N Vous ne pouvez agir qu'une fois tous les 5 ans#!"
+ AT_LEAST_MEDIUM_UNITY: "Nécessite au moins un niveau d'unité MOYEN"
+ AT_LEAST_HIGH_UNITY: "Nécessite au moins le niveau #P ÉLEVÉ #!unity"
+ LOW_UNITY_OR_LOWER: "Nécessite un niveau d'unité #N FAIBLE #! ou inférieur"
+ DYNAST_EQUAL_NOT: "Vous devez être le chef du clan"
+ DYNAST_EQUAL: "Vous ne devez pas être le chef du clan"
+ NOT_IS_AT_WAR_AS_DEFENDER: "Doit être en guerre défensive"
+ MEDIUM_UNITY_OR_LOWER: "Niveau unitaire MOYEN ou inférieur"
+  
+  #interface toasts 
+ tooltip.clan.tax_clan.target: "Votre chef de clan a pris la taxe de clan"
+ tooltip.clan.cattle_clan.target: "Votre chef de clan a accepté la taxe sur le bétail du clan."
+ tooltip.clan.clan_invasion.target: "Votre chef de clan vous a appelé à une invasion !"
+  
+  #casus belli 
+ clan_invasion_war_warning_desc: "#P \n Les titres seront répartis entre tous les membres du clan #!"
+  
+  #found clan decision 
+ found_clan_decision: "Clan trouvé"
+ found_clan_decision_desc: "Il est temps pour notre dynastie de s'organiser davantage et de former un [clan|E], tous les membres doivent collaborer et ainsi nous amener à la grandeur."
+ found_clan_decision_confirm: "Rallier le clan"
+ found_clan_decision_tooltip: "Trouvez votre clan"
+  
+  #Modifier 
+ clannic_dynasty: "Dynastie clanique"
+ very_high_clan_rulers: "Chef de clan"
+ very_high_clan_leader: "Leader du clan"
+ high_clan_rulers: "Chef de clan"
+ high_clan_leader: "Leader du clan"
+ medium_clan_rulers: "Chef de clan"
+ medium_clan_leader: "Leader du clan"
+ low_clan_rulers: "Chef de clan"
+ low_clan_leader: "Leader du clan"
+ very_low_clan_rulers: "Chef de clan"
+ very_low_clan_leader: "Leader du clan"
+  
+  #tooltip of unity 
+ unity_value_meaning: "La valeur Unitaire d'un [clan|E] représente le contrôle que le chef du clan exerce sur les dirigeants du clan. Il existe des moyens d'augmenter et de diminuer l'unité du clan : \n\n #bold #P +2 #!#! lorsque le chef gagne une guerre, #bold #N -4#!#! lorsque le chef perd une guerre \n #bold #P +5 #!#! lorsque le Leader gagne un niveau de renommée, #bold #N -10 #!#! lorsque le leader perd un niveau de renommée \n #bold #P +10 #!#! si le leader a le plus haut niveau de renommée de tous membres du clan terrien, #bold #N -5 #!#! si un membre du clan terrien a le plus haut niveau de renommée \n\n Tous les trois ans, le clan obtiendra #bold #P +1 #!#! pour chaque chef de clan qui a plus de #P 50 #P3 avis du Leader, #bold #N -1 #!#! si avis est compris entre #N -80 et -10#P3, #bold #N -2 #!#! d'avis est sous #N -80#P3 \n\n A la mort du Leader #bold #P +4 #!#! pour tout enfant foncier indépendant de sexe dominant, #bold #N -1 #!#! pour tout enfant foncier non indépendant de sexe dominant, #bold #N -5 § _3 pour chaque enfant adulte non foncier de sexe dominant, #bold #N -8 #!#! si l'héritier a un niveau de renommée inférieur à Distingué"
+ unity_level_meaning: "Au #bold #high #N TRÈS FAIBLE #!#!#! niveau d'unité : \n Tous les membres du clan : #N -15 % de prestige mensuel #! \n Dirigeants du clan : #P + 10 % de taille de prélèvement #! \n Chef de clan : #N -20 % de taille de prélèvement, -5 avis de vassaux puissants #! \n #bold Les dirigeants du clan peuvent démanteler le chef du clan #! \n\n Au niveau d'unité #bold #high #N FAIBLE #!#!#! : \n Dirigeants du clan : #P +10 % de la taille du prélèvement #! \n Chef de clan : #N -15 % de la taille du prélèvement #! \n\n Au niveau d'unité #bold #high MOYEN #!#! : \n Tous les membres du clan : #P +5 % de taxe revenu #! \n Dirigeants du clan : #N -10 % du montant du prélèvement #! \n Chef de clan : #P +20 % du montant du prélèvement #! \n\n En gras #high #P ÉLEVÉ #!#!#! niveau d'unité : \n Tous Membres du clan : #P +5 % de revenus fiscaux, +5 avis de puissants vassaux #! \n Dirigeants du clan : #N -10 % du montant des prélèvements #! \n Chef de clan : #P +20 % du montant des prélèvements, +0,5 prestige mensuel § _5 \n\n Au #bold #high #P TRÈS ÉLEVÉ #!#!#! niveau d'unité : \n Tous les membres du clan : #P +10 % de revenus fiscaux, +5 avis de vassaux puissants #! \n Dirigeants du clan : #N -20% taille du prélèvement #! \n Chef de clan : #P + 30 % du montant du prélèvement, +1 prestige mensuel #! \n #bold Le chef de clan peut soumettre un dirigeant de clan#!"

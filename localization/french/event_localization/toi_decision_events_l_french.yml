@@ -1,64 +1,80 @@
 ﻿l_french:
- toi_decisions.001.t:0 "Cérémonie pour amadouer un géant"
- toi_decisions.001.desc:0 "Je me tiens sur la chaussée, près du druide qui officie la cérémonie religieuse. Il chante dans la langue des dieux pour attirer un des Géants vivant dans le Sidh. Le chant continue jusqu'à ce que la terre commence à trembler. Cela fait bientôt deux heures et le druide est épuisé. \nIl me regarde et demande: "Êtes-vous sûr de vouloir continuer [ROOT.Char.GetFirstNameNoTooltip]?"
-
-"
- toi_decisions.001.a:0 "Oui, finissez la cérémonie."
- toi_decisions.001.b:0 "Non, vous avez raison, le risque est trop grand."
- 
- toi_decisions.002.t:0 "Géant amical"
- toi_decisions.002.desc:0 "À la fin de la cérémonie, le sol arrête de trembler, le vent s'arrête de souffler. C'est comme si la nature avait cessé de respirer un instant. Soudain, je vois un énorme rocher bouger près de la chaussée et d'en dessous, un Géant émerge du sol. \n\nIl s'assied sur la Chaussée et fixe la mer. J'attends pendant des heures, planté là, immobile qu'il parle enfin.Finalement il se retourne et m'adresse la parole: \n\nVous m'avez invoqué, pourquoi?"\nJ'explique que j'ai besion qu'il se batte à mes côtés, je lui promet gloire et renommée. Il écoute attentivement et accepte de me servir si j'offre un sacrifice à ses frères dans le Sidh."
- toi_decisions.002.a:0 "Bien sûr tu auras ton sacrifice. Vient me rejoindre!"
- toi_decisions.002.b:0 "Mes excuses, mais je ne peux accepter ces conditions"
- 
- toi_decisions.003.t:0 "Géant orgueilleux"
- toi_decisions.003.desc:0 "À la fin de la cérémonie, le sol arrête de trembler, le vent s'arrête de souffler. C'est comme si la nature avait cessé de respirer un instant. Soudain, je vois un énorme rocher bouger près de la chaussée et d'en dessous, un Géant émerge du sol. \n\nIl écoute mes conditions, je lui demande de se battre aux côtés de moi et mes soldats, il répond: "Je t'aiderai mais seulement si tu t'incline devant moi, ma force et mon pouvoir.""
- toi_decisions.003.a:0 "Bien sûr tu es le plus puissant"
- toi_decisions.003.b:0 "Je ne m'inclinerai jamais devant toi je 'ai pas besoin de tes services."
- 
- toi_decisions.004.t:0 "Géant furieux"
- toi_decisions.004.desc:0 "À la fin de la cérémonie, le sol arrête de trembler, le vent s'arrête de souffler. C'est comme si la nature avait cessé de respirer un instant. Soudain, je vois un énorme rocher bouger près de la chaussée et d'en dessous, un Géant émerge du sol. \n\n Dès qu'il est sorti il hurle de rage et fonce vers nous!"
- toi_decisions.004.a:0 "Je vais t'abattre monstre!"
- toi_decisions.004.a.success:0 "Géant tué"
- toi_decisions.004.a.failure:0 "Blessé par le Géant"
- toi_decisions.004.b:0 "Fuyez! Sauve qui peut!"
-#Sacrifice to sidhe
- toi_decisions.010.t:0 "Sacrifice aux Sidhe"
- toi_decisions.010.desc:0 "Il y a bien longtemps, nos ancêtres ont voyagé vers le Sidh, patrie des puissants esprits connus sous le nom de Sidhe.Ils ont appris comment la magie Sidhe influençait subtilement le monde et guidait son peuple, et leur témoigner du respect et de la dévotion procure de grandes récompenses. Il est maintenant temps de renouer notre lien à travers une grande cérémonie. \n\nNos druides ont entonné des chants et gravé des runes sacrées dans le sol. Ce rituel délicat ouvre un passage vers le Sidh, et l'air devient enchanté par cet étrange et mystique pouvoir.\n\nLes couleurs s'avivent, le son s'étouffe et le temps ralenti. Nous avons attiré l'attention des Sidhe, ils attendent maintenant mon offrande. \n\nCombien dois-je leur offrir?"
- toi_decisions.010.a:0 "Un large sacrifice montrera ma dévotion"
- toi_decisions.010.b:0 "Un grand sacrifice les honorera"
- toi_decisions.010.c:0 "Un sacrifice ordinaire les apaisera"
- toi_decisions.010.d:0 "Un petit sacrifice."
- 
- toi_decisions.011.t:0 "Une grande bénédiction"
- toi_decisions.011.desc:0 "Les Sidhe ont écouté notre appel et accepté l'offrande! Les festivités battent leur plein car nous les voyons, nous les entendons, ressentons les Sidhe dancer autour de nous. Même les druides admirent notre dévotion. \n\nNotre lien avec les Sidhe renforcé, nous nous inclinons humblement devant eux pour recevoir leurs dons.\n\nLa force de héros légendaires et une détermination inébranlable s'empare de nos guerriers, les druides prédissent bien des victoires à l'avenir."
- toi_decisions.011.a:0 "Il est temps de faire la guerre"
- 
- toi_decisions.012.t:0 "Une grande bénédiction"
- toi_decisions.012.desc:0 "Les Sidhe ont écouté notre appel et accepté l'offrande! Les festivités battent leur plein car nous les voyons, nous les entendons, ressentons les Sidhe dancer autour de nous. Même les druides admirent notre dévotion. \n\nNotre lien avec les Sidhe renforcé, nous nous inclinons humblement devant eux pour recevoir leurs dons.\n\nNotre cheptel est revigoré, nos bâtisseurs ont découvert de riches matériaux, et les druides prédissent une grande prospérité à l'avenir."
- toi_decisions.012.a:0 "La richesse nous attend"
- 
- toi_decisions.013.t:0 "Importante bénédiction"
- toi_decisions.013.desc:0 "Les Sidhe ont répondu à notre appel et reçu l'offrande. Leur musique joviale et mystique rejoint la notre, mais ils ne viennent pas personnellement du Sidh nous rejoindre. Néanmoins, nous pouvons ressentir leurs dons glisser sur nous en nous renforçant.\n\nNotre lien avec les esprits est renoué, nous nous inclinons humblement devant eux et accueillons leurs dons.\n\nLes guerriers sont bénis par une force surhumaine et une volonté de fer, les druides indiquent un avenir plus fort."
- toi_decisions.013.a:0 "Il est temps de faire la guerre"
- 
- toi_decisions.014.t:0 "Importante bénédiction"
- toi_decisions.014.desc:0 "Les Sidhe ont répondu à notre appel et reçu l'offrande. Leur musique joviale et mystique rejoint la notre, mais ils ne viennent pas personnellement du Sidh nous rejoindre. Néanmoins, nous pouvons ressentir leurs dons glisser sur nous en nous renforçant.\n\nNotre lien avec les esprits est renoué, nous nous inclinons humblement devant eux et accueillons leurs dons.\n\n Notre cheptel est fécond, nos bâtisseurs ont découvert des matériaux résistants, les druides voient un avenir enrichi."
- toi_decisions.014.a:0 "La richesse nous attend"
- 
- toi_decisions.015.t:0 "Bon présage"
- toi_decisions.015.desc:0 "Nous ressentons le pouvoir des Sidhe, mais faiblement. Bien qu'ils aient accepté notre offrande, ils ne semblent pas impressionnés. Les feuilles dans les arbres se vivifient, signe de leur présence cependant peu différent des moments profanes. Le peuple est tout de même soulagé d'avoir vu un signe. \n\nNotre lien avec les esprits est affaibli, nous nous inclinons humblement devant eux et recevons leurs dons.\n\nLes guerriers sont investis d'une force renouée, les druides voient un avenir sécurisé."
- toi_decisions.015.a:0 "Il est temps de faire la guerre"
- 
- toi_decisions.016.t:0 "Bon présage"
- toi_decisions.016.desc:0 "Nous ressentons le pouvoir des Sidhe, mais faiblement. Bien qu'ils aient accepté notre offrande, ils ne semblent pas impressionnés. Les feuilles dans les arbres se vivifient, signe de leur présence cependant peu différent des moments profanes. Le peuple est tout de même soulagé d'avoir vu un signe. \n\nNotre lien avec les esprits est affaibli, nous nous inclinons humblement devant eux et recevons leurs dons.\n\nNotre cheptel est plus fertile, nos bâtisseurs ont trouvé de nouveaux matériaux, les druides parle d'un meilleur avenir."
- toi_decisions.016.a:0 "La richesse nous attend"
- 
- toi_decisions.017.t:0 "Mauvais présage"
- toi_decisions.017.desc:0 " L'offrande est complétée. Nous avons attendus...encore et encore...et il est devenu clair que rien ne se passerai. Il n'y a aucun Sidhe pour répondre à notre appel, et aucune bénédiction à recevoir. Certains pleurent de désespoir. Les Sidhe nous ont-il abandonné, ou ont-il été insultés par mon offrande?\n\nNotre lien avec les esprits est brisé, nous retournons à nos foyers désolés.\n\nNos guerriers ont perdu leur force, et les druides ne voient que des défaites à l'avenir."
- toi_decisions.017.a:0 "J'espère ne pas faire la guerre"
- 
- toi_decisions.018.t:0 "Mauvais présage"
- toi_decisions.018.desc:0 "L'offrande est complétée. Nous avons attendus...encore et encore...et il est devenu clair que rien ne se passerai. Il n'y a aucun Sidhe pour répondre à notre appel, et aucune bénédiction à recevoir. Certains pleurent de désespoir. Les Sidhe nous ont-il abandonné, ou ont-il été insultés par mon offrande?\n\nNotre lien avec les esprits est brisé, nous retournons à nos foyers désolés.\n\nNotre cheptel est malade, nos bâtisses s'effondrent , et les druides ne prévoient que la ruine à l'avenir.
-
- toi_decisions.018.a:0 "Un large sacrifice montrera ma dévotion"
+ toi_decisions.001.t: "Cérémonie pour amadouer un géant"
+ toi_decisions.001.desc:0 "I'm standing on the causeway, next to the druid who is going on with the religious ceremony. He sings in the language of the gods to attract one of the Giants that live in the Otherworld. The chants continues until the earth starts trembling and shaking. We have been here for wearly two hours and the druid is exhausted. \nHe then stares at me and ask : "Je me tiens sur la chaussée, à côté du druide qui poursuit la cérémonie religieuse. Il chante dans la langue des dieux pour attirer l'un des géants qui vivent dans l'Autre Monde. Les chants continuent jusqu'à ce que la terre commence à trembler et à trembler. Nous sommes ici depuis à peine deux heures et le druide est épuisé. \nIl me regarde alors et me demande : "Es-tu sûr de vouloir faire ça [ROOT.Char.GetFirstNameNoTooltip] ?""  
+ toi_decisions.001.a: "Oui, terminez la cérémonie."
+ toi_decisions.001.b: "Non, tu as raison, c'est un trop gros risque."
+  
+ toi_decisions.002.t: "Géant amical"
+ toi_decisions.002.desc: "A la fin de la cérémonie, la terre cesse de trembler, le vent cesse de souffler. C'est comme si la nature avait cessé de vivre pendant un bref instant. Puis j'aperçois un énorme rocher près de la chaussée qui bouge et de dessous, du sol, un géant sort. \n\nIl est assis sur la chaussée et regarde la mer. J'attends, des heures durant, debout là, immobile, attendant qu'il commence à parler. Il se retourne finalement, me fait face et me dit : \n"Tu m'as invoqué, pourquoi m'as-tu appelé ?"\nJ'explique que j'ai besoin qu'il combatte à mes côtés sur le champ de bataille, je lui promets gloire et renommée. Il m'écoute attentivement et accepte de me servir si je fais un sacrifice à ses frères de l'Autre Monde."
+ toi_decisions.002.a: "Bien sûr, vous aurez votre sacrifice, venez me rejoindre."
+ toi_decisions.002.b: "Désolé, je ne peux pas accepter ces conditions."
+  
+ toi_decisions.003.t: "Fier géant"
+ toi_decisions.003.desc:0 "At the end of the ceremony the earth stops shaking, the wind stops blowing. It's like nature stop living for a brief moment. Then I percieve a huge rock near the causeway moving and from under it, from the ground a Giant comes out. \n\nHe listened to my terms, asking him to join me and fight alongside my soldiers, he responds : "A la fin de la cérémonie, la terre cesse de trembler, le vent cesse de souffler. C'est comme si la nature avait cessé de vivre pendant un bref instant. Puis j'aperçois un énorme rocher près de la chaussée qui bouge et de dessous, du sol, un géant sort. \n\nIl a écouté mes conditions, lui demandant de me rejoindre et de combattre aux côtés de mes soldats, il répond : "Je t'aiderai, mais seulement si tu t'inclines devant moi, devant ma puissance et ma force.""  
+ toi_decisions.003.a: "Bien sûr, vous êtes le plus puissant."
+ toi_decisions.003.b: "Je ne m'inclinerai jamais devant toi, je n'ai pas besoin de toi."
+  
+ toi_decisions.004.t: "Géant en colère"
+ toi_decisions.004.desc: "A la fin de la cérémonie, la terre cesse de trembler, le vent cesse de souffler. C'est comme si la nature avait cessé de vivre pendant un bref instant. Puis j'aperçois un énorme rocher près de la chaussée qui bouge et de dessous, du sol, un géant sort. \n\nDès qu'il est sorti, il se met à crier et à courir vers nous avec rage !"
+ toi_decisions.004.a: "Je vais te tuer, bête !"
+ toi_decisions.004.a.success: "Géant tué"
+ toi_decisions.004.a.failure: "Blessé par le géant"
+ toi_decisions.004.b: "Courir! Courir! Sauve qui peut!"
+  
+ #Sacrifice to sidhe 
+ toi_decisions.010.t: "Sacrifice aux Sidhe"
+ toi_decisions.010.desc: "Il y a bien longtemps, nos ancêtres se sont rendus dans l’Autre Monde, demeure des esprits puissants connus sous le nom de Sidhe. Ils ont appris comment la magie Sidhe influence subtilement le monde et guide ses habitants, et que leur montrer du respect et du dévouement rapporte de grandes récompenses. Il est maintenant temps de renouveler nos liens lors d'une grande cérémonie.\n\nNos druides ont chanté des chants et gravé des runes sacrées dans le sol. Ce rituel délicat ouvre un chemin vers l’Autre Monde et l’air est enchanté par un pouvoir étrange et mystique. \n\nLes couleurs deviennent vives, le son s'éteint et le temps ralentit. Nous avons attiré l'attention des Sidhe, et maintenant ils attendent mon offrande.\n\nCombien dois-je donner ?"
+ toi_decisions.010.a: "Un grand sacrifice montrera mon dévouement."
+ toi_decisions.010.b: "Un grand sacrifice les honorera."
+ toi_decisions.010.c: "Un sacrifice standard devrait les apaiser."
+ toi_decisions.010.d: "Un petit sacrifice."
+  
+ toi_decisions.011.t: "Une grande bénédiction"
+ toi_decisions.011.desc: "Les Sidhe ont répondu à notre appel et ont accepté l'offrande ! Les festivités se renforcent à mesure que nous les voyons, les entendons, sentons les Sidhe danser autour de nous. Même les druides admirent notre dévotion.\n\nNotre lien avec les esprits est renforcé, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nLa force des héros légendaires et leur détermination inébranlable sont imposées à nos guerriers, et les druides prédisent de nombreux grands victoires à venir."
+ toi_decisions.011.a: "Il est temps de partir en guerre."
+  
+ toi_decisions.012.t: "Une grande bénédiction"
+ toi_decisions.012.desc: "Les Sidhe ont répondu à notre appel et ont accepté l'offrande ! Les festivités se renforcent à mesure que nous les voyons, les entendons, sentons les Sidhe danser autour de nous. Même les druides admirent notre dévotion.\n\nNotre lien avec les esprits s'est renforcé, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nNotre bétail est revigoré, nos bâtisseurs ont découvert de riches matériaux et les druides prédisent une grande prospérité dans le monde. avenir."
+ toi_decisions.012.a: "La richesse nous attend."
+  
+ toi_decisions.013.t: "Bénédiction importante"
+ toi_decisions.013.desc: "Les Sidhe ont répondu à notre appel et ont reçu l'offrande. Leur musique joyeuse et mystique rejoint la nôtre, mais ils ne sortent pas de l’Autre Monde pour nous rejoindre personnellement. Néanmoins, nous pouvons sentir leurs dons nous envahir et nous fortifier.\n\nNotre lien avec les esprits renouvelé, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nLes guerriers sont dotés d'une force inhumaine et d'une volonté de fer, et les druides présager un avenir meilleur."
+ toi_decisions.013.a: "Il est temps de partir en guerre."
+  
+ toi_decisions.014.t: "Bénédiction importante"
+ toi_decisions.014.desc: "Les Sidhe ont répondu à notre appel et ont reçu l'offrande. Leur musique joyeuse et mystique rejoint la nôtre, mais ils ne sortent pas de l’Autre Monde pour nous rejoindre personnellement. Néanmoins, nous pouvons sentir leurs dons nous envahir et nous fortifier.\n\nNotre lien avec les esprits renouvelé, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nNotre bétail est fécond, nos bâtisseurs ont découvert des matériaux solides et les les druides prédisent un avenir riche."
+ toi_decisions.014.a: "La richesse nous attend."
+  
+ toi_decisions.015.t: "De bon augure"
+ toi_decisions.015.desc: "On ressent la puissance des Sidhe, mais pas beaucoup. Bien qu’ils aient accepté nos cadeaux, il semble qu’ils n’aient pas été impressionnés. Les feuilles des arbres deviennent vives, signe clair de leur présence, mais à peine au-dessus de leur présence en dehors d'une cérémonie. Pourtant, les gens sont soulagés de voir un signe. \n\nNotre lien avec les esprits s'est affaibli, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nLes guerriers sont revigorés avec une force renouvelée et les druides prédisent un avenir sûr."
+ toi_decisions.015.a: "Il est temps de partir en guerre."
+  
+ toi_decisions.016.t: "De bon augure"
+ toi_decisions.016.desc: "On ressent la puissance des Sidhe, mais pas beaucoup. Bien qu’ils aient accepté nos cadeaux, il semble qu’ils n’aient pas été impressionnés. Les feuilles des arbres deviennent vives, signe clair de leur présence, mais à peine au-dessus de leur présence en dehors d'une cérémonie. Pourtant, les gens sont soulagés de voir un signe. \n\nNotre lien avec les esprits s'est affaibli, nous nous agenouillons humblement devant eux et recevons leurs cadeaux.\n\nNotre bétail est plus fertile, nos bâtisseurs ont découvert de nouveaux matériaux et les druides prédisent un avenir meilleur."
+ toi_decisions.016.a: "La richesse nous attend."
+  
+ toi_decisions.017.t: "Mauvais présage"
+ toi_decisions.017.desc: "L'offre est complète. Nous avons attendu… et attendu… et il est devenu clair que rien ne se passerait. Il n’y a aucun Sidhe pour répondre à notre appel, et aucune bénédiction à recevoir. Certains crient d’angoisse. Les Sidhe nous ont-ils abandonnés ou ont-ils été insultés par mon offrande ?\n\nNotre lien avec les esprits est rompu, nous retournons chez nous désespérés.\n\nNos guerriers ont perdu leur force, et les druides ne voient que de la perte dans le avenir."
+ toi_decisions.017.a: "J'espère que nous n'entrerons pas en guerre."
+  
+ toi_decisions.018.t: "Mauvais présage"
+ toi_decisions.018.desc: "L'offre est complète. Nous avons attendu… et attendu… et il est devenu clair que rien ne se passerait. Il n’y a aucun Sidhe pour répondre à notre appel, et aucune bénédiction à recevoir. Certains crient d’angoisse. Les Sidhe nous ont-ils abandonnés ou ont-ils été insultés par mon offrande ?\n\nNotre lien avec les esprits est rompu, nous retournons chez nous désespérés.\n\nNotre bétail est malade, nos bâtiments s'effondrent et les druides ne voient que des ruines. à l'avenir."
+ toi_decisions.018.a: "Un grand sacrifice montrera mon dévouement."
+  
+ toi_decisions.019.t: "Manger le bétail"
+ toi_decisions.019.desc: "Le festin que j'ai ordonné d'organiser est en préparation et le cuisinier attend la livraison du bétail pour préparer la viande. Je dois choisir dans quelle partie de mon royaume le bétail sera mangé lors de cette fête."
+ toi_decisions.019.a: "Nous prendrons le bétail du [cattle_county_1.GetBaseName]."
+ toi_decisions.019.b: "Nous prendrons le bétail du [cattle_county_2.GetBaseName]."
+ toi_decisions.019.c: "Nous prendrons le bétail du [cattle_county_3.GetBaseName]."
+ toi_decisions.019.d: "Nous prendrons le bétail du [cattle_county_4.GetBaseName]."
+ toi_decisions.019.e: "Mes vassaux ont trop de bétail, ils devraient apprendre à partager."
+  
+  
+  #Found kingdom 
+ toi_ancient_kingdom_formed.0001.t: "Le fondateur de [kingdom_founded.GetName]"
+ toi_ancient_kingdom_formed.0001.desc: "Le travail de plusieurs années a enfin été récompensé. J'ai fondé le royaume de [kingdom_founded.GetName], unissant mes sujets autrefois divisés sous une seule bannière. Cet accomplissement donnera son éclat à ma dynastie pour les générations à venir et assurera son avenir brillant et glorieux.\n\nLa nouvelle a voyagé bien au-delà de nos frontières, atteignant les oreilles du haut comme du bas. De nombreux nouveaux alliés ont envoyé leurs envoyés pour traiter avec nous, et les alliés existants ont cherché à renforcer nos liens d'amitié. Pourtant, notre vigilance ne peut vaciller. De nombreux nouveaux rivaux et usurpateurs potentiels sont également sortis de l’ombre, prêts à frapper au premier signe de faiblesse. Je serai prêt à défendre mon royaume contre quiconque voudrait le menacer et je mènerai mon peuple nouvellement uni vers la grandeur et la prospérité."
+ toi_ancient_kingdom_formed.0001.a: "J'ai trouvé ma place, à la fois dans ce monde et dans les récits de l'histoire."
+  
+ toi_ancient_kingdom_formed.0002.t: "[kingdom_founded.GetName] Augmente"
+ toi_ancient_kingdom_formed.0002.desc: "[founder.GetFullName] a réussi là où beaucoup d'autres ont échoué. Exerçant son grand pouvoir et son influence, il fonda le royaume de [kingdom_founded.GetName], où ses habitants autrefois divisés vivront désormais unis sous son règne. Cet exploit monumental attirera de nombreux nouveaux alliés à ses côtés, mais des rivaux jaloux se cacheront également dans l’ombre. Ce nouveau royaume durera-t-il et son peuple prospérera-t-il ? Ou va-t-il tomber entre les mains de ceux qui voudraient le détruire ?"
+ toi_ancient_kingdom_formed.0002.a: "Un nouveau royaume est apparu. Pour l'instant."

@@ -1,87 +1,222 @@
 ﻿l_french:
- #Race realated decisions
- the_first_cessarian_kingdom_decision:0 "Proclamer le Premier Royaume cessarien"
- the_first_cessarian_kingdom_decision_desc:0 "Pour la première fois le[cessarian|E] seront menés par un roi, puisse ce jour être le premier d'une longue lignée." 
- the_first_cessarian_kingdom_decision_tooltip:0 "Vous devenez le premier roi cessarien"
- the_first_cessarian_kingdom_decision_confirm:0 "Apportez moi ma couronne"
- 
- restore_aran_kingship_decision:0 "Restorer la royauté d'Aran"
- restore_aran_kingship_decision_desc:0 "Les [fomorians|E] naguère possédé un grand royaume en cette île, je devrais le restorer."
- restore_aran_kingship_decision_tooltip:0 "Restorer la royauté d'Aran"
- restore_aran_kingship_decision_confirm:0 "The Kingdom of Aran lives again"
- 
- restore_nemedian_kingdom_decision:0 "Restorer le royaume de Nemed"
- restore_nemedian_kingdom_decision_desc:0 "Nemed, chef de tous nos ancêtres a régné sur un royaume ici il y a bien longtemps, il est temps de le rebâtir et  faire prospérer."
- restore_nemedian_kingdom_decision_tooltip:0 "Vous restorez le royaume de Nemed"
- restore_nemedian_kingdom_decision_confirm:0 "Les Némédiens sont unis à nouveau"
- 
- ceremony_in_newgrange_decision:0 "Cérémonie à Newgrange"
- ceremony_in_newgrange_decision_desc:0 "Newgrange a été envahie plusieurs fois et notre peuple en a perdu le contrôle, des siècles durant nous avons tenté de la reprendre sans succès. Nous espérons pouvoir réaliser un service pour nos dieux dans ce lieu sacré à nouveau."
- ceremony_in_newgrange_decision_tooltip:0 "Officie une cérémonie à Newgrange"
- ceremony_in_newgrange_decision_confirm:0 "Nous honorons les dieux"
- 
- take_fomorian_tribute_decision:0 "Collect The Tribute"
- take_fomorian_tribute_decision_desc:0 "Le temps est arrivé, mes tributaires ont eu le temps d'agrandir leurs trésoreries et familles. Il est temps de prélever le tribut ancestral, deux tiers de leur bétail et or, plus un de leurs enfants."
- take_fomorian_tribute_decision_tooltip:0 "Envoyez les collecteurs de tribut"
- take_fomorian_tribute_decision_confirm:0 "Envoyez les collecteurs de tribut"
-
- #High King decisions
- reform_high_kingship_decision:0 "Restaurer la Haute Royauté"
- reform_high_kingship_decision_desc:0 "D'après les lois des Irlandais nous étions dirigés par un unique [high_king|E] et il en sera ainsi de nouveau!"
- reform_high_kingship_decision_tooltip:0 "Vous restaurez la Haute Royauté d'Irlande"
- reform_high_kingship_decision_confirm:0 "Restaurer la Haute Royauté"
- 
- call_royal_army_decision:0 "Convoquer l'armée royale"
- call_royal_army_decision_desc:0 "Le Haut Roi a le droit de mobiliser une armée formée d'hommes venus de toute l'Irlande."
- call_royal_army_decision_tooltip:0 "Vous gagnez l'armée royale"
- call_royal_army_decision_confirm:0 "Convoquer l'armée!"
- 
- call_royal_army_decision_troops:0 "Garde royale"
- 
- high_king_reclaim_tara_decision:0 "Revendiquer Tara"
- high_king_reclaim_tara_decision_desc:0 "Tara est le centre traditionnel du pouvoir du [high_king|E], donc le Haut Roi devrait la gouverner.""
- high_king_reclaim_tara_decision_tooltip:0 "Vous obtenez une revendication sur Tara"
- high_king_reclaim_tara_decision_confirm:0 "Tara devrait m'appartenir!"
- 
- #Places decisions
- coax_giant_causeway_decision:0 "Coax a Giant at the Giant's Causeway"
- coax_giant_causeway_decision_desc:0 "The Giant's Causeway is known as a path to the [otherworld|E], a mystical place where strange creatures live. The Causeway has been built by the [gaelic_giant|E] Fionn Mac Cumhaill and his descendent could be contacted using this special site."
- coax_giant_causeway_decision_tooltip:0 "Look to recuit a Giant"
- coax_giant_causeway_decision_confirm:0 "Giant, I'm waiting for you"
- 
- #Major decisions
- try_unite_ireland_decision:0 "Déclarer votre ambition d'unifier l'Irlande"
- try_unite_ireland_decision_desc:0 "Ireland is divided but should be united once again, you have proven yourself to be a prestigious and capable ruler, time to unite the Emerald Island under once ruler. \n\n Taking this decision will grant you a reason to subjugate any neighbour."
- try_unite_ireland_decision_tooltip:0 "I will rule over Ireland"
- try_unite_ireland_decision_confirm:0 "Ils s'agenouilleront devant moi"
- 
- unite_all_ireland_decision:0 "Unite Ireland"
- unite_all_ireland_decision_desc:0 "Ireland is divided but should be united once again, I control every region of Ireland and now it is time to unite them all in a single realm!"
- unite_all_ireland_decision_tooltip:0 "Ireland is one"
- unite_all_ireland_decision_confirm:0 "Ireland is one"
- 
- one_heir_decision:0 "Imposer un héritier"
- one_heir_decision_desc:0 "L'oeuvre d'une vie menace d'être défait à ma mort. Mon domaine est condamné à la dislocation et déchirure à cause des disputes de mes fils. Peut-être sous les bonnes circonstances, je peux assurer mon héritage et tout remettre au premier dans l'ordre de succession..."
- one_heir_decision_tooltip:0 "Le royaume restera stable"
- one_heir_decision_confirm:0 "Le royaume restera stable"
- 
- #Minor decisions 
- sacrifice_to_sidhe_decision:0 "Make a sacifice to the Sidhe"
- sacrifice_to_sidhe_decision_desc:0 "We know about the fairies living in the [otherworld|E] and we know that they can influence the material world. We will make offerings to the [sidhe|E], the faires and magical creatures of Ireland and hope for a good omen to lead our people."
- sacrifice_to_sidhe_decision_tooltip:0 "Prepare the offering Ceremony"
- sacrifice_to_sidhe_decision_confirm:0 "The Ceremony awaits"
- 
- hail_high_king_decision:0 "Acclamer le Haut Roi"
- hail_high_king_decision_desc:0 "Le maître de l'Irlande est un [milesian|E] comme cela devrait l'être. Nous devrions acclamer le [high_king|E] ans espérer que le titre restera entres les mains des Milésiens."
- hail_high_king_decision_tooltip:0 "Vous acclamez le Haut Roi"
- hail_high_king_decision_confirm:0 "Les Milésiens régneront à tout jamais!"
- 
- high_king_protection_decision:0 "Demander la protection du Haut Roi"
- high_king_protection_decision_desc:0 " Le [high_king|E]  est un Milésien et son influence peut-être utilisé pour aider n'importe quel [milesian|E] dans le besoin. Nous sommes en guerre et avons besoin de troupes, le temps est venu de faire appel au Haut Roi et l'influence qu'il donne à notre peuple pour lever plus de troupes."
- high_king_protection_decision_tooltip:0 "Nous pouvons amasser plus d'hommes"
- high_king_protection_decision_confirm:0 "Ralliez les hommes!"
- 
- establish_sean_bar_decision:0 "Fonder le Sean's Bar"
- establish_sean_bar_decision_desc:0 "Athlone serai un endroit parfait pour y fonder un bar. Je bois chaque jour seul et aimerai bien avoir quelqu'un avec qui partager ces moments. Je devrai faire construire une grande maison où l'alcool coulerait à flot à toutes heures. \n\n#S Historiquement le pub Sean's Bar est réputé comme le plus ancien pub d'Europe. #!"
- establish_sean_bar_decision_tooltip:0 "A boire!"
- establish_sean_bar_decision_confirm:0 "A boire!"
+  #Race realated decisions 
+ the_first_cessarian_kingdom_decision: "Proclamer le premier royaume césarien"
+ the_first_cessarian_kingdom_decision_desc: "Pour la première fois les [cessarian|E] seront unis et dirigés par un roi ! Que ce jour soit le premier d’une longue série de jours glorieux."
+ the_first_cessarian_kingdom_decision_tooltip: "Devenez le premier roi césarien"
+ the_first_cessarian_kingdom_decision_confirm: "Apportez-moi ma couronne"
+  
+ restore_aran_kingship_decision: "Restaurer la royauté d'Aran"
+ restore_aran_kingship_decision_desc: "Les [fomorians|E] possédaient autrefois un grand royaume dans ces îles. Je vais le restaurer une fois de plus."
+ restore_aran_kingship_decision_tooltip: "Restaurer le royaume d'Aran"
+ restore_aran_kingship_decision_confirm: "Le royaume d'Aran revit"
+  
+ restore_nemedian_kingdom_decision: "Restaurer le royaume de Nemed"
+ restore_nemedian_kingdom_decision_desc: "Nemed, le chef de tous nos ancêtres, dirigeait un royaume ici il y a longtemps. Il est temps pour nous de la reconstruire et de la faire prospérer."
+ restore_nemedian_kingdom_decision_tooltip: "Restaurer le royaume de Nemed"
+ restore_nemedian_kingdom_decision_confirm: "Les Némédiens sont à nouveau unis"
+  
+ ceremony_in_newgrange_decision: "Cérémonie à Newgrange"
+ ceremony_in_newgrange_decision_desc: "Newgrange a été envahie à plusieurs reprises et nos habitants en ont perdu le contrôle. Pendant des siècles, nous avons tenté de le récupérer, sans succès. Nous espérons un jour pouvoir à nouveau célébrer des cérémonies pour nos dieux dans ce lieu sacré."
+ ceremony_in_newgrange_decision_tooltip: "Organiser une cérémonie religieuse à Newgrange"
+ ceremony_in_newgrange_decision_confirm: "Nous honorons les dieux"
+  
+ take_fomorian_tribute_decision: "Récupérez l'hommage"
+ take_fomorian_tribute_decision_desc: "Mes affluents ont eu le temps d'élever leurs [cattle|E], d'élever leurs enfants et d'accroître leur trésor. Il est temps de récupérer le tribut ancestral : les deux tiers de leur bétail, de l'or et un de leurs enfants."
+ take_fomorian_tribute_decision_tooltip: "Envoyez l'hommage aux collectionneurs"
+ take_fomorian_tribute_decision_confirm: "j'aurai ce qui m'est dû"
+  
+ celtic_troops_decision: "Invoquez la bande de guerre celtique"
+ celtic_troops_decision_desc: "Nous sommes les nouveaux seigneurs de l'Irlande et amenons avec nous des armées dédiées à notre foi. Notre dévouement pourrait-il écraser nos ennemis."
+ celtic_troops_decision_tooltip: "Envoyez chercher la bande"
+ celtic_troops_decision_confirm: "Envoyez chercher la bande"
+ celtic_warband: "Bande de guerre celtique"
+  
+ banish_fomorians_decision: "Bannir les Fomoriens"
+ banish_fomorians_decision_desc: "Les Fomoriens nous considèrent comme inférieurs, ils nous considèrent comme leurs serviteurs. Nous ne devrions pas avoir à subir leur présence dans ma cour !"
+ banish_fomorians_decision_tooltip: "Bannir les Fomoriens"
+ banish_fomorians_decision_confirm: "Bannissez-les TOUS !"
+  
+  #High King decisions 
+ reform_high_kingship_decision: "Restaurer la Haute Royauté"
+ reform_high_kingship_decision_desc: "La loi irlandaise stipulait autrefois que son peuple était gouverné par un puissant [high_king|E]. Ils le seront encore une fois !"
+ reform_high_kingship_decision_tooltip: "Réformer la Haute Royauté d'Irlande"
+ reform_high_kingship_decision_confirm: "Gloire au Haut Roi d'Irlande !"
+  
+ call_royal_army_decision: "Appelez l'armée royale"
+ call_royal_army_decision_desc: "Le Haut Roi a le droit de rassembler une armée d'hommes de toute l'Irlande."
+ call_royal_army_decision_tooltip: "Rassemblez l'Armée Royale"
+ call_royal_army_decision_confirm: "Levez les étendards de la guerre !"
+  
+ call_royal_army_decision_troops: "garde royal"
+  
+ high_king_reclaim_tara_decision: "Récupérer Tara"
+ high_king_reclaim_tara_decision_desc: "Tara est le centre ancestral du pouvoir du [high_king|E]. Le Haut Roi devrait être celui qui le dirigerait."
+ high_king_reclaim_tara_decision_tooltip: "Obtenir une réclamation sur Tara"
+ high_king_reclaim_tara_decision_confirm: "Tara sera à moi !"
+  
+ strengthen_high_kingship_canditate_decision: "Renforcer le candidat"
+ strengthen_high_kingship_canditate_decision_desc: "Je suis digne de la Haute Royauté d'Irlande et je l'affirme formellement aujourd'hui."
+ strengthen_high_kingship_canditate_decision_tooltip: "Renforcez votre candidature pour le prochain Haut Roi"
+ strengthen_high_kingship_canditate_decision_confirm: "Je serai le prochain Grand Roi !"
+  
+  #Places decisions 
+ coax_giant_causeway_decision: "Amadouer un géant à la Chaussée des Géants"
+ coax_giant_causeway_decision_desc: "La Chaussée des Géants est connue comme un chemin vers le [otherworld|E], un lieu mystique où vivent d'étranges créatures. La Chaussée a été construite par le légendaire [gaelic_giant|E] Fionn Mac Cumhaill, et son descendant peut être contacté via ce site spécial."
+ coax_giant_causeway_decision_tooltip: "Cherchez à recruter un géant"
+ coax_giant_causeway_decision_confirm: "Viens, Géant, je t'attends !"
+  
+ many_crowns_for_galway_decision: "Des couronnes pour servir Galway"
+ many_crowns_for_galway_decision_desc: "Le royaume de Galway est désormais gouverné par une dynastie influente. Son prestigieux Rí sait que Galway pourrait avoir besoin de l'aide d'autres royaumes pour construire des fermes et des ringforts au-dessus des nombreuses tourbières qui recouvrent Galway. Il est maintenant temps d'utiliser cette influence et de faire appel aux autres Rí de notre dynastie."
+ many_crowns_for_galway_decision_tooltip: "Galway va user de son influence"
+ many_crowns_for_galway_decision_confirm: "Les Rí feront leur part"
+  
+ found_umhaill_decision: "J'ai trouvé le royaume d'Umhaill"
+ found_umhaill_decision_desc: "Pourquoi devrais-je m'incliner devant le roi de Mayo alors que mon armée est plus forte que la sienne ? Ma terre est riche et je possède les terres situées au nord et au sud de Clew Bay. Je forgerai mon propre royaume !"
+ found_umhaill_decision_tooltip: "Couronnez-vous roi d'Umhaill"
+ found_umhaill_decision_confirm: "Umhaill va prospérer !"
+  
+ investigate_on_wolfwalkers_decision: "Enquêtez sur les Marcheurs-loups"
+ investigate_on_wolfwalkers_decision_desc: "Cela fait de nombreuses années que j'entends parler de ces loups mythologiques, je dois découvrir qui ils sont réellement."
+ investigate_on_wolfwalkers_decision_tooltip: "Je trouverai ces loups"
+ investigate_on_wolfwalkers_decision_confirm: "Je trouverai ces loups"
+  
+  #Major decisions 
+ try_unite_ireland_decision: "Déclarez votre ambition d’unifier l’Irlande"
+ try_unite_ireland_decision_desc: "Vous avez prouvé que vous êtes un dirigeant prestigieux et compétent. Il est temps de réunir à nouveau l’île d’Émeraude sous un seul souverain. \n\nPrendre cette décision vous donnera une raison de soumettre n’importe quel voisin."
+ try_unite_ireland_decision_tooltip: "Je régnerai sur l'Irlande"
+ try_unite_ireland_decision_confirm: "Ils s'agenouilleront devant moi !"
+  
+ unite_all_ireland_decision: "Unir l’Irlande"
+ unite_all_ireland_decision_desc: "L’Irlande sera à nouveau unie. Je contrôle tous les royaumes d'Irlande, et il est maintenant temps de les unir tous en un seul royaume !"
+ unite_all_ireland_decision_tooltip: "Unir l'Éire"
+ unite_all_ireland_decision_confirm: "L'Irlande en est une"
+  
+ one_heir_decision: "Imposer un héritier"
+ one_heir_decision_desc: "L'œuvre de ma vie menace d'être annulée lorsque je quitterai ce monde. Mon royaume est voué à être détruit par mes querelles d’héritiers. Peut-être que, dans de bonnes circonstances, je pourrai assurer mon héritage et tout donner au premier dans la ligne de succession..."
+ one_heir_decision_tooltip: "Déclarez le premier héritier en ligne comme votre successeur légitime"
+ one_heir_decision_confirm: "Un seul gouvernera"
+  
+ found_meath_decision: "Meath trouvé"
+ found_meath_decision_desc: "Depuis des temps immémoriaux, l'Irlande est divisée en quatre grands comtés : l'Ulster, le Munster, le Leinster et le Connacht. Maintenant que je tiens Tara, Westmeath et Longford, je peux fonder un nouveau comté, que j'appellerai Meath.\n\nContrairement à d'autres royaumes oubliés depuis longtemps, celui-ci changera à jamais la carte de l'Irlande. Ce nouveau comté restera uni et ne fera qu’un."
+ found_meath_decision_tooltip: "Trouvé une cinquième province pour l'Irlande"
+ found_meath_decision_confirm: "Contemplez les plaines du royal Meath !"
+  
+  #Minor decisions 
+ sacrifice_to_sidhe_decision: "Faites un sacrifice aux Sidhe"
+ sacrifice_to_sidhe_decision_desc: "Nous connaissons les fées vivant dans le [otherworld|E] et nous savons qu'elles ont le pouvoir d'influencer notre monde. Nous ferons des offrandes aux [sidhe|E], les faires et êtres magiques d'Irlande, et espérons un bon présage pour diriger notre peuple."
+ sacrifice_to_sidhe_decision_tooltip: "Préparer la cérémonie d'offrande"
+ sacrifice_to_sidhe_decision_confirm: "La cérémonie attend"
+  
+ hail_high_king_decision: "Saluez le Haut Roi"
+ hail_high_king_decision_desc: "Le maître de l'Irlande est toujours un [milesian|E] comme il se doit. Il faut saluer le [high_king|E] et espérer que ce titre restera entre les mains milésiennes."
+ hail_high_king_decision_tooltip: "Acclamez le Haut Roi"
+ hail_high_king_decision_confirm: "Les Milésiens régneront pour toujours !"
+  
+ high_king_protection_decision: "Appel à la protection du Haut Roi"
+ high_king_protection_decision_desc: "Le [high_king|E] est un Milésien et son influence peut être utilisée pour aider tout [milesian|E] qui en a besoin. Nous sommes en guerre et avons besoin de plus d’hommes. Il est temps d'utiliser l'influence que le Haut Roi confère à notre peuple pour rassembler davantage de troupes."
+ high_king_protection_decision_tooltip: "Appel à l'aide"
+ high_king_protection_decision_confirm: "Rassemblez les hommes !"
+ high_king_protection_decision_troops: "Délégation du Haut Roi"
+  
+ establish_sean_bar_decision: "Créer le Sean's Bar"
+ establish_sean_bar_decision_desc: "La seule chose qui vaut mieux que de déguster un peu de bière le soir, c'est d'avoir une bonne compagnie pour la déguster. Peut-être que je pourrais construire une sorte d’établissement où les gens pourraient se rassembler et partager une pinte (ou deux). Une sorte de pub ? \n\nHistoriquement, le Sean's Bar d'Athlone est connu comme le plus ancien pub d'Europe."
+ establish_sean_bar_decision_tooltip: "Construire le pub"
+ establish_sean_bar_decision_confirm: "Tout le monde lève sa tasse. Sláinte!"
+  
+ cattle_for_a_feast_decision: "Consommez notre bétail lors d'un festin"
+ cattle_for_a_feast_decision_desc: "Il y a trop de bétail qui erre sur nos terres et je suis sûr que mes vassaux seraient ravis si j'organisais un festin. Nous pourrions manger une partie de notre bétail supplémentaire pendant les festivités."
+ cattle_for_a_feast_decision_tooltip: "Organiser une fête"
+ cattle_for_a_feast_decision_confirm: "Préparez le bétail !"
+  
+  #Religious decisions 
+ truce_with_de_danann_decision: "Trêve avec les dieux"
+ truce_with_de_danann_decision_desc: "Les [de_danann|E] sont miséricordieux et entendront nos prières. Nous demandons la paix entre nos tribus."
+ truce_with_de_danann_decision_tooltip: "Demander la paix"
+ truce_with_de_danann_decision_confirm: "Que les dieux soient miséricordieux"
+  
+ truce_with_fomorian_decision: "Trêve avec les dieux"
+ truce_with_fomorian_decision_desc: "Les [fomorians|E] sont de fiers guerriers et apprécient nos prières. Nous demandons la paix entre nos tribus."
+ truce_with_fomorian_decision_tooltip: "Demander la paix"
+ truce_with_fomorian_decision_confirm: "Qu'il y ait la paix entre nous"
+  
+  #Wolfwalkers decision 
+ my_inner_wolf_decision: "Gérez votre loup intérieur"
+ my_inner_wolf_decision_desc: "Je suis un Marcheur-loup, le loup en moi a faim et veut se déchaîner alors que je sais que je risque de perdre mon humanité si je ne fais pas attention."
+ my_inner_wolf_decision_tooltip: "Choisissez une stratégie"
+ my_inner_wolf_decision_confirm: "Choisissez une stratégie"
+  
+ call_the_pack_decision: "Appelez la meute"
+ call_the_pack_decision_desc: "Je suis un Marcheur-loup et je peux commander les loups de la forêt. Si je les rassemble, je pourrai peut-être les utiliser sur le champ de bataille."
+ call_the_pack_decision_tooltip: "Rassemblez le paquet"
+ call_the_pack_decision_confirm: "Rassemblez le paquet"
+  
+ wolfwalker_resilience_decision: "La résilience de Marcheur-loup"
+ wolfwalker_resilience_decision_desc: "Les Marcheurs-loups ont un corps puissant et mystique qui peut facilement se guérir lorsque le loup prend le contrôle."
+ wolfwalker_resilience_decision_tooltip: "je suis guéri"
+ wolfwalker_resilience_decision_confirm: "je suis guéri"
+  
+  #Building decisions 
+ call_gladiators_decision: "Embaucher des gladiateurs"
+ call_gladiators_decision_desc: "Les gladiateurs combattant au Colisée pourraient être utilisés comme guerriers sur le champ de bataille. Je vais essayer d'en embaucher certains pour se battre à mes côtés."
+ call_gladiators_decision_tooltip: "Payez-les"
+ call_gladiators_decision_confirm: "Payez-les"
+ gladiators_army: "Gladiateurs"
+  
+  #Ancient kingdoms decisions 
+ found_ossory_decision: "Ossory trouvé"
+ found_ossory_decision_desc: "J'ai une position suffisamment forte pour fonder le royaume d'Ossory. Ossory se lèvera et prospérera sous mon règne."
+ found_ossory_decision_tooltip: "Ossory trouvé"
+ found_ossory_decision_confirm: "Ossory trouvé"
+  
+ found_breifne_decision: "Trouvé Bréifne"
+ found_breifne_decision_desc: "J'ai une position suffisamment forte pour fonder le royaume de Bréifne. Bréifne se lèvera et prospérera sous mon règne."
+ found_breifne_decision_tooltip: "Trouvé Bréifne"
+ found_breifne_decision_confirm: "Trouvé Bréifne"
+  
+ found_iarmuman_decision: "Iarmuman trouvé"
+ found_iarmuman_decision_desc: "J'ai une position suffisamment forte pour fonder le royaume d'Iarmuman. Iarmuman se lèvera et prospérera sous mon règne."
+ found_iarmuman_decision_tooltip: "Iarmuman trouvé"
+ found_iarmuman_decision_confirm: "Iarmuman trouvé"
+  
+ found_airgialla_decision: "Airgialla trouvé"
+ found_airgialla_decision_desc: "J'ai une position suffisamment forte pour fonder le royaume d'Airgíalla. Airgíalla s'élèvera et prospérera sous mon règne."
+ found_airgialla_decision_tooltip: "Airgialla trouvé"
+ found_airgialla_decision_confirm: "Airgialla trouvé"
+  
+  #Magic 
+ leave_fintan_form_decision: "Quitter le formulaire Fintan"
+ leave_fintan_form_decision_desc: "Je dois quitter ma forme Saumon et revenir à ma forme humaine, j'espère que la transformation ne m'affectera pas beaucoup."
+ leave_fintan_form_decision_tooltip: "Retour à l'humain"
+ leave_fintan_form_decision_confirm: "Retour à l'humain"
+ practice_magical_powers_decision: "Pratiquez votre magie"
+ practice_magical_powers_decision_desc: "Je pourrais passer du temps à entraîner mes compétences magiques, je pourrais en apprendre beaucoup mais cela pourrait me fatiguer."
+ practice_magical_powers_decision_tooltip: "Gagnez une expérience de style de vie magique"
+ practice_magical_powers_decision_confirm: "Pratique"
+ learn_new_spell_for_playtesters_decision: "Apprendre un nouveau sort"
+ learn_new_spell_for_playtesters_decision_desc: "Je pratique la magie depuis longtemps, je pense avoir désormais les connaissances nécessaires pour acquérir de nouveaux pouvoirs."
+ learn_new_spell_for_playtesters_decision_tooltip: "Gagnez un nouveau sort"
+ learn_new_spell_for_playtesters_decision_confirm: "Apprendre un nouveau sort"
+  
+  #Minor decisions 
+ toi_mercenaries_troops: "Mercenaires"
+ buy_mercenaries_with_cattle_decision: "Acheter des mercenaires avec du bétail"
+ buy_mercenaries_with_cattle_decision_desc: "Nous avons peu de chances de gagner cette guerre, nous échangeons une partie de notre bétail contre de bons combattants, cela ne sert à rien d'avoir un tel troupeau si nous ne pouvons pas protéger notre royaume."
+ buy_mercenaries_with_cattle_decision_tooltip: "Embaucher des mercenaires"
+ buy_mercenaries_with_cattle_decision_confirm: "Faire le commerce"
+  
+  #Vampire 
+ ask_court_for_blood_decision: "Demander du sang au tribunal"
+ ask_court_for_blood_decision_desc: "J'ai besoin de sang... Je veux du sang... mes courtisans donneront tous un peu de leur sang pour calmer ma soif de sang !"
+ ask_court_for_blood_decision_tooltip: "Demandez à votre tribunal de vous donner du sang"
+ ask_court_for_blood_decision_confirm: "J'ai soif!"
+  
+ reform_the_vampire_kingdom_decision: "Forme Tir Neamh-Mairbh"
+ reform_the_vampire_kingdom_decision_desc: "Le cœur de la dynastie Mac Bram. Tous les vampires sont attirés par cet endroit, mais aucun ne sait pourquoi. Certains disent que le premier homme à découvrir la Magie du Sang est enterré ici, d'autres y voient la demeure de Sidhe particulièrement assoiffé de sang. Il a été occupé pendant trop longtemps par des mortels et il est temps de restaurer l'ancien royaume.\n#bold Tir Neamh-Mairbh signifie : Terre des morts-vivants#!"
+ reform_the_vampire_kingdom_decision_tooltip: "Forme Tir Neamh-Mairbh, le pays des morts"
+ reform_the_vampire_kingdom_decision_confirm: "Un royaume pour les morts"
+  
+ choose_hunt_type_vampire_decision: "Choisissez le type de chasse"
+ choose_hunt_type_vampire_decision_desc: "En tant que vampire, je dois choisir mon approche quant à la façon dont je vais me nourrir. Dois-je prélever du sang de force ou dois-je essayer d’utiliser des méthodes d’alimentation plus raffinées ?"
+ choose_hunt_type_vampire_decision_tooltip: "Choisissez le style de chasse"
+ choose_hunt_type_vampire_decision_confirm: "Choisissez le style de chasse"
+  

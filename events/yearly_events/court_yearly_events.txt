@@ -2447,7 +2447,7 @@ court_yearly.7100 = {
 						NOR = {
 							geographical_region = world_europe
 							geographical_region = world_tibet
-							geographical_region = world_himalaya
+							# geographical_region = world_himalaya
 							geographical_region = world_burma
 							geographical_region = world_middle_east_persia
 						}

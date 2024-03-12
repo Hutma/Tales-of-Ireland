@@ -1,6 +1,12 @@
 ﻿l_french:
- cessarian_first_king:0 "Premier roi cessarien"
- 
- back_to_newgrange_dynasty:0 "A récupéré Newgrange"
- 
- oldest_pub_founder:0 "Fondateur du plus ancien pub"
+ cessarian_first_king: "Premier césarien Rí"
+  
+ back_to_newgrange_dynasty: "Newgrange récupéré"
+  
+ oldest_pub_founder: "Fondateur du plus ancien pub"
+  
+ meath_empire_founded: "Meath fondée"
+  
+ roman_road_foundator: "Constructeur de voies romaines"
+  
+ ancient_kingdom_founder: "Fondateur de l'Ancien Royaume"

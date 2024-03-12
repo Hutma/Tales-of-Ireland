@@ -108,6 +108,7 @@ building_orchards_requirement_terrain = {
 	OR = {
 		terrain = floodplains
 		terrain = oasis
+		has_building_or_higher = qanats_05
 	}
 }
 
@@ -176,6 +177,7 @@ building_cereal_fields_requirement_terrain = {
 		county = {
 			has_county_modifier = fertile_desert_mountains_modifier
 		}
+		has_building_or_higher = qanats_05
 	}
 }
 
@@ -247,6 +249,14 @@ building_elephant_pens_requirement_terrain = {
 	always = no
 }
 
+building_horse_pastures_requirement_terrain = {
+	OR = {
+		terrain = steppe
+		geographical_region = world_steppe_east
+		culture = { has_cultural_parameter = unlock_horse_pastures_building }
+	}
+}
+
 building_plantations_requirement_terrain = {
 	OR = {
 		terrain = drylands
@@ -274,42 +284,44 @@ building_warrior_lodges_requirement_terrain = {
 		terrain = desert_mountains
 		terrain = hills
 	}
-	NOT = { geographical_region = world_horse_buildings_in_hills_and_mountains }
+	# NOT = { geographical_region = world_horse_buildings_in_hills_and_mountains }
 }
 
 building_hillside_grazing_requirement_terrain = {
-	OR = {
-		terrain = mountains
-		terrain = desert_mountains
-		terrain = hills
-	}
-	geographical_region = world_horse_buildings_in_hills_and_mountains
+	# OR = {
+		# terrain = mountains
+		# terrain = desert_mountains
+		# terrain = hills
+	# }
+	# geographical_region = world_horse_buildings_in_hills_and_mountains
+	always = no
 }
 
 building_wind_furnace_requirement_terrain = {
-	geographical_region = world_india
-	OR = {
-		is_coastal = yes
-		AND = {
-			scope:holder.top_liege = {
-				any_realm_county = {
-					any_county_province = {
-						has_building_or_higher = konasamudram_mines_01
-					}
-				}
-			}
-			duchy = {
-				any_county = {
-					any_county_province = {
-						has_building_or_higher = konasamudram_mines_01
-					}
-				}
-			}
-		}
+	# geographical_region = world_india
+	# OR = {
+		# is_coastal = yes
+		# AND = {
+			# scope:holder.top_liege = {
+				# any_realm_county = {
+					# any_county_province = {
+						# has_building_or_higher = konasamudram_mines_01
+					# }
+				# }
+			# }
+			# duchy = {
+				# any_county = {
+					# any_county_province = {
+						# has_building_or_higher = konasamudram_mines_01
+					# }
+				# }
+			# }
+		# }
 		
-	}
+	# }
 	
-	scope:holder.culture = { has_innovation = innovation_wootz_steel }
+	# scope:holder.culture = { has_innovation = innovation_wootz_steel }
+	always = no
 }
 
 building_hill_forts_requirement_terrain = {
@@ -367,36 +379,51 @@ building_caravanserai_requirement_terrain = {
 	}
 }
 
-has_any_special_mine_trigger = {
-	OR = {
-		has_building_or_higher = rammelsberg_mines_01
-		has_building_or_higher = kutna_hora_mines_01
-		has_building_or_higher = kremnica_mines_01
-		has_building_or_higher = falun_mines_01
-		has_building_or_higher = schwaz_mines_01
-		has_building_or_higher = argentiera_mines_01
-		has_building_or_higher = kollur_mines_01
-		has_building_or_higher = siderokausia_mines_01
-		has_building_or_higher = mali_mines_01
-		has_building_or_higher = konasamudram_mines_01
-		has_building_or_higher = dean_mines_01
-		has_building_or_higher = zawar_mines_01
-		has_building_or_higher = takkeda_mines_01
-		has_building_or_higher = khetri_mines_01
-		has_building_or_higher = taghaza_mines_01
-		has_building_or_higher = ijil_mines_01
-		has_building_or_higher = turda_mines_01
-		has_building_or_higher = phocaea_mines_01
-		has_building_or_higher = pansjhir_mines_01
-		has_building_or_higher = trepca_mines_01
-		has_building_or_higher = rudnik_mines_01
-		has_building_or_higher = cevennes_mines_01
-		has_building_or_higher = allaq_mines_01
-		has_building_or_higher = verespatak_mines_01
-		has_building_or_higher = nishapur_mines_01
-		has_building_or_higher = srebrenica_mines_01
-		has_building_or_higher = ratnapura_mines_01
+building_qanat_requirement_terrain = {
+	county ?= {
+		any_county_province = {
+			OR = {
+				terrain = hills
+				terrain = mountains
+				terrain = desert_mountains
+				terrain = desert
+				terrain = drylands
+			}
+		}
 	}
+}
+
+has_any_special_mine_trigger = {
+	# OR = {
+		# has_building_or_higher = rammelsberg_mines_01
+		# has_building_or_higher = kutna_hora_mines_01
+		# has_building_or_higher = kremnica_mines_01
+		# has_building_or_higher = falun_mines_01
+		# has_building_or_higher = schwaz_mines_01
+		# has_building_or_higher = argentiera_mines_01
+		# has_building_or_higher = kollur_mines_01
+		# has_building_or_higher = siderokausia_mines_01
+		# has_building_or_higher = mali_mines_01
+		# has_building_or_higher = konasamudram_mines_01
+		# has_building_or_higher = dean_mines_01
+		# has_building_or_higher = zawar_mines_01
+		# has_building_or_higher = takkeda_mines_01
+		# has_building_or_higher = khetri_mines_01
+		# has_building_or_higher = taghaza_mines_01
+		# has_building_or_higher = ijil_mines_01
+		# has_building_or_higher = turda_mines_01
+		# has_building_or_higher = phocaea_mines_01
+		# has_building_or_higher = pansjhir_mines_01
+		# has_building_or_higher = trepca_mines_01
+		# has_building_or_higher = rudnik_mines_01
+		# has_building_or_higher = cevennes_mines_01
+		# has_building_or_higher = allaq_mines_01
+		# has_building_or_higher = verespatak_mines_01
+		# has_building_or_higher = nishapur_mines_01
+		# has_building_or_higher = srebrenica_mines_01
+		# has_building_or_higher = ratnapura_mines_01
+	# }
+	always = no
 }
 
 ######################################################################
@@ -579,35 +606,38 @@ generic_recruitment_building_innovations_trigger = {
 }
 
 islamic_special_building_trigger = {
-	OR = {
-		has_building = holy_site_great_mosque_of_djenne_01
-		has_building = holy_site_great_mosque_of_samarra_01
-		has_building = holy_site_prophetic_mosque_01
-		has_building = hagia_sophia_02
-		has_building = the_friday_mosque_01 # shared zoroastrian
-		has_building = holy_site_great_mosque_of_cordoba_01 # shared christian
-	}
+	# OR = {
+		# has_building = holy_site_great_mosque_of_djenne_01
+		# has_building = holy_site_great_mosque_of_samarra_01
+		# has_building = holy_site_prophetic_mosque_01
+		# has_building = hagia_sophia_02
+		# has_building = the_friday_mosque_01 # shared zoroastrian
+		# has_building = holy_site_great_mosque_of_cordoba_01 # shared christian
+	# }
+	always = no
 }
 
 christian_special_building_trigger = {
-	OR = {
-		has_building = holy_site_cologne_cathedral_01
-		has_building = holy_site_canterbury_cathedral_01
-		has_building = temple_of_uppsala_01
-		has_building = temple_of_uppsala_02
-		has_building = lund_cathedral_01
-		has_building = holy_site_great_mosque_of_cordoba_01 # shared muslim
-	}
+	# OR = {
+		# has_building = holy_site_cologne_cathedral_01
+		# has_building = holy_site_canterbury_cathedral_01
+		# has_building = temple_of_uppsala_01
+		# has_building = temple_of_uppsala_02
+		# has_building = lund_cathedral_01
+		# has_building = holy_site_great_mosque_of_cordoba_01 # shared muslim
+	# }
+	always = no
 }
 
 eastern_special_building_trigger = {
-	OR = {
-		has_building = buddhas_of_bamian_01
-		has_building = brihadeeswarar_temple_01
-		has_building = shwedagon_pagoda_01
-		has_building = ananda_temple_01
-		has_building = khajuraho_01
-	}
+	# OR = {
+		# has_building = buddhas_of_bamian_01
+		# has_building = brihadeeswarar_temple_01
+		# has_building = shwedagon_pagoda_01
+		# has_building = ananda_temple_01
+		# has_building = khajuraho_01
+	# }
+	always = no
 }
 
 # Religious special building triggers

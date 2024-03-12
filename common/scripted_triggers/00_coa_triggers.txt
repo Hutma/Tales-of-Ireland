@@ -192,3 +192,7 @@ coa_germanic_trigger = {
 coa_iberian_trigger = {
 	always = no
 }
+
+coa_iranian_trigger = {
+	scope:culture = { has_coa_gfx = iranian_group_coa_gfx }
+}

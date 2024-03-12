@@ -42,3 +42,21 @@ defend_against_non_fairy_trigger_desc = {
 	third = defend_against_non_fairy_trigger_desc
 	third_not = defend_against_non_fairy_trigger_desc
 }
+
+recent_cattle_raid_victory = {
+	first = recent_cattle_raid_victory
+	global = recent_cattle_raid_victory
+	third = recent_cattle_raid_victory
+}
+
+need_at_least_two_other_dynasty_kings = {
+	first = need_at_least_two_other_dynasty_kings
+	global = need_at_least_two_other_dynasty_kings
+	third = need_at_least_two_other_dynasty_kings
+}
+
+found_kingdom_decision_three_cessairan_duchies_held = {
+	first = found_kingdom_decision_three_cessairan_duchies_held
+	global = found_kingdom_decision_three_cessairan_duchies_held
+	third = found_kingdom_decision_three_cessairan_duchies_held
+}

@@ -52,6 +52,25 @@ ram = {
 	allowed_in_hired_troops = no
 }
 
+ram_second_era = {
+	type = siege_weapon
+	fights_in_main_phase = no
+	icon = onager
+	
+	damage = 0
+	toughness = 12
+	
+	siege_tier = 1
+	siege_value = 0.2
+	
+	buy_cost = { gold = onager_recruitment_cost }
+	low_maintenance_cost = { gold = onager_low_maint_cost }
+	high_maintenance_cost = { gold = onager_high_maint_cost }
+	
+	stack = 2
+	allowed_in_hired_troops = no
+}
+
 siege_tower = {
 	type = siege_weapon
 	fights_in_main_phase = no

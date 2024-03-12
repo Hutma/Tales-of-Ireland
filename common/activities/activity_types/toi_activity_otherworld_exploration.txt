@@ -1,15 +1,14 @@
-﻿# The Otherworld activity
-activity_otherworld_exploration = {
+﻿activity_otherworld_exploration = {
 	is_shown = {
 		highest_held_title_tier > tier_barony
 		OR = {
 			has_trait = magician_good
 			has_trait = education_learning_3
 			has_trait = education_learning_4
+			has_trait = education_learning_5
 			has_trait = witch
 			has_trait = scholar
 			has_trait = theologian
-			has_trait = mystic_3
 		}
 		is_landed = yes
 		trigger_if = {
@@ -29,41 +28,396 @@ activity_otherworld_exploration = {
 	is_valid = {
 		scope:host = {
 			is_alive = yes
+			is_capable_adult = yes
 			is_imprisoned = no
-			is_landed = yes 
+			is_landed = yes
 			NOT = { is_incapable = yes }
 		}
+		# If no one shows up
+		# trigger_if = {
+			# limit = {
+				# is_current_phase_active = yes
+			# }
+			# has_attending_activity_guests = yes
+		# }
 	}
 	
 	on_invalidated = {
-		#add something one day i guess TO DO
+		# Host becomes unlanded
+		if = {
+			limit = {
+				scope:host = { is_landed = no }
+			}
+			scope:activity = {
+				activity_type = { save_scope_as = activity_type }
+			}
+			every_attending_character = {
+				trigger_event = activity_system.0320
+			}
+		}
+		if = {
+			limit = {
+				scope:host = { is_incapable = yes }
+			}
+			scope:activity = {
+				activity_type = { save_scope_as = activity_type }
+			}
+			scope:host = {
+				trigger_event = activity_system.0330
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				trigger_event = activity_system.0331
+			}
+		}
 	}
 	
-	cooldown = { years = 12 }
+	on_host_death = {
+		scope:activity = {
+			set_variable = {
+				name = activity_invalidated
+			}
+		}
+	}
+	
+	province_filter = capital
+	ai_province_filter = capital
+	
+	is_location_valid = {
+		has_holding = yes
+	}
+	
+	cooldown = { years = 10 }
 	
 	cost = {
 		prestige = 50
 		piety = 50
 	}
 	
+	ui_predicted_cost = {
+		# All costs are balanced on County/Early Era starting point
+		gold = {
+			
+			# Options 
+			add = { # Lenght 
+				value = 0
+				add = 10
+			}
+		}
+	}
+	
 	ai_will_do = {
 		value = 50
 	}
 	
-	ai_check_interval = 12
+	ai_check_interval = 60
 	
+	is_grand_activity = no
+
+	is_single_location = yes
+	
+	ai_will_select_province = {
+		value = 10
+		if = {
+			limit = {
+				this = scope:host.capital_province
+			}
+			add = {
+				value = 30
+				desc = "Capital Province preferred"
+			}
+		}
+	}
+	
+	max_province_icons = 5
 	max_guests = 0
 	
 	allow_zero_guest_invites = yes
 	
-	on_start = {
-		scope:host = {
-			trigger_event = {
-				on_action = otherworld_exploration_setup
+	host_intents = {
+		intents = { explore_otherworld_intent }
+		default = explore_otherworld_intent
+	}
+	
+	background = {
+		texture = "gfx/interface/illustrations/activity_backgrounds/activity_otherworld_exploration.dds"
+		environment = "environment_event_forest" 
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+	
+	###################
+	# OPTIONS
+	###################
+
+	options = {
+		# How long?
+		otherworld_exploration_option_lenght = {
+			otherworld_exploration_lenght_short = {
+				is_shown = { has_dlc_feature = advanced_activities }
+				
+				cost = {
+					gold = {
+						add = {
+							add = {
+								value = 5
+								desc = otherworld_exploration_lenght_normal
+							}
+							add = {
+								value = 5
+								multiply = activity_cost_scale_by_tier
+								subtract = 5
+								desc = activity_cost_scale_by_tier_desc
+							}
+							
+							min = 0
+						}
+					}
+				}
+				
+				ai_will_do = {
+					value = 10
+					# Financial preference.
+					add = activity_option_likes_cheap_expense_value
+					# Fanciness preference.
+					add = activity_option_likes_functional_food_option_value
+				}
+			}
+			otherworld_exploration_lenght_normal = {
+				default = yes
+				cost = {
+					gold = {
+						add = {
+							add = {
+								value = 10
+								desc = otherworld_exploration_lenght_normal
+							}
+							add = {
+								value = 10
+								multiply = activity_cost_scale_by_tier
+								subtract = 10
+								desc = activity_cost_scale_by_tier_desc
+							}
+							add = {
+								value = 5
+								multiply = activity_cost_scale_by_era
+								subtract = 5
+								desc = activity_cost_scale_by_era_desc
+							}
+							
+							min = 0
+						}
+					}
+				}
+
+				ai_will_do = {
+					value = 0
+					# Financial preference.
+					add = activity_option_likes_middling_expense_value
+					# Fanciness preference.
+					## We just use slightly reduced fanciness prefs here.
+					add = {
+						value = activity_option_likes_ostentatious_food_option_value
+						multiply = 0.5
+					}
+				}
+			}
+			otherworld_exploration_lenght_long = {
+				is_shown = { has_dlc_feature = advanced_activities }
+
+				cost = {
+					gold = {
+						add = {
+							add = {
+								value = 20
+								desc = otherworld_exploration_lenght_long
+							}
+							add = {
+								value = 20
+								multiply = activity_cost_scale_by_tier
+								subtract = 20
+								desc = activity_cost_scale_by_tier_desc
+							}
+							add = {
+								value = 10
+								multiply = activity_cost_scale_by_era
+								subtract = 10
+								desc = activity_cost_scale_by_era_desc
+							}
+							
+							min = 0
+						}
+					}
+				}
+
+				ai_will_do = {
+					value = 0
+					# Financial preference.
+					add = activity_option_likes_heavy_expense_value
+					# Fanciness preference.
+					add = activity_option_likes_ostentatious_food_option_value
+				}
 			}
 		}
 	}
+	
+	window_characters = {
+		host = {
+			camera = camera_body
+			
+			effect = {
+				if = {
+					limit = {
+						scope:host.location = scope:activity.activity_location
+					}
+					scope:host = {
+						add_to_list = characters
+					}
+				}
+			}
+			scripted_animation = {
+				
+				#Fallback
+				animation = lantern
+			}
+		}
+	}
+	
+	on_start = {
+		scope:host = {
+			trigger_event = toi_otherworld_exploration.0001
+		}
+	}
+	
+	phases = {
+		# explore.
+		otherworld_exploration_phase_exploration = {		
+			order = 1
+			is_predefined = yes
+
+			is_shown = { always = yes }
+			is_valid = {
+				always = yes
+			}
+			
+			on_phase_active = { #choose the first place
+				#start event first
+				scope:host = { trigger_event = toi_otherworld_exploration.1001 }
+				#set the lenght of the activity based on the option chosen
+				# root = { 
+					# set_variable = { #start countdown of events
+						# name = number_of_places_counterS
+						# value = yes
+					# }
+				# }
+				if = {
+					limit = { scope:activity = { has_activity_option = { category = otherworld_exploration_option_lenght option = otherworld_exploration_lenght_short } } }
+					scope:host = { 
+						set_variable = { #start countdown of events
+							name = number_of_places_counter
+							value = 2
+						}
+					}
+				}
+				if = {
+					limit = { scope:activity = { has_activity_option = { category = otherworld_exploration_option_lenght option = otherworld_exploration_lenght_normal } } }
+					scope:host = { 
+						set_variable = { #start countdown of events
+							name = number_of_places_counter
+							value = 1
+						}
+					}
+				}
+				if = {
+					limit = { scope:activity = { has_activity_option = { category = otherworld_exploration_option_lenght option = otherworld_exploration_lenght_long } } }
+					scope:host = { 
+						set_variable = { #start countdown of events
+							name = number_of_places_counter
+							value = 0
+						}
+					}
+					
+				}
+				scope:host = { trigger_event = { on_action = otherworld_exploration_place_choice_events } }
+			}
+
+			on_monthly_pulse = { #one place every 2 months
+				if = {
+					limit = { root = { NOT = { has_character_flag = change_otherworld_place_soon } } }
+					root = { add_character_flag = change_otherworld_place_soon }
+				}
+				else = {
+					root = { remove_character_flag = change_otherworld_place_soon }
+					#on action to remove all places flag + trigger a new place event OR stop the phase if enough places have been visited already
+					root = { trigger_event = { on_action = otherworld_exploration_place_choice_events } }
+				}
+			}
+			
+			on_weekly_pulse = { #one event every other week
+				if = {
+					limit = { root = { NOT = { has_character_flag = event_otherworld_every_other_week } } }
+					root = { add_character_flag = event_otherworld_every_other_week }
+				}
+				else = {
+					root = { remove_character_flag = event_otherworld_every_other_week }
+					#trigger an event among all possible events
+					root = { trigger_event = { on_action = otherworld_exploration_core_events } }
+				}
+			}
+		}
+	}
+	
 	on_complete = {
 		#TRIGGER THE FINAL EVENT HERE?
+		scope:host = {
+			remove_character_flag = event_otherworld_every_other_week
+			remove_character_flag = change_otherworld_place_soon
+			remove_variable = is_having_otherworld_exploration_2001
+			remove_variable = is_having_otherworld_exploration_2002
+			remove_variable = is_having_otherworld_exploration_2003
+			remove_variable = is_having_otherworld_exploration_2004
+			remove_variable = is_having_otherworld_exploration_2005
+			remove_variable = is_having_otherworld_exploration_2006
+			remove_variable = is_having_otherworld_exploration_2007
+			remove_variable = had_otherworld_core_0001
+			remove_variable = had_otherworld_core_0002
+			remove_variable = had_otherworld_core_0003
+			remove_variable = had_otherworld_core_0004
+			remove_variable = had_otherworld_core_0005
+			remove_variable = had_otherworld_core_0006
+			remove_variable = had_otherworld_core_0007
+			remove_variable = number_of_places_counter
+			remove_variable = had_otherworld_core_0001
+			remove_variable = had_otherworld_core_0002
+			remove_variable = had_otherworld_core_0003
+			remove_variable = had_otherworld_core_0004
+			remove_variable = had_otherworld_core_0005
+			remove_variable = had_otherworld_core_0006
+			remove_variable = had_otherworld_core_0007
+			remove_variable = had_otherworld_core_0008
+			remove_variable = had_otherworld_core_0009
+			remove_variable = had_otherworld_core_0010
+			remove_variable = had_otherworld_core_0011
+			remove_variable = had_otherworld_core_0012
+			remove_variable = had_otherworld_core_0013
+			remove_variable = had_otherworld_core_0014
+			remove_variable = had_otherworld_core_0015
+			remove_variable = had_otherworld_core_0016
+			remove_variable = had_otherworld_core_0017
+			remove_variable = had_otherworld_core_0018
+			remove_variable = had_otherworld_core_0019
+			remove_variable = had_otherworld_core_0020
+			remove_variable = had_otherworld_core_0021
+			remove_variable = had_otherworld_core_0022
+			remove_variable = had_otherworld_core_0023
+			remove_variable = had_otherworld_core_0024
+			remove_variable = had_otherworld_core_0025
+			remove_variable = had_otherworld_core_0026
+			remove_variable = had_otherworld_core_0027
+			remove_variable = had_otherworld_core_0028
+			remove_variable = had_otherworld_core_0029
+			remove_variable = had_otherworld_core_0030
+			
+			trigger_event = { id = toi_otherworld_exploration.3000 }
+		}
 	}
 }

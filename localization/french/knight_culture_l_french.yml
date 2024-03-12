@@ -1,104 +1,104 @@
 ﻿l_french:
- knight_culture_player:0 "[GetPlayer.Custom('KnightCulture')]"
- knight_culture_player_plural:0 "[GetPlayer.Custom('KnightCulturePlural')]"
- knight_culture_player_no_tooltip:0 "[GetPlayer.Custom('KnightCultureNoTooltip')]"
- knight_culture_player_plural_no_tooltip:0 "[GetPlayer.Custom('KnightCulturePluralNoTooltip')]"
- knight_culture_player_no_tooltip_lowercase:0 "[GetPlayer.Custom('KnightCultureNoTooltipLowercase')]"
- knight_culture_player_plural_no_tooltip_lowercase:0 "[GetPlayer.Custom('KnightCulturePluralNoTooltipLowercase')]"
- knight_culture_player_plural_possessive_no_tooltip_lowercase:0 "[GetPlayer.Custom('KnightCulturePluralPossessiveNoTooltipLowercase')]"
- knight_culture_player_adjective_no_tooltip_lowercase:0 "[GetPlayer.Custom('KnightCultureAdjectiveNoTooltipLowercase')]"
+ knight_culture_player: "[GetPlayer.Custom( 'KnightCulture' )]"
+ knight_culture_player_plural: "[GetPlayer.Custom( 'KnightCulturePlural' )]"
+ knight_culture_player_no_tooltip: "[GetPlayer.Custom( 'KnightCultureNoTooltip' )]"
+ knight_culture_player_plural_no_tooltip: "[GetPlayer.Custom( 'KnightCulturePluralNoTooltip' )]"
+ knight_culture_player_no_tooltip_lowercase: "[GetPlayer.Custom( 'KnightCultureNoTooltipLowercase' )]"
+ knight_culture_player_plural_no_tooltip_lowercase: "[GetPlayer.Custom( 'KnightCulturePluralNoTooltipLowercase' )]"
+ knight_culture_player_plural_possessive_no_tooltip_lowercase: "[GetPlayer.Custom( 'KnightCulturePluralPossessiveNoTooltipLowercase' )]"
+ knight_culture_player_adjective_no_tooltip_lowercase: "[GetPlayer.Custom( 'KnightCultureAdjectiveNoTooltipLowercase' )]"
   
-  # No tooltip versions
- knight_default_no_tooltip:0 "Chevalier"
- knight_default_no_tooltip_plural:0 "Chevaliers"
-
- knight_faris_no_tooltip:0 "Fāris"
- knight_faris_no_tooltip_plural:0 "Fāris"
-
- knight_baghatur_no_tooltip:0 "Bagatur"
- knight_baghatur_no_tooltip_plural:0 "Bagaturs"
-
- knight_shoorveer_no_tooltip:0 "Shoorveer"
- knight_shoorveer_no_tooltip_plural:0 "Shoorveers"
-
- knight_aswaran_no_tooltip:0 "Aswār"
- knight_aswaran_no_tooltip_plural:0 "Aswārān"
-
- knight_hetaeria_no_tooltip:0 "Hetaeria"
- knight_hetaeria_no_tooltip_plural:0 "Hetaeriae"
-
- knight_champion_no_tooltip:0 "Champion"
- knight_champion_no_tooltip_plural:0 "Champions"
+   # No tooltip versions 
+ knight_default_no_tooltip: "Ridire"
+ knight_default_no_tooltip_plural: "Ridiri"
   
-  # Lowercase versions
- knight_default_no_tooltip_lowercase:0 "chevalier"
- knight_default_no_tooltip_lowercase_plural:0 "chevaliers"
- knight_default_no_tooltip_lowercase_plural_possessive:0 "de chevaliers"
- knight_default_no_tooltip_lowercase_adjective:0 "de chevalier"
-
- knight_faris_no_tooltip_lowercase:0 "fāris"
- knight_faris_no_tooltip_lowercase_plural:0 "fāris"
- knight_faris_no_tooltip_lowercase_plural_possessive:0 "de fāris"
- knight_faris_no_tooltip_lowercase_adjective:0 "de fāris"
-
- knight_baghatur_no_tooltip_lowercase:0 "bagatur"
- knight_baghatur_no_tooltip_lowercase_plural:0 "bagaturs"
- knight_baghatur_no_tooltip_lowercase_plural_possessive:0 "de bagaturs"
- knight_baghatur_no_tooltip_lowercase_adjective:0 "de bagatur"
-
- knight_shoorveer_no_tooltip_lowercase:0 "shoorveer"
- knight_shoorveer_no_tooltip_lowercase_plural:0 "shoorveers"
- knight_shoorveer_no_tooltip_lowercase_plural_possessive:0 "de shoorveers"
- knight_shoorveer_no_tooltip_lowercase_adjective:0 "de shoorveer"
-
- knight_aswaran_no_tooltip_lowercase:0 "aswār"
- knight_aswaran_no_tooltip_lowercase_plural:0 "aswārān"
- knight_aswaran_no_tooltip_lowercase_plural_possessive:0 "d'aswārān"
- knight_aswaran_no_tooltip_lowercase_adjective:0 "d'aswār"
-
- knight_hetaeria_no_tooltip_lowercase:0 "hetaeria"
- knight_hetaeria_no_tooltip_lowercase_plural:0 "hetaeriae"
- knight_hetaeria_no_tooltip_lowercase_plural_possessive:0 "de hetaeriae"
- knight_hetaeria_no_tooltip_lowercase_adjective:0 "de hetaeria"
-
- knight_champion_no_tooltip_lowercase:0 "champion"
- knight_champion_no_tooltip_lowercase_plural:0 "champions"
- knight_champion_no_tooltip_lowercase_plural_possessive:0 "de champions"
- knight_champion_no_tooltip_lowercase_adjective:0 "de champion"
-
-  #Game Concept versions
- knight_default:0 "[Concept( 'knight', '$knight_default_no_tooltip$' )|E]"
- knight_default_plural:0 "[Concept( 'knight', '$knight_default_no_tooltip_plural$' )|E]"
-
- knight_faris:0 "[Concept( 'knight', '$knight_faris_no_tooltip$' )|E]"
- knight_faris_plural:0 "[Concept( 'knight', '$knight_faris_no_tooltip_plural$' )|E]"
-
- knight_baghatur:0 "[Concept( 'knight', '$knight_baghatur_no_tooltip$' )|E]"
- knight_baghatur_plural:0 "[Concept( 'knight', '$knight_baghatur_no_tooltip_plural$' )|E]"
-
- knight_shoorveer:0 "[Concept( 'knight', '$knight_shoorveer_no_tooltip$' )|E]"
- knight_shoorveer_plural:0 "[Concept( 'knight', '$knight_shoorveer_no_tooltip_plural$' )|E]"
-
- knight_aswaran:0 "[Concept( 'knight', '$knight_aswaran_no_tooltip$' )|E]"
- knight_aswaran_plural:0 "[Concept( 'knight', '$knight_aswaran_no_tooltip_plural$' )|E]"
-
- knight_hetaeria:0 "[Concept( 'knight', '$knight_hetaeria_no_tooltip$' )|E]"
- knight_hetaeria_plural:0 "[Concept( 'knight', '$knight_hetaeria_no_tooltip_plural$' )|E]"
-
- knight_champion:0 "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
- knight_champion_plural:0 "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
- 
- knight_champion:0 "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
- knight_champion_plural:0 "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
- 
- knight_hero:0 "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
- knight_hero_plural:0 "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
- knight_hero_no_tooltip:0 "Champion"
- knight_hero_no_tooltip_plural:0 "Champions"
- knight_hero_no_tooltip_lowercase:0 "champion"
- knight_hero_no_tooltip_lowercase_plural:0 "champion"
- knight_hero_no_tooltip_lowercase_adjective:0 "du champion"
- knight_hero_no_tooltip_lowercase_plural_possessive:0 "aux champions"
-
-
-
+ knight_faris_no_tooltip: "Faris"
+ knight_faris_no_tooltip_plural: "Faris"
+  
+ knight_baghatur_no_tooltip: "Baghatur"
+ knight_baghatur_no_tooltip_plural: "Baghaturs"
+  
+ knight_shoorveer_no_tooltip: "Shoorveer"
+ knight_shoorveer_no_tooltip_plural: "Shoorveers"
+  
+ knight_aswaran_no_tooltip: "Aswar"
+ knight_aswaran_no_tooltip_plural: "Aswaran"
+  
+ knight_hetaeria_no_tooltip: "Hétaïre"
+ knight_hetaeria_no_tooltip_plural: "Hétaïes"
+  
+ knight_champion_no_tooltip: "Ridire"
+ knight_champion_no_tooltip_plural: "Ridiri"
+  
+   # Lowercase versions 
+ knight_default_no_tooltip_lowercase: "chevalier"
+ knight_default_no_tooltip_lowercase_plural: "chevaliers"
+ knight_default_no_tooltip_lowercase_plural_possessive: "des chevaliers"
+ knight_default_no_tooltip_lowercase_adjective: "chevaleresque"
+  
+ knight_faris_no_tooltip_lowercase: "faris"
+ knight_faris_no_tooltip_lowercase_plural: "faris"
+ knight_faris_no_tooltip_lowercase_plural_possessive: "faris'"
+ knight_faris_no_tooltip_lowercase_adjective: "furusiyya"
+  
+ knight_baghatur_no_tooltip_lowercase: "baghatur"
+ knight_baghatur_no_tooltip_lowercase_plural: "baghaturs"
+ knight_baghatur_no_tooltip_lowercase_plural_possessive: "Baghatur'"
+ knight_baghatur_no_tooltip_lowercase_adjective: "baghatur"
+  
+ knight_shoorveer_no_tooltip_lowercase: "shoorveer"
+ knight_shoorveer_no_tooltip_lowercase_plural: "shoorveers"
+ knight_shoorveer_no_tooltip_lowercase_plural_possessive: "les shoorveers"
+ knight_shoorveer_no_tooltip_lowercase_adjective: "shoorveer"
+  
+ knight_aswaran_no_tooltip_lowercase: "aswar"
+ knight_aswaran_no_tooltip_lowercase_plural: "aswaran"
+ knight_aswaran_no_tooltip_lowercase_plural_possessive: "aswaran"
+ knight_aswaran_no_tooltip_lowercase_adjective: "aswar"
+  
+ knight_hetaeria_no_tooltip_lowercase: "hétaïne"
+ knight_hetaeria_no_tooltip_lowercase_plural: "hétaïae"
+ knight_hetaeria_no_tooltip_lowercase_plural_possessive: "les hétaïres"
+ knight_hetaeria_no_tooltip_lowercase_adjective: "hétaïne"
+  
+ knight_champion_no_tooltip_lowercase: "champion"
+ knight_champion_no_tooltip_lowercase_plural: "champions"
+ knight_champion_no_tooltip_lowercase_plural_possessive: "Ridiri"
+ knight_champion_no_tooltip_lowercase_adjective: "champion"
+  
+   #Game Concept versions 
+ knight_default: "[Concept( 'knight', '$knight_default_no_tooltip$' )|E]"
+ knight_default_plural: "[Concept( 'knight', '$knight_default_no_tooltip_plural$' )|E]"
+  
+ knight_faris: "[Concept( 'knight', '$knight_faris_no_tooltip$' )|E]"
+ knight_faris_plural: "[Concept( 'knight', '$knight_faris_no_tooltip_plural$' )|E]"
+  
+ knight_baghatur: "[Concept( 'knight', '$knight_baghatur_no_tooltip$' )|E]"
+ knight_baghatur_plural: "[Concept( 'knight', '$knight_baghatur_no_tooltip_plural$' )|E]"
+  
+ knight_shoorveer: "[Concept( 'knight', '$knight_shoorveer_no_tooltip$' )|E]"
+ knight_shoorveer_plural: "[Concept( 'knight', '$knight_shoorveer_no_tooltip_plural$' )|E]"
+  
+ knight_aswaran: "[Concept( 'knight', '$knight_aswaran_no_tooltip$' )|E]"
+ knight_aswaran_plural: "[Concept( 'knight', '$knight_aswaran_no_tooltip_plural$' )|E]"
+  
+ knight_hetaeria: "[Concept( 'knight', '$knight_hetaeria_no_tooltip$' )|E]"
+ knight_hetaeria_plural: "[Concept( 'knight', '$knight_hetaeria_no_tooltip_plural$' )|E]"
+  
+ knight_champion: "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
+ knight_champion_plural: "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
+  
+ knight_hero: "[Concept( 'knight', '$knight_champion_no_tooltip$' )|E]"
+ knight_hero_plural: "[Concept( 'knight', '$knight_champion_no_tooltip_plural$' )|E]"
+ knight_hero_no_tooltip: "Ridire"
+ knight_hero_no_tooltip_plural: "Ridiri"
+ knight_hero_no_tooltip_lowercase: "rire"
+ knight_hero_no_tooltip_lowercase_plural: "ridiri"
+ knight_hero_no_tooltip_lowercase_adjective: "Ridire"
+ knight_hero_no_tooltip_lowercase_plural_possessive: "Ridiri"
+  
+ knight_alba_no_tooltip_plural: "Ridirean"
+ knight_alba_plural: "Ridirean"
+ knight_alba_no_tooltip_plural_possessive: "Ridirean"
+ knight_alba_no_tooltip_lowercase_plural: "ridiran"
+ knight_alba_no_tooltip_lowercase_plural_possessive: "Ridirean"

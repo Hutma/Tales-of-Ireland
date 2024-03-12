@@ -1962,7 +1962,11 @@
 1281 = {      #Aasleagh (b_aasleagh)
     culture = fir_bolg
     religion = ancient_greek_slave
-    holding = none
+    holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = wonder_aasleagh_falls_01
+		special_building = wonder_aasleagh_falls_01
+	}
 }
 
 ##            Leacta (c_leacta)
@@ -2935,6 +2939,10 @@
     culture = fir_bolg
     religion = ancient_greek_slave
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = wonder_dun_briste_01
+		special_building = wonder_dun_briste_01
+	}
 }
 
 1430 = {      #Rathlackan (b_rathlackan)

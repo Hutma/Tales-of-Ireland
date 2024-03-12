@@ -4,11 +4,17 @@
 
 eligible_for_fp1_dynasty_legacies_trigger = {
 	has_fp1_dlc_trigger = yes
-	OR = {
-		# Technically, we could hardscript this to North Germanics/Normans/Estonians, but eh.
-		#culture = { has_innovation = innovation_longboats }
-		# Converts should also get a chance to get in on the fun.
-		religion = religion:northern_legacy_religion
+	dynasty = {
+		OR = {
+			dynast = {
+				culture = { has_cultural_pillar = heritage_partholonian }
+			}
+			dynast = {
+					has_culture = culture:sea_fomorians
+			}
+			has_dynasty_perk = fp1_adventure_legacy_1
+			has_dynasty_perk = fp1_pillage_legacy_1
+		}
 	}
 }
 
@@ -118,12 +124,10 @@ fp1_va_eligible_for_scandinavian_troops_trigger = {
 # Illustration Triggers
 
 fp1_should_use_norse_graphics_trigger = {
-	has_fp1_dlc_trigger = yes
 	culture = { has_building_gfx = norse_building_gfx }
 }
 
 fp1_should_use_extra_tribal_graphics_trigger = {
-	has_fp1_dlc_trigger = yes
 	should_use_tribal_realm_palace_graphics_trigger = yes
 }
 
@@ -155,9 +159,8 @@ suitable_shieldmaiden_gaoler_trigger = {
 # Interaction Triggers
 
 basic_can_have_trial_by_combat_trigger = {
-	NOT = {
-		culture = { has_cultural_pillar = heritage_cessarian }
-	}
+	# This is referenced elsewhere, so we keep it separate in order to allow justification for TbCs outside of interactions.
+	culture = { has_cultural_parameter = has_access_to_trials_by_combat }
 }
 
 can_have_trial_by_combat_trigger = {
@@ -269,4 +272,25 @@ fp1_achievement_religious_norse_trigger = {
 fp1_achievement_culture_plus_religion_norse_trigger = {
 	fp1_achievement_culture_norse_trigger = yes
 	fp1_achievement_religious_norse_trigger = yes
+}
+
+###################################################
+# Jomsviking Triggers
+fp1_ruler_eligible_for_jomsviking_coup = {
+	# We never want to coup realms with players who might be affected, so just flat-out ban them.
+	# NOR = {
+	# 	is_ai = no
+	# 	any_vassal_or_below = { is_ai = no }
+	# 	any_liege_or_above = { is_ai = no }
+	# }
+	# And anyone that's close family to/married to a player.
+	# NOR = {
+	# 	any_spouse = { is_ai = no }
+	# 	any_close_or_extended_family_member = { is_ai = no }
+	# }
+	# Veto anyone following the unreformed Norse pagan faith.
+	# NOT = { faith = faith:norse_pagan }
+	# For simplicity, exclude wars.
+	# is_at_war = no
+	always = no
 }

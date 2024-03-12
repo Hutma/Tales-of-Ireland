@@ -1,0 +1,10 @@
+﻿l_french:
+ toi_partholonians_event.0001.t: "Retour à la mer"
+ toi_partholonians_event.0001.desc: "Nous avons conquis de nouvelles terres pour que mon peuple puisse s'y installer, et ils ont été occupés à construire leurs nouvelles maisons et à s'occuper de leurs champs. Pourtant, il n’est pas dans notre nature d’être facilement satisfait. Maintenant que la construction est en grande partie terminée, certaines familles influentes ont fait du bruit en disant que les nouvelles terres se sentaient déjà un peu à l'étroit et que le rendement était un peu maigre.\n\nCe même sentiment a trouvé une voix plus forte au sein de mon conseil de guerre, qui a présenté leurs projets de nouvelles conquêtes possibles ce matin. Et ne sommes-nous pas les fils de la mer ? Nos navires sont notre fierté et notre joie, et il ne faudrait pas beaucoup de temps pour préparer à nouveau la flotte. Les arguments des élus sont certainement convaincants..."
+ toi_partholonians_event.0001.a: "Hissez les voiles ! De vastes nouvelles terres nous attendent !"
+ toi_partholonians_event.0001.b: "Nous devrions nous concentrer sur l’amélioration des terres dont nous disposons."
+  
+ toi_partholonians_event.0002.t: "Corps faible et maudit"
+ toi_partholonians_event.0002.desc: "La maladie qui coule dans notre sang, le sang de Partholon est notre malédiction.\nEn me réveillant ce matin, j'ai mal à la tête, je me sens engourdi et perdu. J'entends les cris des Partholoniens mourants dans ma tête, je peux sentir leur maladie et leur présence.\n\nSuis-je encore maudit ? Maudit par les dieux à cause du genre auquel j'appartiens ?"
+ toi_partholonians_event.0002.a: "J'accepte mon sort."
+ toi_partholonians_event.0002.b: "Je combattrai les maudits, je combattrai les dieux."

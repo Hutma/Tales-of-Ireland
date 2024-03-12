@@ -7,142 +7,99 @@ otherworld_exploration_setup = {
 	}
 }
 
-otherworld_exploration_activity_limit_hub = {
-	effect = {
-		activity = {
-			remove_variable = is_having_otherworld_exploration_2001
-			remove_variable = is_having_otherworld_exploration_2002
-			remove_variable = is_having_otherworld_exploration_2003
-			remove_variable = is_having_otherworld_exploration_2004
-			remove_variable = is_having_otherworld_exploration_2005
-			remove_variable = is_having_otherworld_exploration_2006
-			remove_variable = is_having_otherworld_exploration_2007
-		}
-		if = {
-			limit =  {
-				exists = root.activity.var:number_of_places_counter
-				OR = {
-					root.activity.var:number_of_places_counter = 4
-					root.activity.var:number_of_places_counter > 4
-				}
-			}
-			trigger_event = {
-				on_action = otherworld_exploration_return_events
-				days = 5
-			}
-		}
-		else = {
-			trigger_event = {
-				on_action = otherworld_exploration_place_choice_events
-				days = 5
-			}
-			activity = {
-				change_variable = {
-					name = number_of_places_counter
-					add = 1
-				}
-				if = { 
-					limit = { exists = root.activity.var:number_of_core_events_counter }
-					remove_variable = number_of_core_events_counter
-				}
-				set_variable = {
-					name = number_of_core_events_counter
-					value = 0
-				}
-			}
-		}
-	}
-}
+# otherworld_exploration_activity_limit_hub = {
+	
+# }
 
 # On-action counting the core event for that place
-otherworld_exploration_count_events = {
-	effect = {
-		if = {
-			limit = {
-				exists = root.activity.var:number_of_core_events_counter
-				OR = {
-					root.activity.var:number_of_core_events_counter = 4
-					root.activity.var:number_of_core_events_counter > 4
-				}
-			}
-			trigger_event = {
-				on_action = otherworld_exploration_activity_limit_hub
-				days = 5
-			}
-		}
-		else_if = {
-			limit = {
-				exists = root.activity.var:number_of_core_events_counter
-				root.activity.var:number_of_core_events_counter = 3
-			}
-			random_list = {
-				25 = {
-					trigger_event = {
-						on_action = otherworld_exploration_core_events
-						days = 1
-					}
-					activity = {
-						change_variable = {
-							name = number_of_core_events_counter
-							add = 1
-						}
-					}
-				}
-				75 = {
-					trigger_event = {
-						on_action = otherworld_exploration_activity_limit_hub
-						days = 5
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				exists = root.activity.var:number_of_core_events_counter
-				root.activity.var:number_of_core_events_counter = 2
-			}
-			random_list = {
-				60 = {
-					trigger_event = {
-						on_action = otherworld_exploration_core_events
-						days = 1
-					}
-					activity = {
-						change_variable = {
-							name = number_of_core_events_counter
-							add = 1
-						}
-					}
-				}
-				40 = {
-					trigger_event = {
-						on_action = otherworld_exploration_activity_limit_hub
-						days = 5
-					}
-				}
-			}				
-		}
-		else_if = {
-			limit = {
-				exists = root.activity.var:number_of_core_events_counter
-				OR = {
-					root.activity.var:number_of_core_events_counter = 1
-					root.activity.var:number_of_core_events_counter = 0
-				}
-			}
-			trigger_event = {
-				on_action = otherworld_exploration_core_events
-				days = 1
-			}
-			activity = {
-				change_variable = {
-					name = number_of_core_events_counter
-					add = 1
-				}
-			}
-		}
-	}
-}
+# otherworld_exploration_count_events = {
+	# effect = {
+		# if = {
+			# limit = {
+				# exists = root.var:number_of_core_events_counter
+				# OR = {
+					# root.var:number_of_core_events_counter = 4
+					# root.var:number_of_core_events_counter > 4
+				# }
+			# }
+			# trigger_event = {
+				# on_action = otherworld_exploration_activity_limit_hub
+				# days = 5
+			# }
+		# }
+		# else_if = {
+			# limit = {
+				# exists = root.var:number_of_core_events_counter
+				# root.var:number_of_core_events_counter = 3
+			# }
+			# random_list = {
+				# 25 = {
+					# trigger_event = {
+						# on_action = otherworld_exploration_core_events
+						# days = 1
+					# }
+					# activity = {
+						# change_variable = {
+							# name = number_of_core_events_counter
+							# add = 1
+						# }
+					# }
+				# }
+				# 75 = {
+					# trigger_event = {
+						# on_action = otherworld_exploration_activity_limit_hub
+						# days = 5
+					# }
+				# }
+			# }
+		# }
+		# else_if = {
+			# limit = {
+				# exists = root.var:number_of_core_events_counter
+				# root.var:number_of_core_events_counter = 2
+			# }
+			# random_list = {
+				# 60 = {
+					# trigger_event = {
+						# on_action = otherworld_exploration_core_events
+						# days = 1
+					# }
+					# root = {
+						# change_variable = {
+							# name = number_of_core_events_counter
+							# add = 1
+						# }
+					# }
+				# }
+				# 40 = {
+					# trigger_event = {
+						# on_action = otherworld_exploration_activity_limit_hub
+						# days = 5
+					# }
+				# }
+			# }				
+		# }
+		# else_if = {
+			# limit = {
+				# exists = root.var:number_of_core_events_counter
+				# OR = {
+					# root.var:number_of_core_events_counter = 1
+					# root.var:number_of_core_events_counter = 0
+				# }
+			# }
+			# trigger_event = {
+				# on_action = otherworld_exploration_core_events
+				# days = 1
+			# }
+			# root = {
+				# change_variable = {
+					# name = number_of_core_events_counter
+					# add = 1
+				# }
+			# }
+		# }
+	# }
+# }
 # On-action managing possible journey events
 otherworld_exploration_core_events = {
 	random_events = {
@@ -181,6 +138,35 @@ otherworld_exploration_core_events = {
 }
 
 otherworld_exploration_place_choice_events = {
+	effect = {
+		root = {
+			remove_variable = is_having_otherworld_exploration_2001
+			remove_variable = is_having_otherworld_exploration_2002
+			remove_variable = is_having_otherworld_exploration_2003
+			remove_variable = is_having_otherworld_exploration_2004
+			remove_variable = is_having_otherworld_exploration_2005
+			remove_variable = is_having_otherworld_exploration_2006
+			remove_variable = is_having_otherworld_exploration_2007
+		}
+		if = {
+			limit =  {
+				exists = root.var:number_of_places_counter
+				OR = {
+					root.var:number_of_places_counter = 4
+					root.var:number_of_places_counter > 4
+				}
+			}
+			scope:activity = { skip_activity_phase = yes }
+		}
+		else = {
+			root = {
+				change_variable = {
+					name = number_of_places_counter
+					add = 1
+				}
+			}
+		}
+	}
 	random_events = {
 		100 = toi_otherworld_exploration.2001 #Land of youth
 		100 = toi_otherworld_exploration.2002 #Land under the wave
@@ -192,8 +178,8 @@ otherworld_exploration_place_choice_events = {
 	}
 }
 
-otherworld_exploration_return_events = {
-	random_events = {
-		100 = toi_otherworld_exploration.3000
-	}
-}
+# otherworld_exploration_return_events = {
+	# effect = {
+		# scope:activity = { skip_activity_phase = yes }
+	# }
+# }

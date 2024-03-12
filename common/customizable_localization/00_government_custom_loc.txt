@@ -4,6 +4,15 @@ GetTribalReformGovernment = {
 
 	text = {
 		trigger = {
+			faith = { always = no }
+		}
+		localization_key = tribal_reform_clan
+	}
+	text = {
+		trigger = {
+			NOT = {
+				faith = { always = no }
+			}
 		}
 		localization_key = tribal_reform_feudal
 	}

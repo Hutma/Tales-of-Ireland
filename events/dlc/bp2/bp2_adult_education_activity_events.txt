@@ -822,7 +822,7 @@ scripted_effect bp2_learn_lithurgical_language_effect = {
 			# scope:activity.activity_location.county.faith.religion = religion:islam_religion
 			always = no
 		}
-		learn_language = language_arabic
+		# learn_language = language_arabic
 	}
 	else_if = {
 		limit = {

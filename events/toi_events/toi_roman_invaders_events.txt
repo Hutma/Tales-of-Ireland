@@ -3,7 +3,7 @@
 #roman hidden triggers 0001
 toi_roman_invasion.1001 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -39,7 +39,7 @@ toi_roman_invasion.0001 = {
 #Roman hidden triggers 0002
 toi_roman_invasion.1002 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -78,7 +78,7 @@ toi_roman_invasion.0002 = {
 #Roman hidden triggers 0003
 toi_roman_invasion.1003 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -114,7 +114,7 @@ toi_roman_invasion.0003 = {
 #Roman hidden triggers 0004
 toi_roman_invasion.1004 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -150,7 +150,7 @@ toi_roman_invasion.0004 = {
 #Roman hidden triggers 0005
 toi_roman_invasion.1005 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -183,7 +183,7 @@ toi_roman_invasion.0005 = {
 #roman alba hidden triggers
 toi_roman_invasion.2001 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -233,7 +233,7 @@ toi_roman_invasion.0201 = {
 #roman alba hidden triggers second
 toi_roman_invasion.2002 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {

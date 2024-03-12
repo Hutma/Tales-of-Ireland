@@ -33,7 +33,7 @@ restore_vampire_kingship_decision_scripted_effect = {
 	
 	title:c_finvoy = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 		add_county_modifier = {

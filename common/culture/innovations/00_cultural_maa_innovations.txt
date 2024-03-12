@@ -281,7 +281,7 @@ innovation_maa_hybrazil = {
 
 innovation_maa_roman = {
 	group = culture_group_regional
-	culture_era = culture_era_early_medieval
+	culture_era = culture_era_tribal
 	
 	icon = @maa_02
 
@@ -290,6 +290,8 @@ innovation_maa_roman = {
 	}
 
 	unlock_maa = roman_legion
+	unlock_maa = roman_auxiliaries
+	unlock_maa = roman_celeres
 	
 }
 

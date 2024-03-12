@@ -1,0 +1,204 @@
+﻿l_french:
+  ## GUI 
+ MAGIC_BUTTON: "Magie ouverte"
+ MAGIC_VIEW: "la magie"
+ CURRENT_MANA: "#high #bold Mana actuel :#!#!\n[GetPlayer.MakeScope.Var('mana').GetValue|0]/[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|0]"
+ NO_DESCRIPTION: "Sélectionnez un sort pour qu'il y ait une description"
+ SELECT_SPELL_TARGET: "Sélectionnez la cible"
+ CAST_SPELL: "Lancer un sort"
+ SELECT_THIS: "Sélectionner"
+ REPEAT_X_TIMES: "#high #bold Répéter le sort#!#!\n[GetPlayer.MakeScope.Var('repeat_spell').GetValue|0] fois"
+ SPELL_PARAMETERS: "Paramètres du sort"
+ MAGIC_USAGE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('total_magic_usage')|0]+[GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_usage'))|0]#!#!"
+ MAGIC_USAGE: "#high #bold Stress magique#!#!"
+ FAILURE_CHANCE_VALUE: "#bold #high [GetPlayer.MakeScope.ScriptValue('failure_chance_for_spells')|0]%#!#!"
+ FAILURE_CHANCE: "#high #bold Chance d'échec#!#!"
+ usage_value_meaning: "#high Stress magique total\n#bold +#!\n Stress magique des sorts sélectionnés#!"
+ failure_chance_meaning: "#high Calculé par votre #bold Stress Magique#! divisé par votre [learning|E] (en pourcentage) \n\nTant qu'il est inférieur à #bold 15 % #!rien de grave ne peut arriver lors du lancement d'un sort#!"
+  
+  ## Spell Categories 
+ self_category: "#bold #italic Cibles :#!#! Soi"
+ character_category: "#bold #italic Cibles :#!#! Autres personnages"
+ title_category: "#bold #italic Cibles :#!#! Titres"
+  
+  ### Spells 
+  ## Spell Names 
+  # Self 
+ summon_sidhe_child_name: "Invoquer le Sidhe pour un enfant"
+ summon_sidhe_advisor_name: "Invoquer un conseiller Sidhe"
+ summon_sidhe_feast_name: "Invoquer Sidhe au festin"
+ summon_magical_army_name: "Invoquer une armée magique"
+ summon_magical_siege_engine_name: "Invoquez un moteur de siège magique"
+ command_the_wind_name: "Commandez le vent"
+ hidden_blade_name: "Lame cachée"
+ hidden_eye_name: "Oeil caché"
+ hidden_aura_name: "Aura cachée"
+ extend_lifespan_name: "Prolonger la durée de vie"
+ channel_giant_strength_name: "Canalisez la force des géants"
+ exchange_your_talents_name: "Échangez vos talents"
+ sidhe_speechcraft_name: "Discours de Sidhe"
+ heal_wounds_name: "Guérir les blessures"
+  
+  # Character 
+ inflict_wounds_name: "Infliger des blessures"
+ inflict_terror_name: "Infliger la terreur"
+ inflict_pestilence_name: "Infliger la Peste"
+ hostile_whispers_name: "Murmures hostiles"
+ captivate_mind_name: "Captiver l'esprit"
+  
+  # Titles 
+ bless_the_cattle_name: "Bénis le bétail"
+ multiply_herds_name: "Multiplier les troupeaux"
+  
+  #Cessarian 
+ deer_form_name: "Forme de cerf"
+ fintan_transformation_name: "Transformation Fintan"
+ flood_realm_name: "Royaume des inondations"
+ mark_of_cain_name: "La marque de Caïn"
+ serpent_bite_name: "La morsure du serpent"
+ garden_eden_name: "Apportez les sources d'Eden"
+  
+  #Fomorian 
+ call_sea_armies_name: "Appeler les armées maritimes"
+ call_underground_ridri_name: "Appelez Underground Ridri"
+ fomorian_transformation_name: "Mutation fomorienne"
+ destroy_essence_name: "Détruire l'essence"
+ blood_moon_name: "Lune de sang"
+ omen_of_opression_name: "Présage opprimant"
+  
+  #Tutha de danann 
+ healing_secret_name: "Secret de guérison"
+ silverarmed_name: "Armé d'argent"
+ dagda_cauldron_name: "Chaudron de Dagda"
+ lugh_strenght_name: "La force de Lugh"
+ call_light_name: "Appeler la lumière"
+ lost_knowledge_name: "Récupérer les connaissances perdues"
+ summon_new_tribe_name: "Invoquer une nouvelle tribu"
+  
+  #Megalithic 
+ sacred_building_name: "Bâtiment sacré"
+ suns_chosen_name: "L'élu du soleil"
+ hunting_spirits_name: "Chasser avec les esprits"
+  
+  #Partholonian 
+ rune_words_name: "Mots runiques"
+ protective_amulet_name: "Amulette protectrice"
+ greek_astrology_name: "Astrologie de Grèce"
+ cursed_tablet_name: "Tablette maudite"
+ partholonian_plague_name: "La peste de Partholon"
+  
+  #Nemedian 
+ sidhe_agriculture_name: "Agriculture Sidhe"
+ blessed_family_name: "Famille bénie"
+ nemedian_union_name: "Unité némédienne"
+ nemed_seduction_name: "La séduction de Nemed"
+  
+  #Fir Bolg 
+ srengs_strenght_name: "La force de Sreng"
+ fir_bolg_endurance_name: "Endurance des Bolgs de sapin"
+ men_of_bags_name: "Hommes de sacs"
+ heavy_lifters_name: "Porteurs lourds"
+ united_in_defiance_name: "Unis dans le défi"
+  
+  #Milesian 
+ path_of_destiny_name: "Chemin du destin"
+ realm_ceremony_name: "Cérémonie du Royaume"
+ enchant_bedroooms_name: "Enchanter les chambres"
+  
+  #Celts 
+ druidic_intersessions_name: "Intersessions druidiques"
+ magic_paintings_name: "Peintures magiques"
+ befriend_the_morrigan_name: "Liez-vous d'amitié avec Morrigan"
+ settle_power_name: "Pouvoir de règlement"
+ influence_culture_name: "Influencer la culture"
+  
+  #Hy Brasilian 
+ mystical_craft_name: "Artisanat mystique"
+ two_worlds_name: "Le commerce entre deux mondes"
+ no_escape_curse_name: "Pas de malédiction d'évasion"
+ brasil_fog_name: "Brouillard empoisonné au Brésil"
+ magic_mist_name: "Brume Magique"
+  
+  #Latin 
+ burn_incense_name: "Insence de brûlure"
+ roman_astrology_name: "Astrologie romaine"
+  
+  #Perk spells 
+ soul_transfer_name: "Transfert d'âme"
+ mass_influence_name: "Influence de masse"
+ word_of_peace_name: "Parole de paix"
+ call_rage_name: "Libérez la rage"
+ make_them_bow_name: "Faites-les s'incliner"
+ the_evil_army_name: "L'armée du mal"
+ cause_discorde_spell_name: "Causer la discorde"
+  
+  ## Traits 
+ trait_magician_good: "Personnages magiques"
+ trait_magician_good_1: "Magicien"
+ trait_magician_good_1_desc: "Les magiciens naissent avec une capacité innée de magie."
+ trait_magician_good_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] est né avec la capacité innée de magie."
+  
+ trait_magician_good_2: "Grand magicien"
+ trait_magician_good_2_desc: "Les grands magiciens naissent avec une capacité innée de magie, plus forte que la plupart."
+ trait_magician_good_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] est né avec une capacité innée de magie, plus forte que la plupart."
+  
+ trait_magician_good_3: "Sidhe-touché"
+ trait_magician_good_3_desc: "Les magiciens touchés par Sidhe reçoivent de grands cadeaux magiques des dieux."
+ trait_magician_good_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] a reçu de grands cadeaux magiques des dieux."
+  
+  #Custom desc 
+ SOMETHING_BAD_HAPPENS_MAGIC: "#X Quelque chose de grave arrive ! #!"
+ YOU_ASK_THE_SIDHE_TO_CHANGE_YOU: "Vous demandez conseil aux Sidhe"
+ TUATHA_ARMY: "Armée d'invasion Tuatha"
+  
+  #Triggers 
+ FIVE_YEARS_COOLDOWN_SPELL: "Temps de recharge de cinq ans"
+ SEVEN_YEARS_COOLDOWN_SPELL: "Temps de recharge de sept ans"
+ TARGET_REQUIREMENT_FOMORIAN_TRANSFORMATION: "La cible doit être emprisonnée et être un enfant \n La cible ne doit pas avoir le trait Fomorien"
+ TEN_YEARS_COOLDOWN_SPELL: "Temps de recharge de dix ans"
+ FIFTEEN_YEARS_BEFORE_TARGETING_AGAIN: "Ne peut être ciblé par ce sort qu'une fois tous les 15 ans."
+ TEN_YEARS_BEFORE_TARGETING_AGAIN: "Ne peut être ciblé par ce sort qu'une fois tous les 10 ans"
+ DESTROY_ESSENCE_REQUIREMENTS_DESC: "La cible doit être un magicien"
+ BLOOD_MOON_REQUIREMENTS_DESC: "La cible doit être dans votre prison"
+ CURSED_TABLET_REQUIREMENTS_DESC: "La cible ne doit pas être déjà écrasée"
+ SUMMON_MAGICAL_ARMY_REQUIREMENTS_DESC: "Le premier lancement n'a pas de condition, vous devez donc être le défenseur principal dans une guerre pour utiliser le sort (et 10 ans de temps de recharge)."
+  
+  #Effects 
+ A_KNIGHT_APPEARS_SPELL: "Un chevalier fomorien apparaît dans votre cour !"
+ TARGET_WILL_DIE_SPELL: "#N La cible va mourir#!"
+ SUMMON_NEW_TRIBE_SPELL_EFFECT_DESC: "Une nouvelle tribu Tuatha De Danann sort de l'Autre Monde pour envahir la cible !"
+ GREEK_ASTROLOGY_SPELL_DESC: "Vous gagnez #P 1#! dans une compétence aléatoire et perdez #N 1#! dans une autre compétence aléatoire, vous avez 6% de chances de ne rien perdre et ne gagnez que #P 1#! dans une compétence"
+ ROMAN_ASTROLOGY_SPELL_DESC: "Vous gagnez #P 2#! dans une compétence aléatoire et perdez #N 2#! dans une autre compétence aléatoire, vous avez 3% de chances de ne rien perdre et ne gagnez que #P 2#! dans une compétence"
+ UNITED_IN_DEFIANCE_SPELL_EFFECT_DESC: "Chaque vassal avec le trait [fir_bolg|E] gagne #P 40#! opinion sur vous"
+ THE_SPELL_IS_CAST_MESSAGE: "#P Le sort est lancé#!"
+ LEARN_A_NEW_SPELL_EFFECT_DESC: "Vous apprenez un nouveau sort"
+ CALL_RAGE_EFFECT_DESC: "#bold Tous les voisins non alliés de la cible déclarent une guerre de conquête sur la cible !#!"
+ TWO_RANDOM_VASSAL_DIE: "#N Deux vassaux aléatoires mourront !#!"
+ CAUSE_DISCORDE_SPELL_DESC: "#bold Tous les vassaux puissants de la cible attaquent les dirigeants du targer !#!"
+  
+  #Armies 
+ magic_soldiers_troops: "Troupes magiques"
+ evil_army_troops: "L'armée du mal"
+  
+  #Interface toasts 
+ tooltip.magic.inflict_wounds.target: "Vous avez été blessé comme par magie !"
+ tooltip.magic.inflict_terror.target: "Vous avez été terrifié comme par magie !"
+ tooltip.magic.inflict_pestilence.target: "Comme par magie, vous tombez malade !"
+ tooltip.magic.hostile_whispers.target: "Vous êtes la cible de rumeurs de magie noire !"
+ tooltip.magic.flood_realm.target: "Votre royaume a été inondé !"
+ tooltip.magic.serpent_bite.target: "Vous souffrez d'une morsure de serpent magique !"
+ tooltip.magic.omen_of_opression.target: "Vous êtes maudit d'un mauvais présage !"
+ tooltip.magic.destroy_essence.target: "Quelqu’un draine votre essence magique !"
+ tooltip.magic.cursed_tablet.target: "Vous avez été maudit comme par magie !"
+ tooltip.magic.partholonian_plague.target: "Une magie noire affaiblit votre corps !"
+ tooltip.magic.nemed_seduction.target: "Vous tombez amoureux comme par magie !"
+ tooltip.magic.no_escape_curse.target: "Une magie noire tue vos garnisons !"
+ tooltip.magic.magic_mist.target: "Une brume magique tue votre peuple !"
+ tooltip.magic.brasil_fog.target: "Un brouillard rend vos enfants malades !"
+ tooltip.magic.summon_new_tribe.target: "Un magicien Tuatha a appelé sur vous une armée de l’Autre Monde !"
+ tooltip.magic.call_rage.target: "Un magicien noir incite vos voisins à vous attaquer !"
+ tooltip.magic.cause_discorde.target: "Un magicien noir provoque la révolte de vos vassaux !"
+  
+  #Failing pop up 
+ tooltip.magic.fail.stress: "Vous avez mal lancé le sort !"
+ tooltip.magic.fail.sick: "Vous avez mal lancé le sort et êtes tombé malade à cause de votre échec !"

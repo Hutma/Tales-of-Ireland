@@ -3,6 +3,7 @@
 	rulers_should_have_dynasty = yes
 	dynasty_named_realms = yes
 	royal_court = yes
+	legitimacy = yes
 
 	fallback = 1
 
@@ -20,9 +21,12 @@
 		war_declaration_rights
 		council_rights
 		title_revocation_rights
-		jizya_special_rights
 	}
-	
+
+	ai = {
+		use_legends = yes
+	}
+
 	# Use flags instead of has_government for moddability if possible (i.e., wherever not visible to the player).
 	flag = government_is_feudal
 	color = hsv{ 0.67 1.00 0.78 }
@@ -38,6 +42,7 @@ republic_government = {
 		use_goals = no
 		use_scripted_guis = no
 		perform_religious_reformation = no
+		use_legends = no
 	}
 
 	vassal_contract = { republic_government_obligations }
@@ -53,6 +58,10 @@ theocracy_government = {
 	valid_holdings = { castle_holding }
 	religious = yes
 	required_county_holdings = { church_holding castle_holding city_holding }
+
+	ai = {
+		use_legends = no
+	}
 
 	can_get_government = {
 		NOT = {
@@ -71,33 +80,38 @@ theocracy_government = {
 
 clan_government = {
 	primary_holding = castle_holding
-
+	# primary_heritages = { heritage_arabic heritage_iranian heritage_turkic }
 	
 	fallback = 2
 	
-
+	# preferred_religions = { islam_religion }
 	create_cadet_branches = yes
 	rulers_should_have_dynasty = yes
 	royal_court = yes
+	legitimacy = yes
 
 	valid_holdings = { castle_holding }
 	required_county_holdings = { castle_holding city_holding church_holding }
 	always_use_patronym = yes
 	dynasty_named_realms = yes
 
+	house_unity = clan_house_unity
+	tax_slot_type = clan_tax_slot
+
 	vassal_contract = {
-		clan_government_obligations
+		clan_tax_collector_obligations
 		special_contract
 		religious_rights
 		war_declaration_rights
 		council_rights
 		title_revocation_rights
-		jizya_special_rights
-		iqta_special_rights
-		ghazi_special_rights
 		marriage_favor_rights
 	}
-	
+
+	ai = {
+		use_legends = yes
+	}
+
 	opinion_of_liege = {
 		scope:vassal = {
 			if = {
@@ -110,10 +124,10 @@ clan_government = {
 					limit = {
 						is_powerful_vassal = yes
 					}
-					value = -30
+					value = clan_powerful_vassal_no_alliance_opinion_penalty_value
 				}
 				else = {
-					value = -15
+					value = clan_vassal_no_alliance_opinion_penalty_value
 				}
 			}
 		}
@@ -147,6 +161,7 @@ clan_government = {
 
 	# Use flags instead of has_government for moddability if possible (i.e., wherever not visible to the player).
 	flag = government_is_clan
+	flag = may_appoint_viziers
 	color = hsv{ 0.39 0.93 0.54 }
 }
 
@@ -158,6 +173,7 @@ tribal_government = {
 	primary_holding = tribal_holding
 	required_county_holdings = { tribal_holding }
 	royal_court = yes
+	legitimacy = yes
 
 	valid_holdings = { castle_holding }
 
@@ -165,7 +181,11 @@ tribal_government = {
 	always_use_patronym = yes	
 
 	vassal_contract = { tribal_government_obligations }
-	
+
+	ai = {
+		use_legends = yes
+	}
+
 	character_modifier = {
 		title_creation_cost_mult = -0.5
 		army_maintenance_mult = -0.5
@@ -197,6 +217,7 @@ mercenary_government = {
 		use_goals = no
 		use_scripted_guis = no
 		perform_religious_reformation = no
+		use_legends = no
 	}
 
 	flag = can_not_be_vassal_or_liege
@@ -216,6 +237,7 @@ holy_order_government = {
 		use_goals = no
 		use_scripted_guis = no
 		perform_religious_reformation = no
+		use_legends = no
 	}
 
 	valid_holdings = { castle_holding city_holding }

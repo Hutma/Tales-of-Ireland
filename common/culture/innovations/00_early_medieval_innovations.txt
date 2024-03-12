@@ -54,7 +54,7 @@ innovation_ram = {
 	culture_era = culture_era_early_medieval
 	icon = @siege_weapons
 
-	unlock_maa = ram
+	unlock_maa = ram_second_era
 	
 	potential = {
 		has_game_rule = second_era
@@ -111,10 +111,14 @@ innovation_arched_saddle = {
 	group = culture_group_military
 	culture_era = culture_era_early_medieval
 	icon = @knight
-
-	modifier = {
-		light_cavalry_pursuit_add = 2
-		heavy_cavalry_pursuit_add = 2
+	
+	maa_upgrade = {
+		type = light_cavalry
+		pursuit = 2
+	}
+	maa_upgrade = {
+		type = heavy_cavalry
+		pursuit = 2
 	}
 	
 	custom = eligible_accolade_lancer_attribute
@@ -130,10 +134,6 @@ innovation_hereditary_rule = {
 	icon = @majesty_02
 	
 	unlock_law = confederate_partition_succession_law
-	
-	character_modifier = {
-		monthly_prestige_gain_mult = 0.05
-	}
 
 	flag = global_regular
 	flag = early_medieval_era_regular
@@ -160,7 +160,7 @@ innovation_development_02 = {
 	culture_era = culture_era_early_medieval
 	icon = @nobility_03
 
-	modifier = {
+	character_modifier = {
 		character_capital_county_monthly_development_growth_add = 2.0
 	}
 
@@ -177,6 +177,10 @@ innovation_currency_02 = {
 
 	character_modifier = {
 		development_growth_factor = 0.1
+	}
+	
+	county_modifier = {
+		building_slot_add = 1
 	}
 
 	flag = global_regular
@@ -201,9 +205,10 @@ innovation_chronicle_writing = {
 	culture_era = culture_era_early_medieval
 	icon = @administration_3
 	
-	modifier = {
+	character_modifier = {
 		title_creation_cost_mult = -0.25
 	}
+	unlock_casus_belli = de_jure_cb
 	custom = cb_discount_prestige_10
 	custom = more_zealot
 

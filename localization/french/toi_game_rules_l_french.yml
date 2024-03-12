@@ -1,0 +1,12 @@
+﻿l_french:
+ rule_toi_invasions_rule: "Les invasions commencent"
+ setting_default_timing: "Par défaut (recommandé)"
+ setting_default_timing_desc: "Chaque invasion commencera à la bonne époque."
+ setting_random_invasions: "#N Aléatoire#!"
+ setting_random_invasions_desc: "Les invasions commenceront chacune à une date aléatoire, généralement plus tôt qu'elles ne le devraient. Cela peut rompre l’équilibre du jeu, mais peut aussi être amusant."
+  
+ rule_toi_ram_era_rule: "L'ère du bélier"
+ setting_first_era: "Chute de l'ère Milésiens"
+ setting_first_era_desc: "Les béliers seront débloqués lors de la première ère du jeu."
+ setting_second_era: "L'ère héroïque"
+ setting_second_era_desc: "Les béliers seront débloqués au cours de la deuxième ère du jeu."

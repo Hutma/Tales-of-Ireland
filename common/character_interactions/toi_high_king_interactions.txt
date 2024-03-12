@@ -26,7 +26,7 @@ declare_outlaw_interaction = {
 			text = need_greater_prestige_than_target
 			scope:actor.prestige_level >= scope:recipient.prestige_level
 		}
-		scope:recipient = { is_diplomatically_available = yes }
+		# scope:recipient = { is_available_adult = yes }
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		scope:recipient = {
 			is_adult = yes

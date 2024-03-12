@@ -87,7 +87,7 @@ portrait_wear_no_headgear_trigger = {
 			NOR = { # Exceptions for dukes, kings, popes
 				highest_held_title_tier >= tier_duchy # Should wear ducal or royal crown instead.
 				AND = {
-					religion = religion:christianity_religion
+					always = no
 					faith.religious_head = this
 				}
 			}		
@@ -428,6 +428,7 @@ portrait_northern_clothing_contents_trigger = {
 	has_clothing_gfx = northern_clothing_gfx
 }
 
+
 ### FP2 - Fate of Iberia ###
 
 portrait_fp2_iberian_muslim_clothing_trigger = {
@@ -492,6 +493,85 @@ portrait_fp2_iberian_christian_clothing_spouse_trigger = {
 
 portrait_fp2_iberian_christian_clothing_contents_trigger = {
 	has_clothing_gfx = iberian_christian_clothing_gfx
+}
+
+### FP3 - Sands of Time  ###
+#iranian
+portrait_fp3_iranian_clothing_trigger = {
+	has_fp3_dlc_trigger = yes
+	OR = {
+		style_changing_reformer_iranian = yes
+		scope:culture = {
+			portrait_fp3_iranian_clothing_contents_trigger = yes
+		}
+	}
+}
+
+portrait_fp3_iranian_clothing_spouse_trigger = {
+	has_fp3_dlc_trigger = yes
+	OR = {
+		style_changing_reformer_iranian = yes
+		culture = {
+			portrait_fp3_iranian_clothing_contents_trigger = yes
+		}
+	}
+}
+
+portrait_fp3_iranian_clothing_contents_trigger = {
+	has_clothing_gfx = iranian_clothing_gfx
+}
+
+#turkic
+portrait_fp3_turkic_clothing_trigger = {
+	has_fp3_dlc_trigger = yes
+	OR = {
+		style_changing_reformer_turkic = yes
+		scope:culture = {
+			portrait_fp3_turkic_clothing_contents_trigger = yes
+		}
+	}
+}
+
+portrait_fp3_turkic_clothing_spouse_trigger = {
+	has_fp3_dlc_trigger = yes
+	OR = {
+		style_changing_reformer_turkic = yes
+		culture = {
+			portrait_fp3_turkic_clothing_contents_trigger = yes
+		}
+	}
+}
+
+portrait_fp3_turkic_clothing_contents_trigger = {
+	has_clothing_gfx = turkic_clothing_gfx
+}
+
+### AFR ###
+
+portrait_afr_berber_clothing_trigger = {
+	has_afr_dlc_trigger = yes
+	scope:culture = { portrait_afr_berber_clothing_contents_trigger = yes }
+	trigger_if = {
+		limit = { exists = this	}
+		NAND = {
+			is_landed = yes
+			capital_province = { geographical_region = world_europe_west_iberia	}
+		}
+	}
+}
+
+portrait_afr_berber_clothing_spouse_trigger = {
+	has_afr_dlc_trigger = yes
+	culture = {	portrait_afr_berber_clothing_contents_trigger = yes }
+	NAND = {
+		is_landed = yes
+		capital_province = { geographical_region = world_europe_west_iberia }
+	}
+}
+
+portrait_afr_berber_clothing_contents_trigger = {
+	# has_clothing_gfx = afr_berber_clothing_gfx
+	always = no
 }
 
 ### FP1 ###
@@ -931,6 +1011,19 @@ portrait_low_nobles_trigger = {
 					portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
 				}
 			}
+			AND = { # Viziers of rulers
+				OR = {
+					is_ruler = no
+					highest_held_title_tier = tier_barony
+				}
+				exists = liege
+				is_diarch = yes
+				liege = {
+					has_diarchy_active_parameter = diarchy_is_vizierate
+					highest_held_title_tier = tier_county
+					portrait_$CULTURE_INPUT$_clothing_trigger = yes
+				}
+			}
 		}		
 	}
 	trigger_else = { 
@@ -951,7 +1044,7 @@ portrait_high_nobles_trigger = {
 	trigger_if = {
 		limit = { exists = this } # To check if this is an actual character
 		OR = {
-			AND = {
+			AND = { # Rulers
 				OR = {
 					highest_held_title_tier >= tier_duchy # Most cultures do not have specific clothes for royalty and imperial tier, so we use the high nobility for anything from duke/duchess and up
 					AND = {
@@ -969,7 +1062,7 @@ portrait_high_nobles_trigger = {
 				} 
 				portrait_$CULTURE_INPUT$_clothing_trigger = yes
 			}
-			AND = {
+			AND = { # Spouses of rulers
 				exists = primary_spouse
 				OR = {
 					is_ruler = no
@@ -990,9 +1083,22 @@ portrait_high_nobles_trigger = {
 					portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
 				}
 			}
+			AND = { # Viziers of rulers
+				exists = liege
+				is_diarch = yes
+				OR = {
+					is_ruler = no
+					highest_held_title_tier = tier_barony
+				}
+				liege = {
+					has_diarchy_active_parameter = diarchy_is_vizierate
+					highest_held_title_tier >= tier_duchy
+					portrait_$CULTURE_INPUT$_clothing_trigger = yes
+				}
+			}
 		}
 	}
-	trigger_else = { 
+	trigger_else = { # Fallback
 		scope:highest_held_title_tier >= tier_duchy # We use scope in case this is not an actual character (for the Hybrid Culture preview window)
 		portrait_$CULTURE_INPUT$_clothing_trigger = yes
 	}
@@ -1009,7 +1115,7 @@ portrait_high_nobles_headgear_trigger = {
 	exists = this
 	portrait_can_use_noble_headgear_trigger = yes
 	OR = {
-		AND = {
+		AND = { # Rulers
 			OR = {
 				highest_held_title_tier = tier_duchy
 				AND = {
@@ -1027,7 +1133,7 @@ portrait_high_nobles_headgear_trigger = {
 			} 
 			portrait_$CULTURE_INPUT$_clothing_trigger = yes
 		}
-		AND = {
+		AND = { # Spouses of rulers
 			exists = primary_spouse
 			OR = {
 				is_ruler = no
@@ -1043,6 +1149,19 @@ portrait_high_nobles_headgear_trigger = {
 					AND = { is_ruler = yes government_has_flag = government_is_theocracy }
 				}
 				portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
+			}
+		}
+		AND = { # Viziers of rulers
+			exists = liege
+			is_diarch = yes
+			OR = {
+				is_ruler = no
+				highest_held_title_tier = tier_barony
+			}
+			liege = {
+				has_diarchy_active_parameter = diarchy_is_vizierate
+				highest_held_title_tier >= tier_duchy
+				portrait_$CULTURE_INPUT$_clothing_trigger = yes
 			}
 		}
 	}	
@@ -1114,17 +1233,17 @@ portrait_royalty_african_headgear_trigger = {
 				}
 				NOT = { AND = { is_ruler = yes government_has_flag = government_is_mercenary  } } # Blocked for mercenaries
 				NOT = { government_has_flag = government_is_republic }
-				OR = {
+				# OR = {
 					portrait_african_clothing_trigger = yes
-					AND = {
-						culture = {
-							has_cultural_pillar = heritage_east_african
-						}
-						NOT = {
-							religion = religion:islam_religion
-						}
-					}
-				}
+					# AND = {
+						# culture = {
+							# has_cultural_pillar = heritage_east_african
+						# }
+						# NOT = {
+							# religion = religion:islam_religion
+						# }
+					# }
+				# }
 			}
 			AND = {
 				exists = primary_spouse
@@ -1141,14 +1260,14 @@ portrait_royalty_african_headgear_trigger = {
 					NOT = { government_has_flag = government_is_republic }
 					OR = {
 						portrait_african_clothing_spouse_trigger = yes
-						AND = {
-							culture = {
-								has_cultural_pillar = heritage_east_african
-							}
-							NOT = {
-								religion = religion:islam_religion
-							}
-						}
+						# AND = {
+							# culture = {
+								# has_cultural_pillar = heritage_east_african
+							# }
+							# NOT = {
+								# religion = religion:islam_religion
+							# }
+						# }
 					}
 				}
 			}
@@ -1344,11 +1463,11 @@ portrait_war_nobles_helmet_trigger = {
 	portrait_$CULTURE_INPUT$_clothing_trigger = yes
 	NOR = {
 		AND = {
-			religion = religion:christianity_religion
+			always = no
 			government_has_flag = government_is_holy_order
 		}
 		AND = {
-			religion = religion:christianity_religion
+			always = no
 			is_landed = no
 			portrait_wear_armor_trigger = yes
 			exists = liege
@@ -1357,7 +1476,7 @@ portrait_war_nobles_helmet_trigger = {
 			}
 		}
 		AND = {
-			religion = religion:christianity_religion
+			always = no
 			portrait_wear_armor_trigger = yes
 			OR = {
 				any_character_war = {
@@ -1403,45 +1522,7 @@ portrait_war_nobles_fancy_helmet_trigger = {
 }
 
 portrait_western_crusades_trigger = {
-	exists = this
-	OR = {
-	    AND = {
-	        religion = religion:christianity_religion
-	        government_has_flag = government_is_holy_order
-	    }
-	    AND = {
-	        religion = religion:christianity_religion
-	        is_landed = no
-	        portrait_wear_armor_trigger = yes
-	        exists = liege
-	        liege = {
-	            government_has_flag = government_is_holy_order
-	        }
-	    }
-	    AND = {
-	        religion = religion:christianity_religion
-	        portrait_wear_armor_trigger = yes
-	        OR = {
-	            any_character_war = {
-	                OR = {
-	                    using_cb = undirected_great_holy_war
-	                    using_cb = directed_great_holy_war
-	                }
-	                is_attacker = prev
-	            }
-	            any_liege_or_above = {
-	                faith = prev.faith
-	                any_character_war = {
-	                    OR = {
-	                        using_cb = undirected_great_holy_war
-	                        using_cb = directed_great_holy_war
-	                    }
-	                    is_attacker = prev
-	                }
-	            }
-	        }
-	    }
-	}
+	always = no
 }
 
 
@@ -1647,7 +1728,7 @@ portrait_religious_head_caliph_trigger = {
 
 portrait_religious_christian_trigger = {
 	always = no
-    # religion = religion:christianity_religion	
+    # always = no	
 }
 
 portrait_religious_catholic_trigger = {

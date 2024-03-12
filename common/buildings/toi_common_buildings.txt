@@ -14,7 +14,7 @@ grain_storage_01 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_1_cost
@@ -49,7 +49,7 @@ grain_storage_02 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_2_cost
@@ -82,7 +82,7 @@ grain_storage_03 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_3_cost
@@ -113,7 +113,7 @@ cattle_lookout_01 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_1_cost
@@ -147,7 +147,7 @@ cattle_lookout_02 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_2_cost
@@ -182,7 +182,7 @@ cattle_lookout_03 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		always = yes
 	}
 
 	cost_gold = expensive_building_tier_3_cost

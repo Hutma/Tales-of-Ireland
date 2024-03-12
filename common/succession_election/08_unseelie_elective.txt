@@ -20,9 +20,7 @@ unseelie_elective = { #seelie Elective.
 			highest_held_title_tier = 5
 		}
 		modifier = { #Diplo perk
-			custom_description_no_bullet = {
-				text = influential_diplomat_perk_effect
-			}
+			desc = influential_diplomat_perk_effect
 			add = 3
 			has_character_flag = more_vote_weight_perk_flag
 		}

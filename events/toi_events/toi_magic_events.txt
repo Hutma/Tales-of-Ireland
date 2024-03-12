@@ -55,6 +55,10 @@ toi_magic_event.0001 = {
 	}
 	option = {
 		name = toi_magic_event.0001.a
+		adopt_effect = {
+			CHILD = scope:sidhe_child
+			ADOPTER = root
+		}
 		remove_character_modifier = asked_sidhe_for_child
 	}
 }	

@@ -5,11 +5,12 @@
 
 	# can this character benefit from the full modifiers of the artifact?
 	can_benefit = {
-		OR = {
-			judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
-			christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
-			islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
-		}
+		# OR = {
+			# judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
+			# christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
+			# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# }
+		always = no
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
@@ -27,7 +28,8 @@ banner_thankfulness = {
 
 	# can this character benefit from the full modifiers of the artifact?
 	can_benefit = {
-		islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
@@ -195,11 +197,12 @@ throne_solomon_template = {
 
 	# can this character benefit from the full modifiers of the artifact?
 	can_benefit = {
-		OR = {
-			judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
-			christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
-			islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
-		}
+		# OR = {
+			# judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
+			# christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
+			# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# }
+		always = yes
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
@@ -286,7 +289,8 @@ muhammad_sword_template = {
 
 	# can this character benefit from the full modifiers of the artifact?
 	can_benefit = {
-		islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
@@ -324,7 +328,8 @@ islam_artifact_template = {
 
 	# can this character benefit from the full modifiers of the artifact?
 	can_benefit = {
-		islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
@@ -553,7 +558,8 @@ christian_relic_template = {
 	}
 
 	can_benefit = {
-		christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
+		# christianity_or_syncretic_with_christianity_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	fallback = {
@@ -569,7 +575,8 @@ islam_relic_template = {
 	}
 
 	can_benefit = {
-		islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		# islam_or_syncretic_with_islam_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	fallback = {
@@ -601,7 +608,8 @@ judaism_relic_template = {
 	}
 
 	can_benefit = {
-		judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
+		# judaism_or_syncretic_with_judaism_trigger = { CHARACTER = root }
+		always = no
 	}
 
 	fallback = {

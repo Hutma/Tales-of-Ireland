@@ -1,0 +1,14 @@
+﻿l_french:
+ ##################### 
+ #Made by tom5667 - Polytheism Reborn 
+ ###################### 
+ #choose your main deity event localization 
+ cdr_cmd.001.t: "Choisissez la divinité principale"
+ cdr_cmd.001.desc: "Pour m'aider dans la lutte pour gouverner mon royaume, je pourrais me consacrer à l'un des dieux ou déesses."
+ cdr_cmd.001.a: "Jupiter"
+ cdr_cmd.001.b: "Iuno"
+ cdr_cmd.001.c: "Mars"
+ cdr_cmd.001.d: "Vénus"
+ cdr_cmd.001.e: "la maison lares"
+ cdr_cmd.001.f: "Mercure"
+ cdr_cmd.001.g: "Peut-être que ce n'est pas le bon moment"

@@ -1,0 +1,5 @@
+﻿l_french:
+ take_blood_interaction: "Prendre du sang"
+ take_blood_interaction_desc: "Nourrissez-vous du sang de [recipient.GetShortUINameNoTooltip] pour répondre à vos besoins."
+ tooltip.vampire.take_blood.target: "[actor.GetShortUINameNoTooltip] a bu ton sang !"
+ tooltip.vampire.take_blood.target.fail: "[actor.GetShortUINameNoTooltip] a essayé de boire ton sang !"

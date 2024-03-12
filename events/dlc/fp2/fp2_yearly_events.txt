@@ -374,7 +374,8 @@ fp2_yearly.1004 = {
 	trigger = {
 		has_fp2_dlc_trigger = yes
 
-		has_religion = religion:islam_religion
+		# has_religion = religion:islam_religion
+		always = no
 
 		capital_province = {
 			geographical_region = world_europe_west_iberia
@@ -392,17 +393,7 @@ fp2_yearly.1004 = {
 	immediate = {
 		add_character_flag = fp2_yearly.1004
 
-		character:73679 = {
-			save_scope_as = hawk_of_quraysh
-		}
 
-		dynasty:597 = {
-			save_scope_as = hawk_dynasty
-		}
-
-		dynasty:101727 = {
-			save_scope_as = abbasid_dynasty
-		}
 	}
 
 	option = { #I'm related!
@@ -1168,9 +1159,10 @@ fp2_yearly.3001 = {
 		}
 		NOT = { has_character_flag = had_event_fp2_flavor_3001 }
 		OR = {
-			religion = religion:christianity_religion
-			religion = religion:judaism_religion
-			religion = religion:islam_religion
+			# religion = religion:christianity_religion
+			# religion = religion:judaism_religion
+			# religion = religion:islam_religion
+			always = no
 		}
 	}
 
@@ -1799,7 +1791,7 @@ fp2_yearly.4001 = {
 		is_available_at_peace_adult = yes
 
 		#is Iberian
-		culture = { has_cultural_pillar = heritage_iberian }
+		culture = { always = no }
 
 		#has more than 5 stress
 		stress > 5
@@ -1877,7 +1869,7 @@ fp2_yearly.4002 = {
 		is_available_at_peace_adult = yes
 
 		#is Iberian
-		culture = { has_cultural_pillar = heritage_iberian }
+		culture = { always = no }
 
 		#has a court chaplain
 		exists = cp:councillor_court_chaplain
@@ -2270,7 +2262,7 @@ fp2_yearly.4005 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { religion = religion:islam_religion }
+				trigger = { always = no }
 				desc = fp2_yearly.4005.desc.muslim
 			}
 			triggered_desc = {
@@ -2719,6 +2711,8 @@ fp2_yearly.4008 = {
 	type = character_event
 	title = fp2_yearly.4008.t
 
+	override_background = { reference = bp1_bonfire }
+
 	desc = {
 		desc = fp2_yearly.4008.desc.intro
 	
@@ -3127,7 +3121,7 @@ fp2_yearly.8000 = {
 		years = 100 
 	}
 
-	cooldown = { years = 50 }
+	# cooldown = { years = 50 }
 
 	immediate = {
 
@@ -3895,20 +3889,21 @@ fp2_yearly.8004 = {
 	}
 
 	trigger = {
-		has_fp2_dlc_trigger = yes
-		OR = {
-			AND = {
-				exists = struggle:iberian_struggle
-				struggle:iberian_struggle = { is_struggle_phase = struggle_iberia_phase_conciliation }
-				fp2_character_involved_in_struggle_trigger = yes
-			}
-			AND = {
-				has_global_variable = fp2_struggle_conciliation_ending
-				root.capital_province = { geographical_region = world_europe_west_iberia }
-			}
-		}
+		# has_fp2_dlc_trigger = yes
+		# OR = {
+			# AND = {
+				# exists = struggle:iberian_struggle
+				# struggle:iberian_struggle = { is_struggle_phase = struggle_iberia_phase_conciliation }
+				# fp2_character_involved_in_struggle_trigger = yes
+			# }
+			# AND = {
+				# has_global_variable = fp2_struggle_conciliation_ending
+				# root.capital_province = { geographical_region = world_europe_west_iberia }
+			# }
+		# }
 
-		culture = { has_cultural_era_or_later = culture_era_high_medieval }
+		# culture = { has_cultural_era_or_later = culture_era_high_medieval }
+		always = no
 	}
 
 	
@@ -3959,14 +3954,14 @@ fp2_yearly.8004 = {
 					add = 40
 					culture = {	has_cultural_tradition = tradition_xenophilic }
 				}
-				modifier = {
-					add = 60
-					any_held_county = {
-						any_county_province = {
-							barony = title:b_toledo
-						}
-					}
-				}
+				# modifier = {
+					# add = 60
+					# any_held_county = {
+						# any_county_province = {
+							# barony = title:b_toledo
+						# }
+					# }
+				# }
 				modifier = {
 					add = 60
 					prestige_level >= high_prestige_level

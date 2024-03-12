@@ -1,0 +1,45 @@
+﻿l_french:
+ ##################### 
+ #Made by tom5667 - Polytheism Reborn 
+ ###################### 
+  
+   #State religion trait 
+ trait_cdr_state_religion: "Religion d'État Cultus Deorum"
+ trait_cdr_state_religion_desc: "Religion d'État rétablie Cultus Deorum"
+  
+   #choose main deity traits localization 
+ trait_cdr_cmd1_religion: "Consacré à Iupiter"
+ trait_cdr_cmd1_religion_desc: "Dévot de Iupiter, dieu du tonnerre et époux d'Iuno"
+  
+ trait_cdr_cmd2_religion: "Consacré à Iuno"
+ trait_cdr_cmd2_religion_desc: "Dévot de Junon, protecteur de la femme de Rome et épouse de Jupiter"
+  
+ trait_cdr_cmd3_religion: "Consacré à Mars"
+ trait_cdr_cmd3_religion_desc: "Dévot de Mars, dieu de la guerre"
+  
+ trait_cdr_cmd4_religion: "Consacré à Vénus"
+ trait_cdr_cmd4_religion_desc: "Dévot de Vénus, déesse de l'amour et de la fertilité"
+  
+ trait_cdr_cmd5_religion: "Consacré à Lares"
+ trait_cdr_cmd5_religion_desc: "Dévot des Lares, protecteur de la maison"
+  
+ trait_cdr_cmd6_religion: "Consacré à Mercure"
+ trait_cdr_cmd6_religion_desc: "Dévot de Mercure, dieu du commerce"
+  
+   #choose main deity traits hellenic localization 
+ trait_h_cmd1_religion: "Consacré à Zeus"
+ trait_h_cmd1_religion_desc: "Dévot de Zeus, dieu du tonnerre et Dieu suprême. Époux d'Héra"
+  
+ trait_h_cmd2_religion: "Consacré à Héra"
+ trait_h_cmd2_religion_desc: "Dévot d'Héra, épouse de Zeus et protectrice de la Femme"
+  
+ trait_h_cmd3_religion: "Consacré à Ares"
+ trait_h_cmd3_religion_desc: "Dévot d'Arès, dieu de la guerre"
+  
+ trait_h_cmd4_religion: "Consacré à Aphrodite"
+ trait_h_cmd4_religion_desc: "Dévot d'Aphrodite, déesse de l'amour et de la fertilité"
+  
+ trait_h_cmd5_religion: "Dédié à Hermès"
+ trait_h_cmd5_religion_desc: "Dévot d'Hermès, Dieu du commerce"
+  
+  

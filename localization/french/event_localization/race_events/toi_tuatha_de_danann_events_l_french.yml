@@ -1,0 +1,18 @@
+﻿l_french:
+ toi_tuatha_de_danann_event.0001.t: "Règne contesté"
+ toi_tuatha_de_danann_event.0001.desc: "Selon la loi de Dana, seuls les hommes sans tache et bien formés sont autorisés à gouverner. Ne faisant pas partie de ce groupe, certains de mes sujets ont commencé à exprimer leur désaccord. Non seulement à huis clos, mais également en audience publique."
+ toi_tuatha_de_danann_event.0001.a: "Ce défi ne tiendra pas !"
+ toi_tuatha_de_danann_event.0001.b: "Ces mots ne me disent rien."
+ toi_tuatha_de_danann_event.0001.b.tt_success: "Les contestations sont terminées, pour l'instant"
+ toi_tuatha_de_danann_event.0001.b.tt_failure: "Les contestations empirent"
+  
+ toi_tuatha_de_danann_event.0002.t: "Corps imparfait"
+ toi_tuatha_de_danann_event.0002.desc: "J'ai choisi d'affronter mes vassaux en audience publique et de parler de nos traditions. Ils se tiennent dans la salle d'audience, me regardent, attendent.\n\n#bold Ils attendent que j'abdique.#!"
+ toi_tuatha_de_danann_event.0002.a: "J'abdique formellement au [possible_heir.GetName] pour des raisons de forme physique."
+ toi_tuatha_de_danann_event.0002.b: "Aucune déformation n’enlèvera cette couronne !"
+ toi_tuatha_de_danann_event.0002.c: "Même si je suis physiquement inapte, je suis mentalement le mieux placé pour diriger nos peuples."
+  
+ toi_tuatha_de_danann_event.0003.t: "Laisse les parler"
+ toi_tuatha_de_danann_event.0003.desc: "Il y a quelques semaines, j'ai choisi d'ignorer les rumeurs sur ma forme physique et les espoirs de mon abdication. Je pensais que les laisser en parler leur permettrait de comprendre qui était leur chef.\n\nOh, j'avais tort.\n\nMes vassaux les plus puissants préparent un coup d'État contre mon régime tordu. C'est ma dernière opportunité de sauver le royaume de la guerre."
+ toi_tuatha_de_danann_event.0003.a: "Ce doit donc être le champ de bataille."
+ toi_tuatha_de_danann_event.0003.b: "J'abdique !"

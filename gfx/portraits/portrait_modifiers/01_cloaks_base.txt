@@ -45,7 +45,7 @@ cloaks = {
         weight = {
             base = 0
             modifier = {
-                add = 50
+                add = 0
                 OR = {
 	                portrait_low_nobles_trigger = { 
 	                    CULTURE_INPUT = western
@@ -58,7 +58,7 @@ cloaks = {
                 portrait_era1_trigger = yes     
             }
             modifier = {
-                add = 30
+                add = 0
                 OR = {
 	                portrait_low_nobles_trigger = { 
 	                    CULTURE_INPUT = western
@@ -71,7 +71,7 @@ cloaks = {
                 portrait_era2_trigger = yes     
             }
             modifier = {
-                add = 100       # Northern Era 1 kings and queens will use the era 1 low nobility cloak, if FP1 is not active
+                add = 0       # Northern Era 1 kings and queens will use the era 1 low nobility cloak, if FP1 is not active
                 has_ep2_dlc_trigger = yes   
                 portrait_era1_trigger = yes
             	portrait_royalty_trigger = { 
@@ -90,7 +90,7 @@ cloaks = {
                 }  
             }
 		    modifier = {
-		        add = 50
+		        add = 0
 		        court_fashion_level_4_trigger = {
 		            CULTURE_INPUT = western
 		        }
@@ -112,7 +112,7 @@ cloaks = {
         weight = {
             base = 0
             modifier = {
-                add = 50
+                add = 0
                 OR = {   
                 	portrait_high_nobles_headgear_trigger = { # Headgear trigger used because the regular high nobles one includes royalty and imperial tiers as well
 	                    CULTURE_INPUT = western
@@ -126,7 +126,7 @@ cloaks = {
                 portrait_era1_trigger = yes     
             }
             modifier = {
-                add = 30
+                add = 0
                 OR = { 
                 	portrait_high_nobles_headgear_trigger = { 
 	                    CULTURE_INPUT = western
@@ -146,7 +146,7 @@ cloaks = {
                 } 
             }
             modifier = {
-                add = 100       # Era 1 kings and queens will use the era 1 high nobility cloak and not the regular royalty one
+                add = 0       # Era 1 kings and queens will use the era 1 high nobility cloak and not the regular royalty one
                 has_ep2_dlc_trigger = yes   
                 portrait_era1_trigger = yes
                 OR = {
@@ -165,7 +165,7 @@ cloaks = {
                 }
             }
 		    modifier = {
-		        add = 50
+		        add = 0
 		        court_fashion_level_5_trigger = {
 		            CULTURE_INPUT = western
 		        }
@@ -227,6 +227,11 @@ cloaks = {
                     CULTURE_INPUT = western
                 } 
 			}
+			modifier = { #ToI
+				add = 50
+				highest_held_title_tier = tier_duchy
+				has_government = feudal_government	
+			}
 		}
     }
 
@@ -280,7 +285,7 @@ cloaks = {
 				                }  
 								NOR = {
 									government_has_flag = government_is_tribal
-									religion = religion:germanic_religion
+									religion = religion:northern_legacy_religion
 								}
 							}
 						}
@@ -344,8 +349,13 @@ cloaks = {
 			}
 #TALES OF IRELAND
 			modifier = {
-				add = 150
+				add = 250
 				highest_held_title_tier >= tier_kingdom
+				has_government = feudal_government	
+			}
+			modifier = {
+				add = 50
+				highest_held_title_tier = tier_duchy
 				has_government = feudal_government	
 			}
 		}

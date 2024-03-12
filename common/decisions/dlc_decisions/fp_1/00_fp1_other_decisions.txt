@@ -80,7 +80,7 @@ raise_stele_decision = {
 			text = raise_runestone_decision_warning
 		}
 		# Moved ahead to selection.
-		trigger_event = fp1_other_decisions.0101
+		# trigger_event = fp1_other_decisions.0101
 	}
 
 	ai_check_interval = 36

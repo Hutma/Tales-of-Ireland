@@ -1,0 +1,43 @@
+﻿l_french:
+  #Empires decisions 
+ the_empire_of_the_isles_decision: "Unir les îles"
+ the_empire_of_the_isles_decision_desc: "La mer est depuis trop longtemps le domaine des pirates, des Sidhe aquatiques et des monstres. Nous vivons depuis trop longtemps dans la peur de ce qui se trouve sous et au-delà des côtes. Des profondeurs surgira un nouveau royaume, et nous soumettrons les derniers coins indomptés de cette terre !"
+ the_empire_of_the_isles_decision_tooltip: "Unir les îles"
+ the_empire_of_the_isles_decision_confirm: "Règle les mers !"
+  
+ the_empire_of_dal_riata_decision: "Rois d'Irlande et d'Alba"
+ the_empire_of_dal_riata_decision_desc: "Les Dál Riata sont destinés à diriger un empire s'étendant sur l'Irlande, Alba et les grandes eaux intermédiaires. Unissons ces terres sous une seule bannière et affirmons-nous comme les maîtres de la terre et de la mer !"
+ the_empire_of_dal_riata_decision_tooltip: "L'empire Dal Riata"
+ the_empire_of_dal_riata_decision_confirm: "Construisons notre Empire !"
+  
+  #Fairy 
+ determine_fairy_court_decision: "Déterminer ma cour des fées"
+ determine_fairy_court_decision_desc: "Il est temps pour moi de passer la cérémonie qui me guidera vers le tribunal que je dois respecter. Je veux découvrir ce que l’avenir me réserve."
+ determine_fairy_court_decision_tooltip: "Déterminer la cour des fées"
+ determine_fairy_court_decision_confirm: "Regarde mon avenir"
+  
+ summon_fairy_to_court_decision: "Invoquer un membre de la famille"
+ summon_fairy_to_court_decision_desc: "J'ai l'impression que je devrais appeler un membre de ma famille de l'Autre Monde pour qu'il rejoigne ma cour. J'aurai besoin d'aide pour bien gouverner mon royaume. Je considérerai cette nouvelle fée comme ma propre descendante."
+ summon_fairy_to_court_decision_tooltip: "Invoquer une fée"
+ summon_fairy_to_court_decision_confirm: "Un nouveau membre de la famille"
+ a_new_fairy_in_court.tt: "Une fée a rejoint votre cour"
+  
+ call_seelie_king_decision: "Appelez les Seelie Rí à la guerre"
+ call_seelie_king_decision_desc: "Mon royaume, qui fait partie du royaume des fées, est menacé et doit se défendre dans une guerre risquée. Nous devons appeler le souverain de la cour Seelie pour nous aider !"
+ call_seelie_king_decision_tooltip: "Demandez de l'aide au tribunal Seelie"
+ call_seelie_king_decision_confirm: "Demander de l'aide"
+  
+ call_unseelie_king_decision: "Appelez les Unseelie Rí à la guerre"
+ call_unseelie_king_decision_desc: "Mon royaume, qui fait partie du royaume des fées, est menacé et doit se défendre dans une guerre risquée. Nous devons appeler le souverain de la cour Unseelie pour qu'il nous aide !"
+ call_unseelie_king_decision_tooltip: "Demandez de l'aide au tribunal Unseelie"
+ call_unseelie_king_decision_confirm: "Demander de l'aide"
+  
+ retake_seelie_court_decision: "Réclamez la Cour Seelie"
+ retake_seelie_court_decision_desc: "La Cour Seelie est tenue par quelqu'un qui ne peut et ne doit pas la gouverner. J'ai une meilleure légitimité et je pourrais réformer une véritable Cour Seelie autour de mon règne."
+ retake_seelie_court_decision_tooltip: "Prenez la cour Seelie"
+ retake_seelie_court_decision_confirm: "Prenez la cour Seelie"
+  
+ retake_unseelie_court_decision: "Réclamez la Cour Unseelie"
+ retake_unseelie_court_decision_desc: "La Cour Unseelie est dirigée par quelqu'un qui ne peut et ne doit pas la gouverner. J'ai une meilleure légitimité et je pourrais réformer une véritable Cour Unseelie autour de mon règne."
+ retake_unseelie_court_decision_tooltip: "Prenez la Cour Unseelie"
+ retake_unseelie_court_decision_confirm: "Prenez la Cour Unseelie"

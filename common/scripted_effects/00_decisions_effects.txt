@@ -232,10 +232,10 @@ convert_whole_realm_to_feudalism_effect = {
 			is_independent_ruler = no
 			OR = {
 				liege = { government_has_flag = government_is_clan }
-				AND = {
-					liege = { government_has_flag = government_is_tribal }
-					religion = religion:islam_religion
-				}
+				# AND = {
+					# liege = { government_has_flag = government_is_tribal }
+					# religion = religion:islam_religion
+				# }
 			}
 		}
 		change_government = clan_government
@@ -687,6 +687,7 @@ found_cadet_house_decision_effect = {
 		}
 		add_achievement_flag_effect = { FLAG = achievement_a_house_of_my_own_flag }
 	}
+
 	create_cadet_branch = yes
 	add_prestige = $PRESTIGE$
 	hidden_effect = {
@@ -769,6 +770,28 @@ found_cadet_house_decision_effect = {
 				add_house_artifact_claim = scope:new_branch_dynasty_banner
 			}
 		}
+
+		# Struggle Catalysts
+		# if = {
+		# 	limit = {
+		# 		root =  {
+		# 			exists = house
+		# 			exists = house.house_head
+		# 			any_character_struggle	 = {
+		# 				involvement = involved
+		# 				phase_has_catalyst = catalyst_cadet_branch_created
+		# 			}
+		# 		}
+		# 	}
+		# 	every_character_struggle = {
+		# 		involvement = involved
+		# 		activate_struggle_catalyst = {
+		# 			catalyst = catalyst_cadet_branch_created
+		# 			character = root
+		# 		}
+		# 		log_debug_variable_for_persian_struggle_effect = { VAR = unrest_catalyst_cadet_branch_created }
+		# 	}
+		# }
 	}
 }
 
@@ -934,5 +957,108 @@ linguist_random_realm_effect = {
 	# Save fallback to fetch faith
 	else = {
 		scope:target_court_language = { save_scope_as = $CULTURE$_ruler }
+	}
+}
+
+isolate_family_decision_effect = {
+	show_as_tooltip = {
+		every_close_family_member = {
+			custom = every_close_family_member_at_court
+			limit = {
+				is_courtier_of = root
+			}
+			add_character_modifier = {
+				modifier = isolating_modifier
+				years = 5
+			}
+		}
+		add_character_modifier = {
+			modifier = isolating_modifier
+			years = 5
+		}
+	}
+	custom_tooltip = travelling_will_break_isolation_tt
+	hidden_effect = {
+		every_close_family_member = {
+			custom = every_close_family_member_at_court
+			limit = {
+				is_courtier_of = root
+			}
+			root = {
+				add_to_variable_list = {
+					name = isolating_relatives
+					target = prev
+				}
+			}
+			add_character_flag = {
+				flag = blocked_from_leaving
+				years = 5
+			}
+			add_character_modifier = {
+				modifier = isolating_modifier
+				years = 5
+			}
+		}
+		every_consort = {
+			limit = {
+				is_courtier_of = root
+			}
+			root = {
+				add_to_variable_list = {
+					name = isolating_relatives
+					target = prev
+				}
+			}
+			add_character_flag = {
+				flag = blocked_from_leaving
+				years = 5
+			}
+			add_character_modifier = {
+				modifier = isolating_modifier
+				years = 5
+			}
+		}
+		add_character_modifier = {
+			modifier = isolating_modifier
+			years = 5
+		}
+		set_variable = {
+			name = isolating_cooldown_var
+			years = 1
+		}
+		add_character_flag = { # Prevent the AI from constantly coming in and out of isolation
+			flag = ai_unisolate_cooldown
+			years = 1
+		}
+	}
+	stress_impact = {
+		brave = minor_stress_impact_gain
+		gregarious = minor_stress_impact_gain
+	}
+}
+
+unisolate_family_decision_effect = {
+	show_as_tooltip = {
+		every_close_family_member = {
+			custom = every_close_family_member_at_court
+			limit = {
+				is_courtier_of = root
+			}
+			remove_character_modifier = isolating_modifier
+		}
+	}
+	hidden_effect = {
+		every_in_list = {
+			variable = isolating_relatives
+			limit = { is_alive = yes }
+			remove_character_modifier = isolating_modifier
+			remove_character_flag = blocked_from_leaving
+		}
+		clear_variable_list = isolating_relatives
+	}
+	remove_character_modifier = isolating_modifier
+	stress_impact = {
+		paranoid = minor_stress_impact_gain
+		shy = minor_stress_impact_gain
 	}
 }

@@ -161,58 +161,58 @@ global_religion.0001 = {
 				}
 			}
 			#Geographical regions to also push extra for
-			2 = {
-				trigger = { #Russia - orthodox
-					capital_province = {
-						geographical_region = ghw_region_russia
-					}
-					exists = faith:orthodox
-					faith:orthodox = {
-						exists = religious_head
-					}
-				}
-				faith:orthodox = {
-					religious_head = {
-						save_scope_as = actor #for the effect to work properly
-					}
-				}
-			}
-			2 = {
-				trigger = { #Scandinavia - catholic
-					capital_province = {
-						geographical_region = ghw_region_scandinavia
-					}
-					exists = faith:catholic
-					faith:catholic = {
-						exists = religious_head
-					}
-				}
-				faith:catholic = {
-					religious_head = {
-						save_scope_as = actor #for the effect to work properly
-					}
-				}
-			}
+			# 2 = {
+				# trigger = { #Russia - orthodox
+					# capital_province = {
+						# geographical_region = ghw_region_russia
+					# }
+					# exists = faith:orthodox
+					# faith:orthodox = {
+						# exists = religious_head
+					# }
+				# }
+				# faith:orthodox = {
+					# religious_head = {
+						# save_scope_as = actor #for the effect to work properly
+					# }
+				# }
+			# }
+			# 2 = {
+				# trigger = { #Scandinavia - catholic
+					# capital_province = {
+						# geographical_region = ghw_region_scandinavia
+					# }
+					# exists = faith:catholic
+					# faith:catholic = {
+						# exists = religious_head
+					# }
+				# }
+				# faith:catholic = {
+					# religious_head = {
+						# save_scope_as = actor #for the effect to work properly
+					# }
+				# }
+			# }
 			100 = {
 				modifier = {
 					add = -40
-					current_date >= 868.1.1
+					current_date >= 5200.1.1
 				}
 				modifier = {
 					add = -15
-					current_date >= 900.1.1
+					current_date >= 5200.1.1
 				}
 				modifier = {
 					add = -25
-					current_date >= 950.1.1
+					current_date >= 5200.1.1
 				}
 				modifier = {
 					add = -10
-					current_date >= 1000.1.1
+					current_date >= 5200.1.1
 				}
 				modifier = { #100 % that something happens if it can
 					add = -10
-					current_date >= 1100.1.1
+					current_date >= 5200.1.1
 				}
 			}
 		}
@@ -245,7 +245,7 @@ global_religion.0001 = {
 					}
 					if = {
 						limit = {
-							faith = { religion_tag = islam_religion }
+							always = no
 						}
 						change_government = clan_government
 					}
@@ -264,10 +264,10 @@ global_religion.0001 = {
 						this = scope:recipient
 					}
 				}
-				else = { change_government = feudal_government }
-				capital_county = {
-					set_county_faith = root.faith
-				}
+			}
+			else = { change_government = feudal_government }
+			capital_county = {
+				set_county_faith = root.faith
 			}
 		}
 	}

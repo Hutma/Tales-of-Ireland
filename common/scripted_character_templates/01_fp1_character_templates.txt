@@ -250,8 +250,8 @@ fp1_ms_vagrant_character = {
 fp1_western_warrior_character = {
 	#General
 	age = { 30 60 }
-	faith = scope:scandinavian_county.faith
-	culture = scope:scandinavian_county.culture
+	faith = root.faith
+	culture = root.culture
 	#Education
 	random_traits_list = {
 		education_martial_2 = {
@@ -282,19 +282,20 @@ fp1_western_warrior_character = {
 	trait = adventurer
 	random_traits = yes
 	gender_female_chance = {
-		if = {
-			limit = {
-				scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_male_dominated }
-			}
-			add = 0
-		}
-		else_if = {
-			limit = {
-				scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_female_dominated }
-			}
-			add = 100
-		}
-		else = { add = 50 }
+		# if = {
+			# limit = {
+				# scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_male_dominated }
+			# }
+			# add = 0
+		# }
+		# else_if = {
+			# limit = {
+				# scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_female_dominated }
+			# }
+			# add = 100
+		# }
+		# else = { add = 50 }
+		value = 50
 	}
 	#Skills
 	diplomacy = { min_template_low_skill max_template_decent_skill }
@@ -309,8 +310,8 @@ fp1_western_warrior_character = {
 fp1_eastern_warrior_character = {
 	#General
 	age = { 30 60 }
-	faith = scope:scandinavian_county.faith
-	culture = scope:scandinavian_county.culture
+	faith = root.faith
+	culture = root.culture
 	#Education
 	random_traits_list = {
 		education_martial_2 = {
@@ -341,19 +342,20 @@ fp1_eastern_warrior_character = {
 	trait = adventurer
 	random_traits = yes
 	gender_female_chance = {
-		if = {
-			limit = {
-				scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_male_dominated }
-			}
-			add = 0
-		}
-		else_if = {
-			limit = {
-				scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_female_dominated }
-			}
-			add = 100
-		}
-		else = { add = 50 }
+		# if = {
+			# limit = {
+				# scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_male_dominated }
+			# }
+			# add = 0
+		# }
+		# else_if = {
+			# limit = {
+				# scope:scandinavian_county.faith = { has_doctrine = doctrine_gender_female_dominated }
+			# }
+			# add = 100
+		# }
+		# else = { add = 50 }
+		value = 50
 	}
 	#Skills
 	diplomacy = { min_template_low_skill max_template_decent_skill }
@@ -366,7 +368,202 @@ fp1_eastern_warrior_character = {
 
 ##################################################
 # #Jomsviking Templates
+##################################################
+# #Jomsviking Templates
 
+# Jomsviking Bigwig
+fp1_jomsviking_bigwig = {
+	#General
+	age = { 30 60 }
+	faith = root.faith
+	culture = root.culture
+	#Education
+	random_traits_list = {
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+		education_martial_4 = {
+			weight = { base = 10}
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		impatient = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+	}
+	#Misc
+	random_traits_list = {
+		berserker = {}
+		adventurer = {}
+		viking = {}
+		varangian = {}
+		strong = {}
+		shrewd = {}
+		tourney_participant = {}
+	}
+	random_traits = yes
+	gender_female_chance = {
+		# if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_male_dominated }
+			# }
+			# add = 0
+		# }
+		# else_if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_female_dominated }
+			# }
+			# add = 100
+		# }
+		value = 50
+	}
+	#Skills
+	diplomacy = { min_template_low_skill max_template_decent_skill }
+	martial = { min_template_decent_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_low_skill max_template_decent_skill }
+	learning = { min_template_low_skill max_template_decent_skill }
+	prowess = { min_template_decent_skill max_template_high_skill }
+	after_creation = {
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+# Jomsviking Retainer, Martial
+fp1_jomsviking_retainer_martial = {
+	#General
+	age = { 25 45 }
+	faith = root.faith
+	culture = root.culture
+	#Education
+	random_traits_list = {
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+	}
+	#Personality
+	trait = zealous
+	random_traits_list = {
+		count = 2
+		wrathful = {}
+		impatient = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+	}
+	#Misc
+	trait = order_member
+	trait = viking
+	random_traits = yes
+	gender_female_chance = {
+		# if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_male_dominated }
+			# }
+			# add = 0
+		# }
+		# else_if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_female_dominated }
+			# }
+			# add = 100
+		# }
+		value = 50
+	}
+	#Skills
+	diplomacy = { min_template_low_skill max_template_average_skill }
+	martial = { min_template_decent_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_average_skill }
+	intrigue = { min_template_low_skill max_template_average_skill }
+	learning = { min_template_low_skill max_template_average_skill }
+	prowess = { min_template_low_skill max_template_average_skill }
+}
+
+# Jomsviking Retainer, Prowess
+fp1_jomsviking_retainer_prowess = {
+	#General
+	age = { 25 45 }
+	faith = root.faith
+	culture = root.culture
+	#Education
+	random_traits_list = {
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+	}
+	#Personality
+	trait = zealous
+	random_traits_list = {
+		count = 2
+		wrathful = {}
+		impatient = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+	}
+	#Misc
+	trait = order_member
+	trait = viking
+	random_traits = yes
+	gender_female_chance = {
+		# if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_male_dominated }
+			# }
+			# add = 0
+		# }
+		# else_if = {
+			# limit = {
+				# faith:norse_pagan = { has_doctrine = doctrine_gender_female_dominated }
+			# }
+			# add = 100
+		# }
+		# else = { add = 50 }
+		value = 50
+	}
+	#Skills
+	diplomacy = { min_template_low_skill max_template_average_skill }
+	martial = { min_template_low_skill max_template_average_skill }
+	stewardship = { min_template_low_skill max_template_average_skill }
+	intrigue = { min_template_low_skill max_template_average_skill }
+	learning = { min_template_low_skill max_template_average_skill }
+	prowess = { min_template_decent_skill max_template_high_skill }
+	after_creation = {
+		if = {
+			limit = { has_dlc = tours_and_tournaments }
+			add_trait = tourney_participant
+			add_random_tourney_participant_level_effect = yes
+		}
+	}
+}
 ##################################################
 # #Misc Yearly Templates
 

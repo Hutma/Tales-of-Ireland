@@ -31,7 +31,10 @@
 		}
 
 		can_pick = {
-			always = yes
+			custom_description = {
+				text = incompatible_doctrine_mummification_trigger
+				NOT = { doctrine:doctrine_funeral_mummification = { is_in_list = selected_doctrines } }
+			}
 		}
 
 		character_modifier = {
@@ -72,6 +75,11 @@
 
 		character_modifier = {
 			monthly_learning_lifestyle_xp_gain_mult = 0.2
+			learning_per_stress_level = 2
+		}
+
+		traits = {
+			virtues = { scholar }
 		}
 	}
 
@@ -237,6 +245,12 @@
 					doctrine:doctrine_no_head = { is_in_list = selected_doctrines }
 				}
 			}
+			custom_description = {
+				text = incompatible_tenet_sacred_shadows_trigger
+				NOT = {
+					has_doctrine = tenet_sacred_shadows
+				}
+			}
 		}
 
 		parameters = {
@@ -335,6 +349,10 @@
 			divine_marriage_opinion = 10
 			divine_marriage_piety_gain_active = yes
 		}
+
+		traits = {
+			virtues = { pure_blooded = 2 }
+		}
 	}
 
 	tenet_gnosticism = {
@@ -369,12 +387,13 @@
 		}
 
 		can_pick = {
-			custom_description = {
-				text = incompatible_tenet_eastern_syncretism_trigger
-				NOT = {
-					doctrine:tenet_eastern_syncretism = { is_in_list = selected_doctrines }
-				}
-			}
+			# custom_description = {
+				# text = incompatible_tenet_eastern_syncretism_trigger
+				# NOT = {
+					# doctrine:tenet_eastern_syncretism = { is_in_list = selected_doctrines }
+				# }
+			# }
+			always = yes
 		}
 
 		parameters = {
@@ -710,7 +729,7 @@
 
 		is_shown = {
 			# Filter out Islam; they have their own system.
-			NOT = { religion = religion:islam_religion }
+			# NOT = { religion = religion:islam_religion }
 			# We also only want people with existing spiritual HoFs.
 			exists = religious_head
 			has_doctrine_parameter = spiritual_head_of_faith
@@ -957,7 +976,7 @@
 
 		traits = {
 			virtues = {
-				lifestyle_mystic
+				lifestyle_mystic = { weight = 1 }
 			}
 		}
 
@@ -1026,7 +1045,7 @@
 			}
 
 			if = {
-				limit = { NOT = { has_doctrine = abrahamic_hostility_doctrine } }
+				limit = { always = yes }
 				multiply = 1.5
 				round = yes
 			}
@@ -1202,12 +1221,12 @@
 			}
 		}
 
-		is_shown = {
-
-		}
-
 		parameters = {
 			sanctioned_false_conversion = yes
+		}
+
+		character_modifier = {
+			monthly_intrigue_lifestyle_xp_gain_mult = 0.1 #FP3 addition to make this tenet more attractive
 		}
 	}
 
@@ -1710,7 +1729,12 @@
 		}
 
 		traits = {
-			virtues = { lifestyle_mystic = 5 }
+			virtues = { 
+				lifestyle_mystic = { 
+					scale = 5 
+					weight = 2 
+				} 
+			}
 		}
 	}
 
@@ -1832,32 +1856,6 @@
 		}
 	}
 
-	tenet_sky_burials = {
-		icon = core_tenet_sky_burials
-
-		piety_cost = {
-			value = faith_tenet_cost_low
-
-			# Multiplier for keeping same tenet
-			if = {
-				limit = { has_doctrine = tenet_sky_burials }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
-		}
-
-		is_shown = {
-
-		}
-
-		parameters = {
-			sky_burials_active = yes
-		}
-
-		character_modifier = {
-			negate_health_penalty_add = 0.25
-		}
-	}
-
 	tenet_sun_worship = {
 		icon = core_tenet_sun_worship
 
@@ -1882,7 +1880,7 @@
 
 		character_modifier = {
 			plains_attrition_mult = -0.25
-			plains_mountains_attrition_mult = -0.25
+			mountains_attrition_mult = -0.25
 		}
 
 		piety_cost = faith_tenet_cost_mid
@@ -2068,10 +2066,10 @@
 			}
 
 			# Multiplier for keeping same tenet
-			if = {
-				limit = { has_doctrine = tenet_eastern_syncretism }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
+			# if = {
+				# limit = { has_doctrine = tenet_eastern_syncretism }
+				# multiply = faith_unchanged_doctrine_cost_mult
+			# }
 		}
 
 		is_shown = {
@@ -2316,9 +2314,7 @@
 	tenet_exaltation_of_pain = {
 		icon = core_tenet_human_sacrifice
 
-		is_shown = {
-			always = no
-		}
+		is_shown = {}
 
 		piety_cost = {
 			if = {
@@ -2537,6 +2533,15 @@
 				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
+		
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_communion_trigger
+				NOT = {
+					has_doctrine = tenet_communion
+				}
+			}
+		}
 
 		parameters = {
 			piety_gain_from_successful_intrigue_schemes = yes
@@ -2544,12 +2549,8 @@
 		}
 
 		traits = {
-			virtues = {
-				deceitful
-			}
-			sins = {
-				honest
-			}
+			virtues = { deceitful }
+			sins = { honest }
 		}
 	}
 
@@ -2630,7 +2631,8 @@
 		}
 
 		is_shown = {
-			religion_tag = north_african_religion
+			# religion_tag = north_african_religion
+			always = no
 		}
 
 		can_pick = {
@@ -2688,12 +2690,12 @@
 				}
 				value = faith_tenet_cost_low
 			}
-			else_if = {
-				limit = { #Reduction in cost for Celtic Christianity because of stone circle shenanigans
-					this = faith:insular_celtic
-				}
-				value = faith_tenet_cost_mid
-			}
+			# else_if = {
+				# limit = { #Reduction in cost for Celtic Christianity because of stone circle shenanigans
+					# this = faith:insular_celtic
+				# }
+				# value = faith_tenet_cost_mid
+			# }
 			else = {
 				value = faith_tenet_cost_high
 			}
@@ -2724,6 +2726,125 @@
 			hills_advantage = 5
 		}
 	}
+
+	#############################
+	
+	# FP3 Tenets 		#        
+	#############################
+
+	tenet_fp3_fedayeen = {
+		icon = core_tenet_assassin
+
+		name = {
+			desc = tenet_fp3_sacred_murder_name
+		}
+
+		is_shown = { }
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_pacifism_trigger
+				NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_dharmic_pacifism_trigger
+				NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = fedayeen_required_doctrines_trigger
+				OR = {
+					doctrine:tenet_warmonger = { is_in_list = selected_doctrines }
+					doctrine:tenet_unrelenting_faith = { is_in_list = selected_doctrines }
+					doctrine:tenet_consolamentum = { is_in_list = selected_doctrines }
+					doctrine:tenet_armed_pilgrimages = { is_in_list = selected_doctrines }
+					doctrine:tenet_struggle_submission = { is_in_list = selected_doctrines } 
+					doctrine:tenet_pursuit_of_power = { is_in_list = selected_doctrines }
+				}
+			}
+		}
+
+		piety_cost = {
+			if = {
+				limit = {
+					always = no
+
+				}
+				value = faith_tenet_cost_low
+			}
+			else = {
+				value = faith_tenet_cost_massive
+			}
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_fp3_fedayeen }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		parameters = {
+			master_assassin_court_position_unlocked = yes 
+			death_is_glory = yes
+			sanctioned_assassinations = yes 
+		}
+
+		character_modifier = {
+			controlled_province_advantage = 5
+			monthly_piety_gain_per_dread_add = 0.01
+			prowess = 2
+		}
+
+		traits = {
+			virtues = { vengeful = 1 }
+			sins = { craven = 1 }
+		}
+	}
+
+	tenet_communal_possessions = {
+		icon = core_tenet_communism
+		is_shown = {}
+		can_pick = {
+			always = yes
+		}
+
+		piety_cost = {
+			if = {
+				limit = {
+					OR = {
+						has_doctrine = tenet_mendicant_preachers
+						has_doctrine = tenet_gnosticism 
+					}
+				}
+				value = faith_tenet_cost_mid
+			}
+			else = {
+				value = faith_tenet_cost_high 
+			}
+
+			#Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_communal_possessions }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		parameters = {
+			piety_from_gifts_active = yes
+			piety_from_marrying_lowborn_active = yes
+		}
+
+		character_modifier = {
+			monthly_county_control_growth_factor = -0.2
+			build_gold_cost = -0.1
+			county_opinion_add = 10 
+		}
+
+		traits = {
+			virtues = { peasant_leader = 2 } #because communism! 
+			sins = { arrogant }
+		}
+	}
+# }
 
 	#############################
 	# Empty Template Tenet 		#
@@ -2805,11 +2926,11 @@
 		can_pick = {
 			custom_description = {
 				text = incompatible_tenet_pacifism_trigger
-				NOT = { flag:tenet_pacifism = { is_in_list = selected_doctrines } }
+				NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
 			}
 			custom_description = {
 				text = incompatible_tenet_dharmic_pacifism_trigger
-				NOT = { flag:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+				NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
 			}
 		}
 
@@ -2906,11 +3027,11 @@
 		can_pick = {
 			custom_description = {
 				text = incompatible_tenet_pacifism_trigger
-				NOT = { flag:tenet_pacifism = { is_in_list = selected_doctrines } }
+				NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
 			}
 			custom_description = {
 				text = incompatible_tenet_dharmic_pacifism_trigger
-				NOT = { flag:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+				NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
 			}
 		}
 
@@ -2921,6 +3042,49 @@
 		}
 		
 		character_modifier = {
+			ai_war_chance = 0.5
+			ai_war_cooldown = -0.25
+		}
+	}
+	
+	tenet_maige_tuired_avenged_faith = {
+		icon = core_tenet_warmonger
+		piety_cost = {
+			
+			value = faith_tenet_cost_mid
+			
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_warmonger }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		is_shown = {
+
+		}
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_pacifism_trigger
+				NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_dharmic_pacifism_trigger
+				NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+			}
+		}
+
+		parameters = {
+			warmonger = yes
+			invasion_cb_enabled = yes
+			clergy_can_fight = yes
+		}
+		
+		character_modifier = {
+			martial_per_piety_level = 2
+			diplomacy_per_piety_level = 1
+			prowess_per_piety_level = 1
 			ai_war_chance = 0.5
 			ai_war_cooldown = -0.25
 		}

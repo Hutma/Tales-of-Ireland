@@ -3,7 +3,7 @@
 #Fianna hidden triggers 0001
 toi_fianna.1001 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -42,7 +42,7 @@ toi_fianna.0001 = {
 #Fianna hidden triggers 0002
 toi_fianna.1002 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -84,7 +84,7 @@ toi_fianna.0002 = {
 #Fianna hidden triggers 0003
 toi_fianna.1003 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -138,7 +138,7 @@ toi_fianna.0003 = {
 #Fianna hidden triggers 0004
 toi_fianna.1004 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {

@@ -11,7 +11,7 @@
  de_danann_collective_noun:0 "Tuatha Dé Danann"
  #Fir Bolg group
  toi_fir_bolg_group:0 "Fir Bolg"
- toi_fir_bolg_group:0 "Fir Bolgs"
+ toi_fir_bolg_group_collective_noun:0 "Fir Bolgs"
  fir_bolg:0 "Fir Bolg"
  fir_bolg_collective_noun:0 "Fir Bolgs"
  fir_gailioin:0 "Fir Gailioin"

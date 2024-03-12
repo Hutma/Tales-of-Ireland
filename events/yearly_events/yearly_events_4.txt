@@ -2099,11 +2099,7 @@ yearly.4051 = {
 
 	option = {
 		name = intrigue_scheme_ongoing.5015.a
-		
-		add_character_modifier = {
-			modifier = has_plush_carpet_modifier
-			days = 3650
-		}
+		add_carpet_modifier_effect = yes
 			
 		ai_chance = {
 			base = 1
@@ -2445,7 +2441,7 @@ yearly.4081 = {
 	trigger = {
 		always = no
 		exists = cp:councillor_court_chaplain
-		cp:councillor_court_chaplain = { knows_language = language_arabic }
+		cp:councillor_court_chaplain = { always = no }
 		NOT = { has_character_flag = had_event_yearly_4081 }
 		learning >= medium_skill_rating
 		short_term_gold >= medium_gold_value
@@ -2686,9 +2682,10 @@ yearly.4091 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					any_realm_province = {
-						has_building = house_of_wisdom_01
-					}
+					# any_realm_province = {
+						# has_building = house_of_wisdom_01
+						always = no
+					# }
 				}
 				desc = yearly.4091.desc_house
 			}

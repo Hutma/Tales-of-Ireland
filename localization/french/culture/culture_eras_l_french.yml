@@ -1,15 +1,15 @@
-l_french:
- #GROUPS
- culture_group_military:0 "Militaire"
- culture_group_civic:0 "Civique"
- culture_group_regional:1 "Culturelle et régionale"
- culture_group_any:0 "any"
- #ERAS
- culture_era_tribal:0 "La chute des Milésiens"
- culture_era_tribal_desc:0 "La chute des Milésiens est la période qui commence avec l'arrivée des Celtes en Irelande. La stabilité du pouvoir milésien baissant, chaque peuple s'est lentement émancipé."
- culture_era_early_medieval:0 "L'ère héroique"
- culture_era_early_medieval_desc:0 "L'ère héroïque est charactérisée par la domination d'individus pendant les batailles. Certain pouvoirs ont fait surface and se battent pour gagner plus de contrôle."
- culture_era_high_medieval:0 "L'ère romaine"
- culture_era_high_medieval_desc:0 "Ils sont venus par la mer, par centaines. Les Romains lorgnent les îles Britanniques d'un oeil envieux, se demandant pourquoi elles ne sont pas encore conquises."
- culture_era_late_medieval:0 "L'arrivée de la chrétienté"
- culture_era_late_medieval_desc:0 "Les vieilles croyances meurent à petit feu et sont remplacés par la parole d'un vrai et unique dieu: le dieu chrétien. Bien que beaucoup s'opposent à cette nouvelle divinité, la parole de Dieu gagne en influence."
+﻿l_french:
+  #GROUPS 
+ culture_group_military: "Militaire"
+ culture_group_civic: "Civique"
+ culture_group_regional: "Culturel et Régional"
+ culture_group_any: "n'importe lequel"
+  #ERAS 
+ culture_era_tribal: "Chute des Milésiens"
+ culture_era_tribal_desc: "La chute des Milésiens est l'époque qui a commencé avec l'arrivée des Celtes en Irlande. En diminuant la stabilité du pouvoir milésien, chaque peuple accéda lentement à son indépendance."
+ culture_era_early_medieval: "L'ère héroïque"
+ culture_era_early_medieval_desc: "L'ère héroïque est caractérisée par la domination d'individus isolés sur les champs de bataille. Certains pouvoirs ont émergé et se battent désormais pour plus de contrôle."
+ culture_era_high_medieval: "Ère romaine"
+ culture_era_high_medieval_desc: "Ils venaient de la mer, et par centaines. Les Romains commencent à s'intéresser aux îles britanniques et se demandent pourquoi elles ne leur appartiennent pas déjà."
+ culture_era_late_medieval: "Arrivée du christianisme"
+ culture_era_late_medieval_desc: "Les anciennes croyances meurent lentement et sont remplacées par les paroles du dieu véritable et unique : le dieu chrétien. Même si de nombreuses personnes s’opposent à la nouvelle divinité, la parole de Dieu gagne de plus en plus d’influence."

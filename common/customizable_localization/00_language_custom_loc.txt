@@ -1,0 +1,245 @@
+﻿IberiaSacredLanguage = {
+	type = character
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_latin_name #Latin
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = IberiaSacredLanguage_hebrew #Hebrew
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_arabic_name #Arabic
+	}
+}
+
+IberiaRomanceLanguage = {
+	type = character
+	
+	text = {
+		trigger = {	always = no }
+		localization_key = IberiaRomanceLanguage_castilian #Castilian
+	}
+	
+	#text = { # I couldn't find evidence of a unique Jewish dialect until after the expulsion of the jews in 1492, when Ladino was coined - AN
+	#	trigger = { always = no }
+	#	localization_key = IberiaRomanceLanguage_sephardi #Sephardi
+	#}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = IberiaRomanceLanguage_mozarabic #Mozarabic #TO_DO_CD: This should be an actual language for our Mozarabs, but would require a culture creation - AN
+	}
+}
+
+#Key to pick out liturgical language of the faith of a province or character - if one exists
+#Uses "Archaic-[spoken language]" as fallback
+#Specific Fallbacks exists for:
+#Catholic
+#Orthodox
+#Nestorian
+#Judaism
+#Islam
+#Buddhism
+#Hinduism
+#Tibetan
+#Taoism
+#Jainism
+#Zoroastrianism
+#Greco-Roman
+
+GetFaithSacredLanguage = {
+	type = all
+	
+	text = {
+		trigger = {
+			OR = {
+				always = no
+			}
+		}
+		localization_key = language_latin_name #Latin
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_occitano_romance_name #Occitan
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_aramaic_name #Armaic
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_armenian_name #Armenian
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				always = no
+				always = no #fallback for all Christian Faiths
+			}
+		}
+		localization_key = language_greek_name #Greek
+	}
+	
+	text = { 
+		trigger = { always = no }
+		localization_key = language_hebrew_name #Hebrew
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_arabic_name #Arabic
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_avestan_name #Avestan
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_pali_name #Pali
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_classical_tibetan_name #Classical Tibetan
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_chinese_name
+	}
+
+	text = { #Could also be Vedic & Old Tamil
+		trigger = {
+			always = no
+		}
+		localization_key = language_sanskrit_name #Sanskrit
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_greek_name #Greek
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		fallback = yes
+		localization_key = fallback_liturgical_province_language #Archaic-X - based on culture instead of Faith.
+	}
+}
+
+
+GetFaithSacredLanguageCharacter = {
+	type = character
+	
+	text = {
+		trigger = {
+			OR = {
+				always = no
+			}
+		}
+		localization_key = language_latin_name #Latin
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_occitano_romance_name #Occitan
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_aramaic_name #Armaic
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_armenian_name #Armenian
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				always = no
+				always = no #fallback for all Christian Faiths
+			}
+		}
+		localization_key = language_greek_name #Greek
+	}
+	
+	text = { 
+		trigger = { always = no }
+		localization_key = language_hebrew_name #Hebrew
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_arabic_name #Arabic
+	}
+	
+	text = {
+		trigger = { always = no }
+		localization_key = language_avestan_name #Avestan
+	}
+
+	text = {
+		trigger = { always = no }
+		localization_key = language_pali_name #Pali
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_classical_tibetan_name #Classical Tibetan
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_chinese_name
+	}
+
+	text = { #Could also be Vedic & Old Tamil
+		trigger = {
+			always = no
+		}
+		localization_key = language_sanskrit_name #Sanskrit
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = language_greek_name #Greek
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		fallback = yes
+		localization_key = fallback_liturgical_character_language #Archaic-X - based on culture instead of Faith.
+	}
+}

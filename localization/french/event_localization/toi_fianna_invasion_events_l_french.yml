@@ -1,0 +1,27 @@
+﻿l_french:
+  
+ toi_fianna.0001.t: "La Fianna"
+ toi_fianna.0001.desc: "Depuis des générations, des bandes de guerriers sans terre appelés Fianna parcourent l'Irlande, survivant grâce à la terre et se battant pour le plus offrant. Le cours de nombreuses batailles a été inversé grâce à leur aide.\n\nDepuis l'effondrement de l'hégémonie milésienne, l'Irlande est consumée par un conflit perpétuel. Les feux de la guerre brûlent, et les Fianna ne manquent pas d'employeurs.\n\nÀ mesure que leur richesse augmente, leurs ambitions augmentent également. Les dirigeants Fianna ont rassemblé suffisamment de force pour commencer à revendiquer leurs terres. Leurs rangs s'agrandissent d'hommes sans terre en quête de pouvoir, et ils gouvernent comme bon leur semble.\n\nCe ne sont plus de simples mercenaires. Bientôt, toute l’Irlande ressentira la puissance de la Fianna."
+ toi_fianna.0001.a: "Le rapport de force change une fois de plus..."
+  
+ toi_fianna.0002.t: "Tensions avec la Fianna"
+ toi_fianna.0002.desc: "La nouvelle se répand d’un Ringfort rasé. De tels actes ne sont pas rares, mais ils sont remarquables pour leurs auteurs. Les quelques survivants disent qu'une bande de Fianna a été embauchée par le chef local. Après la fin de leur service, ils ont exigé un paiement plus élevé que ce qui avait été initialement convenu.\n\nBien sûr, le chef a refusé, alors les Fianna ont massacré la population et pillé le Ringfort. Cela ne s'est jamais produit auparavant, et c'est un signe certain de la puissance et de l'ambition dont dispose désormais la Fianna."
+ toi_fianna.0002.a: "Je devrais garder un œil sur les Fianna près de mes terres."
+  
+ toi_fianna.0003.t: "La colère des Fianna"
+ toi_fianna.0003.desc: "Un roi puissant tenta de chasser les Fianna de ses terres et fut massacré. Ces mercenaires rivalisent désormais en force avec les armées royales. À l'origine, un roi payait les Fianna pour nuire à son ennemi. Aujourd'hui, un roi les paie pour épargner sa terre de leur colère.\n\nLa dévastation laissée dans leur sillage a détruit les réseaux commerciaux et incendié les champs. La famine commence à sévir dans toute l'Irlande, et le peu de nourriture qui reste est gardé par les Fianna ; soit pour forcer les autres à se soumettre, soit pour pousser les gens affamés à l'agitation..."
+ toi_fianna.0003.a: "Nous ne pouvons pas manger d'or ou de piété !"
+  
+ toi_fianna.0004.t: "Hommage à la Fianna"
+ toi_fianna.0004.desc: "Les anciens me parlaient des Fianna. Comment ils étaient des héros courageux qui vivaient de la terre, honoraient les dieux et sauvaient des royaumes entiers. Et maintenant, je tremble de peur alors que les Fianna sont à l'extérieur de mon fort.\n\nLeurs demandes d'hommage feraient paraître généreux même le roi le plus tyrannique. Je peux voir dans leurs yeux qu'ils veulent presque que je dise non, juste pour avoir une excuse pour incendier mon fort et asservir mon peuple. Ou peut-être qu’ils le feront de toute façon si je dis oui. Ce ne sont plus des mercenaires, ce sont des monstres.\n\nMais ce ne sont pas seulement eux dont je dois m'inquiéter. Si je me soumets, mon propre peuple me considérera comme faible et pourrait m'évincer du pouvoir.\n\nDois-je leur rendre hommage et risquer la haine de mes sujets ? Ou refuser et essayer de s’opposer à eux ? Je crains qu'aucun des deux choix ne se termine bien..."
+ toi_fianna.0004.a: "Tout pour se protéger de ces monstres."
+ toi_fianna.0004.b: "Je ne gaspillerai pas un seul centime avec ces hors-la-loi."
+  
+ toi_fianna.0005.t: "La montée du Fianna"
+ toi_fianna.0005.desc: "Nous savions que ce jour était inévitable, mais nous espérions qu'il arriverait plus tard que plus tôt.\n\nLes Fianna attaquent les chefs dans toute l'Irlande, avec l'intention de devenir eux-mêmes rois. Ils ont déjà rassemblé les hommes et l'or pour le faire.\n\nLeurs vastes armées sont remplies de vétérans chevronnés. Ce sera notre plus grand défi à ce jour, mais nous pourrions entrer dans l’histoire comme une légende !"
+ toi_fianna.0005.a: "Ce sont des temps instables."
+  
+  
+ FIANNA_ARMY: "L'armée Fianna"
+  
+ fianna_army_event_troops: "Groupe Fianna"

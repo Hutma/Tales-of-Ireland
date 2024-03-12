@@ -86,133 +86,133 @@ special_contract = {
 				}
 			}
 		}
-		special_contract_scutage = {
-			is_shown = { scope:vassal = { government_has_flag = government_is_feudal } }
-			is_valid = {
-				scope:liege.culture = {
-					has_innovation = innovation_scutage
-				}
-				scope:vassal.primary_title.tier >= tier_duchy
-			}
-			parent = special_contract_none
-			position = { 1 1 }
-			score = 0
+		# special_contract_scutage = {
+			# is_shown = { scope:vassal = { government_has_flag = government_is_feudal } }
+			# is_valid = {
+				# scope:liege.culture = {
+					# has_innovation = innovation_scutage
+				# }
+				# scope:vassal.primary_title.tier >= tier_duchy
+			# }
+			# parent = special_contract_none
+			# position = { 1 1 }
+			# score = 0
 
-			tax_factor = scutage_contract_tax
-			levies_factor = -0.75
+			# tax_factor = scutage_contract_tax
+			# levies_factor = -0.75
 
-			vassal_modifier = {
-				men_at_arms_maintenance = -0.2
-			}
+			# vassal_modifier = {
+				# men_at_arms_maintenance = -0.2
+			# }
 
-			flag = has_scutage_contract
+			# flag = has_scutage_contract
 
-			ai_liege_desire =  {
-				value = 0
-				if = {
-					limit = {
-						scope:vassal = {
-							OR = {
-								government_has_flag = government_is_clan
-								AND = {
-									government_has_flag = government_is_feudal
-									vassal_contract_obligation_level:feudal_government_taxes > feudal_tax_normal_level
-									vassal_contract_obligation_level:feudal_government_levies < feudal_levies_normal_level
-								}
-							}
-						}
-					}
-					add = @ai_standard_liege_desire
-				}
-			}
-		}
-		special_contract_march = {
+			# ai_liege_desire =  {
+				# value = 0
+				# if = {
+					# limit = {
+						# scope:vassal = {
+							# OR = {
+								# government_has_flag = government_is_clan
+								# AND = {
+									# government_has_flag = government_is_feudal
+									# vassal_contract_obligation_level:feudal_government_taxes > feudal_tax_normal_level
+									# vassal_contract_obligation_level:feudal_government_levies < feudal_levies_normal_level
+								# }
+							# }
+						# }
+					# }
+					# add = @ai_standard_liege_desire
+				# }
+			# }
+		# }
+		# special_contract_march = {
 
-			is_valid = {
-				scope:liege.culture = {
-					has_innovation = innovation_bannus
-				}
-				scope:vassal.primary_title.tier >= tier_duchy
-			}
-			parent = special_contract_none
-			position = { 1 0 }
-			score = 0
+			# is_valid = {
+				# scope:liege.culture = {
+					# has_innovation = innovation_bannus
+				# }
+				# scope:vassal.primary_title.tier >= tier_duchy
+			# }
+			# parent = special_contract_none
+			# position = { 1 0 }
+			# score = 0
 
-			tax_factor = march_contract_taxes
+			# tax_factor = march_contract_taxes
 
-			vassal_modifier = {
-				levy_size = 0.2
-				army_maintenance_mult = -0.2
-				garrison_size = 0.2
-				levy_reinforcement_rate = 0.2
-				controlled_province_advantage = 5
-			}
+			# vassal_modifier = {
+				# levy_size = 0.2
+				# army_maintenance_mult = -0.2
+				# garrison_size = 0.2
+				# levy_reinforcement_rate = 0.2
+				# controlled_province_advantage = 5
+			# }
 
-			flag = has_march_contract
+			# flag = has_march_contract
 
-			ai_liege_desire =  {
-				value = 0
-				if = {
-					limit = {
-						scope:vassal = {
-							OR = {
-								government_has_flag = government_is_clan
-								AND = {
-									government_has_flag = government_is_feudal
-									OR = {
-										vassal_contract_obligation_level:feudal_government_taxes < feudal_tax_normal_level
-										vassal_contract_obligation_level:feudal_government_levies > feudal_levies_normal_level
-									}
-								}
-							}
-						}
-					}
-					add = @ai_standard_liege_desire
-				}
-			}
-		}
-		special_contract_palatinate = {
-			is_shown = { scope:vassal = { government_has_flag = government_is_feudal } }
-			is_valid = {
-				scope:liege.culture = {
-					has_innovation = innovation_divine_right
-				}
-				scope:vassal.primary_title.tier >= tier_duchy
-			}
-			parent = special_contract_none
-			position = { 1 2 }
-			score = 0
+			# ai_liege_desire =  {
+				# value = 0
+				# if = {
+					# limit = {
+						# scope:vassal = {
+							# OR = {
+								# government_has_flag = government_is_clan
+								# AND = {
+									# government_has_flag = government_is_feudal
+									# OR = {
+										# vassal_contract_obligation_level:feudal_government_taxes < feudal_tax_normal_level
+										# vassal_contract_obligation_level:feudal_government_levies > feudal_levies_normal_level
+									# }
+								# }
+							# }
+						# }
+					# }
+					# add = @ai_standard_liege_desire
+				# }
+			# }
+		# }
+		# special_contract_palatinate = {
+			# is_shown = { scope:vassal = { government_has_flag = government_is_feudal } }
+			# is_valid = {
+				# scope:liege.culture = {
+					# has_innovation = innovation_divine_right
+				# }
+				# scope:vassal.primary_title.tier >= tier_duchy
+			# }
+			# parent = special_contract_none
+			# position = { 1 2 }
+			# score = 0
 
-			tax_factor = palatinate_contract_taxes
-			levies_factor = palatinate_contract_levies
+			# tax_factor = palatinate_contract_taxes
+			# levies_factor = palatinate_contract_levies
 
-			liege_modifier = {
-				monthly_prestige_gain_mult = 0.05
-			}
+			# liege_modifier = {
+				# monthly_prestige_gain_mult = 0.05
+			# }
 
-			vassal_modifier = {
-				monthly_prestige_gain_mult = 0.2
-				fellow_vassal_opinion = 15
-				owned_personal_scheme_success_chance_add = 10
-				owned_hostile_scheme_success_chance_add = 10
-			}
+			# vassal_modifier = {
+				# monthly_prestige_gain_mult = 0.2
+				# fellow_vassal_opinion = 15
+				# owned_personal_scheme_success_chance_add = 10
+				# owned_hostile_scheme_success_chance_add = 10
+			# }
 
-			flag = has_palatinate_contract
+			# flag = has_palatinate_contract
 
-			ai_liege_desire =  {
-				value = 0
-				if = {
-					limit = {
-						scope:vassal = {
-							government_has_flag = government_is_feudal
-							vassal_contract_obligation_level:feudal_government_taxes < feudal_tax_low_level
-							vassal_contract_obligation_level:feudal_government_levies < feudal_levies_low_level
-						}
-					}
-					add = @ai_standard_liege_desire
-				}
-			}
-		}
+			# ai_liege_desire =  {
+				# value = 0
+				# if = {
+					# limit = {
+						# scope:vassal = {
+							# government_has_flag = government_is_feudal
+							# vassal_contract_obligation_level:feudal_government_taxes < feudal_tax_low_level
+							# vassal_contract_obligation_level:feudal_government_levies < feudal_levies_low_level
+						# }
+					# }
+					# add = @ai_standard_liege_desire
+				# }
+			# }
+		# }
 		
 		###TALES OF IRELAND###
 		special_contract_fomorian_tributary = {

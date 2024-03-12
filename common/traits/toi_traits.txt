@@ -493,7 +493,7 @@ nemedian = {
 	physical = yes
 	fertility = 0.15
 	controlled_province_advantage = 5
-	monthly_county_control_change_factor = 1
+	monthly_county_control_growth_factor = 1
 	controlled_province_advantage = 5
 	
 	opposite_opinion = -10
@@ -549,7 +549,7 @@ half_nemedian = {
 	physical = yes
 	fertility = 0.05
 	controlled_province_advantage = 2
-	monthly_county_control_change_factor = 0.5
+	monthly_county_control_growth_factor = 0.5
 	controlled_province_advantage = 2
 	
 	ruler_designer_cost = 5
@@ -602,7 +602,7 @@ three_quarter_nemedian = {
 	physical = yes
 	fertility = 0.05
 	controlled_province_advantage = 2
-	monthly_county_control_change_factor = 0.5
+	monthly_county_control_growth_factor = 0.5
 	controlled_province_advantage = 2
 	
 	ruler_designer_cost = 5
@@ -1424,8 +1424,8 @@ gaelic_giant = {
 	general_opinion = 10
 	
 	flag = can_not_marry
-	can_inherit = no
-	blocks_from_claim_inheritance = yes
+	# can_inherit = no
+	# blocks_from_claim_inheritance = yes
 	can_have_children = no
 	
 	physical = yes
@@ -1975,7 +1975,7 @@ unseelie_fairy = {
 	
 	shown_in_ruler_designer = no
 	
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 	opposite_opinion = -50
 	
 	
@@ -2029,10 +2029,9 @@ lactose_intolerance = {
 	courtier_and_guest_opinion = -5
 	same_opinion = 40
 	
-	birth = 0.2
-	random_creation = 0.2
+	birth = 0.25
+	random_creation = 0.25
 	
-	inherit_chance = 25
 	genetic = yes
 	
 	ruler_designer_cost = -5

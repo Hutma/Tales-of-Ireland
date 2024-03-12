@@ -45,11 +45,11 @@ crown_authority = {
 				custom_description = {
 					subject = root
 					text = "has_crown_authority_cooldown"
-					NAND = {
+					NOT = {
 						has_variable = crown_authority_cooldown
-						NOT = {
-							culture = { has_innovation = innovation_all_things }
-						}
+						# NOT = {
+							# culture = { has_innovation = innovation_all_things }
+						# }
 					}
 				}
 			}
@@ -98,7 +98,7 @@ crown_authority = {
 			courtly_opinion = -5
 			zealot_opinion = -10
 			minority_opinion = -10
-			vassal_tax_mult = 0.1
+			vassal_tax_contribution_mult = 0.1
 			vassal_levy_contribution_mult = 0.1
 		}
 		flag = uses_crown_authority
@@ -120,11 +120,11 @@ crown_authority = {
 				custom_description = {
 					subject = root
 					text = "has_crown_authority_cooldown"
-					NAND = {
+					NOT = {
 						has_variable = crown_authority_cooldown
-						NOT = {
-							culture = { has_innovation = innovation_all_things }
-						}
+						# NOT = {
+							# culture = { has_innovation = innovation_all_things }
+						# }
 					}
 				}
 			}
@@ -170,7 +170,7 @@ crown_authority = {
 			courtly_opinion = -10
 			zealot_opinion = -20
 			minority_opinion = -30
-			vassal_tax_mult = 0.15
+			vassal_tax_contribution_mult = 0.15
 			vassal_levy_contribution_mult = 0.15
 		}
 		flag = uses_crown_authority
@@ -186,11 +186,11 @@ crown_authority = {
 			custom_description = {
 				subject = root
 				text = "has_crown_authority_cooldown"
-				NAND = {
+				NOT = {
 					has_variable = crown_authority_cooldown
-					NOT = {
-						culture = { has_innovation = innovation_all_things }
-					}
+					# NOT = {
+						# culture = { has_innovation = innovation_all_things }
+					# }
 				}
 			}
 			can_pass_law_ca3_trigger = yes
@@ -265,9 +265,9 @@ tribal_authority = {
 					text = "has_tribal_authority_cooldown"
 					NAND = {
 						has_variable = tribal_authority_cooldown
-						NOT = {
-							culture = { has_innovation = innovation_all_things }
-						}
+						# NOT = {
+							# culture = { has_innovation = innovation_all_things }
+						# }
 					}
 				}
 			}
@@ -333,9 +333,9 @@ tribal_authority = {
 					text = "has_tribal_authority_cooldown"
 					NAND = {
 						has_variable = tribal_authority_cooldown
-						NOT = {
-							culture = { has_innovation = innovation_all_things }
-						}
+						# NOT = {
+							# culture = { has_innovation = innovation_all_things }
+						# }
 					}
 				}
 			}
@@ -394,9 +394,9 @@ tribal_authority = {
 				text = "has_tribal_authority_cooldown"
 				NAND = {
 						has_variable = tribal_authority_cooldown
-						NOT = {
-							culture = { has_innovation = innovation_all_things }
-						}
+						# NOT = {
+							# culture = { has_innovation = innovation_all_things }
+						# }
 					}
 			}
 		}

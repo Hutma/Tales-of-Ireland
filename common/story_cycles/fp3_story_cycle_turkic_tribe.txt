@@ -1,0 +1,27 @@
+﻿turkic_tribe_story = {
+
+
+	on_setup = {
+		
+	}
+
+	on_owner_death = {
+		
+	}
+
+	# nomad leader is dead
+	effect_group = {
+		
+	}
+
+
+
+	# Something happens - random events
+	effect_group = {
+		
+	}
+
+	effect_group = { #the nomad chain's end
+		
+	}
+}

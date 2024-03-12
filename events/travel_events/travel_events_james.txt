@@ -176,6 +176,15 @@ travel_events.4000 = {
 		root.current_travel_plan = {
 			add_companion = scope:mystic_scope
 		}
+		if = {
+			limit = {
+				has_trait = lifestyle_mystic
+			}
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = lifestyle_mystic_xp_gain_minor_value
+			}
+		}
 		stress_impact = {
 			lifestyle_mystic = minor_stress_impact_loss
 			paranoid = medium_stress_impact_gain
@@ -681,23 +690,24 @@ travel_events.4002 = {
 
 # You encounter vikings at sea
 scripted_trigger is_near_vikings_trigger = {
-	NOT = {
-		culture = { has_innovation = innovation_longboats }
-	}
-	location = {
-		any_neighboring_province = {
-			exists = county #Not at sea, not an impassable
-			county = {
-				any_county = {
-					holder = { in_diplomatic_range = root }
-					is_coastal_county = yes
-					any_county_province = { is_coastal = yes }
-					culture = { has_innovation = innovation_longboats }
-					faith = { has_doctrine_parameter = faith_can_raid }
-				}
-			}
-		}
-	}
+	# NOT = {
+		# culture = { has_innovation = innovation_longboats }
+	# }
+	# location = {
+		# any_neighboring_province = {
+			# exists = county #Not at sea, not an impassable
+			# county = {
+				# any_county = {
+					# holder = { in_diplomatic_range = root }
+					# is_coastal_county = yes
+					# any_county_province = { is_coastal = yes }
+					# culture = { has_innovation = innovation_longboats }
+					# faith = { has_doctrine_parameter = faith_can_raid }
+				# }
+			# }
+		# }
+	# }
+	always = no
 }
 scripted_trigger is_near_berber_pirates_trigger = {
 	# NOT = {
@@ -749,32 +759,33 @@ travel_events.4003 = {
 	override_background = { reference = fp1_ocean }
 	cooldown = { years = 10 }
 	trigger = {
-		is_available_travelling = yes
-        is_landed = yes
-		location = {
-			is_sea_province = yes
-			any_neighboring_province = {
-				exists = county #Is this on land and in the landed title structure.
-				county = {
-					holder = { in_diplomatic_range = root }
-					any_county_province = { is_coastal = yes }
-					culture = { has_innovation = innovation_longboats }
-					faith = { has_doctrine_parameter = faith_can_raid }
-				}
-			}
-		}
-		location = {
-			OR = {
-				travel_danger_type = {
-					travel_plan = root.current_travel_plan
-					terrain = sea
-				}
-				travel_danger_type = {
-					travel_plan = root.current_travel_plan
-					terrain = coastal_sea
-				}
-			}
-		}
+		# is_available_travelling = yes
+        # is_landed = yes
+		# location = {
+			# is_sea_province = yes
+			# any_neighboring_province = {
+				# exists = county #Is this on land and in the landed title structure.
+				# county = {
+					# holder = { in_diplomatic_range = root }
+					# any_county_province = { is_coastal = yes }
+					# culture = { has_innovation = innovation_longboats }
+					# faith = { has_doctrine_parameter = faith_can_raid }
+				# }
+			# }
+		# }
+		# location = {
+			# OR = {
+				# travel_danger_type = {
+					# travel_plan = root.current_travel_plan
+					# terrain = sea
+				# }
+				# travel_danger_type = {
+					# travel_plan = root.current_travel_plan
+					# terrain = coastal_sea
+				# }
+			# }
+		# }
+		always = no
 	}
 	weight_multiplier = {
 		base = 1
@@ -790,32 +801,33 @@ travel_events.4003 = {
 	immediate = {
 		if = {
 			limit = {
-				is_near_vikings_trigger = yes
+				# is_near_vikings_trigger = yes
+				always = no
 			}
-			location = {
-				random_neighboring_province = {
-					limit = {
-						exists = county #Not at sea, not an impassable
-						county = {
-							holder = { in_diplomatic_range = root }
-							any_county_province = { is_coastal = yes }
-							culture = { has_innovation = innovation_longboats }
-							faith = { has_doctrine_parameter = faith_can_raid }
-						}
-					}
-					county = {
-						save_scope_as = pirate_county_scope
-					}
-				}
-			}
-			create_character = {
-				template = fp1_ms_warrior_character
-				location = root.location
-				culture = scope:pirate_county_scope.culture
-				faith = scope:pirate_county_scope.faith
-				#Set up the scope
-				save_scope_as = viking_scope
-			}
+			# location = {
+				# random_neighboring_province = {
+					# limit = {
+						# exists = county #Not at sea, not an impassable
+						# county = {
+							# holder = { in_diplomatic_range = root }
+							# any_county_province = { is_coastal = yes }
+							# culture = { has_innovation = innovation_longboats }
+							# faith = { has_doctrine_parameter = faith_can_raid }
+						# }
+					# }
+					# county = {
+						# save_scope_as = pirate_county_scope
+					# }
+				# }
+			# }
+			# create_character = {
+				# template = fp1_ms_warrior_character
+				# location = root.location
+				# culture = scope:pirate_county_scope.culture
+				# faith = scope:pirate_county_scope.faith
+				# Set up the scope
+				# save_scope_as = viking_scope
+			# }
 		}
 		else_if = {
 			limit = {
@@ -889,19 +901,19 @@ travel_events.4003 = {
 							}
 						}
 						random_list = {
-							5 = {
-								if= {
-									limit = {
-										scope:viking_scope.culture = {
-											has_innovation = innovation_longboats
-										}
-									}
-									give_nickname = nick_northmen_slayer
-								}
-								else = {
-									give_nickname = nick_pirate_slayer
-								}
-							}
+							# 5 = {
+								# if= {
+									# limit = {
+										# scope:viking_scope.culture = {
+											# has_innovation = innovation_longboats
+										# }
+									# }
+									# give_nickname = nick_northmen_slayer
+								# }
+								# else = {
+									# give_nickname = nick_pirate_slayer
+								# }
+							# }
 							95 = {}
 						}
 					}
@@ -4048,6 +4060,15 @@ travel_events.4022 = {
 				zealous = medium_stress_impact_gain
 			}
 		}
+		if = {
+			limit = {
+				has_trait = lifestyle_mystic
+			}
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = lifestyle_mystic_xp_gain_minor_value
+			}
+		}
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -4181,6 +4202,15 @@ travel_events.4022 = {
 			add_piety = medium_piety_loss
 			stress_impact = {
 				zealous = major_piety_gain
+			}
+		}
+		if = {
+			limit = {
+				has_trait = lifestyle_mystic
+			}
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = lifestyle_mystic_xp_gain_minor_value
 			}
 		}
 		if = {
@@ -6865,6 +6895,15 @@ travel_events.4037 = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_trait = lifestyle_mystic
+			}
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = lifestyle_mystic_xp_gain_minor_value
+			}
+		}
 		stress_impact = {
 			arrogant = medium_stress_impact_gain
 			lazy = medium_stress_impact_gain
@@ -7043,6 +7082,15 @@ travel_events.4038 = {
 		}
 		custom_tooltip = cheaper_to_convert_to_priest_faith_tt
 		add_learning_lifestyle_xp = minor_lifestyle_xp
+		if = {
+			limit = {
+				has_trait = lifestyle_mystic
+			}
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = lifestyle_mystic_xp_gain_minor_value
+			}
+		}
 		stress_impact = {
 			shy = medium_stress_impact_gain
 			arrogant = medium_stress_impact_gain

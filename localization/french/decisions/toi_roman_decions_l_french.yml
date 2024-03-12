@@ -1,0 +1,11 @@
+﻿l_french:
+ ##################### 
+ #Made by tom5667 - Polytheism Reborn 
+ ###################### 
+  
+ #choose your main deity 
+ choose_main_deity_cdr_decision: "Choisissez votre divinité principale"
+ cdr_cmd_decision_desc: "Pour la plupart des anciens polythéistes romains, il y avait un dieu particulier qui était important pour leur famille, pour le fermier Cérès, et Mars pour les soldats."
+ choose_main_deity_cdr_decision_tooltip: "cela ne peut être fait qu'une fois dans la vie, alors choisissez judicieusement"
+ choose_main_deity_cdr_decision_confirm: "Voyons"
+  

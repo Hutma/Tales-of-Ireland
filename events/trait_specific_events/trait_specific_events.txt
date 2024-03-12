@@ -1389,11 +1389,11 @@ scripted_effect lisp_mocking_reaction_effect = {
 		10 = {
 			trigger = {
 				has_trait = theologian
-				NOT = {
-					faith = {
-						religion_tag = islam_religion
-					}
-				}
+				# NOT = {
+					# faith = {
+						# religion_tag = islam_religion
+					# }
+				# }
 			}	
 			add_character_flag = lisp_mocking_reaction_theologian
 		}

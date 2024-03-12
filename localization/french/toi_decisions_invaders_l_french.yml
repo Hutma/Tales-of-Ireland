@@ -1,0 +1,21 @@
+﻿l_french:
+  
+ hy_brasilian_troops_decision: "Appel à plus d'aventuriers"
+ hy_brasilian_troops_decision_desc: "Nous avons prouvé que nous pouvons prendre des terres aux étrangers de l'île d'Émeraude, nous pouvons désormais appeler davantage d'hommes à nous rejoindre dans notre conquête."
+ hy_brasilian_troops_decision_tooltip: "Nouveau terrain à coloniser !"
+ hy_brasilian_troops_decision_confirm: "Nouveau terrain à coloniser !"
+  
+ fianna_troops_decision: "Recruter une bande de Fianna"
+ fianna_troops_decision_desc: "J'ai prouvé que j'étais l'égal des chefs irlandais, ce qui convaincra davantage de Fianna de rejoindre mes rangs."
+ fianna_troops_decision_tooltip: "La gloire nous attend"
+ fianna_troops_decision_confirm: "La gloire nous attend"
+  
+ roman_troops_decision: "Appel à une Légion romaine"
+ roman_troops_decision_desc: "Nous avons établi des Romains en Irlande et pourrions peut-être appeler une Légion."
+ roman_troops_decision_tooltip: "Gloire à Rome"
+ roman_troops_decision_confirm: "Gloire à Rome"
+  
+ the_roman_road_decision: "Établir la voie romaine"
+ the_roman_road_decision_desc: "Faites de votre mieux une habitude et vous ne saurez jamais que vous ne faites pas de votre mieux. Si vous construisez des routes, construisez-les romaines et faites-les durer deux mille ans."
+ the_roman_road_decision_tooltip: "Les routes apportent de la richesse"
+ the_roman_road_decision_confirm: "Les routes apportent de la richesse"

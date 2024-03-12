@@ -98,9 +98,9 @@ regain_ability_to_use_sept_stuff = {
 
 change_age = {
 	global = CHANGE_AGE_LOC
-	global_neg = CHANGE_AGE_LOC  # Commented out since it can't use the same loc keys, we're inverting the value
+	global_neg = CHANGE_AGE_LOC_NEG  # Commented out since it can't use the same loc keys, we're inverting the value
 	first = CHANGE_AGE_LOC	#Same loc as third person, since you cannot be a county.
-	first_neg = CHANGE_AGE_LOC	#Same loc as third person, since you cannot be a county.
+	first_neg = CHANGE_AGE_LOC_NEG	#Same loc as third person, since you cannot be a county.
 	third = CHANGE_AGE_LOC
-	third_neg = CHANGE_AGE_LOC
+	third_neg = CHANGE_AGE_LOC_NEG
 }

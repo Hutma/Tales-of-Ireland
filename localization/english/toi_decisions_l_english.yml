@@ -31,10 +31,15 @@
  celtic_troops_decision_confirm:0 "Send for the Warband"
  celtic_warband:0 "Celtic Warband"
  
- banish_fomorians_decision:0 "Banish The Fomorians"
- banish_fomorians_decision_desc:0 "Fomorians consider us as inferior, they consider us as their servants. We shouldn't have to suffer their presence in my court!"
- banish_fomorians_decision_tooltip:0 "Banish the Fomorians"
- banish_fomorians_decision_confirm:0 "Banish them ALL!"
+ reclaim_maige_tuired_decision:0 "Reclaim Maige Tuired"
+ reclaim_maige_tuired_decision_desc:0 "In ages long past, we ruled over a mighty empire. However, at the battle of Maige Tuired, the wretched Tuatha De Danann wrested control over the land we once called our own. \n Now, we reclaim our rightful rulership over the holy land of Maige Tuired, and with it, our rightful place as the leader of the Fir Bolg!"
+ reclaim_maige_tuired_decision_tooltip:0 "Declare war to take Maige Tuired"
+ reclaim_maige_tuired_decision_confirm:0 "To War!"
+ 
+ avange_cath_maige_tuired_decision:0 "Avenge Cath Maige Tuired"
+ avange_cath_maige_tuired_decision_desc:0 "Maige Tuired will now stand avenged. All Fir Bolgs can now be proud of their ancestral beliefs."
+ avange_cath_maige_tuired_decision_tooltip:0 "Avenge Cath Maige Tuired"
+ avange_cath_maige_tuired_decision_confirm:0 "Fir Bolgs are strongers"
  
  #High King decisions
  reform_high_kingship_decision:0 "Restore the High Kingship"
@@ -160,7 +165,7 @@
  call_gladiators_decision_desc:0 "The gladiators fighting in the Coliseum could be used as warriors on the battlefield. I will try to hire some of them to fight for me."
  call_gladiators_decision_tooltip:0 "Pay them"
  call_gladiators_decision_confirm:0 "Pay them"
- gladiators_army:0 "Gladiators"
+ # gladiators_army:0 "Gladiators"
  
  #Ancient kingdoms decisions
  found_ossory_decision:0 "Found Ossory"

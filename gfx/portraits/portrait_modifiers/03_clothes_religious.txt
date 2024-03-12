@@ -17,11 +17,11 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 150
-                portrait_religious_head_trigger = yes
-                portrait_religious_orthodox_trigger = yes
-            }
+            # modifier = {
+                # add = 150
+                # portrait_religious_head_trigger = yes
+                # portrait_religious_orthodox_trigger = yes
+            # }
         }
     }  
 
@@ -37,11 +37,11 @@
         outfit_tags = { priest_outfit bishop_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 120
-                portrait_religious_high_trigger = yes
-                portrait_religious_orthodox_trigger = yes
-            }
+            # modifier = {
+                # add = 120
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_orthodox_trigger = yes
+            # }
         }
     }
 
@@ -59,11 +59,11 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 120
-                portrait_religious_head_trigger = yes
-                portrait_religious_catholic_trigger = yes
-            }
+            # modifier = {
+                # add = 120
+                # portrait_religious_head_trigger = yes
+                # portrait_religious_catholic_trigger = yes
+            # }
         }
     }
 
@@ -79,11 +79,11 @@
         outfit_tags = { priest_outfit bishop_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 110
-                portrait_religious_high_trigger = yes
-                portrait_religious_christian_trigger = yes
-            }
+            # modifier = {
+                # add = 110
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_christian_trigger = yes
+            # }
         }
     }
 
@@ -105,11 +105,11 @@
         outfit_tags = { monk_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_devoted_trigger = yes
-                portrait_religious_christian_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_devoted_trigger = yes
+                # portrait_religious_christian_trigger = yes
+            # }
         }
     }
 
@@ -128,11 +128,11 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 120
-                portrait_religious_head_ruler_trigger = yes
-                portrait_religious_jewish_trigger = yes                
-            }
+            # modifier = {
+                # add = 120
+                # portrait_religious_head_ruler_trigger = yes
+                # portrait_religious_jewish_trigger = yes                
+            # }
         }
     }
 
@@ -148,13 +148,13 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 110
-                portrait_religious_high_trigger = yes
-                OR = {
-                    portrait_religious_jewish_trigger = yes
-                }
-            }
+            # modifier = {
+                # add = 110
+                # portrait_religious_high_trigger = yes
+                # OR = {
+                    # portrait_religious_jewish_trigger = yes
+                # }
+            # }
         }
     }
 
@@ -172,12 +172,12 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 112
-                portrait_religious_head_caliph_trigger = {
-                    RELIGION_INPUT = islam
-                }
-            }
+            # modifier = {
+                # add = 112
+                # portrait_religious_head_caliph_trigger = {
+                    # RELIGION_INPUT = islam
+                # }
+            # }
         }
     } 
 
@@ -193,11 +193,11 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 111
-                portrait_religious_high_trigger = yes
-                portrait_religious_muslim_trigger = yes
-            }
+            # modifier = {
+                # add = 111
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_muslim_trigger = yes
+            # }
         }
     }
 
@@ -212,11 +212,11 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_devoted_trigger = yes
-                portrait_religious_muslim_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_devoted_trigger = yes
+                # portrait_religious_muslim_trigger = yes
+            # }
         }
     }
 
@@ -239,28 +239,28 @@
             modifier = {
                 add = 100
                 portrait_religious_high_trigger = yes
-                portrait_religious_norse_trigger = yes           
+                # portrait_religious_norse_trigger = yes           
             }
-			modifier = { #TALES OF IRELAND DRUIDS
-				add = 100
-				exists = this
-				OR = {
-					has_character_flag = need_priest_outfit
-					is_theocratic_lessee = yes
-					AND = { is_ruler = yes has_government = theocracy_government }
-					has_council_position = councillor_court_chaplain
-				}
-				OR = {
-					religion = religion:celtic_religion
-					religion = religion:dark_knowledge_legacy_religion
-					religion = religion:eastern_legacy_religion
-					religion = religion:mystical_knowledge_legacy_religion
-					religion = religion:nature_worship_religion
-					religion = religion:northern_legacy_religion
-					religion = religion:real_gods_religion
-				}
+			# modifier = { #TALES OF IRELAND DRUIDS
+				# add = 100
+				# exists = this
+				# OR = {
+					# has_character_flag = need_priest_outfit
+					# is_theocratic_lessee = yes
+					# AND = { is_ruler = yes has_government = theocracy_government }
+					# has_council_position = councillor_court_chaplain
+				# }
+				# OR = {
+					# religion = religion:celtic_religion
+					# religion = religion:dark_knowledge_legacy_religion
+					# religion = religion:eastern_legacy_religion
+					# religion = religion:mystical_knowledge_legacy_religion
+					# religion = religion:nature_worship_religion
+					# religion = religion:northern_legacy_religion
+					# religion = religion:real_gods_religion
+				# }
 				
-			}
+			# }
         }
     }
 
@@ -280,11 +280,11 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_high_trigger = yes
-                portrait_religious_steppe_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_steppe_trigger = yes
+            # }
         }
     }
 
@@ -304,11 +304,11 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 110
-                portrait_religious_high_trigger = yes
-                portrait_religious_buddhist_trigger = yes
-            }
+            # modifier = {
+                # add = 110
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_buddhist_trigger = yes
+            # }
         }
     }
 
@@ -324,11 +324,11 @@
         outfit_tags = { monk_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_devoted_trigger = yes
-                portrait_religious_buddhist_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_devoted_trigger = yes
+                # portrait_religious_buddhist_trigger = yes
+            # }
         }
     }
 
@@ -347,11 +347,11 @@
         outfit_tags = { monk_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_devoted_trigger = yes
-                portrait_religious_hindu_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_devoted_trigger = yes
+                # portrait_religious_hindu_trigger = yes
+            # }
         }
     }
 
@@ -367,11 +367,11 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 110
-                portrait_religious_high_trigger = yes
-                portrait_religious_hindu_trigger = yes
-            }
+            # modifier = {
+                # add = 110
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_hindu_trigger = yes
+            # }
         }
     }
 
@@ -392,11 +392,11 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_high_trigger = yes
-                portrait_religious_zoroastrian_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_zoroastrian_trigger = yes
+            # }
         }
     }
 
@@ -472,11 +472,11 @@
         outfit_tags = { priest_outfit }
         weight = {
             base = 0
-            modifier = {
-                add = 100
-                portrait_religious_high_trigger = yes
-                portrait_religious_african_trigger = yes
-            }
+            # modifier = {
+                # add = 100
+                # portrait_religious_high_trigger = yes
+                # portrait_religious_african_trigger = yes
+            # }
         }
     }
 

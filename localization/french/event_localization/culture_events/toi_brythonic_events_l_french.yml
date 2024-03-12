@@ -1,0 +1,13 @@
+﻿l_french:
+ toi_brythonic_event.0001.t: "Un sept uni"
+ toi_brythonic_event.0001.desc: "Il existe de nombreux clans d'origine Brython, mais ils sont en grande partie chaotiques et désunis. \n\nCependant, notre Sept s'est uni sous ma bannière et mon règne. Cet exploit a été répandu partout, comme un exemple d’unité de clan."
+ toi_brythonic_event.0001.a: "Vive le clan."
+  
+ toi_brythonic_event.0002.t: "Je dirigerai tout mon mois de septembre"
+ toi_brythonic_event.0002.desc: "Je suis le dirigeant le plus puissant de notre clan, mais je ne suis pas servi par les autres. Je suis l’homme le plus influent de nos royaumes, et pourtant ils ne se mettent pas à genoux devant moi. Mon pouvoir et mon influence me permettent d'unir légitimement notre Sept."
+ toi_brythonic_event.0002.a: "Pour l'unité !"
+ toi_brythonic_event.0002.b: "La paix est primordiale, pas le pouvoir."
+  
+ toi_brythonic_event.0003.t: "Je dirigerai tout mon mois de septembre"
+ toi_brythonic_event.0003.desc: "Notre clan contrôle presque toutes les basses terres, s'étendant de Hay à Kerr. Sur chaque colline se trouve un château dirigé par notre clan, dans chaque forêt, des bûcherons royaux portent notre blason. Ce pouvoir lui a valu une place de choix dans la politique des Îles."
+ toi_brythonic_event.0003.a: "Que notre règne soit éternel."

@@ -27,7 +27,7 @@ light_footmen_leinster = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -58,7 +58,7 @@ bowmen_leinster = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -95,7 +95,7 @@ light_horsemen_leinster = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -127,7 +127,7 @@ pikemen_unit_leinster = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -155,7 +155,7 @@ armored_footmen_leinster = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -223,7 +223,7 @@ light_footmen_connacht = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -254,7 +254,7 @@ bowmen_connacht = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -291,7 +291,7 @@ light_horsemen_connacht = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -323,7 +323,7 @@ pikemen_unit_connacht = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -351,7 +351,7 @@ armored_footmen_connacht = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -419,7 +419,7 @@ light_footmen_munster = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -449,7 +449,7 @@ bowmen_munster = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -486,7 +486,7 @@ light_horsemen_munster = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -517,7 +517,7 @@ pikemen_unit_munster = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -545,7 +545,7 @@ armored_footmen_munster = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -612,7 +612,7 @@ light_footmen_ulster = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -642,7 +642,7 @@ bowmen_ulster = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -680,7 +680,7 @@ light_horsemen_ulster = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -712,7 +712,7 @@ pikemen_unit_ulster = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -740,7 +740,7 @@ armored_footmen_ulster = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -808,7 +808,7 @@ light_footmen_manx = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_mann_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -838,7 +838,7 @@ bowmen_manx = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_mann_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -875,7 +875,7 @@ light_horsemen_manx = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_mann_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -906,7 +906,7 @@ pikemen_unit_manx = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_mann_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -930,7 +930,7 @@ armored_footmen_manx = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_mann_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 25
@@ -997,7 +997,7 @@ light_footmen_scotland = {
 	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
 	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 30
@@ -1027,7 +1027,7 @@ bowmen_scotland = {
 	low_maintenance_cost = { gold = bowmen_low_maint_cost }
 	high_maintenance_cost = { gold = bowmen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	icon = bowmen
 	stack = 30
@@ -1063,7 +1063,7 @@ light_horsemen_scotland = {
 	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
 	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 30
@@ -1094,7 +1094,7 @@ pikemen_unit_scotland = {
 	low_maintenance_cost = { gold = pikemen_low_maint_cost }
 	high_maintenance_cost = { gold = pikemen_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 30
@@ -1118,7 +1118,7 @@ armored_footmen_scotland = {
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
 	
-	mercenary_fallback = yes
+	allowed_in_hired_troops = yes
 	holy_order_fallback = yes
 	
 	stack = 30

@@ -17,6 +17,7 @@
 # CULTURE_INPUT = fp2_iberian_christian
 # CULTURE_INPUT = fp2_iberian_muslim
 
+
 clothes_effect = { # Gene modifers to apply for characters wearing or not wearing clothes
     usage = game
     selection_behavior = max
@@ -91,7 +92,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
     fallback = default_clothes
     priority = 1
 
-	default_clothes = {
+
+    default_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -108,7 +110,7 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
 
 ## DDE HRE ##
 
-	dde_hre_commoners = {
+    dde_hre_commoners = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -132,8 +134,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             }
         }
     }
-	
-	dde_hre_low_nobles = {
+    
+    dde_hre_low_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -159,7 +161,7 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }
     }
 
-	dde_hre_high_nobles = {
+    dde_hre_high_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -184,10 +186,11 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             }
         }
     }
+    
 
 ## Western ##
 
-	western_commoners = {
+    western_commoners = {
 
         dna_modifiers = {
             accessory = {
@@ -212,8 +215,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             # }     
         }
     }
-	
-	ep2_western_era1_commoners = {
+
+    ep2_western_era1_commoners = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -281,8 +284,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             }
         }
     }
-
-	western_low_nobles = {
+ 
+    western_low_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -293,17 +296,26 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-		    modifier = {
-		        add = 50
-		        court_fashion_level_4_trigger = {
-		            CULTURE_INPUT = western
-		        }
-		    }
-            modifier = {
-                add = 50
-                portrait_low_nobles_clothing_trigger = { 
-                    CULTURE_INPUT = western
-                }      
+		    # modifier = {
+		        # add = 50
+		        # court_fashion_level_4_trigger = {
+		            # CULTURE_INPUT = western
+		        # }
+		    # }
+            # modifier = {
+                # add = 50
+                # portrait_low_nobles_clothing_trigger = { 
+                    # CULTURE_INPUT = western
+                # }      
+            # }
+			modifier = {
+                add = 51
+                # portrait_high_nobles_clothing_trigger = { 
+                    # CULTURE_INPUT = western
+                # }
+				# OR = {
+				highest_held_title_tier = tier_county
+				# }
             }
             # modifier = {
                 # factor = 0       
@@ -311,8 +323,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             # }
         }
     }
-	
-	ep2_western_era1_low_nobles = {
+
+    ep2_western_era1_low_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -408,7 +420,7 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }
     }
 
-	western_high_nobles = {
+    western_high_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -426,10 +438,14 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
 		        }
 		    }
             modifier = {
-                add = 50
-                portrait_high_nobles_clothing_trigger = { 
-                    CULTURE_INPUT = western
-                } 
+                add = 51
+                # portrait_high_nobles_clothing_trigger = { 
+                    # CULTURE_INPUT = western
+                # }
+				OR = {
+					highest_held_title_tier = tier_kingdom
+					highest_held_title_tier = tier_duchy
+				}
             }
             # modifier = {
                 # factor = 0     
@@ -437,8 +453,8 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             # }
         }
     }
-	
-	ep2_western_era1_high_nobles = {
+
+    ep2_western_era1_high_nobles = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -548,10 +564,11 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         weight = {
             base = 0
             modifier = {
-                add = 20
-                portrait_commoner_clothing_trigger = {
-                    CULTURE_INPUT = byzantine
-                }
+                add = 21
+                # portrait_commoner_clothing_trigger = {
+                    # CULTURE_INPUT = byzantine
+                # }
+				culture = { has_cultural_pillar = heritage_fir_bolg }
             }
         }
     }
@@ -568,11 +585,17 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         weight = {
             base = 0
             court_fashion_level_4_modifier = { INPUT_PARAMETER = byzantine }
-            modifier = {
-                add = 50
-                portrait_low_nobles_clothing_trigger = { 
-                    CULTURE_INPUT = byzantine
-                }  
+            # modifier = {
+                # add = 51
+                # portrait_low_nobles_clothing_trigger = { 
+                    # CULTURE_INPUT = byzantine
+                # }  
+            # }
+			modifier = {
+                add = 61 #TOI
+                culture = { has_cultural_pillar = heritage_fir_bolg }
+				highest_held_title_tier = tier_duchy
+				highest_held_title_tier = tier_kingdom
             }
         }
     }
@@ -590,7 +613,7 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             base = 0
             court_fashion_level_5_modifier = { INPUT_PARAMETER = byzantine } 
             modifier = {
-                add = 50
+                add = 0
                 portrait_high_nobles_clothing_trigger = { 
                     CULTURE_INPUT = byzantine
                 } 
@@ -598,7 +621,7 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }
     }
 
-### INDIAN ##
+## INDIAN ##
 
     indian_commoners = {
         dna_modifiers = {
@@ -702,6 +725,12 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
                     CULTURE_INPUT = dde_abbasid
                 }   
             }
+			modifier = {
+				add = -36 # Slightly lower if iranian is valid
+				portrait_low_nobles_clothing_trigger = { 
+					CULTURE_INPUT = fp3_iranian
+				}
+			}
         }
     }
 
@@ -723,6 +752,12 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
                     CULTURE_INPUT = dde_abbasid
                 } 
             }
+			modifier = {
+				add = -36 # Slightly lower if iranian is valid
+				portrait_high_nobles_clothing_trigger = { 
+					CULTURE_INPUT = fp3_iranian
+				}
+			}
         }
     }
 
@@ -788,6 +823,12 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
                     CULTURE_INPUT = mena
                 }  
             }
+			modifier = {
+				add = -36 # Slightly lower if iranian is valid
+				portrait_low_nobles_clothing_trigger = { 
+					CULTURE_INPUT = fp3_iranian
+				}
+			}
         }
     }
 
@@ -809,6 +850,12 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
                     CULTURE_INPUT = mena
                 } 
             }
+			modifier = {
+				add = -36 # Slightly lower if iranian is valid
+				portrait_high_nobles_clothing_trigger = { 
+					CULTURE_INPUT = fp3_iranian
+				}
+			}
         }
     }
 
@@ -942,7 +989,52 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
             }
         }
     }
+
+ ## FP3 IRANIAN ##
+
+fp3_iranian_low_nobles = {
+    dna_modifiers = {
+        accessory = {
+            mode = add
+            gene = clothes
+            template = fp3_iranian_low_nobility_clothes
+            range = { 0 1 } # For the randomness to work correctly
+        }
+    }   
+    weight = {
+        base = 0
+        court_fashion_level_4_modifier = { INPUT_PARAMETER = fp3_iranian }
+        modifier = {
+            add = 51 # Slightly higher
+            portrait_low_nobles_clothing_trigger = { 
+                CULTURE_INPUT = fp3_iranian
+            }
+        }
+    }
+}
+
+fp3_iranian_high_nobles = {
+    dna_modifiers = {
+        accessory = {
+            mode = add
+            gene = clothes
+            template = fp3_iranian_high_nobility_clothes
+            range = { 0 1 } # For the randomness to work correctly
+        }
+    }       
+    weight = {
+        base = 0
+        court_fashion_level_5_modifier = { INPUT_PARAMETER = fp3_iranian } 
+        modifier = {
+            add = 51 # Slightly higher
+            portrait_high_nobles_clothing_trigger = { 
+                CULTURE_INPUT = fp3_iranian
+            } 
+        }
+    }
+}
     
+
 ## FP2 Fate of Iberia ##
 
     fp2_iberian_christian_commoners = {

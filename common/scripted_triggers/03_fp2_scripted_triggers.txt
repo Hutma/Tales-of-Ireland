@@ -3,7 +3,6 @@
 # General Triggers
 
 fp2_should_use_iberian_graphics_trigger = {
-	has_fp2_dlc_trigger = yes
 	culture = { has_building_gfx = iberian_building_gfx }
 }
  
@@ -32,8 +31,20 @@ eligible_for_fp2_dynasty_legacies_trigger = {
 	dynasty = {
 		OR = {
 			dynast = {
-				any_character_struggle = {
-					involvement = involved
+				OR = {
+					# any_character_struggle = {
+					# 	involvement = involved
+					# 	is_struggle_type = iberian_struggle
+					# }
+					culture = {
+						has_cultural_pillar = heritage_milesian
+					}
+					# AND = {
+					# 	exists = capital_province
+					# 	capital_province = {
+					# 		geographical_region = world_europe_west_iberia
+					# 	}
+					# }
 				}
 			}
 		}
@@ -42,14 +53,15 @@ eligible_for_fp2_dynasty_legacies_trigger = {
 
 
 is_toledo_ownership_valid_trigger = {
-	title:c_toledo.holder = {
-		OR = {
-			this = root
-			liege = root
-			top_liege = root
-		}
-		faith = { fp2_struggle_faith_is_mozarabic_trigger = yes }
-	}
+	# title:c_toledo.holder = {
+		# OR = {
+			# this = root
+			# liege = root
+			# top_liege = root
+		# }
+		# faith = { fp2_struggle_faith_is_mozarabic_trigger = yes }
+	# }
+	always = no
 }
 
 ##################################################
@@ -226,16 +238,16 @@ fp2_struggle_contract_assistance_war_insufficient_trigger = {
 
 # Checks a de jure kingdom of Hispania is completely controlled
 fp2_struggle_ending_hold_de_jure_kingdom_trigger = {
-	any_held_title = {
-		tier = tier_kingdom
-		de_jure_liege = title:e_spain
-		save_temporary_scope_as = spanish_kingdom
-	}
-	trigger_if = {
-		limit = { exists = scope:spanish_kingdom }
-		completely_controls = scope:spanish_kingdom
-	}
-	trigger_else = { always = no }
+	# any_held_title = {
+		# tier = tier_kingdom
+		# de_jure_liege = title:e_spain
+		# save_temporary_scope_as = spanish_kingdom
+	# }
+	# trigger_if = {
+		# limit = { exists = scope:spanish_kingdom }
+		# completely_controls = scope:spanish_kingdom
+	# }
+	always = no
 }
 
 # Checks less than half of Iberia owned
@@ -321,15 +333,15 @@ fp2_struggle_ending_compromise_titular_trigger = {
 		}
 	}
 	# Titular duke holds at least half of any de jure duchy of Hispania
-	title:e_spain = {
-		any_in_de_jure_hierarchy = {
-			tier = tier_duchy
-			any_direct_de_jure_vassal_title = {
-				percent >= 0.5
-				holder.top_liege = scope:special_duchy.holder
-			}
-		}
-	}
+	# title:e_spain = {
+		# any_in_de_jure_hierarchy = {
+			# tier = tier_duchy
+			# any_direct_de_jure_vassal_title = {
+				# percent >= 0.5
+				# holder.top_liege = scope:special_duchy.holder
+			# }
+		# }
+	# }
 }
 
 # Should title be created by ststus quo decision?
@@ -420,8 +432,9 @@ fp2_struggle_compromise_transfer_duchy_trigger = {
 }
 
 fp2_struggle_faith_is_mozarabic_trigger = {
-	OR = {
-		this = faith:mozarabic_church
+	# OR = {
+		
+		# this = faith:mozarabic_church
 		# trigger_if = { # TODO: Find a way for dead characters to store data
 		# 	limit = { exists = founder }
         #     founder = {
@@ -429,7 +442,8 @@ fp2_struggle_faith_is_mozarabic_trigger = {
         #     	var:foundational_faith = faith:mozarabic_church
         #     }
 		# }
-    }
+    # }
+	always = no
 }
 
 fp2_struggle_council_toledo_attendee_trigger = {
@@ -462,7 +476,8 @@ fp2_struggle_iberian_reclamation_should_vassalize_trigger = {
 }
 
 fp2_struggle_any_realm_county_in_hispania_trigger = {
-	any_realm_county = { target_is_de_jure_liege_or_above = title:e_spain }
+	# any_realm_county = { target_is_de_jure_liege_or_above = title:e_spain }
+	always = no
 }
 
 fp2_iberian_reclamation_vassalize_iberian_trigger = {
@@ -514,13 +529,20 @@ fp2_bargain_fealty_war_losing_trigger = {
 	attacker_war_score >= fp2_bargain_fealty_interaction_already_losing_value
 }
 
+# We use a hard trigger so that this can be easily adjusted without overwriting the rest of the fp2_interactions file by modders.
+struggle_can_access_unlocks_bargain_fealty_interaction_trigger = {
+	# Just uhh, use an OR if you add something else.
+	is_struggle_type = iberian_struggle
+}
+
 ##################################################
 # Multi-File Event Triggers
 
 fp2_lyonese_monk_0002_papal_hof_trigger = {
-	religion = religion:christianity_religion
-	exists = faith.religious_head
-	faith.religious_head_title = title:k_papal_state
+	always = no
+	# religion = religion:christianity_religion
+	# exists = faith.religious_head
+	# faith.religious_head_title = title:k_papal_state
 }
 
 fp2_lyonese_monk_0002_valid_character_configuration_trigger = {

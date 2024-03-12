@@ -1,57 +1,53 @@
 ﻿l_french:
- great_hunt_decision:0 "La Grande chasse"
- great_hunt_decision_desc:0 "Nos dieux respectent la nature et la lutte de chaque être vivant pour survivre et surpasser les autres. Pour plaire aux dieux, nous devrions engager une grande chasse cérémonielle pour faire communion avec la forêt, la nature et les esprits divins."
- great_hunt_decision_tooltip:0 "Préparez la grande chasse cérémonielle"
- great_hunt_decision_confirm:0 "Assemblez les druides et les chasseurs"
-
- hunt_loved_gods:0 "Aimé des dieux"
- hunt_hated_gods:0 "Haï des dieux"
-
- great_hunt.0001.t:0 "La Grande chasse"
- great_hunt.0001.desc:0 "Les gens du pays sont tous réunis pour l'office religieux habituel, j'annonce à la fin que nous préparons une grande chasse cérémonielle qui honorera les dieux et nous apportera leur bénédictions. La foule acclame mon idée! 
-
-All the people of the people is now gathered for the usual religious ceremony, at the end of it I make the announcement that we are going to prepare for a great ceremonial hunt that will honor the gods and bring their blessings upon us. The crowd cheers!"
- great_hunt.0001.a:0 "Assemblez hommes et druides"
- great_hunt.0001.b:0 "Nous irons au-delà de nos frontières pour trouver la meilleure proie."
- 
- great_hunt.0002.t:0 "La Grande chasse"
- great_hunt.0002.desc:0 "Tous les chasseurs sont prêts, venus de tous les villages et forts, armés de leur meilleur arc et d'habits de cérémonie, chacun est préparé et se fie à moi pour le commander"
-
-
- great_hunt.0024.t:0 "Chasse catastrophique"
- great_hunt.0024.desc:0 "Nous n'avons aucune prise, les chasseurs sont fatigués et le moral est au plus bas, ce n'est pas une grande chasse, c'est une catastrophe."
-
-We have caught nothing, the hunters are tired and the mood of everyone is low, it's not a ceremonial hunt, it's a catastroph."
- great_hunt.0024.a:0 "Rentrons, nous ferons mieux la prochaine fois"
- great_hunt.0024.b:0 "Allons-bon, nous avons juste echoué la faute à pas de chance, redoublons d'efforts"
- great_hunt.0024.c:0 "Ne perdez pas bon coaur, nous ferons une fête dans notre nature sacrée"
- great_hunt.0024.c.success:0 "Bonne fête"
- great_hunt.0024.c.failure:0 "La fête ne remonte pas le moral"
- 
- great_hunt.0241.t:0 "Sauver la chasse"
- great_hunt.0241.desc:0 "Cela fait des heures que nous marchons quand nous apercevons un magnifique ours brun. Voilà l'occassion de rattraper cette chasse."
- great_hunt.0241.a:0 "I'll kill the beast and save the day"
- great_hunt.0241.b:0 "Nous l'encerclerons et le tuerons aisément
- great_hunt.0241.c:0 "Construisons un piège pour le capturer avant de le tuer.
- great_hunt.0241.success:0 "Chasse sauvée"
- great_hunt.0241.failure:0 "Chasse ratée"
- 
- great_hunt.0242.t:0 "Chasse ratée"
- great_hunt.0242.desc:0 "Après une longue bataille avec l'ours nous réussissons à le tuer et sauver la situation"
- great_hunt.0242.a:0 "Les dieu nous abandonnent"
- 
- great_hunt.0243.t:0 "Chasse sauvée"
- great_hunt.0243.desc:0 "L'ours finit par s'échapper dans une caverne et nous semer...
- great_hunt.0243.a:0 "Les dieu soient loués"
- 
- great_hunt.0023.t:0 "Mauvaise chasse"
- great_hunt.0023.desc:0 "Nous avons chassé durant des heures mais peu de gibier a été pris"
- great_hunt.0023.a:0 "Les dieu nous abandonnent"
- 
- great_hunt.0022.t:0 "Bonner chasse"
- great_hunt.0022.desc:0 "La chasse s'est très bien passée, nous sommes parvenus à tuer des proies d'exception et rentrons aimés des dieux."
- great_hunt.0022.a:0 "Les dieu soient loués"
- 
- great_hunt.0021.t:0 "Grande chasse"
- great_hunt.0021.desc:0 "Cette chasse a été magique, tout s'est bien passé, les chasseurs et druides étaient de bonne humeur et ont même réussis à tuer un ours brun. Les dieux nous aiment et nous ont récompensés pour cette cérémonie".
- great_hunt.0021.a:0 "Les dieu soient loués"
+ great_hunt_decision: "La grande chasse"
+ great_hunt_decision_desc: "Nos dieux respectent la nature et la lutte de chaque être vivant pour surpasser les autres et survivre. Pour plaire aux dieux, nous devrions participer à une grande chasse cérémonielle pour ne faire qu'un avec la forêt, la nature et les esprits divins."
+ great_hunt_decision_tooltip: "Préparez la Grande Chasse cérémoniale"
+ great_hunt_decision_confirm: "Rassemblez les druides et les chasseurs"
+  
+ hunt_loved_gods: "Aimé des dieux"
+ hunt_hated_gods: "Détesté par les dieux"
+  
+ great_hunt.0001.t: "La grande chasse"
+ great_hunt.0001.desc: "Tout le peuple est maintenant rassemblé pour la cérémonie religieuse habituelle, à la fin de celle-ci j'annonce que nous allons nous préparer pour une grande chasse cérémonielle qui honorera les dieux et nous apportera leurs bénédictions. La foule applaudit !"
+ great_hunt.0001.a: "Rassemblez des hommes et des druides."
+ great_hunt.0001.b: "Nous dépasserons nos frontières pour trouver les proies les plus impressionnantes."
+  
+ great_hunt.0002.t: "La grande chasse"
+ great_hunt.0002.desc: "Tous les chasseurs sont rassemblés et prêts, de tous les villages et forts où ils sont venus, ils sont armés de leur plus magnifique arc et vêtus de leurs vêtements de cérémonie, tout le monde est prêt et se tourne vers moi pour donner le commandement."
+ great_hunt.0002.a: "Enfonçons-nous au plus profond de nos bois et effectuons la Grande Chasse."
+  
+ great_hunt.0024.t: "Chasse catastrophique"
+ great_hunt.0024.desc: "Nous n'avons rien attrapé, les chasseurs sont fatigués et le moral de tout le monde est maussade, ce n'est pas une chasse cérémonielle, c'est une catastrophe."
+ great_hunt.0024.a: "Revenons en arrière, nous ferons mieux la prochaine fois."
+ great_hunt.0024.b: "Allez, nous avons échoué uniquement parce que nous n'avons pas eu de chance, essayons plus fort."
+ great_hunt.0024.c: "Ne perdez pas courage, nous ferons plutôt la fête dans notre nature sacrée."
+ great_hunt.0024.c.success: "Bonne fête"
+ great_hunt.0024.c.failure: "La fête ne remonte pas le moral"
+  
+ great_hunt.0241.t: "Sauvez la chasse"
+ great_hunt.0241.desc: "Nous marchons encore des heures lorsque vous apercevez enfin un bel ours, c'est maintenant l'occasion d'économiser un peu cette chasse."
+ great_hunt.0241.a: "Je vais tuer la bête et sauver la situation."
+ great_hunt.0241.b: "Nous allons l'entourer et le tuer facilement."
+ great_hunt.0241.c: "Construisons un piège pour l'attraper avant de le tuer."
+ great_hunt.0241.success: "Chasse sauvegardée"
+ great_hunt.0241.failure: "Chasse échouée"
+  
+ great_hunt.0242.t: "Chasse échouée"
+ great_hunt.0242.desc: "Après un long combat contre l'ours, nous avons réussi à le tuer et à sauver la situation."
+ great_hunt.0242.a: "Les dieux nous abandonnent."
+  
+ great_hunt.0243.t: "Chasse enregistrée"
+ great_hunt.0243.desc: "L'ours parvient finalement à s'échapper dans une caverne et on perd sa trace..."
+ great_hunt.0243.a: "Louez les dieux."
+  
+ great_hunt.0023.t: "Mauvaise chasse"
+ great_hunt.0023.desc: "Nous chassons depuis des heures et peu de proies ont été chassées avec succès."
+ great_hunt.0023.a: "Les dieux nous abandonnent."
+  
+ great_hunt.0022.t: "Bonne chasse"
+ great_hunt.0022.desc: "La chasse s'est très bien déroulée, nous avons réussi à tuer des proies impressionnantes et rentrons aimés des dieux."
+ great_hunt.0022.a: "Louez les dieux."
+  
+ great_hunt.0021.t: "Grande chasse"
+ great_hunt.0021.desc: "Cette chasse a été magique, tout s'est bien passé, les chasseurs et les druides étaient de bonne humeur et ont réussi à tuer un gros ours brun. Les dieux nous aiment et nous récompensent pour cette cérémonie."
+ great_hunt.0021.a: "Louez les dieux."

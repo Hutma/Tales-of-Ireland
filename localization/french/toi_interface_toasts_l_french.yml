@@ -1,0 +1,8 @@
+﻿l_french:
+ tooltip.vampire.need_blood: "Vous avez envie de sang..."
+ tooltip.vampire.hungry_for_blood: "Vous avez faim de sang..."
+ tooltip.vampire.take_blood.success: "Votre chasse est réussie"
+ tooltip.vampire.take_blood.failure: "Votre chasse a échoué"
+  
+ tooltip.unseelie_court_king_defense: "Les fées Unseelie défendent leur souverain !"
+ tooltip.seelie_court_king_defense: "Les fées Seelie défendent leur souverain !"

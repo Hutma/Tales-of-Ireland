@@ -1,35 +1,66 @@
 ﻿l_french:
- # Tales Of War: Heroic Warrior
- master_of_duel_perk_name:0 "Maître Duelliste"
- training_with_scathach_perk_name:0 "Entraînement avec Scáthach"
- giant_slayer_perk_name:0 "Tueur de Géant"
- a_champion_to_follow_perk_name:0 "Un champion exemplaire"
- adaptative_fighter_perk_name:0 "Combattant flexible"
-
- # Tales Of War: Legendary Strategist
- master_tactician_perk_name:0 "Maître Tacticien"
- ringfort_taker_perk_name:0 "Assiégeant de Forts Circulaires"
- organized_army_perk_name:0 "Armée Organisée"
- realm_guard_perk_name:0 "Garde Permanente"
- srengs_legacy_perk_name:0 "Héritage de Sreng"
-
-
- CHAMPION_TO_FOLLOW_PERK:0 "Trois champion puissants vous rejoingnent"
- REALM_GUARD_PERK:0 "Une troupe se met à votre service"
- realm_guard_perk_troops:0 "Garde Permanente"
-
- # Tales Of Abundance: Golden Tongue
- storyteller_perk_name:0 "Barde"
- beneficial_reputation_perk_name:0 "Réputation Bienfaîtrice"
- realm_of_legends_perk_name:0 "Pays de Légendes"
- influential_diplomat_perk_name:0 "Diplomate Influent"
- respected_by_all_perk_name:0 "Respecté de tous"
-
- # Tales Of Abundance: Brehon Laws Keeper
- civil_law_perk_name:0 "Loi Civile"
- justice_order_perk_name:0 "Ordre et Justice"
- gods_law_perk_name:0 "Loi des Dieux"
- men_law_perk_name:0 "Loi des Hommes"
- senchas_mar_perk_name:0 "Senchas Már"
- 
- INFLUENTIAL_DIPLOMAT_PERK: "Cet avantage vous donne 3 votes pour l'élection de la [high_kingship|E] si vous en êtes un électeur"
+  # Tales Of War: Heroic Warrior 
+ master_of_duel_perk_name: "Maître du Duel"
+ training_with_scathach_perk_name: "Entraînement avec Scáthach"
+ giant_slayer_perk_name: "Tueur de géant"
+ a_champion_to_follow_perk_name: "Un champion à suivre"
+ adaptative_fighter_perk_name: "Combattant adaptatif"
+  
+  # Tales Of War: Legendary Strategist 
+ master_tactician_perk_name: "Maître Tacticien"
+ ringfort_taker_perk_name: "Preneur de Ringfort"
+ organized_army_perk_name: "Armée organisée"
+ realm_guard_perk_name: "Garde du royaume"
+ srengs_legacy_perk_name: "L'héritage de Sreng"
+  
+  
+ CHAMPION_TO_FOLLOW_PERK: "Trois puissants champions rejoindront votre cour"
+ REALM_GUARD_PERK: "Vous recevrez des troupes spéciales de levées et de gardes de maison"
+ realm_guard_perk_troops: "Garde du royaume"
+  
+  # Tales Of Abundance: Golden Tongue 
+ storyteller_perk_name: "Conteur"
+ beneficial_reputation_perk_name: "Réputation bénéfique"
+ realm_of_legends_perk_name: "Royaume des légendes"
+ influential_diplomat_perk_name: "Diplomate influent"
+ respected_by_all_perk_name: "Respecté de tous"
+  
+  # Tales Of Abundance: Brehon Laws Keeper 
+ civil_law_perk_name: "Droit civil"
+ justice_order_perk_name: "Justice et ordre"
+ gods_law_perk_name: "La loi des dieux"
+ men_law_perk_name: "La loi des hommes"
+ senchas_mar_perk_name: "Senchas Mar"
+  
+ INFLUENTIAL_DIPLOMAT_PERK: "Cet avantage vous accorde 3 voix pour l'élection [high_kingship|E] si vous êtes électeur"
+  
+  
+ SWIFT_EXECUTION_SCHEME_PERK: "Cet avantage vous donne accès au programme Poison Cattle"
+ EMBASSIES_SCHEME_PERK: "Cet avantage vous donne accès au programme Force Cattle Trade"
+  
+  
+  #Tales of Magic 
+ CONTROL_MAGIC_BLOOD_PERK_DESC: "Obtenez la capacité de faire de quelqu'un un magicien \n Réinitialisez votre #bold Stress Magique#! à #bold 0#!"
+ LEARN_A_UNIQUE_SPELL_EFFECT_DESC: "Choisissez un sort parmi #bold 3 sorts puissants uniques#! à apprendre"
+ KILLER_BLOW_MAGIC_PERK_EFFECT_DESC: "Débloquez l'interaction #bold Killer Blow#!"
+ CAUSE_DISCORDE_PERK_DESC: "Apprenez le sort #bold Cause Discorde#!"
+ SHADOW_BLOOD_PERK_DESC: "Courez la chance de devenir un #N Vampire#! ou un #N Wolfwalker#!."
+ make_magician_interaction: "Faire un magicien"
+ make_magician_interaction_desc: "Tuer [recipient.GetShortUINameNoTooltip]"
+ tooltip.magic.made_magician.target: "Vous avez reçu des pouvoirs magiques"
+ killing_blow_interaction: "Coup fatal"
+ make_magician_interaction_desc: "Tuer [recipient.GetShortUINameNoTooltip]"
+  
+  # Tales Of Magic: Light path 
+ fast_learner_perk_name: "Apprentissage rapide"
+ life_magic_perk_name: "Magie de la vie"
+ control_magic_blood_perk_name: "Contrôler le sang magique"
+ learn_by_the_books_perk_name: "Apprenez les mythes"
+ as_wise_as_the_sidhe_perk_name: "Aussi sage qu'un Sidhe"
+  
+  # Tales Of Magic: dark path 
+ shadow_forces_perk_name: "Forces de l'Ombre"
+ killer_blow_magic_perk_name: "Mot tueur"
+ cause_discorde_perk_name: "Causer la discorde"
+ shadow_blood_perk_name: "Sang sombre"
+ as_cruel_as_balor_perk_name: "Aussi cruel que Balor"

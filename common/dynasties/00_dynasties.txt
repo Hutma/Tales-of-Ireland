@@ -261,6 +261,26 @@
 	culture = "fir_bolg"
 }
 
+260 = {
+	name = "dynn_ferchail"
+	culture = "fairy_culture"
+}
+
+261 = {
+	name = "dynn_prodala"
+	culture = "fairy_culture"
+}
+
+262 = {
+	name = "dynn_lorgaepoaigh"
+	culture = "fairy_culture"
+}
+
+263 = {
+	name = "dynn_pachlar"
+	culture = "fairy_culture"
+}
+
 82 = {
 	prefix = "dynnp_mac"
 	name = "dynn_I_rgalaig"

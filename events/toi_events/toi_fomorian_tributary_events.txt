@@ -95,7 +95,7 @@ toi_fomorian_tributary.0001 = {
 	option = { #Talk to him to reduce the payment
 		name = toi_fomorian_tributary.0001.b
 		trigger = {
-			exists = scope:scope:fomorian_liege
+			exists = scope:fomorian_liege
 			root.diplomacy > 12
 		}
 		random_list = {
@@ -161,7 +161,7 @@ toi_fomorian_tributary.0001 = {
 	option = { #Hide a part of the cattle
 		name = toi_fomorian_tributary.0001.c
 		trigger = {
-			exists = scope:scope:fomorian_liege
+			exists = scope:fomorian_liege
 			root.intrigue > 12
 		}
 		random_list = {

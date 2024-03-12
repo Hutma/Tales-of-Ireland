@@ -31,6 +31,9 @@
 	
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_forbidden
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_sky_burial
 
 	traits = {
 		virtues = { generous just temperate }
@@ -200,7 +203,7 @@
 			holy_site = beaghmore_stone_circles
 
 			doctrine = tenet_divine_marriage
-			doctrine = tenet_sky_burials
+			doctrine = tenet_communal_identity
 			doctrine = tenet_divine_agriculture
 
                 	localization = {
@@ -355,6 +358,9 @@
 			doctrine = tenet_unrelenting_faith
 			doctrine = tenet_communal_identity
 			doctrine = tenet_deep_vengeance_flame
+			
+			#Funeral tradition
+			doctrine = doctrine_funeral_stoic
 
 			localization = {
 

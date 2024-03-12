@@ -134,7 +134,7 @@ bere = {
 	character_modifier = {
 		name = holy_site_bere_effect_name
 		controlled_province_advantage = 5
-		monthly_county_control_change_factor = 0.05
+		monthly_county_control_growth_factor = 0.05
 	}
 }
 
@@ -177,7 +177,7 @@ kings_grave_site = {
 	
 	character_modifier = {
 		name = holy_site_kings_grave_effect_name
-		monthly_county_control_change_factor = 0.1
+		monthly_county_control_growth_factor = 0.1
 		prowess = 2
 	}
 }

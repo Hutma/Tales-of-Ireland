@@ -62,6 +62,16 @@
 		360
 	}
 
+	# Number of days between checking tax collector ticks per tier
+	TAX_COLLECTOR_TASK_TICK = {
+		1800  # Unlanded has no vassals
+		1800 # Barons have no vassals
+		1100
+		720
+		120
+		60
+	}
+
 	MINIMUM_TASKS_IN_TICK = 128							# How many tasks do we need in each tick?
 	MAX_TASKS_IN_TICK = 192								# How high do we cap out? (If the frequency of a tick means we should do even more than this, we ignore this)
 	MAX_TICK_STALENESS = 8								# How long can we delay a tick for better load-balancing?
@@ -232,13 +242,33 @@
 	SUBTRACT_NORMAL_SUB_REGIMENTS_FOR_SIEGE_PURPOSES = 3# Ignore this many normal regiments when buying siege sub-regiments. This effectively means the AI will buy their first siege weapon after this many normal ones, and then one more for every NORMAL_SUB_REGIMENTS_PER_SIEGE_SUB_REGIMENT additional normal sub-regiments
 	REGIMENT_OBSOLETION_SCORE_DIFFERENCE = 20			# The AI will disband a regiment if it is this much worse than the best available regiment, and it is unable to hire more regiments (due to cost or being at cap). Quick math: 10 damage * 100 men / 200 cost = 5 score difference
 
+	### Brief: AI_BASE_WAR_CHANCE
+	# Basic chance of declaring war. Further reduced by energy; x0 at -100, x1
+	# at 100, x0.5 at 0 energy.
+	#
+	AI_BASE_WAR_CHANCE = 1							
 
-	AI_BASE_WAR_CHANCE = 0.5							# Basic chance of declaring war. Further reduced by energy; x0 at -100, x1 at 100, x0.5 at 0 energy
-	AI_WAR_BASE_COOLDOWN = 200							# How long, in days, does the AI have to wait between wars?
-	AI_WAR_COOLDOWN_RATIO_FOR_FULL_CHANCE = 5			# How far beyond the cooldown do you have to go before the time since the last war stops reducing the chance? With these numbers, chance at day 3650 would be 0x, 1x at 3650*2, and 0.5x at 3650*1.5
+	### Brief: AI_WAR_BASE_COOLDOWN
+	# How long, in days, does the AI have to wait between wars?
+	#
+	AI_WAR_BASE_COOLDOWN = 50							
+	
+	### Brief: AI_WAR_COOLDOWN_RATIO_FOR_FULL_CHANCE
+	# How far beyond the cooldown do you have to go before the time since the 
+	# last war stops reducing the chance? 
+	#
+	# Once the number of day since the last offensive war exceeds this number
+	# times the offensive war cooldown, the AI will no longer have a chance to
+	# not try to select a CB to use. 
+	#
+	# If this number is 1 or less, the AI will always look at a CB to use once
+	# the cooldown has expired.
+	#
+	AI_WAR_COOLDOWN_RATIO_FOR_FULL_CHANCE = 0	
+
 	AI_WAR_MAX_OFFENSIVE_WAR_PENALTY = 0.0				# If your offensive war penalty is higher than this, don't declare war unless you're a warmonger (faith doctrine) or irrational
 	AI_WAR_MIN_RATIONALITY_FOR_OFFENSIVE_WAR_PENALTY = -30	# At or below this value, the AI will declare war even if their offensive war penalty is high
-	MIN_SCORE_RATIO_FOR_CASUS_BELLI = 0.6				# The AI will never declare a war below this ratio of the best war it has available
+	MIN_SCORE_RATIO_FOR_CASUS_BELLI = 0.9				# The AI will never declare a war below this ratio of the best war it has available
 
 	AI_VENGEFULLNESS_FOR_WAR_WITH_HOSTAGE = 50			# AI must be at least this vengeful to attack a target warden of their hostage
 	AI_COMPASSION_FOR_WAR_WITH_HOSTAGE = -50			# AI must be less compassionate than this to attack a target warden of their hostage
@@ -247,13 +277,13 @@
 	AI_BOLDNESS_FOR_WAR_WITH_HOSTAGE = 50				# AI warden must be at least this bold to attack a target who gave them hostage
 	AI_CHANCE_TO_START_WAR_WITH_HOSTAGE = 0.5			# How likely is AI to attack a target if they are bound by hostages. Random chance between [0, 1)
 
-	CB_SCORE_DE_JURE_MULTIPLIER = 5.0					# If the title is de jure under the AI character
+	CB_SCORE_DE_JURE_MULTIPLIER = 10					# If the title is de jure under the AI character
 	CB_SCORE_DE_JURE_UNDER_LIEGE_MULTIPLIER = 1.5		# If the title is de jure under the AI character's liege
-	CB_SCORE_DE_JURE_UNDER_HIGHER_TITLE_MULTIPLIER = 1.5	# If the title is de jure under the de jure title directly above an independent AI character
+	CB_SCORE_DE_JURE_UNDER_HIGHER_TITLE_MULTIPLIER = 5	# If the title is de jure under the de jure title directly above an independent AI character
 	CB_SCORE_HIGHER_TITLE_MULTIPLIER = 2.0				# If the title is a higher tier than the AI character's current primary title
 
 	EXTRA_CB_SCORE_FOR_HOLY_SITES = 10					# The AI will assign this much extra score to conquering a province that is its holy site
-	CB_SCORE_MULT_NEIGHBOR_TITLE = 1.5					# The AI will multiply the score of neighboring titles taken by a CB by this much
+	CB_SCORE_MULT_NEIGHBOR_TITLE = 15					# The AI will multiply the score of neighboring titles taken by a CB by this much
 	
 	TARGET_MAX_DEFENSIVE_WARS = 3						# AI won't declare war on someone who already has this many or more defensive wars
 	DESIRED_WAR_SIDE_STRENGTH = 2.0						# AI won't call in more allies if its side in a war has at least this ratio of troops compared to the enemy. Uses current strength for own side, max strength for enemy side
@@ -270,8 +300,8 @@
 	CB_OPINION_OF_TARGET_MULTIPLIER = 0.1				# Multiplier for opinion of target 
 	CB_OPINION_OF_CLAIMANT_MULTIPLIER = 0.1				# Multiplier for opinion of claimant (if claimant is the AI, we use MAX_OPINION)
 	
-	CB_CLAIMANT_BECOMES_INDEPENDENT_MULTIPLIER = 0.25	# Multiplier if the claimant becomes indepent dut to this CB
-	CB_CLAIMANT_IS_CLOSE_RELATIVE_MULTIPLIER = 0.5		# Multiplier if the claimant is a close relative
+	CB_CLAIMANT_BECOMES_INDEPENDENT_MULTIPLIER = 0.35	# Multiplier if the claimant becomes indepent dut to this CB
+	CB_CLAIMANT_IS_CLOSE_RELATIVE_MULTIPLIER = 4		# Multiplier if the claimant is a close relative
 	CB_CLAIMANT_IS_NOT_CLOSE_RELATIVE_MULTIPLIER = 0.75	# Multiplier if the claimant is not a close relative
 	CB_CLAIMANT_GREED_MULTIPLIER = -0.5					# Multiplier of the AI's greed when scoring a CB for a claimant. Full greed gives this value while full generous gives the positive equivalent
 
@@ -318,7 +348,7 @@
 	CHASE_MIN_SIZE = 25									# The AI will not bother trying to chase armies smaller than this
 	CHASE_PRIMARY_ENEMY_MIN_SCORE = 0.75				# Score is between 0.0 and 1.0 and represents the percentage of the enemy's total strength the target unit contains. If lead by the primary enemy, the score is capped to this minimum
 	CHASE_PRIMARY_ENEMY_SOLDIER_MODIFIER = 2.0			# Modifies the number of target unit soldiers when considering if it's worth taking hostile attrition to attack it. I.e. AI won't attack a unit with 200 if it loses more by moving there
-	CHASE_MAX_SPEED_DIFFERENCE = 0.5					# Ignore chasing units that are this much faster unless adjacent
+	CHASE_MAX_SPEED_DIFFERENCE = 0.2					# Ignore chasing units that are this much faster unless adjacent
 	
 	COMBAT_RATIO_THRESHOLD = 0.5						# The AI will consider it valid to enter provinces where the predicted combat ratio compared to nearby enemies is above this value
 	COMBAT_RATIO_THRESHOLD_DESPERATE = 0.3				# When in desperate mode, the AI will consider it valid to enter provinces where the predicted combat ratio compared to nearby enemies is above this value
@@ -397,7 +427,7 @@
 	LAST_STAND_CAPITAL_SCORE = 5						# Score added to capital province when picking a final stand province while desperate (Should together with second best terrain advantage be less than best terrain advantage)
 	LAST_STAND_OCCUPIED_SCORE = -1000					# Score added for provinces already occupied by the enemy, prefer making a stand in an unoccupied province to force the enemy into combat
 	
-	DESPERATE_UNIT_MIN_SIZE = 10						# The AI will not make desperate last stands or attacks with units smaller than this
+	DESPERATE_UNIT_MIN_SIZE = 15						# The AI will not make desperate last stands or attacks with units smaller than this
 	
 	PLAYER_SUPPORT_WANTED_COMBAT_RATIO = 5.0			# Try to call in nearby allied AI units until this strength ratio is met
 	PLAYER_SUPPORT_ATTACK_TARGET_MAX_DISTANCE = 300		# If the first enemy unit on the player unit's path is further away than this, the AI units in support will ignore it and instead find better things to do around the player unit
@@ -458,6 +488,10 @@ NFaction = {
 NCourtPositions = {
 	MAX_SCORE_TO_FIRE_COURT_POSITION = -50 				# Threshold for "ai_will_do" in Court Positions for the AI to begin firing Court Position holders
 	MIN_SCORE_TO_HIRE_COURT_POSITION = 0 				# Threshold for "ai_will_do" in Court Positions for the AI to hire a Court Position
+
+	COURT_POSITION_TASK_SWITCH_SCORE = 1.25				# In order for the AI to switch to a different task type, the task needs to have a score that's at least the score of the current task multiplied with this. 1.25 means it needs to be 25% higher
+	MIN_SCORE_TO_START_COURT_POSITION_TASK = 0			# Threshold for "ai_will_do" in Court Positions Task types for the AI to start tasks (inactive tasks with this score or higher are considered)
+	MAX_SCORE_TO_STOP_COURT_POSITION_TASK = -10 		# Threshold for "ai_will_do" in Court Positions Task types for the AI to begin stopping tasks (active tasks with scores below or equal to this will be stopped)
 }
 
 NInventory = {
@@ -467,4 +501,12 @@ NInventory = {
 
 NActivity = {
 	ACTIVITY_SCORE_THRESHOLD = 20 								# Activities with scores above this threshold will be eligible for hosting. 
+}
+
+NTaxSlot = {
+	MIN_SCORE_TO_HIRE_TAX_COLLECTOR = 0             # Threshold for tax_collector_score for ai to consider hiring a candidate as a tax collector
+	MAX_SCORE_TO_FIRE_TAX_COLLECTOR = -25           # Threshold for tax_collector_score for ai to fire them, anything below will be fired
+
+	MIN_SCORE_RATIO_FOR_TAX_COLLECTOR_HIRE = 0.6    # When selecting a tax collector to hire, anything below this compared to the highest score is discarded
+	USE_EMPLOYED_CHARACTER_TO_HIRE_CHANCE =	0.15    # The chance to use assigned tax collector for a new tax slot. That means the character will be moved from the current tax slot to a new one
 }

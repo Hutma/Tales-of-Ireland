@@ -1,4 +1,4 @@
 ﻿l_french:
- special_contract_fomorian_tributary_short:0 "Tributaire fomorien"
- special_contract_fomorian_tributary:0 "Contrat tributaire fomorien"
- special_contract_fomorian_tributary_desc:0 "Ce vassal est un tributaire et doit verser un lourd tribut régulièrement. Ce tribut consiste des 2/3 de sa richesse, 2/3 de son bétail et un des enfants de sa cour."
+ special_contract_fomorian_tributary_short: "Affluent fomorien"
+ special_contract_fomorian_tributary: "Contrat d'affluent fomorien"
+ special_contract_fomorian_tributary_desc: "#flavor Ce vassal est un affluent et doit payer régulièrement un lourd tribut. Cet hommage est constitué des 2/3 de sa richesse, des 2/3 de son bétail et d'un des enfants de sa cour."

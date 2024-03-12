@@ -1,0 +1,16 @@
+﻿l_french:
+ toi_scotland_decisions.0001.t: "Le fondateur des îles"
+ toi_scotland_decisions.0001.desc: "Le travail de plusieurs années a enfin été récompensé. J'ai fondé l'empire des Îles, unissant mes sujets autrefois divisés sous une seule bannière. Cet accomplissement donnera son éclat à ma dynastie pour les générations à venir et assurera son avenir brillant et glorieux.\n\nLa nouvelle a voyagé bien au-delà de nos frontières, atteignant les oreilles du haut comme du bas. De nombreux nouveaux alliés ont envoyé leurs envoyés pour traiter avec nous, et les alliés existants ont cherché à renforcer nos liens d'amitié. Pourtant, notre vigilance ne peut vaciller. De nombreux nouveaux rivaux et usurpateurs potentiels sont également sortis de l’ombre, prêts à frapper au premier signe de faiblesse. Je serai prêt à défendre mon royaume contre quiconque voudrait le menacer et je mènerai mon peuple nouvellement uni vers la grandeur et la prospérité."
+ toi_scotland_decisions.0001.a: "C’est à nous de gouverner les mers."
+  
+ toi_scotland_decisions.0002.t: "Les îles se lèvent"
+ toi_scotland_decisions.0002.desc: "[founder.GetFullName] a réussi là où beaucoup d'autres ont échoué. Exerçant son grand pouvoir et son influence, il fonda l'empire des Îles, où ses habitants autrefois divisés vivront désormais unis sous son règne. Cet exploit monumental attirera de nombreux nouveaux alliés à ses côtés, mais des rivaux jaloux se cacheront également dans l’ombre. Ce nouvel empire durera-t-il et son peuple prospérera-t-il ? Ou va-t-il tomber entre les mains de ceux qui voudraient le détruire ?"
+ toi_scotland_decisions.0002.a: "C’est à eux de gouverner les mers."
+  
+ toi_scotland_decisions.0003.t: "Le fondateur de l'empire Dal Riata"
+ toi_scotland_decisions.0003.desc: "Le travail de plusieurs années a enfin été récompensé. J'ai fondé l'Empire Dal Riata, réunissant mes sujets autrefois divisés sous une seule bannière. Cet accomplissement donnera son éclat à ma dynastie pour les générations à venir et assurera son avenir brillant et glorieux.\n\nLa nouvelle a voyagé bien au-delà de nos frontières, atteignant les oreilles du haut comme du bas. De nombreux nouveaux alliés ont envoyé leurs envoyés pour traiter avec nous, et les alliés existants ont cherché à renforcer nos liens d'amitié. Pourtant, notre vigilance ne peut vaciller. De nombreux nouveaux rivaux et usurpateurs potentiels sont également sortis de l’ombre, prêts à frapper au premier signe de faiblesse. Je serai prêt à défendre mon royaume contre quiconque voudrait le menacer et je mènerai mon peuple nouvellement uni vers la grandeur et la prospérité."
+ toi_scotland_decisions.0003.a: "Rois d'Irlande et d'Alba."
+  
+ toi_scotland_decisions.0004.t: "L'empire Dal Riata s'élève"
+ toi_scotland_decisions.0004.desc: "[founder.GetFullName] a réussi là où beaucoup d'autres ont échoué. Exerçant son grand pouvoir et son influence, il fonda l'Empire Dal Riata, où ses habitants autrefois divisés vivront désormais unis sous son règne. Cet exploit monumental attirera de nombreux nouveaux alliés à ses côtés, mais des rivaux jaloux se cacheront également dans l’ombre. Ce nouvel empire durera-t-il et son peuple prospérera-t-il ? Ou va-t-il tomber entre les mains de ceux qui voudraient le détruire ?"
+ toi_scotland_decisions.0004.a: "Rois d'Irlande et d'Alba."

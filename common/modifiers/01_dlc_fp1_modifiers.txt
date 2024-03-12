@@ -38,10 +38,10 @@ scandinavian_adventurer_fp1_modifier = {
 
 nithing_fp1_modifier = {
 	icon = cockroach_negative
-	norse_opinion = -20
-	norwegian_opinion = -20
-	danish_opinion = -20
-	swedish_opinion = -20
+	# norse_opinion = -20
+	# norwegian_opinion = -20
+	# danish_opinion = -20
+	# swedish_opinion = -20
 }
 
 stingy_host_fp1_modifier = {
@@ -212,7 +212,7 @@ fp1_yearly_0071_troll_victory_lynx_modifier = {
 
 fp1_yearly_0071_troll_victory_moose_modifier = {
 	icon = bear_positive
-	learning_per_prestige_level = 2
+	learning_per_prestige_level = 1
 }
 
 brand_new_hunting_tools = {
@@ -409,12 +409,12 @@ fp1_stele_ancestors_weak = {
 
 fp1_stele_conquest_strong = {
 	icon = bear_positive
-	monthly_county_control_change_add = 0.5
+	monthly_county_control_growth_add = 0.5
 }
 
 fp1_stele_conquest_weak = {
 	icon = bear_positive
-	monthly_county_control_change_add = 0.25
+	monthly_county_control_growth_add = 0.25
 }
 
 fp1_stele_promotion_strong = {

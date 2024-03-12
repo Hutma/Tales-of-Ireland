@@ -32,6 +32,9 @@
 	
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_forbidden
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_stoic
 
 	traits = {
 		virtues = { generous just temperate }

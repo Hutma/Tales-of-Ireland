@@ -60,7 +60,7 @@ truce_with_de_danann_decision = { #ask for a 10 years truce with the gods
 		always = no
 		is_ruler = yes
 		OR = {
-			faith = faith:celtic_de_danann_worship
+			# faith = faith:celtic_de_danann_worship
 			faith = faith:megalithic_de_danann_worship
 		}
 	}

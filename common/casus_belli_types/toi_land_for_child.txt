@@ -136,6 +136,10 @@ land_child_son_cb = {
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -294,6 +298,9 @@ land_child_son_cb = {
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
 
 		# Prestige loss for the attacker
 		scope:attacker = {
@@ -494,6 +501,10 @@ land_child_daughter_cb = {
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -652,6 +663,9 @@ land_child_daughter_cb = {
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
 
 		# Prestige loss for the attacker
 		scope:attacker = {
@@ -850,6 +864,10 @@ land_child_equi_cb = {
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -1008,6 +1026,9 @@ land_child_equi_cb = {
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
 
 		# Prestige loss for the attacker
 		scope:attacker = {

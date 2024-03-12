@@ -2377,6 +2377,19 @@ court_ongoing.1050 = { #by Mathilda Bjarnehed
 	desc = {
 		desc = court_ongoing.1050.start.desc
 		first_valid = {
+			# triggered_desc = {
+				# trigger = {
+					# scope:target_host.faith = {
+						# OR = {
+							# religion = religion:christianity_religion
+							# religion = religion:buddhism_religion
+							# religion = religion:hinduism_religion
+							# religion = religion:jainism_religion
+						# }
+					# }
+				# }
+				# desc = court_ongoing.1050.monastery.desc
+			# }
 			desc = court_ongoing.1050.temple.desc
 		}
 	}

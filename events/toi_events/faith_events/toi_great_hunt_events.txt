@@ -438,7 +438,7 @@ great_hunt.0243 = { #Failed hunt
 			modifier = hunt_hated_gods
 			years = 5
 		}
-		add_trait = wounded
+		add_trait = wounded_1
 		add_prestige = -100
 	}
 }

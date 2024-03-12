@@ -103,6 +103,7 @@
  #Siege MaA
  siege_weapon:2 "[siege_weapons|E]"
  ram:0 "Ram"
+ ram_second_era:0 "Ram"
  siege_tower:0 "Siege Tower"
  
  #Regional MaA
@@ -173,6 +174,10 @@
  hy_brazylian_adventurers_flavor:0 "The Hy-Brazylian live on a small magical island North of Ireland, hidden in the clouds. The lack of space there forces some of the Hy-Brazylians to leave their home, looking for other shores. They are the Hy-Brazylian Adventurers."
  roman_legion:1 "Roman Legion"
  roman_legion_flavor:1 "#F The best of the best, Palatini are elite Roman soldiers who serve the Emperor directly.#!"
+ roman_auxiliaries:1 "Roman Auxiliaries"
+ roman_auxiliaries_flavor:1 "These soldiers are not Roman citizen but are integrated into the glory imperial army."
+ roman_celeres: "Celeres"
+ roman_celeres_flavor: "The Celeres are the most elite troops the Empire has to offer, sworn to protect the emperor until their last breath."
  fairy_swarm: "Fairy Swarm"
  fairy_swarm_flavor: "Rallying all the fairies we can in a strong swarm to overhelm the enemy."
 

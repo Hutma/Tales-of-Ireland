@@ -361,5 +361,5 @@ mass_influence_modifier = {
 	vassal_opinion = 10
 	courtier_opinion = 10
 	tax_mult = 0.25
-	monthly_county_control_change_add = 0.5
+	monthly_county_control_growth_add = 0.5
 }

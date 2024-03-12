@@ -1,0 +1,14 @@
+﻿l_french:
+  
+ declare_outlaw_interaction: "Déclarer hors-la-loi"
+ declare_outlaw_interaction_desc: "Déclarer quelqu'un comme hors-la-loi. Un hors-la-loi n'est pas apprécié par les autres dirigeants et n'importe quel autre dirigeant peut l'attaquer pour conquérir ses terres."
+ declare_outlaw_interaction_desc.tt: "[recipient.GetShortUINameNoTooltip] est déclaré hors-la-loi"
+ you_are_declare_outlaw_interaction_desc.tt: "Vous êtes déclaré hors-la-loi par le Haut Roi"
+  
+ repented_outlaw_interaction: "Retrouver son honneur"
+ repented_outlaw_interaction_desc: "Repentez-vous et payez un tribut de bétail au Haut Roi pour cesser d'être un hors-la-loi."
+ repented_outlaw_interaction_desc.tt: "[recipient.GetShortUINameNoTooltip] n'est plus un hors-la-loi"
+ you_repented_outlaw_interaction_desc.tt: "Vous n'êtes plus un hors-la-loi"
+  
+ recall_sept_interaction: "Rappel sept"
+ recall_sept_interaction_desc: "Rappelez le membre de votre dynastie à faire à nouveau partie de votre Sept. Il vous servira ainsi de vassal."

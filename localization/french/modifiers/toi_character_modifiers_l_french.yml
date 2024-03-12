@@ -1,11 +1,43 @@
 ﻿l_french:
- great_blessing_war:0 "Grande bénédiction de guerre"
- great_blessing_peace:0 "Grande bénédiction de paix"
- important_blessing_war:0 "Importante bénédiction de guerre"
- important_blessing_peace:0 "Importante bénédiction de paix"
- good_omen_war:0 "Bon présage de guerre"
- good_omen_peace:0 "Bon présage de paix"
- bad_omen_war:0 "Mauvais présage de guerre"
- bad_omen_peace:0 "Mauvais présage de paix"
- 
- high_king_hailed:0 "Haut Roi acclamé"
+ great_blessing_war: "Grande bénédiction de guerre"
+ great_blessing_peace: "Grande bénédiction de paix"
+ important_blessing_war: "Bénédiction de guerre importante"
+ important_blessing_peace: "Bénédiction de paix importante"
+ good_omen_war: "Bon présage de guerre"
+ good_omen_peace: "Bon présage de paix"
+ bad_omen_war: "Mauvais présage de guerre"
+ bad_omen_peace: "Mauvais présage de paix"
+  
+ high_king_hailed: "Le Haut Roi salué"
+  
+ serves_galway: "Sert Galway"
+ is_served_galway_one: "Galway servi"
+ is_served_galway_two: "Galway servi"
+ is_served_galway_three: "Galway servi"
+  
+ glashtin_child: "L'enfant de Glashtin"
+  
+ unleashed_wolf: "Marcheur-loup déchaîné"
+ balanced_wolf: "Marcheur de loups"
+ humanity_focused_wolf: "Marcheur-Loup retenu"
+  
+ blessed_cessarian: "La bénédiction de Noé"
+ the_blessed_fleet: "La flotte bénie"
+ salmon_shape_shift: "Saumon métamorphe"
+ peace_effort_1_liege: "Effort de paix"
+ peace_effort_2_liege: "Effort de paix"
+ peace_effort_2_vassal: "Effort de paix"
+ fear_of_flood: "Peur du déluge"
+  
+ prayer_to_balor: "Prière à Balor"
+ prayer_to_balor_root: "Prière à Balor"
+ fomorian_chosen_modifier: "Élu des Fomoriens de la mer"
+  
+ repented_outlaw: "Hors-la-loi repenti"
+ repented_outlaw_desc: "Ce personnage ne pourra plus être déclaré hors-la-loi avant un certain temps."
+  
+ weak_body: "Corps faible"
+ no_more_land: "Plus de terre"
+  
+ beat_up_fianna_modifier: "Battez la Fianna"  
+ abandonned_subjects_for_fianna_modifier: "Fianna préféré à leurs sujets"  

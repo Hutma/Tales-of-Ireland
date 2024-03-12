@@ -1,0 +1,17 @@
+﻿l_french:
+  
+ toi_nemedian_event.0001.t: "Visites d'étrangers"
+ toi_nemedian_event.0001.desc: "Un homme est entré dans mon Ringfort, portant des vêtements étranges et une présence étrange. Ses yeux sont aussi sombres que la nuit et sa voix distinctive n'est pas entièrement humaine. \n\n« Bénédictions sur vous, [ROOT.Char.GetFirstName]. J'apporte de bonnes nouvelles et la sagesse des dieux. Mais je suis si fatigué et affamé à cause de mes voyages, ne veux-tu pas épargner de la nourriture à un pauvre voyageur ? \n\nCet homme ne semble pas venir d'Irlande, ni d'ailleurs dans le monde. Il ne semble même pas être un Sidhe, d'après mon druide. Je sens que cet homme ne repartira pas les mains vides, dois-je l'accueillir à dîner ?"
+ toi_nemedian_event.0001.a: "Oui. Humain, Esprit ou autre, vous êtes mon invité."
+ toi_nemedian_event.0001.b: "Non, prenez cet or et partez."
+  
+ toi_nemedian_event.0002.t: "L'étranger a besoin de plus"
+ toi_nemedian_event.0002.desc: "Je peux maintenant confirmer que mon invité n'est pas humain, ne serait-ce que pour son appétit. Lui seul a mangé la moitié du festin, et maintenant il vient en demander plus !? \n\n« Bénédictions sur vous, [ROOT.Char.GetFirstName]. Votre immense générosité n'est pas restée lettre morte, mais communier avec les dieux n'est pas une tâche facile. Apportez-moi plus de bétail, donnez-moi de la force et la sagesse divine sera à vous. \n\nSi cet homme n'avait pas une faim surnaturelle, je supposerais que c'était un voleur. Il s'est montré en contact avec quelque chose de plus grand, mais me restera-t-il du bétail d'ici la fin ?"
+ toi_nemedian_event.0002.a: "Très bien, prends encore du bétail !"
+ toi_nemedian_event.0002.a.fail: "L'inconnu n'est pas sorti de sa salle à manger. Fatigués d'attendre, nous sommes entrés et avons découvert qu'il avait disparu, aux côtés du bétail que nous lui avions servi. Personne dans mon Ringfort ne l'a vu partir. Ce filou malveillant !"
+ toi_nemedian_event.0002.b: "Non, dans ce pays, le bétail est plus précieux que n'importe quelle sagesse divine !"
+  
+  
+ toi_nemedian_event.0003.t: "Étranger satisfait"
+ toi_nemedian_event.0003.desc: "Le festin individuel de l'étranger a duré une semaine, son ventre ne grossissant jamais, mais mes troupeaux ont tout de même diminué. Les rares fois où il ne mangeait pas, des voix pouvaient être entendues depuis sa chambre, des voix étranges émises par lui et ses relations divines. Aujourd'hui, il est venu me voir une dernière fois, sa voix autrefois étrangère est maintenant comme une douce musique à mes oreilles... \n\n« Bénédictions sur vous, [ROOT.Char.GetFirstName], dix mille bénédictions. Les dieux ont été témoins de votre générosité envers moi, financée par votre sage direction sur cette terre. Ils vous chantent des louanges et m'ont chargé de transmettre leur message. Oh [ROOT.Char.GetFirstName], les années à venir seront prospères à la fois pour votre royaume et pour vous-même, mais restez vigilant, car ceux qui ont un cœur envieux tenteront de voler votre bénédiction. \n\nJ'ai à peine le temps de comprendre ces mots avant qu'il ne quitte mon hall. J'essaie de le poursuivre, mais personne ne l'a vu partir. Il a apparemment disparu dans les airs au moment où il est parti."
+ toi_nemedian_event.0003.a: "Suis-je vraiment béni ?"

@@ -1,2 +1,15 @@
-﻿l_english:
- NOT_IS_PRIMARY_HEIR_OF_CHARACTER_TRIGGER:0 "N'est pas votre principal héritier"
+﻿l_french:
+ NOT_IS_PRIMARY_HEIR_OF_CHARACTER_TRIGGER: "Pas l'héritier principal"
+ BE_IN_FEAST_TRIGGER: "Ça doit être lors d'une fête"
+ HAVE_NO_CHILD_TRIGGER: "Ne doit pas avoir d'enfant"
+ TWO_YEARS_BETWEEN_CAST_TRIGGER: "Temps de recharge de deux ans"
+ NOT_MY_STRESS_LEVEL_IS_LESS_THAN: "Moins de 1 niveau de stress"
+ YOU_ARE_NOT_WOUNDED: "Vous n'etes pas blessé"
+ your_primary_heir_is_at_least_twenty: "Votre héritier principal a au moins 20 ans"
+ independent_or_not_your_vassal_desc: " Est indépendant ou pas votre vassal"
+ except_primary_heir_desc: "Sauf votre héritier de joueur"
+ found_empire_decision_six_kingdoms_held: "Vous en détenez 6 ou plus [kingdoms|E]"
+ DISINHERIT_REQUIREMENTS_DESC: "Doit avoir soit : lâche, fou, possédé, pied bot, bossu, zozotant, consanguin, faible, impuissant, grêle, albinos, saignant, stérile ou aveugle."
+ HAS_USED_LIFETIME_UNITE_THE_SEPT: "Vous avez déjà mené une guerre Unire le Sept au cours de votre vie"
+ RECALL_SEPT_ONCE_PER_LIFETIME: "Vous ne pouvez rappeler qu'un seul Sept de cette façon par vie"
+ defend_against_non_fairy_trigger_desc: "Doit être dans une guerre défensive contre un personnage non féerique"

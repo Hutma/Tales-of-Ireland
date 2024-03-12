@@ -1,0 +1,28 @@
+﻿l_french:
+  #Manx decisions 
+ unite_manx_decision: "Unir Mannin"
+ unite_manx_decision_desc: "Pendant trop longtemps, cette belle île a été trempée dans le sang alors que les seigneurs de guerre et les petits rois revendiquaient leurs droits. Maintenant que Mannin est à nouveau sous une seule bannière, ils seront mis de côté. Je suivrai les traces du vieux Bann et rétablirai le royaume de Mannin."
+ unite_manx_decision_tooltip: "Rétablir le royaume de Mannin"
+ unite_manx_decision_confirm: "Mannin en est un"
+  
+ control_over_manx_legacy_decision: "Contrôle de l'héritage de Mannin"
+ control_over_manx_legacy_decision_desc: "D’innombrables guerriers de cette belle île ont sacrifié leur vie dans de vaines tentatives pour l’unifier. Lorsque j’ai commencé mes conquêtes, beaucoup dans ma Cour pensaient que je finirais pareil. Ces voix sont désormais étouffées, remplacées par des acclamations et des louanges.\n\nIl existe quatre sites majeurs qui sont essentiels à l'unification de cette terre, et j'en contrôle deux. De grands guerriers ont abandonné leurs prétendus seigneurs pour rejoindre notre cause, et les zélés nous considèrent comme les favorisés des dieux. Mannin sera bientôt à nous."
+ control_over_manx_legacy_decision_tooltip: "Affirmez vos ambitions de contrôler Mannin"
+ control_over_manx_legacy_decision_confirm: "Nous profiterons de la situation"
+ army_of_manx_decision_troops: "Guerriers de Mannin"
+  
+ a_claim_in_manx_decision: "Présage de conquête"
+ a_claim_in_manx_decision_desc: "Autrefois, Mannin était une force avec laquelle il fallait compter, et même les grands rois d'Irlande et de Grande-Bretagne craignaient notre colère. Ce n'est que par l'unification sous un seul dirigeant que cette gloire passée pourra être récupérée.\n\nLes légendes parlent de dieux communiant avec les seigneurs de guerre aux Pierres de Ballaharra. J'y voyagerai et ils me guideront vers ma prochaine conquête."
+ A_CLAIM_IN_MANX_DECISION_RANDOM_MANX_COUNTY_GLOB: "Vous obtenez une réclamation sur un comté aléatoire de Mannin"
+ a_claim_in_manx_decision_tooltip: "Préparez les armées"
+ a_claim_in_manx_decision_confirm: "Nous partons à la conquête !"
+  
+ fir_mannin_decision: "Établir la culture du sapin Mannin"
+ fir_mannin_decision_desc: "Nos anciennes traditions ont été modifiées par les méthodes de Mannin. Nous devrions nous tourner vers les populations locales et voir ce que nous pouvons apprendre d’elles."
+ fir_mannin_decision_tooltip: "Adoptez notre nouvelle identité culturelle"
+ fir_mannin_decision_confirm: "Nous sommes le Sapin Mannin"
+  
+ visit_ballaharra_stones_decision: "Visitez les pierres de Ballaharra"
+ visit_ballaharra_stones_decision_desc: "Même si Mannin est désormais uni, les dieux peuvent encore nous dire beaucoup de choses sur notre avenir."
+ visit_ballaharra_stones_decision_tooltip: "Communier avec les dieux"
+ visit_ballaharra_stones_decision_confirm: "Dieux, écoutez mes prières"

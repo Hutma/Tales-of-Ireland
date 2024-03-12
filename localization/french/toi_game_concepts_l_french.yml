@@ -1,105 +1,86 @@
 ﻿l_french:
- game_concept_fomorian:0 "Fomorien"
- game_concept_fomorians:0 "Fomoriens"
- game_concept_fomorians_desc:0 "Personne ne sait vraiment quand les premier Fomoriens sont arrivés en Irlande, ce qui pousse certains à dire qu'ils ont toujours été là. Les [fomorians|E] sont un peuple fier et puissant qui loue des dieux sombres et réalise des sacrifices humains. \n\nLeur principal objectif est de purger l'Irlande de tous les habitants venus après eux, car considérés comme impurs. Il maintiennent une tradition de faire payer un tribut à leurs ennemis, prélevant deux tiers de toute leur richesse et un de leurs enfants régulièrement jusqu'à ce qui meurent de famine ou quittent l'île pour de bon."
-
- 
- game_concept_cessarian:0 "Cessarien"
- game_concept_cessarians:0 "Cessariens"
- game_concept_cessarians_desc:0 " Les [cessarians|E] étaient le peuple suivant Cessair, une vigoureuse femme menant une tribu forte de trente-neuf femmes et trois hommes en Irlande. Ils vivèrent des longs siècles paisibles et prospères en restant à l'écart des guerres majeures qui ont déchiré l'Irlande en des temps anciens. Certains racontent que les [cessarians|E] peuvent se transformer en saumons dorés comme le légendaire sage Fintan mac Bóchra. \n\nMais à présent la guerre s'est embrasé et dévaste l'Irlande dû à l'invasion des [milesians|E] par les [celts|] et chacune des tribus qui leur étaient jadis vassales. \n\n Les paisibles [cessarians|E] sont riches...en temps de grand trouble, cette richess peut attirer les convoitises vers leurs terres. Les [cessarians|E] doivent s'unir et se préparer."
-
- 
- game_concept_partholonian:0 "Partholonien"
- game_concept_partholonians:0 "Partholoniens"
- game_concept_partholonians_desc:0 " Les [partholonians|E] ont parcouru le monde entier avant de s'établir en Irland. Avant d'arriver en Irlande ils vivèrent un siècle durant dans le Nord. Cela a profondément marqué leur culture et religion. Quand les [partholonians|E] s'établirent en Irlande ils entrèrent en guerre avec les [fomorians|E] rencontrant quelques succès qui préserva leur indépendance. Libéré de la tyrannie des [fomorians|E], un jour une obscure maladie s'est emparé des [partholonians|E] un à un. Quand ce mal s'est résorbé, seul quelques [partholonians|E] restaient. Depuis ce jour, ils toujours été les sujets d'un autre peuple jusqu'à ce que l'arrivée des [celts|E] brise le règne milésien. \n\nUne ascension nouvelle des [partholonians|E] tentera de regagner terres et richesse pour leur peuple."
-
-
- 
- game_concept_nemedian:0 "Némédien"
- game_concept_nemedians:0 "Némédiens"
- game_concept_nemedians_desc:0 "Les [nemedians|E] vinrent d'une terre lointaine, trente ans après les [partholonians|E]. Ils partirent de la Scythie, une terre de soleil éternel, mené par une homme prénommé Nemed. Aussitôt installé en Irlande, ils firent une guerre constant à la race dominante de l'île, les [fomorians|E]. Au bout de huit ans de combat, la majorité d'entre eux payaient le lourd tribut fomorien des deux tiers du bétail, richesse, lait et enfants de temps en temps. C'est la cause de la fragementation des [nemedians|E] en plusieurs tribus. Un groupe fuit l'Irlande en voguant vers le Nord, un autre vers le Sud et un dernier resta en Irlande, luttant pour sa survie. Quand les [fir_bolgs|E] vainquirent les [fomoriens|] bien des années plus tard, [nemedians|E] s'affranchirent de leurs maîtres et s'enrichirent. \n\nAvec les guerres présentes et l'instabilité politique, les [nemedians|E] cherche à rester indépendant, et bien sûr, survivre."  
-
- 
- game_concept_fir_bolg:0 "Fir Bolg"
- game_concept_fir_bolgs:0 "Fir Bolgs"
- game_concept_fir_bolgs_desc:0 "Quelques [nemedians|E] s'enfuirent en Grèce , où ils devinrent soumis et asservis. Ils en vinrent à être connus comme les [fir_bolgs|E] ou "Hommes des Sacs". Ils se révoltèrent éventuellement, arrachant leur liberté et revinrent en Irlande. Après avoir vaincu les [fomorians|E], ils créèrent la [high_kingship|E] qui unit l'Irlande pour la première fois. Leur gloire renouée sera de courte durée cependant, dû à l'incursion des [de danann|E] qui les a réduit à Connacht passé un siècle. C'est l'origine d'une rancoeur tenace entre les [fir_bolgs|E] et les [de danann|E]."
-
- 
- game_concept_de_danann:0 "Tuatha Dé Danann"
- game_concept_de_danann_desc:0 "Les [de_danann|E] descendent de [nemedians|E] qui se sont établis dans une terre au Nord de l'Irlande. De retour, ils défirent les [fir_bolgs|E] seigneurs de l'île à l'époque, et entrèrent contre les  [fomorians|E]. Ils perdirent et les [fomorians|E] devinrent la force dominante, assujetissant les [de_danann|E] à un lourd tribut.Un jour, un célèbre guerrier nommé Lugh a conduit une rébellion contre les [fomorians|E] et réussi.\n\Depuis ce jour les Tuatha ont régné sur l'Irlande...jusqu'à l'arrivée des The [milesians|E].\n\nLes The [milesians|E] étaient des féroces guerriers trop nombreux pour être combattus et battus par les [de_danann|E].\n\n Après cette défaite, les [de_danann|E] s'éxilèrent dans le Sidh, le plan magique des Dieux. Ils y ont flori et sont devenus eux-mêmes des Dieux, en apprenant les voies de la magie et des fées d'Irlande. Ayant appris les difficultés des [milesians|E] face aux [celts|E], une partie des [de_danann|E] a décidé de quitter le [otherworld|E] pour recouvrir le prestige passé.\n\n En quittant le Sidh, leur part divine est restée car incapable de quitter le plan. Les Tuatha pourront-ils se rétablir dans ces conditions?"
-
-
- 
- game_concept_milesian:0 "Milésien"
- game_concept_milesians:0 "Milésiens"
- game_concept_milesians_desc:0 "Les [milesians|E] sont originaires d'Espagne, ils ont défait les [de_danann|E] et imposé leur domination à toutes les tribus de l'île. Des siècles durant ils ont développés le pays et assuré la paix entre chaque tribu. Leur pouvoir était absolu. \n\nFinalement, il y a une décennie, le peuple Celte arriva en Irlande, défiant leur autorité.Les [milesians|E] avaient mené bien des guerres mais les [celts|E] semblaient invincibles. Ce fut le début de la déchéance des Milésiens. \\Même s'ils conservent la [high_kingship|E] et le royaume de Tara, chacun sait que cela ne fera pas long feu. Les Milésiens doivent tenir et se battre, ou voir leur héritage détruit..."
-
-
- 
- game_concept_celt:0 "Celte"
- game_concept_celts:0 "Celtes"
- game_concept_celts_desc:0 "Le peuple celte a gagné en force d'année en année dans les décennies précédentes jusqu'à sa révolte contre les [milesians|E] et le [high_king|E]. Cette révolte eu un succès retentissant. L'Irlande s'est promptement disloquée politiquement avec les [celts|E] en position de force. Mais cette liberté nouvellement acquise ne fut pas suivie d'unité. Le chaos reigne en maître, chaque tribu cherchant à dominer une autre.\n\nC'est une ère chaotique, et les [celts|E] doivent triompher. "
-
-
- 
- game_concept_ancient_human:0 "Humain Antique"
- game_concept_ancient_humans:0 "Humain Antique"
- game_concept_ancient_humans_desc:0 "Les Campagnards et d'autres cultures de naguère ayant construit les Monolithes d'Irlande comme Newgrange, ont été témoin de l'arrivée d'autres peuples un à un. Ces [ancient_humans|E] ont essayé de se battre au début sans grand succès. C'est cause de la perte progressive de leur territoire. Ils ne sont plus que l'ombre d'eux mêmes et leurs sites sacrés sont aux mains d'étrangers. \n\n Avec la récente chute des suzerains [milesians|E], il est temps de se rebeller et récupérer leurs lieux saints.
-
- 
- game_concept_gaelic_giant:0 "Géant Gaélique"
- game_concept_gaelic_giants:0 "Géants Gaéliques"
- game_concept_gaelic_giants_desc:0 "Les [gaelic_giants|E] sont des personnages récurrents des mythes antiques. Le Géant est un homme énorme à la force inégalée. Quand les hommes ont pris le contrôle des îles, les Géants se sont lentement retirés vers les [otherworlds|E] où ils fondèrent leur royaume. De temps à autre, l'un d'entre eux décide de revenir au [surface_world|E]
-
-
- game_concept_hy_brasylian:0 "Hy-Brasylien"
- game_concept_hy_brasylians:0 "Hy-Brasyliens"
- game_concept_hy_brasylians_desc:0 " Les [hy_brasylians|E] proviennent de Hy-Brasyl, une île mystérieuse seulement visible et accessible une fois tous les sept ans pour quelques jours. Leur terre et belle et fertile mais la place y est limitée. Donc certains d'entre eux quittent l'île pour envahir de nouvelles terres. Leurs connaissances secrètes les aident au combat.
-
-
-
- game_concept_surface_world:0 "Monde de la Surface"
- game_concept_surface_world_desc:0 "Le [surface_world|E] est la Terre, où les mortels et êtres non-magiques vivent. C'est l'opposé des [otherworlds|E] et autres lieux magiques. Parfois, des créatures des [otherworlds|E] visitent le [surface_world|E] et interagissent avec les mortels.
-
-
-
- game_concept_otherworld:0 "Sidh"
- game_concept_otherworlds:0 "Sidhs"
- game_concept_otherworlds_desc:0 "Le [otherworld|E] ou les [otherworlds|E] sont un lieu mystique et mythique. Il n'est pas chose aisée d'y parvenir, qui plus est y survivre. Les [otherworlds|E] sont les maisons des dieux et la source de toute magie. C'est l'opposé du [surface_world|E] que nous appelons la Terre."
-
-
- 
- game_concept_cattle:0 "Bétail"
- game_concept_cattle_desc:0 " Dans l'Irlande d'antan, la richesse d'un souverain se mesurait à la taille de son troupeau, la quantité de [cattle|E] qu'il avait. \\#S En termes de jouabilité, le [cattle|E] remplace le développement et a l'effet triple sur la taille des taxes et levées. Un souverain peut aussi déclarer la guerre à un autre pour saisir un tiers de son bétail, c'est un [cattle_raid|E].#!"
-
- 
- game_concept_cattle_raid:0 "Abigéat"
- game_concept_cattle_raid_desc:0 "L'[cattle_raid|E] était la forme la plus commune de guerre en Irlande Antique. Un souverain déclarerait la guerre à un autre pour saisir son bétail. Le [cattle|E] était crucial pour n'importe qui en quête de gloire et fortune. \n\n #S En terme de jouabilité, le vainqueur dans un [cattle_raid|E] prend un tiers du [cattle|E] ennemi ainsi qu'un peu d'or. De plus, le vainqueur gagne beaucoup de Renommée. #!" 
-
-
- 
- game_concept_high_king:0 "Haut Roi"
- game_concept_high_kings:0 "Haut Rois"
- game_concept_high_kingship:0 "Haute Royauté"
- game_concept_high_king_desc:0 "La [high_kingship|E] d'Irlande est un titre spécial crée par les [fir_bolgs|E] quand ils régnaient sur l'île. Le [high_king|E] est élu parmi tous les rois indépendants par chaque souverain de rang ducal et assez prestigieux. \n\nÊtre [high_king|E] donne accès à de puissantes décisions et une version améliorée du casus belli de Vassalisation forcée. Un [high_king|E] a également des chances réduites de voir ses vassaux joindre des factions. \n\n Personne ne peut déclarer de guerre pour revendiquer ce titre. \n\nQuelques évènements uniques et petits boni sont aussi liés à la [high_kingship|E]."
-
- 
- game_concept_sidhe:0 "Sidhe"
- game_concept_sidhe_desc:0 " Les [sidhe|E] représente tous les êtres magiques du [otherworlds|E], aussi appelées les Fées. Les [sidhe|E] peut se référer aux Banshees our Léprechons par exemple. Les [sidhe|E] peuvent être bons ou mauvais, puissants ou faibles. Rencontrer un [sidhe|E] peut changer un destin."
-
-
- 
- game_concept_ancient_partition:0 "Partition antique"
- game_concept_ancient_partition_desc:0 "Autrefois, quand un seigneur mourrait, ses terres étaient partagées entre ses fils, chacun fondant une tribu distincte. \n\n La [ancient_partition|E] représente ceci.  Quand un souverain meure, son domaine est partagé entre ses fils et chacun devient indépendant. 
-
-
- 
- game_concept_race_trait:0 "Trait de race"
- game_concept_race_trait_desc:0 " Chaque personnage possède au minimum un trait de race qui définit sa race. Chaque personnage peut en avoir au plus deux, un trait principal et un trait secondaire. \n\nLes traits de race dépendent de ses parents selon la logique suivante. Prenons pour exemple un Celte et un [fomorian|E] ayant un enfant dans un mariage standard. Si le père est Celte et la mère [fomorian|E]ne l'enfant sera Celte Demi-[fomorian|E]. Si le père est déjà Celte Demi-[fomorian|E], l'enfant sera Celte Fortement [fomorian|E]. Si le père était déjà Fortement [fomorian|E], l'enfant sera un véritable [fomorian|E]. \n\nLe trait principal est déterminé par la partie dominante du mariage. Reprenant l'exemple ci-dessus l'enfant serait [fomorian|E] Demi-Celte dans une mariage matrilinéaire.\n\nSi une personne qui a déjà deux traits se marie avec quelqu'un d'un groupe tiers, le trait secondaire sera retiré et remplacé par les trait du nouveau groupe. Dans un marriage normal cela deviendra un Demi trait et dans un mariage matrilinéaire l'ancien trait principal deviendra un Demi trait. \n\nUn Celte Demi-Fomorian marie une Tuatha Dé Danann. Les enfants seront Celte Demi-Tuatha(Tuatha Demi-Celte dans un mariage matrilinéaire.)."
- 
- 
- game_concept_tales_of_war:0 "Légende Guerrière"
- game_concept_tales_of_war_desc:0 "Légende Guerrière ne possède pas d'intérêt qui puisse être sélectionné. Vous gagnerez des points en: aillant un haut martial, déclarant des guerres, gagnant des guerres, commandant des armées, occupant des forts de colline, remportant des duels, étant prestigieux."
- 
- game_concept_tales_of_abundance:0 "Légende d'Abondance"
- game_concept_tales_of_abundance_desc:0 "Légende d'Abondance ne possède pas d'intérêt qui puisse être sélectionné. Vous gagnerez des points en: aillant une haute caractéristique de diplomatie ou intendance, restant en paix, gardant vos vassaux puissants satisfaits, aillant beaucoup de bétail dans vos comtés, étant pieux, convertissant un comté à votre culture, marriant un de vos enfant à un prétendant prestigieux, organisant des fêtes."
+ game_concept_fomorian: "Fomorien"
+ game_concept_fomorians: "Fomoriens"
+ game_concept_fomorians_desc: "Personne ne sait vraiment quand le premier [fomorians|E] est arrivé en Irlande, ce qui amène certains à spéculer qu'ils y ont toujours été. Les [fomorians|E] sont un peuple fort et fier qui loue les dieux sombres et pratiquent des sacrifices humains cérémoniaux.\n\n[fomorians|E] considèrent les autres colons d'Irlande comme impurs et cherchent à les chasser de l'île. C'est leur tradition de faire payer tribut à leurs ennemis, en prenant régulièrement un enfant et les deux tiers de leur bétail et de leur or jusqu'à ce que leurs rivaux meurent de famine et de pauvreté ou quittent définitivement l'île."
+  
+ game_concept_cessarian: "césarienne"
+ game_concept_cessarians: "Cessaires"
+ game_concept_cessarians_desc: "Les [cessarians|E] sont les ancêtres de ceux qui suivirent Cessair, une femme forte qui conduisit son peuple composé de trente-neuf femmes et trois hommes en Irlande. Les légendes disent que les [cessarians|E] peuvent se transformer en saumon doré, comme Fintan mac Bóchra, un Cessarien très sage. Ils ont vécu en paix pendant de nombreux siècles, prospérant en évitant les guerres majeures qui ont divisé l’Irlande dans le passé. \n\nMaintenant, les feux de la guerre dévastent l'Irlande une fois de plus alors que leurs voisins, les [milesians|E], sont envahis par les [celts|E] et leurs tribus vassales. Les [cessarians|E] pacifiques sont devenus riches et, dans les périodes de grandes difficultés, cette richesse peut attirer des personnes envieuses et ambitieuses dans leur pays. Les [cessarians|E] doivent s’unir et se préparer."
+  
+ game_concept_partholonian: "Partholonien"
+ game_concept_partholonians: "Partholoniens"
+ game_concept_partholonians_desc: "Les [partholonians|E] ont parcouru le monde avant de s'installer en Irlande, après avoir vécu au moins un siècle dans le Nord avant d'arriver finalement sur l'île. En tant que telles, leur culture et leur religion ont une influence nordique. Une fois installés en Irlande, les [partholonians|E] se sont immédiatement retrouvés avec les xénophobes [fomorians|E]. De nombreuses batailles ont eu lieu, mais les [partholonians|E] ont pu conserver leur indépendance et leur place sur l'île. \n\nQuelque temps après la fin de leur conflit avec les [fomorians|E], les [partholonians|E] ont commencé à tomber malades et à périr, un par un. Au moment où la maladie avait suivi son cours, il ne restait plus qu’une poignée de [partholonians|E]. Peu nombreux, ils furent facilement subjugués par des tribus plus grandes comme les [milesians|E]... jusqu'à l'arrivée du [celts|E], affaiblissant les autres tribus et défiant la domination milésienne. \n\nMaintenant, les [partholonians|E] se relèvent, cherchant à retrouver l'indépendance et la prospérité de leur peuple."
+  
+ game_concept_nemedian: "Némédian"
+ game_concept_nemedians: "Némédiens"
+ game_concept_nemedians_desc: "Le [nemedians|E] est arrivé en Irlande trente ans après le [partholonians|E]. Originaire du pays lointain de Scythie, où le soleil brille toujours, leur peuple était autrefois dirigé par un homme appelé Nemed. Peu de temps après s'être installés, les [nemedians|E] se sont rapidement retrouvés en contradiction avec le [fomorians|E] dominant. Huit années d'une guerre acharnée aboutirent à l'assujettissement des Némédiens, et leur tribu devint tributaire du [fomorians|E], leur payant les deux tiers de leurs céréales, de leur bétail, de leur lait et de leurs enfants toutes les quelques années. Beaucoup d'entre eux étant incapables de survivre dans des conditions aussi difficiles, de nombreux [nemedians|E] ont fui l'Irlande, certains naviguant vers le nord et d'autres fuyant vers des terres lointaines du sud, comme la Grèce. \n\nDe nombreuses années plus tard, les [fomorians|E] furent vaincus par les Fir Bolg, ce qui donna aux [nemedians|E] l'opportunité de se libérer de leurs suzerains affaiblis et de prospérer grâce à leur indépendance. Aujourd’hui, le [nemedians|E] en développement lutte pour survivre et rester libre alors que l’instabilité sévit en Irlande et que les feux de la guerre sont à nouveau attisés."
+  
+ game_concept_fir_bolg: "Fir Bolg"
+ game_concept_fir_bolgs: "Fir Bolg"
+ game_concept_fir_bolgs_desc: "Après une dure soumission aux mains des [fomorians|E], certains [nemedians|E] ont fui le sud de l'Irlande, jusqu'en Grèce, pour être à nouveau soumis et réduits en esclavage par les Grecs. Les descendants de ces esclaves sont devenus connus sous le nom de [fir_bolgs|E], ou Hommes de Sacs. Finalement, les [fir_bolgs|E] se révoltèrent et renversèrent leurs maîtres grecs, retrouvèrent leur liberté et retournèrent en Irlande pour défier la domination des [fomorians|E] qui asservissaient leurs ancêtres. /\n\nLes courageux [fir_bolgs|E] furent finalement victorieux dans la bataille pour le [fomorians|E] et commencèrent à dominer toute l'Irlande. Ils ont couronné leur règne le [high_kingship|E], unissant pour la première fois l'Irlande sous un seul dirigeant. Leur gloire renouvelée n'était cependant pas censée durer, car les conquérants [de_danann|E] sont arrivés et les ont repoussés jusqu'au Connacht moins d'un siècle plus tard. Cela a conduit à une animosité durable entre le [fir_bolgs|E] et le [de_danann|E]."
+  
+ game_concept_de_danann: "Tuatha Dé Danann"
+ game_concept_de_danann_desc: "Les [de_danann|E] sont les descendants des [nemedians|E] qui se sont installés dans un pays au nord de l'Irlande. Ceux qui ont fui vers le nord ont prospéré, mais les dieux qui habitaient ces terres les ont finalement guidés vers l'Irlande. À leur arrivée, ils se trouvèrent en conflit avec les descendants de leurs ancêtres qui avaient fui vers le sud en Grèce, les [fir_bolgs|E], qui étaient également revenus pour devenir les suzerains de l'Irlande après avoir vaincu les [fomorians|E]. \n\nLes [de_danann|E] furent victorieux sur les [fir_bolgs|E], mais se retrouvèrent une nouvelle fois conquis par les [fomorians|E], qui s'étaient ralliés et avaient repris leur pouvoir pendant que les deux tribus se battaient. Après leur défaite, les [de_danann|E] se sont retrouvés soumis par les [fomorians|E] avec un dur tribut, tout comme leurs ancêtres l'avaient été. \n\nAprès des années d'esclavage, un célèbre guerrier nommé Lugh s'est levé et a mené une rébellion contre les [fomorians|E], portant une fois de plus les [de_danann|E] au pouvoir, où ils régneraient à nouveau sur l'Irlande... jusqu'à l'arrivée du [nemedians|E]1. . \n\nLes [nemedians|E]1 étaient de féroces guerriers et se révélèrent trop nombreux pour les [de_danann|E]. Après leur défaite, les [de_danann|E] s'exilèrent vers le [nemedians|E]5, le royaume mystérieux des dieux. Dans l'Autre Monde, ils prospérèrent et devinrent eux-mêmes des dieux, apprenant les voies de la magie et acquérant des connaissances auprès des fées d'Irlande.\n\n Après avoir entendu que les [nemedians|E]1 s'affaiblissaient sous les attaques d'un nouveau peuple appelé [nemedians|E]7, une faction de l' La tribu [de_danann|E] a décidé de quitter la tribu [nemedians|E]5 pour tenter de retrouver sa gloire passée. Ce faisant, les parties divines d’eux sont restées derrière… aux côtés d’une partie de leur humanité. \n\nQuoi qu'il en soit, il est temps pour les [de_danann|E] de régner à nouveau sur l'Irlande, restaurant ainsi leur gloire passée."
+  
+ game_concept_milesian: "Milésien"
+ game_concept_milesians: "Milésiens"
+ game_concept_milesians_desc: "Les [milesians|E] ont navigué vers l'Irlande depuis la péninsule ibérique, ont vaincu les [de_danann|E] après avoir repris le contrôle du [fomorians|E] et ont imposé leur propre domination aux autres tribus de l'île. Les Milésiens sont les dirigeants de l'Irlande depuis des siècles, durant lesquels ils ont développé le territoire et assuré la paix entre chaque tribu. Leur pouvoir était absolu... \n\nMais finalement, il y a seulement dix ans, le peuple celtique est arrivé sur les côtes de l'Irlande, bouleversant son autorité. Les [milesians|E] n'étaient pas étrangers à la guerre, mais les [celts|E] semblaient impossibles à vaincre. Cela a marqué le début de la chute milésienne, et chaque tribu qui était autrefois tributaire des Milésiens s'est depuis rebellée. \n\nMême si les [milesians|E] revendiquent toujours le titre de [high_kingship|E] et le Royaume de Tara, beaucoup pensent que cela ne durera pas longtemps. \n\nLes Milésiens|E] doivent se lever et se battre pour récupérer ce qui leur appartenait, ou voir leur héritage détruit."
+  
+ game_concept_celt: "Celte"
+ game_concept_celts: "Celtes"
+ game_concept_celts_desc: "Au cours des dernières décennies, le peuple celtique s'est renforcé chaque année, jusqu'à ce qu'il se révèle enfin être une menace pour la domination du [milesians|E], défiant l'autorité du [high_kingship|E]. Les tribus unifiées du [celts|E] se sont révélées trop puissantes pour que le [milesians|E] puisse les tenir à distance, et suite à l'invasion celtique, l'Irlande s'est rapidement divisée politiquement, le [celts|E] devenant la faction la plus forte et prête à dominer. Gagnant de la richesse et du territoire irlandais pour eux-mêmes, les Celtes ne voyaient aucune utilité à maintenir l'unité et se divisèrent en groupes rivaux. Le chaos règne désormais en maître sur l'île, chaque tribu essayant de soumettre l'autre. \n\nC'est une période de grands troubles en Irlande, et le [celts|E] doit prévaloir."
+  
+ game_concept_ancient_human: "Ancien Humain"
+ game_concept_ancient_humans: "Ancien Humain"
+ game_concept_ancient_humans_desc: "Les peuples anciens identifiés aujourd'hui comme le peuple Bell Beaker, aux côtés d'autres cultures anciennes moins connues, ont construit les monolithes d'Irlande, comme Newgrange. Malgré de nombreuses difficultés, ils ont réussi à survivre, après avoir été témoins de l'arrivée de chaque nouvelle tribu se dirigeant vers l'île, chacune se disputant la domination. \n\nLes [ancient_humans|E] ont d'abord tenté d'arrêter les tribus envahissantes, mais sans succès. Au fil des siècles, leurs cultures ont été réduites à une quasi-extinction, la quasi-totalité de leur ancien territoire et de leurs terres sacrées étant occupées par d'autres tribus étrangères plus grandes. \n\nAvec le récent affaiblissement des [milesians|E] en tant que suzerains, il est temps pour les [ancient_humans|E] de s'unir afin qu'ils puissent récupérer leurs terres sacrées et assurer leur survie future, de peur d'être oubliés par l'histoire."
+  
+ game_concept_gaelic_giant: "Géant gaélique"
+ game_concept_gaelic_giants: "Géants gaéliques"
+ game_concept_gaelic_giants_desc: "Les légendes du [gaelic_giants|E] sont courantes dans les mythes anciens. Le Géant est un homme immense qui possède une force inégalée. Lorsque les Hommes prirent le contrôle des îles, les Géants se retirèrent lentement vers le [otherworlds|E] où ils bâtirent leur royaume. \n\nMaintenant, pendant cette période de troubles en Irlande, un groupe de [gaelic_giants|E] ambitieux ont décidé de retourner au [surface_world|E], à la recherche de richesse et de gloire."
+  
+ game_concept_hy_brasylian: "Hy-Brasylien"
+ game_concept_hy_brasylians: "Hy-Brasyliens"
+ game_concept_hy_brasylians_desc: "Les [hy_brasylians|E] viennent de Hy-Brasil, une île mystérieuse qui ne peut être repérée et atteinte que quelques jours tous les sept ans. On dit que leurs terres sont belles et abondantes, mais surpeuplées. À la recherche de nouvelles maisons, de nombreux Hy-Brasyliens ont quitté leur île à la recherche de meilleures perspectives en Irlande. \n\nLes Hy-Brasyliens doivent se battre pour prendre pied sur l'île dont ils cherchent à s'établir. Heureusement, ils possèdent des connaissances particulières acquises dans leur pays d’origine et qu’ils utilisent à leur avantage au cours des combats."
+  
+ game_concept_latin_human: "Latin"
+ game_concept_latin_humans: "Latins"
+ game_concept_latin_humans_desc: "Les [latin_humans|E] viennent du continent, du pourtour de la mer Méditerranée, ils sont issus d'un Grand Empire connu sous le nom d'Empire Romain. On dit que cet empire est le plus grand de tous, d’une puissance inégalée."
+  
+ game_concept_surface_world: "Monde superficiel"
+ game_concept_surface_world_desc: "Le [surface_world|E] est la Terre, où vivent les mortels et les êtres non magiques. C'est le contraire des [otherworlds|E] qui sont des lieux mythiques et magiques. Parfois, les êtres du [otherworlds|E] aiment visiter le [surface_world|E] et interagir avec les mortels."
+  
+ game_concept_otherworld: "Autre monde"
+ game_concept_otherworlds: "D'autres mondes"
+ game_concept_otherworlds_desc: "Le [otherworld|E] ou le [otherworlds|E] définissent un lieu magique, mythique. Il n’est pas facile d’atteindre ce monde et parmi ceux qui y parviennent, seuls quelques privilégiés survivent. Les [otherworlds|E] sont les demeures des dieux et la source de toute magie. C'est l'opposé du [surface_world|E] que l'on appelle Terre."
+  
+ game_concept_cattle: "Bétail"
+ game_concept_cattle_desc: "Dans l'Irlande ancienne, la richesse d'un dirigeant peut être mesurée par la taille de son troupeau, soit le montant de [cattle|E] dont il dispose. \n\n#S En termes de gameplay, [cattle|E] remplace le développement et a un effet trois fois plus important sur le montant des impôts et taxes. Un souverain peut aussi déclarer la guerre à un autre pour lui prendre un tiers de son bétail, cela s'appelle un [cattle_raid|E].#!"
+  
+ game_concept_cattle_raid: "Abigéat"
+ game_concept_cattle_raid_desc: "Le [cattle_raid|E] était le type de conflit le plus courant dans l’Irlande ancienne. Les dirigeants se déclaraient la guerre pour s'emparer de leur bétail. [cattle|E] était très important pour toute personne ambitieuse de richesse et de gloire. \n\n #S En termes de gameplay, un gagnant dans un [cattle_raid|E] prend un tiers de son ennemi [cattle|E] ainsi qu'un peu d'or. De plus, le gagnant gagne beaucoup de renommée. #!"
+  
+ game_concept_high_king: "Grand roi"
+ game_concept_high_kings: "Hauts rois"
+ game_concept_high_kingship: "Haute royauté"
+ game_concept_high_king_desc: "Le [high_kingship|E] d'Irlande est un titre spécial qui a été créé pour la première fois par le [fir_bolgs|E] lorsque l'Irlande dominait. Le [high_king|E] est élu parmi tous les rois indépendants par tout dirigeant indépendant jouissant d'un prestige suffisant. \n\nÊtre [high_king|E] donne accès à quelques décisions puissantes et accorde une version améliorée du casus belli de vassalisation forcée. Être [high_king|E] réduit également les chances que des vassaux rejoignent les factions de votre royaume. \n\nPersonne ne peut déclarer une guerre pour revendiquer ce titre. De plus, certains événements uniques et petits bonus sont liés au [high_kingship|E] ."
+  
+ game_concept_sidhe: "Sidhé"
+ game_concept_sidhe_desc: "Le [sidhe|E] représente tous les êtres magiques du [otherworlds|E], parfois appelés fées. Le [sidhe|E] est un terme générique utilisé pour toutes sortes d'êtres magiques, comme le Banshee ou le Leprechaun. Un [sidhe|E] peut être bon ou mauvais, puissant ou faible. Une rencontre avec un [sidhe|E] peut changer son destin."
+  
+ game_concept_ancient_partition: "Partition antique"
+ game_concept_ancient_partition_desc: "Dans les temps anciens, à la mort d’un souverain, ses terres étaient partagées entre ses fils, chacun fondant une nouvelle tribu indépendante. \n\nLa succession [ancient_partition|E] représente cela. À la mort d’un souverain, ses terres sont partagées entre ses fils et chacun d’eux devient indépendant."
+  
+ game_concept_race_trait: "Caractéristique de race"
+ game_concept_race_trait_desc: "Chaque personnage possède au minimum un trait de race qui définit sa race. Chaque personnage peut avoir jusqu'à deux traits raciaux, un de chaque parent, avec un trait principal et un trait secondaire. \n\nLe trait principal est déterminé par le côté dominant du mariage. Par exemple, dans un mariage régulier (patrilinéaire) avec un père celtique et une mère fomorienne, les enfants qui en résulteront seront mi-fomoriens celtiques. Dans un mariage matrilinéaire, l'enfant serait demi-celte fomorien. \n\nUn personnage à deux traits qui a des enfants avec un personnage appartenant à un troisième groupe non apparenté, le trait secondaire du côté dominant sera remplacé par un nouveau trait issu de la lignée de l'autre parent."
+  
+ game_concept_tales_of_war: "Contes de guerre"
+ game_concept_tales_of_war_desc: "Tales of War est un style de vie qui n'a aucun objectif. Vous gagnerez des points dans ce style de vie en possédant de grandes compétences martiales, en déclarant des guerres, en gagnant des guerres, en commandant des armées, en occupant des ringforts, en gagnant des duels et en étant prestigieux."
+  
+ game_concept_tales_of_abundance: "Contes d'abondance"
+ game_concept_tales_of_abundance_desc: "Tales of Abundance est un style de vie qui n’a aucun objectif. Vous gagnerez des points dans ce style de vie en possédant de grandes compétences en diplomatie ou en intendance, en restant en paix, en faisant de vos puissants vassaux comme vous, en possédant beaucoup de bétail, en étant pieux, en convertissant un comté à votre culture, en mariant vos enfants à des prétendants prestigieux et en organisant des fêtes. ."
+  
+ game_concept_tales_of_magic: "Contes de magie"
+ game_concept_tales_of_magic_desc: "Tales of Magic est un style de vie qui n'a aucun objectif. Vous gagnerez des points dans ce style de vie en ayant des compétences élevées en matière d'apprentissage ou d'intrigue, en lançant un sort, en vous concentrant sur le style de vie d'apprentissage ou d'intrigue, pour le niveau de votre trait de magicien ou en ayant le trait de sage."
+  
+ game_concept_toi_clan: "Clan"
+ game_concept_toi_clan_desc: "Un [clan|E] peut être fondé par un chef de dynastie et débloque les interactions entre les membres ainsi que différentes actions de clan et casus belli. Le chef du clan est le chef de la dynastie et les dirigeants du clan sont les dirigeants indépendants de la dynastie. Si un clan compte moins de 3 dirigeants indépendants, il est dissous."

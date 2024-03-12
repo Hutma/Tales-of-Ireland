@@ -116,11 +116,17 @@ innovation_quilted_armor = {
 	culture_era = culture_era_tribal
 	icon = @weapons_and_armor_02
 	
-	modifier = {
-		skirmishers_toughness_add = 2
-		pikemen_toughness_add = 2
+	maa_upgrade = {
+		type = skirmishers
+		toughness = 2
 	}
-
+	maa_upgrade = {
+		type = pikemen
+		toughness = 2
+	}
+	
+	custom = eligible_accolade_vanguard_attribute
+	
 	flag = global_regular
 	flag = tribal_era_regular
 }
@@ -146,7 +152,7 @@ innovation_gavelkind = {
 	culture_era = culture_era_tribal
 	icon = @administration_3
 	
-	modifier = {
+	character_modifier = {
 		title_creation_cost_mult = -0.25
 	}
 	unlock_law = ancient_partition_succession_law

@@ -39,31 +39,33 @@ labraid_story.0011 = {
 		}
 	}
 	immediate = {
-		80 = {
-			character:260000 = {
-				death = {
-					killer = character:260001
-					death_reason = death_murder
+		random_list = {
+			80 = {
+				character:260000 = {
+					death = {
+						killer = character:260001
+						death_reason = death_murder
+					}
+				}
+				character:260002 = {
+					death = {
+						killer = character:260001
+						death_reason = death_murder
+					}
+				}
+				character:260003 = {
+					trigger_event = {
+						id = labraid_story.0002
+						days = 2
+					}
 				}
 			}
-			character:260002 = {
-				death = {
-					killer = character:260001
-					death_reason = death_murder
-				}
-			}
-			character:260003 = {
-				trigger_event = {
-					id = labraid_story.0002
-					days = 2
-				}
-			}
-		}
-		20 = {
-			character:260000 = {
-				trigger_event = {
-					id = labraid_story.0021
-					days = 2
+			20 = {
+				character:260000 = {
+					trigger_event = {
+						id = labraid_story.0021
+						days = 2
+					}
 				}
 			}
 		}

@@ -1,0 +1,125 @@
+﻿l_french:
+ toi_wolfwalker.0001.t: "Les marcheurs de loups"
+ toi_wolfwalker.0001.desc: "Depuis des lustres, on raconte des histoires sur des loups qui marchent sur deux pattes. Il y a une semaine, des informations ont été publiées selon lesquelles ils auraient été repérés autour de certains ringforts de mon pays. S'ils étaient retrouvés, nous pourrions les comprendre et déterminer si une alliance ou une extermination serait plus sûre pour nos troupeaux."
+ toi_wolfwalker.0001.a: "Les contes anciens me guideront vers leur emplacement."
+ toi_wolfwalker.0001.b: "Je les traquerai comme des bêtes."
+  
+ toi_wolfwalker.0002.t: "La tanière"
+ toi_wolfwalker.0002.desc: "Mes efforts ont enfin porté leurs fruits. Un loup s'est égaré dans les yeux d'un de nos éclaireurs et a été suivi jusqu'à sa tanière. L'apparente multitude de loups est cachée par une végétation profonde et une couverture végétale, rendant la tanière presque invisible. Maintenant que la tanière a été repérée, nous devons décider de notre prochain mouvement."
+ toi_wolfwalker.0002.a: "Je vais me faufiler seul, pour ne pas attirer l'attention."
+ toi_wolfwalker.0002.b: "Je vais appeler mes chevaliers et les débusquer."
+ toi_wolfwalker.0002.c: "Je les regarderai de loin pour mieux les comprendre."
+ toi_wolfwalker.0002.d: "Nous avons vu tout ce que nous pouvions, poursuivre est un risque inutile."
+  
+ toi_wolfwalker.0003.t: "Je n'ai pas réussi à repérer les loups"
+ toi_wolfwalker.0003.desc: "Mes éclaireurs et moi avons parcouru la forêt à la recherche d'indices sur ces loups, mais n'avons trouvé aucune preuve de leur existence. Chaque rumeur entendue semble n'être rien du tout, ou bien un simple ours. Peut-être sont-ils aussi habiles que le prétendent les légendes."
+ toi_wolfwalker.0003.a: "Nous devons nous retirer pour l’instant, mais rester à l’écoute pour plus de nouvelles."
+  
+ toi_wolfwalker.0004.t: "Dans la tanière"
+ toi_wolfwalker.0004.desc: "Alors que les loups s'éloignent de leur tanière pour chasser, j'ai essayé de m'y faufiler. J'ai pris toutes les précautions pour être sûr de ne pas être détecté même s'il y a encore des loups dans la tanière.\n\nJ'ai exploré la tanière et effectivement, il y a quelques loups qui rôdent à l'intérieur de la tanière. Finalement, j'atteins le sanctuaire intérieur de la tanière. Là, je vois une femme endormie, accompagnée de dizaines de loups. Le chef des loups est-il humain ?"
+ toi_wolfwalker.0004.a: "Il est maintenant temps d'attaquer et de tuer le chef !"
+ toi_wolfwalker.0004.b: "Peut-être que je devrais lui parler d'abord, je suis sûr qu'il y a une explication raisonnable."
+ toi_wolfwalker.0004.c: "Cela semble trop dangereux, je ferais mieux d'abandonner."
+  
+ toi_wolfwalker.0005.t: "Je n'ai pas réussi à me faufiler !"
+ toi_wolfwalker.0005.desc: "Alors que j'essaie de me faufiler dans la tanière, je trébuche sur un rocher et tombe par terre... \n\nLe bruit créé par la chute a alerté tous les loups à proximité, et maintenant je suis entouré de ces mangeurs d'humains. \n\nJe peux voir que le chemin menant à la sortie de la tanière peut être atteint si je parviens à tuer certains loups."
+ toi_wolfwalker.0005.a: "Battez-vous pour vous échapper !"
+ toi_wolfwalker.0005.b: "Je me rends!"
+  
+ toi_wolfwalker.0006.t: "Les renforts sont là"
+ toi_wolfwalker.0006.desc: "Au bout d’un moment, la suite que j’ai appelée pour m’assister forme des rangs devant moi. Ils sont impatients de prouver leur valeur et souhaitent une attaque frontale."
+ toi_wolfwalker.0006.a: "Chaaaaaarge !"
+ toi_wolfwalker.0006.b: "Allumons un feu, nous ne prenons aucun risque."
+ toi_wolfwalker.0006.c: "Je ne pense pas que nous devrions faire quoi que ce soit en fait."
+  
+ toi_wolfwalker.0007.t: "Caché et observant"
+ toi_wolfwalker.0007.desc: "J'ai décidé de les guetter, d'observer leur comportement. Il a fallu presque une journée entière pour voir le moindre signe des loups. Quand je l'ai fait, c'était une meute complète de loups, avec un grand loup en son centre, apparemment à la tête."
+ toi_wolfwalker.0007.a: "C'est mon opportunité de frapper !"
+ toi_wolfwalker.0007.b: "Je vais continuer à observer, j'ai besoin de plus d'informations."
+ toi_wolfwalker.0007.c: "C'est trop dangereux, je les laisse tranquilles"
+  
+ toi_wolfwalker.0101.t: "Les marcheurs de loups"
+ toi_wolfwalker.0101.desc: "Alors que je commence à parler, la femme sursaute, apparemment effrayée par ce que je ferais. En essayant de parler, je suis noyé par les hurlements et les aboiements des loups, et la femme semble en colère contre ma présence ici. Pendant que je parle encore, un homme apparaît d'une caverne latérale, exigeant de savoir ce qui s'est passé. Quand il me voit, il s'effondre immédiatement et un loup éthéré géant sort de son corps et se plante pour protéger la femme."
+ toi_wolfwalker.0101.a: "Il faut qu'ils m'écoutent !"
+ toi_wolfwalker.0101.b: "Je peux désormais les frapper à leur source !"
+ toi_wolfwalker.0101.c: "Il est temps de courir !"
+  
+ toi_wolfwalker.0102.t: "Le jugement Wolfwalkers"
+ toi_wolfwalker.0102.desc: "Après ma reddition, je m'attendais à être massacré sans pitié, mais les deux chefs se mettent à hurler, ce qui calme les loups restants. Ces loups plus gros rôdent autour de moi, puis se retirent dans une grotte latérale. Quelques minutes plus tard, deux humains s'approchent de la même grotte latérale et disent : « Nous nous réunirons pour décider de votre sort. Attendez ici. » \n\nIls se retirent ensuite tous les deux plus loin dans la grotte principale."
+ toi_wolfwalker.0102.a: "J'attendrai comme ordonné."
+ toi_wolfwalker.0102.b: "Je dois m'échapper !"
+  
+ toi_wolfwalker.0103.t: "Brûler la tanière"
+ toi_wolfwalker.0103.desc: "Nous avons le petit bois, l’huile jetée et le terrain prêt. La seule tâche restante est de mettre en œuvre le plan. Nous devons d’abord brûler le front afin de ne permettre aucune issue."
+ toi_wolfwalker.0103.a: "Allumez les flambeaux !"
+  
+ toi_wolfwalker.0104.t: "Caché et observant"
+ toi_wolfwalker.0104.desc: "Cela fait presque une semaine que j'attends. J'ai maintenant vu deux humains, un mâle et une femelle, sortir de la grotte, suivis de près par les loups. Les loups de tête habituels ne sont pas dans la meute."
+ toi_wolfwalker.0104.a: "Je devrais aborder cela avec diplomatie."
+ toi_wolfwalker.0104.b: "Je peux défier les dirigeants alors qu'ils sont humains !"
+  
+ toi_wolfwalker.0110.t: "Une sortie"
+ toi_wolfwalker.0110.desc: "Je dois quitter cette tanière avant d'être envahi, mais le chemin est bloqué par des loups, dont le chef de meute. Cette bête pense qu'elle m'a piégé et gêné, mais j'ai un dernier truc. Il doit mourir rapidement, et les autres se recroquevilleront et se disperseront. Je prie pour que mon objectif soit vrai, et je canalise la force de Lugh alors que je pointe ma lance vers les yeux du bâtard."
+ toi_wolfwalker.0110.a: "Je vais m'en sortir !"
+  
+ toi_wolfwalker.0111.t: "Face aux marcheurs-loups"
+ toi_wolfwalker.0111.desc: "Après avoir observé attentivement la tanière, j'aperçois un grand loup dont la présence est respectée par les autres. C'est sûrement le chef de la meute, et le tuer entraînera la dispersion des loups. Visant mon arc, la flèche frappe la bête, la faisant hurler de douleur surprise. \n\nJe me déplace pour le couper correctement, et sa blessure me donnera un avantage majeur. Ses mouvements sont brusques et lents, signe clair que j'ai percé quelque chose d'important. Son regard croise le mien, je vois de la fureur et une peur à peine dissimulée. Mais quelque chose ne va pas chez ce loup, ses yeux ont l'air étrangement... humains ?\n\nPeu importe, je prévaudrai et éliminerai ce fléau bestial de mon pays pour les décennies à venir."
+ toi_wolfwalker.0111.a: "Il est temps de se battre."
+  
+ toi_wolfwalker.0112.t: "Face aux marcheurs-loups"
+ toi_wolfwalker.0112.desc: "Deux loups me défient ; qui ne peuvent être que les chefs de meute. Leurs dents et griffes brillantes correspondent à l’éclat de mon épée et de mon fer de lance. Ils sont rapides, mais ce ne sont encore que de simples bêtes ; nous entrons dans une danse sauvage de coupures et de morsures ; Je me concentre uniquement sur eux car j'oublie tout sauf mon mouvement. Chaque mouvement nous rapproche, ou les rapproche de la tombe. À mesure que nous bougeons, leurs yeux semblent briller, les seuls points lumineux parmi leur fourrure sombre et une bonne cible.\n\nIl est temps d'enseigner à ces animaux les véritables maîtres de ce monde !"
+ toi_wolfwalker.0112.a: "Puisse Lugh m'aider."
+  
+ toi_wolfwalker.0113.t: "Face aux marcheurs-loups"
+ toi_wolfwalker.0113.desc: "Mon plus courageux Ridri et moi avançons vers la tanière. Deux énormes loups sortent de la tanière pour nous arrêter, mais nous les avons acculés et je peux voir la peur dans leurs yeux. Ce ne sera pas une bataille glorieuse, mais un massacre.\n\nJ'ai presque pitié d'eux, mais ce sera une victoire digne d'une chanson !"
+ toi_wolfwalker.0113.a: "A la victoire!"
+  
+ toi_wolfwalker.0114.t: "Face aux marcheurs-loups"
+ toi_wolfwalker.0114.desc: "Je me suis rapproché des deux chefs de meute, armé de mon épée et de l'élément de surprise. Avec le bon timing, l’un tombera rapidement et les chances seront égales. Même maintenant, ils sont sous le choc car ils ne s'attendaient pas à ce que des humains attaquent leur tanière.\n\nMon plan est parfait, ma main est ferme, je prévaudrai."
+ toi_wolfwalker.0114.a: "Je prévaudrai."
+  
+ toi_wolfwalker.0120.t: "J'ai convaincu les Wolfwalkers"
+ toi_wolfwalker.0120.desc: "Les loups ont accepté mon appel à la communication. Au fil de notre conversation, j'ai appris comment se transformer en loup, leur mode de vie, leur langage et leur leadership. J'ai également partagé avec eux mes styles de leadership. Cette journée marque la première d’une longue série de grandes collaborations avec les Wolfwalkers, comme ils se nomment eux-mêmes. Cependant, j'ai le choix. Ils m'ont permis de choisir si je souhaite ou non devenir un Wolfwalker."
+ toi_wolfwalker.0120.a: "Je devrais diriger mon peuple comme l'un d'entre eux."
+ toi_wolfwalker.0120.b: "C'est une opportunité que je ne peux pas manquer ! Attaque!"
+ toi_wolfwalker.0120.c: "Nous pouvons apprendre à collaborer et vivre tous les deux en paix."
+  
+ toi_wolfwalker.0121.t: "N'a pas réussi à convaincre les Wolfwalkers"
+ toi_wolfwalker.0121.desc: "Tout semblait bien se passer, nous avons discuté pendant des heures. Mais tout cela n’était qu’une ruse. Pendant que nous parlions, d’autres loups ont émergé et nous ont entourés, et ont même bloqué notre chemin vers la sortie. Nous pouvons essayer de nous battre ou de fuir, mais dans les deux cas, ce sera difficile..."
+ toi_wolfwalker.0121.a: "C'est le moment de courir !"
+ toi_wolfwalker.0121.b: "Je dois me battre pour sortir d’ici !"
+ toi_wolfwalker.0121.c: "Je me rends!"
+  
+ toi_wolfwalker.0501.t: "Paix avec les loups"
+ toi_wolfwalker.0501.desc: "L'accord que nous avons conclu avec les loups est respecté, et mon bétail et mes sujets peuvent à nouveau dormir tranquilles sans craindre d'être attaqués. La nouvelle de cette affaire s'est répandue rapidement à travers le pays, ce qui a permis à mon ringfort de développer une réputation de sécurité inégalée et a à son tour attiré davantage de voyageurs et de marchands sur mon domaine."
+ toi_wolfwalker.0501.a: "Homme ou bête, tous tiendront compte de ma parole."
+  
+ toi_wolfwalker.0503.t: "La tanière brûle"
+ toi_wolfwalker.0503.desc: "C'est fait. Mes hommes sont entrés en action sur mon ordre, enflammant rapidement la tanière des loups avant qu'aucune des bêtes qui s'y trouvaient n'ait le temps de réaliser ce qui se passait. Leurs hurlements de douleur ont fini par s'estomper avec les flammes, et il ne reste plus que le silence."
+ toi_wolfwalker.0503.a: "Les loups ne nous dérangeront plus."
+  
+ toi_wolfwalker.0504.t: "Feu incontrôlable"
+ toi_wolfwalker.0504.desc: "Sur mon ordre, mes hommes ont mis le feu autour de la tanière des loups. Tout allait bien, jusqu'à ce que le vent change de direction et provoque la propagation des incendies vers le village voisin ! Pendant que nous courions pour l'éteindre, les loups sont sortis de leur antre et ont mutilé l'un de mes Ridrí. Avant qu'ils ne se retirent, je jure avoir entendu l'un des loups déclarer qu'il se vengerait et qu'aucun humain ne serait épargné."
+ toi_wolfwalker.0504.a: "Qu'est-ce que j'ai fait!?"
+  
+ toi_wolfwalker.0511.t: "La victoire!"
+ toi_wolfwalker.0511.desc: "La victoire! \n\nLes marcheurs-loups ont conservé une partie de leur sagesse humaine, alors qu'ils fuient mes terres. Ils ne nous dérangeront plus et ne s'attaqueront plus à notre bétail avant plusieurs décennies. Les bardes chanteront ce grand accomplissement !"
+ toi_wolfwalker.0511.a: "Un grand jour pour mes terres."
+  
+ toi_wolfwalker.0512.t: "Vaincu par les loups"
+ toi_wolfwalker.0512.desc: "Malgré tous mes efforts, j'ai sous-estimé les marcheurs-loups. J'entends les cris de mes hommes, puis le silence alors qu'ils ont la gorge arrachée. Mais tout n'est pas perdu, la sortie est débloquée... J'ai juste besoin de m'échapper tant que je le peux encore..."
+ toi_wolfwalker.0512.a: "Je... dois... survivre"
+  
+ toi_wolfwalker.1000.t: "Courir avec les loups"
+ toi_wolfwalker.1000.desc: "Je ne sais pas ce que les marcheurs de loups ont fait, mais cela semble avoir fonctionné ! Alors que je m'endors, une force d'un autre monde remplit mon corps et mon esprit. Je ferme les yeux en tant qu'humain, puis je les ouvre en tant que loup. Sous cette nouvelle forme, je suis doté d'une grande force et vigueur, je peux communier avec et même commander d'autres loups. Je peux sentir la puissance de la forêt couler à travers et autour de moi, et je me sens imparable !\n\nEt pourtant... je me sens étrange. À chaque instant d’éveil en tant qu’humain, je lutte contre des pulsions et des instincts bestiaux. Des pensées sauvages me traversent l'esprit et je suis parfois obligé de marcher à quatre pattes. J'ai acquis le pouvoir de la bête, mais au prix de mon humanité. Je dois faire attention et gérer mon stress, de peur de devenir un monstre et de me perdre.\n\nJe dois choisir un équilibre entre mon humain extérieur et mon loup intérieur. Si la bête intérieure me dévore, qui d’autre souffrira ?"
+ toi_wolfwalker.1000.a: "Je suis un marcheur-loup."
+  
+ toi_wolfwalker.1100.t: "Mon loup intérieur"
+ toi_wolfwalker.1100.desc: "Chaque fois que je mange, le loup a faim de plus. Chaque fois que je bois, le loup a soif de plus. Chaque fois que je réfléchis, le loup grogne, essayant de transformer cette pensée en sienne. C'est un grand risque de le libérer, mais puis-je résister ? Dois-je résister ? Je ne sais pas mais je dois choisir."
+ toi_wolfwalker.1100.a: "Libérez le loup !"
+ toi_wolfwalker.1100.b: "L’équilibre est la clé."
+ toi_wolfwalker.1100.c: "Je dois rester humain."
+  
+ toi_wolfwalker.1500.t: "Mon loup affamé"
+ toi_wolfwalker.1500.desc: "Le loup en moi a eu faim la nuit dernière, car des bovins sont morts.\n\nCe matin, je me suis réveillé dans un champ, couvert de sang et de viscères. Quand je suis rentré chez moi, on m'a dit que mon bétail avait été brutalement abattu."
+ toi_wolfwalker.1500.a: "La bête aspire à être libre."

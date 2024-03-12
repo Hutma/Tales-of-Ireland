@@ -1,63 +1,159 @@
 ﻿heritage_brythonic = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_brythonic
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_cessarian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_cessarian
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_cruithin = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_cruithin
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_de_danann = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_de_danann
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_errain = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_errain
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_fairy = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_fairy
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_fir_bolg = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_fir_bolg
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_fomorian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_fomorian
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_hy_brazylian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_hy_brazylian
+		}
+	}
+	audio_parameter = mena
 }
 
 heritage_laigin = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_laigin
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_latin = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_latin
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_manx = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_manx
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_megalithic = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_megalithic
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_milesian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_milesian
+		}
+	}
+	audio_parameter = european
 }
 
 heritage_nemedian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_nemedian
+		}
+	}
+	audio_parameter = mena
 }
 
 heritage_partholonian = {
 	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_partholonian
+		}
+	}
+	audio_parameter = european
 }

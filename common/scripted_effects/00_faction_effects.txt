@@ -592,10 +592,10 @@ successful_popular_revolt_outcome_effect = {
 							}
 						}
 						# Special block to stop populist factions from creating Germany if the HRE is still alive and kicking.
-						NAND = {
-							this = title:k_east_francia
-							exists = title:e_hre.holder
-						}
+						# NAND = {
+							# this = title:k_east_francia
+							# exists = title:e_hre.holder
+						# }
 					}
 					add_to_list = potential_kingdoms
 				}
@@ -603,55 +603,55 @@ successful_popular_revolt_outcome_effect = {
 		}
 
 		# If we found one or more valid De Jure Kingdoms, pick the best one for us to take.
-		if = {
-			limit = {
-				any_in_list = {
-					list = potential_kingdoms
-					count >= 1
-					NAND = {
-						this = title:k_east_francia
-						exists = title:e_hre.holder
-					}
-				}
-			}
-			ordered_in_list = {
-				list = potential_kingdoms
-				limit = {
-					NAND = {
-						this = title:k_east_francia
-						exists = title:e_hre.holder
-					}
-				}
+		# if = {
+			# limit = {
+				# any_in_list = {
+					# list = potential_kingdoms
+					# count >= 1
+					# NAND = {
+						# this = title:k_east_francia
+						# exists = title:e_hre.holder
+					# }
+				# }
+			# }
+			# ordered_in_list = {
+				# list = potential_kingdoms
+				# limit = {
+					# NAND = {
+						# this = title:k_east_francia
+						# exists = title:e_hre.holder
+					# }
+				# }
 
-				order_by = {
-					value = 1
-					every_in_list = {
-						list = siezed_counties
-						limit = { kingdom = prev }
-						add = 1
-					}
-				}
+				# order_by = {
+					# value = 1
+					# every_in_list = {
+						# list = siezed_counties
+						# limit = { kingdom = prev }
+						# add = 1
+					# }
+				# }
 
-				change_title_holder = {
-					holder = $FACTION_LEADER$
-					change = scope:change_one
-				}
-			}
-		}
+				# change_title_holder = {
+					# holder = $FACTION_LEADER$
+					# change = scope:change_one
+				# }
+			# }
+		# }
 		# Otherwise, create a new titular Kingdom title.
-		else = {
-			create_popular_revolt_title_effect = {
-				FACTION = scope:popular_faction
-				FACTION_LEADER = $FACTION_LEADER$
-				TIER = kingdom
-			}
-			scope:new_title = {
-				change_title_holder = {
-					holder = $FACTION_LEADER$
-					change = scope:change_one
-				}
+		
+		create_popular_revolt_title_effect = {
+			FACTION = scope:popular_faction
+			FACTION_LEADER = $FACTION_LEADER$
+			TIER = kingdom
+		}
+		scope:new_title = {
+			change_title_holder = {
+				holder = $FACTION_LEADER$
+				change = scope:change_one
 			}
 		}
+		
 	}
 
 	else_if = {
@@ -1027,7 +1027,7 @@ spawn_popular_revolt_troops = {
 		}
 		spawn_army = {
 			men_at_arms = {
-				type = light_footmen
+				type = kern_warriors
 				stacks = {
 					value = 0
 					joined_faction = {
@@ -1056,7 +1056,7 @@ spawn_popular_revolt_troops = {
 		}
 		spawn_army = {
 			men_at_arms = {
-				type = pikemen_unit
+				type = pikemen_unit_leinster
 				stacks = {
 					value = 0
 					joined_faction = {
@@ -1086,7 +1086,7 @@ spawn_popular_revolt_troops = {
 		}
 		spawn_army = {
 			men_at_arms = {
-				type = bowmen
+				type = bowmen_leinster
 				stacks = {
 					value = 0
 					joined_faction = {
@@ -1112,7 +1112,7 @@ spawn_popular_revolt_troops = {
 		}
 		spawn_army = {
 			men_at_arms = {
-				type = bombard
+				type = siege_tower
 				stacks = 1
 			}
 			location = scope:local_center_of_rebellion
@@ -1122,11 +1122,11 @@ spawn_popular_revolt_troops = {
 	}
 	else_if = {
 		limit = {
-			culture = { has_innovation = innovation_trebuchet }
+			culture = { has_innovation = innovation_ram }
 		}
 		spawn_army = {
 			men_at_arms = {
-				type = trebuchet
+				type = ram
 				stacks = 1
 			}
 			location = scope:local_center_of_rebellion
@@ -1135,34 +1135,34 @@ spawn_popular_revolt_troops = {
 		}
 		
 	}
-	else_if = {
-		limit = {
-			culture = { has_innovation = innovation_mangonel }
-		}
-		spawn_army = {
-			men_at_arms = {
-				type = mangonel
-				stacks = 1
-			}
-			location = scope:local_center_of_rebellion
-			war = root.faction_war
-			name = populist_faction_event_troops
-		}
-	}
-	else_if = {
-		limit = {
-			culture = { has_innovation = innovation_catapult }
-		}
-		spawn_army = {
-			men_at_arms = {
-				type = onager
-				stacks = 1
-			}
-			location = scope:local_center_of_rebellion
-			war = root.faction_war
-			name = populist_faction_event_troops
-		}
-	}
+	# else_if = {
+		# limit = {
+			# culture = { has_innovation = innovation_mangonel }
+		# }
+		# spawn_army = {
+			# men_at_arms = {
+				# type = mangonel
+				# stacks = 1
+			# }
+			# location = scope:local_center_of_rebellion
+			# war = root.faction_war
+			# name = populist_faction_event_troops
+		# }
+	# }
+	# else_if = {
+		# limit = {
+			# culture = { has_innovation = innovation_catapult }
+		# }
+		# spawn_army = {
+			# men_at_arms = {
+				# type = onager
+				# stacks = 1
+			# }
+			# location = scope:local_center_of_rebellion
+			# war = root.faction_war
+			# name = populist_faction_event_troops
+		# }
+	# }
 }
 
 peasant_faction_demands_enforced = {

@@ -321,12 +321,45 @@ material_woods_india_burma = {}
 material_woods_ebony = {}
 
 # Regional - France, England, Wales, Ireland
-material_wood_yew = {
+material_woods_yew = {
 	
 	regions = {
 		tales_of_ireland_global_region
 	}
 
+}
+
+# EP2 Bow Woods
+material_woods_bamboo = {
+	
+}
+
+material_woods_cherry = {
+	
+}
+
+material_woods_dogwood = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+material_woods_hazel = {
+	regions = {
+		tales_of_ireland_global_region
+	}
+}
+
+material_woods_hickory = {
+	
+}
+
+material_woods_palm = {
+	
+}
+
+material_woods_mulberry = {
+	
 }
 
 # Regional - Mediterranean
@@ -505,6 +538,7 @@ world_kabulistan = {}
 world_khiva = {}
 world_mesopotamia = {}
 world_jazira = {}
+world_himalaya = {}
 
 special_mongol_empire_start_region = {}
 special_mongol_empire_conquest_region_prio_1 = {}
@@ -547,6 +581,7 @@ ghw_region_baltic = {}
 ghw_region_arabia = {}
 ghw_region_egypt = {}
 ghw_region_egypt_et_al = {}
+ghw_region_jerusalem = {}
 
 ghw_region_persia = {}
 ghw_region_kurdistan = {}
@@ -737,3 +772,7 @@ board_game_fidchell_region = {
 		tales_of_ireland_global_region
 	}
 }
+
+dlc_fp3_seljuk_birth_region = { }
+dlc_fp3_greater_persian_frontier_regions = { }
+dlc_fp3_eastern_persian_frontier_regions = { }

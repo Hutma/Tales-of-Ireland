@@ -189,7 +189,7 @@ pilgrimage_additional_reward_effect = {
 				else = {
 					add_trait_xp = {
 						trait = lifestyle_mystic
-						value = 5 #TODO_CD_EP2_FGK standardize TINY
+						value = 5
 					}
 				}
 			}
@@ -834,109 +834,109 @@ pilgrimages_track_encountered_cultures_effect = {
 
 # Create a bone of a random saint in a box
 christian_saint_bone_creation_effect = { 
-	if = {
-		limit = {
-			has_royal_court = yes
-			OR = {
-				faith = faith:catholic
-				faith = faith:orthodox
-				faith = faith:nestorian
-				faith = faith:coptic
-				faith = faith:armenian_apostolic
-				faith = faith:insular_celtic
-				faith = { has_doctrine = tenet_christian_syncretism }
-			}
-		}
-		hidden_effect = {
-			#TODO_CD_EP2 This will most likely need updating if we want to keep it -- does this still work?
-			random = {
-				chance = 10 # 10% base chance
-				modifier = {
-					add = 10 # 20% chance for medium
-					exists = scope:activity
-					exists = var:pilgrimage_distance
-					scope:activity.var:pilgrimage_distance = flag:medium_pilgrimage_var
-				}
-				modifier = {
-					add = 20 # 30% chance for long
-					exists = scope:activity
-					exists = var:pilgrimage_distance
-					scope:activity.var:pilgrimage_distance = flag:long_pilgrimage_var
-				}
-				modifier = {
-					add = 30 # 40% chance for very long
-					exists = scope:activity
-					exists = var:pilgrimage_distance
-					scope:activity.var:pilgrimage_distance = flag:very_long_pilgrimage_var
-				}
-				modifier = {
-					add = 10
-					has_character_flag = mid_pious_reward
-				}
-				modifier = {
-					add = 20
-					has_character_flag = high_pious_reward
-				}
-				modifier = {
-					add = 30
-					has_character_flag = perfect_pious_reward
-				}
-				modifier = { # half as likely for AI
-					factor = 0.5
-					is_ai = yes
-				}
-				save_scope_as = saint_bone_owner
-				create_artifact = {
-					name = christian_saint_bone_name
-					description = christian_saint_bone_description
-					type = pedestal
-					visuals = bone
-					template = saintly_bones_template
-					modifier = artifact_monthly_piety_1_modifier
-					save_scope_as = christian_saint_bone_scope
-				}
-				#TODO_CD_EP2_FGK Add activity log entry here that sets the owner to ROOT
-				scope:christian_saint_bone_scope = {
-					set_variable = { # required to track usability for template
-						name = saint_bone_faith
-						value = scope:saint_bone_owner.faith
-					}
-					set_variable = { # required to track usability for template
-						name = holy_site
-						value = scope:saint_bone_owner.involved_activity.activity_location.county
-					}
-					if = {
-						limit = { exists = var:holy_site }
-						#To prevent unused variable errors :catto:
-					}
-				}
-				scope:activity ?= {
-					add_activity_log_entry = {
-						key = pilgrimage_completed_relic_log
-						score = 75
-						tags = { complete }
-						character = scope:host
-						artifact = scope:christian_saint_bone_scope
-						show_in_conclusion = yes
+	# if = {
+		# limit = {
+			# has_royal_court = yes
+			# OR = {
+				# faith = faith:catholic
+				# faith = faith:orthodox
+				# faith = faith:nestorian
+				# faith = faith:coptic
+				# faith = faith:armenian_apostolic
+				# faith = faith:insular_celtic
+				# faith = { has_doctrine = tenet_christian_syncretism }
+			# }
+		# }
+		# hidden_effect = {
+			# TODO_CD_EP2 This will most likely need updating if we want to keep it -- does this still work?
+			# random = {
+				# chance = 10 # 10% base chance
+				# modifier = {
+					# add = 10 # 20% chance for medium
+					# exists = scope:activity
+					# exists = var:pilgrimage_distance
+					# scope:activity.var:pilgrimage_distance = flag:medium_pilgrimage_var
+				# }
+				# modifier = {
+					# add = 20 # 30% chance for long
+					# exists = scope:activity
+					# exists = var:pilgrimage_distance
+					# scope:activity.var:pilgrimage_distance = flag:long_pilgrimage_var
+				# }
+				# modifier = {
+					# add = 30 # 40% chance for very long
+					# exists = scope:activity
+					# exists = var:pilgrimage_distance
+					# scope:activity.var:pilgrimage_distance = flag:very_long_pilgrimage_var
+				# }
+				# modifier = {
+					# add = 10
+					# has_character_flag = mid_pious_reward
+				# }
+				# modifier = {
+					# add = 20
+					# has_character_flag = high_pious_reward
+				# }
+				# modifier = {
+					# add = 30
+					# has_character_flag = perfect_pious_reward
+				# }
+				# modifier = { # half as likely for AI
+					# factor = 0.5
+					# is_ai = yes
+				# }
+				# save_scope_as = saint_bone_owner
+				# create_artifact = {
+					# name = christian_saint_bone_name
+					# description = christian_saint_bone_description
+					# type = pedestal
+					# visuals = bone
+					# template = saintly_bones_template
+					# modifier = artifact_monthly_piety_1_modifier
+					# save_scope_as = christian_saint_bone_scope
+				# }
+				# TODO_CD_EP2_FGK Add activity log entry here that sets the owner to ROOT
+				# scope:christian_saint_bone_scope = {
+					# set_variable = { # required to track usability for template
+						# name = saint_bone_faith
+						# value = scope:saint_bone_owner.faith
+					# }
+					# set_variable = { # required to track usability for template
+						# name = holy_site
+						# value = scope:saint_bone_owner.involved_activity.activity_location.county
+					# }
+					# if = {
+						# limit = { exists = var:holy_site }
+						# To prevent unused variable errors :catto:
+					# }
+				# }
+				# scope:activity ?= {
+					# add_activity_log_entry = {
+						# key = pilgrimage_completed_relic_log
+						# score = 75
+						# tags = { complete }
+						# character = scope:host
+						# artifact = scope:christian_saint_bone_scope
+						# show_in_conclusion = yes
 						# Effects
-						scope:christian_saint_bone_scope = {
-							set_owner = root
-						}
-					}
-				}
-			}
-		}
-	}
+						# scope:christian_saint_bone_scope = {
+							# set_owner = root
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 }
 
 # Needed to ensure tooltip matches artifact name
 christian_saint_bone_tooltip_effect = { 
-	if = {
-		limit = { exists = scope:christian_saint_bone_scope }
-		show_as_tooltip = {
-			scope:christian_saint_bone_scope = { set_owner = scope:host }
-		}
-	}
+	# if = {
+		# limit = { exists = scope:christian_saint_bone_scope }
+		# show_as_tooltip = {
+			# scope:christian_saint_bone_scope = { set_owner = scope:host }
+		# }
+	# }
 }
 
 
@@ -975,6 +975,8 @@ give_pilgrimage_reward_effect = {
 	christian_saint_bone_tooltip_effect = yes
 	pilgrimage_additional_reward_effect = yes
 	remove_character_flag = should_get_trait_piety
+	# LEGITIMACY GAIN FOR STANDARD ACTIVITY PARTICIPATION - PILGRIMAGE
+	standard_activity_participation_legitimacy_effect = yes
 }
 
 #Stress loss when arriving at the holy site
@@ -1134,6 +1136,53 @@ resolve_pilgrimage_type_reward_effect = {
 			#Lousy piousness - 0-25
 			else = {
 				scope:host = { add_character_flag = low_worldly_reward }
+			}
+		}
+	}
+	if = {
+		limit = {
+			scope:host = {
+				has_trait_xp = {
+					trait = pilgrim
+					value >= 50
+				}
+				NOT = { has_character_flag = pilgrim_legend }
+				has_dlc_feature = legends
+			}
+		}
+		scope:host = {
+			random = {	
+				chance = { 
+					value = legend_seed_chance_low #15%
+					if = {
+						limit = {
+							has_trait_xp = {
+								trait = pilgrim
+								value >= 75
+							}
+						}
+						add = legend_seed_chance_medium #55% chance
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = pilgrim
+								value >= 60
+							}
+						}
+						add = legend_seed_chance_low #30% chance
+					}
+				}
+				add_character_flag = pilgrim_legend
+				create_legend_seed = {
+					type = holy
+					quality = famed
+					chronicle = saintly_deed
+					properties = {
+						ancestor = scope:host
+						religion = scope:host.religion
+					}
+				}
 			}
 		}
 	}

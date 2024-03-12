@@ -1,25 +1,29 @@
 ﻿l_french:
- toi_decision_race.0001.t:0 "Royauté d'Aran restorée"
- toi_decision_race.0001.desc:0 "L'ancien royaume d'Aran a été rebâti par mes efforts; ce domaine sera à nouveau celui des Fomoriens! \n\nJe marche dans dans les traces de légendes telles que Balor et Bres, les anciens champions de notre peuple. Je ne laisserai jamais des étrangers détruire le royaume une nouvelle fois!"
- toi_decision_race.0001.a:0 "Nous nous sommes relevés"
- 
- toi_decision_race.0002.t:0 "Le Roi d'Aran"
- toi_decision_race.0002.desc:0 "Après des siècles de lutte, [founder.GetFullName] a restoré l'ancien Royaume de Aran, et repoussé les envahisseurs étrangers de leur île. \n\nBien que les autres seigneurs voient d'un mauvais oeil ce parvenu qui menace leurs terres, le [founder.GetPrimaryTitle.GetAdjective] peuple a connu des invasions bien pire que ce que cet âge moderne puisse produire. Déjà, ils se préparent à résister à la sévère contre-attaque à venir..."
- toi_decision_race.0002.a:0 "Aran est de nouveau grande"
- toi_decision_race.0002.b:0 "Ces royaumes vont et viennent"
- 
- toi_decision_race.0003.t:0 "Royaume de Nemed restoré"
- toi_decision_race.0003.desc:0 " L'ancien royaume de Nemed renaît par mon labeur; Ce royaume prospérera de nouveau. \n\nJe marche dans les pas des légendaires fils de Nemed, fondateurs des tribus, anciens champions de notre peuple. Je ne laisserai jamais des étrangers détruire le royaume une nouvelle fois!"
- toi_decision_race.0003.a:0 "Les Némédiens sont unis à nouveau"
- 
- toi_decision_race.0004.t:0 "The Nemedian King"
- toi_decision_race.0004.desc:0 "Après des siècles de lutte, [founder.GetFullName] a restoré l'ancien Royaume de Nemed, et repoussé les envahisseurs étrangers de leur île. \n\nBien que les autres seigneurs voient d'un mauvais oeil ce parvenu qui menace leurs terres, le peuple [founder.GetPrimaryTitle.GetAdjective]a connu des invasions bien pire que ce que cet âge moderne puisse produire. Déjà, ils se préparent à résister à la sévère contre-attaque à venir..."
- toi_decision_race.0004.a:0 "Les Némédiens sont unis à nouveau"
- 
- toi_decision_major.0001.t:0 "L'Irlande est unie."
- toi_decision_major.0001.desc:0 "Pour la première fois depuis la chute des Milésiens, l'Irlande est unie sous un souverain, une bannière. Espérons que cette union durera et permettra à toutes les tribus irlandaises de prospérerer."
- toi_decision_major.0001.a:0 "L'Irlande peut regarder par delà ses frontières"
- 
- toi_decision_major.0002.t:0 "L'Irlande est unie."
- toi_decision_major.0002.desc:0 "Pour la première fois depuis la chute des Milésiens, l'Irlande est unie sous un souverain, une bannière. Espérons que cette union durera et permettra à toutes les tribus irlandaises de prospérerer."
- toi_decision_major.0002.a:0 "L'Irlande est unie maintenant"
+ toi_decision_race.0001.t: "La royauté d'Aran restaurée"
+ toi_decision_race.0001.desc: "L'ancien royaume d'Aran renaît grâce à mes efforts ; ce royaume sera à nouveau sous la domination fomorienne !\n\nJe marche sur les traces de légendes telles que Balor et Bres, les anciens champions de notre peuple, je ne laisserai plus jamais le royaume tomber aux mains d'étrangers !"
+ toi_decision_race.0001.a: "Nous nous relevons."
+  
+ toi_decision_race.0002.t: "Le roi d'Aran"
+ toi_decision_race.0002.desc: "Après des siècles de lutte, [founder.GetFullName] a restauré l'ancien royaume d'Aran et repoussé les envahisseurs étrangers de leur île.\n\nBien qu'il soit peu probable que les autres seigneurs d'Irlande tolèrent que ce pouvoir parvenu empiète sur ce qu'ils considèrent comme leurs terres, les [founder.GetPrimaryTitle.GetAdjective] personnes ont résisté à des invasions pires que tout ce que cette époque moderne peut rassembler. Déjà, ils se préparent à résister aux inévitables représailles sinistres…"
+ toi_decision_race.0002.a: "Aran est à nouveau génial."
+ toi_decision_race.0002.b: "Ces royaumes vont et viennent."
+  
+ toi_decision_race.0003.t: "Royaume Nemed restauré"
+ toi_decision_race.0003.desc: "L'ancien royaume de Nemed renaît grâce à mes efforts ; ce royaume prospérera à nouveau.\n\nJe marche sur les traces de légendes telles que les fils de Nemed, les fondateurs des tribus, les anciens champions de notre peuple, je ne laisserai plus jamais le royaume tomber aux mains d'étrangers !"
+ toi_decision_race.0003.a: "Les Némédiens sont à nouveau unis."
+  
+ toi_decision_race.0004.t: "Le roi némédien"
+ toi_decision_race.0004.desc: "Après des siècles de lutte, [founder.GetFullName] a restauré l'ancien royaume de Nemed et repoussé les envahisseurs étrangers de leur île.\n\nBien qu'il soit peu probable que les autres seigneurs d'Irlande tolèrent que ce pouvoir parvenu empiète sur ce qu'ils considèrent comme leurs terres, les [founder.GetPrimaryTitle.GetAdjective] personnes ont résisté à des invasions pires que tout ce que cette époque moderne peut rassembler. Déjà, ils se préparent à résister aux inévitables représailles sinistres…"
+ toi_decision_race.0004.a: "Les Némédiens sont à nouveau unis."
+  
+ toi_decision_major.0001.t: "L'Irlande est une"
+ toi_decision_major.0001.desc: "Pour la première fois depuis que les Milésiens ont perdu le contrôle de l’île d’Émeraude, l’Irlande est unie sous un seul souverain et un seul drapeau. Espérons que cette union restera forte et permettra à toutes les tribus irlandaises de prospérer."
+ toi_decision_major.0001.a: "L’Irlande peut regarder au-delà de ses frontières."
+  
+ toi_decision_major.0002.t: "L'Irlande est une"
+ toi_decision_major.0002.desc: "Pour la première fois depuis que les Milésiens ont perdu le contrôle de l’île d’Émeraude, l’Irlande est unie sous un seul souverain et un seul drapeau. Espérons que cette union restera forte et permettra à toutes les tribus irlandaises de prospérer."
+ toi_decision_major.0002.a: "L’Irlande en est désormais une."
+  
+ toi_decision_major.0003.t: "Meath est en hausse"
+ toi_decision_major.0003.desc: "L'Irlande est un royaume composé de nombreux royaumes, tribus et forteresses, mais aucun nom en dessous de la Haute Royauté n'est plus grand que les Quatre Provinces : Leinster, Connacht, Ulster et Munster. \n\nIls constituent les plus grandes sphères d'influence directement au-dessous du Haut Roi et tout dirigeant suffisamment fort pour s'établir comme seul dirigeant d'une province sera considéré avec crainte et respect par les nombreux peuples d'Irlande. \n\nEt pourtant il manque quelque chose... Au nord du Leinster, où se trouve la bienheureuse Tara, il existe un autre centre de pouvoir... une Cinquième Province. \n\nJe détiens un contrôle total sur ces terres et désormais elles seront connues sous le nom de « Meath », car elles se trouvent au centre du pays. \n\n#S Que cela soit connu de tous ! Le Royaume de Meath n'est inférieur à aucune autre des cinq provinces actuelles. #!"
+ toi_decision_major.0003.a: "Une nouvelle province pour l'Irlande."

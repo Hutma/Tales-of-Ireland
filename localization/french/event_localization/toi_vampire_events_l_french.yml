@@ -1,0 +1,5 @@
+﻿l_french:
+ toi_vampire.0001.t: "L'art de la chasse au sang"
+ toi_vampire.0001.desc: "En tant que vampire, je dois choisir mon approche quant à la façon dont je vais me nourrir. Dois-je prélever du sang de force ou dois-je essayer d’utiliser des méthodes d’alimentation plus raffinées ?"
+ toi_vampire.0001.a: "Je prendrai du sang de force. #italic L'interaction Take Blood sera résolue en fonction des prouesses#!"
+ toi_vampire.0001.b: "J'utiliserai toute ma méchanceté. #italic L'interaction Take Blood sera résolue en fonction de l'intrigue#!"

@@ -187,7 +187,7 @@ bp2_yearly.7000 = { #Wet Nurse is sick and can pass it down to a child
 		}
 		save_court_physician_as_effect = { SCOPE_NAME = court_physician }
 		if = {
-			limit = { scope:wet_nurse ?= { has_short_disease_trigger = yes} }
+			limit = { scope:wet_nurse = { has_short_disease_trigger = yes} }
 			scope:wet_nurse = {
 				set_worst_disease_effect = yes
 				save_scope_as = sick_character
@@ -200,26 +200,31 @@ bp2_yearly.7000 = { #Wet Nurse is sick and can pass it down to a child
 	option = {
 		name = bp2_yearly.7000.a
 		flavor = bp2_yearly.7000.a.tt
-		send_interface_toast = {
-	 		title = bp2_yearly.7000.a.tt
-	 		left_icon = root
-	 		right_icon = scope:wet_nurse
-			scope:nursed_child ?= {
-				random_list = {
-					15 = {
-						show_chance = no
-						desc = bp2_yearly.7000.ill
+		random_list = {
+			15 = {
+				show_chance = no
+				desc = bp2_yearly.7000.ill
+				send_interface_toast = {
+					title = bp2_yearly.7000.a.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+					scope:nursed_child = {
 						contract_disease_from_wet_nurse_effect = yes
-					}
-					75 = {
-						show_chance = no
-						desc = bp2_yearly.7000.healthy
-						custom_tooltip = bp2_yearly.7000.healthy.tt
 					}
 				}
 			}
+			75 = {
+				show_chance = no
+				desc = bp2_yearly.7000.healthy
+				send_interface_toast = {
+					title = bp2_yearly.7000.a.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+					custom_tooltip = bp2_yearly.7000.healthy.tt
+				}
+			}
 		}
-		scope:wet_nurse ?= {
+		scope:wet_nurse = {
 			add_character_modifier = {
 				modifier = safe_disease_treatment_success_high_modifier
 				days = disease_treatment_short_duration
@@ -249,22 +254,27 @@ bp2_yearly.7000 = { #Wet Nurse is sick and can pass it down to a child
 			recipient = scope:wet_nurse
 			court_position = wet_nurse_court_position
 		}
-		send_interface_toast = {
-			title = bp2_yearly.7000.b.tt
-			left_icon = root
-	 		right_icon = scope:wet_nurse
-	 		scope:nursed_child ?= {
-				random_list = {
-					10 = {
-						show_chance = no
-						desc = bp2_yearly.7000.ill
-						contract_disease_from_wet_nurse_effect = yes
-					}
-					90 = {
-						show_chance = no
-						desc = bp2_yearly.7000.healthy
-						custom_tooltip = bp2_yearly.7000.healthy.tt
-					}
+		random_list = {
+			10 = {
+				show_chance = no
+				desc = bp2_yearly.7000.ill
+				send_interface_toast = {
+					title = bp2_yearly.7000.b.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+			 		scope:nursed_child = {
+			 			contract_disease_from_wet_nurse_effect = yes
+			 		}
+			 	}
+			}
+			90 = {
+				show_chance = no
+				desc = bp2_yearly.7000.healthy
+				send_interface_toast = {
+					title = bp2_yearly.7000.b.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+					custom_tooltip = bp2_yearly.7000.healthy.tt
 				}
 			}
 		}
@@ -294,22 +304,27 @@ bp2_yearly.7000 = { #Wet Nurse is sick and can pass it down to a child
 			TARGET = scope:wet_nurse
 			IMPRISONER = root
 		}
-	 	send_interface_toast = {
-	 		title = bp2_yearly.7000.b.tt
-	 		left_icon = root
-	 		right_icon = scope:wet_nurse
-	 		scope:nursed_child ?= {
-				random_list = {
-					5 = {
-						show_chance = no
-						desc = bp2_yearly.7000.ill
+		random_list = {
+			5 = {
+				show_chance = no
+				desc = bp2_yearly.7000.ill
+				send_interface_toast = {
+					title = bp2_yearly.7000.b.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+					scope:nursed_child = {
 						contract_disease_from_wet_nurse_effect = yes
 					}
-					95 = {
-						show_chance = no
-						desc = bp2_yearly.7000.healthy
-						custom_tooltip = bp2_yearly.7000.healthy.tt
-					}
+				}
+			}
+			95 = {
+				show_chance = no
+				desc = bp2_yearly.7000.healthy
+				send_interface_toast = {
+					title = bp2_yearly.7000.b.tt
+					left_icon = root
+					right_icon = scope:nursed_child
+					custom_tooltip = bp2_yearly.7000.healthy.tt
 				}
 			}
 		}
@@ -982,7 +997,8 @@ bp2_yearly.7003 = { #Wet Nurse informs you about first words of your child
 			location = root.location
 		}
 		any_child = {
-			age <= 4
+			age < 5
+			child_not_infant_trigger = yes
 			is_available_ai = yes
 			location = root.location
 		}
@@ -1014,13 +1030,15 @@ bp2_yearly.7003 = { #Wet Nurse informs you about first words of your child
 		}
 		random_child = {
 			limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				this = root.player_heir
 				is_available_ai = yes
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				NOT = {
 					any_sibling = {
 						age > prev.age
@@ -1030,7 +1048,8 @@ bp2_yearly.7003 = { #Wet Nurse informs you about first words of your child
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				is_available_ai = yes
 				location = root.location
 			}
@@ -1301,7 +1320,8 @@ bp2_yearly.7004 = { #Wet Nurse informs you about first steps of your child
 			location = root.location
 		}
 		any_child = {
-			age <= 4
+			age < 5
+			child_not_infant_trigger = yes
 			is_available_ai = yes
 			location = root.location
 		}
@@ -1333,13 +1353,15 @@ bp2_yearly.7004 = { #Wet Nurse informs you about first steps of your child
 		}
 		random_child = {
 			limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				this = root.player_heir
 				is_available_ai = yes
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				NOT = {
 					any_sibling = {
 						age > prev.age
@@ -1349,7 +1371,8 @@ bp2_yearly.7004 = { #Wet Nurse informs you about first steps of your child
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 4
+				age < 5
+				child_not_infant_trigger = yes
 				is_available_ai = yes
 				location = root.location
 			}
@@ -1495,7 +1518,7 @@ bp2_yearly.7005 = { #Wet Nurse informs you about first fallen teeth of your chil
 			location = root.location
 		}
 		any_child = {
-			age <= 12
+			child_not_teen_trigger = yes
 			is_available_ai = yes
 			location = root.location
 		}
@@ -1527,13 +1550,13 @@ bp2_yearly.7005 = { #Wet Nurse informs you about first fallen teeth of your chil
 		}
 		random_child = {
 			limit = {
-				age <= 12
+				child_not_teen_trigger = yes
 				this = root.player_heir
 				is_available_ai = yes
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 12
+				child_not_teen_trigger = yes
 				NOT = {
 					any_sibling = {
 						age > prev.age
@@ -1543,7 +1566,7 @@ bp2_yearly.7005 = { #Wet Nurse informs you about first fallen teeth of your chil
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 12
+				child_not_teen_trigger = yes
 				is_available_ai = yes
 				location = root.location
 			}
@@ -1716,7 +1739,7 @@ bp2_yearly.7006 = { #Wet Nurse informs you about first independent dress up of y
 			location = root.location
 		}
 		any_child = {
-			age <= 7
+			child_not_teen_trigger = yes
 			is_available_ai = yes
 			location = root.location
 		}
@@ -1748,13 +1771,13 @@ bp2_yearly.7006 = { #Wet Nurse informs you about first independent dress up of y
 		}
 		random_child = {
 			limit = {
-				age <= 7
+				child_not_teen_trigger = yes
 				this = root.player_heir
 				is_available_ai = yes
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 7
+				child_not_teen_trigger = yes
 				NOT = {
 					any_sibling = {
 						age > prev.age
@@ -1764,7 +1787,7 @@ bp2_yearly.7006 = { #Wet Nurse informs you about first independent dress up of y
 				location = root.location
 			}
 			alternative_limit = {
-				age <= 7
+				child_not_teen_trigger = yes
 				is_available_ai = yes
 				location = root.location
 			}
@@ -2919,7 +2942,6 @@ bp2_yearly.7011 = { #Cared child gives you something
 			}
 			desc = bp2_yearly.7011.desc_dress
 		}
-		desc = bp2_yearly.7011.desc_end
 		triggered_desc = {
 			trigger = {
 				scope:child_request = flag:receive_love
@@ -5525,6 +5547,39 @@ bp2_yearly.7029 = { #Completed rite memory follow up event - other tribal child 
 	}
 	theme = family
 	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:dueling_rite_memory
+		}
+		reference = ep2_tournament
+	}
+	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:scarification_rite_memory
+		}
+		reference = fp1_runestone_circle
+	}
+	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:seclusion_rite_memory
+		}
+		reference = terrain_travel
+	}
+	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:shaving_hair_rite_memory
+		}
+		reference = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:fire_cleanse_rite_memory
+		}
+		reference = bp1_bonfire
+	}
+	override_background = {
+		trigger = {
+			scope:rite_memory.var:rites_of_passage_type = flag:water_cleanse_rite_memory
+		}
 		reference = fp1_runestone_circle
 	}
 

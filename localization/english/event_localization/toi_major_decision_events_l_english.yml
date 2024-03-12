@@ -16,6 +16,17 @@
  toi_decision_race.0004.desc:0 "After centuries of struggle, [founder.GetFullName] has restored the ancient kingdom of Nemed, and thrown back their island's foreign invaders.\n\nThough the other lords of the Ireland are unlikely to brook this upstart power infringing on what they view as their lands, the [founder.GetPrimaryTitle.GetAdjective] people have weathered worse invasions than anything this modern age can muster. Already, they prepare to resist the inevitable grim-retaliation..."
  toi_decision_race.0004.a:0 "The Nemedians are united again."
  
+ toi_decision_race.0005.t:0 "Reclaiming Maige Tuired"
+ toi_decision_race.0005.desc:0 "In ages long past, we ruled over a mighty empire. However, at the battle of Maige Tuired, the wretched Tuatha De Danann wrested control over the land we once called our own. \n Now, we reclaim our rightful rulership over the holy land of Maige Tuired, and with it, our rightful place as the leader of the Fir Bolg!"
+ toi_decision_race.0005.a:0 "To War!!!"
+ toi_decision_race.0005.b:0 "That might be too bold..." 
+ 
+ toi_decision_race.0006.t:0 "Cath Maige Tuired Avenged"
+ toi_decision_race.0006.desc:0 "[founder.GetFullName] has recaptured Maige Tuired and rebuilt it into a great city for the Fir Bolgs. With this reconsolidation, the Fir Bolgs are now stronger than ever, and with it, theur faith finds new followers and greater fervor every day."
+ toi_decision_race.0006.a:0 "The Fir Bolg rule is back."
+ 
+ fir_bolg_event_troops: "Vengence Fir Bolg band"
+ 
  toi_decision_major.0001.t:0 "Ireland is One"
  toi_decision_major.0001.desc:0 "For the first time since the Milesians lost control over the Emerald Island, Ireland is united under one ruler, one flag. Let's hope this union will stay strong and allow all the Irish tribes to thrive."
  toi_decision_major.0001.a:0 "Ireland can look beyond its borders."

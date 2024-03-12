@@ -1,0 +1,41 @@
+﻿l_french:
+ toi_clan.0001.t: "Un clan montant"
+ toi_clan.0001.desc: "Notre dynastie est devenue de plus en plus célèbre, génération après génération. Il est désormais temps pour nous de nous rassembler sous la bannière d’un clan. \n\n[founder.GetFirstName] guidera le [founder.GetDynasty.GetBaseName] vers la grandeur ! \n\n\n\n #bold Chaque fois qu'il y a moins de 3 dirigeants indépendants dans le clan, le clan sera détruit #!"
+ toi_clan.0001.a: "Vive le clan."
+  
+ toi_clan.0002.t: "Appeler le clan"
+ toi_clan.0002.desc: "J'ai rassemblé le clan dans mon ringfort ce soir. La plupart d’entre eux savent déjà pourquoi ils sont ici. \n\nIls sont là pour défendre leur clan. Ce soir, je vais appeler chacun d'eux pour qu'il se joigne à moi dans la guerre et la bataille !"
+ toi_clan.0002.a: "Rejoignez-moi dans le [war_1.GetName]"
+ toi_clan.0002.b: "Rejoignez-moi dans le [war_2.GetName]"
+ toi_clan.0002.c: "Rejoignez-moi dans le [war_3.GetName]"
+ toi_clan.0002.d: "Rejoignez-moi dans le [war_4.GetName]"
+ toi_clan.0002.e: "Rejoignez-moi dans le [war_5.GetName]"
+ toi_clan.0002.f: "Rejoignez-moi dans le [war_6.GetName]"
+  
+ toi_clan.0003.t: "Un appel à la guerre"
+ toi_clan.0003.desc: "Notre chef de clan nous a appelés à la guerre ! Nos traditions nous dictent de le rejoindre au combat, mais le choix m'appartient toujours."
+ toi_clan.0003.a: "Bien sûr, je défendrai le clan."
+ toi_clan.0003.b: "Je n'ai pas le temps pour les traditions."
+  
+ toi_clan.0004.t: "Appeler le chef du clan"
+ toi_clan.0004.desc: "J'ai invité le chef du clan dans mon ring ce soir. Il sait déjà pourquoi il est ici. \n\nJe vais invoquer nos traditions et lui demander de se joindre à ma guerre, de me rejoindre dans la bataille et la victoire !"
+ toi_clan.0004.a: "Rejoignez-moi dans le [war_1.GetName]"
+ toi_clan.0004.b: "Rejoignez-moi dans le [war_2.GetName]"
+ toi_clan.0004.c: "Rejoignez-moi dans le [war_3.GetName]"
+ toi_clan.0004.d: "Rejoignez-moi dans le [war_4.GetName]"
+ toi_clan.0004.e: "Rejoignez-moi dans le [war_5.GetName]"
+ toi_clan.0004.f: "Rejoignez-moi dans le [war_6.GetName]"
+  
+ toi_clan.0005.t: "Un appel à la guerre"
+ toi_clan.0005.desc: "L'un des dirigeants de notre clan nous a appelés à participer à la guerre [war_chosen.GetName] ! Nos traditions nous dictent de le rejoindre au combat, mais le choix m'appartient toujours."
+ toi_clan.0005.a: "Bien sûr, je défendrai le clan."
+ toi_clan.0005.b: "Je n'ai pas le temps pour les traditions."
+  
+ toi_clan.0008.t: "Clan détruit"
+ toi_clan.0008.desc: "Notre clan devient de plus en plus petit, notre pouvoir en tant que famille diminue. \n\nAvec moins de trois dirigeants claniques, nous devons faire face au fait qu'il n'y a plus vraiment de raison pour que le clan existe..."
+ toi_clan.0008.a: "C'est un échec pour notre dynastie."
+  
+ toi_clan.0009.t: "Fête pour les dirigeants du clan"
+ toi_clan.0009.desc: "Une réunion de clan aura lieu cette année et depuis plusieurs semaines mes conseillers ont l'idée d'organiser une fête pour accueillir les dirigeants du clan, si la fête se passe bien elle pourrait rendre notre clan plus uni et plus fort. \n\nAvec l'insistance de mes conseillers, je me demande si ce serait une bonne idée, cela rapprocherait certainement le clan mais est-ce que cela en vaut le coût ?"
+ toi_clan.0009.a: "Je vais investir dans un tel festin !"
+ toi_clan.0009.b: "Cela ne vaut pas l'argent..."

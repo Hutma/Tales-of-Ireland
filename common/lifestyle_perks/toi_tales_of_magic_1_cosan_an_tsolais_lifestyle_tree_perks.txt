@@ -67,21 +67,15 @@ learn_by_the_books_perk = {
 	effect = {
 		if = {
 			limit = { 
-				AND = {
-					NOT = { has_trait = mystic_1 }
-					NOT = { has_trait = mystic_2 }
-					NOT = { has_trait = mystic_3 }
-				}
+				NOT = { has_trait = lifestyle_mystic }
 			}
-			add_trait = mystic_1
+			add_trait = lifestyle_mystic
 		}
-		else_if = {
-			limit = { has_trait = mystic_1 }
-			add_trait = mystic_2
-		}
-		else_if = {
-			limit = { has_trait = mystic_2 }
-			add_trait = mystic_3
+		else = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 10
+			}
 		}
 	}
 	

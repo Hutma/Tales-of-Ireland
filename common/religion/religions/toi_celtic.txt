@@ -31,6 +31,9 @@
 	
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_stoic
 
 	traits = {
 		virtues = { brave just honest }
@@ -240,6 +243,9 @@
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_legalism
 			doctrine = tenet_masters_of_ireland
+			
+			#Funeral tradition
+			doctrine = doctrine_funeral_cremation
 		}
 		fathers_of_manx = {
 			color = { 120 120 105 }

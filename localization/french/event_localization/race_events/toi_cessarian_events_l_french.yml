@@ -1,0 +1,57 @@
+﻿l_french:
+ toi_cessarian_event.0001.t: "D’étranges restes de bateaux"
+ toi_cessarian_event.0001.desc: "Aujourd'hui, j'ai fait une promenade sur la plage pour me calmer, car gouverner est devenu difficile ces derniers temps. Alors que je marchais, un morceau de bois, visiblement sec, s'échoue sur le rivage. En enquêtant, je remarque qu'une ligne d'eau apparaît parfaitement à l'endroit où le bois touche l'océan. Au fur et à mesure que je le pèse, il semble beaucoup plus léger que n'importe quel bois que j'ai ressenti auparavant. Un matériau vraiment étrange."
+ toi_cessarian_event.0001.a: "C'est clairement un signe du [ROOT.Char.GetFaith.HighGodName], je prierai pour ses bénédictions."
+ toi_cessarian_event.0001.b: "Cela ressemble à un matériau pour lequel les marchands paieraient bien !"
+  
+ toi_cessarian_event.0002.t: "La flotte bénie"
+ toi_cessarian_event.0002.desc: "Peu de temps après la prière, une autre planche échoue sur le rivage. Alors que je l'inspecte, trouvant le même bois mystérieux qu'avant, quelque chose touche mes pieds. Je regarde vers l'océan et découvre que la mer bleue est devenue brun clair, tandis que des milliers de planches s'échouent, chacune ayant les mêmes qualités. J'appelle le [realm_priest.GetFirstName], car une autre opinion est vita pour déterminer l'intention divine. Il inspecte le bois pendant des heures, le coupe, y enfonce des clous, le ponce et effectue tous les autres tests imaginables sur le bois. Il détermine que ce bois a été accordé par [ROOT.Char.GetFaith.HighGodName] et serait parfait pour une flotte bénie."
+ toi_cessarian_event.0002.a: "[ROOT.Char.GetFaith.HighGodName] a ma foi et je répondrai à son appel."
+ toi_cessarian_event.0002.b: "Cela apporterait un profit massif sur la case [capital_county_loc.GetBaseName]."
+  
+ toi_cessarian_event.0003.t: "Les connaissances de Fintan"
+ toi_cessarian_event.0003.desc: "Il est vital d'assurer un approvisionnement continu en poisson sur mon domaine, et je rends personnellement visite aux pêcheurs pour inspecter leurs prises chaque mois. Cette fois, cependant, quelque chose d’étrange interrompt le voyage vers la côte. Alors que je longe la berge, mon attention est soudain attirée par le son d’une voix qui m’appelle, me demandant de me rapprocher. Je m'arrête et cherche avec méfiance sa source, immédiatement prêt à combattre ou à fuir la zone. \n\n« Viens, rapproche-toi de la rivière » répète la voix. Sans vraiment savoir pourquoi, j'obéis à son ordre et m'approche de la rivière. Là, je trouve un saumon vraiment magnifique, d'une taille énorme, qui me regarde depuis l'eau. Cela rappelle immédiatement les vieux mythes qui racontent comment nos ancêtres ont survécu au déluge en prenant la forme d’un saumon. La vérité de ces vieux contes me est aussitôt confirmée lorsque le saumon révèle sa véritable forme et se transforme en femme sous mes yeux. Ce pouvoir pourrait-il peut-être être appris ? Ou mieux encore, contrôlé ?"
+ toi_cessarian_event.0003.a: "Je vais tenter d'apprendre les secrets de nos ancêtres."
+ toi_cessarian_event.0003.b: "Ma vaste connaissance des vieux mythes m'aidera sûrement à acquérir cette compétence."
+ toi_cessarian_event.0003.c: "Je ne devrais pas me lancer dans la magie ancienne."
+ toi_cessarian_event.0003.a.success: "J'apprends à me transformer en saumon"
+ tooltip.toi_cessarian_event.0003.a.success: "J'apprends à me transformer en saumon"
+ toi_cessarian_event.0003.a.failure: "Je n'arrive pas à apprendre ce pouvoir"
+ tooltip.toi_cessarian_event.0003.a.failure: "je n'ai pas réussi à apprendre"
+  
+ toi_cessarian_event.0004.t: "Le pouvoir de Fintán le Cessarien"
+ toi_cessarian_event.0004.desc: "Des semaines ont passé depuis que j'ai commencé à étudier les secrets de Fintan le Sage, guidé par la mystérieuse femme de la rivière. Maintenant, le moment est enfin venu de faire une première tentative pour changer ma forme en celle d'un saumon. Les dangers sont grands et nombreux, mais mon mentor me surveillera de près pendant ce processus.\n\nFermant les yeux, j'essaie de concentrer mon esprit comme mon mentor me l'a appris, et lentement mais sûrement je ressens... quelque chose dans mon corps change. Mais dès que j’ouvre légèrement les yeux pour voir les effets à l’œuvre, ma concentration est perdue et tout revient brusquement. \n\nJe n'ai plus aucun succès ce jour-là, ni dans les jours qui suivent. À mesure que ma frustration grandit, je commence à prier avec ferveur les esprits de la nature pour leur soutien. Leur aide est ce qui me permet d'achever enfin la transformation complète, et je me réjouis du sentiment de liberté que me procure le déplacement dans l'eau. Dans cette nouvelle forme, ma proximité accrue avec la nature me permet de communier avec les esprits qui l'habitent et de recevoir leurs conseils. Comme le temps semble passer beaucoup plus lentement lorsqu'il est transformé, cette capacité me permet également de réfléchir plus profondément aux défis auxquels mon domaine est confronté et de prendre des décisions plus judicieuses."
+ toi_cessarian_event.0004.a: "Quelle belle réalisation"
+  
+ toi_cessarian_event.0005.t: "Efforts des vassaux pour la paix"
+ toi_cessarian_event.0005.desc: "J'ai convoqué mes vassaux les plus influents à se rassembler dans mon ringfort, avec l'intention de discuter des améliorations à apporter à la stabilité du royaume et de la sauvegarde de notre paix. Leurs domaines sont les plus vastes de mon territoire et leurs voix ont donc du poids. Notre conseil dure longtemps dans la nuit, s’échauffant parfois, mais deux propositions différentes finissent par prendre forme. En tant que suzerain, c'est à moi de prendre la décision finale."
+ toi_cessarian_event.0005.a: "Les suggestions de [vassal_01.GetFullName] se sont toujours révélées judicieuses"
+ toi_cessarian_event.0005.b: "La proposition de [vassal_02.GetFullName] est clairement supérieure"
+ toi_cessarian_event.0005.c: "Ce conseil a évidemment été une erreur"
+  
+ toi_cessarian_event.0006.t: "Jours sombres"
+ toi_cessarian_event.0006.desc: "Quelle heure est-il? C'est difficile à dire, des pluies incessantes et des nuages ​​sombres ont brouillé la frontière entre le jour et la nuit. Je n'arrive pas à dormir à cause du vent hurlant, les éclairs constants effraient les enfants comme les adultes et les colonies côtières ont été frappées par les marées.\n\nLes aînés m'ont raconté comment Cessair, notre mère à tous, est venue sur cette terre pour s'échapper. une grande inondation, et ses partisans se sont transformés en saumons pour survivre. Un autre déluge pourrait-il s’abattre sur nous ?"
+ toi_cessarian_event.0006.a: "Ces jours sombres finiront-ils un jour ?"
+ toi_cessarian_event.0006.b: "Sommes-nous punis pour nos péchés ?"
+  
+ toi_cessarian_event.0007.t: "Un rassemblement traditionnel"
+ toi_cessarian_event.0007.desc: "Conformément à la culture césarienne traditionnelle, on s'attendrait à ce qu'il organise des rassemblements hospitaliers de temps en temps. Seuls les monarques qui suivent nos voies recevront une invitation au ring de nos capitales, passant une période nocturne entre nos murs. Un événement pour à la fois impressionner et, si possible, maintenir la paix fragile entre nos royaumes."
+ toi_cessarian_event.0007.a: "Envoyons les invitations, rangeons le ring, rendons-le impeccable."
+ toi_cessarian_event.0007.b: "De telles traditions désuètes sont totalement inutiles."
+  
+ toi_cessarian_event.0008.t: "Un grand rassemblement"
+ toi_cessarian_event.0008.desc: "Après l'envoi de l'invitation, de nombreux Rí ont envoyé des lettres de joie concernant la tenue de la cérémonie. Durant l'événement, nos traditions ont été respectées sans faute et toutes les rancunes ont été laissées de côté. Avec les meilleurs musiciens, les jeux culturels gagnés et perdus, les plats délicieusement préparés, les invités étaient joyeux et festifs. Cet événement sera salué pour les années à venir."
+ toi_cessarian_event.0008.a: "Notre nation se réjouit de cet événement !"
+  
+ toi_cessarian_event.0009.t: "Un bon rassemblement"
+ toi_cessarian_event.0009.desc: "Depuis la nuit des temps, nous nous disputons et nous battons les uns contre les autres pour toutes les trivialités et différences qui nous distinguent de nos voisins, satisfaits de nos querelles et rancunes éternelles. Heureusement, par toutes les grâces, notre fête a calmé les passions et apaisé les colères dans toute l’Irlande – mais pas tout à fait parfaitement. Même si une véritable paix ne s'est pas concrétisée, les rivaux et les alliés ont gardé le décorum et se sont réjouis de notre impressionnante hospitalité ; peut-être que ce rassemblement servira de tremplin vers cette même harmonie qui reste encore à peine hors de portée. En effet, deux des Rí sont même devenus amis – un résultat grandiose !"
+ toi_cessarian_event.0009.a: "La prochaine fois, espérons-le, nous pourrons aller encore plus loin."
+  
+ toi_cessarian_event.0010.t: "Un rassemblement raté"
+ toi_cessarian_event.0010.desc: "Ce rassemblement aurait dû nous permettre d'oublier nos ennuis, ne serait-ce que pour un temps. Pourtant, dès l’arrivée des invités, d’anciennes tensions ont refait surface. Les conversations étaient émaillées de disputes, de prétendants et de rivalités. Même les jeux sont rapidement devenus un prétexte pour se montrer.\n\nÀ mi-chemin du rassemblement, une bagarre a éclaté. Nous avions tous laissé nos armes dehors, mais les rivaux rentrent chez eux avec des blessures et de l'animosité. Les autres invités sont rapidement partis eux aussi, avant que de nouvelles guerres ne puissent commencer.\n\nCe n'était pas un rassemblement, simplement une cruelle moquerie de nos traditions..."
+ toi_cessarian_event.0010.a: "Ont-ils oublié la valeur de la paix apportée par Cessair ?"
+  
+ toi_cessarian_event.0011.t: "Premiers animaux"
+ toi_cessarian_event.0011.desc: "En me promenant à l'intérieur de mon ringfort, j'entends soudain un bruit sourd résonner à travers la grande porte d'entrée en chêne, suivi d'une voix forte « Rí, Rí ! Nous avons besoin de vous ici ! ». Craignant le pire, je me dirige précipitamment vers l'avant du fort.\n\nHaletant alors que j'ouvre la porte d'entrée, un agriculteur à la tête d'un petit groupe s'adresse à moi directement. « Mon Rí, viens avec nous ; il y a un grand nombre d'animaux dans la forêt, c'est un signe du [ROOT.Char.GetFaith.HighGodName], c'est une bénédiction pour nos actes pieux".\n\nEn arrivant dans la forêt voisine, nous voyons de petits groupes d'animaux principalement par couples, avec de jeunes veaux et agneaux. à leurs côtés. \n\nS'agit-il des dernières créatures restantes de l'Arc de Noé, est-ce une bénédiction de nos ancêtres ?"
+ toi_cessarian_event.0011.a: "Ils s'ajouteront à nos troupeaux et nos terres prospéreront !"
+ toi_cessarian_event.0011.b: "Bénédiction ou pas, ils valent bien plus en or !"

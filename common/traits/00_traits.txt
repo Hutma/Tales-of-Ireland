@@ -265,14 +265,14 @@ education_diplomacy_5 = {
 		}
 	}
 	
-	culture_modifier = {
-		parameter = elephant_bonuses_for_rank_4_education
-		elephant_cavalry_damage_mult = 0.1
-		elephant_cavalry_toughness_mult = 0.1
-		elephant_cavalry_recruitment_cost_mult = -0.1
-		elephant_cavalry_maintenance_mult = -0.1
-		jungle_construction_gold_cost = -0.1
-	}
+	# culture_modifier = {
+		# parameter = elephant_bonuses_for_rank_4_education
+		# elephant_cavalry_damage_mult = 0.1
+		# elephant_cavalry_toughness_mult = 0.1
+		# elephant_cavalry_recruitment_cost_mult = -0.1
+		# elephant_cavalry_maintenance_mult = -0.1
+		# jungle_construction_gold_cost = -0.1
+	# }
 
 	random_creation_weight = 0
 	group = education_diplomacy
@@ -394,13 +394,13 @@ education_stewardship_5 = {
 	monthly_learning_lifestyle_xp_gain_mult = 0.25
 	vassal_tax_mult = 0.25
 	
-	culture_modifier = {
-		parameter = elephant_bonuses_for_rank_4_education
-		world_innovation_elephants_development_growth_factor = 0.3
-		elephant_cavalry_recruitment_cost_mult = -0.2
-		elephant_cavalry_maintenance_mult = -0.2
-		jungle_construction_gold_cost = -0.2
-	}
+	# culture_modifier = {
+		# parameter = elephant_bonuses_for_rank_4_education
+		# world_innovation_elephants_development_growth_factor = 0.3
+		# elephant_cavalry_recruitment_cost_mult = -0.2
+		# elephant_cavalry_maintenance_mult = -0.2
+		# jungle_construction_gold_cost = -0.2
+	# }
 	
 	ruler_designer_cost = 150
 	
@@ -597,13 +597,13 @@ education_martial_5 = {
 		attraction_opinion = 10
 	}
 	
-	culture_modifier = {
-		parameter = elephant_bonuses_for_rank_4_education
-		elephant_cavalry_damage_mult = 0.2
-		elephant_cavalry_toughness_mult = 0.1
-		elephant_cavalry_pursuit_add = 20
-		jungle_advantage = 5
-	}
+	# culture_modifier = {
+		# parameter = elephant_bonuses_for_rank_4_education
+		# elephant_cavalry_damage_mult = 0.2
+		# elephant_cavalry_toughness_mult = 0.1
+		# elephant_cavalry_pursuit_add = 20
+		# jungle_advantage = 5
+	# }
 	
 	ruler_designer_cost = 150
 	
@@ -823,14 +823,14 @@ education_learning_5 = {
 		church_holding_build_gold_cost = -0.05
 	}
 	
-	culture_modifier = {
-		parameter = elephant_bonuses_for_rank_4_education
-		world_innovation_elephants_development_growth_factor = 0.3
-		elephant_cavalry_maintenance_mult = -0.2
-		elephant_cavalry_toughness_mult = 0.1
-		elephant_cavalry_screen_add = 20
-		jungle_attrition_mult = -0.35
-	}
+	# culture_modifier = {
+		# parameter = elephant_bonuses_for_rank_4_education
+		# world_innovation_elephants_development_growth_factor = 0.3
+		# elephant_cavalry_maintenance_mult = -0.2
+		# elephant_cavalry_toughness_mult = 0.1
+		# elephant_cavalry_screen_add = 20
+		# jungle_attrition_mult = -0.35
+	# }
 	
 	ruler_designer_cost = 150
 	
@@ -858,6 +858,7 @@ diplomat = {
 	diplomacy = 3
 	personal_scheme_power_mult = 0.25
 	independent_ruler_opinion = 20
+	flag = initial_legitimacy_boost
 	
 	ruler_designer_cost = 50
 
@@ -1400,7 +1401,8 @@ overseer = {
 
 	stewardship = 2
 	martial = 2
-	monthly_county_control_change_factor = 0.5
+	monthly_county_control_growth_add = 0.5
+	epidemic_resistance = 5
 	
 	ruler_designer_cost = 50
 
@@ -1482,6 +1484,7 @@ administrator = {
 	diplomacy = 1
 	parochial_opinion = 10
 	vassal_opinion = 5
+	epidemic_resistance = 10
 	
 	ruler_designer_cost = 50
 
@@ -1676,6 +1679,13 @@ scholar = {
 		church_holding_holding_build_speed = -0.1
 		church_holding_build_gold_cost = -0.05
 		church_holding_holding_build_gold_cost = -0.05
+	}
+
+	culture_modifier = { #for FP3's "Irrigation Expert" tradition
+		parameter = innovative_traits_more_valued
+		drylands_tax_mult = 0.1
+		desert_tax_mult = 0.1
+		desert_mountains_tax_mult = 0.1
 	}
 
 	ai_rationality = 30
@@ -2024,6 +2034,13 @@ lifestyle_gardener = {
 	stewardship = 2
 	stress_gain_mult = -0.2
 	courtier_and_guest_opinion = 10
+
+	culture_modifier = { #for FP3's "Irrigation Expert" tradition
+		parameter = innovative_traits_more_valued
+		drylands_tax_mult = 0.1
+		desert_tax_mult = 0.1
+		desert_mountains_tax_mult = 0.1
+	}
 	
 	ruler_designer_cost = 50
 
@@ -2410,6 +2427,11 @@ diligent = {
 		farmlands_tax_mult = 0.2
 		floodplains_tax_mult = 0.2
 	}
+
+	culture_modifier = {
+		parameter = pragmatic_traits_county_opinion_modifiers
+		county_opinion_add = 10
+	}
 	
 	same_opinion = 10
 	opposite_opinion = -10
@@ -2657,6 +2679,13 @@ patient = {
 		parameter = hard_working_traits_more_valued
 		farmlands_tax_mult = 0.2
 		floodplains_tax_mult = 0.2
+	}
+
+	culture_modifier = { #for FP3's "Irrigation Expert" tradition
+		parameter = innovative_traits_more_valued
+		drylands_tax_mult = 0.1
+		desert_tax_mult = 0.1
+		desert_mountains_tax_mult = 0.1
 	}
 	
 	opposite_opinion = -15
@@ -3474,6 +3503,7 @@ just = {
 	minority_opinion = 15
 	opposite_opinion = -10
 	same_opinion = 10
+	flag = initial_legitimacy_boost
 	
 	culture_modifier = {
 		parameter = just_trait_gives_bonuses
@@ -4068,7 +4098,7 @@ eccentric = {
 		same_culture_opinion = 5
 	}
 	
-	ruler_designer_cost = -25
+	ruler_designer_cost = 15
 	
 	desc = {
 		first_valid = {
@@ -5110,6 +5140,7 @@ ill = {
 	}
 	
 	health = -1
+	elderly_health = -1
 	prowess = -4
 	fertility = -0.2
 
@@ -5150,6 +5181,7 @@ pneumonic = {
 	intrigue = -2
 	learning = -2
 	health = -3
+	elderly_health = -2
 	prowess = -8
 	fertility = -0.5
 
@@ -5655,7 +5687,9 @@ consumption = { # Tuberculosis
 	stewardship = -1
 	intrigue = -2
 	prowess = -2
-	health = -2
+	health = -2.5
+	child_health = -1
+	elderly_health = -2
 	category = health
 
 	dread_baseline_add = -10
@@ -5686,6 +5720,7 @@ consumption = { # Tuberculosis
 
 cancer = {
 	health = -3
+	elderly_health = -1
 	fertility = -0.20
 	category = health
 
@@ -5719,7 +5754,8 @@ typhus = {
 	intrigue = -1
 	learning = -2
 	prowess = -4
-	health = -3.5
+	health = -4.5
+	elderly_health = -1
 	fertility = -0.2
 
 	category = health
@@ -5757,7 +5793,8 @@ bubonic_plague = {
 	intrigue = -3
 	learning = -2
 	prowess = -10
-	health = -6.5
+	health = -7
+	elderly_health = -2
 	fertility = -0.50
 
 	category = health
@@ -5793,7 +5830,8 @@ smallpox = {
 	stewardship = -1
 	learning = -2
 	prowess = -10
-	health = -3.5
+	health = -4.5
+	elderly_health = -1.5
 	fertility = -0.25
 
 	category = health
@@ -5824,10 +5862,115 @@ smallpox = {
 	ai_energy = -75
 }
 
+measles = {
+	diplomacy = -2
+	stewardship = -1
+	intrigue = -1
+	learning = -2
+	prowess = -4
+	health = -3
+	child_health = -3
+
+	category = health
+	
+	dread_baseline_add = -5
+
+	attraction_opinion = -10
+	
+	ruler_designer_cost = 0
+
+	flag = illness
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_measles_desc
+			}
+			desc = trait_measles_character_desc
+		}
+	}
+
+	ai_energy = -75
+}
+
+dysentery = { # Bloody Flux
+	diplomacy = -2
+	martial = -1
+	intrigue = -2
+	prowess = -8
+	health = -3.5
+	elderly_health = -2
+
+	category = health
+	
+	dread_baseline_add = -50
+
+	attraction_opinion = -5
+	
+	ruler_designer_cost = 0
+
+	flag = illness
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dysentery_desc
+			}
+			desc = trait_dysentery_character_desc
+		}
+	}
+
+	ai_energy = -75
+}
+
+ergotism = { # Holy Fire
+	diplomacy = -6
+	stewardship = -1
+	intrigue = -2
+	learning = -2
+	health = -3.5
+
+	category = health
+	
+	dread_baseline_add = -25
+
+	attraction_opinion = -10
+	
+	ruler_designer_cost = 0
+
+	flag = illness
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_ergotism_desc
+			}
+			desc = trait_ergotism_character_desc
+		}
+	}
+
+	ai_energy = -75
+}
+
 # Young children only
 sickly = {
 	maximum_age = 6
-	health = -2.5
+	child_health = -2.5
 
 	category = health
 
@@ -5856,6 +5999,46 @@ sickly = {
 
 # The character is visibly scarred from an old wound
 scarred = {
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = scarred }
+						has_trait_xp = {
+							trait = scarred
+							track = scarred
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = scarred }
+					}
+				}
+				desc = trait_scarred
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = scarred
+					OR = {
+						has_trait_xp = {
+							trait = scarred
+							track = scarred
+							value = 100
+						}
+					}
+				}
+				desc = trait_scarred_3
+			}
+			desc = trait_scarred_2
+		}
+	}
+
 	monthly_prestige = 0.1
 	
 	attraction_opinion = 5
@@ -5879,6 +6062,23 @@ scarred = {
 				desc = trait_scarred_desc
 			}
 			desc = trait_scarred_character_desc
+		}
+	}
+
+	tracks = {
+		scarred = {
+			trait_second_level = { # Gnarled
+				monthly_prestige = 0.05
+				attraction_opinion = -5
+				child_opinion = -10
+				health = -0.1
+			}
+			trait_third_level = { # Marred
+				attraction_opinion = -20
+				child_opinion = -20
+				health = -0.1
+				dread_gain_mult = 0.1
+			}
 		}
 	}
 }
@@ -6930,6 +7130,11 @@ shrewd = {
 	physical = yes
 	
 	ruler_designer_cost = 50
+
+	culture_modifier = {
+		parameter = pragmatic_traits_county_opinion_modifiers
+		county_opinion_add = 10
+	}
 	
 	desc = {
 		first_valid = {
@@ -7177,6 +7382,8 @@ inbred = {
 			desc = trait_inbred_character_desc
 		}
 	}
+
+	flag = initial_legitimacy_nerf
 
 	ai_rationality = -50
 	ai_energy = -75
@@ -7487,7 +7694,6 @@ infertile = {
 celibate = {
 	category = fame
 	opposites = {
-		lifestyle_reveler
 		seducer
 	}
 	can_have_children = no
@@ -7523,7 +7729,6 @@ celibate = {
 		lovers_pox = @neg_compat_low
 		early_great_pox = @neg_compat_low
 		great_pox = @neg_compat_low
-		lifestyle_reveler = @neg_compat_low
 		seducer = @neg_compat_low
 	}
 }
@@ -7756,9 +7961,6 @@ excommunicated = {
 # Monk for christian male, Nun for christian female. Devoted for others.
 devoted = {
 	category = fame
-	# potential = {
-		# is_ruler = no
-	# }
 	monthly_piety = 0.3
 	
 	same_faith_opinion = 5
@@ -7792,54 +7994,54 @@ devoted = {
 				}
 				desc = trait_devoted_child
 			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:theravada.religion
-					is_female = no
-				}
-				desc = trait_devoted_buddhism_male
-			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:theravada.religion
-					is_female = yes
-				}
-				desc = trait_devoted_buddhism_female
-			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:vaishnavism.religion
-					is_female = no
-				}
-				desc = trait_devoted_hinduism_male
-			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:vaishnavism.religion
-					is_female = yes
-				}
-				desc = trait_devoted_hinduism_female
-			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:digambara.religion
-					is_female = no
-				}
-				desc = trait_devoted_jainism_male
-			}
-			triggered_desc = {
-				trigger = {
-					exists = faith.religion
-					faith.religion = faith:digambara.religion
-					is_female = yes
-				}
-				desc = trait_devoted_jainism_female
-			}
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:theravada.religion
+					# is_female = no
+				# }
+				# desc = trait_devoted_buddhism_male
+			# }
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:theravada.religion
+					# is_female = yes
+				# }
+				# desc = trait_devoted_buddhism_female
+			# }
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:vaishnavism.religion
+					# is_female = no
+				# }
+				# desc = trait_devoted_hinduism_male
+			# }
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:vaishnavism.religion
+					# is_female = yes
+				# }
+				# desc = trait_devoted_hinduism_female
+			# }
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:digambara.religion
+					# is_female = no
+				# }
+				# desc = trait_devoted_jainism_male
+			# }
+			# triggered_desc = {
+				# trigger = {
+					# exists = faith.religion
+					# faith.religion = faith:digambara.religion
+					# is_female = yes
+				# }
+				# desc = trait_devoted_jainism_female
+			# }
 			triggered_desc = {
 				trigger = { is_female = yes }
 				desc = trait_devoted_female
@@ -8032,6 +8234,11 @@ faith_warrior = {
 	category = fame
 	martial = 2
 	prowess = 3
+
+	culture_modifier = {
+		parameter = faith_warrior_traits_more_valued
+		monthly_prestige = 1
+	}
 	
 	clergy_opinion = 15
 	same_faith_opinion = 5
@@ -8075,8 +8282,23 @@ faith_warrior = {
 saint = {
 	category = fame
 	monthly_piety = 2
+	legitimacy_gain_mult = 0.25
 	
 	shown_in_ruler_designer = no
+	
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_venerated_ancestor
+			}
+			triggered_desc = {
+				trigger = { always = no }
+				desc = trait_saint
+			}
+			desc = trait_venerated_ancestor
+		}
+	}
 	
 	desc = {
 		first_valid = {
@@ -8093,6 +8315,28 @@ saint = {
 	ai_zeal = 50
 }
 
+legend = {
+	category = fame
+	monthly_prestige = 2
+	legitimacy_gain_mult = 0.25
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_legend_desc
+			}
+			desc = trait_legend_character_desc
+		}
+	}
+	
+	shown_in_ruler_designer = no
+
+	ai_zeal = 50
+}
+
 order_member = {
 	category = fame
 	flag = can_not_marry
@@ -8100,6 +8344,11 @@ order_member = {
 
 	martial = 1
 	prowess = 4
+
+	culture_modifier = {
+		parameter = faith_warrior_traits_more_valued
+		monthly_prestige = 1
+	}
 
 	same_opinion_if_same_faith = 15
 	
@@ -8124,12 +8373,6 @@ order_member = {
 
 ########### FAME ##########
 berserker = {
-	#potential = {
-		#OR = {
-			#religion = norse_pagan
-			#religion = norse_pagan_reformed
-		#}
-	#}
 	
 	category = fame
 	diplomacy = -2
@@ -8230,6 +8473,7 @@ varangian = {
 }
 
 poet = {
+	category = fame
 	diplomacy_per_prestige_level = 1
 	stress_loss_mult = 0.1
 	
@@ -8276,6 +8520,8 @@ bastard = {
 
 	dynasty_opinion = -15
 
+	legitimacy_gain_mult = -0.1
+
 	inheritance_blocker = all
 	claim_inheritance_blocker = all
 
@@ -8308,6 +8554,7 @@ legitimized_bastard = {
 		disputed_heritage
 	}
 	diplomacy = -1
+	legitimacy_gain_mult = -0.05
 	bastard = legitimate
 
 	dynasty_opinion = -10
@@ -8340,6 +8587,7 @@ disputed_heritage = {
 	}
 
 	diplomacy = -1
+	legitimacy_loss_mult = 0.1
 
 	dynasty_house_opinion = -10
 	
@@ -8460,7 +8708,7 @@ bastard_founder = {
 	claim_inheritance_blocker = all
 	category = fame
 	diplomacy = -1
-	
+
 	shown_in_ruler_designer = no
 	
 	desc = {
@@ -8915,6 +9163,7 @@ born_in_the_purple = {
 
 	category = fame
 	culture_succession_prio = children_can_be_born_in_the_purple
+	flag = initial_legitimacy_boost
 	
 	ruler_designer_cost = 40
 	
@@ -8967,8 +9216,9 @@ viking = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					exists = this
-					culture = { has_innovation = innovation_longboats }
+					always = no
+					# exists = this
+					# culture = { has_innovation = innovation_longboats }
 				}
 				desc = trait_viking_has_longships
 			}
@@ -9163,11 +9413,6 @@ disinherited = {
 
 denounced = {
 	category = fame
-
-	potential = {
-		exists = dynasty.dynast
-		faith = dynasty.dynast.faith
-	}
 	
 	diplomacy = -1
 	monthly_prestige = -1
@@ -9189,6 +9434,59 @@ denounced = {
 				desc = trait_denounced_desc
 			}
 			desc = trait_denounced_character_desc
+		}
+	}
+}
+
+decadent = {
+	category = fame
+	opposites = {
+		extolled
+	}
+	
+	dynasty_house_opinion = -15
+	same_opinion = 25
+	monthly_piety = -1
+	stress_gain_mult = 0.25
+	owned_hostile_scheme_success_chance_add = 10
+	owned_scheme_secrecy_add = 10
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_decadent_desc
+			}
+			desc = trait_decadent_character_desc
+		}
+	}
+}
+
+extolled = {
+	category = fame
+	opposites = {
+		decadent
+	}
+	
+	dynasty_house_opinion = 15
+	monthly_piety = 1
+	enemy_hostile_scheme_success_chance_add = 25
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_extolled_desc
+			}
+			desc = trait_extolled_character_desc
 		}
 	}
 }
@@ -9926,7 +10224,7 @@ crusader_king = {
 	same_opinion_if_same_faith = 10
 	same_faith_opinion = 15
 	ignore_negative_culture_opinion = yes
-	monthly_county_control_change_factor = 0.5
+	monthly_county_control_growth_factor = 0.5
 	
 	tolerance_advantage_mod = 5
 	hard_casualty_modifier = -0.15
@@ -10015,6 +10313,14 @@ greatest_of_khans = {
 	army_maintenance_mult = -0.5
 	# archer_cavalry_siege_value_add = 0.5
 	light_cavalry_siege_value_add = 0.5
+	
+	# archer_cavalry_toughness_mult = 1
+	light_cavalry_toughness_mult = 1
+	heavy_cavalry_toughness_mult = 1
+	
+	# archer_cavalry_damage_mult = 1
+	light_cavalry_damage_mult = 1
+	heavy_cavalry_damage_mult = 1
 	
 	shown_in_ruler_designer = no
 	
@@ -10345,7 +10651,7 @@ administrative_court_1 = {
 administrative_court_2 = {
 	stewardship = 2
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.15
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 	
 	category = court_type
 	group = administrative_court
@@ -11082,3 +11388,60 @@ lifestyle_traveler = {
 	}	
 }
 
+
+fp3_struggle_detractor = {
+	icon = "fp3_struggle_detractor.dds"
+	opposites = {
+		fp3_struggle_supporter
+	}
+
+	shown_in_ruler_designer = no
+
+	same_opinion = 10
+	opposite_opinion = -30
+	
+	ai_war_cooldown = -0.5
+	ai_war_chance = 5
+
+	flag = can_foment_revolt_interaction
+	flag = can_request_incursion_interaction
+	flag = can_change_to_iranian_faith_decision
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fp3_struggle_detractor_desc
+			}
+			desc = trait_fp3_struggle_detractor_non_orthodox_sunni_character_desc
+		}
+	}
+}
+
+fp3_struggle_supporter = {
+	icon = "fp3_struggle_supporter.dds"
+	opposites = {
+		fp3_struggle_detractor
+	}
+
+	shown_in_ruler_designer = no
+
+	flag = can_use_install_loyalist_cb
+	
+	same_opinion = 10
+	opposite_opinion = -30
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fp3_struggle_supporter_desc
+			}
+			desc = trait_fp3_struggle_supporter_character_desc
+		}
+	}
+}

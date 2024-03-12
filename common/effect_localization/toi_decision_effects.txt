@@ -1,0 +1,7 @@
+﻿roman_road_decision_effect = {
+	global = ROMAN_ROAD_DECISION_EFFECT
+}
+
+serve_galway_decision_effect = {
+	global = SERVE_GALWAY_DECISION_EFFECT
+}

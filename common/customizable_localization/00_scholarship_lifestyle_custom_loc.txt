@@ -241,6 +241,30 @@ WorldDeadline = {
 	type = character
 
 	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = world_deadline_432000_age
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = world_deadline_1000_age
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = world_deadline_21000_age
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = world_deadline_3000_period
+	}
+	text = {
 		localization_key = world_deadline_6000_years
 	}
 }

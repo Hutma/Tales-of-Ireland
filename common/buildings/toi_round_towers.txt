@@ -10,7 +10,7 @@ wonder_round_tower_01 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -47,7 +47,7 @@ wonder_round_tower_02 = {
 	cost_prestige = expensive_building_tier_4_cost
 	cost_gold = expensive_building_tier_4_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -89,7 +89,7 @@ wonder_round_tower_03 = {
 	cost_prestige = expensive_building_tier_5_cost
 	cost_gold = expensive_building_tier_5_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }

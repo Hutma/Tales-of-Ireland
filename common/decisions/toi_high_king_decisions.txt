@@ -126,7 +126,8 @@ reform_high_kingship_decision = {
 	}
 
 	cost = {
-		gold = 100
+		gold = 50
+		prestige = 250
 	}
 
 	effect = {

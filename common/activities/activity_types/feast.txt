@@ -16,7 +16,10 @@ activity_feast = {
 				is_ai = yes
 			}
 			is_at_war = no
-			short_term_gold >= feast_activity_cost
+			OR = {
+				has_character_flag = feasts_a_lot
+				short_term_gold >= feast_activity_cost
+			}
 		}
 	}
 
@@ -214,26 +217,26 @@ activity_feast = {
 	province_description = {
 		desc = activity_feast_province_desc
 		# +++ / triple plus good
-		triggered_desc = {
-			trigger = { has_building_or_higher = citadel_of_aleppo_01 }
-			desc = activity_feast_province_desc_citadel_of_aleppo
-		}
-		triggered_desc = {
-			trigger = { has_building_or_higher = palace_of_aachen_01 }
-			desc = activity_feast_province_desc_palace_of_aachen
-		}
-		triggered_desc = {
-			trigger = { has_building_or_higher = doges_palace_01 }
-			desc = activity_feast_province_desc_doges_palace
-		}
+		# triggered_desc = {
+			# trigger = { has_building_or_higher = citadel_of_aleppo_01 }
+			# desc = activity_feast_province_desc_citadel_of_aleppo
+		# }
+		# triggered_desc = {
+			# trigger = { has_building_or_higher = palace_of_aachen_01 }
+			# desc = activity_feast_province_desc_palace_of_aachen
+		# }
+		# triggered_desc = {
+			# trigger = { has_building_or_higher = doges_palace_01 }
+			# desc = activity_feast_province_desc_doges_palace
+		# }
 		triggered_desc = {
 			trigger = { has_building_or_higher = leisure_palace_01 }
 			desc = activity_feast_province_desc_leisure_palace
 		}
-		triggered_desc = {
-			trigger = { has_building_or_higher = alhambra_01 }
-			desc = activity_feast_province_desc_alhambra
-		}
+		# triggered_desc = {
+			# trigger = { has_building_or_higher = alhambra_01 }
+			# desc = activity_feast_province_desc_alhambra
+		# }
 		# ++ / double plus good
 		triggered_desc = {
 			trigger = { has_building_or_higher = farm_estates_01 }
@@ -264,24 +267,29 @@ activity_feast = {
 		value = 0
 		# BUILDINGS
 		# Triple good / +++
-		if = {
-			limit = { has_building_or_higher = citadel_of_aleppo_01 }
-			add = 100
-		}
-		if = {
-			limit = { has_building_or_higher = palace_of_aachen_01 }
-			add = 100
-		}
-		if = {
-			limit = { has_building_or_higher = doges_palace_01 }
-			add = 100
-		}
+		# if = {
+			# limit = { has_building_or_higher = citadel_of_aleppo_01 }
+			# add = 100
+		# }
+		# if = {
+			# limit = { has_building_or_higher = palace_of_aachen_01 }
+			# add = 100
+		# }
+		# if = {
+			# limit = { has_building_or_higher = doges_palace_01 }
+			# add = 100
+		# }
 		if = {
 			limit = { has_building_or_higher = leisure_palace_01 }
 			add = 100
 		}
+		# if = {
+			# limit = { has_building_or_higher = alhambra_01 }
+			# add = 100
+		# }
+		# LEGENDARY BUILDING
 		if = {
-			limit = { has_building_or_higher = alhambra_01 }
+			limit = { has_building_or_higher = legendary_palace }
 			add = 100
 		}
 		# Double good / ++
@@ -561,6 +569,100 @@ activity_feast = {
             	desc = "Builder"
             }
         }
+		# Legitimacy
+		if = {
+			limit = {
+				is_valid_for_legitimacy_change = yes
+			}
+			if = { # Low Legitimacy
+				limit = {
+					OR = {
+						legitimacy_level = 1
+						legitimacy_level = 2
+					}
+				}
+				add = {
+					value = 10
+					desc = "low_legitimacy"
+				}
+			}
+			if = { # Very Low Legitimacy
+				limit = {
+					legitimacy_level = 0
+				}
+				add = {
+					value = 20
+					desc = "low_legitimacy"
+				}
+			}
+		}
+		# Plague
+		if = {
+        	limit = {
+        	    any_sub_realm_county = {
+        	        any_county_province = {
+        	            any_province_epidemic = {
+        	                count >= 1
+        	                outbreak_intensity < apocalyptic
+        	            }
+        	        }
+        	    }
+        	    would_follow_social_distancing_value >= -1
+        	}
+        	add = {
+        	    value = -60
+        	    desc = "Plague in Realm"
+        	}
+    	}
+    	else_if = {
+    	    limit = {
+    	        any_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity < apocalyptic
+    	                }
+    	            }
+    	        }
+    	        would_follow_social_distancing_value >= -1
+    	    }
+    	    add = {
+    	        value = -40
+    	        desc = "Plague in Top Realm"
+    	    }
+    	}
+    	if = {
+    	    limit = {
+    	        any_sub_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity = apocalyptic
+    	                }
+    	            }
+    	        }
+    	    }
+    	    add = {
+    	        value = -200
+    	        desc = "Apocalyptic Plague in Realm"
+    	    }
+    	}
+    	else_if = {
+    	    limit = {
+    	        any_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity = apocalyptic
+    	                }
+    	            }
+    	        }
+    	    }
+    	    add = {
+    	        value = -100
+    	        desc = "Apocalyptic Plague in Top Realm"
+    	    }
+    	}
 	}
 
 	###################
@@ -606,12 +708,12 @@ activity_feast = {
 	}
 
 	host_intents = {
-		intents = { reduce_stress_intent murder_attendee_intent woo_attendee_intent befriend_attendee_intent }
+		intents = { reduce_stress_intent murder_attendee_intent woo_attendee_intent befriend_attendee_intent spread_legend_intent legitimacy_intent }
 		default = reduce_stress_intent
 	}
 
 	guest_intents = {
-		intents = { reduce_stress_intent murder_attendee_intent woo_attendee_intent befriend_attendee_intent banquet_mischief_intent }
+		intents = { reduce_stress_intent murder_attendee_intent woo_attendee_intent befriend_attendee_intent banquet_mischief_intent spread_legend_intent legitimacy_intent }
 		default = reduce_stress_intent
 	}
 
@@ -736,60 +838,60 @@ activity_feast = {
 					subtract = feast_activity_cost
 					desc = activity_cost_scale_by_era_desc
 				}
-				if = {
-					limit = {
-						scope:province ?= { has_building_or_higher = citadel_of_aleppo_01 }
-					}
-					add = {
-						value = 0
-						add = {
-							value = feast_activity_cost
-							add = {
-								value = feast_activity_cost
-								multiply = activity_cost_scale_by_era
-								subtract = feast_activity_cost
-							}
-						}
-						multiply = feast_activity_cost_discount_max_value
-						desc = feast_cost_discount_citadel_of_aleppo
-					}
-				}
-				if = {
-					limit = {
-						scope:province ?= { has_building_or_higher = palace_of_aachen_01 }
-					}
-					add = {
-						value = 0
-						add = {
-							value = feast_activity_cost
-							add = {
-								value = feast_activity_cost
-								multiply = activity_cost_scale_by_era
-								subtract = feast_activity_cost
-							}
-						}
-						multiply = feast_activity_cost_discount_max_value
-						desc = feast_cost_discount_palace_of_aachen
-					}
-				}
-				if = {
-					limit = {
-						scope:province ?= { has_building_or_higher = doges_palace_01 }
-					}
-					add = {
-						value = 0
-						add = {
-							value = feast_activity_cost
-							add = {
-								value = feast_activity_cost
-								multiply = activity_cost_scale_by_era
-								subtract = feast_activity_cost
-							}
-						}
-						multiply = feast_activity_cost_discount_max_value
-						desc = feast_cost_discount_doges_palace
-					}
-				}
+				# if = {
+					# limit = {
+						# scope:province ?= { has_building_or_higher = citadel_of_aleppo_01 }
+					# }
+					# add = {
+						# value = 0
+						# add = {
+							# value = feast_activity_cost
+							# add = {
+								# value = feast_activity_cost
+								# multiply = activity_cost_scale_by_era
+								# subtract = feast_activity_cost
+							# }
+						# }
+						# multiply = feast_activity_cost_discount_max_value
+						# desc = feast_cost_discount_citadel_of_aleppo
+					# }
+				# }
+				# if = {
+					# limit = {
+						# scope:province ?= { has_building_or_higher = palace_of_aachen_01 }
+					# }
+					# add = {
+						# value = 0
+						# add = {
+							# value = feast_activity_cost
+							# add = {
+								# value = feast_activity_cost
+								# multiply = activity_cost_scale_by_era
+								# subtract = feast_activity_cost
+							# }
+						# }
+						# multiply = feast_activity_cost_discount_max_value
+						# desc = feast_cost_discount_palace_of_aachen
+					# }
+				# }
+				# if = {
+					# limit = {
+						# scope:province ?= { has_building_or_higher = doges_palace_01 }
+					# }
+					# add = {
+						# value = 0
+						# add = {
+							# value = feast_activity_cost
+							# add = {
+								# value = feast_activity_cost
+								# multiply = activity_cost_scale_by_era
+								# subtract = feast_activity_cost
+							# }
+						# }
+						# multiply = feast_activity_cost_discount_max_value
+						# desc = feast_cost_discount_doges_palace
+					# }
+				# }
 				if = {
 					limit = {
 						scope:province ?= { has_building_or_higher = leisure_palace_01 }
@@ -808,24 +910,24 @@ activity_feast = {
 						desc = feast_cost_discount_leisure_palaces
 					}
 				}
-				if = {
-					limit = {
-						scope:province ?= { has_building_or_higher = alhambra_01 }
-					}
-					add = {
-						value = 0
-						add = {
-							value = feast_activity_cost
-							add = {
-								value = feast_activity_cost
-								multiply = activity_cost_scale_by_era
-								subtract = feast_activity_cost
-							}
-						}
-						multiply = feast_activity_cost_discount_max_value
-						desc = feast_cost_discount_alhambra
-					}
-				}
+				# if = {
+					# limit = {
+						# scope:province ?= { has_building_or_higher = alhambra_01 }
+					# }
+					# add = {
+						# value = 0
+						# add = {
+							# value = feast_activity_cost
+							# add = {
+								# value = feast_activity_cost
+								# multiply = activity_cost_scale_by_era
+								# subtract = feast_activity_cost
+							# }
+						# }
+						# multiply = feast_activity_cost_discount_max_value
+						# desc = feast_cost_discount_alhambra
+					# }
+				# }
 				if = {
 					limit = { 
 						scope:province ?= {
@@ -966,7 +1068,7 @@ activity_feast = {
 					multiply = activity_cost_scale_by_era
 				}
 				# Divide by 3 (num of levels for this option) so we get the average option cost
-				divide = 3
+				divide = 8
 			}
 			add = { # Courses 
 				value = 0 # Bad Option Cost
@@ -982,7 +1084,7 @@ activity_feast = {
 					multiply = activity_cost_scale_by_era
 				}
 				# Divide by 3 (num of levels for this option) so we get the average option cost
-				divide = 3
+				divide = 8
 			}
 			save_temporary_value_as = pre_discount_feast_cost_ui
 			if = {
@@ -1658,6 +1760,12 @@ activity_feast = {
 						option = feast_type_generic
 					}
 				}
+				scope:activity = {
+					has_activity_option = {
+						category = special_type
+						option = feast_type_legendary
+					}
+				}
 				scope:activity.special_guest:honorary_guest ?= { is_alive = yes }
 			}
 		}
@@ -1685,7 +1793,7 @@ activity_feast = {
 	window_characters = {
 		
 		guest = {
-			camera = camera_body_right
+			camera = camera_event_right
 
 			effect = {
 				if = {
@@ -2034,7 +2142,7 @@ activity_feast = {
 		}
 		
 		host = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2127,7 +2235,7 @@ activity_feast = {
 		}
 		
 		travel_host = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2158,7 +2266,7 @@ activity_feast = {
 		}
 
 		honorary_guest_traveling_murder = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2190,7 +2298,7 @@ activity_feast = {
 		}
 
 		honorary_guest_murder = { # Both regular and murder
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2215,7 +2323,7 @@ activity_feast = {
 		}
 
 		honorary_guest_regular_traveling = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2247,7 +2355,7 @@ activity_feast = {
 		}
 
 		honorary_guest_regular = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2266,13 +2374,13 @@ activity_feast = {
 					trigger = {
 						always = yes
 					}
-					animation = { ecstasy wedding_priest chaplain personality_honorable personality_bold }
+					animation = { ecstasy wedding_priest chaplain personality_honorable personality_bold dancing }
 				}
 			}
 		}
 		
 		guest = {
-			camera = camera_body
+			camera = camera_event_center
 			
 			effect = {
 				if = {
@@ -2465,7 +2573,7 @@ activity_feast = {
 					trigger = {
 						scope:activity = { is_murder_feast = no }
 					}
-					animation = { laugh toast flirtation_left throne_room_conversation_2 }
+					animation = { dancing laugh toast flirtation_left throne_room_conversation_2 }
 				}
 				#Fallback
 				animation = toast
@@ -2473,7 +2581,7 @@ activity_feast = {
 		}
 		
 		guest = {
-			camera = camera_body_left
+			camera = camera_event_left
 			
 			effect = {
 				if = {
@@ -2653,7 +2761,7 @@ activity_feast = {
 					trigger = {
 						scope:activity = { is_murder_feast = yes }
 					}
-					animation = { worry stress boredom fear disbelief lunatic paranoia eyeroll drink drink_goblet }
+					animation = { worry stress boredom fear disbelief lunatic paranoia eyeroll drink drink_goblet dancing }
 				}
 				triggered_animation = {
 					trigger = {
@@ -2666,7 +2774,7 @@ activity_feast = {
 					trigger = {
 						scope:activity = { is_murder_feast = no }
 					}
-					animation = { drink eavesdrop wedding_drunk }
+					animation = { drink eavesdrop wedding_drunk dancing }
 				}
 				#Fallback
 				animation = toast
@@ -2707,6 +2815,45 @@ activity_feast = {
 								has_trait = humble
 								has_trait = callous
 								has_trait = sadistic
+							}
+						}
+						subtract = 50
+					}
+				}
+			}
+			# Legendary feast.
+			## Spread your legend.
+			feast_type_legendary = {
+			
+				is_shown = {
+					has_dlc_feature = legends_of_the_dead
+				}
+
+				is_valid = {
+					custom_tooltip = {
+						text = legendary_feast_valid_tt
+						exists = promoted_legend #you need to have a legend to promote
+					}
+				}
+				
+				ai_will_do = {
+					value = 50
+					if = {
+						limit = {
+							OR = {
+								has_trait = arrogant
+								has_trait = ambitious
+								has_trait = poet
+								has_trait = journaller
+							}
+						}
+						add = 50
+					}
+					if = {
+						limit = {
+							OR = {
+								has_trait = shy
+								has_trait = humble
 							}
 						}
 						subtract = 50
@@ -3341,6 +3488,18 @@ activity_feast = {
 						# Trigger summary event, also handles guest events
 						trigger_event = feast.7201
 					}
+					else_if = { # Legendary feast
+						limit = {
+							scope:activity = {
+								has_activity_option = {
+									category = special_type
+									option = feast_type_legendary
+								}
+							}
+						}
+						# Trigger summary event, also handles guest events
+						trigger_event = feast.7204
+					}
 					else_if = { # Murder feast
 						limit = {
 							scope:activity = {
@@ -3435,54 +3594,54 @@ activity_feast = {
 		}
 		## Special
 		### Doge's Palace
-		if = {
-			limit = { has_building_or_higher = doges_palace_01 }
-			add = {
-				value = @weight_up_ai_select_province_massive
-				desc = activity_feast_province_desc_doges_palace
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = doges_palace_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_massive
+				# desc = activity_feast_province_desc_doges_palace
+			# }
+		# }
 		### Palace of Aachen
-		if = {
-			limit = { has_building_or_higher = palace_of_aachen_01 }
-			add = {
-				value = @weight_up_ai_select_province_large
-				desc = activity_feast_province_desc_palace_of_aachen
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = palace_of_aachen_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_large
+				# desc = activity_feast_province_desc_palace_of_aachen
+			# }
+		# }
 		### Royal Palace of Alhambra
-		if = {
-			limit = { has_building_or_higher = alhambra_01 }
-			add = {
-				value = @weight_up_ai_select_province_massive
-				desc = activity_feast_province_desc_alhambra
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = alhambra_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_massive
+				# desc = activity_feast_province_desc_alhambra
+			# }
+		# }
 		### Citadel of Aleppo
-		if = {
-			limit = { has_building_or_higher = citadel_of_aleppo_01 }
-			add = {
-				value = @weight_up_ai_select_province_massive
-				desc = activity_feast_province_desc_citadel_of_aleppo
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = citadel_of_aleppo_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_massive
+				# desc = activity_feast_province_desc_citadel_of_aleppo
+			# }
+		# }
 		### Theodosian Walls
 		#### Standing in for "Constantinople's guts" because otherwise we'd use the Hagia Sophia, and that would be weird.
-		if = {
-			limit = { has_building_or_higher = theodosian_walls_01 }
-			add = {
-				value = @weight_up_ai_select_province_massive
-				desc = activity_feast_province_desc_theodosian_walls
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = theodosian_walls_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_massive
+				# desc = activity_feast_province_desc_theodosian_walls
+			# }
+		# }
 		### Hall of Heroes
-		if = {
-			limit = { has_building_or_higher = hall_of_heroes_01 }
-			add = {
-				value = @weight_up_ai_select_province_medium
-				desc = activity_feast_province_desc_hall_of_heroes
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = hall_of_heroes_01 }
+			# add = {
+				# value = @weight_up_ai_select_province_medium
+				# desc = activity_feast_province_desc_hall_of_heroes
+			# }
+		# }
 	}
 
 	###################
@@ -3718,5 +3877,8 @@ activity_feast = {
 				}
 			}
 		}
+
+		# Struggle Catalysts
+		# fp3_struggle_catalysts_for_activities_effect = yes
 	}
 }

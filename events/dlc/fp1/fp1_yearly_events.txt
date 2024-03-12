@@ -1612,9 +1612,10 @@ fp1_yearly.0031 = {
 			166 = {
 				trigger = {
 					#Must not have any counties in Iceland, as the news'd travel otherwise.
-					NOT = {
-						any_realm_de_jure_duchy = { this = title:d_iceland }
-					}
+					# NOT = {
+						# any_realm_de_jure_duchy = { this = title:d_iceland }
+					# }
+					always = yes
 				}
 				save_scope_value_as = {
 					name = lie_nature
@@ -9682,14 +9683,16 @@ fp1_yearly.0581 = {
 ##################################################
 
 scripted_trigger fp1_0591_secondary_county_trigger = {
-	holder = root
-	culture = { has_innovation = innovation_all_things }
+	# holder = root
+	# culture = { has_innovation = innovation_all_things }
+	always = no
 }
 
 scripted_trigger fp1_0591_fighting_counties_at_thing_trigger = {
-	tier = tier_county
-	culture = { has_innovation = innovation_all_things }
-	any_neighboring_county = { fp1_0591_secondary_county_trigger = yes }
+	always = no
+	# tier = tier_county
+	# culture = { has_innovation = innovation_all_things }
+	# any_neighboring_county = { fp1_0591_secondary_county_trigger = yes }
 }
 
 #	One of your counties is engaged in an argument with another.
@@ -9726,7 +9729,8 @@ fp1_yearly.0591 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0591 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		culture = { has_innovation = innovation_all_things }
+		# culture = { has_innovation = innovation_all_things }
+		always = no
 		# Ensure you have at least two counties that can fight with each other.
 		any_held_title = { fp1_0591_fighting_counties_at_thing_trigger = yes }
 	}
@@ -9926,8 +9930,9 @@ fp1_yearly.0591 = {
 ##################################################
 
 scripted_trigger fp1_0601_valid_county_for_things_trigger = {
-	tier = tier_county
-	culture = { has_innovation = innovation_all_things }
+	always = no
+	# tier = tier_county
+	# culture = { has_innovation = innovation_all_things }
 }
 
 #	An incredibly boring local assembly tries your patience.
@@ -9950,7 +9955,8 @@ fp1_yearly.0601 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0601 }
 		is_landed = yes
 		# Filter to flavour-appropriate characters.
-		culture = { has_innovation = innovation_all_things }
+		# culture = { has_innovation = innovation_all_things }
+		always = no
 		any_held_title = { fp1_0601_valid_county_for_things_trigger = yes }
 	}
 
@@ -11126,7 +11132,7 @@ fp1_yearly.0632 = {
 
 scripted_trigger fp1_0641_raider_with_longships_trigger = {
 	can_raid_trigger = yes
-	culture = { has_innovation = innovation_longboats }
+	# culture = { has_innovation = innovation_longboats }
 	any_sub_realm_county = { is_coastal_county = yes }
 }
 
@@ -14572,10 +14578,10 @@ fp1_yearly.1014 = {
 				add_prestige_level = 2
 				#Slight chance to add an additional trait or two.
 				random_list = {
-					25 = {
-						trigger = { exists = title:e_byzantium.holder }
-						add_trait = varangian
-					}
+					# 25 = {
+						# trigger = { exists = title:e_byzantium.holder }
+						# add_trait = varangian
+					# }
 					25 = { add_trait = berserker }
 					25 = { add_trait = physique_good_2 }
 					25 = {
@@ -14618,10 +14624,10 @@ fp1_yearly.1014 = {
 				#Slight chance to add an additional trait or two.
 				random_list = {
 					50 = {}
-					12 = {
-						trigger = { exists = title:e_byzantium.holder }
-						add_trait = varangian
-					}
+					# 12 = {
+						# trigger = { exists = title:e_byzantium.holder }
+						# add_trait = varangian
+					# }
 					12 = { add_trait = berserker }
 					12 = { add_trait = physique_good_1 }
 					14 = {

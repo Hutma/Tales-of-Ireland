@@ -104,7 +104,7 @@ hy_brasylian_invasion_effect = {
 		save_scope_as = adventurer_target
 		holder.top_liege = {
 			add_character_flag = {
-				falg = attacked_by_brazil
+				flag = attacked_by_brazil
 				years = 5
 			}
 		}

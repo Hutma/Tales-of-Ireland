@@ -1,0 +1,89 @@
+﻿l_french:
+ toi_mann.0001.t: "À la guerre !"
+ toi_mann.0001.desc: "Les Pierres et les Signes ont dévoilé le vrai chemin. Notre ennemi est gardé par des faibles, conseillés par des imbéciles et alliés avec des lâches. Les dieux guideront mon épée, et ceux qui goûteront à notre acier sauront que je suis le dirigeant légitime de cette île !"
+ toi_mann.0001.a: "À la guerre !"
+ toi_mann.0001.b: "Le moment n’est pas venu."
+  
+ toi_mann.0002.t: "Un champion"
+ toi_mann.0002.desc: "Alors que mon groupe quitte les Stones, notre chemin croise celui d'un mystérieux guerrier. Ses vêtements en lambeaux révèlent son statut de sans terre, mais les cicatrices parlent de nombreuses batailles.\n\n« Je t'ai vu communier avec les dieux, ils disent que seul un dirigeant digne est capable d'un tel exploit. J'ai vu de nombreuses batailles et ce serait un grand honneur de vous servir. »\n\nDois-je recruter cet homme ? Il a certainement l'air capable et expérimenté, mais il est possible qu'il soit un espion ou qu'il ait son propre agenda. Je ne sais rien de cet homme, mais je ne le saurai jamais à moins d'accepter."
+ toi_mann.0002.a: "Être mon épée ? [champion.GetFirstName]."
+ toi_mann.0002.b: "Je ne te fais pas confiance."
+  
+ toi_mann.0031.t: "Un ami aux pierres"
+ toi_mann.0031.desc: "La cérémonie Ballaharra est un rituel délicat et complexe. Chaque détail doit être exact, chaque mot prononcé jusqu'à la dernière syllabe, de peur que les dieux ne soient insultés et qu'une malédiction ne s'abatte sur ma lignée. Malgré ma préparation minutieuse et mon entraînement pour ce moment, je me suis étouffé.\n\nAi-je apporté trop de ceci ? En ai-je mis trop peu ? Les choses sont-elles disposées correctement ? Est-ce que je prononce les mots correctement ? Alors que le rituel commence à s'effondrer, je peux sentir les dieux passer de la curiosité à la fureur.\n\nSoudain, presque comme si les dieux avaient de la sympathie pour mon sort, un homme est apparu de nulle part et a proposé son aide. Il venait clairement d'un royaume étranger et rival, mais j'ai ravalé ma fierté et j'ai accepté.\n\nIl m'a aidé à terminer le rituel, s'assurant que je serais béni, ou du moins que j'éviterais une malédiction. Nous avons discuté pendant un moment et avons découvert que nous avions beaucoup plus de points communs que prévu. Dans un endroit comme celui-ci, les dieux nous ont sûrement réunis pour trouver confiance et amitié sur cette île chaotique et trempée de sang.\n\nSi jamais nous nous croisons à nouveau, j'espère que ce ne sera pas sur le champ de bataille."
+ toi_mann.0031.a: "J'espère vous revoir bientôt."
+ toi_mann.0031.b: "Je l'aime bien, mais ce n'est pas un ami."
+  
+ toi_mann.0032.t: "Un rival aux pierres"
+ toi_mann.0032.desc: "La cérémonie Ballaharra est un rituel délicat et complexe. Chaque détail doit être exact, chaque mot prononcé jusqu'à la dernière syllabe, de peur que les dieux ne soient insultés et qu'une malédiction ne s'abatte sur ma lignée. Le rituel s'est déroulé sans problème, jusqu'au dernier moment.\n\nUn salaud suffisant a tenté de gâcher la cérémonie, même s'il a bien sûr prétendu que c'était un accident. Même cet imbécile insolent connaîtrait les conséquences, comment un rituel raté peut insulter les dieux et condamner tout un royaume.\n\nHeureusement, j'ai pu terminer la cérémonie sans autres complications. Après cela, j'ai affronté l'intrus. Nous avons commencé à nous disputer, qui se sont transformées en insultes, et avant même de nous en rendre compte, nos épées ont été tirées.\n\nAvant de pouvoir lui donner une leçon de respect, les druides sont intervenus et ont interrompu le combat. Ils nous ont tous deux bannis du site, car les dieux interdisent de verser du sang sur cette terre sacrée.\n\nSi jamais nous nous croisons à nouveau, j'espère que ce sera sur le champ de bataille."
+ toi_mann.0032.a: "Je te tuerai un jour."
+  
+ toi_mann.0004.t: "Rencontrez le Glashtin"
+ toi_mann.0004.desc: "J'étais en route pour visiter les pierres des dieux lorsque j'ai vu une étrange créature venir vers moi. La curiosité a pris le dessus sur moi et j'ai attendu de voir ce que c'était. Alors que la créature s'approchait de moi, j'ai pu voir qu'elle avait la forme d'un cheval mais qu'elle marchait sur seulement deux de ses... pieds ? Que dois-je faire?"
+ toi_mann.0004.a: "Je vais attendre et voir."
+ toi_mann.0004.b: "Je pense que je devrais partir."
+  
+ toi_mann.0005.t: "Puni par le Glashtin"
+ toi_mann.0005.desc: "J'ai essayé de m'enfuir, de m'éloigner de cette horrible créature. Mais il est trop rapide, trop fort, trop intelligent... Je dois affronter ma fin selon mes conditions..."
+ toi_mann.0005.a: "J'y arriverai, j'espère."
+  
+ toi_mann.0042.t: "Rencontrez le Glashtin"
+ toi_mann.0042.desc: "J'ai décidé d'attendre et de parler à la créature, si je peux. Dès que la chose arrive, je me montre en m'assurant d'être suffisamment proche pour lui crier dessus mais suffisamment loin pour reculer précipitamment si nécessaire. La créature m'interpelle : "Je suis le Glashtin, je suis le roi des eaux, viens à moi mortel, toi qui étais trop curieux pour me fuir.""  
+ toi_mann.0042.a: "Je dois répondre."
+ toi_mann.0042.b: "Je devrais... M'enfuir !"
+  
+ toi_mann.0043.t: "Rencontrez le Glashtin"
+ toi_mann.0043.desc: ""Que voulez-vous de moi?" J'ai demandé. Il se tient maintenant juste devant moi, cet impressionnant homme-cheval-dieu. Je ne sais pas si je devrais être étonné ou terrifié. \n\n« Vous m'avez réveillé et je dois être satisfait maintenant pour pouvoir retourner dans mon royaume sous-marin, mortel. »"
+ toi_mann.0043.a: "J'ai déjà entendu parler un peu du Glashtin, peut-être..."
+ toi_mann.0043.b: "Qu'est-ce qui vous satisferait ?"
+ toi_mann.0043.c: "Je devrais y aller avant qu'il ne soit trop tard... Fuyez !"
+  
+ toi_mann.0431.t: "Rencontrez le Glashtin"
+ toi_mann.0431.desc: "Grâce à ma connaissance des créatures divines, je savais que lui donner mon cheval et lui promettre que je préserverais la course hippique de l'île de Mannin l'apaiserait. Il a pris mon cheval et est retourné dans son royaume aquatique."
+ toi_mann.0431.a: "Il m'a même récompensé !"
+  
+ toi_mann.0432.t: "Rencontrez le Glashtin"
+ toi_mann.0432.desc: "Au diable les dieux ! J'ai essayé de lui donner un peu de mon or et je me suis incliné devant lui pour l'apaiser mais cela n'a pas fonctionné. Il me poursuit maintenant ! S'il vous plaît, quelqu'un me sauve de ce méchant cavalier !"
+ toi_mann.0432.a: "Je suis damnée! Courir!"
+  
+ toi_mann.0044.t: "Étrange cadeau pour le Glashtin"
+ toi_mann.0044.desc: "« Qu'est-ce qui vous satisferait ? » Je demande, espérant lui plaire. \n\n« Je veux que tu me donnes une femme, je veux lui montrer mon royaume et lui donner ma bénédiction. Je compte sur vous pour m'offrir le plus beau que vous ayez. Si je suis satisfait, vous serez récompensé. Je dois maintenant décider qui lui sera envoyé... ou peut-être devrais-je simplement m'enfuir ?"
+ toi_mann.0044.a: "Je t'offrirai ma femme."
+ toi_mann.0044.b: "Tu peux avoir une de mes filles."
+ toi_mann.0044.c: "Je vais vous donner un courtisan."
+ toi_mann.0044.d: "C'est ma dernière chance. Courir! Courir! Courir!"
+ toi_mann.0044.tt: "[woman_given.GetFirstName] est donné au Glashtin"
+  
+ toi_mann.0451.t: "Le Glashtin est content"
+ toi_mann.0451.desc: "[woman_given.GetFirstName] est revenue saine et sauve et apporte avec elle des tonnes de biens des dieux eux-mêmes. La Glashtin était très satisfaite et lui a offert de nombreux cadeaux pour me remercier."
+ toi_mann.0451.a: "La fin de cette rencontre singulière."
+  
+ toi_mann.0452.t: "Glashtin insatisfait"
+ toi_mann.0452.desc: "Le Glashtin n'était pas très satisfait, [woman_given.GetFirstName] est revenu vers nous mais a été blessé et nous a dit que le dieu-cheval me fait honte...."
+ toi_mann.0452.a: "Au moins, le sien est de retour dans les eaux."
+  
+ toi_mann.0453.t: "Glashtin en colère"
+ toi_mann.0453.desc: "[woman_given.GetFirstName] n'est jamais revenu… Des semaines plus tard, son corps a été retrouvé près du lac où j'ai vu la créature pour la première fois... \n\nElle est morte à cause de moi... Peut-être que je ne suis pas aussi doué pour être le chef que je le pensais autrefois. .."
+ toi_mann.0453.a: "J'ai honte."
+  
+ toi_mann.0046.t: "L'héritage de Glashtin"
+ toi_mann.0046.desc: "[woman_given.GetFirstName] a récemment donné naissance à un enfant, mais cet enfant est différent, il sait déjà mieux nager que les hommes de la tribu. Peut-être que son père est... Hmmm. N'y pensons pas..."
+ toi_mann.0046.a: "Enfant bizarre..."
+  
+ toi_mann.0007.t: "Cérémonie prestigieuse"
+ toi_mann.0007.desc: "La cérémonie a apporté espoir et joie à tous les participants. Lorsque je suis entré sur le site, les assistants parlaient de mes réalisations, me reconnaissant comme un dirigeant digne. Après avoir terminé la cérémonie, toute l’agitation et la haine qui remuaient dans nos cœurs se sont tues. Mes hommes m'ont acclamé et ont été bientôt rejoints par ceux des domaines rivaux.\n\nSur le chemin du retour, la rumeur de mon charme et de mon talent s'est répandue. Un signe certain que je suis respecté et admiré partout sur l’île."
+ toi_mann.0007.a: "C'était une grande cérémonie."
+  
+ toi_mann.0008.t: "Cérémonie risible"
+ toi_mann.0008.desc: "La cérémonie n'a jamais commencé. J'ai attendu mon tour pendant des heures, pendant lesquelles j'ai été harcelé par des animaux et des esprits filous. Lorsque je suis entré sur le site, les surveillants parlaient de mes erreurs passées, sans doute d'exagérations et de propagande de mes ennemis. Je suis parti en trombe, craignant d'écraser les Stones avec fureur si je restais plus longtemps. Puis j'ai trébuché sur un bâton.\n\nSur le chemin du retour, la nouvelle de cette épreuve humiliante s'est répandue. Un signe certain que je suis ridiculisé et moqué partout sur l'île."
+ toi_mann.0008.a: "Tout le monde va vite l'oublier..."
+  
+ toi_mann.0009.t: "Cérémonie pieuse"
+ toi_mann.0009.desc: "La cérémonie s’est bien mieux déroulée que ce à quoi je m’attendais. Même ceux qui m’entouraient pouvaient ressentir le pouvoir des dieux lorsque je recevais la bénédiction. Après avoir terminé la cérémonie, les druides de Ballaharra m'ont félicité et ont salué mon dévouement.\n\nSur le chemin du retour, un soleil éclatant a éclairé le chemin et je me suis senti revigoré. Un signe certain que les dieux veillaient sur moi."
+ toi_mann.0009.a: "Je suis béni."
+  
+ toi_mann.0010.t: "Cérémonie désastreuse"
+ toi_mann.0010.desc: "La cérémonie s'est horriblement déroulée. Je n'étais absolument pas préparé, je ne me souvenais pas des bonnes prières. J'ai ressenti quelque chose de la part des dieux, mais c'était amer et haineux. Je n'ai même pas fini la cérémonie ; les druides ont dû intervenir et m'empêcher d'insulter davantage les dieux avant que je jette une malédiction sur tout le site.\n\nSur le chemin du retour, il n'a pas arrêté de pleuvoir et mon groupe a été attaqué par des loups. Un signe certain que les dieux m'ont maudit."
+ toi_mann.0010.a: "Que les dieux me pardonnent."
+  
+ toi_mann.youescaped: "Tu t'es échappé"

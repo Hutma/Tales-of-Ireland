@@ -10,7 +10,8 @@ wonder_hill_of_tara_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		# always = yes
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -32,7 +33,7 @@ wonder_hill_of_tara_01 = {
 	}
 	county_modifier = {
 		defender_holding_advantage = 5
-		monthly_county_control_change_add = 0.1
+		monthly_county_control_growth_add = 0.1
 		development_growth = 0.1
 		development_growth_factor = 0.1
 	}
@@ -54,7 +55,7 @@ wonder_hill_of_tara_02 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -76,7 +77,7 @@ wonder_hill_of_tara_02 = {
 	}
 	county_modifier = {
 		defender_holding_advantage = 5
-		monthly_county_control_change_add = 0.25
+		monthly_county_control_growth_add = 0.25
 		development_growth = 0.1
 		development_growth_factor = 0.1
 	}
@@ -97,7 +98,7 @@ wonder_skellig_island_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -135,7 +136,7 @@ wonder_giant_causeway_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -168,7 +169,7 @@ wonder_newgrange_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -209,7 +210,7 @@ wonder_dun_duchathair_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -224,10 +225,12 @@ wonder_dun_duchathair_01 = {
 		embarkation_cost_mult = -0.5
 		martial = 1
 		monthly_prestige = 0.5
-		archers_damage_mult = 0.04
 	}
 	province_modifier = {
 		fort_level = 1
+		stationed_archers_damage_mult = high_maa_damage_tier_2
+		stationed_archers_pursuit_mult = high_maa_pursuit_tier_2
+		travel_danger = -2
 	}
 	county_modifier = {
 		defender_holding_advantage = 5
@@ -249,7 +252,7 @@ wonder_dun_duchathair_02 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -265,10 +268,12 @@ wonder_dun_duchathair_02 = {
 		embarkation_cost_mult = -0.5
 		martial = 1
 		monthly_prestige = 0.75
-		archers_damage_mult = 0.08
 	}
 	province_modifier = {
 		fort_level = 2
+		stationed_archers_damage_mult = high_maa_damage_tier_3
+		stationed_archers_pursuit_mult = high_maa_pursuit_tier_3
+		travel_danger = -4
 	}
 	county_modifier = {
 		defender_holding_advantage = 10
@@ -292,7 +297,7 @@ wonder_king_grave_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -324,7 +329,7 @@ wonder_king_grave_02 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -357,7 +362,7 @@ wonder_ballaharra_stones_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -390,7 +395,7 @@ wonder_meayll_circle_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -420,7 +425,7 @@ wonder_cashtal_yn_ard_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -457,7 +462,7 @@ wonder_torrylin_cairn_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -491,7 +496,7 @@ wonder_tourhouse_circle_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -521,7 +526,7 @@ wonder_stone_of_lochmaben_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -552,7 +557,7 @@ wonder_abory_hill_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = expensive_building_tier_1_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -569,6 +574,8 @@ wonder_abory_hill_01 = {
 	}
 	province_modifier = {
 		fort_level = 1
+		stationed_skirmishers_damage_mult = high_maa_damage_tier_3
+		stationed_skirmishers_toughness_mult = normal_maa_toughness_tier_1
 	}
 	county_modifier = {
 		defender_holding_advantage = 5
@@ -589,7 +596,7 @@ wonder_abory_hill_02 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = expensive_building_tier_2_cost
 	can_construct_potential = {
-		building_requirement_tribal = no
+		always = yes
 	}
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -602,14 +609,79 @@ wonder_abory_hill_02 = {
 	max_garrison = 55
 	
 	character_modifier = {
-		skirmishers_damage_mult = 0.08
 		skirmishers_maintenance_mult = -0.2
 	}
 	province_modifier = {
 		fort_level = 3
+		stationed_skirmishers_damage_mult = high_maa_damage_tier_5
+		stationed_skirmishers_toughness_mult = normal_maa_toughness_tier_2
 	}
 	county_modifier = {
 		defender_holding_advantage = 8
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Mayo wonders
+#Aasleagh Falls
+wonder_aasleagh_falls_01 = {
+	type_icon = "icon_structure_waterfall.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		always = yes
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.1
+		personal_scheme_power_add = 10
+	}
+	county_modifier = {
+		development_growth_factor = 0.25
+	}
+	
+	type = special
+	ai_value = {
+		base = 100
+	}
+}
+
+#Dun Briste
+wonder_dun_briste_01 = {
+	type_icon = "icon_structure_rock_sea.dds"
+	
+
+	construction_time = slow_construction_time
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = expensive_building_tier_1_cost
+	can_construct_potential = {
+		always = yes
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		culture = {
+			has_innovation = innovation_motte
+			has_innovation = innovation_plenary_assemblies
+		}
+	}
+	
+	character_modifier = {
+		learning = 1
+		monthly_learning_lifestyle_xp_gain_mult = 0.15
 	}
 	
 	type = special

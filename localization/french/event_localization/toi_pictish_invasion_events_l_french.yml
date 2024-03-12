@@ -1,0 +1,22 @@
+﻿l_french:
+  
+ toi_pictish_invasion.0001.t: "La colère des Pictes"
+ toi_pictish_invasion.0001.desc: "La plupart des Pictes vivent dans les Highlands écossaises, un endroit sauvage et dangereux avec des montagnes infranchissables, des animaux féroces et un climat rigoureux. Il existe également de nombreux Sidhe qui détestent tous les êtres qui marchent sur deux pattes ou qui manquent d'ailes.\n\nAvec l'assujettissement des Pictes des basses terres, le passage s'est ouvert aux pillards pour s'emparer des trésors pictes du nord. La nouvelle se répand que les clans des Highlands s'unissent et se préparent à marcher sur Alba !"
+ toi_pictish_invasion.0001.a: "Une tempête s'abat sur les montagnes..."
+  
+ toi_pictish_invasion.0002.t: "Les Pictes sont là !"
+ toi_pictish_invasion.0002.desc: "Aux frontières du nord, des sources ont fait état de hordes peintes en bleu et armées jusqu'aux dents marchant vers le sud. Ils déferleront sur les basses terres comme une inondation, détruisant tout sur leur passage. Jusqu'où iront-ils avant de rencontrer une armée qui les arrêtera ?\n\nNous ne savons pas s'ils sont là pour venger la perte de leurs frères ou simplement pour les remplacer en tant que nouveaux rois. Quoi qu’il en soit, tout Alba ressentira leur colère."
+ toi_pictish_invasion.0002.a: "Une tempête descend des montagnes..."
+  
+ toi_pictish_invasion.0003.t: "Dernière chance picte"
+ toi_pictish_invasion.0003.desc: "La dernière opportunité pour les Pictes est arrivée. Avec un moral au plus bas, une victoire est désespérément nécessaire pour revitaliser la cause picte. Si aucune victoire n’est obtenue, il n’est pas nécessaire d’être diplomate pour voir ce qui pourrait arriver."
+ toi_pictish_invasion.0003.a: "Les Pictes disparaissent"
+  
+ toi_pictish_invasion.0004.t: "Fin des Pictes"
+ toi_pictish_invasion.0004.desc: "Ils ont échoué !\n\nLes Pictes ont échoué !\n\nEux, qui étaient autrefois unis, ont été brisés par le rocher des défenseurs. Les hauts plateaux seront probablement en proie à un bouleversement total pendant des siècles, car les hommes capables de les unir sont rares. \n\nAvec cette défaite, l'ère des images est définitivement révolue et une nouvelle ère a commencé."
+ toi_pictish_invasion.0004.a: "Vers une nouvelle ère !"
+  
+  
+ PICTISH_ARMY: "Armée picte"
+  
+ pictish_army_event_troops: "Armée d'invasion picte"

@@ -1,9 +1,9 @@
 ﻿l_french:
- toi_decision_race.001.t:0 "Royauté d'Aran restorée"
- toi_decision_race.001.desc:0 "L'ancien royaume d'Aran a été rebâti par mes efforts; ce domaine sera à nouveau celui des Fomoriens! \n\nJe marche dans dans les traces de légendes telles que Balor et Bres, les anciens champions de notre peuple. Je ne laisserai jamais des étrangers détruire le royaume une nouvelle fois!"
- toi_decision_race.001.a:0 "Nous nous sommes relevés"
- 
- toi_decision_race.002.t:0 "Le Roi d'Aran"
- toi_decision_race.002.desc:0 "Après des siècles de lutte, [founder.GetFullName] a restoré l'ancien Royaume de Aran, et repoussé les envahisseurs étrangers de leur île. \n\nBien que les autres seigneurs voient d'un mauvais oeil ce parvenu qui menace leurs terres, le [founder.GetPrimaryTitle.GetAdjective] peuple a connu des invasions bien pire que ce que cet âge moderne puisse produire. Déjà, ils se préparent à résister à la sévère contre-attaque à venir..."
- toi_decision_race.002.a:0 "Aran est grande à nouveau"
- toi_decision_race.002.b:0 "Ces royaumes vont et viennent"
+ toi_decision_race.001.t: "La royauté d'Aran restaurée"
+ toi_decision_race.001.desc: "L'ancien royaume d'Aran renaît grâce à mes efforts ; ce royaume connaîtra à nouveau la règle du [restorer.GetCulture.GetName] !\n\nJe marche sur les traces de légendes telles que Balor et Bres, champions d'autrefois, et d'ici le [restorer.GetFaith.WarGodName], je ne laisserai plus jamais le royaume tomber aux mains d'étrangers !""
+ toi_decision_race.001.a: "Nous nous relevons."
+  
+ toi_decision_race.002.t: "Le roi d'Aran"
+ toi_decision_race.002.desc: "Après des siècles de lutte, [founder.GetFullName] a restauré l'ancien royaume d'Aran et repoussé les envahisseurs étrangers de leur île.\n\nBien qu'il soit peu probable que les autres seigneurs d'Irlande tolèrent que ce pouvoir parvenu empiète sur ce qu'ils considèrent comme leurs terres, les [founder.GetPrimaryTitle.GetAdjective] personnes ont résisté à des invasions pires que tout ce que cette époque moderne peut rassembler. Déjà, ils se préparent à résister aux inévitables représailles sinistres…"
+ toi_decision_race.002.a: "Aran est à nouveau génial."
+ toi_decision_race.002.b: "Ces royaumes vont et viennent."

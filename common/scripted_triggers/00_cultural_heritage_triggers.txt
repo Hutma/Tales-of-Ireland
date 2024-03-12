@@ -69,3 +69,6 @@ culture_has_south_european_heritage_pillar_trigger = {
 culture_has_central_european_heritage_pillar_trigger = {
 	always = no
 }
+culture_has_slavic_heritage_pillar_trigger = {
+	always = no
+}

@@ -2,114 +2,93 @@
 	type = character
 
 	text = {
-		localization_key = knight_hero
+		trigger = {
+			culture = { has_cultural_pillar = language_greek }
+		}
+		localization_key = knight_hetaeria
+	}
+	# text = {
+		# trigger = {
+			# OR = {
+				# culture = { has_cultural_pillar = language_mongolic }
+				# culture = { has_cultural_pillar = language_turkic }
+			# }
+		# }
+		# localization_key = knight_baghatur
+	# }
+	text = {
+		trigger = {
+			OR = {
+				always = no
+			}
+		}
+		localization_key = knight_shoorveer
+	}
+	text = {
+		trigger = {
+			OR = {
+				always = no
+			}
+		}
+		localization_key = knight_aswaran
+	}
+	text = {
+		trigger = {
+			OR = {
+				faith = { always = no }
+				culture = { always = no }
+			}
+		}
+		localization_key = knight_faris
+	}
+	text = {
+		trigger = {
+			OR = {
+				government_has_flag = government_is_tribal
+				NOR = {
+					always = no
+				}
+			}
+		}
+		localization_key = knight_champion
+	}
+	text = {
+		localization_key = knight_default
 		fallback = yes
 	}
 }
 
 KnightCulturePlural = {
-	type = character
-	
-	text = {
-		trigger = {
-			OR = {
-				culture = { has_cultural_pillar = language_picthish }
-				culture = { has_cultural_pillar = language_cumbric }
-				culture = { has_cultural_pillar = language_fooar }
-				culture = { has_cultural_pillar = language_northern_bell_beakers }
-			}
-		}
-		localization_key = knight_alba_plural
-	}
-	text = {
-		localization_key = knight_hero_plural
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_plural"
 }
 
 KnightCultureNoTooltip = {
-	type = character
-
-	text = {
-		localization_key = knight_hero_no_tooltip
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip"
 }
 
 KnightCulturePluralNoTooltip = {
-	type = character
-	
-	text = {
-		trigger = {
-			OR = {
-				culture = { has_cultural_pillar = language_picthish }
-				culture = { has_cultural_pillar = language_cumbric }
-				culture = { has_cultural_pillar = language_fooar }
-				culture = { has_cultural_pillar = language_northern_bell_beakers }
-			}
-		}
-		localization_key = knight_alba_no_tooltip_plural
-	}
-	text = {
-		localization_key = knight_hero_no_tooltip_plural
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip_plural"
 }
 
 KnightCultureNoTooltipLowercase = {
-	type = character
-
-	text = {
-		localization_key = knight_hero_no_tooltip_lowercase
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip_lowercase"
 }
 
 KnightCulturePluralNoTooltipLowercase = {
-	type = character
-	
-	text = {
-		trigger = {
-			OR = {
-				culture = { has_cultural_pillar = language_picthish }
-				culture = { has_cultural_pillar = language_cumbric }
-				culture = { has_cultural_pillar = language_fooar }
-				culture = { has_cultural_pillar = language_northern_bell_beakers }
-			}
-		}
-		localization_key = knight_alba_no_tooltip_lowercase_plural
-	}
-	text = {
-		localization_key = knight_hero_no_tooltip_lowercase_plural
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip_lowercase_plural"
 }
 
 KnightCulturePluralPossessiveNoTooltipLowercase = {
-	type = character
-	
-	text = {
-		trigger = {
-			OR = {
-				culture = { has_cultural_pillar = language_picthish }
-				culture = { has_cultural_pillar = language_cumbric }
-				culture = { has_cultural_pillar = language_fooar }
-				culture = { has_cultural_pillar = language_northern_bell_beakers }
-			}
-		}
-		localization_key = knight_alba_no_tooltip_lowercase_plural_possessive
-	}
-	text = {
-		localization_key = knight_hero_no_tooltip_lowercase_plural_possessive
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip_lowercase_plural_possessive"
 }
 
 KnightCultureAdjectiveNoTooltipLowercase = {
-	type = character
-
-	text = {
-		localization_key = knight_hero_no_tooltip_lowercase_adjective
-		fallback = yes
-	}
+	parent = KnightCulture
+	suffix = "_no_tooltip_lowercase_adjective"
 }

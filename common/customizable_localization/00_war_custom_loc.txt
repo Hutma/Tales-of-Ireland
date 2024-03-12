@@ -44,46 +44,46 @@ WarDeclaredFlavor = {
 		localization_key = war_declared_flavor.naughty
 	}
 
-	text = { # Used when Zealous characters are attacking a religious enemy. Also used for excommunication wars.
-		trigger = {
-			OR = {
-				root.primary_attacker = {
+	# text = { # Used when Zealous characters are attacking a religious enemy. Also used for excommunication wars.
+		# trigger = {
+			# OR = {
+				# root.primary_attacker = {
 					# Attacker must be Zealous
-					OR = {
-						has_trait = zealous
-						ai_zeal >= medium_positive_zeal
-					}
+					# OR = {
+						# has_trait = zealous
+						# ai_zeal >= medium_positive_zeal
+					# }
 					# Defender must belong to a Hostile/Evil Faith, OR must be Sinful in the eyes of the Attacker's Faith.
-					OR = {
-						faith = {
-								faith_hostility_level = {
-								target = root.primary_defender.faith
-								value >= faith_hostile_level
-							}
-						}
-						root.primary_defender = {
-							num_sinful_traits = {
-								faith = root.primary_attacker.faith
-								value >= 1
-							}
-						}
-					}
+					# OR = {
+						# faith = {
+								# faith_hostility_level = {
+								# target = root.primary_defender.faith
+								# value >= faith_hostile_level
+							# }
+						# }
+						# root.primary_defender = {
+							# num_sinful_traits = {
+								# faith = root.primary_attacker.faith
+								# value >= 1
+							# }
+						# }
+					# }
 					# Attacker must also personally dislike the defender, because this text is quite insult-y.
-					opinion = {
-						target = root.primary_defender
-						value <= 20
-					}
+					# opinion = {
+						# target = root.primary_defender
+						# value <= 20
+					# }
 
-				}
+				# }
 
 				# If an excommunication war, use this regardless of attacker/defender's traits.
-				root = {
-					using_cb = excommunication_war
-				}
-			}
-		}
-		localization_key = war_declared_flavor.zealous
-	}
+				# root = {
+					# using_cb = excommunication_war
+				# }
+			# }
+		# }
+		# localization_key = war_declared_flavor.zealous
+	# }
 
 	text = { # Used by Greedy characters when declaring a war of conquest.
 		trigger = {
@@ -266,6 +266,19 @@ ZealousDoW = {
 	text = {
 		trigger = {
 			root.faith = {
+				OR = {
+					always = no
+					always = no
+								
+				}
+			}
+		}
+		localization_key =war_declared_flavor.zealous.mercifulgod
+	}
+
+	text = {
+		trigger = {
+			root.faith = {
 				has_doctrine_parameter = reincarnation_resistance_to_conversion
 			}
 		}
@@ -311,8 +324,8 @@ WarCasusBelliShort = {
 			OR = {
 				using_cb = claim_cb
 				using_cb = claimant_faction_war
-				using_cb = norman_conquest_cb
-				using_cb = norwegian_invasion_cb
+				# using_cb = norman_conquest_cb
+				# using_cb = norwegian_invasion_cb
 			}
 		}
 		localization_key = war_memory_cb_claim
@@ -324,24 +337,24 @@ WarCasusBelliShort = {
 				using_cb = county_conquest_cb
 				using_cb = duchy_conquest_cb
 				using_cb = county_struggle_cb
-				using_cb = fp2_mediterranean_conquest_cb
-				using_cb = hungarian_migration_cb
-				using_cb = sons_of_lothbrok_invasion_cb
+				# using_cb = fp2_mediterranean_conquest_cb
+				# using_cb = hungarian_migration_cb
+				# using_cb = sons_of_lothbrok_invasion_cb
 			}
 		}
 		localization_key = war_memory_cb_conquest
 	}
 
-	text = {
-		trigger = {
-			OR = {
-				using_cb = minor_religious_war
-				using_cb = religious_war
-				using_cb = major_religious_war
-			}
-		}
-		localization_key = war_memory_cb_holy_war
-	}
+	# text = {
+		# trigger = {
+			# OR = {
+				# using_cb = minor_religious_war
+				# using_cb = religious_war
+				# using_cb = major_religious_war
+			# }
+		# }
+		# localization_key = war_memory_cb_holy_war
+	# }
 
 	text = {
 		trigger = {
@@ -436,25 +449,25 @@ WarCasusBelliShort = {
 		localization_key = war_memory_cb_imperial_reconquest
 	}
 
-	text = {
-		trigger = { using_cb = dismantle_holy_pretender_cb }
-		localization_key = war_memory_cb_holy_pretender
-	}
+	# text = {
+		# trigger = { using_cb = dismantle_holy_pretender_cb }
+		# localization_key = war_memory_cb_holy_pretender
+	# }
 
-	text = {
-		trigger = { using_cb = dismantle_byz_pretender_cb }
-		localization_key = war_memory_cb_byz_pretender
-	}
+	# text = {
+		# trigger = { using_cb = dismantle_byz_pretender_cb }
+		# localization_key = war_memory_cb_byz_pretender
+	# }
 
-	text = {
-		trigger = { using_cb = excommunication_war }
-		localization_key = war_memory_cb_excommunicate
-	}
+	# text = {
+		# trigger = { using_cb = excommunication_war }
+		# localization_key = war_memory_cb_excommunicate
+	# }
 
-	text = {
-		trigger = { using_cb = flowery_war_cb }
-		localization_key = war_memory_cb_flower
-	}
+	# text = {
+		# trigger = { using_cb = flowery_war_cb }
+		# localization_key = war_memory_cb_flower
+	# }
 
 	text = {
 		trigger = { using_cb = tribal_subjugation_cb }
@@ -472,7 +485,7 @@ WarCasusBelliShort = {
 	text = {
 		trigger = {
 			OR = {
-				using_cb = fp1_varangian_adventurer_conquest
+				# using_cb = fp1_varangian_adventurer_conquest
 				using_cb = fp1_scandi_adventurer_conquest
 			}
 		}

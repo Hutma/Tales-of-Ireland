@@ -309,25 +309,13 @@ culture_ai_weight_skirmishers = {
 		limit = {
 			culture = {
 				OR = {
-					has_cultural_pillar = heritage_baltic
-					has_cultural_pillar = heritage_ugro_permian
-					has_cultural_pillar = heritage_balto_finnic
-				}
-			}
-		}
-		add = 20
-	}
-	if = { # Cultures that dislike skirmishers
-		limit = {
-			culture = {
-				OR = {
 					has_innovation = innovation_maa_human
 					has_innovation = innovation_maa_nemedian
 					has_innovation = innovation_maa_meghalithic
 				}
 			}
 		}
-		add = -60
+		add = 20
 	}
 	
 	if = { # Cultures with a special MaA of that type should avoid the base version of the unit

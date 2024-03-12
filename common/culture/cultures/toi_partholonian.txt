@@ -21,7 +21,7 @@
 	coa_gfx = { irish_coa_gfx }
 	building_gfx = { western_building_gfx }
 	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
+	unit_gfx = { norse_unit_gfx }
 	
 	ethnicities = {
 		5 = caucasian_blond
@@ -54,7 +54,7 @@ first_landers = {
 	coa_gfx = { irish_coa_gfx }
 	building_gfx = { western_building_gfx }
 	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
+	unit_gfx = { norse_unit_gfx }
 	
 	ethnicities = {
 		5 = caucasian_blond
@@ -87,7 +87,7 @@ the_plagued = {
 	coa_gfx = { irish_coa_gfx }
 	building_gfx = { western_building_gfx }
 	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
+	unit_gfx = { norse_unit_gfx }
 	
 	ethnicities = {
 		5 = caucasian_blond

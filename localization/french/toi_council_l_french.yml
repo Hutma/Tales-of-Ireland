@@ -1,14 +1,20 @@
 ﻿l_french:
-#Christian
- councillor_court_chaplain_generic_county:1 "Druide"
- councillor_court_chaplain_generic_county_possessive:1 "du Druide"
- councillor_court_chaplain_generic_duchy:1 "Druide"
- councillor_court_chaplain_generic_duchy_possessive:1 "du Druide"
- councillor_court_chaplain_generic_kingdom:1 "Druide"
- councillor_court_chaplain_generic_kingdom_possessive:1 "du Druide"
- councillor_court_chaplain_generic_empire:0 "Druide"
- councillor_court_chaplain_generic_empire_female:0 "Druide"
- councillor_court_chaplain_generic_empire_possessive:0 "du Druide"
- councillor_court_chaplain_generic_empire_female_possessive:0 "de la Druide"
-
- 
+ #Christian 
+ councillor_court_chaplain_generic_county: "Druide"
+ councillor_court_chaplain_generic_county_female: "Druidesse"
+ councillor_court_chaplain_generic_county_possessive: "Druide"
+ councillor_court_chaplain_generic_county_female_possessive: "La Druidesse"
+ councillor_court_chaplain_generic_duchy: "Druide"
+ councillor_court_chaplain_generic_duchy_female: "Druidesse"
+ councillor_court_chaplain_generic_duchy_possessive: "Druide"
+ councillor_court_chaplain_generic_duchy_female_possessive: "La Druidesse"
+ councillor_court_chaplain_generic_kingdom: "Druide"
+ councillor_court_chaplain_generic_kingdom_female: "Druidesse"
+ councillor_court_chaplain_generic_kingdom_possessive: "Druide"
+ councillor_court_chaplain_generic_kingdom_female_possessive: "La Druidesse"
+ councillor_court_chaplain_generic_empire: "Druide"
+ councillor_court_chaplain_generic_empire_female: "Druidesse"
+ councillor_court_chaplain_generic_empire_possessive: "Druide"
+ councillor_court_chaplain_generic_empire_female_possessive: "La Druidesse"
+  
+  

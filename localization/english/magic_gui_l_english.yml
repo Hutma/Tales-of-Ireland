@@ -156,6 +156,7 @@
  SEVEN_YEARS_COOLDOWN_SPELL: "Seven years cooldown"
  TARGET_REQUIREMENT_FOMORIAN_TRANSFORMATION: "Target must be imprisonned and be a child \n Target must not have the Fomorian trait"
  TEN_YEARS_COOLDOWN_SPELL: "Ten years cooldown"
+ TWENTY_YEARS_COOLDOWN_SPELL: "Twenty years cooldown"
  FIFTEEN_YEARS_BEFORE_TARGETING_AGAIN: "Can only be targeted by this spell once every 15 years"
  TEN_YEARS_BEFORE_TARGETING_AGAIN: "Can only be targeted by this spell once every 10 years"
  DESTROY_ESSENCE_REQUIREMENTS_DESC: "Target must be a Magician"

@@ -699,7 +699,81 @@ is_preferred_heresy = {
 
 is_valid_heresy = {
 	#The origin faith can never be its own heresy.
-	NOT = { $ORIGIN_FAITH$ = $HERETICAL_FAITH$}
+	NOT = { $ORIGIN_FAITH$ = $HERETICAL_FAITH$ }
+	#Must not be considered invalid
+	invalid_for_heresy_events = no
+	# A heretical faith can't be currently locked off via variable.
+	$HERETICAL_FAITH$ = {
+		NOR = {
+			has_variable = block_conversion_till_decision_taken
+			has_variable = block_conversion_till_nebulous_circumstances
+		}
+	}
+	#Depending on the origin faith's religion/religion group, there may have additional requirements for a heresy to be considered valid.
+	OR = {
+	# 	#For Christian Faiths, the origin and heretical faiths must not both be Ecumenical (excepting the faiths which aren't technically ecumenical).
+	# 	AND = {
+	# 		religion_tag = christianity_religion
+	# 		NAND = {
+	# 			$ORIGIN_FAITH$ = {
+	# 				has_doctrine = special_doctrine_ecumenical_christian
+	# 				OR = {
+	# 					this = faith:insular_celtic
+	# 					this = faith:bosnian_church
+	# 					this = faith:mozarabic_church
+	# 				}
+	# 			}
+	# 			$HERETICAL_FAITH$ = {
+	# 				has_doctrine = special_doctrine_ecumenical_christian
+	# 				OR = {
+	# 					this = faith:insular_celtic
+	# 					this = faith:bosnian_church
+	# 					this = faith:mozarabic_church
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	AND = { #FP3: for Zoroastrianism, Bedhin faiths are never heresies of each other 
+	# 		religion_tag = zoroastrianism_religion
+	# 		NAND = {
+	# 			$ORIGIN_FAITH$ = {
+	# 				has_doctrine = doctrine_major_branch_behdin
+	# 			}
+	# 			$HERETICAL_FAITH$ = {
+	# 				has_doctrine = doctrine_major_branch_behdin
+	# 			}
+	# 		}
+	# 	}
+	# 	#No special requirements for Muslims, Jews, or Yazidis
+	# 	religion_tag = islam_religion
+	# 	religion_tag = judaism_religion
+	# 	#Eastern Faiths can shift and spread amongst each other.
+	# 	AND = {
+	# 		OR = {
+	# 			religion_tag = buddhism_religion
+	# 			religion_tag = hinduism_religion
+	# 			religion_tag = jainism_religion
+	# 			religion_tag = dualism_religion
+	# 		}
+	# 	}
+		#No special requirements for Pagan religions.
+		has_doctrine = pagan_hostility_doctrine
+	}
+}
+
+is_valid_heresiarch = {
+	faith = root
+	OR = {
+		highest_held_title_tier = tier_duchy
+		highest_held_title_tier = tier_county
+	}
+	is_imprisoned = no
+	is_capable_adult_ai = yes
+	is_landed = yes
+	exists = capital_county
+	NOT = { has_trait = heresiarch }
+	no_heretical_hof_faith_trigger = yes
+	recently_converted_faith_trigger = no # As amusing as it may be, rulers shouldn't 'flip-flop' between Faiths, so we need to enforce a cooldown on heresy conversions.
 }
 
 no_heretical_hof_faith_trigger = { #Head of Faith shouldn't convert.
@@ -798,6 +872,10 @@ religion_has_angels_trigger = {
 	always = no
 }
 
+religion_has_circumcision_trigger = {
+	always = no
+}
+
 is_heretic_trigger = {
 	$WHO$.faith.religion = $TARGET$.faith.religion
 	$WHO$.faith = {
@@ -842,6 +920,9 @@ valid_demand_conversion_conditions_trigger = {
 	scope:recipient = {
 		NOT = { is_imprisoned_by = scope:actor }
 	}
+	scope:recipient = {
+		NOT = { is_at_war_with = scope:actor }
+	}
 
 	custom_description = {
 		text = "is_head_of_religion"
@@ -861,6 +942,27 @@ valid_demand_conversion_conditions_trigger = {
 			}
 		}
 	}
+	
+	trigger_if = {
+		limit = {
+			scope:recipient = {	
+				AND = {
+					has_variable = cannot_be_converted_by_value
+					var:cannot_be_converted_by_value = scope:actor	
+				}
+			}
+		}
+		custom_tooltip = {
+			text = promised_to_not_convert_character
+			scope:recipient = {	
+				NOR = {
+					has_variable = cannot_be_converted_by_value
+					var:cannot_be_converted_by_value = scope:actor
+				}
+			}
+		}
+	}
+
 	custom_tooltip = {
 		text = cannot_take_overt_hostile_actions_against_diarch.tt
 		NOT = { scope:recipient ?= scope:actor.diarch }
@@ -987,6 +1089,21 @@ can_afford_create_head_of_faith_title_cost_trigger = {
 		limit = {
 			faith = {
 				has_doctrine_parameter = temporal_head_of_faith
+				OR = {
+					has_doctrine = muhammad_succession_sunni_doctrine
+					has_doctrine = muhammad_succession_shia_doctrine
+				}
+			}		
+		}
+		trigger_if = {
+			limit = { NOT = { has_trait = sayyid } }
+			piety >= massive_piety_value
+		}
+	}
+	trigger_else_if = {
+		limit = {
+			faith = {
+				has_doctrine_parameter = temporal_head_of_faith
 			}
 		}
 		piety >= major_piety_value
@@ -1028,6 +1145,17 @@ can_create_head_of_faith_title_trigger = {
 
 can_perform_the_hajj_trigger = {
 	always = no
+}
+
+shared_faith_or_hof_trigger = {
+	OR = {
+		$ACTOR$.faith = $RECIPIENT$.faith
+		AND = {
+			exists = $ACTOR$.faith.religious_head
+			exists = $RECIPIENT$.faith.religious_head
+			$ACTOR$.faith.religious_head = $RECIPIENT$.faith.religious_head
+		}
+	}
 }
 
 
@@ -1086,68 +1214,68 @@ can_take_religious_vows_disregard_marriage_trigger = {
 
 does_religion_exist_in_world_region_trigger = { # The most efficient way I could think of to esentially do diplomatic range triggers on religions
 	trigger_if = {
-		limit = { location = { geographical_region = world_europe } } # Even though europe has many sub regions, it's overall size is small so no need to sub-divide!
+		limit = { location = { geographical_region = region_munster } } # Even though europe has many sub regions, it's overall size is small so no need to sub-divide!
 		any_county_in_region = {
-			region = world_europe
+			region = region_munster
 			faith.religion = $RELIGION$
 		}
 	}
 	trigger_else_if = {
-		limit = { location = { geographical_region = world_asia_minor } } # Maybe this should be grouped with both the one above and the one below...
+		limit = { location = { geographical_region = region_connacht } } # Maybe this should be grouped with both the one above and the one below...
 		any_county_in_region = {
-			region = world_asia_minor
+			region = region_connacht
 			faith.religion = $RELIGION$
 		}
 	}
 	trigger_else_if = {
-		limit = { location = { geographical_region = world_middle_east } }
+		limit = { location = { geographical_region = region_ulster } }
 		any_county_in_region = {
-			region = world_middle_east
+			region = region_ulster
 			faith.religion = $RELIGION$
 		}
 	}
 	trigger_else_if = {
 		limit = {
-			location = { geographical_region = world_india } }
+			location = { geographical_region = region_leinster } }
 		any_county_in_region = {
-			region = world_india
+			region = region_leinster
 			faith.religion = $RELIGION$
 		}
 	}
 	trigger_else_if = {
-		limit = { location = { geographical_region = world_africa } }
+		limit = { location = { geographical_region = region_mann } }
 		any_county_in_region = {
-			region = world_africa
+			region = region_mann
 			faith.religion = $RELIGION$
 		}
 	}
 	trigger_else_if = {
-		limit = { location = { geographical_region = world_steppe } }
+		limit = { location = { geographical_region = region_scotland } }
 		any_county_in_region = {
-			region = world_steppe
+			region = region_scotland
 			faith.religion = $RELIGION$
 		}
 	}
-	trigger_else_if = { # We group two smaller world regions into one
-		limit = {
-			location = {
-				OR = {
-					geographical_region = world_tibet
-					geographical_region = world_burma
-				}
-			}
-		}
-		OR = {
-			any_county_in_region = {
-				region = world_tibet
-				faith.religion = $RELIGION$
-			}
-			any_county_in_region = {
-				region = world_burma
-				faith.religion = $RELIGION$
-			}
-		}
-	}
+	# trigger_else_if = { # We group two smaller world regions into one
+		# limit = {
+			# location = {
+				# OR = {
+					# geographical_region = world_tibet
+					# geographical_region = world_burma
+				# }
+			# }
+		# }
+		# OR = {
+			# any_county_in_region = {
+				# region = world_tibet
+				# faith.religion = $RELIGION$
+			# }
+			# any_county_in_region = {
+				# region = world_burma
+				# faith.religion = $RELIGION$
+			# }
+		# }
+	# }
 	trigger_else = { always = no } # This should always go at the end of this scripted trigger
 }
 
@@ -1241,6 +1369,10 @@ has_tolerant_faith_or_culture_trigger = {
 	}
 }
 
+is_mainstream_jewish_faith = {
+	always = no
+}
+
 believes_in_pilgrimage_trigger = {
 	# Also we must have an actual holy site we can visit.
 	faith = {	
@@ -1279,15 +1411,15 @@ is_unprotected_hostile_faith = { # Checks if the faith is at least hostile but n
 ### SYNCRETIC TRIGGERS ###
 
 islam_or_syncretic_with_islam_trigger = {
-	always = no
+	$CHARACTER$ = { always = no }
 }
 
 judaism_or_syncretic_with_judaism_trigger = {
-always = no
+$CHARACTER$ = { always = no }
 }
 
 christianity_or_syncretic_with_christianity_trigger = {
-	always = no
+	$CHARACTER$ = { always = no }
 }
 
 unreformed_or_syncretic_with_unreformed_trigger = {
@@ -1301,6 +1433,18 @@ unreformed_or_syncretic_with_unreformed_trigger = {
 	}
 }
 
+zoroastrian_or_syncretic_with_eastern_trigger = {
+	$CHARACTER$ = { always = no }
+	# $CHARACTER$ = {
+	# 	faith = {
+	# 		OR = {
+	# 			religion = religion:zoroastrianism_religion
+	# 			has_doctrine = tenet_eastern_syncretism
+	# 		}
+	# 	}
+	# }
+}
+
 #Used on faiths
 is_dharmic_faith_trigger = {
 	always = no
@@ -1310,3 +1454,16 @@ is_dharmic_faith_trigger = {
 #		religion = religion:jainism_religion
 #	}
 }
+
+#Used on provinces
+has_holy_building = {
+	OR = {
+		has_building_or_higher = holy_site_pagan_grand_temple_01
+		has_building_or_higher = holy_site_other_grand_temple_01
+	}
+}
+
+invalid_for_heresy_events = {
+	always = no
+}
+

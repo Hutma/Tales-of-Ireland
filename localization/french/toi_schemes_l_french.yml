@@ -1,0 +1,18 @@
+﻿l_french:
+ poison_cattle: "Programme de bétail empoisonné"
+ poison_cattle_action: "Bovins empoisonnés"
+ poison_cattle_desc: "Je vais essayer d'empoisonner le bétail de [SCHEME.GetTarget.GetShortUINameNoTooltip] et de tuer la moitié du troupeau de [SCHEME.GetTarget.GetHerHis]."
+ poison_cattle_desc_general: "Essayez d'élaborer un plan pour empoisonner le bétail d'un ennemi ou d'un rival."
+ scheme_interaction_tt_poison_cattle_approved: "Tentative d'empoisonner le bétail de [recipient.GetShortUINameNoTooltip], tuant la moitié du troupeau de [SCHEME.GetTarget.GetHerHis] !"
+ poison_cattle_invalid: "J'arrête d'essayer d'empoisonner le bétail de [TARGET_CHARACTER.GetShortUIName|U]."
+ poison_cattle_scheme_invalidated_title: "@scheme_icon ! Fin du programme concernant les bovins empoisonnés"
+ POISON_CATTLE_SUCCESS_DESC: "Vous tuerez la moitié du bétail de la capitale de [TARGET_CHARACTER.GetShortUIName|U]."
+ POISON_CATTLE_DISCOVERY_DESC: "Vous perdrez l'opinion du [TARGET_CHARACTER.GetShortUIName|U] et le prestige."
+  
+ poison_cattle_interaction: "@scheme_icon!Bovins empoisonnés"
+ poison_cattle_interaction_desc: "Tentative d'empoisonner le bétail de [recipient.GetShortUINameNoTooltip], tuant la moitié du troupeau de [SCHEME.GetTarget.GetHerHis] !"
+ poison_cattle_hook_interaction_toast: "Planification de l'empoisonnement du bétail"
+  
+ poison_cattle_invalidated_dead: "Programme  empoisonner le betail invalidé (décès)"
+ poison_cattle_invalidated_war: "Le programme  empoisonner le betail invalidé (guerre)"
+ poison_cattle_invalidated_title: "Programme empoisonner le betail invalidé (titre perdu)"

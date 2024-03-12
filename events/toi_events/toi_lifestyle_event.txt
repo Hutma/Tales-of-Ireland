@@ -73,9 +73,9 @@ toi_lifestyle_event.0002 = {
         add_prestige = -50
         every_vassal = {
             add_opinion = {
-                opinion = -5
+				modifier = disappointed_opinion
+                opinion = -10
                 target = root
-                years = 5
             }
         }
         capital_county = {
@@ -103,6 +103,7 @@ toi_lifestyle_event.0002 = {
         add_piety = 3
         every_vassal = {
             add_opinion = {
+				modifier = disappointed_opinion
                 opinion = -5
                 target = root
             }
@@ -246,6 +247,7 @@ toi_lifestyle_event.0005 = {
         add_tales_of_abundance_lifestyle_perk_points = 1
         every_vassal = {
             add_opinion = {
+				modifier = friendliness_opinion
                 opinion = 5
                 target = root
             }

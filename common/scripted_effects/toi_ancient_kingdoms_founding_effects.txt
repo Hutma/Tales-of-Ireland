@@ -64,7 +64,7 @@ founded_ossory_decision_scripted_effect = {
 	
 	title:c_kilkenny = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}
@@ -107,7 +107,7 @@ founded_breifne_decision_scripted_effect = {
 	
 	root.capital_county = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}
@@ -138,7 +138,7 @@ founded_iarmuman_decision_scripted_effect = {
 	
 	title:c_monatrim = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}
@@ -167,7 +167,7 @@ founded_airgialla_decision_scripted_effect = {
 	
 	title:c_portadown = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}

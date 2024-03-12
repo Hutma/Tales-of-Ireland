@@ -1,13 +1,19 @@
 ﻿l_french:
-
- #Tales of War
- tales_of_war_lifestyle_name:0 "[tales_of_war|E]"
- tales_of_war_lifestyle_desc:0 "#S EN participant dans des batailles, guerres et duels, vôtre renomée de Héros Légendaire grandira jusqu'à ce que des chansons et légendes soient écrites à propos de vos exploits sur les champs de batailles. #!"
- heroic_warrior_name:0 "Guerrier Héroïque"
- legendary_strategist_name:0 "Stratège Légendaire"
- 
- #Tales of Abundance
- tales_of_abundance_lifestyle_name:0 "[tales_of_abundance|E]"
- golden_tongue_name:0 "Langue d'Or"
- tales_of_abundance_lifestyle_desc:0 "#S Régner sur un territoire à la fois en paix et dynamique vous fera entrer dans les légendes et dans l'histoire. Il existe de nombreux contes de conflits et de champions guerriers les légendes de paix et d'abondance sont celles qui comptent le plus. #!"
- brehon_laws_keeper_name:0 "Gardien des Lois des brehons"
+  
+  #Tales of War 
+ tales_of_war_lifestyle_name: "[tales_of_war|E]"
+ tales_of_war_lifestyle_desc: "#S Au fur et à mesure que vous participez à des batailles, des guerres et des duels, votre renommée en tant que champion légendaire grandira jusqu'à ce que des chansons et des légendes soient écrites sur vos exploits sur le champ de bataille. #!"
+ heroic_warrior_name: "Guerrier héroïque"
+ legendary_strategist_name: "Stratège légendaire"
+  
+  #Tales of Abundance 
+ tales_of_abundance_lifestyle_name: "[tales_of_abundance|E]"
+ tales_of_abundance_lifestyle_desc: "#S Régner sur un royaume paisible et dynamique assurera votre légende dans l'histoire écrite. Il existe de nombreux récits de conflits et de champions, mais les récits d’abondance et de paix sont ceux qui comptent le plus. #!"
+ golden_tongue_name: "Langue d'or"
+ brehon_laws_keeper_name: "Brehon Gardien des Lois"
+  
+  #Tales of Magic 
+ tales_of_magic_lifestyle_name: "[tales_of_magic|E]"
+ tales_of_magic_lifestyle_desc: "#S Maîtriser le pouvoir des autres mondes vous mènera à la grandeur et au succès. Il existe de nombreuses légendes sur les forces et les êtres mystiques en Irlande, il faut en faire partie.#!"
+ cosan_an_tsolais_name: "Cosan et Tsolais"
+ cosan_an_dorchadais_name: "Cosan et Dorchadais"

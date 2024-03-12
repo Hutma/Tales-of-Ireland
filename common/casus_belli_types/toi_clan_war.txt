@@ -3,17 +3,16 @@
 	group = subjugation
 
 	allowed_for_character = {
-		AND = {
-			scope:attacker.dynasty.dynast = scope:attacker
-			scope:attacker.dynasty = {
-				has_dynasty_modifier = clannic_dynasty
-			}
-			scope:attacker.dynasty = {
-				exists = var:clan_unity_value
-			}
-			scope:attacker.dynasty = {
-				var:clan_unity_value > 85
-			}
+		exists = scope:attacker.dynasty
+		scope:attacker.dynasty.dynast = scope:attacker
+		scope:attacker.dynasty = {
+			has_dynasty_modifier = clannic_dynasty
+		}
+		scope:attacker.dynasty = {
+			exists = var:clan_unity_value
+		}
+		scope:attacker.dynasty = {
+			var:clan_unity_value > 85
 		}
 	}
 	
@@ -43,34 +42,36 @@
 	}
 	
 	cost = {
-		prestige = 250
-		# Bellum Justum Perk
-		if = {
-			limit = {
-				scope:attacker = {
-					has_perk = bellum_justum_perk
-				}
-			}
-			multiply = {
-				add = bellum_justum_discount_percentage
-				divide = 100
-				desc = CB_ATTACKER_BELLUM_JUSTUM
-			}
-		}
-
-		# Dynasty Warfare Perk
-		if = {
-			limit = {
-				scope:attacker = {
-					has_dynasty = yes
-					dynasty = {
-						has_dynasty_perk = warfare_legacy_2
+		prestige = {
+			value = 250
+			# Bellum Justum Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_perk = bellum_justum_perk
 					}
 				}
+				multiply = {
+					add = bellum_justum_discount_percentage
+					divide = 100
+					desc = CB_ATTACKER_BELLUM_JUSTUM
+				}
 			}
-			multiply = {
-				value = warfare_legacy_2_discount
-				desc = CB_ATTACKER_DYNASTY_WARFARE
+
+			# Dynasty Warfare Perk
+			if = {
+				limit = {
+					scope:attacker = {
+						has_dynasty = yes
+						dynasty = {
+							has_dynasty_perk = warfare_legacy_2
+						}
+					}
+				}
+				multiply = {
+					value = warfare_legacy_2_discount
+					desc = CB_ATTACKER_DYNASTY_WARFARE
+				}
 			}
 		}
 	}
@@ -139,6 +140,10 @@
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
 		create_title_and_vassal_change = {
 			type = swear_fealty
 			save_scope_as = change
@@ -322,6 +327,9 @@
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
 		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+		
 		# Prestige loss for the attacker
 		scope:attacker = {
 			pay_short_term_gold = {
@@ -399,17 +407,16 @@ dismantle_leader_cb = {
 	mutually_exclusive_titles = { always = yes }
 
 	allowed_for_character = {
-		AND = {
-			NOT = { scope:attacker.dynasty.dynast = scope:attacker }
-			scope:attacker.dynasty = {
-				has_dynasty_modifier = clannic_dynasty
-			}
-			scope:attacker.dynasty = {
-				exists = var:clan_unity_value
-			}
-			scope:attacker.dynasty = {
-				var:clan_unity_value < 15
-			}
+		exists = scope:attacker.dynasty
+		NOT = { scope:attacker.dynasty.dynast = scope:attacker }
+		scope:attacker.dynasty = {
+			has_dynasty_modifier = clannic_dynasty
+		}
+		scope:attacker.dynasty = {
+			exists = var:clan_unity_value
+		}
+		scope:attacker.dynasty = {
+			var:clan_unity_value < 15
 		}
 	}
 
@@ -479,6 +486,10 @@ dismantle_leader_cb = {
 
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_victory_effect = yes
+		
 		create_title_and_vassal_change = {
 			type = conquest
 			save_scope_as = change
@@ -622,6 +633,9 @@ dismantle_leader_cb = {
 
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
 
 		# Prestige loss for the attacker
 		scope:attacker = {
@@ -794,6 +808,9 @@ dismantle_leader_cb = {
 	# on_victory = {
 		# scope:attacker = { show_pow_release_message_effect = yes }
 		
+		# Legitimacy
+		# add_legitimacy_attacker_victory_effect = yes
+		
 		# #give leader his duchy
 		# create_title_and_vassal_change = {
 			# type = conquest
@@ -916,6 +933,9 @@ dismantle_leader_cb = {
 	
 	# on_defeat = {
 		# scope:attacker = { show_pow_release_message_effect = yes }
+		
+		# Legitimacy
+		# add_legitimacy_attacker_defeat_effect = yes
 
 		# # Prestige loss for the attacker
 		# scope:attacker = {

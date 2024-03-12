@@ -200,187 +200,187 @@ burial_arrival_events = {
 }
 
 hajj_arrival_events = {
-	trigger = {
-		involved_activity = {
-			has_activity_option = {
-				category = special_type
-				option = pilgrimage_type_hajj
-			}
-		}
-		involved_activity.activity_location.county = title:c_mecca
-	}
-	random_events = {
-		100 = hajj.3001
-		20 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# trigger = {
+		# involved_activity = {
+			# has_activity_option = {
+				# category = special_type
+				# option = pilgrimage_type_hajj
+			# }
+		# }
+		# involved_activity.activity_location.county = title:c_mecca
+	# }
+	# random_events = {
+		# 100 = hajj.3001
+		# 20 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 christian_arrival_events = {
-	trigger = {
-		religion = religion:christianity_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_roma # Rome
-				county = title:c_jerusalem # Jerusalem
-				county = title:c_byzantion # Constantinople
-				county = title:c_alexandria # Alexandria
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:christianity_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_roma # Rome
+				# county = title:c_jerusalem # Jerusalem
+				# county = title:c_byzantion # Constantinople
+				# county = title:c_alexandria # Alexandria
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5001 # Rome
-		100 = pilgrimage.5011 # Jerusalem
-		100 = pilgrimage.5021 # Constantinople
-		100 = pilgrimage.5031 # Alexandria
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5001 # Rome
+		# 100 = pilgrimage.5011 # Jerusalem
+		# 100 = pilgrimage.5021 # Constantinople
+		# 100 = pilgrimage.5031 # Alexandria
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 jewish_arrival_events = {
-	trigger = {
-		religion = religion:judaism_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_sinai # Mt. Sinai
-				county = title:c_jerusalem # Jerusalem
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:judaism_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_sinai # Mt. Sinai
+				# county = title:c_jerusalem # Jerusalem
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5011 # Jerusalem
-		100 = pilgrimage.5101 # Mt. Sinai
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5011 # Jerusalem
+		# 100 = pilgrimage.5101 # Mt. Sinai
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 muslim_arrival_events = {
-	trigger = {
-		religion = religion:islam_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_medina # Medina
-				county = title:c_sinai # Mt. Sinai
-				county = title:c_jerusalem # Jerusalem
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:islam_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_medina # Medina
+				# county = title:c_sinai # Mt. Sinai
+				# county = title:c_jerusalem # Jerusalem
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5011 # Jerusalem
-		100 = pilgrimage.5101 # Mt. Sinai
-		100 = pilgrimage.5201 # Medina
+	# random_events = {
+		# 100 = pilgrimage.5011 # Jerusalem
+		# 100 = pilgrimage.5101 # Mt. Sinai
+		# 100 = pilgrimage.5201 # Medina
 		# Mecca is handled separately as part of the Hajj
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 hindu_arrival_events = {
-	trigger = {
-		religion = religion:hinduism_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_varanasi # Varanasi
-				county = title:c_ayodhya # Ayodhya
-				county = title:c_mathura # Mathura
-				county = title:c_sthanisvara # Haridwar
-				county = title:c_kanchipuram # Kanchipuram
-				county = title:c_ujjayini # Ujjayini
-				county = title:c_dvaraka # Dwarka
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:hinduism_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_varanasi # Varanasi
+				# county = title:c_ayodhya # Ayodhya
+				# county = title:c_mathura # Mathura
+				# county = title:c_sthanisvara # Haridwar
+				# county = title:c_kanchipuram # Kanchipuram
+				# county = title:c_ujjayini # Ujjayini
+				# county = title:c_dvaraka # Dwarka
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5301 # Varanasi
-		100 = pilgrimage.5311 # Ayodhya
-		100 = pilgrimage.5321 # Mathura
-		100 = pilgrimage.5331 # Haridwar
-		100 = pilgrimage.5341 # Kanchipuram
-		100 = pilgrimage.5351 # Ujjayini
-		100 = pilgrimage.5361 # Dwarka
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5301 # Varanasi
+		# 100 = pilgrimage.5311 # Ayodhya
+		# 100 = pilgrimage.5321 # Mathura
+		# 100 = pilgrimage.5331 # Haridwar
+		# 100 = pilgrimage.5341 # Kanchipuram
+		# 100 = pilgrimage.5351 # Ujjayini
+		# 100 = pilgrimage.5361 # Dwarka
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 buddhist_arrival_events = {
-	trigger = {
-		religion = religion:buddhism_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_gaya # Bodh Gaya
-				county = title:c_kusinagara # Kusinagara
-				county = title:c_varanasi # Sarnath
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:buddhism_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_gaya # Bodh Gaya
+				# county = title:c_kusinagara # Kusinagara
+				# county = title:c_varanasi # Sarnath
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5401 # Bodh Gaya
-		100 = pilgrimage.5411 # Kusinagara
-		100 = pilgrimage.5421 # Sarnath
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5401 # Bodh Gaya
+		# 100 = pilgrimage.5411 # Kusinagara
+		# 100 = pilgrimage.5421 # Sarnath
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 jain_arrival_events = {
-	trigger = {
-		religion = religion:jainism_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_radha # Shikharj
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:jainism_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_radha # Shikharj
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5501 # Shikharj
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5501 # Shikharj
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 zoroastrian_arrival_events = {
-	trigger = {
-		religion = religion:zoroastrianism_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_baduspan # Ushi-darena
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:zoroastrianism_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_baduspan # Ushi-darena
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5601 # Ushi-darena
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5601 # Ushi-darena
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 norse_arrival_events = {
-	trigger = {
-		religion = religion:germanic_religion
-		involved_activity.activity_location = {
-			OR = {
-				county = title:c_brunswick # Paderborn
-			}
-		}
-	}
+	# trigger = {
+		# religion = religion:germanic_religion
+		# involved_activity.activity_location = {
+			# OR = {
+				# county = title:c_brunswick # Paderborn
+			# }
+		# }
+	# }
 
-	random_events = {
-		100 = pilgrimage.5901 # Paderborn
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5901 # Paderborn
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 tengri_arrival_events = {
-	trigger = {
-		religion = religion:tengrism_religion
-	}
+	# trigger = {
+		# religion = religion:tengrism_religion
+	# }
 
-	random_events = {
-		100 = pilgrimage.5911 # Blue Open Skies
-		100 = pilgrimage.4002 # Meet the Mystic again
-	}
+	# random_events = {
+		# 100 = pilgrimage.5911 # Blue Open Skies
+		# 100 = pilgrimage.4002 # Meet the Mystic again
+	# }
 }
 
 pagan_arrival_events = {

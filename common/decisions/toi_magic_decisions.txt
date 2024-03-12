@@ -167,9 +167,9 @@ ai_magic = {
 			limit = {
 				has_character_flag = targeted_a_player
 			}
-			any_in_list = {
+			every_in_list = {
 				list = possible_targets
-				is_ai = no
+				limit = { is_ai = no }
 				remove_from_list = possible_targets
 			}
 		}

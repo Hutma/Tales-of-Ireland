@@ -368,7 +368,7 @@ trait_specific_ongoing.1006 = {
 }
 
 
-#A lunatic dreams of glass (enables the decision_lunatic_building decision)
+#A lunatic dreams of glass (enables the lunatic_building_decision decision)
 #by Linnéa Thimrén
 trait_specific_ongoing.1007 = {
 	type = character_event
@@ -1783,7 +1783,7 @@ trait_specific_ongoing.2020 = {
 			limit = { has_inactive_trait = possessed_genetic }
 			make_trait_active = possessed_genetic
 		}
-		else_if = {
+		else = {
 			add_trait = possessed_1
 		}
 	}
@@ -2431,7 +2431,8 @@ trait_specific_ongoing.3005 = {
 		}
 		if = { #In Christianity it was a widespread belief that depression was caused by evil spirits, demons, or other evils, and they therefor (among many harsher remedies) thought that prayer helped
 			limit = {
-				faith = { religion_tag = christianity_religion }
+				# faith = { religion_tag = christianity_religion }
+				always = no
 			}
 			trigger_event = {
 				id = trait_specific_ongoing.3006

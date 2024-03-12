@@ -376,7 +376,7 @@ celtic_troops_decision = {
 			is_independent_ruler = yes
 			AND = {
 				highest_held_title_tier > 2
-				prestige_level > 2
+				prestige_level >= 3
 			}
 		}
 		piety_level >= 2
@@ -446,6 +446,177 @@ banish_fomorians_decision = {
 			has_trait = fir_bolg
 			has_trait = tuatha_de_danann
 		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+reclaim_maige_tuired_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+
+	ai_check_interval = 55
+
+	desc = reclaim_maige_tuired_decision_desc
+
+	cooldown = { years = 35 }
+	
+	is_shown = {
+		is_landed = yes
+		is_independent_ruler = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			has_trait = fir_bolg
+			culture = { has_cultural_pillar = heritage_fir_bolg }
+		}
+		title:c_ballyhooly.holder = {
+			NOT = { 
+				OR = { 
+					has_cultural_pillar = heritage_fir_bolg
+					has_trait = fir_bolg
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_trait = fir_bolg
+			culture = { has_cultural_pillar = heritage_fir_bolg }
+		}
+		title:c_ballyhooly.holder = {
+			NOT = { 
+				OR = { 
+					has_cultural_pillar = heritage_fir_bolg
+					has_trait = fir_bolg
+				}
+			}
+		}
+		capital_county = {
+			development_level > 5
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		title:c_ballyhooly.holder.top_liege = {
+			save_scope_as = ballyhooly_holder
+		}
+		trigger_event = {
+			days = 1
+			id = toi_decision_race.0005
+		}
+	}
+
+	cost = {
+		piety = 100
+		gold = 25
+	}
+
+	ai_will_do = {
+		base = 75
+		modifier = {
+			factor = 0
+			has_trait = craven
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { has_trait = fir_bolg }
+		}
+		modifier = {
+			factor = 0
+			max_military_strength < title:c_ballyhooly.holder.top_liege.max_military_strength
+		}
+	}
+}
+
+avange_cath_maige_tuired_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+
+	major = yes
+	ai_goal = yes
+
+	desc = avange_cath_maige_tuired_decision_desc
+	
+	is_shown = {
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:avange_cath_maige_tuired_decision
+			}
+		}
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			has_trait = fir_bolg
+			culture = { has_cultural_pillar = heritage_fir_bolg }
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_trait = fir_bolg
+			culture = { has_cultural_pillar = heritage_fir_bolg }
+		}
+		faith = faith:ancient_greek_slave
+		has_title = title:c_ballyhooly
+		OR = {
+			any_vassal_or_below = { has_title = title:d_fermoy }
+			has_title = title:d_fermoy
+		}
+		title:c_ballyhooly = {
+			development_level > 50
+			faith = root.faith
+			culture = root.culture
+		}
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		root = { save_scope_as = founder }
+		trigger_event = {
+			days = 0
+			id = toi_decision_race.0006
+		}
+		faith:ancient_greek_slave = {
+			remove_doctrine = tenet_deep_vengeance_flame
+			add_doctrine = tenet_maige_tuired_avenged_faith
+		}
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = cath_maige_tuired_avenged_modifier
+			}
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = toi_decision_race.0006
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:avange_cath_maige_tuired_decision
+		}
+	}
+
+	cost = {
+		prestige = 50
+	}
+
+	ai_potential = {
+		always = yes
 	}
 
 	ai_will_do = {

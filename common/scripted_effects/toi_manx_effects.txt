@@ -37,13 +37,13 @@ unite_manx_decision_scripted_effect = {
 	
 	title:c_doolish = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = 10
 	}
 	
-	destroy_title = k_mann_west
-	destroy_title = k_mann_east
+	destroy_title = title:k_mann_west
+	destroy_title = title:k_mann_east
 }
 
 army_of_manx_effect = {

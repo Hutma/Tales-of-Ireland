@@ -1,34 +1,24 @@
 ﻿l_french:
-
- bm_fall_of_milesians:0 "La chute des Milésiens"
- bm_fall_of_milesians_desc:0 "Les Milésiens ont régné des siècles durant sur l'Irelande et ses habitants. Leur hégémonie cependant est sur le poit d'être remise en jeu. Une nouvelle menace a débarqué sur leurs côtes: des hommes continentaux. Faute de nombres ou d'unité, les Milésiens s'affaiblissent d'année en année, et les tribus autrefois assujetties s'agitent avec des esprits pleins de rancoeur. Peut-être en constatant cette instabilité ou guidé par le destin, les Tuatha Dé Danann émergent du Sidh pour défier à la fois Milésiens et Fomoriens. Éire est divisée. \n\nIl y aura-t-il jamais un souverain capable d'unir son peuple et l'île?#!"
-
-
-
- #Tara
- bookmark_fall_of_milesians_loegaire:0 "Haut Roi Lóegaire"
- bookmark_fall_of_milesians_loegaire_desc:0 "Lóegaire a hérité une haute royauté fragilisé par le mauvais règne de son père. Son emprise sur l'île ne tient qu'a un fil, et son pouvoir est ébranlé par les machinations de ses frères. Il paraît qu'une conspiration se trame dans les couloirs de son fort circulaire de Tara tandis que Lóegaire formule des desseins pour regagner le contrôle, et pourquoi pas, la gloire.#!" 
-
-
- 
- #Cork
- bookmark_fall_of_milesians_oscar:0 "Roi Oscar"
- bookmark_fall_of_milesians_oscar_desc:0 "L'instable royaume de Cork s'est disloqué suite à la mort de son roi. Le nouveau roi, Oscar, siège sur un trône précaire sous la menace persistante de l'oncle prétendant. Le jeune roi devra étendre son pouvoir pour réunifier Cork; une tâche dantesque qui doit être rapidement accomplie à moins que les myriades de peuples et fois de Cork mènent à une fin prématurée de son règne.#!"
-
-
- 
- #Mayo
- bookmark_fall_of_milesians_rudraige:0 "Roi Rudraige"
- bookmark_fall_of_milesians_rudraige_desc:0 "Rudraige revendique une ascendance prestigieuse, celle du grand géros Sreng qui a tranché le bras de Nuada lors de la Première Bataille de Mag Tuired. Bien que son royaume soit demeuré stable sous sa garde, bien des prétendants jettent des regards envieux à son trône. Si Rudraige venait à mater les chefs guerroyant à sa frontière, la gloire passée des Fir Bolgs sera restaurée.#!"
-
-
- 
- #Derry
- bookmark_fall_of_milesians_nuada:0 "Roi Nuada Airgetlám"
- bookmark_fall_of_milesians_nuada_desc:0 "Après la défaite des Tuatha Dé Danann par les Milésiens, Nuada fit partie de ceux qui s'exilèrent dans le Sidh. Ayant eu vent des difficultés récentes des Milésiens face aux Celtes, Nuada a ramené son peuple aux domaines mortels pour assouvir sa vengeance. Grâce à une petite troupe il a arraché Derry des mains de ses anciens ennemis les Fomoriens. Utilisant les pouvoirs mystiques qu'il a aprris dans le Sidh, il sera difficile pour qui que soit d'entraver sa vengeance.#!"
-
-
- 
- #Donegal
- bookmark_fall_of_milesians_inzhay:0 "Roi Inzhay"
- bookmark_fall_of_milesians_inzhay_desc:0 "Une croyance unit tous les semblables d'Inzhay: les Fomoriens sont les seuls habitants légitimes de l'Irlande. Le Roi Inzhay suit les traces de son peuple et ses ancêtres: il nourrit une haine tenace des intrus et envahisseurs de son île. Ni plus ni moins qu'un brutal massacre et asservissement satisfera son courroux, et avec la magie noire seule connue des siens, toute l'Irlande va réapprendre le signification de la peur.#!"
+  
+ bm_fall_of_milesians: "La chute des Milésiens"
+ bm_fall_of_milesians_desc: "Pendant des siècles, les Milésiens ont régné sur l'Irlande et tous ses habitants. Mais leur hégémonie est sur le point d’être remise en question. Une nouvelle menace débarque sur leurs côtes : les hommes venus du continent. Sans le nombre ou l'unité nécessaires pour relever ce défi, les Milésiens s'affaiblissent d'année en année, et les tribus qu'ils dominaient autrefois commencent à s'agiter avec des cœurs remplis de pensées de vengeance. Peut-être sentant l'instabilité, ou peut-être par le seul destin, les Tuatha Dé Danann ont été vus sortir de l'Autre Monde pour défier les Milésiens et les Fomoriens. L'Irlande est fragmentée. \n\nÉmergera-t-il un jour un leader capable d'unir son peuple et l'île ?#!"
+  
+  #Tara 
+ bookmark_fall_of_milesians_loegaire: "Haut Roi Lóegaire"
+ bookmark_fall_of_milesians_loegaire_desc: "Lóegaire a hérité d’une haute royauté affaiblie par la mauvaise gestion de son père. Son emprise sur l'île est pour le moins ténue, son règne étant encore entravé par les machinations de ses frères. Des mots de conspiration chuchotent dans les couloirs de son ringfort à Tara tandis que Lóegaire trace un chemin pour reprendre le contrôle, et s'il a de la chance, la gloire.#!"
+  
+  #Cork 
+ bookmark_fall_of_milesians_oscar: "Roi Oscar"
+ bookmark_fall_of_milesians_oscar_desc: "Le royaume turbulent de Cork s'est brisé suite à la mort de son roi. Le nouveau roi, Oscar, est assis sur un trône instable, sous la menace constante d'une contestation de la part de son oncle prétendant. Le jeune roi devra étendre son pouvoir pour réunifier Cork ; une tâche ardue qui doit être accomplie rapidement, de peur que la myriade de cultures et de religions de Cork ne mette fin prématurément à son règne.#!"
+  
+  #Mayo 
+ bookmark_fall_of_milesians_rudraige: "Roi Rudraige"
+ bookmark_fall_of_milesians_rudraige_desc: "Rudraige revendique un héritage prestigieux, étant un descendant du grand héros Sreng qui a coupé le bras de Nuada lors de la première bataille de Mag Tuired. Bien que son royaume soit resté stable sous son règne, de nombreux prétendants regardent son trône avec envie. Si Rudraige réprime les chefs chicaneurs à sa frontière, l'ancienne gloire des Fir Bolgs sera sûrement restaurée.#!"
+  
+  #Derry 
+ bookmark_fall_of_milesians_nuada: "Roi Nuada Airgetlam"
+ bookmark_fall_of_milesians_nuada_desc: "Après la défaite des Tuatha De Danann par les Milésiens, Nuada faisait partie de ceux qui se rendirent dans l'Autre Monde en exil volontaire. Ayant entendu parler de la récente lutte milésienne contre les Celtes, Nuada a ramené son peuple dans les royaumes des mortels pour se venger. Avec une petite troupe, il a conquis Derry de ses anciens ennemis, les Fomoriens. En utilisant les pouvoirs mystiques qu'il a appris dans l'Autre Monde, il sera difficile à aucune force de résister à sa vengeance.#!"
+  
+  #Donegal 
+ bookmark_fall_of_milesians_inzhay: "Roi Injay"
+ bookmark_fall_of_milesians_inzhay_desc: "Une croyance unit tous les parents du roi Inzhay : les Fomoriens sont les seuls habitants légitimes de l’Irlande. Le roi Inzhay a suivi les traces de son peuple et de ses ancêtres : il brûle d'une haine farouche envers tous les intrus et envahisseurs de son île. Rien d'autre que le massacre et l'esclavage brutal ne pourront apaiser sa colère, et grâce à la magie noire connue uniquement de son peuple, toute l'Irlande réapprendra le sens de la peur.#!"

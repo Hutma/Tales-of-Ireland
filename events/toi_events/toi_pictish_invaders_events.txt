@@ -3,7 +3,7 @@
 #pict hidden triggers 0001
 toi_pictish_invasion.1001 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -50,7 +50,7 @@ toi_pictish_invasion.0001 = {
 #pictish hidden triggers 0002
 toi_pictish_invasion.1002 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -94,7 +94,7 @@ toi_pictish_invasion.0002 = {
 #pictish hidden triggers 0003, after failing
 toi_pictish_invasion.1003 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {
@@ -138,7 +138,7 @@ toi_pictish_invasion.0003 = {
 #pictish hidden triggers 0004, finish
 toi_pictish_invasion.1004 = {
 	hidden = yes
-	scone = none
+	scope = none
 	
 	immediate = {
 		every_ruler = {

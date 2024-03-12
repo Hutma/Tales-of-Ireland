@@ -53,6 +53,10 @@ has_partition_succession_realm_law_trigger = {
 		has_realm_law = confederate_partition_succession_law
 		has_realm_law = partition_succession_law
 		has_realm_law = ancient_partition_succession_law
+		has_realm_law = clan_competitive_partition_succession_law
+		has_realm_law = clan_impassive_partition_succession_law
+		has_realm_law = clan_friendly_partition_succession_law
+		has_realm_law = clan_harmonious_partition_succession_law
 	}
 }
 
@@ -69,7 +73,6 @@ can_have_confederate_partition_succession_law_trigger = {
 	OR = {
 		government_has_flag = government_is_feudal
 		government_has_flag = government_is_tribal
-		government_has_flag = government_is_clan
 	}
 }
 
@@ -87,6 +90,7 @@ can_keep_partition_succession_law_trigger = {
 			can_have_partition_succession_law_trigger = yes
 		}
 	}
+	NOT = { government_has_flag = government_is_clan }
 }
 
 can_have_partition_succession_law_trigger = {
@@ -97,7 +101,6 @@ can_have_partition_succession_law_trigger = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {
 			government_has_flag = government_is_feudal
-			government_has_flag = government_is_clan
 		}
 	}
 }
@@ -110,6 +113,7 @@ can_keep_high_partition_succession_law_trigger = {
 		}
 		can_have_high_partition_succession_law_trigger = yes
 	}
+	NOT = { government_has_flag = government_is_clan}
 }
 
 can_have_high_partition_succession_law_trigger = {
@@ -125,7 +129,6 @@ can_have_high_partition_succession_law_trigger = {
 		text = succession_laws_must_have_organised_government_tooltip
 		OR = {
 			government_has_flag = government_is_feudal
-			government_has_flag = government_is_clan
 		}
 	}
 }
@@ -197,23 +200,23 @@ can_have_city_succession_law_trigger = {
 title_can_reduce_partition_law_trigger = {
 	OR = {
 		AND = {
-			has_title_law = single_heir_succession_law
-			holder = {
-				can_have_high_partition_succession_law_trigger = yes
-			}
-		}
-		AND = {
-			has_title_law = high_partition_succession_law
-			holder = {
-				can_have_high_partition_succession_law_trigger = yes
-			}
-		}
-		AND = {
 			has_title_law = partition_succession_law
 			holder = {
 				can_have_confederate_partition_succession_law_trigger = yes
 			}
 		}
+		AND = {
+			has_title_law = confederate_partition_succession_law
+			holder = {
+				can_have_ancient_partition_succession_law_trigger = yes
+			}
+		}
+		# AND = {
+			# has_title_law = partition_succession_law
+			# holder = {
+				# can_have_confederate_partition_succession_law_trigger = yes
+			# }
+		# }
 	}
 }
 

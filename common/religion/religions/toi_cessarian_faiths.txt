@@ -31,6 +31,9 @@
 	
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_stoic
 
 	traits = {
 		virtues = { just honest brave }
@@ -216,6 +219,9 @@
 			doctrine = tenet_sacred_childbirth
 			doctrine = tenet_pacifism
 			doctrine = tenet_animal_worship
+			
+			#Funeral tradition
+			doctrine = doctrine_funeral_bewailment
 		}
 		iabhism = {
 			color = { 173 255 239 }

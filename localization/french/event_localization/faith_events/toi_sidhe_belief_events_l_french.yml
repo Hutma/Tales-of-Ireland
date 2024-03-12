@@ -1,0 +1,23 @@
+﻿l_french:
+ sidhe_belief.0001.t: "La jeune fille du printemps"
+ sidhe_belief.0001.desc: "Un jour, alors que j'étudie la forêt près de mon ringfort à la recherche de gibier sauvage et d'autres ressources, je tombe sur une clairière cachée, apparemment inexplorée selon mes rangers. \n\nNous nous rapprochons et sentons une aura d’un autre monde nous envelopper. Cette clairière n'est pas simple. De beaux animaux vont et viennent sans avoir peur de nous parmi les vergers et les champs de céréales sous les arbres. L'un des gardes attrape même un cerf « avec un sourire malicieux » ou un lapin « avec une lueur sinistre dans les yeux ». \n\nNous nous dirigeons enfin vers une source qui semble être le lien de ce lieu. \n\nUne belle jeune fille nous salue : « Vous êtes maintenant dans mon domaine, que ce soit par l'esprit, le hasard ou le destin. Néanmoins, je vais vous faire subir une épreuve. Choisissez votre compétence et choisissez judicieusement. Si vous réussissez, les récompenses seront grandes. Toutefois, si vous échouez, les conséquences seront désastreuses. \n\nLa source bourdonne et on voit des rochers blancs dans l'eau. Des roches humaines."
+ sidhe_belief.0001.a: "Un test de Guile ne vous décevra pas !"
+ sidhe_belief.0001.b: "Essayez notre valeur et vous ne manquerez de rien !"
+ sidhe_belief.0001.c: "Notre astuce pourrait vous surprendre !"
+ sidhe_belief.0001.d: "Nous avons des langues d'argent et des doigts d'or. Un peu de poésie peut-être ?"
+ sidhe_belief.0001.success: "Le Sidhe est impressionné"
+ sidhe_belief.0001.failure: "Le Sidhe est déçu"
+  
+ sidhe_belief.0002.t: "Jeune fille offensée"
+ sidhe_belief.0002.desc: "Vous avez mal performé. Il y a un prix du sang à payer. « Une vie ou un seau de Sang d'un Rí Tuath. Payer. #S Maintenant. #!” \n\nMes chevaliers ont l'air effrayés. Aucun d’eux ne veut mourir, leur famille me tiendra également pour responsable. Je pourrais lui donner mon sang, mais cela me laisserait à peine m'accrocher à la vie."
+ sidhe_belief.0002.a: "L'un de vous devra rester ici."
+ sidhe_belief.0002.b: "Prends le sang."
+ sidhe_belief.0002.c: "Nous ne serons pas intimidés par toi, sorcière. Je vais te tuer !"
+ sidhe_belief.0002.c.success: "Tu tues la jeune fille"
+ sidhe_belief.0002.c.failure: "La jeune fille te tue"
+  
+ sidhe_belief.0003.t: "Une période de sécheresse"
+ sidhe_belief.0003.desc: "La terre est inhabituellement aride. La divination de mon druide a conclu qu'il s'agissait d'une malédiction lancée par un Sidhe en colère. \n\nSuite à une annonce publique à ce sujet, mon héritier [foolish_heir.GetFirstName] vient me voir avec une confession. [foolish_heir.GetSheHe] semblait avoir poursuivi imprudemment un jeune garçon qui avait volé la lance [foolish_heir.GetHerHis], allant jusqu'à maudire [foolish_heir.GetHerHim] jusqu'à une mort terrible. \n\nCe garçon était en fait un Sidhe déguisé, et déçu par la conduite de mon héritier, il nous a lancé cette malédiction. Mon druide dit que sans apaisement, la terre restera frappée par la sécheresse."
+ sidhe_belief.0003.a: "Vous vous livrerez au châtiment."
+ sidhe_belief.0003.b: "Nous devons rendre hommage pour compenser votre transgression."
+ sidhe_belief.0003.c: "Nous finirons par nous en sortir."

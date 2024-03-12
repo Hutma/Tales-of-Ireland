@@ -34,7 +34,7 @@ the_empire_of_the_isles_decision_scripted_effect = {
 	
 	title:c_doolish = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}
@@ -65,7 +65,7 @@ the_empire_of_dal_riata_decision_scripted_effect = {
 	
 	title:c_antrim = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}

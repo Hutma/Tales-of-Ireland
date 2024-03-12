@@ -49,7 +49,7 @@
  make_magician_interaction_desc: "Turn [recipient.GetShortUINameNoTooltip] into a powerful magician"
  tooltip.magic.made_magician.target: "You have been given magical powers"
  killing_blow_interaction: "Killing Blow"
- make_magician_interaction_desc: "Kill [recipient.GetShortUINameNoTooltip]"
+ killing_blow_interaction_desc: "Kill [recipient.GetShortUINameNoTooltip]"
  
  # Tales Of Magic: Light path
  fast_learner_perk_name:0 "Fast Learner"

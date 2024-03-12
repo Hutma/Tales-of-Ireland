@@ -142,9 +142,61 @@ DeathMessageIntro = {
 		}
 	}
 	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_CHRISTIANITY_1
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_CHRISTIANITY_2
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_ISLAM_1
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_ISLAM_2
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_ISLAM_3
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_NORSE_1
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_HELLENIC_1
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_EASTERN_1
+		trigger = {
+			OR = {
+				always = no
+			}
+		}
+	}
+	text = {
 		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_INTRO_TRIBAL_1
 		trigger = {
-			government_has_flag = government_is_tribal
+			OR = {
+				always = no
+			}
 		}
 	}
 }
@@ -531,6 +583,17 @@ DeathMessageOutro = {
 		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_OUTRO_ACCOMPLISHMENT_SAOSHYANT
 		trigger = {
 			has_trait = saoshyant
+		}
+		weight_multiplier = {
+			base = 100
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_DEAD_OUTRO_ACCOMPLISHMENT_RESTORER_ROME
+		trigger = {
+			has_trait = augustus
+			always = no
+			has_character_flag = flag_restorer_of_rome #used for Eulogy.
 		}
 		weight_multiplier = {
 			base = 100

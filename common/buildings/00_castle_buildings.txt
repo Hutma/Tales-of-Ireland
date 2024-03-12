@@ -4,6 +4,7 @@
 @holding_illustration_mediterranean = "gfx/interface/illustrations/holding_types/castle_mediterranean.dds"
 @holding_illustration_norse = "gfx/interface/illustrations/holding_types/fp1_castle_norse.dds"
 @holding_illustration_iberian= "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+@holding_illustration_iranian = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds" 
 
 castle_01 = {
 	construction_time = slow_construction_time
@@ -39,7 +40,7 @@ castle_01 = {
 	}
 	
 	can_construct_showing_failures_only = {
-		building_requirement_tribal_holding_in_county = no
+		building_requirement_tribal = no
 		building_requirement_tribal_holding_in_county = yes
 	}
 	

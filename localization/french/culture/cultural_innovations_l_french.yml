@@ -1,0 +1,312 @@
+﻿l_french:
+ cb_discount_prestige_10: "[casus_belli|E] [prestige|E] Coût : #P -10%#!"
+ cb_discount_piety_10: "[casus_belli|E] [piety|E] Coût : #P -10%#!"
+ individual_county_de_jure_cb: "Individuel [de_jure|E] [county|E]"
+ individual_duchy_de_jure_cb: "Individuel [de_jure|E] [duchy|E]"
+ multiple_claim_wars: "Peut appuyer sur plusieurs de vos [claims|E] en une seule guerre"
+ multiple_claim_wars_others: "Peut appuyer sur plusieurs [claims|E] pour un autre personnage dans une seule guerre"
+ fabricate_claim_speed: ""Fabriquer une réclamation sur le comté" [councillor_task|E] Vitesse : #P +50 %#!"
+ promote_culture_speed: ""Promouvoir la culture" [councillor_task|E] Vitesse : #P +15%#!"
+ same_culture_group_reduced_factionalism: "Les [vassals|E] dont [culture|E] partage un [heritage|E] avec le vôtre sont moins susceptibles de rejoindre [independence_factions|E]"
+ reduce_develop_county_penalty_01: "Les comtés atteignent désormais la pénalité maximale [existing_development|E] à 20 [development|E]"
+ reduce_develop_county_penalty_02: "Les comtés atteignent désormais la pénalité maximale [existing_development|E] à 35 [development|E]"
+ reduce_develop_county_penalty_03: "Les comtés atteignent désormais la pénalité maximale [existing_development|E] à 55 [development|E]"
+ reduce_develop_county_penalty_04: "Les comtés atteignent désormais la pénalité maximale [existing_development|E] à 90 [development|E]"
+  
+  
+  
+  
+ unlock_tribal_economic_buildings: "Débloque toute l'ère tribale [economic_buildings|E]"
+ unlock_tribal_military_buildings: "Débloque toute l'ère tribale [military_buildings|E]"
+ unlock_tribal_fortification_buildings: "Débloque toute l'ère tribale [fortification_buildings|E]"
+ unlock_early_medieval_economic_buildings: "Débloque tout le début de l'ère médiévale [economic_buildings|E]"
+ unlock_early_medieval_military_buildings: "Débloque tout le début de l'ère médiévale [military_buildings|E]"
+ unlock_early_medieval_fortification_buildings: "Débloque tout le début de l'ère médiévale [fortification_buildings|E]"
+ unlock_high_medieval_economic_buildings: "Débloque toute l'ère médiévale élevée [economic_buildings|E]"
+ unlock_high_medieval_military_buildings: "Débloque toute l'ère médiévale élevée [military_buildings|E]"
+ unlock_high_medieval_fortification_buildings: "Débloque toute l'ère médiévale élevée [fortification_buildings|E]"
+ unlock_late_medieval_economic_buildings: "Débloque tous les éléments de la fin du Moyen Âge [economic_buildings|E]"
+ unlock_late_medieval_military_buildings: "Débloque tous les éléments de la fin du Moyen Âge [military_buildings|E]"
+ unlock_late_medieval_fortification_buildings: "Débloque tous les éléments de la fin du Moyen Âge [fortification_buildings|E]"
+ unlocks_naval_raiding: "Débloque la possibilité de [raid|E] au-dessus des mers, si vous le pouvez déjà [raid|E]"
+ unlocks_sailable_major_rivers: "Débloque la possibilité de naviguer sur les rivières majeures"
+  
+ unlock_march_contract: "Débloque le #high $special_contract_march_short$#! [feudal_contract|E]"
+ unlock_scutage_contract: "Débloque le #high $special_contract_scutage_short$#! [feudal_contract|E]"
+ unlock_palatinate_contract: "Débloque le #high $special_contract_palatinate_short$#! [feudal_contract|E]"
+ unlock_fortification_rights_contract: "Débloque le #high $fortification_rights$#! [feudal_contract|E]"
+ unlock_coinage_rights_contract: "Débloque le #high $coinage_rights$#! [feudal_contract|E]"
+  
+ ############## 
+ # Tribal Era # 
+ ############## 
+  
+  #Military 
+ innovation_motte: "Forts des collines"
+ innovation_motte_desc: "Simple mais efficace, construire nos châteaux sur des monticules de terre surélevés est le meilleur moyen de garantir que nous avons littéralement les hauteurs sur nos ennemis."
+  
+ innovation_catapult: "Onagre"
+ innovation_catapult_desc: "Bien que lentes à charger et à tirer, les catapultes à torsion comme celles-ci nous permettent d'attaquer les fortifications ennemies tout en restant hors de portée de leurs archers."
+  
+ innovation_barracks: "Caserne"
+ innovation_barracks_desc: "En construisant des bâtiments dédiés pour loger nos soldats, nous pouvons nous assurer que nous disposons de suffisamment d’espace pour accueillir nos armées en pleine croissance."
+  
+ innovation_mustering_grounds: "Terrains de rassemblement"
+ innovation_mustering_grounds_desc: "Il ne suffit pas d’avoir des gens prêts à se battre pour nous pour gagner des guerres. Réserver un espace pour que les gens puissent s'entraîner et se rassembler pour le combat nous permettra de soutenir des groupes de combattants plus expérimentés qui peuvent nous mener à la victoire."
+  
+ innovation_bannus: "Bannus"
+ innovation_bannus_desc: "Basé sur le pouvoir de commander des hommes au combat, le ban donne à nos dirigeants le pouvoir de contraindre des hommes libres à se battre pour eux, constituant ainsi une base légale pour le rassemblement de grandes armées."
+ eligible_accolade_vanguard_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('vanguard_attribute').GetName] [accolades|E]"  
+ eligible_accolade_vanguard_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_vanguard_attribute_ACCOLADES_DLC')]"  
+  
+ innovation_quilted_armor: "Armure matelassée"
+ innovation_quilted_armor_desc: "Formées d'une douzaine ou plus de couches de lin cousues ensemble, ces vestes peuvent arrêter même les flèches lourdes et constituent un moyen abordable pour nous d'armer un régiment entier pour le combat."
+  
+  #Civic 
+ innovation_gavelkind: "Gavelkind"
+ innovation_gavelkind_desc: "La stabilité et la prospérité vont de pair. Au lieu de laisser des vassaux se battre pour le pouvoir lorsque le vieux monarque décède, nous pouvons définir un système d'héritage prédéterminé et équitable qui éliminera une grande partie de l'instabilité qui se produit traditionnellement lors de la succession."
+  
+ innovation_crop_rotation: "Rotation des cultures"
+ innovation_crop_rotation_desc: "En passant du modèle agricole traditionnel à deux champs à une rotation des cultures à trois champs, nous pouvons produire plus de cultures chaque année sans épuiser le sol de nos fermes."
+  
+ innovation_city_planning: "Aménagement de la ville"
+ innovation_city_planning_desc: "En concevant nos villes avant de commencer à les construire, nous pouvons créer de nouveaux patrimoines dans des emplacements stratégiques qui sont à la fois plus fonctionnels et plus esthétiques que les anciens qui sont apparus au hasard au fil du temps."
+  
+ innovation_casus_belli: "Casus belli"
+ innovation_casus_belli_desc: "Le plus fort fait le bien est la loi du pays depuis des générations, mais si nous avons une justification pour nos guerres, nous pouvons alors éviter de provoquer la colère de nos voisins et les représailles qui en découlent souvent."
+  
+ innovation_plenary_assemblies: "Assemblées plénières"
+ innovation_plenary_assemblies_desc: "Afin de gouverner efficacement, nous devons rassembler tous les hommes libres du royaume pour discuter et résoudre les questions législatives. La présence est obligatoire et ceux qui ne viennent pas seront condamnés à une amende et perdront leur capacité à influencer toute décision prise."
+  
+ innovation_development_01: "Travaux publics"
+ innovation_development_01_desc: "Le financement de la construction de travaux publics tels que des routes, des écoles et des aqueducs permettra à nos colonies de s'étendre et d'atteindre de plus grandes tailles, garantissant ainsi la prospérité de notre peuple pour les générations à venir."
+  
+ innovation_currency_01: "Devise"
+ innovation_currency_01_desc: "Le troc est lent et inefficace ; l’adoption d’une monnaie officiellement reconnue comme les cauris ou les pépites de métal renforcera le commerce et augmentera la diffusion des idées au sein de notre royaume."
+  
+ innovation_ledger: "registre"
+ innovation_ledger_desc: "À mesure que nos terres s’agrandissent, nous avons besoin d’un meilleur moyen de suivre ce que nous possédons. Tenir un registre de nos biens garantira que nous saurons toujours de quelles ressources nous disposons."
+  
+  #Regional 
+ innovation_viking_tradition: "Tactiques vikings"  
+ innovation_viking_tradition_desc: "Les peuples du Nord ont une longue tradition de commerce, mais aussi de piraterie. Rares sont ceux qui sont prêts à combattre une menace qui apparaît sans avertissement depuis les rives d’une rivière, et les guerriers vikings sont les maîtres de ce genre de guerre."  
+  
+ innovation_longboats: "Drakkars"
+ innovation_longboats_desc: "Nos drakkars sont de formidables navires marins capables de voyager presque partout et même de braver les intempéries, nous offrant une mobilité exceptionnelle sur les mers."
+  
+ innovation_war_camels: "Chameaux de guerre"
+ innovation_war_camels_desc: "Les chameaux sont naturellement adaptés à la vie en terrain désertique, mais ils ne sont pas intrinsèquement des créatures de combat. Nos éleveurs et entraîneurs peuvent changer cela, en nous donnant accès à une cavalerie adaptative qui nous permettra de maîtriser les sables."
+ eligible_accolade_camelry_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('camelry_attribute').GetName] [accolades|E]"  
+ eligible_accolade_camelry_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_camelry_attribute_ACCOLADES_DLC')]"  
+  
+ innovation_elephantry: "Éléphanterie"
+ innovation_elephantry_desc: "Les éléphants sont difficiles à élever en captivité, chaque cornac doit donc capturer ses propres éléphants sauvages et les dresser. Cela signifie qu’il existe un art délicat pour utiliser correctement ces grandes créatures au combat, mais c’est un art que nous nous engageons à maîtriser."
+ eligible_accolade_elephantry_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('elephantry_attribute').GetName] [accolades|E]"  
+ eligible_accolade_elephantry_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_elephantry_attribute_ACCOLADES_DLC')]"  
+  
+ innovation_wootz_steel: "Acier Wootz"
+ innovation_wootz_steel_desc: "Également connu sous le nom d’acier Hinduwani ou Seric, ce métal riche en carbone est excellent pour fabriquer des armes. L'acier Wootz est largement commercialisé et est considéré comme le meilleur acier au monde. Tout au long de l’histoire, il a attiré l’attention des commerçants arabes, égyptiens, chinois et même romains."
+  
+ innovation_african_canoes: "Canoës d'Afrique de l'Ouest"
+ innovation_african_canoes_desc: "Les grandes pirogues d’Afrique de l’Ouest sont excellentes pour naviguer sur les rivières et nous permettent de transporter rapidement des troupes là où nous en avons besoin."
+  
+ innovation_table_of_princes: "Table des Princes"
+ innovation_table_of_princes_desc: "La Table des Princes est le siège royal des dirigeants de Bohême, celui qui est assis à la table étant reconnu comme le dirigeant légitime. Selon le code d'ancienneté de la maison, les titres étaient attribués au membre vivant le plus âgé de la dynastie régnante."
+ unlock_single_heir_dynasty_house_changing: "Peut adopter le $single_heir_dynasty_house$ à n'importe quel [crown_authority|E]"
+  
+  
+ tradition_visigothic_codes_name: "$innovation_visigothic_codes$"  
+ tradition_visigothic_codes_desc: "$innovation_visigothic_codes_desc$"  
+ innovation_visigothic_codes: "Codes wisigoths"
+ innovation_visigothic_codes_desc: "Bien que bon nombre des anciennes traditions wisigoths aient depuis longtemps été effacées du monde, les enfants des Pyrénées se souviennent des anciennes coutumes et de la manière dont la terre était divisée entre fils et filles de manière pratique mais équitable."
+ unlock_equal_succession_changing: "Peut adopter $equal_law$ [law|E] à n'importe quel [crown_authority|E]"
+  
+ ###################### 
+ # Early Medieval Era # 
+ ###################### 
+  
+  #Military 
+ innovation_battlements: "Créneaux"
+ innovation_battlements_desc: "Au-delà de la fortification du donjon lui-même, la construction d'un mur extérieur durable pouvant être occupé en toute sécurité par nos archers donnera à nos châteaux une couche supplémentaire de protection contre les attaquants."
+  
+ innovation_mangonel: "Mangonneaux"
+ innovation_mangonel_desc: "Amélioration significative de nos conceptions de catapultes existantes, les mangonneaux à traction sont beaucoup plus rapides à charger et à tirer que les machines à torsion."
+ eligible_accolade_besieger_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('besieger_attribute').GetName] [accolades|E]"  
+ eligible_accolade_besieger_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_besieger_attribute_ACCOLADES_DLC')]"  
+  
+ innovation_burhs: "Burhs"
+ innovation_burhs_desc: "Dispersés à travers la campagne, les burhs sont d'importantes colonies fortifiées que nous pouvons utiliser à la fois pour rassembler des troupes et pour servir de centres administratifs."
+  
+ innovation_house_soldiers: "Soldats de maison"
+ innovation_house_soldiers_desc: "À mesure que nos familles nobles gagnent en pouvoir, elles ont besoin de soldats pour faire respecter leur volonté. L’établissement d’un ordre de soldats de maison dédiés garantira que nous disposons de troupes mieux entraînées et équipées qu’une levée standard."
+  
+ innovation_horseshoes: "Fers à cheval"
+ innovation_horseshoes_desc: "Un cheval avec un sabot fendu deviendra rapidement boiteux et sera incapable de travailler ou d'être monté au combat. En ferrant nos chevaux avec des plaques de bronze ou de fer, nous pouvons garder leurs sabots sains et protégés des dommages."
+  
+ innovation_arched_saddle: "Selle arquée"
+ innovation_arched_saddle_desc: "La cavalerie légère est une force avec laquelle il faut compter, mais elle n'exploite pas véritablement le potentiel du cheval de guerre. Les selles arquées nous permettent d'aligner des guerriers lourdement blindés avec des lances couchées, ce qui leur permet de profiter pleinement de leur élan lorsqu'ils chargent dans les lignes ennemies."
+ eligible_accolade_lancer_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('lancer_attribute').GetName] [accolades|E]"  
+ eligible_accolade_lancer_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_lancer_attribute_ACCOLADES_DLC')]"  
+  
+  #Civic 
+ innovation_hereditary_rule: "Règle héréditaire"
+ innovation_hereditary_rule_desc: "Diviser équitablement le royaume entre tous les héritiers éligibles brise l’unité de notre peuple. Au lieu de déchirer notre royaume à chaque succession, nous pouvons garantir un cœur stable et prospère en établissant un système de gouvernement héréditaire."
+  
+ innovation_manorialism: "Manorialisme"
+ innovation_manorialism_desc: "Avec la propriété foncière consolidée sous notre élite, de nombreux hommes et femmes se retrouvent incapables de travailler. Nous établirons un système de manoir dans lequel les hommes libres pourront travailler nos champs en échange d'un loyer, tandis que ceux qui ne peuvent pas payer pourront entrer à notre service comme serfs esclaves."
+  
+ innovation_royal_prerogative: "Prérogative royale"
+ innovation_royal_prerogative_desc: "Comme notre royauté a un fardeau plus lourd qui lui est imposé par sa responsabilité de gouverner le royaume, elle se verra également accorder des privilèges qui lui sont réservés exclusivement."
+  
+ innovation_chronicle_writing: "Écriture de chroniques"
+ innovation_chronicle_writing_desc: "Les histoires des exploits de notre famille ne seront plus transmises uniquement par la tradition orale. Nous garderons une trace de tout ce que nous accomplissons, à la fois pour inspirer les générations futures et pour prouver nos revendications sur les terres que nous devrions légitimement détenir."
+  
+ innovation_armilary_sphere: "Sphère armillaire"
+ innovation_armilary_sphere_desc: "Constitués d’une structure sphérique d’anneaux mobiles, ces appareils nous permettent de cartographier et de prédire le mouvement du ciel. Bien qu’il s’agisse d’un dispositif astrologique fascinant en soi, cette connaissance aidera également nos capitaines à naviguer dans des eaux éloignées de la terre."
+  
+ innovation_baliffs: "Huissiers de justice"
+ innovation_baliffs_desc: "Un roi ne peut pas être partout à la fois. En nommant des huissiers pour faire respecter la loi du roi dans tout le royaume, nous pouvons gouverner une zone plus vaste plus efficacement que nous ne le pourrions autrement."
+  
+ innovation_development_02: "Gouvernement communal"
+ innovation_development_02_desc: "Les grandes villes sont régulièrement confrontées à une série de problèmes de plus en plus complexes. Déléguer une certaine autorité aux conseils locaux leur permettra de résoudre ces problèmes sans avoir besoin d'impliquer le roi."
+  
+ innovation_currency_02: "Monnaie"
+ innovation_currency_02_desc: "Les monnaies non réglementées sont difficiles à contrôler et manquent de stabilité. Les pièces frappées, mesurées selon des poids spécifiques et estampillées du sceau royal, redonnent une nouvelle confiance aux transactions commerciales."
+  
+  #Regional 
+  
+ innovation_reconquista: "Reconquête"
+ innovation_reconquista_desc: "Distraits par les luttes intestines, nous tolérons depuis trop longtemps la présence d’infidèles en Hispanie. Le moment est venu pour nous de rassembler nos forces pour les chasser de ce pays une fois pour toutes !"
+  
+ innovation_stem_duchies: "Stammesherzogtum"
+ innovation_stem_duchies_desc: "Bien que nous soyons issus de tribus différentes, nous reconnaissons l’importance de l’unité et de la coopération. L’indépendance est surestimée lorsque la stabilité est ce qui mène à la sécurité et à la prospérité."
+  
+ innovation_ghilman: "Ghilman"
+ innovation_ghilman_desc: "Soldats esclaves faits prisonniers de guerre, les ghilman sont des combattants dévoués qui nous sont à la fois plus loyaux et moins chers que les mercenaires ordinaires."
+  
+ ##################### 
+ # High Medieval Era # 
+ ##################### 
+  
+  #Military 
+ innovation_hoardings: "Panneaux publicitaires"
+ innovation_hoardings_desc: "Placées au sommet de nos remparts, ces constructions en bois s'étendent au-dessus de la base des murs de notre château.\n\nElles permettent à nos défenseurs de tirer des flèches, de lâcher des pierres ou de verser de l'huile bouillante sur les attaquants tout en restant totalement protégés des archers ennemis."
+  
+ innovation_trebuchet: "Trébuchet"
+ innovation_trebuchet_desc: "Merveille d'ingénierie, le trébuchet à contrepoids peut lancer de lourds projectiles à des distances plus grandes que n'importe quel engin de siège qui l'a précédé."
+  
+ innovation_castle_baileys: "Château de Baileys"
+ innovation_castle_baileys_desc: "Si le donjon constitue le cœur d'un château, il est loin d'être le seul bâtiment important. Construire des bâtiments comme les écuries et l'armurerie dans une cour protégée nous garantira de pouvoir mettre en garnison et équiper correctement nos troupes, quelles que soient les circonstances."
+  
+ innovation_men-at-arms: "Hommes d'armes"
+ innovation_men-at-arms_desc: "Les experts en cheval et en lance seront toujours recherchés, mais ne sont pas toujours disponibles. Le maintien de groupes d’hommes d’armes en service garantira que nous ne manquerons pas de combattants expérimentés lorsque la guerre éclatera inévitablement."
+  
+ innovation_knighthood: "Chevalerie"
+ innovation_knighthood_desc: "En conférant des titres de chevalier à nos meilleurs combattants et en les rémunérant avec des terres au lieu de simples pièces d'argent, nous pouvons leur donner l'honneur qu'ils méritent et garantir leur loyauté à notre égard."
+  
+ innovation_advanced_bowmaking: "Fabrication d'arcs avancée"
+ innovation_advanced_bowmaking_desc: "Alors que les archers fabriquent et entretiennent traditionnellement leurs propres arcs, les artisans ont commencé à fabriquer de nouveaux types d’arcs, plus solides et plus complexes qu’auparavant. En adoptant ces nouvelles conceptions, nous pouvons transformer ces maîtres archers en un atout militaire inestimable."
+ eligible_accolade_crossbower_attribute_ACCOLADES_DLC: "[knights|E] de ce [culture|E] devient éligible au [GetAccoladeType('crossbowmen_attribute').GetName] [accolades|E]"  
+ eligible_accolade_crossbower_attribute: "[AddLocalizationIf( HasDlcFeature( 'accolades' ), 'eligible_accolade_crossbower_attribute_ACCOLADES_DLC')]"  
+  
+  #Civic 
+  
+ innovation_heraldry: "Héraldique"
+ innovation_heraldry_desc: "L'établissement de conceptions héréditaires pour identifier nos familles nobles amènera leurs membres à se considérer comme faisant partie d'un tout plus vaste, les encourageant à améliorer la réputation de leur dynastie au lieu d'être simplement obsédés par leur statut personnel."
+  
+ innovation_windmills: "Moulins à vent"
+ innovation_windmills_desc: "L’invention du moulin à vent vertical nous permet d’exploiter la puissance du vent beaucoup plus efficacement qu’auparavant, réduisant considérablement le travail nécessaire pour moudre les grains et traiter les matières premières."
+  
+ innovation_divine_right: "Droit divin"
+ innovation_divine_right_desc: "Il est temps que nous reconnaissions que c’est la volonté divine qui a placé nos dirigeants sur leurs trônes, et s’opposer à eux, c’est s’opposer à la divinité elle-même."
+  
+ innovation_land_grants: "Concessions de terres"
+ innovation_land_grants_desc: "La terre est la récompense la plus précieuse que nous puissions accorder à nos sujets, mais nous ne possédons directement que peu de choses. Cependant, si nous leur accordions la permission de commencer à cultiver ces terres inexploitées là-bas... qui s'y opposerait ? Même si un conflit en résulte, nous aurons clairement raison lorsque nous défendrons nos sujets !"
+  
+ innovation_scutage: "Scutage"
+ innovation_scutage_desc: "Le service militaire a toujours été attendu de nos sujets, mais certains ne peuvent ou ne veulent pas l'assurer. En leur offrant un moyen de remplir leurs obligations avec des pièces de monnaie plutôt qu'avec de l'acier, nous pouvons garantir que nous recevrons notre contribution de chacun."
+  
+ innovation_guilds: "Guildes"
+ innovation_guilds_desc: "À mesure que nos terres s'étendent, il devient de plus en plus inefficace de gérer directement tous les échanges commerciaux qui se déroulent au sein de notre domaine. En accordant des chartes de guilde aux organisations de commerçants et d'artisans, nous pouvons leur donner plus d'autonomie dans leurs activités tout en garantissant que nous profitions de leurs entreprises."
+  
+ innovation_development_03: "Urbanisation"
+ innovation_development_03_desc: "Les grandes villes de Rome, Byzance et Delhi se distinguent depuis longtemps comme les reliques d’un héritage immense et incomparable. À mesure que nos infrastructures et notre population augmentent, nous avons enfin les moyens de développer de nouvelles colonies qui rivalisent avec ces anciens centres urbains."
+  
+ innovation_currency_03: "Bancaire"
+ innovation_currency_03_desc: "Les transactions particulièrement importantes ou coûteuses nécessitent souvent une quantité lourde de pièces de monnaie. Déposer cette richesse dans des trésors sécurisés et transférer la propriété sans déplacer les pièces physiques permettra d’échanger plus facilement de grandes quantités de biens."
+  
+  #Regional 
+  
+ innovation_east_settling: "Ostsiedlung"
+ innovation_east_settling_desc: "Les terres situées à l’est sont peu peuplées, mais riches en ressources naturelles. La mise en place d'une initiative visant à agrandir et à établir des fermes là-bas mènera à la croissance et à la prospérité de notre peuple."
+  
+ innovation_seigneurialism: "Seigneurialisme"
+ innovation_seigneurialism_desc: "En déléguant davantage de responsabilités aux nobles locaux, nous pouvons à la fois les rendre heureux et libérer davantage notre attention pour nous concentrer sur notre propre domaine."
+  
+ innovation_muladi: "Muladi"
+ innovation_muladi_desc: "Partout dans le monde, les guerres, les raids et les persécutions ont poussé de nombreuses personnes à quitter leur foyer. En accueillant ces âmes déplacées sur nos terres, quelle que soit leur origine, nous pouvons développer une société riche et prospère."
+  
+ innovation_french_peerage: "Pairie"
+ innovation_french_peerage_desc: "En reconnaissant à juste titre les plus illustres parmi les nobles vassaux de notre royaume, nous favoriserons un sentiment de plus grande loyauté envers la couronne."
+  
+ ##################### 
+ # Late Medieval Era # 
+ ##################### 
+  
+  #Military 
+ innovation_machicolations: "Machicolis"
+ innovation_machicolations_desc: "Une amélioration notable par rapport à nos palissades précédentes, les mâchicoulis en pierre remplissent le même objectif tout en étant nettement plus durables et en offrant plus de protection à nos défenseurs."
+  
+ innovation_bombard: "Bombardes"
+ innovation_bombard_desc: "Le développement d’armes à poudre nous a permis de dépasser les limites des leviers et des poulies. Nos nouvelles armes de siège peuvent abattre les murs ennemis avec une force et une efficacité dont nos ancêtres auraient à peine pu rêver."
+  
+ innovation_royal_armory: "Armurerie royale"
+ innovation_royal_armory_desc: "À mesure que la taille de nos armées augmente, nous devons garantir que chaque soldat sera correctement armé et blindé. La création d'une armurerie royale pour produire et abriter tous les équipements de nos armées contribuera grandement à répondre à ce besoin."
+  
+ innovation_standing_armies: "Armées permanentes"
+ innovation_standing_armies_desc: "Les levées militaires nous fournissent un grand nombre de soldats, mais peu importe à quel point nous essayons de les former et de les équiper, ils seront toujours inférieurs aux soldats professionnels. La création d’une grande armée permanente garantira que les intérêts de notre royaume seront défendus par les meilleurs combattants du monde."
+  
+ innovation_sappers: "Sapeurs"
+ innovation_sappers_desc: "Peu importe la solidité des murs de nos ennemis si la terre en dessous peut être creusée. Employer des sapeurs pour saper les fortifications ennemies est un moyen efficace de percer même les défenses les plus résistantes."
+  
+ innovation_plate_armor: "Armure de plaques"
+ innovation_plate_armor_desc: "Forme ultime de protection individuelle, une armure de plaques bien conçue est dotée d'articulations articulées qui lui confèrent une amplitude de mouvement supérieure aux armures précédentes, tout en étant pratiquement impénétrable pour les armes ennemies."
+  
+  #Civic 
+  
+ innovation_primogeniture: "Primogéniture"
+ innovation_primogeniture_desc: "Un royaume, un héritier. Même si les plus jeunes enfants de notre monarque peuvent se sentir abandonnés en se voyant refuser un héritage, c'est le meilleur moyen de garantir que nous conservons un royaume stable qui ne soit pas déchiré par des crises de succession."
+  
+ innovation_cranes: "Grues"
+ innovation_cranes_desc: "Merveille oubliée de l'ingénierie, les Romains ont utilisé les grues à roues de manière très efficace lors de la construction de leur empire, et nous aussi."
+  
+ innovation_noblesse_oblige: "Noblesse oblige"
+ innovation_noblesse_oblige_desc: "La noblesse est bien plus que de simples privilèges et droits ; cela s’accompagne également d’un devoir envers le royaume, d’une obligation d’agir de manière appropriée et juste. Établir clairement ce que l’on attend de notre élite nous donnera un idéal auquel aspirer et nous rassemblera dans nos efforts pour l’atteindre."
+  
+ innovation_rightful_ownership: "Propriété légitime"
+ innovation_rightful_ownership_desc: "C’est notre droit divin de posséder nos terres de jure, et il est temps que le monde reconnaisse ce fait. Nous ne serons plus freinés par des protocoles et un décorum obsolètes."
+  
+ innovation_ermine_cloaks: "Capes d'hermine"
+ innovation_ermine_cloaks_desc: "N'importe qui peut revendiquer un titre, mais pour être un véritable monarque, il doit inspirer respect et majesté à ses sujets. Nos nouvelles capes d'hermine sont une forme de tenue royale qui accomplira exactement cela."
+  
+ innovation_court_officials: "Fonctionnaires de la Cour"
+ innovation_court_officials_desc: "Notre royaume s'est étendu à un point tel que même les nobles mineurs ne peuvent pas tout administrer efficacement. La nomination de fonctionnaires et de bureaucrates des tribunaux pour s'occuper des tâches judiciaires les plus banales garantira que les rouages ​​du gouvernement continuent de tourner sans problème."
+  
+ innovation_development_04: "Pensée de la Renaissance"
+ innovation_development_04_desc: "Les progrès de la science, de la philosophie et de la logique ont transformé nos villes en de merveilleux centres d’éducation et d’innovation. Les progrès technologiques et culturels massifs que nous accomplissons actuellement ont mis à notre portée un potentiel jusqu’ici insoupçonné."
+  
+ innovation_currency_04: "Billets à ordre"
+ innovation_currency_04_desc: "Evolution des systèmes bancaires antérieurs, les billets à ordre papier permettent à nos citoyens d'échanger rapidement et en toute sécurité des biens et des services sur de grandes distances sans être alourdis par des espèces lourdes."
+  
+  #Regional 
+  
+ innovation_wierdijks: "Wierdijks"
+ innovation_wierdijks_desc: "Construire des digues solides et fiables est une tâche essentielle si nous voulons vivre et prospérer dans les Pays-Bas. De nouvelles techniques de renforcement des digues en terre avec des tapis d'algues augmenteront leur résistance et leur durabilité."
+  
+ innovation_condottieri: "Condottieri"
+ innovation_condottieri_desc: "Étant à la fois riche et centralement située, l’Italie est devenue un centre majeur vers lequel les compagnies de mercenaires peuvent se rendre lorsqu’elles ne sont pas en campagne active. Puisqu’ils sont déjà là, nous devrions pouvoir négocier pour eux un meilleur tarif que celui qu’ils factureraient normalement."
+  
+ innovation_deccan_unity: "Unité du Déccan"
+ innovation_deccan_unity_desc: "L’afflux de nouvelles croyances et religions dans notre société a clairement montré que notre focalisation passée sur le régionalisme était une erreur. Nous devons nous unir à d’autres croyants de notre foi et garantir un État fort et durable, capable de résister aux pressions extérieures."
+  
+ students_of_knighthood: "Les enfants qui terminent leurs études avec un [martial|E] [education_focus|E] gagnent un $trait_education_martial_prowess$ [trait|E]."

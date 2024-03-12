@@ -23,6 +23,12 @@
 			}
 			desc = task_collect_taxes_family_business_bonus_desc
 		}
+		triggered_desc = {
+			trigger = {
+				councillor_liege_has_consulted_house_bonus = yes
+			}
+			desc = task_collect_taxes_consulted_house_bonus_desc
+		}
 		desc = {
 			desc = council_task_possible_side_effects
 			triggered_desc = {
@@ -198,7 +204,7 @@ task_develop_county = {
 		# Add all new progress values to the script value steward_develop_county_total
 		# Note that for Develop County, the County Modifiers apply the actual values, while progress is for player info only
 	progress = {
-		value = 2
+		value = 0
 		add = {
 			value = steward_develop_county_base
 			desc = STEWARD_PROGRESS_BASE
@@ -232,6 +238,15 @@ task_develop_county = {
 			add = {
 				value = scope:councillor.steward_develop_county_family_business_monthly_increase
 				desc = FAMILY_BUSINESS_BONUS_VALUE
+			}
+		}
+		if = {
+			limit = {
+				councillor_liege_has_consulted_house_bonus = yes
+			}
+			add = {
+				value = scope:councillor.steward_develop_county_consulted_house_monthly_increase
+				desc = CONSULTED_HOUSE_BONUS_VALUE
 			}
 		}
 
@@ -462,13 +477,13 @@ task_develop_county = {
 						}
 						add_character_flag = {
 							flag = no_ai_increase_development
-							years = 30
+							years = 15
 						}
 					}
 					else = {
 						add_character_flag = {
 							flag = no_ai_increase_development
-							years = 10
+							years = 5
 						}
 					}
 				}
@@ -789,9 +804,18 @@ task_promote_culture = {
 			limit = {
 				scope:councillor_liege = { is_ai = yes }
 			}
-			NAND = { # Princes in the HRE tend to not convert each other's cultures
-				always = no
-			}
+			# NAND = { # Princes in the HRE tend to not convert each other's cultures
+				# exists = title:e_hre.holder
+				# scope:councillor_liege.top_liege = title:e_hre.holder
+				# OR = {
+					# scope:councillor_liege.culture = culture:czech
+					# scope:councillor_liege.culture = { has_cultural_pillar = heritage_central_germanic }
+				# }
+				# OR = {
+					# scope:county.culture = culture:czech
+					# scope:county.culture = { has_cultural_pillar = heritage_central_germanic }
+				# }
+			# }
 			OR = {
 				NOT = {
 					scope:county.culture = {
@@ -803,10 +827,31 @@ task_promote_culture = {
 						is_hybrid_culture = yes
 						is_divergent_culture = yes
 					}
+					# NOT = { # Leave the Welsh alone!
+						# this = culture:anglo_saxon
+					# }
 					any_parent_culture = {
 						this = scope:county.culture
 					}
 				}
+				# AND = {
+					# Scottish rulers should convert counties of 'old' cultures to the new one.
+					# scope:councillor_liege.culture = culture:scottish
+					# OR = {
+						# scope:county.culture = culture:anglo_saxon
+						# scope:county.culture = culture:gaelic
+						# scope:county.culture = culture:cumbrian
+						# scope:county.culture = culture:pictish
+					# }
+				# }
+				# AND = {
+					# English rulers should convert counties of 'old' cultures to the new one.
+					# scope:councillor_liege.culture = culture:english
+					# OR = {
+						# scope:county.culture = culture:anglo_saxon
+						# scope:county.culture = culture:norman
+					# }
+				# }
 			}
 			OR = {
 				is_independent_ruler = yes
@@ -820,6 +865,24 @@ task_promote_culture = {
 						this = scope:county.culture
 					}
 				}
+				# AND = {
+					# Scottish rulers should convert counties of 'old' cultures to the new one.
+					# scope:councillor_liege.culture = culture:scottish
+					# OR = {
+						# scope:county.culture = culture:anglo_saxon
+						# scope:county.culture = culture:gaelic
+						# scope:county.culture = culture:cumbrian
+						# scope:county.culture = culture:pictish
+					# }
+				# }
+				# AND = {
+					# English rulers should convert counties of 'old' cultures to the new one.
+					# scope:councillor_liege.culture = culture:english
+					# OR = {
+						# scope:county.culture = culture:anglo_saxon
+						# scope:county.culture = culture:norman
+					# }
+				# }
 			}
 			OR = {
 				scope:county = {
@@ -856,6 +919,37 @@ task_promote_culture = {
 						#		}
 						#	}
 						#}
+						# AND = { # The English want to convert the Anglo Saxons and Cumbrians
+							# scope:councillor_liege.culture = culture:english
+							# OR = {
+								# scope:county.culture = culture:anglo_saxon
+								# scope:county.culture = culture:cumbrian
+							# }
+						# }
+						# AND = { # The Scots want to convert the Anglo Saxons, Cumbrians and Gaelic
+							# scope:councillor_liege.culture = culture:scottish
+							# OR = {
+								# scope:county.culture = culture:anglo_saxon
+								# scope:county.culture = culture:gaelic
+								# scope:county.culture = culture:cumbrian
+								# scope:county.culture = culture:pictish
+							# }
+						# }
+						# AND = { # The Gaels want to convert the Picts and Cumbrians
+							# scope:councillor_liege.culture = culture:gaelic
+							# OR = {
+								# scope:county.culture = culture:cumbrian
+								# scope:county.culture = culture:pictish
+							# }
+						# }
+						# AND = { # The modern scandinavians want to convert the Norse
+							# OR = {
+								# scope:councillor_liege.culture = culture:swedish
+								# scope:councillor_liege.culture = culture:danish
+								# scope:councillor_liege.culture = culture:norwegian
+							# }
+							# scope:county.culture = culture:norse
+						# }
 						#AND = { # The vikings want to culture convert the Brits, OBSOLETE as of the Hybrid Culture update - they want to create hybrids instead!
 						#	OR = {
 						#		scope:councillor_liege.culture = culture:norse
@@ -872,6 +966,15 @@ task_promote_culture = {
 						#		scope:county.culture = { has_cultural_pillar = heritage_brythonic }
 						#	}
 						#}
+						# AND = { # The Portuguese should want to convert Suebi
+							# scope:councillor_liege.culture = culture:portuguese
+							# scope:county.culture = culture:suebi
+						# }
+						# AND = { # The Iberians want to convert Visigothic
+							# scope:councillor_liege.culture = { has_cultural_pillar = heritage_iberian }
+							# NOT = { scope:councillor_liege.culture = culture:portuguese }
+							# scope:county.culture = culture:visigothic
+						# }
 					}
 				}
 			}
@@ -947,17 +1050,17 @@ task_promote_culture = {
 			}
 			add = 10000 # Always keep going if this is already chosen
 		}
-		else_if = {
-			limit = {
-				scope:councillor_liege.culture = {
-					has_innovation = innovation_desert_tactics #Best way to check if the culture is Outremer
-				}
-				scope:councillor_liege = {
-					gold >= steward_convert_culture_value
-				}
-			}
-			add = 500
-		}
+		# else_if = {
+			# limit = {
+				# scope:councillor_liege.culture = {
+					# has_innovation = innovation_desert_tactics #Best way to check if the culture is Outremer
+				# }
+				# scope:councillor_liege = {
+					# gold >= steward_convert_culture_value
+				# }
+			# }
+			# add = 500
+		# }
 		else_if = {
 			limit = {
 				scope:councillor_liege = {
@@ -1026,7 +1129,16 @@ task_promote_culture = {
 		if = {
 			# Don't do this too often
 			limit = {
-				scope:councillor_liege = { has_character_flag = no_ai_culture_convert }
+				scope:councillor_liege = {
+					has_character_flag = no_ai_culture_convert
+					# NAND = { # ignore it if in Hostility with escalation
+						# has_character_flag = agenda_towards_escalation
+						# any_character_struggle = {
+							# involvement = involved
+							# is_struggle_phase = struggle_iberia_phase_hostility
+						# }
+					# }
+				}
 			}
 			multiply = 0
 		}
@@ -1097,6 +1209,12 @@ task_accept_culture = {
 				councillor_liege_has_family_business_bonus = yes
 			}
 			desc = task_accept_culture_family_business_bonus_desc
+		}
+		triggered_desc = {
+			trigger = {
+				councillor_liege_has_consulted_house_bonus = yes
+			}
+			desc = task_accept_culture_consulted_house_bonus_desc
 		}
 		triggered_desc = {
 			trigger = {
@@ -1370,13 +1488,15 @@ task_accept_culture = {
 			add = 15
 		}
 		
-		if = {
+		# if = {
 			# And the norse!
-			limit = {
-				always = no
-			}
-			add = 15
-		}
+			# limit = {
+				# scope:councillor_liege = {
+					# culture = culture:norse
+				# }
+			# }
+			# add = 15
+		# }
 		
 		if = {
 			# Rulers with a capital culture that isn't particularly accepted like this if they have some more counties in their realm of the culture
@@ -1635,6 +1755,24 @@ task_convince_dejure = {
 			add = {
 				value = steward_convince_dejure_erudition_bonus
 				desc = ERUDITION_DYNASTY_PERK_BONUS_VALUE
+			}
+		}
+		if = {
+			limit = {
+				councillor_liege_has_family_business_bonus = yes
+			}
+			add = {
+				value = steward_convince_dejure_family_business_bonus
+				desc = FAMILY_BUSINESS_BONUS_VALUE
+			}
+		}
+		if = {
+			limit = {
+				councillor_liege_has_consulted_house_bonus = yes
+			}
+			add = {
+				value = steward_convince_dejure_consulted_house_bonus
+				desc = CONSULTED_HOUSE_BONUS_VALUE
 			}
 		}
 	}

@@ -1,0 +1,64 @@
+﻿l_french:
+ toi_lifestyle_event.0001.t: "Entraînement à la lance"
+ toi_lifestyle_event.0001.desc: "Chaque jour, après avoir rencontré mon conseil, je prends le temps de me séquestrer dans les forêts voisines.\n\nSans l'aide de mon maréchal, je pratique mon efficacité avec la lance.\n\nAvoir seulement une heure chaque jour pour m'entraîner m'a permis de m'entraîner. a énormément renforcé ma confiance dans ma technique."
+ toi_lifestyle_event.0001.a: "Je deviens rapidement plus compétent."
+ toi_lifestyle_event.0001.b: "Pour améliorer ma forme, j'ai besoin de mon maréchal."
+  
+ toi_lifestyle_event.0002.t: "Halloween/Samhain"
+ toi_lifestyle_event.0002.desc: "Aujourd'hui c'est le jour de Samhain, les récoltes sont terminées pour l'hiver et nous sommes fiers de la productivité de notre terre cette année. \n\nDans la tradition, il est temps d'allumer de grands feux de joie dans tout mon royaume, de coudre des déguisements Sidhe pour les enfants, de jouer notre musique pour honorer les dieux et, bien sûr, c'est l'heure des jeux et des festins. \n\nEn ce jour sacré, les druides se retirent dans un bosquet sacré pour pratiquer la divination."
+ toi_lifestyle_event.0002.a: "Récupérez notre récolte et préparez les feux !"
+ toi_lifestyle_event.0002.b: "Je ne gaspillerai pas d'argent là-dessus."
+ toi_lifestyle_event.0002.c: "Je ferai même un sacrifice aux dieux ce soir."
+ toi_lifestyle_event.0002.d: "J'irai rendre visite aux druides pour prévoir mon avenir."
+  
+ toi_lifestyle_event.0003.t: "Prévoir mon avenir"
+ toi_lifestyle_event.0003.desc: "J'ai rencontré les druides et le plus âgé et le plus sage m'a dit de m'approcher. \n\nJ'ai longuement prié avec lui pour ouvrir mon être aux dieux afin qu'ils puissent lire ce qui m'arrivera."
+ toi_lifestyle_event.0003.a: "Je laisse mon avenir entre les mains des dieux !"
+  
+ toi_lifestyle_event.0004.t: "Un brillant avenir de combat"
+ toi_lifestyle_event.0004.desc: "Le druide se met à crier des paroles inintelligibles au ciel, aux dieux. Au bout d'un moment, il s'arrête et écoute. On entend depuis la forêt les loups se précipiter dans la nuit avec une intensité unique. \n\nLe druide se tourne vers moi et me dit : "Tu es béni par un avenir de guerre et de conquête, les dieux t'aiment.""  
+ toi_lifestyle_event.0004.a: "Que les dieux soient loués !"
+  
+ toi_lifestyle_event.0005.t: "Un brillant avenir de paix"
+ toi_lifestyle_event.0005.desc: "Le druide se met à crier des paroles inintelligibles au ciel, aux dieux. Au bout d'un moment, il s'arrête et écoute. On aperçoit à l'horizon de la nuit une immense meute d'oiseaux qui volent dans le ciel au-dessus de la forêt, comme s'ils dansaient et se régalaient dans le ciel. \n\nLe druide se tourne vers moi et me dit : "Tu as la chance d'avoir un avenir de paix et de prospérité, les dieux te font confiance.""  
+ toi_lifestyle_event.0005.a: "Que les dieux soient loués !"
+  
+ toi_lifestyle_event.0006.t: "Un avenir sombre"
+ toi_lifestyle_event.0006.desc: "Le druide se met à crier des paroles inintelligibles au ciel, aux dieux. Au bout d'un moment, il s'arrête et écoute. Nous attendons alors un signe, mais rien ne se passe. Au bout d'une demi-heure un gros nuage de pluie se forme dans le ciel au-dessus de nous et la pluie commence à tomber lentement sur nous... \n\nLe druide se tourne vers moi et me dit : « Tu es maudit d'un avenir sombre, les dieux sont malheureux, vous devez faire tout ce qui est en votre pouvoir pour leur plaire. \n\n #X Vous devez gagner un niveau de dévotion pour perdre le mauvais modificateur #!"
+ toi_lifestyle_event.0006.a: "Je suis maudit..."
+  
+ toi_lifestyle_event.0008.t: "Festival de printemps"
+ toi_lifestyle_event.0008.desc: "Cette année, ma cour et les familles influentes n'ont qu'une seule chose en tête : préparer et célébrer une grande fête du printemps pour célébrer la fin de l'hiver rigoureux de cette année. Tout le monde est prêt à participer avec son bétail à cette grande période de l'année."
+ toi_lifestyle_event.0008.a: "Faisons ce festival."
+ toi_lifestyle_event.0008.b: "Il vaudrait mieux utiliser ces ressources pour notre armée.1"
+ toi_lifestyle_event.0008.c: "Tout cela ne sert à rien, nous garderons notre bétail..."
+  
+ toi_lifestyle_event.0009.t: "Prière nocturne étoilée"
+ toi_lifestyle_event.0009.desc: "Ce soir est une nuit particulière, le ciel est illuminé par des centaines d'étoiles filantes. C'est le moment idéal pour prier et demander au [ROOT.Char.GetFaith.HighGodName] de nous protéger. \n\nJe me tiens dans la plaine et je m'assois religieusement en priant."
+ toi_lifestyle_event.0009.a: "Je prie [ROOT.Char.GetFaith.WarGodNamePossessive] pour la force et la victoire."
+ toi_lifestyle_event.0009.b: "Je prie [ROOT.Char.GetFaith.FertilityGodName] pour la paix et le calme de l'hiver."
+ toi_lifestyle_event.0009.c: "Je prie [ROOT.Char.GetFaith.HighGodName] de m'accorder un règne prestigieux."
+  
+ toi_lifestyle_event.0010.t: "Leçons du passé"
+ toi_lifestyle_event.0010.desc: "Que sommes-nous sans notre passé ? Rien. [your_druid.GetFirstName] était trop heureux de nous le rappeler en parlant des grands guerriers et dirigeants qui nous ont amenés là où nous sommes aujourd'hui. J'ai été complètement captivé par ces histoires de sagesse et de courage. Si j’en savais plus, peut-être pourrais-je imiter leurs réalisations ? Je me suis tourné vers [your_druid.GetFirstName] et j'ai demandé..."
+ toi_lifestyle_event.0010.a: "Parlez-moi de l'un de nos dirigeants les plus sages."
+ toi_lifestyle_event.0010.b: "Parlez-moi de l'un de nos plus courageux guerriers."
+ toi_lifestyle_event.0010.c: "Je connais les histoires et je raconterai ma propre histoire !"
+  
+ toi_lifestyle_event.0011.t: "Forger ma légende"
+ toi_lifestyle_event.0011.desc: "Mes vassaux m'ont demandé de les rejoindre pour un petit festin. Mes délégués étrangers y assisteront, et c'est mon opportunité de montrer aux autres Royaumes quel genre de souverain je suis. Je dois faire bonne impression, mais de quelle sorte s’agira-t-elle exactement ? Je dois décider qui m'accompagnera..."
+ toi_lifestyle_event.0011.a: "J'apporterai mon Ridrí en guise de démonstration de force."
+ toi_lifestyle_event.0011.b: "J'amènerai des artistes et des bardes pour montrer que je suis cultivé."
+ toi_lifestyle_event.0011.c: "Je n'irai pas, et si je m'embarrasse ?"
+ toi_lifestyle_event.0011.d: "Ces étrangers ne valent pas mon temps."
+  
+ toi_lifestyle_event.1001.t: "Entraînement assisté à la lance"
+ toi_lifestyle_event.1001.desc: "Le lendemain après avoir exercé seul mes compétences dans l'art du combat à la lance j'affronte mon Maréchal [ROOT.marshal.GetFirstName], après m'avoir grondé de me mettre en danger il accepte de m'aider. À mesure que nous arrivons dans les bois voisins, le temps semble passer plus vite. On a l’impression que le soleil se couche avant que nous ayons atteint les techniques les plus avancées. Même si l’intention était de nous entraîner pendant une heure, nous avons passé toute la journée à nous entraîner et à discuter de technique. Avec les conseils du [ROOT.marshal.GetFirstName], mon formulaire a dû s'améliorer considérablement."
+ toi_lifestyle_event.1001.a: "Je me suis peut-être entraîné un peu trop dur..."
+ toi_lifestyle_event.1001.b: "Les améliorations que j’ai ressenties pourraient simplement être dues à la bonne compagnie de mon marshall."
+ toi_lifestyle_event.1001.a.success: "Votre formation a réussi"
+ toi_lifestyle_event.1001.a.fail: "Vous vous êtes trop entraîné"
+ toi_lifestyle_event.1001.b.success: "Vous avez amélioré"
+ toi_lifestyle_event.1001.b.fail: "tu ne t'es pas amélioré"
+  
+  

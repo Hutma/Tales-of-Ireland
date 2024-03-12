@@ -56,7 +56,7 @@ unite_all_ireland_decision_scripted_effect = {
 		}
 		root = { destroy_title = prev }
 	}
-	destroy_title = k_high_kingship
+	destroy_title = title:k_high_kingship
 }
 
 found_meath_decision_scripted_effect = {
@@ -117,7 +117,7 @@ founded_umhaill_decision_scripted_effect = {
 	
 	title:c_westport = {
 		# Give it an extra building slots.
-		title_province = { add_building_slot = 1 }
+		title_province = { add_province_modifier = extra_building_slot }
 		# And a decent development boost.
 		change_development_level = medium_development_level_gain
 	}

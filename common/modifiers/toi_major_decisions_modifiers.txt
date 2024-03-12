@@ -65,17 +65,22 @@ roman_road_modifier = {
 	icon = rock_positive
 	tax_mult = 0.15
 	development_growth_factor = 0.25
-	monthly_county_control_change_add = 0.25
+	monthly_county_control_growth_add = 0.25
 }
 
 ancient_kingdom_founder = {
 	icon = prestige_positive
 	monthly_prestige = 0.5
 	powerful_vassal_opinion = 10
-	monthly_county_control_change_add = 0.2
+	monthly_county_control_growth_add = 0.2
 }
 
 clannic_dynasty = {
 	icon = family_positive
 	monthly_prestige = 0.1
+}
+
+cath_maige_tuired_avenged_modifier = {
+	icon = outdoors_positive
+	monthly_dynasty_prestige = 0.2
 }

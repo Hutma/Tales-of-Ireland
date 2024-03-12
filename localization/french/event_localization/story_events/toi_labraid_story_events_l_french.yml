@@ -1,28 +1,28 @@
 ﻿l_french:
- labraid_story.0001.t:0 "Divisions familiale"
- labraid_story.0001.desc:0 "Il y a quelques décennies, mon père qui était Haut Roi à apporté prospérité à l'Irlande, mais ses défaites contre les Celtes ont souillées son héritage. \n\nMon frère et moi même avons été éduqués en tant d'égals mais lors de l'héritage je suis celui à qui est revenu la Haute Royauté ainsi que Tara. \n\nDepuis ce jour mon frère regarde mon titre avec avidité et je sais qu'il nourri des ambitions d'un jour me remplacer. Je dois rester vigilant et devenir le Haut Roi que mon père était, prendre notre revenche sur les Celtes..."
- labraid_story.0001.a:0 "Je devrai garder un oeil sur mon frère"
- 
- labraid_story.0021.t:0 "Mon traitre de frère"
- labraid_story.0021.desc:0 "Je savais que ce jour viendrai. J'ai prévenu mon fils Ailill de multiples fois du fait que mon frère ne recherche que le pouvoir et cela même s'il doit agir contre sa propre famille. Cependant, il continuait à aller le voir régulièrement. \n\nAujourd'hui, quand il revient de chez son oncle, il semblait être en bonne santé. Quelques heures plus tard il commençait à blémir. Peu de temps après il était sur le sol, hurlant de douleur. J'ai fais demandé tous les druides de mon royaumes et ai promis de grandes récompenses à celui qui pourrai le guérir, mais en vain... \n\nIl a rendu son dernier soupir en début de soirée. A la nuit tombée un messager vint me prévenir que mon frère était aussi malade et demandait mon aide, à ce que j'aille le voir pour l'aider. \n\nJe ne suis pas assez stupide pour tomber dans ce piège ridicule...j'enverrai la garde, et il a intérêt à être sacrément malade s'il ne veux pas finir sa vie derrière les barreaux!"
- labraid_story.0021.a:0 "Je lui ferai payer"
- 
- labraid_story.0002.t:0 "Mon traitre de grand oncle"
- labraid_story.0002.desc:0 "Mon père ? Mort. Mon grand-père le Haut Roi ? Mort. Mon traitre de grand oncle a empoisonné mon père afin de mener le Roi dans un piège. \n\nLe Roi est tombé dans le piège, il est allé voir son frère avec son druide afin d'essayer de le soigner. Cependant, Cobthach n'était pas malade. Quand le Roi arriva au rendez-vous il fut grièvement blessé puis capturé. \n\nAprès l'avoir torturé pendant des heures il fini par lui donner la mort. Cobthach pris le pouvoir et je fus arrêté. Je suis maintenant dans les geoles, craignant ce qui va m'arriver."
- labraid_story.0002.a:0 "Que va-t-il faire de moi?"
- 
- labraid_story.0022.t:0 "Exilé"
- labraid_story.0022.desc:0 "Mon grand oncle, et maintenant Roi Cobthach de Tara, m'a épargné. Je suis vivant mais banni de mes terres. Je n'arrive toujours pas à réalisé ce qu'il m'a infligé, ça me hante dans chacun de mes sommeils, je ne trouve plus le repos...il m'a invité à sa table...et...m'a forcé à manger... à manger la chaire de mon père... et de mon grand père. \n\nJe n'arrive plus à me détacher du souvenir du goût et de l'odeur de la chaire gluante de mon père...était-ce vraiment mon père ? Je ne me souviens plus qui étiat quelle viande et c'est mieux ainsi. Cependant, puisque je n'ai pas été considéré comme un danger pour lui, mon grand oncle m'a simplement exilé. \n\nJe suis maintenant en chemin vers Tipperary où j'espère pouvoir m'établir... Et prouve à cet usurpateur à quel point il à tort..."
- labraid_story.0022.a:0 "Les cauchemars finiront pas s'en aller"
- labraid_story.0022.b:0 "La sombre vérité est que... j'ai presque apprécié ce repas"
- 
- labraid_story.0003.t:0 "En quête de vengeance"
- labraid_story.0003.desc:0 "Après quelques jours en exile, un groupe d'hommes, loyal à ma famille, est venu se présenté à moi. La majorité d'entre eux sont des combattants qui ont désertés l'armée royale après le coup d'état de Cobtach. J'ai maintenant espoir de pouvoir retourner à Tara et un jour pouvoir récupérer le trône qui devrait être le mien. \n\nJe dois cependant réussir à asseoir mon territoire et mon prestige afin de pouvoir attirer plus de soldats à mon service. \n\n #S Information pour le joueur : Vous devez posséder quatre comtés ou un duché ou avoir un niveau de gloire Illustre. Une fois cela accompli vous n'aurez plus qu'à attendre que les hommes viennent rejoindre votre armée.#!"
- labraid_story.0003.a:0 "Je regagnerai mon trône"
- 
- labraid_story.0005.t:0 "Mon Destin"
- labraid_story.0005.desc:0 "Cette dernière année de nombreux guerriers sont venus me rejoindre. Des rumeurs sur les territoires que j'ai conquis et la gloire que j'ai amassé se sont répendus sur toute l'île. Le Roi Usurpateur de Tara doit être effrayé en ce moement même. \n\nJe dois maintenant faire un choix. \n\nEst-ce que je dois réellement reprendre Tara où mon exil n'était-il pas un signe du Destin, ne devrai-je pas plutôt le suivre et m'installer à [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], utilisant ces guerriers comme l'outil de la fondation de mon propre royaume ?"
- labraid_story.0005.a:0 "Ma place est à Tara"
- labraid_story.0005.b:0 "Ma place est ici, avec mon peuple"
- 
- labraid_story_revenge_troops:0 "Guerriers loyaux de Labraid"
+ labraid_story.0001.t: "Division familiale"
+ labraid_story.0001.desc: "Il y a quelques années, mon père a apporté la prospérité et l'ordre en Irlande en tant que Grand Roi, mais ses défaites face aux Celtes ont entaché son héritage. \n\nMon jeune frère et moi avons été élevés sur un pied d'égalité, chacun héritant de la moitié des terres de notre père, mais mon héritage du titre de Haut Roi a provoqué une grande rupture entre nous. \n\nMême maintenant, mon frère regarde mon titre comme un loup affamé. J'ai peur de ce que l'avenir nous réserve. Je dois rester vigilant et devenir le Haut Roi qu'était mon père..."
+ labraid_story.0001.a: "Mon frère est ambitieux et je devrais le surveiller"
+  
+ labraid_story.0021.t: "Mon frère perfide"
+ labraid_story.0021.desc: "J'étais sûr que ce jour viendrait. J'ai prévenu mon fils Ailill à plusieurs reprises que mon frère ne cherchait que le pouvoir, même aux dépens de ses proches. Il continue néanmoins à lui rendre visite régulièrement. \n\nQuand il est revenu de rendre visite à son oncle aujourd'hui, il semblait aller bien. Mais quelques heures plus tard, il avait des imperfections. Il est tombé très malade, à une vitesse effroyable. J'ai envoyé chercher tous les druides de mon royaume pour essayer de le guérir, mais c'était en vain. \n\nCe soir, il a rendu son dernier souffle. A la tombée de la nuit, un messager est venu au ring, m'informant que mon frère est malade et demande de l'aide. \n\nJe ne suis pas assez stupide pour tomber dans le piège de son plan... J'enverrai les gardes, et il ferait mieux qu'il soit très malade s'il ne veut pas passer la nuit derrière les barreaux !"
+ labraid_story.0021.a: "Il va souffrir pour ça"
+  
+ labraid_story.0002.t: "Mon perfide grand-oncle"
+ labraid_story.0002.desc: "Mon père? Mort. Mon grand-père, le Roi ? Mort. Mon perfide grand-oncle a empoisonné mon père, mon père a été empoisonné pour attirer le roi dans un piège. \n\nLe roi tomba dans le piège, pensant que son frère était malade, il lui rendit visite avec un druide pour le soigner. Hélas, Cobthach n'était pas malade. Lorsque le roi arriva sur le lieu de leur rendez-vous, il le frappa et le blessa. \n\nIl l'a fait prisonnier et l'a torturé avant de l'abattre. Cobthach a pris le pouvoir et a ordonné à sa garde de me retrouver. Il m’enchaîne désormais, résigné à mon sort."
+ labraid_story.0002.a: "Que va-t-il décider ?"
+  
+ labraid_story.0022.t: "Exilé"
+ labraid_story.0022.desc: "Mon grand-oncle, aujourd'hui roi Cobthach, m'a épargné. Je suis vivant, mais banni de mes terres légitimes. Je n'arrive toujours pas à croire ce qu'il m'a fait subir, chaque nuit je ferme les yeux et j'y pense... il m'a invité à sa table... et... m'a forcé à participer à la chair de mon père et de mon grand-père. \n\nJe me souviens encore de l'odeur et du goût de la viande maladive de mon père... Ou était-ce mon grand-père ? Je ne me souviens pas de quoi et je ne veux pas le faire. Comme il ne me considère pas comme une menace, il a choisi de me condamner à l'exil plutôt qu'à l'exécution. \n\nJe suis maintenant en route pour Tipperary où j'espère m'établir... Et prouver que cet usurpateur cruel et fingalach a tort..."
+ labraid_story.0022.a: "Les cauchemars passeront"
+ labraid_story.0022.b: "La vérité est que... j'ai plutôt aimé ça"
+  
+ labraid_story.0003.t: "je chercherai à me venger"
+ labraid_story.0003.desc: "Quelques jours après mon exil, un homme fidèle à mon grand-père est venu à ma rencontre. La majorité d'entre eux sont des guerriers expérimentés et compétents, déçus par le coup d'État brutal de Cobtach et désormais mal dirigés. Cela me donne l'espoir qu'un jour, je pourrai récupérer le siège légitime de ma famille sur la colline de Tara. \n\nJe dois gagner à la fois de la réputation et du territoire pour être reconnu et attirer plus de guerriers à ma cause. \n\n #S Information pour le joueur : Vous devez rassembler au moins quatre Comtés ou un Duché ou atteindre le niveau de renommée Illustre. Une fois ceci terminé il ne vous reste plus qu'à attendre que les hommes se rassemblent sous votre bannière #!"
+ labraid_story.0003.a: "je reviendrai à la maison"
+  
+ labraid_story.0005.t: "Mon destin"
+ labraid_story.0005.desc: "Au cours de la dernière année, de nombreux soldats ont rejoint mon service. La nouvelle du pays que j'ai conquis et de la gloire que j'ai atteinte se répand partout. Le roi usurpateur de Tara a certainement peur de moi maintenant, s'il ne l'avait pas fait avant. \n\nJ'ai maintenant un choix devant moi. \n\nMon destin est-il vraiment la vengeance et le retour à Tara en armes, ou était-ce un exil fatal et l'avenir de ma famille est au [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip], ces guerriers étant le fondement de mon nouveau royaume ?"
+ labraid_story.0005.a: "Ma place est sur le trône de Tara"
+ labraid_story.0005.b: "Ma place est ici, avec mon peuple"
+  
+ labraid_story_revenge_troops: "Les fidèles soldats de Labraid"

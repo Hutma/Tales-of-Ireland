@@ -526,6 +526,84 @@
             	desc = "tournament_world_india_demotivation"
             }
         }
+        # Plague
+		if = {
+        	limit = {
+        	    any_sub_realm_county = {
+        	        any_county_province = {
+        	            any_province_epidemic = {
+        	                count >= 1
+        	                outbreak_intensity < apocalyptic
+        	            }
+        	        }
+        	    }
+        	    would_follow_social_distancing_value >= -1
+        	}
+        	add = {
+        	    value = -60
+        	    desc = "Plague in Realm"
+        	}
+    	}
+    	else_if = {
+    	    limit = {
+    	        any_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity < apocalyptic
+    	                }
+    	            }
+    	        }
+    	        would_follow_social_distancing_value >= -1
+    	    }
+    	    add = {
+    	        value = -40
+    	        desc = "Plague in Top Realm"
+    	    }
+    	}
+    	if = {
+    	    limit = {
+    	        any_sub_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity = apocalyptic
+    	                }
+    	            }
+    	        }
+    	    }
+    	    add = {
+    	        value = -200
+    	        desc = "Apocalyptic Plague in Realm"
+    	    }
+    	}
+    	else_if = {
+    	    limit = {
+    	        any_realm_county = {
+    	            any_county_province = {
+    	                any_province_epidemic = {
+    	                    count >= 1
+    	                    outbreak_intensity = apocalyptic
+    	                }
+    	            }
+    	        }
+    	    }
+    	    add = {
+    	        value = -100
+    	        desc = "Apocalyptic Plague in Top Realm"
+    	    }
+    	}
+
+    	if = {
+    		limit = {
+    			government_has_flag = government_is_theocracy
+    			has_title = title:k_papal_state
+    		}
+    		add = {
+    			value = -1000
+    			desc = "Is Pope"
+    		}
+    	}
 	}
 
 	ai_check_interval = 60
@@ -579,13 +657,13 @@
 				desc = activity_tournament_province_royal_armory_01_desc
 			}
 		}
-		if = {
-			limit = { has_building_or_higher = hall_of_heroes_01 }
-			add = {
-				value = 1
-				desc = activity_tournament_province_hall_of_heroes_01_desc
-			}
-		}
+		# if = {
+			# limit = { has_building_or_higher = hall_of_heroes_01 }
+			# add = {
+				# value = 1
+				# desc = activity_tournament_province_hall_of_heroes_01_desc
+			# }
+		# }
 		if = {
 			limit = { has_building_or_higher = barracks_01 }
 			add = {
@@ -618,10 +696,10 @@
 			limit = {
 				OR = {
 					has_building_or_higher = generic_university
-					has_building_or_higher = al_azhar_university
-					has_building_or_higher = sankore_university
-					has_building_or_higher = siena_university
-					has_building_or_higher = nalanda_university
+					# has_building_or_higher = al_azhar_university
+					# has_building_or_higher = sankore_university
+					# has_building_or_higher = siena_university
+					# has_building_or_higher = nalanda_university
 				}
 			}
 			add = {
@@ -727,18 +805,18 @@
 			trigger = { has_building_or_higher = war_camps_01 }
 			desc = activity_tournament_province_war_camps_01_desc
 		}
-		triggered_desc = {
-			trigger = { has_building_or_higher = hall_of_heroes_01 }
-			desc = activity_tournament_province_hall_of_heroes_01_desc
-		}
+		# triggered_desc = {
+			# trigger = { has_building_or_higher = hall_of_heroes_01 }
+			# desc = activity_tournament_province_hall_of_heroes_01_desc
+		# }
 		triggered_desc = {
 			trigger = {
 				OR = {
 					has_building_or_higher = generic_university
-					has_building_or_higher = al_azhar_university
-					has_building_or_higher = sankore_university
-					has_building_or_higher = siena_university
-					has_building_or_higher = nalanda_university
+					# has_building_or_higher = al_azhar_university
+					# has_building_or_higher = sankore_university
+					# has_building_or_higher = siena_university
+					# has_building_or_higher = nalanda_university
 				}
 			}
 			desc = activity_tournament_province_generic_university_desc
@@ -799,13 +877,13 @@
 			value = county.development_level
 			divide = 2
 		}
+		# if = {
+			# limit = {
+				# has_building_or_higher = hall_of_heroes_01
+			# }
+			# add = 30
+		# }
 		if = {
-			limit = {
-				has_building_or_higher = hall_of_heroes_01
-			}
-			add = 30
-		}
-		else_if = {
 			limit = {
 				OR = {
 					has_building_or_higher = jousting_lists_01
@@ -1251,10 +1329,24 @@
 
 	locale_background = { #MENA Background
 		trigger = {
-			activity_location.culture = {
+			activity_location = {
 				OR = {
-					has_graphical_mena_culture_group_trigger = yes
-					has_graphical_african_culture_group_trigger = yes
+					terrain = desert
+					terrain = desert_mountains
+					terrain = drylands
+					terrain = oasis
+					terrain = floodplains
+					AND = {
+						OR = {
+							terrain = mountains
+							terrain = hills
+							terrain = wetlands
+						}
+						OR = {
+							geographical_region = world_middle_east
+							geographical_region = world_africa_east
+						}
+					}
 				}
 			}
 		}
@@ -1269,20 +1361,33 @@
 			activity_location.culture = {
 				has_graphical_india_culture_group_trigger = yes
 			}
-		}
-		texture = "gfx/interface/illustrations/activity_backgrounds/tournament_terrain_europe_farmland.dds"
-		environment = "environment_jerusalem"
-		ambience = "event:/DLC/EP2/SFX/Ambience/2D/ep2_amb_2d_tournament_locale"
-		music = "tournamentindia_cue"
-	}
-
-	locale_background = { #Tribal Background
-		trigger = {
-			activity_location.culture = {
-				has_graphical_india_culture_group_trigger = yes
+			activity_location = {
+				OR = {
+					terrain = jungle
+					AND = {
+						OR = {
+							terrain = mountains
+							terrain = forest
+							terrain = hills
+							terrain = plains
+							terrain = wetlands
+							terrain = farmlands
+						}
+						OR = {
+							geographical_region = world_india
+							geographical_region = world_burma
+						}
+					}
+					AND = {
+						terrain = forest
+						OR = {
+							geographical_region = world_africa_west
+						}
+					}
+				}
 			}
 		}
-		texture = "gfx/interface/illustrations/activity_backgrounds/tournament_terrain_europe_farmland.dds"
+		texture = "gfx/interface/illustrations/activity_backgrounds/tournament_terrain_jungle.dds"
 		environment = "environment_jerusalem"
 		ambience = "event:/DLC/EP2/SFX/Ambience/2D/ep2_amb_2d_tournament_locale"
 		music = "tournamentindia_cue"
@@ -1290,13 +1395,6 @@
 
 	locale_background = { #Western Background
 		trigger = {
-			activity_location.culture = {
-				NOR = {
-					has_graphical_india_culture_group_trigger = yes
-					has_graphical_mena_culture_group_trigger = yes
-					has_graphical_african_culture_group_trigger = yes
-				}
-			}
 		}
 		texture = "gfx/interface/illustrations/activity_backgrounds/tournament_terrain_europe_farmland.dds"
 		environment = "environment_jerusalem"
@@ -1850,23 +1948,23 @@
 						desc = tradition_chanson_de_geste_name
 					}
 				}
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_central_germanic
-								has_cultural_pillar = heritage_frankish
-								has_cultural_pillar = heritage_iberian
-								has_cultural_pillar = heritage_west_germanic
-								has_cultural_pillar = heritage_west_slavic
-							}
-						}
-					}
-					add = {
-						value = 15
-						desc = game_rule_category_culture
-					}
-				}
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_central_germanic
+								# has_cultural_pillar = heritage_frankish
+								# has_cultural_pillar = heritage_iberian
+								# has_cultural_pillar = heritage_west_germanic
+								# has_cultural_pillar = heritage_west_slavic
+							# }
+						# }
+					# }
+					# add = {
+						# value = 15
+						# desc = game_rule_category_culture
+					# }
+				# }
 			}
 
 			cost = {
@@ -2056,30 +2154,30 @@
 						desc = tribal_government
 					}
 				}
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_akan
-								has_cultural_pillar = heritage_brythonic
-								has_cultural_pillar = heritage_central_african
-								has_cultural_pillar = heritage_east_african
-								has_cultural_pillar = heritage_goidelic
-								has_cultural_pillar = heritage_west_african
-								has_cultural_pillar = heritage_somalian
-								has_cultural_pillar = heritage_indo_aryan
-								has_cultural_pillar = heritage_magyar
-								has_cultural_pillar = heritage_mongolic
-								has_cultural_pillar = heritage_yoruba
-								has_cultural_pillar = heritage_sahelian
-							}
-						}
-					}
-					add = {
-						value = 15
-						desc = game_rule_category_culture
-					}
-				}
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_akan
+								# has_cultural_pillar = heritage_brythonic
+								# has_cultural_pillar = heritage_central_african
+								# has_cultural_pillar = heritage_east_african
+								# has_cultural_pillar = heritage_goidelic
+								# has_cultural_pillar = heritage_west_african
+								# has_cultural_pillar = heritage_somalian
+								# has_cultural_pillar = heritage_indo_aryan
+								# has_cultural_pillar = heritage_magyar
+								# has_cultural_pillar = heritage_mongolic
+								# has_cultural_pillar = heritage_yoruba
+								# has_cultural_pillar = heritage_sahelian
+							# }
+						# }
+					# }
+					# add = {
+						# value = 15
+						# desc = game_rule_category_culture
+					# }
+				# }
 			}
 
 			cost = {
@@ -2247,18 +2345,18 @@
 						desc = heritage_brythonic_name
 					}
 				}
+				# if = {
+					# limit = {
+						# culture = { has_cultural_pillar = heritage_goidelic }
+					# }
+					# add = {
+						# value = 25
+						# desc = heritage_goidelic_name
+					# }
+				# }
 				if = {
 					limit = {
-						culture = { has_cultural_pillar = heritage_goidelic }
-					}
-					add = {
-						value = 25
-						desc = heritage_goidelic_name
-					}
-				}
-				if = {
-					limit = {
-						culture = { has_cultural_pillar = heritage_north_germanic }
+						culture = { has_cultural_pillar = heritage_partholonian }
 					}
 					add = {
 						value = 25
@@ -2277,7 +2375,7 @@
 						culture = { 
 							OR = {
 								has_cultural_pillar = heritage_brythonic
-								has_cultural_pillar = heritage_goidelic
+								# has_cultural_pillar = heritage_goidelic
 								has_cultural_pillar = heritage_latin
 							}
 						}
@@ -2316,10 +2414,10 @@
 								scope:province ?= {
 									OR = {
 										has_building_or_higher = generic_university
-										has_building_or_higher = al_azhar_university
-										has_building_or_higher = sankore_university
-										has_building_or_higher = siena_university
-										has_building_or_higher = nalanda_university
+										# has_building_or_higher = al_azhar_university
+										# has_building_or_higher = sankore_university
+										# has_building_or_higher = siena_university
+										# has_building_or_higher = nalanda_university
 									}
 								}
 							}
@@ -2554,21 +2652,21 @@
 						desc = culture_era_late_medieval
 					}
 				}
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_frankish
-								has_cultural_pillar = heritage_west_germanic
-								has_cultural_pillar = heritage_central_germanic
-							}
-						}
-					}
-					add = {
-						value = 15
-						desc = game_rule_category_culture
-					}
-				}
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_frankish
+								# has_cultural_pillar = heritage_west_germanic
+								# has_cultural_pillar = heritage_central_germanic
+							# }
+						# }
+					# }
+					# add = {
+						# value = 15
+						# desc = game_rule_category_culture
+					# }
+				# }
 			}
 
 			cost = {
@@ -2712,51 +2810,51 @@
 						desc = tribal_government
 					}
 				}
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_akan
-								has_cultural_pillar = heritage_arabic
-								has_cultural_pillar = heritage_balto_finnic
-								has_cultural_pillar = heritage_berber
-								has_cultural_pillar = heritage_burman
-								has_cultural_pillar = heritage_central_african
-								has_cultural_pillar = heritage_dravidian
-								has_cultural_pillar = heritage_east_african
-								has_cultural_pillar = heritage_east_slavic
-								has_cultural_pillar = heritage_goidelic
-								has_cultural_pillar = heritage_west_african
-								has_cultural_pillar = heritage_indo_aryan
-								has_cultural_pillar = heritage_yoruba
-								has_cultural_pillar = heritage_north_germanic
-								has_cultural_pillar = heritage_sahelian
-								has_cultural_pillar = heritage_senegambian
-								has_cultural_pillar = heritage_ugro_permian
-								has_cultural_pillar = heritage_west_slavic
-							}
-						}
-					}
-					add = {
-						value = 15
-						desc = game_rule_category_culture
-					}
-				}
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_burman
-								has_cultural_pillar = heritage_iranian
-								has_cultural_pillar = heritage_mongolic
-							}
-						}
-					}
-					add = {
-						value = 30
-						desc = game_rule_category_culture
-					}
-				}
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_akan
+								# has_cultural_pillar = heritage_arabic
+								# has_cultural_pillar = heritage_balto_finnic
+								# has_cultural_pillar = heritage_berber
+								# has_cultural_pillar = heritage_burman
+								# has_cultural_pillar = heritage_central_african
+								# has_cultural_pillar = heritage_dravidian
+								# has_cultural_pillar = heritage_east_african
+								# has_cultural_pillar = heritage_east_slavic
+								# has_cultural_pillar = heritage_goidelic
+								# has_cultural_pillar = heritage_west_african
+								# has_cultural_pillar = heritage_indo_aryan
+								# has_cultural_pillar = heritage_yoruba
+								# has_cultural_pillar = heritage_north_germanic
+								# has_cultural_pillar = heritage_sahelian
+								# has_cultural_pillar = heritage_senegambian
+								# has_cultural_pillar = heritage_ugro_permian
+								# has_cultural_pillar = heritage_west_slavic
+							# }
+						# }
+					# }
+					# add = {
+						# value = 15
+						# desc = game_rule_category_culture
+					# }
+				# }
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_burman
+								# has_cultural_pillar = heritage_iranian
+								# has_cultural_pillar = heritage_mongolic
+							# }
+						# }
+					# }
+					# add = {
+						# value = 30
+						# desc = game_rule_category_culture
+					# }
+				# }
 			}
 
 			cost = {
@@ -3076,10 +3174,10 @@
 								scope:province ?= {
 									OR = {
 										has_building_or_higher = generic_university
-										has_building_or_higher = al_azhar_university
-										has_building_or_higher = sankore_university
-										has_building_or_higher = siena_university
-										has_building_or_higher = nalanda_university
+										# has_building_or_higher = al_azhar_university
+										# has_building_or_higher = sankore_university
+										# has_building_or_higher = siena_university
+										# has_building_or_higher = nalanda_university
 									}
 								}
 							}
@@ -3205,15 +3303,15 @@
 						desc = profligate
 					}
 				}
-				if = {
-					limit = {
-						culture = { has_cultural_pillar = heritage_arabic }
-					}
-					add = {
-						value = 50
-						desc = heritage_arabic_name
-					}
-				}
+				# if = {
+					# limit = {
+						# culture = { has_cultural_pillar = heritage_arabic }
+					# }
+					# add = {
+						# value = 50
+						# desc = heritage_arabic_name
+					# }
+				# }
 				if = {
 					limit = {
 						culture = { has_cultural_tradition = tradition_roman_legacy }
@@ -3257,21 +3355,21 @@
 						# desc = contest_ai_maysir
 					# }
 				# }
-				if = {
-					limit = { 
-						culture = { 
-							OR = {
-								has_cultural_pillar = heritage_magyar
-								has_cultural_pillar = heritage_mongolic
-								has_cultural_pillar = heritage_turkic
-							}
-						}
-					}
-					add = {
-						value = 15
-						desc = game_rule_category_culture
-					}
-				}
+				# if = {
+					# limit = { 
+						# culture = { 
+							# OR = {
+								# has_cultural_pillar = heritage_magyar
+								# has_cultural_pillar = heritage_mongolic
+								# has_cultural_pillar = heritage_turkic
+							# }
+						# }
+					# }
+					# add = {
+						# value = 15
+						# desc = game_rule_category_culture
+					# }
+				# }
 			}
 
 			cost = {

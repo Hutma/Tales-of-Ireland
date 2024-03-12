@@ -1,0 +1,21 @@
+﻿l_french:
+  
+ toi_place_event.0001.t: "Pont de corde de Carrick-a-Rede"
+ toi_place_event.0001.desc: "La petite île de Carraig a' Ráid, littéralement rocher de la fonte, est reliée au continent par un simple pont de singe. On pense qu'il a été construit par des pêcheurs qui avaient besoin d'accéder au point chaud de la pêche, le pont se trouve à 30 mètres, ou 98 pieds au-dessus du sol.\n\nLa hauteur périlleuse et le pont branlant sont un test certain de bravoure, ou de folie. Je ne savais pas lequel j'étais alors que je traversais lentement vers le bout du monde. Mes nerfs étaient apaisés par le ciel clair se reflétant sur l'eau saphir et le sable en contrebas brillait sous le soleil éclatant. Heureusement, mes compagnons et moi avons fait la traversée et le retour sans problème ; un rappel clair que même avec mon pouvoir de Ri, je suis toujours à la merci du temps et de la nature.\n\nMa cour sera sûrement intéressée d'entendre l'histoire..."
+ toi_place_event.0001.a: "Une belle aventure."
+ toi_place_event.0001.b: "J'ai essayé d'être courageux et j'ai mené la traversée."
+  
+ toi_place_event.0002.t: "Les falaises de Moher"
+ toi_place_event.0002.desc: "Les immenses mais magnifiques falaises de la côte de Clare ont inspiré de nombreux artistes et poètes depuis des générations. Ils parcourent 14 kilomètres et s'élèvent à 214 mètres au-dessus de la mer à leur point culminant. De nombreux sentiers pavés en font une promenade pas comme les autres.\n\nAprès une ascension difficile, la vue était comme un tableau prenant vie. Des vagues de blanc et de bleu tourbillonnant et s'entrechoquant ; une bataille éternelle contre un gris tout sauf terne, même les rochers avaient un dynamisme et des moyens de subsistance qui ne ressemblaient à aucune autre côte. Assis dans l'herbe émeraude, je pouvais voir les îles d'Aran se dresser d'une manière presque provocante, sortant de l'eau pour pointer vers le ciel. Derrière moi se trouvaient les grandes montagnes qui divisent notre monde. Jamais auparavant je n'avais vu un tel contraste et un tel conflit dans un endroit sans homme.\n\nMa Cour sera sûrement intéressée d'entendre l'histoire..."
+ toi_place_event.0002.a: "Une belle aventure."
+ toi_place_event.0002.b: "J'ai essayé d'être fort et j'ai transporté une grande partie de nos fournitures."
+  
+ toi_place_event.0003.t: "Trou de Dunloe"
+ toi_place_event.0003.desc: "Après la dernière période glaciaire, d'énormes glaciers ont traversé les terres du Kerry, creusant une profonde vallée entre MacGillycuddy's Reeks et les Purple Mountains. Le nom est dérivé de Dún Lóich, littéralement Fort de Lóich. Deala mac Lóich lui-même a dirigé les Fir Bolg dans leur reconquête de l'Irlande.\n\nEn parcourant la vallée, je suis passé devant les rivières tumultueuses, les ruisseaux paresseux entrelacés et les cinq lacs magnifiques, chacun avec ses propres formes et tailles. Entre Coosaun Lough et Black Lake se trouvait le célèbre Wishing Bridge, censé exaucer les vœux de tous ceux qui le visitent. L'eau brillait d'un blanc éclatant au milieu du soleil éclatant, tout en reflétant les murs verts qui nous entouraient.\n\nMa cour sera sûrement intéressée d'entendre l'histoire..."
+ toi_place_event.0003.a: "Je me sens reposé."
+ toi_place_event.0003.b: "Je souhaitais être plus pieux que ma famille."
+  
+ toi_place_event.0004.t: "Le Connemara"
+ toi_place_event.0004.desc: "Dans la moitié ouest du comté de Galway se trouve une région à la fois sauvage et magnifique. Elle est célèbre pour sa beauté naturelle et ses fortes traditions qui ont survécu au fil des générations.\n\nCette région est un microcosme du monde, capturant toutes les caractéristiques de notre île en un seul endroit. Lacs brillants et rivières tumultueuses, plages de corail et baies de sable, vastes plaines et tourbières marécageuses, collines et forêts profondes. La tranquillité de cet endroit m'a fait penser à mes propres terres, à la façon dont je pourrais mieux les gérer pour apporter harmonie et prospérité.\n\nMa Cour sera sûrement intéressée d'entendre l'histoire..."
+ toi_place_event.0004.a: "Je devrais faire ça plus souvent."
+ toi_place_event.0004.b: "J’ai eu envie d’essayer de nouvelles idées radicales."

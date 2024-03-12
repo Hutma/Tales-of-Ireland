@@ -1,0 +1,35 @@
+﻿l_french:
+  
+ toi_roman_invasion.0001.t: "Les Romains ont débarqué"
+ toi_roman_invasion.0001.desc: "Les commerçants et les voyageurs racontent des histoires sur un empire lointain.\n\nIls ont conquis le continent et ont maintenant tourné leurs yeux avides et lubriques vers nos îles. Leurs légions ont débarqué en Grande-Bretagne et des tribus entières sont écrasées sous leurs talons.\n\nLes Brythons ripostent vaillamment, mais ce n'est qu'une question de temps avant qu'ils ne soient subjugués."
+ toi_roman_invasion.0001.a: "Vont-ils également atterrir en Irlande ?"
+  
+ toi_roman_invasion.0002.t: "Pax Romana"
+ toi_roman_invasion.0002.desc: "Les commerçants et les voyageurs racontent l'histoire d'un empire puissant.\n\nAprès des années de combat, ces hommes appelés Romains ont pacifié les tribus et créé la province de Britannia. Ils prétendent qu’ils apportent la civilisation et l’ordre, tout en pillant les terres et en asservissant les habitants. Ils sont respectés et craints dans une égale mesure.\n\nDe grandes routes, forteresses et infrastructures ont été créées par leurs soldats ingénieurs connus sous le nom de Légionnaires, mais uniquement pour le profit des Romains. Ils sont rassasiés à présent, mais ce n'est qu'une question de temps avant qu'ils n'aient à nouveau faim.\n\nNi l'Est ni l'Ouest n'ont été capables de les satisfaire. Seuls parmi les hommes, ils convoitent avec un égal empressement la pauvreté et la richesse. Au vol, au massacre, au pillage, ils donnent le nom mensonger d'empire..."
+ toi_roman_invasion.0002.a: "Chaque royaume s'élève et s'effondre, même ceux aussi grands que Rome."
+  
+ toi_roman_invasion.0003.t: "Instabilité impériale"
+ toi_roman_invasion.0003.desc: "Les commerçants et les voyageurs racontent l’histoire d’un empire instable. \n\nN'ayant plus aucune terre à conquérir, ni aucun ennemi à vaincre, les Romains se retournent contre eux-mêmes. La noblesse romaine rivalise pour le pouvoir et l'influence, et les commandants des légions défient les ordres. \n\nLa situation en Britannia n'est pas différente, et sa grande distance par rapport à la capitale lui a donné plus d'autonomie. Même aujourd’hui, des rumeurs de complot et de soulèvements se font entendre alors que les gouverneurs régionaux luttent pour maintenir l’ordre."
+ toi_roman_invasion.0003.a: "Chaque royaume s'élève et s'effondre, même ceux aussi grands que Rome"
+  
+ toi_roman_invasion.0004.t: "Guerre civile"
+ toi_roman_invasion.0004.desc: "Les commerçants et les voyageurs racontent des histoires sur un empire brisé.\n\nL'empereur romain a été assassiné par ses propres gardes du corps, les gouverneurs ont déclaré leurs propres empires indépendants et des légions entières se sont transformées en bandes de guerre sauvages.\n\nCette nouvelle ne nous dérangerait normalement pas. , mais deux ambitieux commandants de légion ; désormais libérés des chaînes de leurs lois, ont rassemblé une armée. Deux légions romaines ont été repérées sur la côte britannique, se préparant à traverser la mer d'Irlande.\n\nCe sera sûrement la plus grande invasion que notre île ait jamais connue."
+ toi_roman_invasion.0004.a: "Deviendrons-nous la province d’Hibernia ?"
+  
+ toi_roman_invasion.0005.t: "Légionnaires en Irlande"
+ toi_roman_invasion.0005.desc: "Les commerçants et les voyageurs rapportent des récits de nouvelles invasions. \n\nLes deux légions rebelles ont débarqué en Irlande, leur équipement et leurs tactiques ne ressemblent à rien de ce que nous avons jamais vu. Il est désormais clair comment ils ont mis le monde entier au pas. Parallèlement à leur effusion de sang et à leur soif d'or, ils apportent de nouvelles cultures, rites et idées sur nos côtes.\n\nCe ne sont pourtant que des gens comme les autres. Nous vivons en Irlande depuis des millénaires et nous survivrons contre eux comme nous l’avons toujours fait !"
+ toi_roman_invasion.0005.a: "Ils peuvent prendre cette terre, mais ils ne la détiendront jamais !"
+  
+  
+ ROMAN_ARMY: "Armée d'invasion romaine"
+  
+ roman_army_event_troops: "Armée d'invasion romaine"
+  
+ toi_roman_invasion.0201.t: "Les Romains se rassemblent"
+ toi_roman_invasion.0201.desc: "Les Romains, conquérants des terres lointaines d’Angleterre, ne sont pas satisfaits. Une armée s'est rassemblée près des grandes plaines, se préparant à pénétrer dans de nouveaux territoires. Leurs ambitions, tout comme leurs armées, semblent sans limites."
+ toi_roman_invasion.0201.ascot: "Nous devons conserver les terres de nos ancêtres !"
+ toi_roman_invasion.0201.aire: "Puissent-ils ne jamais prendre cette belle île."
+  
+ toi_roman_invasion.0202.t: "Attaque de la Calédonie"
+ toi_roman_invasion.0202.desc: "Ça a commencé. L'Empire romain a déclaré les basses terres comme la province de Calédonie, et son armée mobilisée a commencé à marcher dans les basses terres. Le temps nous dira si les Lowlands peuvent s’unifier et repousser cette force, car seules des Lowlands unifiées peuvent tenir la ligne."
+ toi_roman_invasion.0202.a: "Avant! Pour écraser les ailes de l'aigle !"

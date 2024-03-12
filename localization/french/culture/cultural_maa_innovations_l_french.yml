@@ -1,63 +1,81 @@
-l_french:
- #Siege
- innovation_ram:0 "Bélier"
- innovation_ram:0 "Utiliser un bélier nous aidera à percer les murs des forts cicrulaires." 
-
-Using Ram will help us breaking through the walls of Ringforts."
- #Military
- innovation_maa_leinster:0 "Guerriers de Leinster"
- innovation_maa_leinster_desc:0 "Pendant des années nous avons combattus dans les plaines de Leinster, nous savons comment exploiter ce terrain plat."
- 
- innovation_maa_connacht:0 "Guerriers de Connacht"
- innovation_maa_connacht_desc:0 "Pendant des années nous avons combattus dans les marais de Connacht,  nous savons comment exploiter ce terrain marécageux"
- 
- innovation_maa_munster:0 "Guerriers de Munster"
- innovation_maa_munster_desc:0 "Pendant des années nous avons combattus dans les collines de  Munster, nous savons comment exploiter ce terrain accidenté."
- 
- innovation_maa_ulster:0 "Guerriers de Ulster"
- innovation_maa_ulster_desc:0 "Pendant des années nous avons combattus dans les forêts d'Ulster, nous savons comment exploiter ce terrain boisé."
- 
- innovation_chariot_leinster:0 "Chars de Leinster"
- innovation_chariot_leinster_desc:0 "Pendant des années nous avons combattus dans les plaines de Leinster, nous savons comment exploiter ce terrain plat."
- 
- innovation_chariot_connacht:0 "Chars de Connacht"
- innovation_chariot_connacht_desc:0 "Pendant des années nous avons combattus dans les marais de Connacht,  nous savons comment exploiter ce terrain marécageux"
- 
- innovation_chariot_munster:0 "Chars de Munster"
- innovation_chariot_munster_desc:0 "Pendant des années nous avons combattus dans les collines de  Munster, nous savons comment exploiter ce terrain accidenté."
- 
- innovation_chariot_ulster:0 "Chars de Ulster"
- innovation_chariot_ulster_desc:0 "Pendant des années nous avons combattus dans les forêts d'Ulster, nous savons comment exploiter ce terrain boisé."
- 
- innovation_men_at_arms:0 "Gendarmes"
- innovation_men_at_arms_desc:0 "Entraîner et équipper des armées permanentes à la disposition de nos souverains sera une étape cruciale pour centraliser notre pouvoir."
- 
- innovation_maa_fomorian:0 "Guerriers sanglants"
- innovation_maa_fomorian_desc:0 "Le Dieux Sombres nous donne de la force et ce pouvoir aiguise nos guerriers. Il est tant de faire la guerre. "
-
- innovation_maa_cessarian: "Gardiens des terres"
- innovation_maa_cessarian_desc:0 "Aucun envahisseur ne devrait pouvoir fouler nos terres impunément. Nous avons appris à mobiliser les positions défensives."
- 
- innovation_maa_partholonian:0 "Vagabonds"
- innovation_maa_partholonian_desc:0 "Nous sommes venus par la mer, et c'est par elle que nous partirons. Aucun ennemi ne peut égaler nos guerriers."
- 
- innovation_maa_nemedian:0 "Fermiers némédiens"
- innovation_maa_nemedian_desc:0 "Notre terre est sacrée et sera défendue avec tout notre coeur et courage, même si nous devons en mourir."
- 
- innovation_maa_fir_bolog:0 "Les braves"
- innovation_maa_fir_bolog_desc:0 "Tu n'auras crainte. Tu ne t'agenouilleras pas. Tu iras combattre et reviendra couvert de gloire."
- 
- innovation_maa_de_danann:0 "Anciens héros"
- innovation_maa_de_danann_desc:0 "Les Tuatha Dé Danann étaient jadis de grands combattants, et nous le sommes toujours. Notre prestige est intact, nous leur montrerons."
- 
- innovation_maa_milesian:0 "Guerriers de Tara"
- innovation_maa_milesian_desc:0 "Le siège du trône du Haut Roi, à Tara, sera toujours nôtre. Nous nous battrons à tout jamis pour celui-ci, nous sommes les maîtres de cette île."
- 
- innovation_maa_meghalithic:0 "Gardiens de Newgrange"
- innovation_maa_meghalithic_desc:0 "Gardiens de nos temples, de notre culture, de nos croyances, ces guerriers sont bénis par notre peuple."
- 
- innovation_maa_human:0 "Kerns"
- innovation_maa_human_desc:0 "Les kerns sont les guerriers les plus célèbres d'Irelande et ont dominé la guerre dans le pays depuis des siècles, ils seront un grand atout sur le champ de bataille."
- 
- innovation_maa_hybrazil:0 "Aventuriers Hy-Brasyliens "
- innovation_maa_hybrazil_desc:0 "Les Hy-Brasyliens vivent sur une petite île magique au nord de l'Irelande, cachée dans les nuages. Le manque d'espace contraint quelques Hy-Brasyliens à vivre leur maison, pour d'autres côtes. Ce sont les aventuriers hy-brasyliens."
+﻿l_french:
+  #Siege 
+ innovation_ram: "RAM"
+ innovation_ram_tribal: "RAM"
+ innovation_ram_desc: "Utiliser Ram nous aidera à percer les murs de Ringforts."
+ innovation_ram_tribal_desc: "Utiliser Ram nous aidera à percer les murs de Ringforts."
+  #Military 
+ innovation_maa_leinster: "Guerriers du Leinster"
+ innovation_maa_leinster_desc: "Depuis des décennies, nous combattons dans les plaines du Leinster, nous savons utiliser ce terrain plat à notre avantage."
+  
+ innovation_maa_connacht: "Guerriers du Connacht"
+ innovation_maa_connacht_desc: "Depuis des décennies nous combattons dans les tourbières du Connacht, nous savons utiliser ce terrain marécageux à notre avantage."
+  
+ innovation_maa_munster: "Guerriers du Munster"
+ innovation_maa_munster_desc: "Depuis des décennies nous combattons dans les collines de Munster, nous savons utiliser ce terrain irrégulier à notre avantage."
+  
+ innovation_maa_ulster: "Guerriers d'Ulster"
+ innovation_maa_ulster_desc: "Depuis des décennies, nous combattons dans les forêts d'Ulster, nous savons utiliser les bois à notre avantage."
+  
+ innovation_maa_manx: "Guerriers de Mannin"
+ innovation_maa_manx_desc: "Vivre sur cette petite île nous a appris à gérer nos ressources avec soin. Nous avons appris à maintenir une force de combat efficace plus efficacement que d'autres pays."
+  
+ innovation_maa_scotland: "Guerriers d'Alba"
+ innovation_maa_scotland_desc: "Nous avons de nombreux guerriers courageux, même nos agriculteurs savent se battre. Nous considérons qu'un groupe nombreux séduira toujours un groupe formé."
+  
+ innovation_chariot_leinster: "Chars de Leinster"
+ innovation_chariot_leinster_desc: "Depuis des décennies, nous combattons dans les plaines du Leinster, nous savons utiliser ce terrain plat à notre avantage."
+  
+ innovation_chariot_connacht: "Chars de Connacht"
+ innovation_chariot_connacht_desc: "Depuis des décennies nous combattons dans les tourbières du Connacht, nous savons utiliser ce terrain marécageux à notre avantage."
+  
+ innovation_chariot_munster: "Chars de Munster"
+ innovation_chariot_munster_desc: "Depuis des décennies nous combattons dans les collines de Munster, nous savons utiliser ce terrain irrégulier à notre avantage."
+  
+ innovation_chariot_ulster: "Chars d'Ulster"
+ innovation_chariot_ulster_desc: "Depuis des décennies, nous combattons dans les forêts d'Ulster, nous savons utiliser les bois à notre avantage."
+  
+ innovation_chariot_manx: "Chars de Mannin"
+ innovation_chariot_manx_desc: "Vivre sur cette petite île nous a appris à gérer nos ressources avec soin. Nous avons appris à maintenir une force de combat efficace plus efficacement que d'autres pays."
+  
+ innovation_chariot_scotland: "Chars d'Alba"
+ innovation_chariot_scotland_desc: "Nous avons de nombreux guerriers courageux, même nos agriculteurs savent se battre. Nous considérons qu'un groupe nombreux séduira toujours un groupe formé."
+  
+ innovation_men_at_arms: "Hommes d'armes"
+ innovation_men_at_arms_desc: "Former et équiper les armées permanentes qui restent sous la disposition directe de nos dirigeants sera un tremplin sur la voie de la centralisation de notre pouvoir."
+  
+ innovation_maa_fomorian: "Guerriers sanglants"
+ innovation_maa_fomorian_desc: "Les Dieux Sombres nous donnent leur force et ce pouvoir améliore nos guerriers. Il est temps de partir en guerre."
+  
+ innovation_maa_cessarian: "Gardiens du territoire"
+ innovation_maa_cessarian_desc: "Aucun envahisseur ne devrait pouvoir pénétrer sur nos terres en toute impunité. Nous avons appris à tirer profit des positions défensives."
+  
+ innovation_maa_partholonian: "Voyageurs"
+ innovation_maa_partholonian_desc: "De la mer nous sommes venus, et c'est par la mer que nous allons. Aucun ennemi ne peut rivaliser avec nos guerriers."
+  
+ innovation_maa_nemedian: "Fermier némédien"
+ innovation_maa_nemedian_desc: "Notre terre est sacrée et sera défendue avec tout notre cœur et tout notre courage, même si nous devons mourir pour elle."
+  
+ innovation_maa_fir_bolog: "Les courageux"
+ innovation_maa_fir_bolog_desc: "Tu ne ressentiras aucune peur. Tu ne t'inclineras devant personne. Tu courras au combat et reviendras dans la gloire."
+  
+ innovation_maa_de_danann: "Héros anciens"
+ innovation_maa_de_danann_desc: "Les Tuatha Dé Danann étaient autrefois de grands combattants, et nous le sommes toujours ! Notre gloire est encore intacte, nous leur montrerons."
+  
+ innovation_maa_milesian: "Guerriers de Tara"
+ innovation_maa_milesian_desc: "Le trône du Haut Roi, à Tara, sera toujours le nôtre. Nous nous battrons toujours pour cela, nous sommes les maîtres de cette île."
+  
+ innovation_maa_meghalithic: "Gardiens de Newgrange"
+ innovation_maa_meghalithic_desc: "Gardiens de nos temples, de notre culture, de nos croyances, ces guerriers sont bénis par les dieux."
+  
+ innovation_maa_human: "Kerns"
+ innovation_maa_human_desc: "Les Kerns sont les combattants les plus célèbres d'Irlande et ont dirigé cette guerre de territoire pendant des siècles, ils seront d'un grand atout sur le champ de bataille."
+  
+ innovation_maa_hybrazil: "Aventuriers hy-brasyliens"
+ innovation_maa_hybrazil_desc: "Les Hy-Brasylian vivent sur une petite île magique au nord de l'Irlande, cachée dans les nuages. Le manque d'espace oblige certains Hy-Brasyliens à quitter leur foyer à la recherche d'autres rivages. Ce sont les aventuriers hy-brasyliens."
+  
+ innovation_maa_roman: "La Légion"
+ innovation_maa_roman_desc: "La Légion romaine n'a rien à prouver, elle se contente d'écraser les ennemis avec facilité et efficacité."
+  
+ innovation_maa_fairy: "Essaim de fées"
+ innovation_maa_fairy_desc: "Rassembler toutes les fées possibles en un puissant essaim pour vaincre l'ennemi."

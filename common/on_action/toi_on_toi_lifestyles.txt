@@ -325,9 +325,8 @@ on_toi_magic_lifestyle_yearly = {
 		if = {
 			limit = { 
 				OR = {
-					has_trait = mystic_1
-					has_trait = mystic_2
-					has_trait = mystic_3
+					has_trait = magician_good_2
+					has_trait = magician_good_3
 				}
 			}
 			add_tales_of_magic_lifestyle_xp = 10

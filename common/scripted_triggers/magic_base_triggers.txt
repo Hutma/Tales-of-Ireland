@@ -21,7 +21,10 @@ summon_sidhe_advisor_requirements = {
 summon_sidhe_feast_requirements = {
 	custom_description = {
 		text = be_in_feast_trigger
-		in_activity_type = activity_feast
+		exists = scope:activity
+		scope:activity = {
+			has_activity_type = activity_feast
+		}
 	}
 	piety_level >= 2
 }
@@ -35,8 +38,10 @@ summon_magical_army_requirements = {
 					has_character_flag = has_called_magical_armies_recently
 				}
 				any_character_war = {
-					is_war_leader = yes
-					is_at_war_as_defender = yes 
+					root = {
+						# is_war_leader = yes
+						is_at_war_as_defender = yes 
+					}
 				}
 			}
 		}

@@ -1,5 +1,12 @@
 ﻿
 ##################################################
+# Debug Triggers
+
+# Do we want to gather global variable tallies for the Persian struggle?
+## Toggled off for release, toggle back on to check how often we change phases & which catalysts are firing.
+gather_debug_variables_for_persian_struggle_trigger = { always = no }
+
+##################################################
 # General Triggers
 ## Miscellaneous assorted triggers related to bits of neutral struggle content.
 
@@ -75,12 +82,29 @@ is_diff_faith_or_culture_trigger = {
 		culture = $CHAR$.culture
 		faith = $CHAR$.faith
 	}
-	$CHAR$ = {
-		any_character_struggle = {
-			involvement = $STATUS$
-			is_struggle_type = $STRUGGLE_TYPE$
-		}
+	$CHAR$ = { any_character_struggle = { involvement = $STATUS$ } }
+	# Removed the check for what struggle it is
+}
+
+is_same_faith_or_culture_trigger = {
+	OR = {
+		culture = $CHAR$.culture
+		faith = $CHAR$.faith
 	}
+	$CHAR$ = { any_character_struggle = { involvement = $STATUS$ } }
+	# Removed the check for what struggle it is
+}
+
+is_same_culture_trigger = {
+	culture = $CHAR$.culture
+	$CHAR$ = { any_character_struggle = { involvement = $STATUS$ } }
+	# Removed the check for what struggle it is
+}
+
+is_same_faith_trigger = {
+	culture = $CHAR$.culture
+	$CHAR$ = { any_character_struggle = { involvement = $STATUS$ } }
+	# Removed the check for what struggle it is
 }
 
 ##################################################
@@ -199,6 +223,42 @@ activate_struggle_catalyst_secondary_character_involvement_neither_trigger = {
 	$CHAR$ = {
 		NOT = {
 			any_character_struggle = { this = scope:struggle_temp }
+		}
+	}
+}
+
+activate_struggle_catalyst_secondary_character_involvement_interloper_or_uninvolved_trigger = {
+	phase_has_catalyst = $CATALYST$
+	save_temporary_scope_as = struggle_temp
+	$CHAR$ = {
+		OR = {
+			any_character_struggle = {
+				involvement = interloper
+				this = scope:struggle_temp
+			}
+			NOT = {
+				any_character_struggle = { this = scope:struggle_temp }
+			}
+		}
+	}
+}
+
+activate_struggle_catalyst_warfare_check_attacker_involvement_trigger = {
+	phase_has_catalyst = $CATALYST$
+	save_temporary_scope_as = struggle_temp
+	$VAR_SCOPE$ = {
+		trigger_if = {
+			limit = { scope:attacker = scope:loser }
+			has_variable = struggle_involvement_attacker
+			has_variable = struggle_scope_attacker
+			var:struggle_involvement_attacker = flag:$INVOLVEMENT$
+			var:struggle_scope_attacker = scope:struggle_temp
+		}
+		trigger_else = {
+			has_variable = struggle_involvement_defender
+			has_variable = struggle_scope_defender
+			var:struggle_involvement_defender = flag:$INVOLVEMENT$
+			var:struggle_scope_defender = scope:struggle_temp
 		}
 	}
 }
@@ -427,20 +487,20 @@ struggle_blocks_invasion_conquest_cb_trigger = {
 			scope:attacker = {
 				any_character_struggle = {
 					involvement = involved
-					NOT = { has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared }
+					has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared
 				}
 			}
 			exists = scope:defender
 		}
 		scope:defender = {
-			OR = {
+			NOR = {
 				any_character_struggle = {
 					involvement = involved
-					NOT = { has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared }
+					has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared
 				}
 				any_character_struggle = {
 					involvement = interloper
-					NOT = { has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared }
+					has_struggle_phase_parameter = invasion_conquest_war_cannot_be_declared
 				}
 			}
 		}

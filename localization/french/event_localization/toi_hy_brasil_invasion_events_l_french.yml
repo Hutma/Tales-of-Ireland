@@ -1,16 +1,17 @@
 ﻿l_french:
- 
- toi_hybrazil.0001.t:0 "Hy-Brasil"
- toi_hybrazil.0001.desc:0 "Dans les nuages distants au dessus des mers, quelques marins disent avoir aperçus une ombre mystérieuse. Ils ont essayer de l'approcher et ont découvert...une île dans les nuages. Cette île avait comme un air mystique...magique. Une étrange lumière en émanait. Certains des marins ont décidés d'aller voir de plus prêt mettant pied à terre sur l'île mystérieuse...ils ne sont jamais revenus. \n\nQuelques jours plus tard, une nouvelle expédition est lancée amis lorsqu'elle atteint sa destination, l'île avait disparu. Tout le monde des simples fermiers et marins, aux soldats et même les souverains ragotent sur ce mystérieux endroit maintenant dénommé Hy-Brasyl.
- toi_hybrazil.0001.a:0 "Étrange histoire"
- 
- toi_hybrazil.0002.t:0 "Visiteurs de Hy-Brasil"
- toi_hybrazil.0002.desc:0 "La légende de Hy-Brasyl semble véridique. Un bateau transportant d'étranges personnes prétendant venir de cette île a atteint les côtes de l'Irlande. Il est dit qu'ils ont parcouru l'île pour la visiter. \n\nTous sauf un ont quitté l'Irlande. Le seul Hy-Brasylien restant a offert de grands cadeaux au Rí qui l'a acceuilli dans son hall. \n\nLes rumeurs s'enflamment de plus belle grâce à ce rebondissement inattendu, chaque personne en Irlande spéculant sans relâche sur l'étrange Hy-Brasyl et ses habitants.
- toi_hybrazil.0002.a:0 "Que veulent-ils?"
- 
- toi_hybrazil.0003.t:0 "Invasion de Hy-Brasil"
- toi_hybrazil.0003.desc:0 "Beaucoup parmi les peuples d'Europe se sont demandés qu'est-ce que les visiteurs hy-brasyliens cherchaient sur nos côtes. Tout le monde saît maintenant. C'étaient des éclaireurs...en repérage d'un point de débarquement pour leur intrusion \n\nCes bâtards étrangers envahissent l'île! \n\n Tentant de saisir notre terre, ils ont débarqué près de Aran. Ils ont amassé de vastes armées et leurs nombres semblent inépuisables...Ils pourraient réussir à s'établir en Irlande."
- toi_hybrazil.0003.a:0 "Ils n'auront pas nos terres."
- 
- HY_BRASYLIAN_ARMY:0 "Envahisseurs Hy-Brasyliens "
- hy_brasil_adventurers_event_troops:0 "Aventuriers Hy-Brasyliens"
+  
+ toi_hybrazil.0001.t: "Hy-Brésil"
+ toi_hybrazil.0001.desc: "Dans les nuages ​​lointains au-dessus des mers, des marins ont repéré une ombre mystérieuse, ils ont tenté de s'en approcher et ont découvert... une île dans les nuages. Cette île semblait mystique... magique. Une étrange lumière en émanait. Certains marins décidèrent d'aller voir et débarquèrent sur la curieuse île... Ils ne revinrent jamais. \n\nQuelques jours plus tard, une autre expédition fut lancée pour explorer cette île mais lorsqu'elle atteignit sa destination cartographiée, l'île avait disparu. Tout le monde, des marins aux agriculteurs, en passant par les soldats et même les dirigeants, bavarde désormais sur ce lieu mystérieux désormais surnommé Hy-Brasil."
+ toi_hybrazil.0001.a: "Étrange histoire."
+  
+ toi_hybrazil.0002.t: "Visiteurs de Hy-Brasil"
+ toi_hybrazil.0002.desc: "La légende d’Hy-Brasil semble contenir une part de vérité. Un bateau transportant d'étranges personnes prétendant être originaires de cette île a atteint les côtes irlandaises. On raconte qu'ils se promenaient autour de l'île et la visitaient. \n\nTous sauf un ont quitté l’Irlande. L'unique Hy-Brasylien offrit de superbes cadeaux au Rí qui l'accueillit dans sa salle. \n\nLes rumeurs ont été attisées par ce développement nouveau et inattendu, chacun en Irlande spéculant sans relâche sur l'étrange Hy-Brasil et ses étranges habitants."
+ toi_hybrazil.0002.a: "Que veulent-ils?"
+ toi_hybrazil.0002.b: "Est-ce que ce magnifique cadeau est pour moi ?"
+  
+ toi_hybrazil.0003.t: "Invasion depuis Hy-Brasil"
+ toi_hybrazil.0003.desc: "Beaucoup d'Irlandais se demandaient ce que les visiteurs d'Hy-Brasil recherchaient sur nos côtes. Maintenant tout le monde le sait. C'étaient des éclaireurs... cherchant une tête de pont appropriée pour leur incursion. \n\nCes salopards étrangers envahissent l’île ! \n\nDans le but de s'emparer de nos terres, ils ont débarqué près d'Aran. Ils ont rassemblé de grandes armées et leur nombre ne montre aucune limite en vue... ils pourraient peut-être s'installer en Irlande."
+ toi_hybrazil.0003.a: "Ils n’obtiendront pas nos terres."
+  
+ HY_BRASYLIAN_ARMY: "Envahisseurs hy-brasyliens"
+ hy_brasil_adventurers_event_troops: "Aventuriers hy-brasyliens"

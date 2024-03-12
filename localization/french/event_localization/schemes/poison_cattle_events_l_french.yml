@@ -1,0 +1,12 @@
+﻿l_french:
+ poison_cattle_outcome.0001.t: "Bovins empoisonnés"
+ poison_cattle_outcome.0001.desc: "L'empoisonnement a été une réussite ! Le bétail tombe comme des mouches et sa viande est désormais inutilisable. [scope:target.GetShortUIName|U] ne peut que regarder, impuissant, sa richesse pourrir devant lui !\n\nMon agent est revenu pour annoncer la nouvelle. Si mon rival se rétablit, je saurai qui embaucher à nouveau..."
+ poison_cattle_outcome.0001.a: "Ne t'approche pas de mon bétail"
+  
+ poison_cattle_outcome.1001.t: "L'empoisonnement a échoué"
+ poison_cattle_outcome.1001.desc: "L'empoisonnement a été un échec ! Quoi qu'ils aient donné, le bétail n'a rien fait, et la richesse de [scope:target.GetShortUIName|U] continue de croître !\n\nMon agent est revenu, s'excusant abondamment et promettant de faire mieux, mais l'opportunité est maintenant passée..."
+ poison_cattle_outcome.1001.a: "C'était du gaspillage"
+  
+ poison_cattle_outcome.0002.t: "Morts subites de bétail"
+ poison_cattle_outcome.0002.desc: "Ce qui se passe? Hier mes champs étaient abondants, maintenant la moitié de mon bétail est mort ! Mes druides croient que nous avons été maudits, mais je soupçonne qu'il ne s'agit pas d'une intervention divine..."
+ poison_cattle_outcome.0002.a: "Comment allons-nous récupérer ?"

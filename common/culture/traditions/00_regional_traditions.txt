@@ -32,10 +32,10 @@ tradition_byzantine_succession = {
 		eunuch_trait_bonuses = yes
 		can_appoint_chief_eunuch = yes
 		physical_disfigurement_blocks_inheritance = yes #Actually only blocks claimants and reduce score in elective. Also includes infertility for tooltip reasons.
-		children_can_be_born_in_the_purple = yes
+		# children_can_be_born_in_the_purple = yes
 		disloyal_trait_more_common = yes
-		byzantine_faction_differences = yes
-		byzantine_faction_preffered_claimants = yes
+		# byzantine_faction_differences = yes
+		# byzantine_faction_preffered_claimants = yes
 	}
 	character_modifier = {
 		eligible_child_opinion = 20
@@ -145,11 +145,11 @@ tradition_lords_of_the_elephant = {
 				# 		}
 				# 	}
 				# }
-				add = {
-					value = tradition_unfulfilled_criteria_penalty
-					desc = elephant_pens_percentage_desc
-				}
-			}
+				#add = {
+				#	value = tradition_unfulfilled_criteria_penalty
+				#	desc = elephant_pens_percentage_desc
+				#}
+			#}
 
 			multiply = tradition_replacement_cost_if_relevant
 		}
@@ -333,7 +333,10 @@ tradition_the_witenagemot = {
 		value = 100
 		if = {
 			limit = {
-				culture_tradition:tradition_things = { is_in_list = traits }
+				OR = {
+					culture_tradition:tradition_things = { is_in_list = traits }
+					culture_tradition:tradition_fp3_jirga = { is_in_list = traits }
+				}
 			}
 			multiply = 0
 		}
@@ -404,7 +407,10 @@ tradition_things = {
 		value = 100
 		if = {
 			limit = {
-				culture_tradition:tradition_the_witenagemot = { is_in_list = traits }
+				OR = {
+					culture_tradition:tradition_the_witenagemot = { is_in_list = traits }
+					culture_tradition:tradition_fp3_jirga = { is_in_list = traits }
+				}
 			}
 			multiply = 0
 		}

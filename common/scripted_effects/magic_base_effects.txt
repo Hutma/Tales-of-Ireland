@@ -464,8 +464,11 @@ learn_a_spell_magician_effect = {
 			remove_from_list = potential_new_spell_list
 		}
 	}
-	add_to_variable_list = {
-		name = list_of_spells_known
-		target = scope:potential_new_spell
+	if = {
+		limit = { exists = scope:potential_new_spell }
+		add_to_variable_list = {
+			name = list_of_spells_known
+			target = scope:potential_new_spell
+		}
 	}
 }

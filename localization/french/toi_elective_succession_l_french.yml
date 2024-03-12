@@ -1,6 +1,6 @@
 ﻿l_french:
-#Feudal Elective AI behavior
-
- tooltip_feudal_elector_vote_same_race:0 "[candidate.GetSheHe|U] est de mon peuple : $VALUE|=+0$"
- tooltip_feudal_elector_vote_humiliated:0 "[candidate.GetSheHe|U] a été humilié: $VALUE|=+0$"
- tooltip_feudal_elector_vote_strenghten_candidature:0 "[candidate.GetSheHe|U] a renforcé sa candidature : $VALUE|=+0$"
+ #Feudal Elective AI behavior 
+  
+ tooltip_feudal_elector_vote_same_race: "[candidate.GetSheHe|U] appartient à mon peuple : $VALUE|=+0$"
+ tooltip_feudal_elector_vote_humiliated: "[candidate.GetSheHe|U] a été humilié : $VALUE|=+0$"
+ tooltip_feudal_elector_vote_strenghten_candidature: "[candidate.GetSheHe|U] a renforcé sa candidature : $VALUE|=+0$"

@@ -29,7 +29,7 @@ toi_generic_event.0001 = { # Fianna in my land
 					add_to_list = counties_targeted
 				}
 				random_in_list = {
-					name = counties_targeted
+					list = counties_targeted
 					change_development_level = -5
 				}
 			}
@@ -39,7 +39,7 @@ toi_generic_event.0001 = { # Fianna in my land
 			limit = {
 				tier = tier_county
 			}
-			add_county_modifier = { 
+			add_county_modifier = {
 				modifier = roamed_by_fianna_modifier 
 				years = 5
 			}

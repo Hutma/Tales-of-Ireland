@@ -18,6 +18,9 @@ k_high_kingship = {
 	definite_form = yes
 	ruler_uses_title_name = no
 	can_be_named_after_dynasty = no
+	can_destroy = {
+		always = no
+	}
 	
 	capital = c_tara
 	

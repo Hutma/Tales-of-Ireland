@@ -96,11 +96,13 @@ toi_mann.0003 = {
 	immediate = {
 		root = { save_scope_as = relation_prime }
 		every_county_in_region = {
-		region = region_mann
-		limit = {
-			NOT = { this.holder = root }
-		}
-		add_to_list = possible_freind_or_enemy
+			region = region_mann
+			limit = {
+				NOT = { this.holder = root }
+			}
+			this.holder = {
+				add_to_list = possible_freind_or_enemy
+			}
 		}
 		random_in_list = {
 			list = possible_freind_or_enemy
@@ -756,7 +758,7 @@ toi_mann.0451 = {
 			dynasty = none
 			faith = faith:fathers_of_manx
 			culture = culture:bann_culture
-			location = title:b_balley_keeill_eoin
+			location = title:b_balley_keeill_eoin.title_province
 			save_scope_as = glashtin
 		}
 		scope:woman_given = {
@@ -816,7 +818,7 @@ toi_mann.0452 = {
 			dynasty = none
 			faith = faith:fathers_of_manx
 			culture = culture:bann_culture
-			location = title:b_balley_keeill_eoin
+			location = title:b_balley_keeill_eoin.title_province
 			save_scope_as = glashtin
 		}
 		scope:woman_given = {

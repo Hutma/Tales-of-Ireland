@@ -14,6 +14,9 @@
  tenet_deep_vengeance_flame_name:0 "Deep Vengeance Flame"
  tenet_deep_vengeance_flame_desc:0 "We have been put to slavery before, and we will never bow again, we will fight for our freedom and for our beliefs."
  
+ tenet_maige_tuired_avenged_faith_name:0 "Maige Tuired Avenged"
+ tenet_maige_tuired_avenged_faith_desc:0 "We have been put to slavery before, and we will never bow again, we have fought for our freedom and for our beliefs and are now stronger than ever."
+ 
  tenet_masters_of_ireland_name:0 "Masters Of Ireland"
  tenet_masters_of_ireland_desc:0 "We have ruled over Ireland for centuries now and even if our power has been weaken, it is our sacred mission to lead the population of this island to glory."
  
@@ -54,7 +57,6 @@
  
  doctrine_parameter_cattle_raiding_cb_disable:0 "Can not use [cattle_raiding_cb|E]"
  doctrine_parameter_purification_cb_enabled:0 "Can use the Purification casus belli"
- doctrine_parameter_to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"
  doctrine_parameter_to_new_land_cb_enable:0 "Can use the Go to New Land casus belli"
  doctrine_parameter_hail_high_king_decision_active:0 "Can use the Hail High King decision"
  doctrine_parameter_high_king_influence_decision_active:0 "Can use the High King Protection decision"

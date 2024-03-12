@@ -3,6 +3,8 @@
 @holding_illustration_mediterranean = "gfx/interface/illustrations/holding_types/city_mediterranean.dds"
 @holding_illustration_mena = "gfx/interface/illustrations/holding_types/city_mena.dds"
 @holding_illustration_norse = "gfx/interface/illustrations/holding_types/fp1_city_norse.dds"
+@holding_illustration_iberian = "gfx/interface/illustrations/holding_types/fp2_city_iberian.dds"
+@holding_illustration_iranian = "gfx/interface/illustrations/holding_types/fp3_city_iranian.dds"
 
 city_01 = {
 	construction_time = slow_construction_time
@@ -77,7 +79,7 @@ city_01 = {
 
 	county_culture_modifier = {
 		parameter = city_buildings_less_control
-		monthly_county_control_change_factor = -0.25
+		monthly_county_control_growth_factor = -0.25
 	}
 	
 	province_terrain_modifier = {
@@ -225,7 +227,7 @@ city_02 = {
 	
 	county_culture_modifier = {
 		parameter = city_buildings_less_control
-		monthly_county_control_change_factor = -0.25
+		monthly_county_control_growth_factor = -0.25
 	}
 	
 	province_terrain_modifier = {
@@ -360,7 +362,7 @@ city_03 = {
 	
 	county_culture_modifier = {
 		parameter = city_buildings_less_control
-		monthly_county_control_change_factor = -0.25
+		monthly_county_control_growth_factor = -0.25
 	}
 	
 	province_terrain_modifier = {
@@ -493,7 +495,7 @@ city_04 = {
 	
 	county_culture_modifier = {
 		parameter = city_buildings_less_control
-		monthly_county_control_change_factor = -0.25
+		monthly_county_control_growth_factor = -0.25
 	}
 	
 	province_terrain_modifier = {
@@ -558,7 +560,6 @@ city_04 = {
 # City Buildings
 #
 ####
-
 
 ### Guild Halls
 

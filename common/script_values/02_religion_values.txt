@@ -420,6 +420,7 @@ ghw_target_stretch = 10
 #Always buff any kingdom containing an uncontrolled holy site:
 ghw_target_has_holy_site = 6
 #Targets that should always be priorities if not controlled:
+ghw_target_jerusalem = 200
 ghw_target_key_religious_holding = 100
 ghw_target_religious_vengeance = 150
 #Distance modifiers stack:
@@ -1452,7 +1453,25 @@ faith_conversion_cost_mult = {
 		}
 	}
 	# Cheaper if you're an interloper in a struggle converting to an involved faith.
-	
+	# if = {
+	# 	limit = {
+	# 		scope:character = {
+	# 			any_character_struggle = {
+	# 				involvement = interloper
+	# 				has_struggle_phase_parameter = cheaper_to_convert_to_struggle_faith
+	# 				is_faith_involved_in_struggle = scope:new_faith
+	# 			}
+	# 		}
+	# 	}
+	# 	multiply = {
+	# 		value = 1 
+	# 		subtract = {
+	# 			desc = struggle_parameter_cheaper_to_convert_to_struggle_faith
+	# 			format = "BREAKDOWN_FORMAT_PIETY_PERCENTAGE_POSITIVE_IS_BAD"
+	# 			value = 0.5
+	# 		}
+	# 	}
+	# }
 
 	########################################
 	# Conversion Discounts from Traditions #
@@ -1532,6 +1551,7 @@ ask_to_take_vows_piety_cost = {
 		add = medium_piety_value
 		if = {
 			limit = {
+				exists = liege
 				OR = {
 					is_child_of = liege
 					liege.primary_title = {
