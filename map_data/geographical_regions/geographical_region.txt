@@ -493,6 +493,8 @@ custom_roman_caledonia = {}
 custom_roman_hibernia = {}
 custom_roman_full_borders = {}
 custom_outremer = {}
+custom_theodosian_ere = {}
+custom_eastern_balkans = {}
 custom_sicily = {}
 custom_hungary = {}
 custom_carpathia = {}
@@ -522,6 +524,7 @@ custom_core_switzerland = {}
 custom_core_austria = {}
 custom_fennoscandia = {}
 custom_iceland = {}
+custom_gotland = {}
 custom_stretch_austria = {}
 graphical_western = {}
 graphical_mena = {}
@@ -776,3 +779,68 @@ board_game_fidchell_region = {
 dlc_fp3_seljuk_birth_region = { }
 dlc_fp3_greater_persian_frontier_regions = { }
 dlc_fp3_eastern_persian_frontier_regions = { }
+
+# Used for historical black death origin
+world_central_asia = {
+
+}
+
+# Consumption zone
+world_atlantic = {
+	regions = {
+		#Britland and Ireland
+		tales_of_ireland_global_region
+	}
+}
+
+# Ancient Troy
+troy_region = {
+
+}
+
+# Israel
+israel_region = {
+
+}
+
+# Mediteranean Coastal Provinces
+mediteranean_coast = {
+
+}
+
+greek_backwater_modifier_region = {
+
+}
+
+custom_ep3_restore_rome_eastern_empire = {
+
+}
+
+black_sea_coast_region = {
+
+}
+
+#Seasonal regions
+seasonal_region_deccan = {
+
+}
+
+seasonal_region_rajasthan = {
+
+}
+
+seasonal_region_bengal = {
+
+}
+
+seasonal_region_burma = {
+
+}
+
+seasonal_region_east_africa = {
+
+}
+
+seasonal_region_west_africa = {
+
+}

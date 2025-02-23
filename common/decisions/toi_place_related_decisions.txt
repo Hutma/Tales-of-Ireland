@@ -1,5 +1,7 @@
 ﻿coax_giant_causeway_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_causeway.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_causeway.dds"
+	}
 
 	ai_check_interval = 120
 	cooldown = { years = 30 }
@@ -52,9 +54,11 @@
 }
 
 many_crowns_for_galway_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	
 	ai_check_interval = 120
 	cooldown = { years = 20 }
@@ -170,9 +174,11 @@ many_crowns_for_galway_decision = {
 }
 
 found_meath_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	
 	ai_check_interval = 480
 	
@@ -257,8 +263,11 @@ found_meath_decision = {
 }
 
 found_umhaill_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = found_umhaill_decision_desc
@@ -335,7 +344,9 @@ found_umhaill_decision = {
 }
 
 investigate_on_wolfwalkers_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	}
 
 	desc = investigate_on_wolfwalkers_decision_desc
 	
@@ -403,8 +414,11 @@ investigate_on_wolfwalkers_decision = {
 }
 
 found_ossory_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = found_ossory_decision_desc
@@ -503,8 +517,11 @@ found_ossory_decision = {
 }
 
 found_breifne_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = found_breifne_decision_desc
@@ -590,8 +607,11 @@ found_breifne_decision = {
 }
 
 found_iarmuman_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = found_iarmuman_decision_desc
@@ -696,8 +716,11 @@ found_iarmuman_decision = {
 }
 
 found_airgialla_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = found_airgialla_decision_desc

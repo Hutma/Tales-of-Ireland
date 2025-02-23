@@ -1604,7 +1604,7 @@ crossbowmen_attribute = {
 besieger_attribute = {
 	adjective = accolade_besieging
 	noun = accolade_besieger
-	accolade_categories = { men_at_arms army_bonus militant aggressive subtle leader ranged_fighter }
+	accolade_categories = { men_at_arms army_bonus militant aggressive subtle leader ranged_fighter siege }
 
 	potential = {
 		prowess >= accolade_prowess_requirement_value

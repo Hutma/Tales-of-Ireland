@@ -2698,3 +2698,41 @@ WritingInstrument = {
 		fallback = yes
 	}
 }
+
+GetKnightErrantAnimal = {
+	type = character
+	
+	text = {
+		trigger = {
+			location = {
+				geographical_region = world_europe
+			}
+		}
+		localization_key = GetKnightErrantAnimal_swan
+	}
+	text = {
+		trigger = {
+			location = {
+				OR = {
+					geographical_region = world_india
+					geographical_region = world_burma
+					geographical_region = ghw_region_caucasus
+				}
+			}
+		}
+		localization_key = GetKnightErrantAnimal_tiger
+	}
+	text = {
+		trigger = {
+			location = {
+				geographical_region = world_africa
+			}
+		}
+		localization_key = GetKnightErrantAnimal_lion
+	}
+	text = { # Basically everywhere
+		localization_key = GetKnightErrantAnimal_hart
+		fallback = yes
+	}
+}
+

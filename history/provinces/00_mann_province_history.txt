@@ -148,6 +148,10 @@
     culture = bann_culture
     religion = manx_builders
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_copper_mines_01
+		special_building = generic_copper_mines_01
+	}
 }
 
 4442 = {      #Orrisdale (b_orrisdale)

@@ -8,6 +8,7 @@ travel_events_fp3.0010 = {
 	title = travel_events_fp3.0010.t
 	desc = travel_events_fp3.0010.desc.intro
 	theme = travel
+
 	left_portrait = {
 		character = root
 		animation = lantern
@@ -19,6 +20,8 @@ travel_events_fp3.0010 = {
 	override_background = {
 		reference = fp1_runestone_circle
 	}
+	override_effect_2d = rain
+
 	cooldown = {
 		years = 10
 	}
@@ -31,6 +34,7 @@ travel_events_fp3.0010 = {
 		always = no
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		create_character = {
 			template = fp3_zoroastrian_armed_pilgrim
 			location = root.location
@@ -441,6 +445,10 @@ travel_events_fp3.0011 = {
 		animation = celebrate_mace
 	}
 
+	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_high }
+	}
+
 	### Convert Openly due to the Miracle
 	option = {
 		name = travel_events_fp3.0011.a
@@ -553,6 +561,7 @@ travel_events_fp3.0012 = {
 	}
 
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		save_scope_as = owner #For the court artifact
 	}
 
@@ -781,12 +790,16 @@ travel_events_fp3.0020 = {
 		reference = fp3_cave
 	}
 	cooldown = {
-		years = 30 #It is unlikely you would be surprised by a cave like this twice.
+		years = 50 #It is unlikely you would be surprised by a cave like this twice.
 	}
 	trigger = {
+		static_group_filter = {
+			group = travel_events_fp3.0020
+			match = 0.5
+		}
 		has_dlc_feature = legacy_of_persia
 		is_available_travelling_adult = yes
-		is_landed = yes
+		is_playable_character = yes
 
 		exists = root.current_travel_plan.travel_leader
 
@@ -920,6 +933,10 @@ travel_events_fp3.0021 = {
 	}
 	override_background = {
 		reference = fp3_cave
+	}
+
+	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_medium }
 	}
 
 	### Dive for treasure
@@ -1180,11 +1197,12 @@ travel_events_fp3.0030 = {
 			geographical_region = world_persian_empire
 		}
 		root.location.faith = {
-			has_doctrine = tenet_sky_burials
+			has_doctrine_parameter = sky_burials_active
 		}
 	}
 
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		root.location.faith = {
 			save_scope_as = local_faith
 		}
@@ -1202,7 +1220,7 @@ travel_events_fp3.0030 = {
 		trigger = {
 			faith = {
 				NOT = {
-					has_doctrine = tenet_sky_burials
+					has_doctrine_parameter = sky_burials_active
 				}
 			}
 		}
@@ -1210,7 +1228,7 @@ travel_events_fp3.0030 = {
 		every_vassal = {
 			limit = {
 				faith = {
-					has_doctrine = tenet_sky_burials
+					has_doctrine_parameter = sky_burials_active
 				}
 			}
 			custom = every_faith_vassal
@@ -1248,7 +1266,7 @@ travel_events_fp3.0030 = {
 		name = travel_events_fp3.0030.b
 		trigger = {
 			root.faith = {
-				has_doctrine = tenet_sky_burials
+				has_doctrine_parameter = sky_burials_active
 			}
 		}
 		add_piety = medium_piety_gain
@@ -1282,7 +1300,7 @@ travel_events_fp3.0030 = {
 			}
 			faith = {
 				NOT = {
-					has_doctrine = tenet_sky_burials
+					has_doctrine_parameter = sky_burials_active
 				}
 			}
 		}
@@ -1380,6 +1398,7 @@ travel_events_fp3.0031 = {
 		animation = pain
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		if = {
 			limit = {
 				is_travelling = yes
@@ -1598,7 +1617,6 @@ travel_events_fp3.0031 = {
 			compassionate = medium_stress_impact_loss
 			content = minor_stress_impact_loss
 			impatient = minor_stress_impact_loss
-			content = minor_stress_impact_loss
 		}
 		ai_chance = {
 			base = 100
@@ -1670,7 +1688,7 @@ travel_events_fp3.0040 = {
 	trigger = {
 		has_dlc_feature = legacy_of_persia
 		is_available_travelling_adult = yes
-		is_landed = yes
+		is_playable_character = yes
 		is_ai = no #Cultural acceptance volatility
 		#We do not check local culture since this represents the nomadic incursions of Turkic warriors into Iran.
 		current_date > "990.01.1" #before this it does not make sense to run into nomadic turkic warriors in Iran
@@ -1682,6 +1700,7 @@ travel_events_fp3.0040 = {
 		# }
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		create_character = {
 			template = fp3_turkic_traveler
 			location = root.location
@@ -1905,7 +1924,7 @@ travel_events_fp3.0040 = {
 		trigger = {
 			can_start_scheme = {
 				type = learn_language
-				target = scope:fp3_turkic_traveler
+				target_character = scope:fp3_turkic_traveler
 			}
 		}
 		add_character_modifier = {
@@ -1928,14 +1947,14 @@ travel_events_fp3.0040 = {
 		}
 		start_scheme = {
 			type = learn_language
-			target = scope:fp3_turkic_traveler
+			target_character = scope:fp3_turkic_traveler
 		}
 		custom_tooltip = learn_language_with_bonus_tt
 		hidden_effect = {
 			random_scheme = {
 				limit = {
 					scheme_type = learn_language
-					scheme_target = scope:fp3_turkic_traveler
+					scheme_target_character = scope:fp3_turkic_traveler
 				}
 				add_scheme_modifier = {
 					type = xenophile_bonus_modifier
@@ -1987,7 +2006,7 @@ travel_events_fp3.0050 = {
 	trigger = {
 		has_dlc_feature = legacy_of_persia
 		is_available_travelling_adult = yes
-		is_landed = yes
+		is_playable_character = yes
 		NOR = {
 			has_character_modifier = ancient_persian_relics
 			has_character_modifier = fp3_punished_the_destitute
@@ -1997,6 +2016,7 @@ travel_events_fp3.0050 = {
 		}
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		create_character = {
 			template = fp3_tomb_raider
 			location = root.location
@@ -2185,8 +2205,8 @@ travel_events_fp3.0050 = {
 												has_variable = sassanian_sword
 											}
 										}
-										root = {
-											create_artifact_sassanian_sword_effect = { OWNER = root }
+										scope:fp3_tomb_raider = {
+											create_artifact_sassanian_sword_effect = { OWNER = scope:fp3_tomb_raider }
 										}
 									}
 									1 = { #Cup of Jamshid
@@ -2198,8 +2218,8 @@ travel_events_fp3.0050 = {
 												}
 											}
 										}
-										root = {
-											create_artifact_pedestal_cup_jamshid_effect = { OWNER = root }
+										scope:fp3_tomb_raider = {
+											create_artifact_pedestal_cup_jamshid_effect = { OWNER = scope:fp3_tomb_raider }
 										}
 									}
 									1 = { #Armor of Alexander the Great
@@ -2210,8 +2230,33 @@ travel_events_fp3.0050 = {
 												has_variable = arms_of_alex
 											}
 										}
-										root = {
-											create_artifact_arms_of_alexander_effect = { OWNER = ROOT }
+										scope:fp3_tomb_raider = {
+											create_artifact_arms_of_alexander_effect = { OWNER = scope:fp3_tomb_raider }
+										}
+									}
+									1 = { #Dagger of Rostam
+										trigger = {
+											root = { has_royal_court = yes }
+											any_artifact = {
+												count < 1
+												has_variable = dagger_of_rostam
+											}
+										}
+										scope:fp3_tomb_raider = {
+											create_artifact_dagger_of_rostam_effect = { OWNER = scope:fp3_tomb_raider }
+										}
+									}
+									1 = { #Babr E Bayan
+										trigger = {
+											root = { has_royal_court = yes }
+											NOT = {
+												any_artifact = {
+													has_variable = babr_e_bayan
+												}
+											}
+										}
+										scope:fp3_tomb_raider = {
+											create_artifact_sculpture_babr_e_bayan_effect = { OWNER = scope:fp3_tomb_raider }
 										}
 									}
 									# 1 = { #Dagger of Rostam
@@ -2240,12 +2285,12 @@ travel_events_fp3.0050 = {
 										# }
 									# }
 									5 = { #Ancent Bracelet
-										root = {
-											create_artifact_oxus_bracelet_effect = { OWNER = root }
+										scope:fp3_tomb_raider = {
+											create_artifact_oxus_bracelet_effect = { OWNER = scope:fp3_tomb_raider }
 										}
 									}
 									10 = { #Ancient Drinking Vessel
-										root = { create_artifact_fp3_ancient_drinking_vessel_effect = { OWNER = root } }
+										scope:fp3_tomb_raider = { create_artifact_fp3_ancient_drinking_vessel_effect = { OWNER = scope:fp3_tomb_raider } }
 									}
 								}
 							} #Success chance is weighted up if you have brought high stewardship characters on your journey.
@@ -2370,7 +2415,7 @@ travel_events_fp3.0050 = {
 										has_variable = sassanian_sword
 									}
 								}
-								create_artifact_sassanian_sword_effect = { OWNER = root }
+								scope:fp3_tomb_raider = { create_artifact_sassanian_sword_effect = { OWNER = scope:fp3_tomb_raider } }
 							}
 							1 = { #Cup of Jamshid
 								trigger = {
@@ -2381,7 +2426,7 @@ travel_events_fp3.0050 = {
 										}
 									}
 								}
-								create_artifact_pedestal_cup_jamshid_effect = { OWNER = root }
+								scope:fp3_tomb_raider = { create_artifact_pedestal_cup_jamshid_effect = { OWNER = scope:fp3_tomb_raider } }
 							}
 							1 = { #Armor of Alexander the Great
 								trigger = {
@@ -2391,34 +2436,34 @@ travel_events_fp3.0050 = {
 										has_variable = arms_of_alex
 									}
 								}
-								create_artifact_arms_of_alexander_effect = { OWNER = ROOT }
+								scope:fp3_tomb_raider = {create_artifact_arms_of_alexander_effect = { OWNER = scope:fp3_tomb_raider } }
 							}
-							# 1 = { #Dagger of Rostam
-								# trigger = {
-									# root = { has_royal_court = yes }
-									# any_artifact = {
-										# count < 1
-										# has_variable = dagger_of_rostam
-									# }
-								# }
-								# create_artifact_dagger_of_rostam_effect = { OWNER = ROOT }
-							# }
-							# 1 = { #Babr E Bayan
-								# trigger = {
-									# root = { has_royal_court = yes }
-									# NOT = {
-										# any_artifact = {
-											# has_variable = babr_e_bayan
-										# }
-									# }
-								# }
-								# create_artifact_sculpture_babr_e_bayan_effect = { OWNER = root } 
-							# }
+							1 = { #Dagger of Rostam
+								trigger = {
+									root = { has_royal_court = yes }
+									any_artifact = {
+										count < 1
+										has_variable = dagger_of_rostam
+									}
+								}
+								scope:fp3_tomb_raider = {create_artifact_dagger_of_rostam_effect = { OWNER = scope:fp3_tomb_raider } }
+							}
+							1 = { #Babr E Bayan
+								trigger = {
+									root = { has_royal_court = yes }
+									NOT = {
+										any_artifact = {
+											has_variable = babr_e_bayan
+										}
+									}
+								}
+								scope:fp3_tomb_raider = {create_artifact_sculpture_babr_e_bayan_effect = { OWNER = scope:fp3_tomb_raider } }
+							}
 							5 = { #Ancent Bracelet
-								create_artifact_oxus_bracelet_effect = { OWNER = root }
+								scope:fp3_tomb_raider = {create_artifact_oxus_bracelet_effect = { OWNER = scope:fp3_tomb_raider } }
 							}
 							10 = { #Ancient Drinking Vessel
-								create_artifact_fp3_ancient_drinking_vessel_effect = { OWNER = root }
+								scope:fp3_tomb_raider = {create_artifact_fp3_ancient_drinking_vessel_effect = { OWNER = scope:fp3_tomb_raider } }
 							}
 						}
 					}

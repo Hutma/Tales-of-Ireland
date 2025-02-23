@@ -202,9 +202,9 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         outfit_tags = { western_commoner_outfit }
         weight = {
-            base = 0
+            base = 20
             modifier = {
-                add = 20
+                add = 0
                 portrait_commoner_clothing_trigger = {
                     CULTURE_INPUT = western
                 }
@@ -227,14 +227,14 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-            # modifier = {
-                # add = 50
+            modifier = {
+                add = 25
                 # portrait_commoner_clothing_trigger = { 
                     # CULTURE_INPUT = western
                 # } 
-                # has_ep2_dlc_trigger = yes   
-                # portrait_era1_trigger = yes     
-            # }
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes     
+            }
         }
     }
 
@@ -280,6 +280,31 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
                 OR = {
                 	portrait_era3_trigger = yes  
                 	portrait_era4_trigger = yes  
+                }     
+            }
+        }
+    }
+
+    fp4_western_era3_commoners = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era3_commoner_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                portrait_commoner_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ce1_dlc_trigger = yes
+                OR = {
+                    portrait_era3_trigger = yes  
+                    portrait_era4_trigger = yes  
                 }     
             }
         }
@@ -365,22 +390,54 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-		    # modifier = {
-		        # add = 50
-		        # court_fashion_level_4_trigger = {
-		            # CULTURE_INPUT = western
-		        # }
-		        # has_ep2_dlc_trigger = yes 
-		        # portrait_era2_trigger = yes 
-		    # }
-            # modifier = {
-                # add = 50
-                # portrait_low_nobles_clothing_trigger = { 
-                    # CULTURE_INPUT = western
-                # } 
-                # has_ep2_dlc_trigger = yes   
-                # portrait_era2_trigger = yes     
-            # }
+		    modifier = {
+		        add = 0
+		        court_fashion_level_4_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era2_trigger = yes 
+		    }
+            modifier = {
+                add = 0
+                portrait_low_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes   
+                portrait_era2_trigger = yes     
+            }
+        }
+    }
+
+    fp4_western_era2_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era2_low_nobility_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                court_fashion_level_4_trigger = {
+                    CULTURE_INPUT = western
+                }
+                has_ce1_dlc_trigger = yes
+                portrait_era2_trigger = yes 
+                is_female = yes # Currently this sub group only contains one female outfit
+            }
+            modifier = {
+                add = 0
+                portrait_low_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ce1_dlc_trigger = yes
+                portrait_era2_trigger = yes    
+                is_female = yes # Currently this sub group only contains one female outfit 
+            }
         }
     }
 
@@ -395,28 +452,64 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-		    # modifier = {
-		        # add = 50
-		        # court_fashion_level_4_trigger = {
-		            # CULTURE_INPUT = western
-		        # }
-		        # has_ep2_dlc_trigger = yes 
-                # OR = {
-                	# portrait_era3_trigger = yes  
-                	# portrait_era4_trigger = yes  
-                # } 
-		    # }
-            # modifier = {
-                # add = 50
-                # portrait_low_nobles_clothing_trigger = { 
-                    # CULTURE_INPUT = western
-                # } 
-                # has_ep2_dlc_trigger = yes
-                # OR = {
-                	# portrait_era3_trigger = yes  
-                	# portrait_era4_trigger = yes  
-                # }      
-            # }
+		    modifier = {
+		        add = 0
+		        court_fashion_level_4_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                } 
+		    }
+            modifier = {
+                add = 0
+                portrait_low_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                }      
+            }
+        }
+    }
+
+    fp4_western_era3_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era3_low_nobility_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                court_fashion_level_4_trigger = {
+                    CULTURE_INPUT = western
+                }
+                has_ce1_dlc_trigger = yes
+                OR = {
+                    portrait_era3_trigger = yes  
+                    portrait_era4_trigger = yes  
+                } 
+            }
+            modifier = {
+                add = 0
+                portrait_low_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ce1_dlc_trigger = yes
+                OR = {
+                    portrait_era3_trigger = yes  
+                    portrait_era4_trigger = yes  
+                }      
+            }
         }
     }
 
@@ -495,22 +588,54 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-		    # modifier = {
-		        # add = 50
-		        # court_fashion_level_5_trigger = {
-		            # CULTURE_INPUT = western
-		        # }
-		        # has_ep2_dlc_trigger = yes 
-		        # portrait_era2_trigger = yes 
-		    # }
-            # modifier = {
-                # add = 50
-                # portrait_high_nobles_clothing_trigger = { 
-                    # CULTURE_INPUT = western
-                # } 
-                # has_ep2_dlc_trigger = yes   
-                # portrait_era2_trigger = yes     
-            # }
+		    modifier = {
+		        add = 50
+		        court_fashion_level_5_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+		        portrait_era2_trigger = yes 
+		    }
+            modifier = {
+                add = 0
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes   
+                portrait_era2_trigger = yes     
+            }
+        }
+    }
+
+    fp4_western_era2_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era2_high_nobility_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                court_fashion_level_5_trigger = {
+                    CULTURE_INPUT = western
+                }
+                has_ce1_dlc_trigger = yes
+                portrait_era2_trigger = yes 
+                is_female = yes # Currently this sub group only contains one female outfit
+            }
+            modifier = {
+                add = 0
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ce1_dlc_trigger = yes
+                portrait_era2_trigger = yes    
+                is_female = yes # Currently this sub group only contains one female outfit
+            }
         }
     }
 
@@ -525,30 +650,68 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }   
         weight = {
             base = 0
-		    # modifier = {
-		        # add = 50
-		        # court_fashion_level_5_trigger = {
-		            # CULTURE_INPUT = western
-		        # }
-		        # has_ep2_dlc_trigger = yes 
-                # OR = {
-                	# portrait_era3_trigger = yes  
-                	# portrait_era4_trigger = yes  
-                # } 
-		    # }
-            # modifier = {
-                # add = 50
-                # portrait_high_nobles_clothing_trigger = { 
-                    # CULTURE_INPUT = western
-                # } 
-                # has_ep2_dlc_trigger = yes  
-                # OR = {
-                	# portrait_era3_trigger = yes  
-                	# portrait_era4_trigger = yes  
-                # }    
-            # }
+		    modifier = {
+		        add = 0
+		        court_fashion_level_5_trigger = {
+		            CULTURE_INPUT = western
+		        }
+		        has_ep2_dlc_trigger = yes 
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                } 
+		    }
+            modifier = {
+                add = 0
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ep2_dlc_trigger = yes  
+                OR = {
+                	portrait_era3_trigger = yes  
+                	portrait_era4_trigger = yes  
+                }    
+            }
         }
     }
+
+    fp4_western_era3_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp4_western_era3_high_nobility_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                court_fashion_level_5_trigger = {
+                    CULTURE_INPUT = western
+                }
+                has_ce1_dlc_trigger = yes
+                OR = {
+                    portrait_era3_trigger = yes  
+                    portrait_era4_trigger = yes  
+                } 
+            }
+            modifier = {
+                add = 0
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = western
+                } 
+                has_ce1_dlc_trigger = yes
+                OR = {
+                    portrait_era3_trigger = yes  
+                    portrait_era4_trigger = yes  
+                }    
+            }
+        }
+    }
+
+
 
 ## Byzantine ##
 
@@ -990,7 +1153,76 @@ clothes_base = { # The lowest priority group of clothes with triggers based on r
         }
     }
 
- ## FP3 IRANIAN ##
+## AFR ##
+
+	afr_berber_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = afr_commoner_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+        weight = {
+            base = 0
+            modifier = {
+                add = 41
+                portrait_commoner_no_mayors_trigger = {
+                    CULTURE_INPUT = afr_berber
+                }
+            }
+        }
+	}
+
+	afr_berber_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = afr_low_nobility_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+        weight = {
+            base = 0
+            court_fashion_level_4_modifier = { INPUT_PARAMETER = afr_berber }
+            modifier = {
+                add = 51
+				OR = {
+					portrait_low_nobles_clothing_trigger = {
+						CULTURE_INPUT = afr_berber
+					}
+					portrait_mayor_trigger = {
+						CULTURE_INPUT = afr_berber
+					}
+				}
+            }
+        }
+	}
+
+	afr_berber_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = afr_high_nobility_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+            base = 0
+            court_fashion_level_5_modifier = { INPUT_PARAMETER = afr_berber } 
+            modifier = {
+                add = 51
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = afr_berber
+                } 
+            }
+        }
+	}
+
+## FP3 IRANIAN ##
 
 fp3_iranian_low_nobles = {
     dna_modifiers = {
@@ -1319,28 +1551,85 @@ fp3_iranian_high_nobles = {
         }   
         weight = {
             base = 0
-            # modifier = {
-                # add = 90
-                # has_dlc_feature = elegance_of_the_empire
-                # portrait_imperial_trigger = {
-                    # CULTURE_INPUT = western
-                # }
-            # }
-            # modifier = {
-                # add = 40
-                # has_dlc_feature = elegance_of_the_empire
-                # portrait_royalty_trigger = {
-                    # CULTURE_INPUT = western
-                # }                  
-            # }
-            # modifier = {
-                # factor = 0
-                # has_ep2_dlc_trigger = yes  
-                # NOR = {
-                    # portrait_era2_trigger = yes   
-                    # portrait_era3_trigger = yes 
-                # }             
-            # }
+            modifier = {
+                add = 0
+                has_dlc_feature = elegance_of_the_empire
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = western
+                }
+            }
+            modifier = {
+                add = 0
+                has_dlc_feature = elegance_of_the_empire
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }                  
+            }
+            modifier = {
+                factor = 0
+                has_ep2_dlc_trigger = yes  
+                NOR = {
+                    portrait_era2_trigger = yes   
+                    portrait_era3_trigger = yes 
+                }             
+            }
+        }
+    }
+
+    sp3_western_royalty = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = sp3_western_royalty_clothes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 0
+                has_dlc_feature = couture_of_the_capets
+                OR = {
+                    portrait_imperial_trigger = {
+                        CULTURE_INPUT = western
+                    }      
+                    portrait_royalty_trigger = {
+                        CULTURE_INPUT = western
+                    }           
+                }
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = french
+                } 
+            }
+            modifier = {
+                add = 0
+                has_dlc_feature = couture_of_the_capets
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = western
+                }
+            }
+            modifier = {
+                add = 0
+                has_dlc_feature = couture_of_the_capets
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }                  
+            }
+            modifier = {
+                factor = 0
+                has_ep2_dlc_trigger = yes 
+                OR = {
+                    portrait_era1_trigger = yes   
+                    portrait_era2_trigger = yes   
+                }     
+                NAND = {
+                    portrait_era1_trigger = no
+                    portrait_royalty_trigger = {
+                        CULTURE_INPUT = french
+                    } 
+                }         
+            }
         }
     }
 }

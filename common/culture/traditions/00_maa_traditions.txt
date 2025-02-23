@@ -150,7 +150,7 @@ tradition_mubarizuns = {
 	}
 
 	ai_will_do = {
-		value = 100
+		value = 400
 		if = {
 			limit = {
 				NOT = {
@@ -247,7 +247,7 @@ tradition_desert_ribat = {
 	}
 
 	ai_will_do = {
-		value = 100
+		value = 400
 		if = {
 			limit = {
 				NOT = {

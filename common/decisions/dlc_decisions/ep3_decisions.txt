@@ -1,0 +1,542 @@
+﻿found_salon_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+	}
+	sort_order = 120
+
+	desc = found_salon_decision_desc
+	selection_tooltip = found_salon_decision_tooltip
+	decision_group_type = adventurer
+
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		has_trait = violet_poet
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_salon
+			}
+		}
+	}
+
+	is_valid = {
+		has_trait = violet_poet
+		custom_tooltip = {
+			text = found_salon_decision_trigger_tt
+			any_courtier = {
+				has_trait = poet
+				count > 4
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = 350
+			if = {
+				limit = {
+					has_character_modifier = ep3_power_couple_modifier
+				}
+				subtract = 125
+			}
+		}
+	}
+
+	effect = {
+		root.location = {
+			save_scope_as = location
+		}
+		show_as_tooltip = {
+			if = {
+				limit = {
+					exists = dynasty
+				}
+				dynasty = {
+					add_dynasty_prestige = medium_dynasty_prestige_gain
+				}
+			}
+			add_prestige = major_prestige_gain
+			scope:location = {
+				add_province_modifier = {
+					modifier = ep3_poets_salon_modifier
+					years = 250
+				}
+			}
+			add_character_modifier = {
+				modifier = ep3_founded_salon_modifier
+			}
+		}
+
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_salon
+			}
+		}
+
+		trigger_event = ep3_decisions_event.4080
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_check_interval = 0
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+embrace_heresy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	sort_order = 120
+
+	desc = embrace_heresy_decision_desc
+	selection_tooltip = embrace_heresy_decision_tooltip
+	decision_group_type = admin
+
+	is_shown = {
+		government_allows = state_faith
+		is_adult = yes
+		is_independent_ruler = no
+		exists = top_liege
+		top_liege = { is_ai = yes }
+		top_liege.primary_title.state_faith ?= {
+			OR = {
+				NOT = { has_doctrine = eastern_hostility_doctrine }
+				has_doctrine = heresy_hostility_doctrine #Zoroastrians also get heresies, despite being Eastern.
+			}
+		}
+		NOT = {
+			this = top_liege.primary_title.state_faith.religious_head
+		}
+	}
+
+	is_valid = {
+		has_lifestyle = learning_lifestyle
+		custom_tooltip = {
+			text = heresy_in_empire_or_bordering_tt
+			top_liege ?= {
+				any_realm_county = {
+					OR = {
+						faith = {
+							faith_is_interesting_heresy_to_state_faith_trigger = yes
+						}
+						any_neighboring_county = {
+							holder.top_liege ?= {
+								NOT = {
+									this = root.top_liege
+								}
+							}
+							faith = {
+								faith_is_interesting_heresy_to_state_faith_trigger = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { exists = involved_activity }
+		is_imprisoned = no
+		is_available = yes
+	}
+
+	cost = {
+		prestige = major_influence_loss
+		piety = massive_piety_loss
+	}
+
+	cooldown = { years = 50 }
+
+	effect = {
+		custom_tooltip = embrace_heresy_tt
+		custom_tooltip = leverage_position_tt
+		custom_tooltip = unlocks_demand_state_faith_decision
+		trigger_event = ep3_decisions_event.5020
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_check_interval = 0
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+push_heresy_as_state_faith = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	sort_order = 150
+
+	desc = push_heresy_as_state_faith_desc
+	selection_tooltip = push_heresy_as_state_faith_tooltip
+	decision_group_type = admin
+
+	is_shown = {
+		government_allows = state_faith
+		is_adult = yes
+		is_independent_ruler = no
+		exists = top_liege
+		top_liege = { is_ai = yes }
+		top_liege.primary_title.state_faith ?= {
+			OR = {
+				NOT = { has_doctrine = eastern_hostility_doctrine }
+				has_doctrine = heresy_hostility_doctrine #Zoroastrians also get heresies, despite being Eastern.
+			}
+		}
+		NOR = {
+			this = top_liege.primary_title.state_faith.religious_head
+			faith = top_liege.primary_title.state_faith
+		}
+		has_variable = heresy_embraced
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = has_embraced_heresy_tt
+			has_variable = heresy_embraced
+			faith = var:heresy_embraced
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { exists = involved_activity }
+		is_imprisoned = no
+		is_available = yes
+	}
+
+	cost = {
+		influence = major_influence_loss
+	}
+
+	cooldown = { years = 10 }
+
+	effect = {
+		custom_tooltip = try_to_push_faith_with_emperor_tt
+		save_scope_as = heretic
+		scope:heretic.faith = { save_scope_as = heresy }
+		top_liege = {
+			trigger_event = {
+				id = ep3_decisions_event.5021 
+				days = 1
+			}
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_check_interval = 0
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+foster_integration_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
+	}
+	cooldown = { years = 20 }
+	sort_order = 120
+
+	desc = foster_integration_decision_desc
+	selection_tooltip = foster_integration_decision_tooltip
+	decision_group_type = admin
+	
+	is_shown = {
+		has_dlc_feature = roads_to_power
+		is_adult = yes
+		this = house.house_head
+		government_allows = administrative
+		domicile ?= {
+			is_domicile_type = estate
+		}
+		exists = top_liege
+		root.top_liege != root
+		OR = {
+			top_liege.primary_title = {
+				NOT = { is_de_jure_liege_or_above_target = root.domicile.domicile_location.county }
+			}
+			domicile.domicile_location.county.culture != root.top_liege.culture
+		}
+	}
+
+	is_valid = {
+		OR = {
+			domicile.domicile_location.county = { de_jure_drifting_towards = root.top_liege.primary_title }
+			domicile.domicile_location.county.culture = {
+				cultural_acceptance = {
+					target = root.top_liege.culture
+					value <= 75
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { exists = involved_activity }
+		is_imprisoned = no
+		is_available = yes
+		is_at_war = no
+	}
+
+	cost = {
+		influence = {
+			value = {
+				add = major_influence_value
+				multiply = 2
+			}
+		}
+	}
+
+	effect = {
+		domicile.domicile_location.county = { save_scope_as = target_county }
+		add_character_modifier = {
+			modifier = ep3_integration_promoter_modifier
+			years = 15
+		}
+		set_variable = {
+			name = integration_promoted_in
+			value = scope:target_county
+			years = 15
+		}
+		if = {
+			limit = {
+				scope:target_county = { de_jure_drifting_towards = root.top_liege.primary_title }
+			}
+			scope:target_county = {
+				add_county_modifier = {
+					modifier = improve_de_jure_integration_modifier
+					years = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:target_county.culture != root.top_liege.culture
+				scope:target_county.culture = {
+					cultural_acceptance = {
+						target = root.top_liege.culture
+						value <= 75
+					}
+				}
+			}
+			scope:target_county = {
+				add_county_modifier = {
+					modifier = improve_promote_culture_modifier
+					years = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				top_liege = { is_ai = yes }
+			}
+			top_liege = {
+				add_opinion = {
+					target = root
+					modifier = grateful_opinion
+					opinion = 25
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					scope:target_county = { has_county_modifier = improve_promote_culture_modifier }
+				}
+				top_liege = {
+					send_interface_message = {
+						type = msg_vassal_decision_good
+						title = improve_promote_culture_modifier
+						desc = improve_promote_culture_modifier_tt
+						left_icon = root
+						right_icon = scope:target_county
+					}
+				}
+			}
+			else = {
+				top_liege = {
+					send_interface_message = {
+						type = msg_vassal_decision_good
+						title = improve_de_jure_integration_modifier
+						desc = improve_de_jure_integration_modifier_tt
+						left_icon = root
+						right_icon = scope:target_county
+					}
+				}
+			}
+		}
+	}
+
+	ai_check_interval = 36
+	
+	ai_potential = {
+		government_allows = administrative
+		exists = top_liege
+		root.top_liege != root
+	}
+
+	ai_will_do = {
+		base = 75
+		modifier = {
+			culture = top_liege.culture
+			add = 25
+		}
+		modifier = {
+			has_trait = loyal
+			add = 20
+		}
+		modifier = {
+			has_trait = disloyal
+			add = -20
+		}
+	}
+}
+
+gather_faction_support_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	cooldown = { years = 25 }
+	sort_order = 120
+
+	desc = gather_faction_support_decision_desc
+	selection_tooltip = gather_faction_support_decision_tooltip
+	decision_group_type = admin
+	
+	is_shown = {
+		has_dlc_feature = roads_to_power
+		government_allows = administrative
+		exists = top_liege
+		top_liege != root
+		is_adult = yes
+		this = house.house_head
+		domicile ?= {
+			is_domicile_type = estate
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = belong_to_claimant_liberty_faction_tt
+			exists = joined_faction
+			joined_faction = {
+				OR = {
+					faction_is_type = claimant_faction
+					faction_is_type = liberty_faction
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { exists = involved_activity }
+		is_imprisoned = no
+		is_available = yes
+		is_at_war = no
+	}
+
+	cost = {
+		influence = {
+			value = {
+				add = massive_influence_value
+				multiply = 2
+			}
+		}
+	}
+
+	effect = {
+		joined_faction = { save_scope_as = the_faction }
+		add_joined_faction_discontent = 20
+		custom_tooltip = gathered_support_for_faction_get_army_tt
+		set_variable = {
+			name = gathered_support_for_faction
+			value = scope:the_faction
+			years = 5
+		}
+	}
+
+	ai_check_interval = 60
+	
+	ai_potential = {
+		government_allows = administrative
+		exists = top_liege
+		top_liege != root
+	}
+
+	ai_will_do = {
+		base = 50
+		modifier = {
+			has_trait = loyal
+			add = -30
+		}
+		modifier = {
+			has_trait = disloyal
+			add = 30
+		}
+		modifier = {
+			has_trait = ambitious
+			add = 50
+		}
+	}
+}
+
+go_fishing_decision = {
+	picture = { reference = "gfx/interface/illustrations/event_scenes/bp1_docks_tribal.dds" }
+	desc = go_fishing_decision_desc
+	selection_tooltip = go_fishing_decision_tooltip
+	ai_check_interval = 24
+	cooldown = { years = 2 }
+	decision_group_type = adventurer_minor
+
+	is_shown = {
+		#DLC check.
+		has_ep3_dlc_trigger = yes
+		is_landless_adventurer = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available = yes
+		custom_tooltip = {
+			text = go_fishing_decision_unlock_tt
+			location = {
+				OR = {
+					is_coastal = yes
+					is_riverside_province = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = go_fishing_decision_effect_tt
+			trigger_event = ep3_decisions_event.9001
+		}
+		close_view = {
+			view = decisions
+			player = root
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

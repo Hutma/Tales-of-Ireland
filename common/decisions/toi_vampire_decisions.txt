@@ -1,5 +1,7 @@
 ﻿ask_court_for_blood_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	}
 
 	ai_check_interval = 24
 	
@@ -52,10 +54,12 @@
 }
 
 reform_the_vampire_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	}
 
 	ai_goal = yes
-	major = yes
+	decision_group_type = major
 	
 	desc = reform_the_vampire_kingdom_decision_desc
 
@@ -112,7 +116,9 @@ reform_the_vampire_kingdom_decision = {
 }
 
 choose_hunt_type_vampire_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_vampire.dds"
+	}
 
 	ai_check_interval = 24
 	

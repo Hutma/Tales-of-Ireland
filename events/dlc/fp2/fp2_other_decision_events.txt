@@ -1468,7 +1468,6 @@ fp2_other_decisions.0702 = {
 					# fp2_council_toledo_debate_bishop_effect = { MOZARABIC = yes }
 					every_culture_global = {		
 						limit = {
-							#TODO_CD_FP2 (JP) check if this can be more performant, every_struggle_culture would be better
 							NOT = { this = root.culture }
 							NOT = { has_same_culture_heritage = root.culture }
 							save_temporary_scope_as = this_culture
@@ -1481,7 +1480,7 @@ fp2_other_decisions.0702 = {
 							}
 							trigger_else = {
 								any_culture_duchy = {
-									title_province = { geographical_region = world_europe_west_iberia }
+									title_province ?= { geographical_region = world_europe_west_iberia }
 								}
 							}
 							culture_number_of_counties > 0
@@ -1583,7 +1582,9 @@ fp2_other_decisions.0702 = {
 							region = world_europe_west_iberia
 							faith = {
 								religion = root.faith.religion
-								fp2_struggle_faith_is_mozarabic_trigger = no
+								NOT = {
+									portrait_religious_faith_or_foundational_trigger = { FAITH = faith:mozarabic_church }
+								}
 								NOT = { exists = religious_head }
 							}
 						}
@@ -1593,7 +1594,9 @@ fp2_other_decisions.0702 = {
 						limit = {
 							faith = {
 								religion = root.faith.religion
-								fp2_struggle_faith_is_mozarabic_trigger = no
+								NOT = {
+									portrait_religious_faith_or_foundational_trigger = { FAITH = faith:mozarabic_church }
+								}
 								NOT = { exists = religious_head }
 							}
 						}
@@ -2209,7 +2212,7 @@ fp2_other_decisions.1000 = {
 				fp2_struggle_secure_iberian_foothold_iberian_kingdom_trigger = yes
 				# That kingdom is mostly my faith
 				fp2_struggle_secure_iberian_foothold_faith_trigger = yes
-				scope:iberian_kingdom_temp = { title_held_years = fp2_struggle_secure_iberian_foothold_years_value }
+				scope:iberian_kingdom_temp = { title_held_years >= fp2_struggle_secure_iberian_foothold_years_value }
 			}
 			add_to_list = iberian_footholder_list
 		}
@@ -2411,6 +2414,7 @@ fp2_other_decisions.1100 = {
 				}
 			}
 		}
+		legend_seed_new_title_effect = yes
 	}
 
 	option = {
@@ -2450,7 +2454,10 @@ fp2_other_decisions.1101 = {
 			}
 			triggered_desc = {
 				trigger = {
-					faith = { fp2_struggle_faith_is_mozarabic_trigger = yes }
+					# faith = {
+					# 	portrait_religious_faith_or_foundational_trigger = { FAITH = faith:mozarabic_church }
+					# }
+					always = no
 				}
 				desc = fp2_other_decisions.1101.mozarab
 			}
@@ -2506,7 +2513,10 @@ fp2_other_decisions.1101 = {
 					limit = { exists = scope:de_jure_anger_2 }
 					NOT = { this = scope:de_jure_anger_2 }
 				}
-				faith = { fp2_struggle_faith_is_mozarabic_trigger = yes }
+				faith = {
+					# portrait_religious_faith_or_foundational_trigger = { FAITH = faith:mozarabic_church }
+					always = no
+				}
 			}
 			text = fp2_other_decisions.1101.b
 		}
@@ -2520,7 +2530,12 @@ fp2_other_decisions.1101 = {
 					limit = { exists = scope:de_jure_anger_2 }
 					NOT = { this = scope:de_jure_anger_2 }
 				}
-				faith = { fp2_struggle_faith_is_mozarabic_trigger = no }
+				faith = {
+					# NOT = {
+					# 	portrait_religious_faith_or_foundational_trigger = { FAITH = faith:mozarabic_church }
+					# }
+					always = yes
+				}
 			}
 			text = fp2_other_decisions.1101.c
 		}

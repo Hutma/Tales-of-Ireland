@@ -3,8 +3,10 @@
 @holding_illustration_india = "gfx/interface/illustrations/holding_types/castle_india.dds"
 @holding_illustration_mediterranean = "gfx/interface/illustrations/holding_types/castle_mediterranean.dds"
 @holding_illustration_norse = "gfx/interface/illustrations/holding_types/fp1_castle_norse.dds"
-@holding_illustration_iberian= "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
-@holding_illustration_iranian = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds" 
+@holding_illustration_iberian = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+@holding_illustration_iranian = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds"
+@holding_illustration_byzantine = "gfx/interface/illustrations/holding_types/ep3_castle_byzantine.dds"
+@holding_illustration_constantinople = "gfx/interface/illustrations/holding_types/ep3_castle_constantinople.dds"
 
 castle_01 = {
 	construction_time = slow_construction_time

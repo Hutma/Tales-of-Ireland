@@ -1,9 +1,11 @@
 ﻿the_first_cessarian_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
 	
 	desc = the_first_cessarian_kingdom_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	is_shown = {
@@ -74,8 +76,11 @@
 }
 
 restore_aran_kingship_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = restore_aran_kingship_decision_desc
@@ -159,8 +164,11 @@ restore_aran_kingship_decision = {
 }
 
 ceremony_in_newgrange_decision = {
-	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	}
+
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = ceremony_in_newgrange_decision_desc
@@ -226,11 +234,13 @@ ceremony_in_newgrange_decision = {
 }
 
 take_fomorian_tribute_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
 	
 	desc = take_fomorian_tribute_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 180
 	cooldown = { years = 5 }
 
@@ -274,8 +284,11 @@ take_fomorian_tribute_decision = {
 }
 
 restore_nemedian_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = restore_nemedian_kingdom_decision_desc
@@ -356,7 +369,9 @@ restore_nemedian_kingdom_decision = {
 }
 
 celtic_troops_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	}
 
 	ai_check_interval = 55
 
@@ -404,7 +419,9 @@ celtic_troops_decision = {
 }
 
 banish_fomorians_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
 
 	ai_check_interval = 55
 
@@ -454,7 +471,9 @@ banish_fomorians_decision = {
 }
 
 reclaim_maige_tuired_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+	}
 
 	ai_check_interval = 55
 
@@ -536,9 +555,11 @@ reclaim_maige_tuired_decision = {
 }
 
 avange_cath_maige_tuired_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_cath_maige_turied.dds"
+	}
 
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	desc = avange_cath_maige_tuired_decision_desc

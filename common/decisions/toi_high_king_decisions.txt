@@ -1,6 +1,9 @@
 ﻿call_royal_army_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+
+	decision_group_type = major
 	ai_check_interval = 60
 	desc = call_royal_army_decision_desc
 
@@ -42,8 +45,11 @@
 }
 
 high_king_reclaim_tara_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+	
+	decision_group_type = major
 	ai_check_interval = 60
 	desc = high_king_reclaim_tara_decision_desc
 
@@ -90,8 +96,11 @@ high_king_reclaim_tara_decision = {
 }
 
 reform_high_kingship_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+	
+	decision_group_type = major
 	ai_goal = yes
 	desc = reform_high_kingship_decision_desc
 
@@ -161,8 +170,11 @@ reform_high_kingship_decision = {
 
 #Try to unite Ireland decision
 try_unite_ireland_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	
+	decision_group_type = major
 	ai_check_interval = 60
 	desc = try_unite_ireland_decision_desc
 
@@ -205,7 +217,9 @@ try_unite_ireland_decision = {
 
 #strengthen position candidate
 strengthen_high_kingship_canditate_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
 
 	ai_check_interval = 180
 	desc = strengthen_high_kingship_canditate_decision_desc

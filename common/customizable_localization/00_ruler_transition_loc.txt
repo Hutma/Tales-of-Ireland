@@ -1788,10 +1788,10 @@ HeirMessageInterface = {
 GameOverMessageInterface = {
 	type = character
 
-	text = {
+	text = { #TODO_CD_EP3: update to include a case for landless adveturers
 		localization_key = SUCCESSION_EVENT_WINDOW_GAME_OVER_INTRO_UNLANDED
 		trigger = {
-			is_landed = no
+			is_playable_character = no
 			is_alive = yes
 		}
 	}
@@ -1961,6 +1961,13 @@ GameOverMessageNotableAchievements = {
 		trigger = {
 			exists = global_var:restore_holy_roman_empire_decision
 			dynasty = global_var:restore_holy_roman_empire_decision.dynasty
+		}
+	}
+	text = {
+		localization_key = SUCCESSION_EVENT_WINDOW_END_DATE_RESTORED_OLD_VASCONIA_DESC
+		trigger = {
+			exists = global_var:flag_restored_old_vasconia
+			dynasty = global_var:flag_restored_old_vasconia.dynasty
 		}
 	}
 

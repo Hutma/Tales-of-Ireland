@@ -1,9 +1,11 @@
 ﻿unite_manx_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	}
 	
 	desc = unite_manx_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	is_shown = {
@@ -54,11 +56,13 @@
 }
 
 control_over_manx_legacy_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	}
 	
 	desc = control_over_manx_legacy_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 80
 	
 	cooldown = { years = 30 }
@@ -113,11 +117,13 @@ control_over_manx_legacy_decision = {
 }
 
 a_claim_in_manx_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	}
 	
 	desc = a_claim_in_manx_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 35
 	
 	cooldown = { years = 15 }
@@ -285,7 +291,9 @@ a_claim_in_manx_decision = {
 }
 
 visit_ballaharra_stones_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_megaliths.dds"
+	}
 	
 	desc = visit_ballaharra_stones_decision_desc
 	
@@ -412,11 +420,13 @@ visit_ballaharra_stones_decision = {
 }
 
 fir_mannin_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	}
 	
 	desc = fir_mannin_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 80
 
 	is_shown = {

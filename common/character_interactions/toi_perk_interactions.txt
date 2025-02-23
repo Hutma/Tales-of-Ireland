@@ -306,6 +306,7 @@
 
 make_magician_interaction = {
 	category = interaction_category_vassal
+	icon = activity_otherworld_exploration_header
 
 	auto_accept = yes
 	ignores_pending_interaction_block = yes

@@ -1,7 +1,9 @@
 ﻿leave_fintan_form_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 40
 	
 	desc = leave_fintan_form_decision_desc
@@ -38,7 +40,9 @@
 }
 
 practice_magical_powers_decision = {
-	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	}
 	
 	ai_check_interval = 36
 	
@@ -79,7 +83,9 @@ practice_magical_powers_decision = {
 }
 
 learn_new_spell_for_playtesters_decision = {
-	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	}
 	
 	ai_check_interval = 500
 	
@@ -119,9 +125,11 @@ learn_new_spell_for_playtesters_decision = {
 }
 
 ai_magic = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 10
 	
 	cooldown = { years = 2 }

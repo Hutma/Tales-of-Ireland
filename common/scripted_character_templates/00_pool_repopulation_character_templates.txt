@@ -933,7 +933,6 @@ pool_repopulate_stewardship = {
 	###TALES OF IRELAND###	
 		set_interesting_traits_and_modifiers_effect = yes
 	}
-
 }
 
 pool_repopulate_intrigue = {
@@ -1150,7 +1149,6 @@ pool_repopulate_intrigue = {
 ###TALES OF IRELAND###		
 		set_interesting_traits_and_modifiers_effect = yes
 	}
-
 }
 
 pool_repopulate_learning = {
@@ -1393,10 +1391,10 @@ pool_repopulate_learning = {
 		}
 	}
 }
-			
+
 
 pool_repopulate_spouse = {
-	opposite_gender = root
+	gender_female_chance = root.marriage_gender_adjusted_female_chance
 	age = { 16 26 }
 	random_traits = yes
 	culture = root.culture
@@ -1778,6 +1776,9 @@ pool_repopulate_local_flavor = {
 				}
 				10 = {
 					add_trait = giant
+				}
+				10 = {
+					add_trait = poet
 				}
 				450 = {
 					trigger = {

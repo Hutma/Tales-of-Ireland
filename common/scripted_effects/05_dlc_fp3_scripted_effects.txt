@@ -1235,4 +1235,7 @@ fp3_save_sunni_caliph_or_previous_effect = {
 	# else = {
 		# title:d_sunni.previous_holder = { save_scope_as = struggle_liege }
 	# }
+	
+fp3_struggle_apply_catalyst_interloper_uninvolved_gain_struggle_titles = {
+
 }

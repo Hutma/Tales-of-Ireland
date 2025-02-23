@@ -216,9 +216,9 @@ fp2_struggle_contract_assistance_war_insufficient_trigger = {
 		limit = {
 			scope:recipient = { is_attacker_in_war = prev }
 		}
-		scope:actor.max_military_strength < war_defender_total_strength_divided_value
+		scope:actor.max_military_strength < war_defender_total_strength_tenth_value
 	}
-	trigger_else = { scope:actor.max_military_strength < war_attacker_total_strength_divided_value }
+	trigger_else = { scope:actor.max_military_strength < war_attacker_total_strength_tenth_value }
 }
 
 ##################################################
@@ -429,21 +429,6 @@ fp2_struggle_compromise_transfer_duchy_trigger = {
 			kingdom.holder = scope:transfer_duchy.title_capital_county.holder.top_liege
 		}
 	}
-}
-
-fp2_struggle_faith_is_mozarabic_trigger = {
-	# OR = {
-		
-		# this = faith:mozarabic_church
-		# trigger_if = { # TODO: Find a way for dead characters to store data
-		# 	limit = { exists = founder }
-        #     founder = {
-        #     	has_variable = foundational_faith
-        #     	var:foundational_faith = faith:mozarabic_church
-        #     }
-		# }
-    # }
-	always = no
 }
 
 fp2_struggle_council_toledo_attendee_trigger = {

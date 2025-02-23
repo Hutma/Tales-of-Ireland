@@ -153,6 +153,24 @@ set_up_regional_mythical_creature_effect = {
 					value = flag:fin
 				}
 			}
+			50 = {
+				trigger = {
+					location = { geographical_region = custom_gotland }
+				}
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:bysn
+				}
+			}
+			50 = {
+				trigger = {
+					location = { geographical_region = custom_gotland }
+				}
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:disma
+				}
+			}
 		}
 	}
 	else_if = {
@@ -344,6 +362,60 @@ set_up_regional_mythical_creature_effect = {
 			}
 		}
 	}
+	else_if = {
+		#West Steppe
+		limit = {
+			location = { geographical_region = world_steppe_west }
+			NOT = { exists = var:regional_mythical_creature_trinket }
+		}
+		random_list = {
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:aptah_baga #Legendary two-headed frog (from Sakha)
+				}
+			}
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:xullyukuns #Supernatural water spirit (from Sakha)
+				}
+			}
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:zilant #Dragon/wyvern-like creature
+				}
+			}
+		}
+	}
+	else_if = {
+		#East Steppe
+		limit = {
+			location = { geographical_region = world_steppe_east }
+			NOT = { exists = var:regional_mythical_creature_trinket }
+		}
+		random_list = {
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:yelbeghen #Seven-headed giant/dragon
+				}
+			}
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:tepegoz #Fleshy giant-like cyclops
+				}
+			}
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:archura #Deceitful forest demon
+				}
+			}
+		}
+	}
 	#Fallback
 	else = {
 		random_list = {
@@ -452,7 +524,7 @@ select_scapegoat_faith_effect = {
 		}
 		100 = { # Vassal in your realm with hostile faith
 			trigger = {
-				top_liege = {
+				top_liege ?= {
 					any_vassal_or_below = {
 						save_temporary_scope_as = courtier_to_check
 						root.faith = {

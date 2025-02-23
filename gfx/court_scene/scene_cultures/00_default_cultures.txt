@@ -1,4 +1,10 @@
-﻿
+﻿byzantine = {
+	trigger = {
+		exists = capital_county
+		always = no
+	}
+}
+
 mediterranean = {
 	trigger = {
 		exists = capital_county

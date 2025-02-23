@@ -30,7 +30,9 @@
 # by Daniel "yes I know what exciting content is stop bullying me" Moore
 ###########################################################################
 eat_cheese_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
 	desc = eat_cheese_decision_desc
 
 	is_shown = {
@@ -93,7 +95,9 @@ eat_cheese_decision = {
 #############################################
 improve_city_province_decision = {
 	title = improve_city_province_decision_name
-	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
 	desc = improve_city_province_decision_desc
 	selection_tooltip = improve_city_province_decision_tooltip
 	cooldown = { years = 50 }

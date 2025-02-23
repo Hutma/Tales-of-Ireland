@@ -520,7 +520,7 @@ accolade_the_knight_of_the_animal = {
 
 	potential = {
 		liege ?= {
-			is_landed = yes
+			is_playable_character = yes
 		}
 		scope:accolade_type = {
 			OR = {
@@ -1088,14 +1088,14 @@ accolade_the_animal_of_capital = {
 		random_valid = {
 			triggered_desc = {
 				trigger = {
-					is_landed = no
+					is_playable_character = no
 					exists = liege
 				}
 				desc = accolade_lieges_capital
 			}
 			triggered_desc = {
 				trigger = {
-					is_landed = yes
+					is_playable_character = yes
 				}
 				desc = accolade_knights_capital
 			}
@@ -1105,9 +1105,9 @@ accolade_the_animal_of_capital = {
 	potential = {
 		OR = {
 			liege ?= {
-				is_landed = yes
+				is_playable_character = yes
 			}
-			is_landed = yes
+			is_playable_character = yes
 		}
 	}
 }
@@ -1553,7 +1553,7 @@ accolade_leader_of_the_culture_maa = {
 
 	potential = {
 		liege ?= {
-			is_landed = yes
+			is_playable_character = yes
 		}
 		NOT = {
 			culture = liege.culture
@@ -2396,7 +2396,7 @@ accolade_leader_of_the_culture_unit = {
 							OR = {
 								has_cultural_era_or_later = culture_era_high_medieval
 								has_cultural_tradition = tradition_byzantine_succession
-								has_cultural_tradition = tradition_byzantine_succession
+								has_cultural_tradition = tradition_ep3_roman_ceremonies
 								has_cultural_tradition = tradition_republican_legacy
 							}
 						}
@@ -3552,14 +3552,14 @@ accolade_the_warrior_in_the_terrain = {
 		random_valid = {
 			triggered_desc = {
 				trigger = {
-					is_landed = no
+					is_playable_character = no
 					exists = liege
 				}
 				desc = accolade_lieges_capital_terrain
 			}
 			triggered_desc = {
 				trigger = {
-					is_landed = yes
+					is_playable_character = yes
 				}
 				desc = accolade_knights_capital_terrain
 			}
@@ -3569,9 +3569,9 @@ accolade_the_warrior_in_the_terrain = {
 	potential = {
 		OR = {
 			liege ?= {
-				is_landed = yes
+				is_playable_character = yes
 			}
-			is_landed = yes
+			is_playable_character = yes
 		}
 	}
 }
@@ -4025,7 +4025,7 @@ accolade_the_foe_of_enemy_faith = {
 
 	potential = {
 		liege ?= {
-			is_landed = yes
+			is_playable_character = yes
 		}
 		faith = liege.faith
 		faith = {

@@ -38,6 +38,7 @@
 		# special_sicilian_parliament_01
 		special_greenhouse_01
 		qanats_01
+		murex_farm_01
 		
 		grain_storage_01
 		cattle_lookout_01
@@ -102,6 +103,9 @@ city_holding = {
 
 		common_tradeport_01
 		qanats_01
+		murex_farm_01
+
+		breweries_01
 	}
 
 	can_be_inherited = yes
@@ -145,6 +149,8 @@ church_holding = {
 		common_tradeport_01
 		# hall_of_heroes_01
 		qanats_01
+
+		breweries_01
 	}
 
 	can_be_inherited = yes

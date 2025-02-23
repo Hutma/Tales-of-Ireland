@@ -62,6 +62,7 @@ fp3_clan.8015 = {
 	
 	trigger = {
 		has_fp3_dlc_trigger = yes
+		is_landed = yes
 		government_has_flag = government_is_clan
 		is_available_adult = yes
 		is_house_head = yes 
@@ -271,6 +272,9 @@ fp3_clan.8016 = {
 	lower_left_portrait = scope:scandalous_clan_member
 
 	override_background = { reference = bath_house }
+	override_effect_2d = {
+		reference = smoke	
+	}
 	
 	trigger = {
 		has_fp3_dlc_trigger = yes

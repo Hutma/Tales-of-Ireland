@@ -1749,6 +1749,7 @@ fp3_change_allegiance = {
 		ai_recipients = neighboring_rulers
 		ai_recipients = peer_vassals
 		ai_recipients = vassals
+		ai_recipients = top_realm_domicile_owners
 		max = 10
 	}
 

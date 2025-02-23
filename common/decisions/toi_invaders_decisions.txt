@@ -1,7 +1,9 @@
 ﻿hy_brasilian_troops_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 40
 
 	desc = hy_brasilian_troops_decision_desc
@@ -59,9 +61,11 @@
 }
 
 fianna_troops_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 40
 
 	desc = fianna_troops_decision_desc
@@ -119,9 +123,11 @@ fianna_troops_decision = {
 }
 
 roman_troops_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 40
 
 	desc = roman_troops_decision_desc
@@ -179,9 +185,11 @@ roman_troops_decision = {
 }
 
 the_roman_road_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_roman.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 100
 
 	desc = the_roman_road_decision_desc

@@ -59,7 +59,7 @@ fp3_story_cycle_seljuks_invasion_events.0002 = {
 				}
 				de_jure_liege = scope:fp3_seljuk_settle_target
 			}
-			limit = {
+			alternative_limit = {
 				any_neighboring_county = {
 					exists = holder
 					NOT = { holder.top_liege = scope:seljuk_victim }
@@ -95,7 +95,6 @@ fp3_story_cycle_seljuks_invasion_events.0002 = {
 	}
 
 	option = { # Yes - Serve me well!
-		trigger = { highest_held_title_tier > tier_duchy }
 		name = fp3_story_cycle_seljuks_invasion_events.0001.a_liege
 
 		fp3_story_cycle_seljuks_invasion_events_grant_seljuks_land_effect = yes
@@ -111,36 +110,6 @@ fp3_story_cycle_seljuks_invasion_events.0002 = {
 		}
 		create_seljuk_army_at_peace_effect = yes
 		debug_log = "Seljuk got the land and were vassalized"
-		ai_chance = {
-			base = 50
-
-			ai_value_modifier = {
-				ai_boldness = -0.5
-				ai_compassion = 0.2
-				ai_greed = -0.5
-				ai_energy = -0.5
-				ai_rationality = 0.3
-				ai_sociability = 0.3
-			}
-		}
-	}
-
-	option = { # Yes - but we are on the same title tier, so no vassalege
-		trigger = { highest_held_title_tier <= tier_duchy }
-		name = fp3_story_cycle_seljuks_invasion_events.0001.a
-
-		fp3_story_cycle_seljuks_invasion_events_grant_seljuks_land_effect = yes
-		scope:lead_seljuk = {
-			culture = {
-				change_cultural_acceptance = {
-					target = scope:seljuk_victim.culture
-					value = 30
-					desc = STEWARD_PROMOTE_CULTURE_ALLOWED_NOMAD_SETTLEMENT
-				}
-			}
-		}
-		create_seljuk_army_at_peace_effect = yes
-		debug_log = "Seljuk got the land and independence"
 		ai_chance = {
 			base = 50
 

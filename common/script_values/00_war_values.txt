@@ -305,57 +305,13 @@ artifact_war_ai_score_value = {
 	}
 }
 
-# Vassalization CB
-
-vassalize_default_size = 3
-
-vassalize_growth_per_innovation = 2
-
-vassalization_size_limit = {
-	value = vassalize_default_size
-	scope:attacker = {
-		if = {
-			limit = {
-				culture = {
-					has_innovation = innovation_casus_belli
-				}
-			}
-			add = vassalize_growth_per_innovation
-		}
-		if = {
-			limit = {
-				culture = {
-					has_innovation = innovation_chronicle_writing
-				}
-			}
-			add = vassalize_growth_per_innovation
-		}
-		if = {
-			limit = {
-				culture = {
-					has_innovation = innovation_divine_right
-				}
-			}
-			add = vassalize_growth_per_innovation
-		}
-		if = {
-			limit = {
-				culture = {
-					has_innovation = innovation_rightful_ownership
-				}
-			}
-			add = vassalize_growth_per_innovation
-		}
-	}
-}
-
 #############
 # Vassalization CB
 #############
 
-vassalize_default_size = 3
+vassalize_default_size = 4
 
-vassalize_growth_per_innovation = 2
+vassalize_growth_per_innovation = 3
 
 vassalization_size_limit = {
 	value = vassalize_default_size
@@ -440,18 +396,23 @@ siege_base_capture_chance = {
 raid_base_capture_chance = {
 	value = 20
 
-	# Trait: Viking
-	if = {
-		limit = { has_trait = viking }
-		add = 5
-	}
-	# Dynasty Perk: Practiced Kidnappers
 	if = {
 		limit = {
-			exists = dynasty
-			dynasty = { has_dynasty_perk = fp1_pillage_legacy_3 }
+			exists = root.army_commander
 		}
-		add = 20
+		# Trait: Viking
+		if = {
+			limit = { root.army_commander = { has_trait = viking } }
+			add = 5
+		}
+		# Dynasty Perk: Practiced Kidnappers
+		if = {
+			limit = {
+				exists = root.army_commander.dynasty
+				root.army_commander.dynasty = { has_dynasty_perk = fp1_pillage_legacy_3 }
+			}
+			add = 20
+		}
 	}
 }
 
@@ -567,12 +528,72 @@ war_defender_total_strength_halved_value = {
 	divide = 2
 }
 
-war_attacker_total_strength_divided_value = {
+war_attacker_total_strength_tenth_value = {
 	value = war_attacker_total_strength_value
 	divide = 10
 }
 
-war_defender_total_strength_divided_value = {
+war_defender_total_strength_tenth_value = {
 	value = war_defender_total_strength_value
 	divide = 10
+}
+
+war_attacker_total_current_strength_value = {
+	value = 0
+	every_war_attacker = { add = current_military_strength }
+}
+
+war_defender_total_current_strength_value = {
+	value = 0
+	every_war_defender = { add = current_military_strength }
+}
+
+war_attacker_total_current_strength_halved_value = {
+	value = war_attacker_total_current_strength_value
+	divide = 2
+}
+
+war_defender_total_current_strength_halved_value = {
+	value = war_defender_total_current_strength_value
+	divide = 2
+}
+
+war_attacker_total_current_strength_tenth_value = {
+	value = war_attacker_total_current_strength_value
+	divide = 10
+}
+
+war_defender_total_current_strength_tenth_value = {
+	value = war_defender_total_current_strength_value
+	divide = 10
+}
+
+war_attacker_total_current_strength_divided_by_defender_value = {
+	value = war_attacker_total_current_strength_value
+	divide = war_defender_total_current_strength_value
+	round = yes
+}
+
+war_defender_total_current_strength_divided_by_attacker_value = {
+	value = war_defender_total_current_strength_value
+	divide = war_attacker_total_current_strength_value
+	round = yes
+}
+
+war_total_participants_current_strength_value = {
+	value = 0
+	every_war_participant = { add = current_military_strength }
+}
+
+total_war_attacker_strength_value = {
+	value = 0
+	every_character_war = {
+		limit = { prev = primary_defender }
+		every_war_attacker = { add = current_military_strength }
+	}
+}
+
+total_war_enemy_strength_value = {
+	value = 0
+	every_war_enemy = { add = current_military_strength }
 }

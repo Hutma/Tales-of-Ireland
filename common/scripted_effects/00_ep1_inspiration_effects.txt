@@ -1,4 +1,5 @@
-﻿fund_inspiration_effect = {
+﻿
+fund_inspiration_effect = {
 	scope:recipient = {
 		if = {
 			limit = {
@@ -1147,6 +1148,32 @@ inspiration_adventure_create_artifact_effect = {
 								# create_artifact_pedestal_justinian_effect = { OWNER = root }
 							# }
 							10 = {
+								modifier = {
+									OR = {
+										scope:adventurer.adventure_inspiration_average_skill_value >= high_inspiration_skill
+										AND = {
+											exists = scope:inspiration_owner.var:artifact_quality
+											scope:inspiration_owner.var:artifact_quality > high_adventurer_epic_quality_level #Cumulative event choices
+										}
+									}
+									add = 5
+								}
+								trigger = {
+									NOT = {
+										any_artifact = {
+											has_variable = crown_of_justinian
+										}
+									}
+									scope:location ?= {
+										OR = {
+											geographical_region = custom_eastern_roman_empire
+											culture = { has_cultural_pillar = heritage_byzantine }
+										}
+									}
+								}
+								create_artifact_pedestal_justinian_effect = { OWNER = root }
+							}
+							10 = { #Cup of Jamshid
 								modifier = {
 									OR = {
 										scope:adventurer.adventure_inspiration_average_skill_value >= high_inspiration_skill
@@ -2608,6 +2635,31 @@ inspiration_adventure_create_artifact_effect = {
 									HUNTER = scope:inspiration_owner
 								}
 							}
+							10 = { #Constantine statue
+								modifier = {
+									OR = {
+										scope:adventurer.adventure_inspiration_average_skill_value >= high_inspiration_skill
+										AND = {
+											exists = scope:inspiration_owner.var:artifact_quality
+											scope:inspiration_owner.var:artifact_quality > high_adventurer_epic_quality_level #Cumulative event choices
+										}
+									}
+									add = 5
+								}
+								trigger = {
+									any_artifact = {
+										count < 3
+										has_variable = statue_constantine
+									}
+									scope:location ?= {
+										OR = {
+											geographical_region = world_europe_south_italy #Rome
+											geographical_region = world_asia_minor #Constantinople
+										}
+									}
+								}
+								create_artifact_statue_constantine_effect = { OWNER = root }
+							}
 						}
 					}
 				}
@@ -2935,7 +2987,10 @@ inspiration_adventure_create_artifact_effect = {
 				}
 			}
 			if = {
-				limit = { exists = scope:epic }
+				limit = {
+					exists = scope:epic
+					NOT = { exists = scope:task_contract_taker }
+				}
 				scope:epic = {
 					add_artifact_history = {
 						location = root.capital_province
@@ -2946,7 +3001,10 @@ inspiration_adventure_create_artifact_effect = {
 				}
 			}
 			else_if = {
-				limit = { exists = scope:newly_created_artifact }
+				limit = {
+					exists = scope:newly_created_artifact
+					NOT = { exists = scope:task_contract_taker }
+				}
 				scope:newly_created_artifact = {
 					add_artifact_history = {
 						location = root.capital_province

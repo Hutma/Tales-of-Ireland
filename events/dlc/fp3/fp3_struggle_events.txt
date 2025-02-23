@@ -180,6 +180,8 @@ fp3_struggle.0051 = { # BOOKMARK EVENT
 	override_background = { reference = fp3_fullscreen_intro }
 	override_sound = { reference = "event:/DLC/FP2/SFX/UI/fp2_struggle_ui_intro_animate" }
 
+	cooldown = { years = 100 }
+
 	widgets = {
 		widget = {
  			gui = "event_window_widget_struggle_info"
@@ -266,6 +268,52 @@ fp3_struggle.0071 = { # Strengthen the Caliphate Ending
 	option = {
 		name = fp3_struggle.0071.a
 		clicksound = "event:/DLC/FP3/SFX/UI/Notifications/Toasts/struggle_end_positive"
+		
+		ai_chance = {
+			base = 75
+			
+			modifier = {
+				factor = 0.1
+				realm_size >= 250
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			has_dlc_feature = roads_to_power
+			fp3_struggle_is_the_caliph = yes
+			NOT = { government_has_flag = government_is_administrative }
+		}
+		name = fp3_struggle.0071.b
+		clicksound = "event:/DLC/FP3/SFX/UI/Notifications/Toasts/struggle_end_positive"
+		
+		convert_to_administrative_from_feudalism_effect = yes
+		
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				add = 25
+				realm_size >= 75
+			}
+			modifier = {
+				add = 25
+				realm_size >= 100
+			}
+			modifier = {
+				add = 25
+				realm_size >= 125
+			}
+			modifier = {
+				add = 25
+				realm_size >= 150
+			}
+			modifier = {
+				add = 50
+				realm_size >= 200
+			}
+		}
 	}
 
 	after = {

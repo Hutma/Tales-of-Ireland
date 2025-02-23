@@ -1,9 +1,11 @@
 ﻿the_empire_of_the_isles_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_manx_hero.dds"
+	}
 	
 	desc = the_empire_of_the_isles_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	is_shown = {
@@ -91,11 +93,13 @@
 }
 
 the_empire_of_dal_riata_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
 	
 	desc = the_empire_of_dal_riata_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	is_shown = {

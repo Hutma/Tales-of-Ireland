@@ -1,0 +1,289 @@
+﻿ep3_frankokratia_save_financier_effect = {
+	#Start with Venice, then any Italian republic
+	# title:e_italy = {
+		# random_in_de_jure_hierarchy = {
+			# limit = {
+				# this = title:k_venice
+				# title:k_venice.holder = {
+					# ep3_frankokratia_financier_trigger = yes
+					# government_has_flag = government_is_republic
+				# }
+			# }
+			# alternative_limit = {
+				# NOT = { this = title:k_venice }
+				# holder ?= {
+					# highest_held_title_tier >= tier_county
+					# government_has_flag = government_is_republic
+					# ep3_frankokratia_financier_trigger = yes
+				# }
+			# }
+			# holder = { save_scope_as = financier }
+		# }
+	# }
+	#A Sicilian coastal republic
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_sicily = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# government_has_flag = government_is_republic
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#A Croatian coastal republic
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_croatia = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# government_has_flag = government_is_republic
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#A Burgundian coastal republic
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_burgundy = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# government_has_flag = government_is_republic
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#An Aquitainian coastal republic
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_aquitaine = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# government_has_flag = government_is_republic
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#An Iberian coastal republic
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:e_spain = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# government_has_flag = government_is_republic
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#A wealthy Italian ruler
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:e_italy = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# highest_held_title_tier < tier_empire
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#A wealthy Sicilian ruler
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_sicily = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# highest_held_title_tier < tier_empire
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#A wealthy Croatian ruler
+	# if = {
+		# limit = {
+			# NOT = { exists = scope:financier }
+		# }
+		# title:k_croatia = {
+			# random_in_de_jure_hierarchy = {
+				# limit = {
+					# holder ?= {
+						# highest_held_title_tier >= tier_county
+						# highest_held_title_tier < tier_empire
+						# ep3_frankokratia_financier_trigger = yes
+					# }
+				# }
+				# holder = { save_scope_as = financier }
+			# }
+		# }
+	# }
+	#Make sure they have enough money to be a financier
+	# hidden_effect = {
+		# scope:financier = {
+			# add_gold = 500
+		# }
+	# }
+}
+
+ep3_frankokratia_story_setup_save_vars_effect = {
+	#save variables for the story
+	# set_variable = {
+		# name = ghw_sponsor
+		# value = scope:ghw_sponsor
+	# }
+	# set_variable = {
+		# name = financier_title
+		# value = scope:financier.primary_title
+	# }
+	# set_variable = {
+		# name = byz_emperor
+		# value = scope:byz_emperor
+	# }
+	# set_variable = {
+		# name = byz_claimant
+		# value = scope:byz_claimant
+	# }
+}
+
+ep3_frankokratia_remove_pledged_attackers_effect = {
+
+}
+
+ep3_frankokratia_save_financier_sate_lands_effect = {
+	
+}
+
+ep3_frankokratia_give_financier_sate_lands_effect = {
+	
+}
+
+ep3_frankokratia_gather_governor_funds_effect = {
+
+}
+
+ep3_frankokratia_capital_sacking_effect = {
+	
+}
+
+ep3_frankokratia_kill_byzantines_effect = {
+
+}
+
+ep3_frankokratia_paying_off_latins_effect = {
+	
+}
+
+ep3_frankokratia_designate_latin_empire_effect = {
+
+}
+
+ep3_latin_empire_designate_financier_lands_effect = {
+	
+}
+
+ep3_frankokratia_grant_latin_empire_effect = {
+	
+}
+
+ep3_frankokratia_clear_old_lands_change_capital_effect = {
+
+}
+
+ep3_frankokratia_distribute_lands_to_crusaders_effect = {
+
+}
+
+ep3_frankokratia_grant_latin_lands_effect = {
+	
+}
+
+ep3_latin_empire_grant_financier_lands_effect = {
+	
+}
+
+ep3_frankokratia_pick_emperor_beneficiary_effect = {
+	
+}
+
+ep3_frankokratia_pick_crusader_beneficiary_effect = {
+
+}
+
+ep3_frankokratia_form_byzantine_kingdoms_effect = {
+
+}
+
+ep3_frankokratia_byzantine_independence_effect = {
+
+}
+
+ep3_frankokratia_vassalize_latin_counts_effect = {
+
+}
+
+ep3_frankokratia_end_story_effect = {
+
+}
+
+greek_anarchy_army_spawn_effect = {
+	
+}
+
+expunge_latin_dominion_effect = {
+	
+}
+
+frankokratia_latin_emp_end_msg_effect = {
+
+}
+
+frankokratia_remove__war_leader_var_effect = {
+	
+}

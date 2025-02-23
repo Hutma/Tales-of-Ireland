@@ -1,9 +1,11 @@
 ﻿one_heir_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
 	
 	desc = one_heir_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 100
 
 	is_shown = {
@@ -110,11 +112,13 @@
 }
 
 unite_all_ireland_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
 	
 	desc = unite_all_ireland_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 260
 
 	is_shown = {
@@ -188,11 +192,13 @@ unite_all_ireland_decision = {
 }
 
 found_clan_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	desc = found_clan_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_goal = yes
 
 	is_shown = {

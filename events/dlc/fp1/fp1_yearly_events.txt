@@ -483,7 +483,7 @@ scripted_effect agree_to_courtier_becoming_nithing_effect = {
 		root = { remove_concubine = scope:offensive_courtier }
 	}
 	# Then we evict them.
-	banish = yes
+	banish = yes # banish_effect not used for unlanded
 	# Which naturally causes some friction.
 	add_opinion = {
 		target = root
@@ -1143,6 +1143,16 @@ fp1_yearly.0021 = {
 				}
 			}
 			#Dispute over a stolen pig.
+			125 = {
+				trigger = {
+					#Exempt faiths that don't eat pork: technically the pig could be as a pet or for non-edible purposes, but it scans best if we just don't bring this up.
+					always = yes
+				}
+				save_scope_value_as = {
+					name = dispute_nature
+					value = flag:stolen_pig
+				}
+			}
 			#Dispute resulting from someone making a sea-going vessel a bit saltier.
 			125 = {
 				#Requires at least one knight to be a deviant.
@@ -1932,7 +1942,7 @@ fp1_yearly.0041 = {
 		NOT = { has_character_flag = had_event_fp1_yearly_0041 }
 		is_landed = yes
 		#Must be a Norse pagan tribal.
-		has_government = tribal_government
+		government_has_flag = government_is_tribal
 		religion = religion:northern_legacy_religion
 		#With a capital in the steppe/Russia.
 		capital_province = { geographical_region = dlc_fp1_region_russian_steppe }
@@ -7039,6 +7049,10 @@ fp1_yearly.0521 = {
 		animation = personality_bold
 	}
 	override_background = { reference = market }
+	widget = {
+		gui = "event_window_widget_vfx_snow"
+		container = "foreground_shader_vfx_container"
+	}
 
 	trigger = {
 		# DLC check.
@@ -7046,7 +7060,7 @@ fp1_yearly.0521 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0521 }
-		is_landed = yes
+		is_playable_character = yes
 		# Must have at least one suitable child.
 		any_child = {
 			child_suitable_to_play_with_character_one_sided = { CHARACTER = root }
@@ -7424,7 +7438,7 @@ fp1_yearly.0531 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0531 }
-		is_landed = yes
+		is_playable_character = yes
 		# Must be a suitable culture.
 		culture_uses_frequent_winter_transportation_trigger = yes
 		# Must have at least one suitable child.
@@ -8872,7 +8886,7 @@ fp1_yearly.0571 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0571 }
-		is_landed = yes
+		is_landed_or_landless_administrative = yes
 		# Filter to flavour-appropriate characters.
 		fp1_is_norse = yes
 		# Must have an appropriate runestone in your territory.
@@ -9336,7 +9350,6 @@ fp1_yearly.0581 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0581 }
-		is_landed = yes
 		# Filter to shieldmaiden-having culture.
 		culture = { has_cultural_parameter = has_access_to_shieldmaidens }
 		trigger_if = { # Has the Royal Court and thus can modify pillars
@@ -9727,7 +9740,7 @@ fp1_yearly.0591 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0591 }
-		is_landed = yes
+		is_landed_or_landless_administrative = yes
 		# Filter to flavour-appropriate characters.
 		# culture = { has_innovation = innovation_all_things }
 		always = no
@@ -10190,6 +10203,7 @@ fp1_yearly.0601 = {
 		trait = education_intrigue_2
 		trait = education_intrigue_3
 		trait = education_intrigue_4
+		trait = education_intrigue_5
 
 		# Gain a minor modifier boosting intrigue.
 		add_character_modifier = {
@@ -11483,6 +11497,7 @@ fp1_yearly.0651 = {
 		# Standard checks.
 		is_available_even_at_war_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0651 }
+		is_playable_character = yes
 		is_landed = yes
 		# Must have a coastal capital.
 		capital_county = { is_coastal_county = yes }
@@ -11786,7 +11801,7 @@ fp1_yearly.0661 = {
 		# Standard checks.
 		is_available_at_peace_adult = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_0661 }
-		is_landed = yes
+		is_playable_character = yes
 		# Must be a suitable culture.
 		culture_uses_frequent_winter_transportation_trigger = yes
 		# Gotta have snow in the capital.
@@ -13052,6 +13067,7 @@ fp1_yearly.1001 = {
 		has_fp1_dlc_trigger = yes
 		#Standard checks.
 		is_available_even_at_war_adult = yes
+		is_landed = yes
 		NOT = { has_character_flag = had_event_fp1_yearly_1001 }
 		#Scandinavian culture group, and within Scandinavia (plus a few other places).
 		culture = { has_cultural_pillar = heritage_partholonian }

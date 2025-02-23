@@ -382,3 +382,65 @@ bm_into_the_lowlands = {
 		animation = personality_bold
 	}
 }
+
+# bm_toi_laamps = {
+	# start_date = 4800.1.1
+	# is_playable = yes
+	# group = bm_group_4800
+	# requires_dlc_flag = landless_playable
+
+	# weight = {
+		# value = 100
+	# }
+
+	# Hereweard the Wake ID: 90028
+	# character = {
+		# name = "bookmark_laamps_hereweard_the_wake"
+		# dynasty = 2004006 # Oslac
+		# dynasty_splendor_level = 1
+		# type = male
+		# birth = 1044.1.2
+		# title = d_laamp_wake
+		# government = landless_adventurer_government
+		# culture = anglo_saxon
+		# religion = catholic
+		# difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		# history_id = 90028
+		# position = { 500 150 }
+		
+		# animation = threatening
+
+		#	Boudewijn V (employer) ID: 364
+		# character = {
+			# name = "bookmark_laamps_alt_boudewijn_v"
+			# relation = "BOOKMARK_RELATION_EMPLOYER"
+			# dynasty = 724
+			# type = male
+			# birth = 1012.1.1
+			# title = d_flanders
+			# government = feudal_government
+			# religion = "catholic"
+			# culture = "dutch"
+			# history_id = 364
+			# animation = personality_greedy
+		# }
+	# }
+
+	# Wallada bint al-Mustakfi ID: andalusian_0003
+	# character = {
+		# name = "bookmark_laamps_wallada_bint_al_mustakfi"
+		# dynasty = 597
+		# dynasty_splendor_level = 1
+		# type = female
+		# birth = 1001.1.1
+		# title = d_laamp_wallada
+		# government = landless_adventurer_government
+		# culture = andalusian
+		# religion = muwalladi
+		# difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		# history_id = andalusian_0003
+		# position = { 300 700 }
+		
+		# animation = writing
+	# }
+# }

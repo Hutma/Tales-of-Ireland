@@ -156,3 +156,7 @@
  trait_lactose_intolerance: "Lactose Intolerance"
  trait_lactose_intolerant_desc: "This character is weak of body and soul as he suffers from a very malignant condition.... the inability to consume the dairy that is provided by his own cattle. A punishment from the sky."
  trait_lactose_intolerant_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is weak of body and soul as he suffers from a very malignant condition.... the inability to consume the dairy that is provided by his own cattle. A punishment from the sky."
+ 
+ trait_mad_cow: "Mad Cow"
+ trait_mad_cow_desc: "Bad luck to the few who get infected by the Mad Cow disease, even afeter recovery, this character will never be the same again."
+ trait_mad_cow_desc_character_desc: ""Bad luck to the few who get infected by the Mad Cow disease, even afeter recovery, [ROOT.GetCharacter.GetFirstNameNoTooltip] will never be the same."

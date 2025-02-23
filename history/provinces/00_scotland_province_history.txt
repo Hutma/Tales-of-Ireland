@@ -513,6 +513,10 @@
     culture = the_gone_ones_culture
     religion = sons_of_the_ocean
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_copper_mines_01
+		special_building = generic_copper_mines_01
+	}
 }
 
 4544 = {      #Cairndoon (b_cairndoon)

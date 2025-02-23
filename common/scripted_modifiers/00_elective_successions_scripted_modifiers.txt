@@ -245,7 +245,7 @@ holder_voting_pattern_feudal_elective_modifier = {
 			}
 			OR = {
 				has_trait = celibate
-				has_trait = eunuch
+				is_eunuch_trigger = yes
 				has_trait = infertile
 				has_trait = incapable
 			}
@@ -463,7 +463,7 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	modifier = { #If candidate is elected, he will rule from a capital outside this de jure.
 		desc = tooltip_feudal_elector_vote_political_concerns
-		is_landed = yes
+		is_playable_character = yes
 		exists = capital_county
 		capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } }
 
@@ -482,12 +482,33 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 
 		scope:candidate = {
 			is_ruler = yes
-			is_vassal_of = scope:holder
+			#is_vassal_of = scope:holder
 			exists = capital_county
 			NOT = { capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } } }
 		}
+	}
+	modifier = { #Candidate is a foreign ruler.
+		desc = tooltip_feudal_elector_vote_encroaching_foreigner
+		is_playable_character = yes
+		exists = capital_county
+		scope:candidate = {
+			is_ruler = yes
+			NOT = { target_is_liege_or_above = scope:holder }
+		}
 		add = {
-			subtract = 15
+			subtract = 30
+			if = { #Candidate is a foreign non-dejure ruler.
+				limit = {
+					NOT = { capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } } }
+				}
+				subtract = 470
+			}
+			if = { #Boost for Scandinavian Elective.
+				limit = {
+					scope:title = { has_title_law = scandinavian_elective_succession_law }
+				}
+				subtract = 50
+			}
 		}
 	}
 	#Faithism
@@ -721,7 +742,15 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		add = 30
 		desc = tooltip_feudal_elector_vote_strong_claimant
 		NOT = { this = scope:candidate }
-		scope:candidate = { has_strong_claim_on = scope:title }
+		scope:candidate = {
+			OR = {
+				has_strong_claim_on = scope:title
+				AND = {
+					NOT = { has_trait = bastard }
+					is_child_of = scope:holder
+				}
+			}
+		}
 	}
 	modifier = {
 		add = 15
@@ -1544,6 +1573,19 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = infirm }
 	}
 	modifier = {
+		desc = tooltip_feudal_elector_vote_disfigured
+		this_is_martial_society_trigger = no
+		NOT = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+		scope:candidate = { has_trait = disfigured }
+		add = -15
+	}
+	modifier = {
+		desc = tooltip_feudal_elector_vote_disfigured_byzantine
+		culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance }
+		scope:candidate = { has_trait = disfigured }
+		add = -100
+	}
+	modifier = {
 		desc = tooltip_feudal_elector_vote_disfigured_warrior
 		this_is_martial_society_trigger = yes
 		scope:candidate = { has_trait = disfigured }
@@ -1806,6 +1848,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = clubfooted }
 		add = {
 			subtract = 5
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 10
+			}
 		}
 	}
 	modifier = {
@@ -1815,6 +1861,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = dwarf }
 		add = {
 			subtract = 15
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 20
+			}
 		}
 	}
 	modifier = {
@@ -1824,6 +1874,16 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = dwarf }
 		add = {
 			subtract = 30
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 30
+			}
+			if = { #Scandinavian elective more unforgiving.
+				limit = {
+					scope:title = { has_title_law = scandinavian_elective_succession_law }
+				}
+				multiply = 2
+			}
 		}
 	}
 	modifier = {
@@ -1833,6 +1893,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = {has_trait = hunchbacked }
 		add = {
 			subtract = 15
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 30
+			}
 		}
 	}
 	modifier = {
@@ -1842,6 +1906,16 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = hunchbacked }
 		add = {
 			subtract = 30
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 30
+			}
+			if = { #Scandinavian elective more unforgiving.
+				limit = {
+					scope:title = { has_title_law = scandinavian_elective_succession_law }
+				}
+				multiply = 2
+			}
 		}
 	}
 	modifier = {
@@ -1859,6 +1933,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		}
 		add = {
 			subtract = 15
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 60
+			}
 		}
 	}
 	modifier = {
@@ -1867,6 +1945,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = lisping }
 		add = {
 			subtract = 5
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 10
+			}
 		}
 	}
 	modifier = {
@@ -1989,6 +2071,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = blind }
 		add = {
 			subtract = 10
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 140
+			}
 		}
 	}
 	modifier = { #Shunned for being blind
@@ -1998,6 +2084,16 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		scope:candidate = { has_trait = blind }
 		add = {
 			subtract = 20
+			if = {
+				limit = { culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance } }
+				subtract = 130
+			}
+			if = { #Scandinavian elective more unforgiving.
+				limit = {
+					scope:title = { has_title_law = scandinavian_elective_succession_law }
+				}
+				multiply = 2
+			}
 		}
 	}
 	modifier = { #Shunned for being eunuch
@@ -2005,8 +2101,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		NOT = { this = scope:candidate } #Do not judge yourself.
 		this_is_martial_society_trigger = no
 		NOR = {
+			culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance }
+			# faith = { religion_tag = islam_religion }
 		}
-		scope:candidate = {has_trait = eunuch }
+		scope:candidate = { is_eunuch_trigger = yes }
 		add = -25
 	}
 	modifier = { #Shunned for being eunuch
@@ -2014,8 +2112,10 @@ elector_voting_pattern_traits_feudal_elective_modifier = {
 		NOT = { this = scope:candidate } #Do not judge yourself.
 		this_is_martial_society_trigger = yes
 		NOR = {
+			culture = { has_cultural_parameter = physical_disfigurement_blocks_inheritance }
+			# faith = { religion_tag = islam_religion }
 		}
-		scope:candidate = {has_trait = eunuch }
+		scope:candidate = { is_eunuch_trigger = yes }
 		add = -50
 	}
 	modifier = { #Praised for being Giant
@@ -2387,7 +2487,6 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 	}
 }
 
-
 elector_voting_pattern_circumstances_gaelic_elective_modifier = {
 	##########################	Elector voting patterns (circumstances)	##########################
 	#Sexism
@@ -2583,7 +2682,7 @@ elector_voting_pattern_circumstances_gaelic_elective_modifier = {
 	modifier = { #If candidate is elected, he will rule from a capital outside this de jure.
 		add = -30
 		desc = tooltip_feudal_elector_vote_political_concerns
-		is_landed = yes
+		is_playable_character = yes
 		exists = capital_county
 		capital_county = {
 			scope:title = {
@@ -2606,14 +2705,14 @@ elector_voting_pattern_circumstances_gaelic_elective_modifier = {
 
 		scope:candidate = {
 			is_ruler = yes
-			is_vassal_of = scope:holder
+			#is_vassal_of = scope:holder
 			exists = capital_county
 			NOT = { capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } } }
 		}
 	}
 	modifier = { #Candidate is a foreign ruler.
 		desc = tooltip_feudal_elector_vote_encroaching_foreigner
-		is_landed = yes
+		is_playable_character = yes
 		exists = capital_county
 		scope:candidate = {
 			is_ruler = yes
@@ -2821,7 +2920,13 @@ elector_voting_pattern_circumstances_gaelic_elective_modifier = {
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }
 	}
-	#Vassals will tend to pick heirs that are not the current ruler's children/close relatives when under Tanistry.
+	# Political Circumstances
+	modifier = {
+		add = 30
+		desc = tooltip_feudal_elector_vote_regent_already_governs
+		scope:candidate = { is_diarch_of_target = scope:holder }
+	}
+	## Vassals will tend to pick heirs that are not the current ruler's children/close relatives when under Tanistry.
 	modifier = {
 		add = -50
 		desc = tooltip_feudal_elector_vote_anti_tanist
@@ -2907,7 +3012,7 @@ elector_voting_pattern_circumstances_saxon_elective_modifier = {
 		desc = tooltip_saxon_elector_vote_candidate_unlanded
 		#But not if it's me.
 		NOT = { this = scope:candidate }
-		scope:candidate = { is_landed = no }
+		scope:candidate = { is_landed_or_landless_administrative = no }
 	}
 
 	modifier = {	# Witengamot prefers actual magnates, not low-tier counts.
@@ -2916,7 +3021,7 @@ elector_voting_pattern_circumstances_saxon_elective_modifier = {
 		#But not if it's me.
 		NOT = { this = scope:candidate }
 		scope:candidate = {
-			is_landed = yes
+			is_landed_or_landless_administrative = yes
 			highest_held_title_tier = tier_county
 		}
 	}
@@ -2926,7 +3031,7 @@ elector_voting_pattern_circumstances_saxon_elective_modifier = {
 		#But not if it's me.
 		NOT = { this = scope:candidate }
 		scope:candidate = {
-			is_landed = yes
+			is_landed_or_landless_administrative = yes
 			highest_held_title_tier = tier_kingdom
 		}
 		add = {
@@ -2989,7 +3094,6 @@ elector_voting_pattern_circumstances_scandinavian_elective_modifier = {
 			}
 		}
 	}
-
 }
 
 elector_voting_pattern_circumstances_tribal_elective_modifier = {
@@ -3185,7 +3289,7 @@ elector_voting_pattern_circumstances_tribal_elective_modifier = {
 	modifier = { #If candidate is elected, he will rule from a capital outside this de jure.
 		add = -30
 		desc = tooltip_feudal_elector_vote_political_concerns
-		is_landed = yes
+		is_playable_character = yes
 		exists = capital_county
 		capital_county = {
 			scope:title = {
@@ -3208,14 +3312,14 @@ elector_voting_pattern_circumstances_tribal_elective_modifier = {
 
 		scope:candidate = {
 			is_ruler = yes
-			is_vassal_of = scope:holder
+			#is_vassal_of = scope:holder
 			exists = capital_county
 			NOT = { capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } } }
 		}
 	}
 	modifier = { #Candidate is a foreign ruler.
 		desc = tooltip_feudal_elector_vote_encroaching_foreigner
-		is_landed = yes
+		is_playable_character = yes
 		exists = capital_county
 		scope:candidate = {
 			is_ruler = yes
@@ -3424,6 +3528,59 @@ elector_voting_pattern_circumstances_tribal_elective_modifier = {
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }
 	}	
+}
+
+elector_voting_pattern_circumstances_misc_elective_modifier = {
+	# Players can say that they don't want to get elected.
+	first_valid = {
+		# If they constitute the majority of the empire, then they'll mostly get voted for.
+		modifier = {
+			add = 1
+			desc = tooltip_feudal_elector_player_opt_out_50_percent
+			scope:candidate ?= {
+				# Because our candidate might die in the meanwhilst.
+				is_alive = yes
+				# And _then_ we check size, etc.
+				has_variable = rejects_electioneering
+				sub_realm_size >= scope:holder.50_percent_realm_size_value
+			}
+		}
+		# If they're a third or less, they get a reduced amount.
+		modifier = {
+			add = -100
+			desc = tooltip_feudal_elector_player_opt_out_33_percent
+			scope:candidate ?= {
+				# Because our candidate might die in the meanwhilst.
+				is_alive = yes
+				# And _then_ we check size, etc.
+				has_variable = rejects_electioneering
+				sub_realm_size >= scope:holder.33_percent_realm_size_value
+			}
+		}
+		# A bit more of a malus for one quarter.
+		modifier = {
+			add = -200
+			desc = tooltip_feudal_elector_player_opt_out_25_percent
+			scope:candidate ?= {
+				# Because our candidate might die in the meanwhilst.
+				is_alive = yes
+				# And _then_ we check size, etc.
+				has_variable = rejects_electioneering
+				sub_realm_size >= scope:holder.25_percent_realm_size_value
+			}
+		}
+		# Full amount below that.
+		modifier = {
+			add = -300
+			desc = tooltip_feudal_elector_player_opt_out_minor_realm
+			scope:candidate ?= {
+				# Because our candidate might die in the meanwhilst.
+				is_alive = yes
+				# And _then_ we check for our variable.
+				has_variable = rejects_electioneering
+			}
+		}
+	}
 }
 
 #scope:actor (ruler taking the action)

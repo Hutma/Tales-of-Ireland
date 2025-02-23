@@ -243,70 +243,60 @@ scripted_effect bp2_yearly_0601_learning_stress_gain_effect = {
 
 # Apply extra skill points to root depending on their regent's education trait rank.
 scripted_effect bp2_yearly_0601_apply_extra_skill_points_effect = {
-	# Rank 1 education.
-	if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_1 }
+	scope:regent = {
+		switch = {
+			trigger = has_trait
+			education_$SKILL$_1 = { # Rank 1 education.
+				root = { add_$SKILL$_skill = 1 }
+			}
+			education_$SKILL$_2 = { # Rank 2 education.
+				root = { add_$SKILL$_skill = 2 }
+			}
+			education_$SKILL$_3 = { # Rank 3 education.
+				root = { add_$SKILL$_skill = 3 }
+			}
+			education_$SKILL$_4 = { # Rank 4 education.
+				root = { add_$SKILL$_skill = 4 }
+			}
+			education_$SKILL$_5 = { # Rank 5 education.
+				root = { add_$SKILL$_skill = 5 }
+			}
 		}
-		add_$SKILL$_skill = 1
-	}
-	# Rank 2 education.
-	else_if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_2 }
-		}
-		add_$SKILL$_skill = 2
-	}
-	# Rank 3 education.
-	else_if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_3 }
-		}
-		add_$SKILL$_skill = 3
-	}
-	# Rank 4 education.
-	else_if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_4 }
-		}
-		add_$SKILL$_skill = 4
 	}
 }
 
 # Give root variable perk points in a lifestyle depending on their regent's education trait rank.
 scripted_effect bp2_yearly_0601_apply_extra_lifestyle_perk_points_effect = {
-	# Rank 1 education.
-	if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_1 }
+	scope:regent = {
+		switch = {
+			trigger = has_trait
+			education_$SKILL$_1 = {
+				# Terrible character, gain half a perk's worth of XP.
+				root = { add_$SKILL$_lifestyle_xp = massive_lifestyle_xp }
+			}
+			education_$SKILL$_2 = {
+				# One perk.
+				root = { add_$SKILL$_lifestyle_perk_points = 1 }
+			}
+			education_$SKILL$_3 = {
+				# Decent character, one perk _plus_ half a perk's worth of XP.
+				root = {
+					add_$SKILL$_lifestyle_perk_points = 1
+					add_$SKILL$_lifestyle_xp = massive_lifestyle_xp
+				}
+			}
+			education_$SKILL$_4 = {
+				# Excellent characters, two perks.
+				root = { add_$SKILL$_lifestyle_perk_points = 2 }
+			}
+			education_$SKILL$_5 = {
+				# Wicked sick characters, two perks _plus_ half a perk's worth of XP.
+				root = {
+					add_$SKILL$_lifestyle_perk_points = 2
+					add_$SKILL$_lifestyle_xp = massive_lifestyle_xp
+				}
+			}
 		}
-		# Terrible character, gain half a perk's worth of XP.
-		add_$SKILL$_lifestyle_xp = massive_lifestyle_xp
-	}
-	# Rank 2 education.
-	if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_2 }
-		}
-		# One perk.
-		add_$SKILL$_lifestyle_perk_points = 1
-	}
-	# Rank 3 education.
-	if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_3 }
-		}
-		# Decent character, one perk _plus_ half a perk's worth of XP.
-		add_$SKILL$_lifestyle_perk_points = 1
-		add_$SKILL$_lifestyle_xp = massive_lifestyle_xp
-	}
-	# Rank 4 education.
-	if = {
-		limit = {
-			scope:regent = { has_trait = education_$SKILL$_4 }
-		}
-		# Excellent characters, two perks.
-		add_$SKILL$_lifestyle_perk_points = 2
 	}
 }
 

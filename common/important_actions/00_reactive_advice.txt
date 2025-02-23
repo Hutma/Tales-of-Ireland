@@ -88,7 +88,7 @@ action_reactive_advice_protecting_against_hostile_schemes = {
 				years_from_game_start >= 3
 				OR = {
 					any_targeting_scheme = {
-						is_hostile = yes
+						is_scheme_category = hostile
 					}
 					AND = {
 						exists = cp:councillor_spymaster
@@ -216,7 +216,7 @@ action_reactive_advice_rightful_liege = {
 				is_at_war = no
 				any_vassal = {
 					highest_held_title_tier > 1
-					is_landed = yes
+					is_playable_character = yes
 					primary_title = {
 						save_temporary_scope_as = primary_vassal_title
 						trigger_if = { # Counts are only Rightful Vassals if you hold their De Jure Duchy.
@@ -308,7 +308,8 @@ action_reactive_advice_encyclopedia = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_encyclopedia }		
+				# should_show_tutorial_alert = { LESSON = reactive_advice_encyclopedia }
+				NOT = { has_global_variable = tutorial_current_situation_gradual_reveal_1 }
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_encyclopedia
@@ -530,6 +531,62 @@ action_perk_bonus_cap_modes = {
 	}
 }
 
+action_reactive_advice_varangian_adventure = {
+	type = tutorial
+	icon = generic_reactive_advice
+	
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_varangian_adventure }
+				any_independent_ruler = {
+					in_diplomatic_range = root
+					save_temporary_scope_as = target_ruler
+					root = {
+						has_cb_on = {
+							target = scope:target_ruler
+							cb = fp1_varangian_adventurer_conquest
+						}
+					}
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_varangian_adventure
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_varangian_adventure
+	}
+}
+
+action_reactive_advice_court_positions = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_court_positions }	
+				OR = {
+					years_from_game_start >= 7 # For pacing reasons in a regular game
+					has_character_flag = force_court_positions_tutorial # For the Quick Tutorial
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_court_positions
+				actor = root
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_court_positions
+	}
+}
 
 action_reactive_advice_artifact_inventory = {
 	type = tutorial
@@ -571,8 +628,8 @@ action_reactive_advice_tours_picking_vassals = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_tours_picking_vassals }	
-				is_widget_open = "multi_destination_selection"
+				should_show_tutorial_alert = { LESSON = reactive_advice_tours_picking_vassals }	
+				is_widgetid_open = "multi_destination_selection"
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_tours_picking_vassals
@@ -594,8 +651,12 @@ action_reactive_advice_regency_for_liege = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_liege }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_liege }	
 				has_active_diarchy = yes
+				OR = {
+					has_diarchy_type = temporary_regency
+					has_diarchy_type = regency
+				}
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_regency_for_liege
@@ -605,7 +666,7 @@ action_reactive_advice_regency_for_liege = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_regency_for_liege
+		start_tutorial_lesson = reactive_advice_regency_for_liege
 	}
 }
 
@@ -616,8 +677,14 @@ action_reactive_advice_regency_for_regent = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_regent }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_regent }	
 				is_diarch = yes
+				liege ?= {
+					OR = {
+						has_diarchy_type = temporary_regency
+						has_diarchy_type = regency
+					}
+				}
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_regency_for_regent
@@ -627,7 +694,7 @@ action_reactive_advice_regency_for_regent = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_regency_for_regent
+		start_tutorial_lesson = reactive_advice_regency_for_regent
 	}
 }
 
@@ -638,9 +705,10 @@ action_reactive_advice_set_future_regent = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_set_future_regent }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_set_future_regent }	
 				years_from_game_start >= 8 # For pacing reasons	
 				has_active_diarchy = no
+				is_landless_adventurer = no
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_set_future_regent
@@ -650,7 +718,7 @@ action_reactive_advice_set_future_regent = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_set_future_regent
+		start_tutorial_lesson = reactive_advice_set_future_regent
 	}
 }
 
@@ -661,11 +729,11 @@ action_reactive_advice_travel_planning = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_travel_planning }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_travel_planning }	
 				is_travelling = no
 				OR = {
-					is_widget_open = travel_planning_tutorial_uses_this_1
-					is_widget_open = travel_planning_tutorial_uses_this_2
+					is_widgetid_open = "travel_planning_tutorial_uses_this_1"
+					is_widgetid_open = "travel_planning_tutorial_uses_this_2"
 				}
 			}
 			try_create_important_action = {
@@ -676,7 +744,7 @@ action_reactive_advice_travel_planning = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_travel_planning
+		start_tutorial_lesson = reactive_advice_travel_planning
 	}
 }
 
@@ -687,7 +755,7 @@ action_reactive_advice_house_unity = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_house_unity }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_house_unity }	
 				
 				house = { has_house_unity = yes }
 				
@@ -700,7 +768,7 @@ action_reactive_advice_house_unity = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_house_unity
+		start_tutorial_lesson = reactive_advice_house_unity
 	}
 }
 
@@ -711,7 +779,7 @@ action_reactive_advice_tax_collector = {
 	check_create_action = {
 		if = {
 			limit = {
-				# should_show_tutorial_alert = { LESSON = reactive_advice_tax_collector }
+				should_show_tutorial_alert = { LESSON = reactive_advice_tax_collector }
 				
 				government_has_flag = government_is_clan
 			}
@@ -723,6 +791,305 @@ action_reactive_advice_tax_collector = {
 	}
 
 	effect = {
-		# start_tutorial_lesson = reactive_advice_tax_collector
+		start_tutorial_lesson = reactive_advice_tax_collector
+	}
+}
+
+action_reactive_advice_legitimacy = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				has_legitimacy = yes
+				should_show_tutorial_alert = { LESSON = reactive_advice_legitimacy }
+				NOT = { has_global_variable = tutorial_current_situation_gradual_reveal_3 }
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_legitimacy
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_legitimacy
+	}
+}
+
+action_reactive_advice_epidemics = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_epidemics }
+
+				any_sub_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_epidemics
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_epidemics
+	}
+}
+
+action_reactive_advice_plague_resistance = {
+	type = tutorial
+	icon = generic_reactive_advice
+
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_plague_resistance }
+
+				any_sub_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+			}
+
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_plague_resistance
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_plague_resistance
+	}
+}
+
+action_reactive_advice_tutorial_schemes = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_tutorial_schemes }
+				has_global_variable = tutorial_completed # only show in post-tutorial
+				has_owned_scheme = no # show only if you've started a scheme
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_tutorial_schemes
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_tutorial_schemes
+	}
+}
+
+action_reactive_advice_tutorial_war = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_tutorial_war }
+				AND = {
+					is_at_war = yes # show only if you're at war
+					has_global_variable = tutorial_completed
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_tutorial_war
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_tutorial_war
+	}
+}
+
+action_reactive_advice_favorite_child = {
+	type = tutorial
+	icon = generic_reactive_advice
+
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_favorite_child }
+				NOT = {
+					any_relation = { type = favorite_child }
+				}
+				exists = dynasty
+				any_close_family_member = {
+					count >= 2
+					is_alive = yes
+					dynasty ?= root.dynasty
+					OR = {
+						is_child_of = root
+						is_grandchild_of = root
+						is_great_grandchild_of = root
+					}
+				}
+			}
+
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_favorite_child
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_favorite_child
+	}
+}
+
+
+# EP3 RA
+
+action_reactive_advice_landless_adventurer = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_landless_adventurer }
+				is_landless_adventurer = yes
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_landless_adventurer
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_landless_adventurer
+	}
+}
+
+action_reactive_advice_admin_gov = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_admin_gov }
+				has_government = administrative_government
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_admin_gov
+				recipient = this
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_admin_gov
+	}
+}
+
+action_reactive_advice_admin_gov_troops = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_admin_gov_troops }
+				AND = {
+					has_government = administrative_government
+					OR = {
+						is_at_war = yes
+						is_widgetid_open = military_view
+						any_liege_or_above = { is_at_war = yes }
+					}
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_admin_gov_troops
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_admin_gov_troops
+	}
+}
+
+
+action_reactive_advice_agent_scheme_rework = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_agent_scheme_rework }
+				any_scheme = {
+					any_scheme_agent_slot = {
+						count > 0
+					}
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_agent_scheme_rework
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_agent_scheme_rework
+	}
+}
+
+action_reactive_advice_laamp_contract_move = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+
+	check_create_action = {
+		if = {
+			limit = {
+				has_ep3_dlc_trigger = yes
+				government_has_flag = government_is_landless_adventurer
+				is_travelling = no
+				domicile ?= { provisions >= 250 }
+				any_character_active_contract = { count < 1 }
+				should_show_tutorial_alert = { LESSON = reactive_advice_laamp_contract_move }
+				NOT = {
+					should_show_tutorial_alert = { LESSON = reactive_advice_landless_adventurer }
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_laamp_contract_move	
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_laamp_contract_move
 	}
 }

@@ -2,19 +2,24 @@
 fomorian = {
 	fomorian = {
 		traits = { fomorian }
+
 		dna_modifiers = {
-			color = {
-				gene = skin_color
-				mode = replace
-				y = 1.0
-				x = 1.0
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				value = 0.1
+			human = {
+				color = {
+					gene = skin_color
+					mode = replace
+
+					x = 1.0
+					y = 1.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.1
+				}
 			}
 		}
+		
 	}
 }
 
@@ -22,24 +27,26 @@ tuatha_de_danann = {
 	tuatha_de_danann = {
 		traits = { tuatha_de_danann }
 		dna_modifiers = {
-			color = {
-				gene = skin_color
-				mode = modify
-				x = -1.0
-				y = -1.0
-			}
-			color = {
-				gene = eye_color
-				mode = modify
-					
-				x = 1.0
-				y = 1.0
-			}
-			morph = {
-				mode = modify
-				gene = gene_eye_shut
-				value = 0.2
-				template = eye_shut_neg
+			human = {
+				color = {
+					gene = skin_color
+					mode = modify
+					x = -1.0
+					y = -1.0
+				}
+				color = {
+					gene = eye_color
+					mode = modify
+						
+					x = 1.0
+					y = 1.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_eye_shut
+					value = 0.2
+					template = eye_shut_neg
+				}
 			}
 		}
 	}
@@ -50,12 +57,14 @@ vampire_eyes = {
 	vampire_eyes = {
 		traits = { irish_vampire }
 		dna_modifiers = {
-			color = {
-				gene = eye_color
-				mode = modify
-					
-				x = -1.0
-				y = 0.0
+			human = {
+				color = {
+					gene = eye_color
+					mode = modify
+						
+					x = -1.0
+					y = 0.0
+				}
 			}
 		}
 	}
@@ -65,65 +74,67 @@ scottish_fairy = {
 	scottish_fairy = {
 		traits = { scottish_fairy }
 		dna_modifiers = {
-			morph = {
-				mode = modify
-				gene = gene_head_top_width
-				template = head_top_width_pos
-				value = 0.5
-			}
-			morph = {
-				mode = modify
-				gene = gene_bs_forehead_brow_forward
-				template = forehead_brow_forward_pos
-				value = 0.6
-			}
-			morph = {
-				mode = modify
-				gene = gene_forehead_height
-				template = forehead_height_pos
-				value = 0.25
-			}
-			morph = {
-				mode = modify
-				gene = gene_forehead_width
-				template = forehead_width_pos
-				value = 0.25
-			}
-			morph = {
-				mode = modify
-				gene = gene_mouth_height
-				template = mouth_height_pos
-				value = 0.25
-			}	
-			morph = {
-				mode = modify
-				gene = gene_bs_nose_ridge_width
-				template = nose_ridge_width_pos
-				value = 0.25
-			}		
-			morph = {
-				mode = modify
-				gene = gene_bs_nose_height
-				template = nose_height_pos
-				value = 0.25
-			}
-			morph = {
-				mode = modify
-				gene = gene_bs_nose_tip_width
-				template = nose_tip_width_pos
-				value = 0.25
-			}
-			morph = {
-				mode = modify
-				gene = gene_bs_nose_ridge_angle
-				template = nose_ridge_angle_pos
-				value = 0.25
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = dwarf_height
-				value = 0
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_head_top_width
+					template = head_top_width_pos
+					value = 0.5
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_forehead_brow_forward
+					template = forehead_brow_forward_pos
+					value = 0.6
+				}
+				morph = {
+					mode = modify
+					gene = gene_forehead_height
+					template = forehead_height_pos
+					value = 0.25
+				}
+				morph = {
+					mode = modify
+					gene = gene_forehead_width
+					template = forehead_width_pos
+					value = 0.25
+				}
+				morph = {
+					mode = modify
+					gene = gene_mouth_height
+					template = mouth_height_pos
+					value = 0.25
+				}	
+				morph = {
+					mode = modify
+					gene = gene_bs_nose_ridge_width
+					template = nose_ridge_width_pos
+					value = 0.25
+				}		
+				morph = {
+					mode = modify
+					gene = gene_bs_nose_height
+					template = nose_height_pos
+					value = 0.25
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_nose_tip_width
+					template = nose_tip_width_pos
+					value = 0.25
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_nose_ridge_angle
+					template = nose_ridge_angle_pos
+					value = 0.25
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					template = dwarf_height
+					value = 0
+				}
 			}
 		}
 	}
@@ -133,11 +144,13 @@ seelie_fairy = {
 	seelie_fairy = {
 		traits = { seelie_fairy }
 		dna_modifiers = {
-			color = {
-				gene = skin_color
-				mode = replace
-				y = 1.0
-				x = 0.5
+			human = {
+				color = {
+					gene = skin_color
+					mode = replace
+					y = 1.0
+					x = 0.5
+				}
 			}
 		}
 	}
@@ -147,11 +160,13 @@ unseelie_fairy = {
 	unseelie_fairy = {
 		traits = { unseelie_fairy }
 		dna_modifiers = {
-			color = {
-				gene = skin_color
-				mode = replace
-				y = 1.0
-				x = 0.1
+			human = {
+				color = {
+					gene = skin_color
+					mode = replace
+					y = 1.0
+					x = 0.1
+				}
 			}
 		}
 	}

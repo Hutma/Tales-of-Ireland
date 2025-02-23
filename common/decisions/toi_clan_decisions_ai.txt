@@ -1,9 +1,11 @@
 ﻿ai_collect_clan_tax_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	
 	ai_check_interval = 50
-	major = yes
+	decision_group_type = major
 	
 	is_shown = {
 		is_ai = yes
@@ -38,12 +40,17 @@
 					is_independent_ruler = yes
 					NOT = { this = dynasty.dynast }
 				}
-				send_interface_toast = {
-					left_icon = root.dynasty.dynast
-					title = tooltip.clan.tax_clan.target
-					pay_short_term_income = {
-						target = root
-						years = 1
+				if = {
+					limit = {
+						monthly_character_income > 0
+					}
+					send_interface_toast = {
+						left_icon = root.dynasty.dynast
+						title = tooltip.clan.tax_clan.target
+						pay_short_term_income = {
+							target = root
+							years = 1
+						}
 					}
 				}
 			}
@@ -73,11 +80,12 @@
 }
 
 ai_collect_clan_cattle_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
-	
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	ai_check_interval = 50
-	major = yes
+	decision_group_type = major
 	
 	is_shown = {
 		is_ai = yes
@@ -165,11 +173,13 @@ ai_collect_clan_cattle_decision = {
 }
 
 ai_force_clan_ruler_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	
 	ai_check_interval = 25
-	major = yes
+	decision_group_type = major
 	
 	is_shown = {
 		is_ai = yes
@@ -242,11 +252,13 @@ ai_force_clan_ruler_decision = {
 }
 
 ai_call_clan_rulers_into_war_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	
 	ai_check_interval = 50
-	major = yes
+	decision_group_type = major
 	
 	is_shown = {
 		is_ai = yes
@@ -307,11 +319,13 @@ ai_call_clan_rulers_into_war_decision = {
 }
 
 ai_call_clan_leader_into_war_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_rule_second.dds"
+	}
 	
 	
 	ai_check_interval = 50
-	major = yes
+	decision_group_type = major
 	
 	is_shown = {
 		is_ai = yes

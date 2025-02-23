@@ -737,7 +737,7 @@ head_of_faith.0032 = {
 
 		scope:pledgeing_individual = {
 			send_interface_message = {
-				type = sinful_theocrat_exposed
+				type = event_religious_bad
 				title = head_of_faith.0032.notif.b
 				right_icon = scope:pledge_target
 			

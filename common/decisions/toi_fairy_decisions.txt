@@ -1,5 +1,7 @@
 ﻿ai_update_fairy_trait_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	}
 	
 	ai_check_interval = 12
 	cooldown = {
@@ -69,7 +71,9 @@
 }
 
 determine_fairy_court_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	}
 	
 	desc = determine_fairy_court_decision_desc
 	
@@ -142,7 +146,9 @@ determine_fairy_court_decision = {
 }
 
 summon_fairy_to_court_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_fairy.dds"
+	}
 	
 	desc = summon_fairy_to_court_decision_desc
 	
@@ -262,12 +268,14 @@ summon_fairy_to_court_decision = {
 }
 
 call_seelie_king_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	}
 	
 	desc = call_seelie_king_decision_desc
 	
 	cooldown = { years = 5 }
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 12
 
 	is_shown = {
@@ -335,12 +343,14 @@ call_seelie_king_decision = {
 }
 
 call_unseelie_king_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	}
 	
 	desc = call_unseelie_king_decision_desc
 	
 	cooldown = { years = 5 }
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 12
 
 	is_shown = {
@@ -408,11 +418,13 @@ call_unseelie_king_decision = {
 }
 
 retake_seelie_court_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_seelie.dds"
+	}
 	
 	desc = retake_seelie_court_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 60
 
 	is_shown = {
@@ -453,11 +465,13 @@ retake_seelie_court_decision = {
 }
 
 retake_unseelie_court_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_unseelie.dds"
+	}
 	
 	desc = retake_unseelie_court_decision_desc
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 60
 
 	is_shown = {

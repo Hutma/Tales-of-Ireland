@@ -1,6 +1,8 @@
 ﻿#The old gods faith
 great_hunt_decision = { #Go for a religious great hunt
-	picture = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
 	
 	desc = great_hunt_decision_desc
 
@@ -46,7 +48,9 @@ great_hunt_decision = { #Go for a religious great hunt
 
 #de danann worshiper faith
 truce_with_de_danann_decision = { #ask for a 10 years truce with the gods
-	picture = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	}
 	
 	desc = truce_with_de_danann_decision_desc
 
@@ -100,7 +104,9 @@ truce_with_de_danann_decision = { #ask for a 10 years truce with the gods
 
 #fomorian worshiper faith
 truce_with_fomorian_decision = { #ask for a 10 years truce with the gods
-	picture = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/druidic_worship.dds"
+	}
 	
 	desc = truce_with_fomorian_decision_desc
 

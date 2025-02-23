@@ -1297,6 +1297,40 @@ create_artifact_throne_solomon_effect = {
 	}
 }
 
+create_artifact_byz_throne_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_byz_throne_name
+		description = artifact_byz_throne_description
+		type = throne_special
+		visuals = ep3_throne_of_solomon
+		wealth = scope:wealth
+		quality = scope:quality
+		template = byz_throne_template
+		history = {
+			type = created_before_history
+		}
+		modifier = byz_throne_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		#set_variable = byz_throne_of_solomon
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = throne
+			value = yes
+		}
+	}
+}
+
 create_artifact_throne_scone_effect = {
 	# Get the character the artifact is being made for.
 	$OWNER$ = { save_scope_as = owner }
@@ -3164,7 +3198,7 @@ create_artifact_szczerbiec_effect = {
 		description = artifact_szczerbiec_description
 		template = general_unique_template
 		type = pedestal
-		visuals = wall_cid_sword
+		visuals = wall_szczerbiec_sword
 		wealth = scope:wealth
 		quality = scope:quality
 		history = {
@@ -3995,4 +4029,150 @@ create_artifact_pedestal_justinian_effect = {
 		set_variable = crown_of_justinian
 		save_scope_as = epic
 	}	
+}
+
+create_artifact_statue_constantine_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_statue_constantine_name
+		description = artifact_statue_constantine
+		type = sculpture
+		visuals = statue_constantine
+		wealth = scope:wealth
+		quality = scope:quality
+		template = statue_constantine_template
+		history = {
+			type = created
+			date = 330.1.1
+			recipient = character:70523 #Constantine the Great
+			location = province:496 #Constantinople
+		}
+		modifier = statue_constantine_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = statue_constantine
+		save_scope_as = epic
+	}
+}
+
+create_artifact_tree_automa_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_tree_automa_name
+		description = artifact_tree_automa
+		type = pedestal
+		visuals = tree_automa
+		wealth = scope:wealth
+		quality = scope:quality
+		template = tree_automa_template
+		history = {
+			type = created_before_history
+		}
+		modifier = tree_automa_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		#set_variable = tree_automa
+		save_scope_as = epic
+	}
+}
+
+create_artifact_statue_four_tetrarchs_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_statue_four_tetrarchs_name
+		description = artifact_statue_four_tetrarchs_desc
+		type = wall_small
+		visuals = statue_four_tetarchs
+		wealth = scope:wealth
+		quality = scope:quality
+		template = tree_automa_template
+		history = {
+			type = created_before_history
+		}
+		modifier = statue_four_tetrarchs_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+	}
+}
+
+create_artifact_statue_roman_woman_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_statue_roman_woman_name
+		description = artifact_statue_roman_woman_desc
+		type = sculpture
+		visuals = statue_roman_woman
+		wealth = scope:wealth
+		quality = scope:quality
+		template = statue_roman_woman_template
+		history = {
+			type = created_before_history
+		}
+		modifier = statue_roman_woman_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+	}
+}
+
+create_artifact_hydraulic_organ_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_hydraulic_organ_name
+		description = artifact_hydraulic_organ_desc
+		type = sculpture
+		visuals = hydraulic_organ
+		wealth = scope:wealth
+		quality = scope:quality
+		template = hydraulic_organ_template
+		history = {
+			type = created_before_history
+		}
+		modifier = hydraulic_organ_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+	}
 }

@@ -219,6 +219,10 @@
     culture = cessair_descendants
     religion = iabhism
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_copper_mines_01
+		special_building = generic_copper_mines_01
+	}
 }
 
 193 = {       #Colla (b_colla)
@@ -3061,6 +3065,10 @@
     culture = lughaid_milesians
     religion = milesian_paganism
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_copper_mines_01
+		special_building = generic_copper_mines_01
+	}
 }
 
 462 = {       #Glenflesk (b_glenflesk)
@@ -5321,6 +5329,10 @@
     culture = newgrange_builders
     religion = newgrange_faith
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 797 = {       #Caherbarna (b_caherbarna)
@@ -5583,6 +5595,10 @@
     culture = eber_milesians
     religion = milesian_paganism
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_copper_mines_01
+		# special_building = generic_copper_mines_01
+	}
 }
 
 836 = {       #Soloheadbeg (b_soloheadbeg)

@@ -4,6 +4,7 @@
 
 window = {
 	name = "character_lifestyle_window"
+	widgetid = "character_lifestyle_window"
 	size = { 100% 100% }
 	parentanchor = center|hcenter
 	#	position = { 80 20 }
@@ -46,7 +47,7 @@ window = {
 	vbox = {
 		name = "lifestyle_selection"
 		visible = "[Not( Lifestyle.IsValid )]"
-		
+
 		margin_top = 10
 
 		state = {
@@ -89,8 +90,8 @@ window = {
 			layoutpolicy_horizontal = expanding
 			layoutpolicy_vertical = expanding
 			margin = { 0 150 }
-			margin_left = 230
-			margin_right = 80
+			margin_left = 260
+			margin_right = 40
 			spacing = 10
 			max_width = 2080
 
@@ -100,7 +101,7 @@ window = {
 					layoutpolicy_horizontal = expanding
 					onclick = "[CharacterLifestyleWindow.OpenLifestyle( Lifestyle.Self )]"
 					onclick = "[PlaySfxEvent( Concatenate( 'event:/SFX/UI/Character/Lifestyle/sfx_ui_character_lifestyle_', Lifestyle.GetKey ) )]"
-					#clicksound = 
+					#clicksound =
 					maximumsize = { -1 900 }
 
 					effectname = "NoHighlight"
@@ -297,7 +298,7 @@ window = {
 		portrait_lifestyles = {
 			alwaystransparent = "[Not(Lifestyle.IsValid)]"
 			parentanchor = bottom|left
-			position = { -110 0 }
+			position = { -200 0 }
 		}
 	}
 
@@ -676,6 +677,11 @@ window = {
 									alpha = 0.4
 								}
 
+								background = {
+									visible = "[EqualTo_string( Lifestyle.GetKey, 'wanderer_lifestyle' )]"
+									texture = "gfx/interface/progressbars/progress_brown.dds"
+									alpha = 0.2
+								}
 
 								vbox = {
 									margin = { 10 5 }
@@ -883,6 +889,22 @@ window = {
 
 									progresstexture = "gfx/interface/progressbars/progress_gray.dds"
 									noprogresstexture = "gfx/interface/progressbars/progress_gray_bg.dds"
+
+									tooltip = "LIFESTYLE_XP_TOOLTIP"
+									using = tooltip_below
+								}
+
+								progressbar_standard = {
+									parentanchor = vcenter
+									size = { 500 20 }
+									visible = "[EqualTo_string( Lifestyle.GetKey, 'wanderer_lifestyle' )]"
+
+									min = 0
+									max = "[IntToFloat( Lifestyle.GetXpPerLevel )]"
+									value = "[FixedPointToFloat( Character.GetLifestyleXp( Lifestyle.Self, '(bool)yes' ) )]"
+
+									progresstexture = "gfx/interface/progressbars/progress_brown.dds"
+									noprogresstexture = "gfx/interface/progressbars/progress_brown_bg.dds"
 
 									tooltip = "LIFESTYLE_XP_TOOLTIP"
 									using = tooltip_below
@@ -1230,6 +1252,8 @@ window = {
 
 														# Non-chosen Mastery perks
 														button_normal = {
+															datacontext = "[Perk.GetUnlockTrait]"
+															datacontext = "[Character.GetFaith]"
 															visible = "[And(And( Character.IsLocalPlayer, Not( Character.HasPerk( Perk.Self ) ) ), Perk.IsFinisher )]"
 															size = { 100 100 }
 															onclick = "[CharacterLifestyleWindow.SelectPerk( Perk.Self )]"
@@ -1239,7 +1263,7 @@ window = {
 															shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
 
 															tooltipwidget = {
-																using = perk_tooltip_selection
+																using = character_trait_tooltip
 															}
 															using = tooltip_se
 															tooltip_offset = {30 0}
@@ -1292,12 +1316,17 @@ window = {
 
 														# Chosen Mastery perks
 														widget = {
+															datacontext = "[Perk.GetUnlockTrait]"
+															datacontext = "[Character.GetFaith]"
 															visible = "[And(Or( Not( Character.IsLocalPlayer ), Character.HasPerk( Perk.Self ) ), Perk.IsFinisher)]"
 															size = { 100 100 }
 
 															tooltipwidget = {
-																using = perk_tooltip_contents
+																using = character_trait_tooltip
 															}
+															using = tooltip_se
+															tooltip_offset = {30 0}
+
 
 															icon = {
 																parentanchor = top|hcenter
@@ -1354,7 +1383,7 @@ window = {
 			mirror = horizontal
 			 modify_texture = {
 			 	texture = "gfx/interface/component_masks/mask_fade_corner.dds"
-			 	blend_mode = alphamultiply				 
+			 	blend_mode = alphamultiply
 			}
 		}
 

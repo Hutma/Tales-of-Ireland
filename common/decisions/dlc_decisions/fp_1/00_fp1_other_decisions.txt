@@ -14,7 +14,9 @@
 
 raise_stele_decision = {
 	title = raise_stele_decision_name
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
+	}
 	desc = raise_stele_decision_desc
 	selection_tooltip = raise_stele_decision_tooltip
 	major = yes

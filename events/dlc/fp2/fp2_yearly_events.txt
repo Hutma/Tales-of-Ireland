@@ -58,6 +58,7 @@ fp2_yearly.1001 = {
 	trigger = {
 		#Strategy Games Culture Tradition
 		has_fp2_dlc_trigger = yes
+		is_landed_or_landless_administrative = yes
 		capital_province = {
 			geographical_region = world_europe_west_iberia
 		}
@@ -149,6 +150,7 @@ fp2_yearly.1002 = {
 	trigger = {
 		has_fp2_dlc_trigger = yes
 		is_adult = yes
+		is_landed_or_landless_administrative = yes
 		any_courtier = { is_available_healthy_ai_adult = yes }
 
 		NOT = {
@@ -591,7 +593,7 @@ fp2_yearly.1006 = {
 	immediate = {
 		add_character_flag = fp2_yearly.1006
 
-		random_county = {
+		random_held_county = {
 			limit = {
 				any_county_province = {
 					geographical_region = world_europe_west_iberia
@@ -764,12 +766,12 @@ fp2_yearly.1008 = {
 	title = fp2_yearly.1008.t
 	desc = fp2_yearly.1008.desc
 	theme = realm
+	override_background = { reference = bp1_wine_cellar }
 	left_portrait = {
 		character = root
 		animation = ecstasy
 
 	}
-
 
 	trigger = {
 		any_artifact = {
@@ -786,9 +788,6 @@ fp2_yearly.1008 = {
 			}
 			save_scope_as = cheese_artifact
 		}
-
-
-
 
 	}
 
@@ -1135,7 +1134,7 @@ fp2_yearly.3001 = {
 	desc = fp2_flavor.3001.desc
 
 	theme = death
-	right_portrait = {
+	left_portrait = {
 		character = ROOT
 		animation = worry
 	}
@@ -1155,7 +1154,7 @@ fp2_yearly.3001 = {
 			}
 			has_trait = wounded_3
 			has_trait = cancer
-			age >= 55
+			age >= 75
 		}
 		NOT = { has_character_flag = had_event_fp2_flavor_3001 }
 		OR = {
@@ -1198,6 +1197,7 @@ fp2_yearly.3001 = {
 			limit = {
 				religion = root.religion
 			}
+			custom = custom.every_vassal
 			add_opinion = {
 				target = ROOT
 				modifier = reputation_opinion
@@ -3915,8 +3915,8 @@ fp2_yearly.8004 = {
 		remove_short_term_gold = monumental_gold_value #this is expensive!
 
 		if = {
-			limit = { 
-				NOT = { cp:councillor_court_chaplain = scope:translation_enthusiast } 
+			limit = {
+				NOT = { cp:councillor_court_chaplain = scope:translation_enthusiast }
 			}
 			add_courtier = scope:translation_enthusiast #he's added to root's court
 		}

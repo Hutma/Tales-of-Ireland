@@ -1211,7 +1211,7 @@ fp3_decision.0015 = {
 		trigger = {
 			scope:change_type = flag:neutral
 			liege ?= {
-				NOt = {
+				NOT = {
 					this = prev
 					# this = title:d_sunni.holder
 				}
@@ -1272,7 +1272,7 @@ fp3_decision.0015 = {
 		trigger = {
 			scope:change_type = flag:flipflop
 			liege ?= {
-				NOt = {
+				NOT = {
 					this = prev
 					# this = title:d_sunni.holder
 				}

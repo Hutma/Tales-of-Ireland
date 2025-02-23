@@ -43,6 +43,7 @@
  world_steppe_tarim:0 "Tarim Basin"
  world_steppe_west:0 "Western Steppe"
  world_steppe_east:0 "Eastern Steppe"
+ world_central_asia: "Central Asia"
  world_steppe:0 "Steppe"
  world_europe:0 "Europe"
  world_middle_east:0 "Middle East"
@@ -128,6 +129,10 @@
  custom_polabia:0 "Sorbia"
  ghw_region_britannia:0 "the British Isles"
  ghw_region_germany:0 "Germany"
+ ghw_region_anatolia: "Anatolia"
+ ghw_region_egypt_et_al: "Egypt"
+ israel_region: "Israel"
+ troy_region: "Troy"
 
  #FP1
  dlc_fp1_region_core_north_sea:0 "North Sea Heartlands"
@@ -141,6 +146,10 @@
  dlc_fp2_old_vasconia:0 "Old Vasconia"
  dlc_fp2_old_vasconia_pushed:0 "Old Vasconia"
  dlc_fp2_dlc_fp2_caucasian_iberia:0 "Caucasian Iberia"
+
+ #FP3
+ dlc_fp3_eastern_persian_frontier_regions: "Eastern Frontier"
+ dlc_fp3_greater_persian_frontier_regions: "Greater Persian Frontier"
 
  #EP1
  dlc_ep1_achievement_rise_of_the_ghurids:0 "Historical Ghurid Empire"
@@ -172,3 +181,6 @@
  sea_inland_steppe_seas:0 "the Aral-Caspian Seas"
  sea_caspian_sea:0 "the Caspian Sea"
  sea_aral_sea:0 "the Aral Sea"
+
+ #EP3
+ custom_theodosian_ere: "Theodosian Eastern Empire"

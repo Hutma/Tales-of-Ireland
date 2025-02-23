@@ -12,6 +12,12 @@
 			}
 		}
 	}
+
+	allowed_for_character = {
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+		}
+	}
 	
 	attacker_score_from_occupation_scale = 150
 	attacker_score_from_battles_scale = 150
@@ -200,6 +206,9 @@
 
 		# FP1: note the victory for future memorialisation via stele (if applicable).
 		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
 	}
 
 	on_white_peace_desc = {
@@ -239,6 +248,9 @@
 			stress_impact = { arrogant = medium_stress_impact_gain }
 		}
 		add_truce_white_peace_effect = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
 	}
 
 	on_defeat_desc = {
@@ -298,6 +310,9 @@
 		add_truce_attacker_defeat_effect = yes
 		scope:attacker = { save_temporary_scope_as = loser }
 		on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
 	}
 
 	transfer_behavior = transfer

@@ -1,5 +1,7 @@
 ﻿my_inner_wolf_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	}
 
 	ai_check_interval = 60
 	
@@ -41,7 +43,9 @@
 }
 
 call_the_pack_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	}
 
 	ai_check_interval = 80
 	
@@ -80,9 +84,11 @@ call_the_pack_decision = {
 }
 
 wolfwalker_resilience_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_wolfwalkers.dds"
+	}
 	
-	major = yes
+	decision_group_type = major
 	ai_check_interval = 40
 	
 	

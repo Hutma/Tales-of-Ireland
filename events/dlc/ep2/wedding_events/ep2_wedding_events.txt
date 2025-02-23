@@ -422,6 +422,7 @@ ep2_wedding.0150 = {
 				save_scope_as = spouse_2_portrait
 			}
 		}
+		base_legitimacy_intent_reward = yes
 	}
 
 	option = {
@@ -720,47 +721,6 @@ ep2_wedding.0151 = {
 			}
 			scope:spouse_2 = {
 				add_character_modifier = { modifier = wedding_fertility_delay_modifier }
-			}
-		}
-		# The spouse should not head back home where they came from if they are unlanded!
-		hidden_effect = {
-			if = {
-				limit = {
-					scope:spouse_2.court_owner = scope:spouse_1
-				}
-				if = {
-					limit = {
-						exists = scope:spouse_2.current_travel_plan
-					}
-					if = {
-						limit = {
-							NOT = { scope:spouse_2.current_travel_plan.travel_plan_owner = scope:spouse_2 }
-						}
-						scope:spouse_2.current_travel_plan = { remove_character = scope:spouse_2 }
-						scope:spouse_1.current_travel_plan ?= {
-							add_companion = scope:spouse_2
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					scope:spouse_1.court_owner = scope:spouse_2
-				}
-				if = {
-					limit = {
-						exists = scope:spouse_1.current_travel_plan
-					}
-					if = {
-						limit = {
-							NOT = { scope:spouse_2.current_travel_plan.travel_plan_owner = scope:spouse_1 }
-						}
-						scope:spouse_1.current_travel_plan = { remove_character = scope:spouse_1 }
-						scope:spouse_2.current_travel_plan ?= {
-							add_companion = scope:spouse_1
-						}
-					}
-				}
 			}
 		}
 		# Progress to next phase
@@ -1693,6 +1653,17 @@ ep2_wedding.0998 = {
 			}
 			remove_variable = promised_grand_wedding_by
 		}
+		if = {
+			limit = {
+				exists = scope:spouse_1
+				exists = scope:spouse_2
+			}
+			show_as_tooltip = {
+				scope:spouse_1 = {
+					break_betrothal = scope:spouse_2
+				}
+			}
+		}
 	}
 
 	option = {
@@ -2098,11 +2069,6 @@ ep2_wedding.1010 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -2545,11 +2511,6 @@ ep2_wedding.1080 = {
 	lower_center_portrait = scope:matchmaking_2
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -3695,6 +3656,11 @@ ep2_wedding.1030 = {
 		}
 
 		add_character_flag = busy_in_ceremony_event
+		
+		random = {
+			chance = legend_seed_chance_low
+			add_character_flag = wedding_legend_seed
+		}
 	}
 
 	#Option A: good omen - excellent!
@@ -3796,6 +3762,40 @@ ep2_wedding.1030 = {
 		}
 		ai_chance = {
 			base = 100
+		}
+	}
+
+	#Option D: good omen - you get a legend seed!
+	option = {
+		name = ep2_wedding.1030.d
+		trigger = {
+			has_character_flag = good_thing_flag
+			NOR = {
+				has_personal_legend_seed = heroic
+				has_personal_legend_seed = holy
+				has_personal_legend_seed = legitimizing
+			}
+			has_character_flag = wedding_legend_seed
+			OR = {
+				scope:spouse_2.dynasty = root.dynasty
+				scope:spouse_1.dynasty = root.dynasty
+			} 
+		}
+
+		scope:activity = {
+			add_activity_log_entry = {
+				key = wedding_omen_good_log
+				tags = { good }
+				score = 50
+				character = root
+				target = scope:spouse_2
+			}
+		}
+
+		legend_seed_great_deed_dynasty_effect = yes
+
+		ai_chance = { #AI can into legend seeds
+			base = 200
 		}
 	}
 
@@ -4835,16 +4835,18 @@ ep2_wedding.1122 = {
 						opinion = -30
 					}
 				}
-				if = {
-					limit = {
-						can_add_hook = {
+				root = {
+					if = {
+						limit = {
+							can_add_hook = {
+								target = scope:trouble_child
+								type = indebted_hook
+							}
+						}
+						add_hook = {
 							target = scope:trouble_child
 							type = indebted_hook
 						}
-					}
-					add_hook = {
-						target = scope:trouble_child
-						type = indebted_hook
 					}
 				}
 			}
@@ -4912,16 +4914,18 @@ ep2_wedding.1122 = {
 				character = root
 				target = scope:trouble_child
 				# Effect
-				if = {
-					limit = {
-						can_add_hook = {
+				root = {
+					if = {
+						limit = {
+							can_add_hook = {
+								target = scope:trouble_child
+								type = indebted_hook
+							}
+						}
+						add_hook = {
 							target = scope:trouble_child
 							type = indebted_hook
 						}
-					}
-					add_hook = {
-						target = scope:trouble_child
-						type = indebted_hook
 					}
 				}
 			}
@@ -6048,11 +6052,6 @@ ep2_wedding.1150 = {
 
 	cooldown = { years = 1 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -6353,11 +6352,6 @@ ep2_wedding.1160 = {
 	lower_right_portrait = scope:host
 
 	cooldown = { years = 1 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -7102,25 +7096,25 @@ ep2_wedding.1180 = {
 			limit = {
 				can_start_scheme = {
 					type = seduce
-					target = scope:other_spouse
+					target_character = scope:other_spouse
 				}
 			}
 			start_scheme = {
 				type = seduce
-				target = scope:other_spouse
+				target_character = scope:other_spouse
 			}
 		}
 		else_if = {		
 			limit = {
 				any_scheme = {
 					scheme_type = seduce
-					scheme_target = scope:other_spouse
+					scheme_target_character = scope:other_spouse
 				}
 			}
 			random_scheme = {
 				limit = {
 					scheme_type = seduce
-					scheme_target = scope:other_spouse
+					scheme_target_character = scope:other_spouse
 				}
 				add_scheme_progress = scheme_progress_gain
 			}
@@ -8114,7 +8108,7 @@ ep2_wedding.1210 = {
 				trigger = {
 					scope:talk_to = {
 						any_sub_realm_county = {
-							any_province = {
+							any_county_province = {
 								has_province_modifier = recently_looted_modifier
 							}
 						}
@@ -8159,11 +8153,6 @@ ep2_wedding.1210 = {
 	}
 
 	cooldown = { years = 1 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -9966,7 +9955,7 @@ ep2_wedding.1070 = {
 										trigger = {
 											NOT = { has_trait = maimed }
 										}
-										add_trait = maimed
+										apply_maimed_trait_and_modifier_effect = yes
 									}
 									30 = {
 										trigger = {
@@ -10107,7 +10096,7 @@ ep2_wedding.1070 = {
 										trigger = {
 											NOT = { has_trait = maimed }
 										}
-										add_trait = maimed
+										apply_maimed_trait_and_modifier_effect = yes
 									}
 									30 = {
 										trigger = {
@@ -10315,7 +10304,7 @@ ep2_wedding.1070 = {
 										trigger = {
 											NOT = { has_trait = maimed }
 										}
-										add_trait = maimed
+										apply_maimed_trait_and_modifier_effect = yes
 									}
 									30 = {
 										trigger = {
@@ -10422,7 +10411,6 @@ ep2_wedding.1070 = {
 								callous = minor_stress_impact_gain
 								deceitful = medium_stress_impact_gain
 								arrogant = medium_stress_impact_gain
-								deceitful = medium_stress_impact_gain
 								vengeful = medium_stress_impact_gain
 								sadistic = major_stress_impact_gain 
 							}
@@ -10479,7 +10467,6 @@ ep2_wedding.1070 = {
 								callous = minor_stress_impact_loss
 								deceitful = medium_stress_impact_loss
 								arrogant = medium_stress_impact_loss
-								deceitful = medium_stress_impact_loss
 								vengeful = medium_stress_impact_loss
 								sadistic = major_stress_impact_loss
 							}
@@ -10771,11 +10758,6 @@ ep2_wedding.1090 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -10878,7 +10860,7 @@ ep2_wedding.1090 = {
 											}
 										}
 									}
-									add_prestige = minor_prestige_gain
+									root = { add_prestige = minor_prestige_gain }
 								}
 							}
 						}
@@ -12651,10 +12633,12 @@ ep2_wedding.1300 = {
 	left_portrait = {
 		character = root
 		animation = thinking
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:spouse_2
 		animation = worry
+		outfit_tags = { no_clothes }
 	}
 
 	cooldown = { years = 10 }
@@ -13351,10 +13335,12 @@ ep2_wedding.1301 = { #Spouse response
 	left_portrait = {
 		character = scope:spouse_1
 		animation = thinking
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = root
 		animation = worry
+		outfit_tags = { no_clothes }
 	}
 
 	option = { #I want to be worthy of your love...
@@ -16296,11 +16282,6 @@ ep2_wedding.2000 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		has_ep2_dlc_trigger = yes
 		has_activity_intent = diplomatic_intent
@@ -17618,10 +17599,12 @@ ep2_wedding.3030 = {
 			animation = flirtation_left
 		}
 		animation = love
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:my_spouse
 		animation = flirtation
+		outfit_tags = { no_clothes }
 	}
 	artifact = {
 		target = scope:love_memento
@@ -18315,11 +18298,6 @@ ep2_wedding.3050 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -19198,7 +19176,6 @@ ep2_wedding.3300 = {
 	theme = wedding_night_activity
 	left_portrait = {
 		character = root
-		outfit_tags = { nightgown }
 		triggered_animation = {
 			trigger = {
 				OR = {
@@ -19218,10 +19195,10 @@ ep2_wedding.3300 = {
 			animation = flirtation_left
 		}
 		animation = idle
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:my_spouse
-		outfit_tags = { nightgown }
 		triggered_animation = {
 			trigger = {
 				OR = {
@@ -19241,6 +19218,7 @@ ep2_wedding.3300 = {
 			animation = flirtation
 		}
 		animation = idle
+		outfit_tags = { no_clothes }
 	}
 	lower_left_portrait = scope:bedding_witness_1
 	lower_center_portrait = scope:bedding_witness_2
@@ -19847,7 +19825,7 @@ scripted_trigger wedding_3400_shared_trigger = {
 	is_participant_in_activity = scope:activity
 	NOR = {
 		this = root
-		any_relation = { this = root }
+		has_any_scripted_relation = root
 		scope:activity.special_guest:spouse_1 ?= this
 		scope:activity.special_guest:spouse_2 ?= this
 		is_child_of = root
@@ -20686,17 +20664,17 @@ ep2_wedding.3410 = {
 			}
 			can_start_scheme = {
 				type = murder
-				target = scope:jealousy_usurper
+				target_character = scope:jealousy_usurper
 			}
 		}
 		start_scheme = {
-			target = scope:jealousy_usurper
+			target_character = scope:jealousy_usurper
 			type = murder
 		}
 		random_scheme = {
 			limit = {
 				scheme_type = murder
-				scheme_target = scope:jealousy_usurper
+				scheme_target_character = scope:jealousy_usurper
 			}
 			add_scheme_modifier = { type = wedding_consorts_envy_modifier }
 		}
@@ -21073,7 +21051,7 @@ ep2_wedding.3420 = {
 						this = root
 						this = scope:activity.special_guest:spouse_1
 						this = scope:activity.special_guest:spouse_2
-						any_relation = { this = root }
+						has_any_scripted_relation = root
 					}
 					opinion = {
 						target = root
@@ -21278,10 +21256,10 @@ ep2_wedding.3420 = {
 						trigger = {
 							NOT = { exists = scope:wedding_lech }
 							would_attempt_to_seduce_married_trigger = yes
+							is_eunuch_trigger = no
 							NOR = {
 								has_trait = celibate
 								has_trait = devoted
-								has_trait = eunuch
 							}
 						}
 						modifier = {
@@ -22069,16 +22047,12 @@ scripted_effect wedding_3500_save_family_effect = {
 
 scripted_trigger ep2_wedding_3500_active_bedroom_trigger = {
 	scope:my_family_spouse = {
-		NOR = {
-			has_trait = celibate
-			has_trait = eunuch
-		}
+		is_eunuch_trigger = no
+		NOT = { has_trait = celibate }
 	}
 	scope:other_family_spouse = {
-		NOR = {
-			has_trait = celibate
-			has_trait = eunuch
-		}
+		is_eunuch_trigger = no
+		NOT = { has_trait = celibate }
 	}
 }
 
@@ -22634,11 +22608,6 @@ ep2_wedding.4000 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -22879,11 +22848,6 @@ ep2_wedding.2010 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		this = scope:host #you're the host

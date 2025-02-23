@@ -154,3 +154,11 @@ is_army_in_siege_relevant_for = {
 raid_loot = {
 	global = RAID_LOOT_TRIGGER
 }
+
+is_occupied = {
+	global = IS_OCCUPIED_TRIGGER
+}
+
+army_supply = {
+	global = ARMY_SUPPLY_TRIGGER
+}

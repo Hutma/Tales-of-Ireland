@@ -896,6 +896,10 @@
     culture = newgrange_builders
     religion = newgrange_faith
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 1118 = {      #Hearnsbrook (b_hearnsbrook)
@@ -1544,6 +1548,10 @@
     culture = fir_bolg
     religion = ancient_greek_slave
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 1215 = {      #Clonbur (b_clonbur)
@@ -3997,6 +4005,10 @@
     culture = fir_bolg
     religion = ancient_greek_slave
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 1599 = {      #Ballygawlley (b_ballygawlley)

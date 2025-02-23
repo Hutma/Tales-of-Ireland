@@ -1,0 +1,9 @@
+﻿l_english:
+ 
+ epidemic_mad_cow: "Mad Cow"
+ epidemic_realm_mad_cow: "$epidemic_realm_loc$ Mad Cattle"
+ epidemic_holder_mad_cow: "$epidemic_holder_loc$ Mad Herd"
+ epidemic_culture_mad_cow: "$epidemic_culture_loc$ Mad Cows"
+ epidemic_location_mad_cow: "$epidemic_province_loc$ Mad Herd"
+ epidemic_rulers_mad_cow: "$epidemic_ruler_possessive_loc$ Mad Cattle"
+ epidemic_titled_rulers_mad_cow: "$epidemic_titled_ruler_possessive_loc$ Mad Cows"

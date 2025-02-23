@@ -3,6 +3,7 @@
 		limit = {
 			exists = $TARGET_FAITH$.religious_head_title
 			exists = $TARGET_FAITH$.religious_head_title.holder
+			NOT = { $TARGET_FAITH$.religious_head_title = $REPLACEMENT_FAITH$.religious_head_title }
 		}
 
 		$TARGET_FAITH$.religious_head_title.holder = {

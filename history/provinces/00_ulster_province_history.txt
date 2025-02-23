@@ -1361,6 +1361,10 @@
     culture = underground_fomorians
     religion = dark_gods
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 2050 = {      #Quigleyspoint (b_quigleyspoint)
@@ -2525,6 +2529,10 @@
     culture = sogain
     religion = great_barrows
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_gold_mines_01
+		# special_building = generic_gold_mines_01
+	}
 }
 
 2232 = {      #Ballycrannog (b_ballycrannog)
@@ -3470,6 +3478,10 @@
     culture = bell_beakers
     religion = fomorian_worship
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 2373 = {      #Finner (b_finner)

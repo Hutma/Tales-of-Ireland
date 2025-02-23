@@ -1,0 +1,475 @@
+﻿# All start dates
+sons_of_david = {
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = sons_of_david_legend
+		}
+		# dynasty = dynasty:507 # Bagratoni
+		has_trait = cessarian
+	}
+	is_valid = {
+		has_trait = cessarian
+		faith = faith:iabhism
+		prestige_level >= medium_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:cessair_descendants
+		title = title:k_people_cessair
+		original_region = geographical_region:region_munster
+	}
+}
+
+# holy_warrior = { # Generico Crusader legend
+	# type = heroic
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# faith = {
+			# OR = {
+				# has_doctrine_parameter = great_holy_wars_active
+				# has_doctrine_parameter = great_holy_wars_active_if_reformed
+			# }
+		# }
+		# has_trait = crusader_king
+	# }
+	# is_valid = {
+		# has_trait = crusader_king
+	# }
+
+	# chronicle = holy_warrior
+	# chronicle_properties = {
+		# ancestor = root
+		# religion = root.religion
+	# }
+# }
+
+holy_site = { # Holy Site
+	type = holy
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		is_landed = yes
+		faith = {
+			any_holy_site = {
+				OR = {
+					county.holder = root
+					county.holder.top_liege = root
+				}
+			}
+		}
+	}
+	is_valid = {
+		piety_level >= very_high_piety_level
+	}
+
+	chronicle = saintly_location
+	chronicle_properties = {
+		location = root.location
+		religion = root.religion
+		faith = root.faith
+	}
+}
+
+sceafa = { # Claims to be descended from Noah
+	type = holy
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = sceafa_legend
+		}
+		has_trait = cessarian
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		piety_level >= high_piety_level
+	}
+
+	chronicle = saintly_descent
+	chronicle_properties = {
+		ancestor_flag = flag:noah # this felt very weird to type out
+		religion = root.religion
+	}
+}
+
+scota = { # Scots claiming ancestry from Ancient Egypt
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = scota_legend
+		}
+		has_title = title:e_caledonia
+		culture = {
+			# OR = {
+				has_cultural_pillar = heritage_brythonic
+				# has_cultural_pillar = heritage_goidelic
+			# }
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:ancient_egyptian
+		title = title:e_caledonia
+		original_region = geographical_region:region_scotland
+	}
+}
+
+# pyusawhti = { # Burmese legend claiming ancestry from a dragon goddess
+	# type = heroic
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = pyusawhti_legend
+		# }
+		# dynasty = dynasty:2000000
+		# has_title = title:k_pagan
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_kingdom
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = mythical_descent
+	# chronicle_properties = {
+		# beast = flag:dragon
+	# }
+# }
+
+# menelik_i = { # Supposed son of Solomon and the Queen of Sheba
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = menelik_i_legend
+		# }
+		# dynasty = dynasty:7246
+		# religion = { is_in_family = rf_abrahamic }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_kingdom
+		# piety_level >= very_high_piety_level
+	# }
+
+	# chronicle = ancient_people
+	# chronicle_properties = {
+		# culture = culture:hebrew
+		# title = title:e_abyssinia
+		# original_region = geographical_region:ghw_region_jerusalem
+	# }
+# }
+
+# kings_of_semien = { # Ancestry to the Danites of Israel, and mythical kings of Semien
+	# type = holy
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = kings_of_semien_legend
+		# }
+		# dynasty = dynasty:1022242
+		# religion = religion:judaism_religion
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# has_title = title:d_gondar
+		# piety_level >= very_high_piety_level
+	# }
+
+	# chronicle = ancient_people
+	# chronicle_properties = {
+		# culture = culture:hebrew
+		# title = title:e_abyssinia
+		# original_region = geographical_region:israel_region
+	# }
+# }
+
+# roman_heritage = { # Erm, my family are *actually* Roman nobles erm
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = roman_heritage_legend
+		# }
+		# OR = {
+			# has_title = title:e_hre
+			# has_title = title:e_byzantium
+			# has_title = title:e_roman_empire
+			# has_title = title:k_rum
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_kingdom
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancient_people
+	# chronicle_properties = {
+		# culture = culture:roman
+		# title = title:e_roman_empire
+		# original_region = geographical_region:custom_roman_full_borders
+	# }
+# }
+
+# hunnic_heritage = { # MY nomadic people *totally* are the Huns guys
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = hunnic_heritage_legend
+		# }
+		# NOT = { culture = culture:hunnic }
+		# OR = {
+			# culture = { has_cultural_pillar = heritage_hunnic } #Custom cultures and such
+			# culture = { has_cultural_pillar = heritage_magyar }
+			# culture = { has_cultural_pillar = heritage_mongolic }
+			# culture = { has_cultural_pillar = heritage_turkic }
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_kingdom
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancient_people
+	# chronicle_properties = {
+		# culture = culture:hunnic
+		# title = title:e_caspian-pontic_steppe
+		# original_region = geographical_region:world_steppe_west
+	# }
+# }
+
+# premysl = { # Descent from Premysl of Bohemia
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = premysl_legend
+		# }
+		# dynasty = dynasty:506
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_duchy
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancestral_glory
+	# chronicle_properties = {
+		# ancestor = character:168345
+		# title = title:k_bohemia
+	# }
+# }
+
+# borjigin = { # Alan Gua was impregnated by a ray of light
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = borjigin_legend
+		# }
+		# dynasty = dynasty:11100
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_duchy
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancestral_glory
+	# chronicle_properties = {
+		# ancestor = character:303250
+		# title = title:e_mongolia
+	# }
+# }
+
+# naga_descent = { # Kashmiri kings claim descent from Naga (divine snake people or "sneople" for short)
+	# type = holy
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = naga_descent_legend
+		# }
+		# OR = {
+			# culture = culture:kashmiri
+			# culture = {
+				# any_parent_culture_or_above = {
+					# this = culture:kashmiri
+				# }
+			# }
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# has_title = title:k_kashmir
+		# piety_level >= high_piety_level
+	# }
+
+	# chronicle = mythical_descent
+	# chronicle_properties = {
+		# beast = flag:naga
+	# }
+# }
+
+# hieros_gamos_skirnismal = { # Fjolnir Yngling descended from Freyr and Gerdr
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = hieros_gamos_skirnismal_legend
+		# }
+		# dynasty = dynasty:499
+		# OR = { # You must still be in an era where Nordic gods are still seen as kinda cool
+			# culture = culture:norse
+			# religion = religion:germanic_religion
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = godly_descent
+	# chronicle_properties = {
+		# god = flag:germanic_high_god_name
+		# title = title:k_norway
+	# }
+# }
+
+# shibi_chakravarti = { # Chola claiming descent from the legendary king Shibi
+	# type = holy
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = shibi_chakravarti_legend
+		# }
+		# dynasty = dynasty:1043008
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# piety_level >= very_high_piety_level
+	# }
+
+	# chronicle = saintly_descent
+	# chronicle_properties = {
+		# ancestor_flag = flag:shibi_chakravarti
+		# religion = root.religion
+	# }
+# }
+
+# the_red_hand = { # He who first lays hand on Ulster shall be its King
+	# type = legitimizing
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = the_red_hand_legend
+		# }
+		# OR = {
+			# culture = culture:irish
+			# culture = {
+				# any_parent_culture_or_above = {
+					# this = culture:irish
+				# }
+			# }
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# has_title = title:d_ulster
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancestral_glory
+	# chronicle_properties = {
+		# ancestor = character:7255
+		# title = title:k_ireland
+	# }
+# }
+
+# ragnarr = { # Ol Raggy S
+	# type = heroic
+	# quality = famed
+	# is_shown = {
+		# has_dlc_feature = legends
+		# NOT = {
+			# has_global_variable = ragnarr_legend
+		# }
+		# dynasty = dynasty:490
+		# exists = character:163109
+		# character:163109 = { is_alive = no }
+		# OR = {
+			# religion = { is_in_family = rf_pagan }
+			# culture = { has_cultural_parameter = has_access_to_runestones }
+		# }
+	# }
+	# is_valid = {
+		# is_landed = yes
+		# highest_held_title_tier >= tier_kingdom
+		# prestige_level >= high_prestige_level
+	# }
+
+	# chronicle = ancestral_glory
+	# chronicle_properties = {
+		# ancestor = character:163109
+		# title = title:e_britannia # You could argue Scandinavia but ultimately ehhhhhhh
+	# }
+# }
+
+#Dynasty perk
+ce1_heroic_legacy_1 = {
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		dynasty = {
+			has_dynasty_perk = ce1_heroic_legacy_1
+			NOT = {
+				exists = var:dynasty_legend_used
+			}
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		OR = {
+			is_ai = no
+			# Prevent the AI from sniping the seed from the player
+			AND = {
+				is_ai = yes
+				NOT = {
+					dynasty = { any_dynasty_member = { is_ai = no } }
+				}
+			}
+		}
+	}
+	chronicle = great_deed_dynasty
+	chronicle_properties = {
+		founder = house.house_founder
+		dynasty = dynasty
+		title = primary_title
+	}
+}

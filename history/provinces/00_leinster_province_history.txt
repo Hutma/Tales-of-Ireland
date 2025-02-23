@@ -1160,6 +1160,10 @@
     culture = fir_gailioin
     religion = ancient_greek_slave
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 3271 = {      #Ballinaberna (b_ballinaberna)
@@ -3062,6 +3066,10 @@
     culture = gaileanga
     religion = the_old_gods
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 3557 = {      #Tonelagee (b_tonelagee)
@@ -7948,6 +7956,10 @@
     culture = the_plagued
     religion = sons_of_the_ocean
     holding = castle_holding
+	2500.1.1 = {
+		special_building_slot = generic_silver_mines_01
+		# special_building = generic_silver_mines_01
+	}
 }
 
 4287 = {      #Killiney (b_killiney)

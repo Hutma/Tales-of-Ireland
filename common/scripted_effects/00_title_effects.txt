@@ -16,15 +16,15 @@
 reduce_partition_succession_law_effect = {
 	if = {
 		limit = {
-			has_title_law = partition_succession_law
+			has_realm_law = partition_succession_law
 		}
-		add_title_law = confederate_partition_succession_law
+		has_realm_law = confederate_partition_succession_law
 	}
 	else_if = {
 		limit = {
-			has_title_law = confederate_partition_succession_law
+			has_realm_law = confederate_partition_succession_law
 		}
-		add_title_law = ancient_partition_succession_law
+		has_realm_law = ancient_partition_succession_law
 	}
 	# else_if = {
 		# limit = {

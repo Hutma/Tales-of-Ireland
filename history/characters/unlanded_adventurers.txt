@@ -1,0 +1,256 @@
+﻿290000 = { #wants to convert the island to its faith, decision to convert without holding lands. Goal to convert all of Manx, decision to Form the Holy Refuge this way
+    name = "Esther"
+    dynasty =  4 
+    religion = iabhism
+    culture = cessair_descendants
+
+    diplomacy = 9
+    martial = 3
+    stewardship = 7
+    intrigue = 4
+    learning = 8
+    prowess = 10
+
+    trait = education_diplomacy_3
+    trait = fickle
+    trait = temperate
+    trait = chaste
+    trait = cessarian
+
+    disallow_random_traits = yes
+    4776.1.1 = {
+        birth = yes
+    }
+}
+
+290001 = { #An Adventurer with claims on a kingdom he wishes to conquer
+    name = "Neulenna"
+    dynasty =  264 
+    religion = sons_of_the_ocean
+    culture = first_landers
+	
+	female = yes
+
+    diplomacy = 7
+    martial = 6
+    stewardship = 9
+    intrigue = 8
+    learning = 12
+    prowess = 9
+
+    trait = education_martial_2
+    trait = honest
+    trait = just
+    trait = brave
+    trait = partholonian
+
+    disallow_random_traits = yes
+    4772.1.1 = {
+        birth = yes
+    }
+}
+
+290002 = { #Vampire (wants to spread vampires accross the map, decision to get a random county claim (in current empire, event to select between 4 choices) for one of its vampire subject. Decision to Form the Vampiric Empire if 100 counties are held by Vampires in the World)
+    name = "Hincomhal"
+    dynasty =  265 
+    religion = sons_of_the_ocean
+    culture = the_plagued
+
+    diplomacy = 8
+    martial = 10
+    stewardship = 9
+    intrigue = 6
+    learning = 8
+    prowess = 10
+
+    trait = education_intrigue_2
+    trait = paranoid
+    trait = honest
+    trait = fickle
+    trait = partholonian
+	trait = irish_vampire
+
+    disallow_random_traits = yes
+    4782.1.1 = {
+        birth = yes
+    }
+}
+
+290003 = { # Strongest Warrior (decision that lets him duel fomorian and tuatha de dannan kings, goal to kill the kings, starts 16 and weak, have to get strong) will loose crave for brave
+    name = "xx"
+    dynasty =  000 
+    religion = ancient_greek_slave
+    culture = fir_gailioin
+
+    diplomacy = 6
+    martial = 8
+    stewardship = 8
+    intrigue = 5
+    learning = 9
+    prowess = 6
+
+    trait = education_martial_3
+    trait = diligent
+    trait = craven
+    trait = calm
+    trait = fir_bolg
+
+    disallow_random_traits = yes
+    4783.1.1 = {
+        birth = yes
+    }
+}
+
+290004 = { #Magician (ancient family at the head of Munster, have claims over there)
+    name = "xx"
+    dynasty =  000 
+    religion = sidhe_beliefs
+    culture = de_danann
+
+    diplomacy = 6
+    martial = 8
+    stewardship = 8
+    intrigue = 5
+    learning = 6
+    prowess = 4
+
+    trait = education_learning_3
+    trait = zealous
+    trait = patient
+    trait = sadistic
+    trait = tuatha_de_danann
+	trait = magician_good_1
+
+    disallow_random_traits = yes
+    4770.1.1 = {
+        birth = yes
+    }
+}
+
+290005 = { #Wolfwalker banned from its lands because of his cruel ways (NEW FAITH, cruel one, wants to form the kingdom of Ossory)
+    name = "xx"
+    dynasty =  000 
+    religion = milesian_paganism
+    culture = eremon_milesians
+
+    diplomacy = 8
+    martial = 8
+    stewardship = 4
+    intrigue = 4
+    learning = 6
+    prowess = 10
+
+    trait = education_martial_2
+    trait = lustful
+    trait = temperate
+    trait = calm
+    trait = milesian
+	triat = wolfwalker
+
+    disallow_random_traits = yes
+    4777.1.1 = {
+        birth = yes
+    }
+}
+
+290006 = { #Goll Mac Morna (Fianna faith, Leinster, wants to form the greatest mercenary band and become High King)
+    name = "xx"
+    dynasty =  000 
+    religion = le_cheile_faith
+    culture = luighne
+
+    diplomacy = 4
+    martial = 10
+    stewardship = 6
+    intrigue = 4
+    learning = 4
+    prowess = 12
+
+    trait = education_martial_4
+    trait = brave
+    trait = arrogant
+    trait = stubborn
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4767.1.1 = {
+        birth = yes
+    }
+}
+
+290007 = { #Dall Riata (Starts nothern Ulster, wants to invade Scotland)
+    name = "xx"
+    dynasty =  000 
+    religion = the_old_gods
+    culture = dal_riata
+
+    diplomacy = 10
+    martial = 7
+    stewardship = 10
+    intrigue = 6
+    learning = 4
+    prowess = 9
+
+    trait = education_stewardship_3
+    trait = generous
+    trait = ambitious
+    trait = gregarious
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4774.1.1 = {
+        birth = yes
+    }
+}
+
+290008 = { #Lost band (Starts with an army, it's a lost band of Hy Brasilian. Make sure they access to the right content (conquest?), decision to call armies every 7 years)
+    name = "xx"
+    dynasty =  000 
+    religion = hy_brazil_sidhe
+    culture = hy_brazylian_culture
+
+    diplomacy = 4
+    martial = 10
+    stewardship = 10
+    intrigue = 6
+    learning = 8
+    prowess = 12
+
+    trait = education_learning_3
+    trait = stubborn
+    trait = diligent
+    trait = impatient
+    trait = hy_brazylian
+
+    disallow_random_traits = yes
+    4771.1.1 = {
+        birth = yes
+    }
+}
+
+290009 = { #Golden Builder (have to adventure to get the plans for a Golden Tower and building it once landed, adding a new unique building to capital county)
+    name = "xx"
+    dynasty =  000 
+    religion = scythian_heritage
+    culture = ramor_nemedians
+	
+	female = yes
+
+    diplomacy = 8
+    martial = 8
+    stewardship = 12
+    intrigue = 6
+    learning = 6
+    prowess = 6
+
+    trait = education_stewardship_4
+    trait = diligent
+    trait = calm
+    trait = temperate
+    trait = nemedian
+
+    disallow_random_traits = yes
+    4781.1.1 = {
+        birth = yes
+    }
+}

@@ -1,5 +1,7 @@
 ﻿sacrifice_to_sidhe_decision = {
-	picture = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/religion_decision.dds"
+	}
 	
 	desc = sacrifice_to_sidhe_decision_desc
 
@@ -46,7 +48,9 @@
 }
 
 hail_high_king_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
 	
 	desc = hail_high_king_decision_desc
 
@@ -97,7 +101,9 @@ hail_high_king_decision = {
 }
 
 high_king_protection_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
 	
 	desc = high_king_protection_decision_desc
 
@@ -146,7 +152,9 @@ high_king_protection_decision = {
 }
 
 establish_sean_bar_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
 	
 	desc = establish_sean_bar_decision_desc
 	
@@ -209,7 +217,9 @@ establish_sean_bar_decision = {
 }
 
 call_gladiators_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_toi_rule.dds"
+	}
 	
 	desc = call_gladiators_decision_desc
 	
@@ -250,7 +260,9 @@ call_gladiators_decision = {
 }
 
 buy_mercenaries_with_cattle_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_cattle.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_cattle.dds"
+	}
 	
 	desc = buy_mercenaries_with_cattle_decision_desc
 	

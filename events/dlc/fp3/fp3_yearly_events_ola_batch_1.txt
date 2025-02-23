@@ -1196,23 +1196,12 @@ fp3_yearly.8003 = { #Exotic Espand
 			}
 		} 
 
-		OR = {
-			any_county_in_region = {
-				region = world_persian_empire
-				fp3_yearly_8003_far_away_mountain_trigger = yes
-			}
-			any_county_in_region = {
-				region = world_steppe_tarim
-				fp3_yearly_8003_far_away_mountain_trigger = yes
-			}
-			any_county_in_region = {
-				region = world_himalaya
-				fp3_yearly_8003_far_away_mountain_trigger = yes
-			}
-			any_county_in_region = {
-				region = world_middle_east_arabia
-				fp3_yearly_8003_far_away_mountain_trigger = yes
-			}
+		any_county_in_region = {
+			region = world_persian_empire
+			region = world_steppe_tarim
+			region = world_himalaya
+			region = world_middle_east_arabia
+			fp3_yearly_8003_far_away_mountain_trigger = yes
 		}
 
 		any_consort = { 
@@ -1280,7 +1269,11 @@ fp3_yearly.8003 = { #Exotic Espand
 			save_scope_as = cruel_consort
 		}
 
-		random_county = {
+		random_county_in_region = {
+			region = world_persian_empire
+			region = world_steppe_tarim
+			region = world_himalaya
+			region = world_middle_east_arabia
 			limit = { fp3_yearly_8003_far_away_mountain_trigger = yes }
 			save_scope_as = espad_mountain_province #this is only used for loc
 		}
@@ -2309,7 +2302,7 @@ fp3_yearly.8008 = {
 
 		trigger = {
 			is_female = no
-			NOT = { has_trait = eunuch }
+			is_eunuch_trigger = no
 		}
 		
 		pay_short_term_gold = {
@@ -2365,8 +2358,7 @@ fp3_yearly.8008 = {
 
 #########Caliphal Concerns, by Ola Jentzsch################
 scripted_trigger fp3_yearly.8009_frontier_heresy_trigger = {
-	any_province = { geographical_region = dlc_fp3_eastern_persian_frontier_regions }
-	tier = tier_county
+	any_county_province = { geographical_region = dlc_fp3_eastern_persian_frontier_regions }
 	faith = { save_temporary_scope_as = compare_faith }
 	root.faith.religious_head = {
 		faith = {
@@ -3334,7 +3326,7 @@ fp3_yearly.8014 = {
 				save_scope_as = smart_courtier
 			}
 		}
-		else = {
+		else_if = {
 			limit = { 
 				any_courtier_or_guest = { 											fp3_opportunistic_drunkard_trigger = yes	
 				}
@@ -3883,9 +3875,7 @@ fp3_yearly.8018 = {
 		first_valid = {
 			triggered_desc = { 
 				trigger = {
-					scope:horse_enthusiast = {
-						has_trait = eunuch
-					}
+					scope:horse_enthusiast = { is_eunuch_trigger = yes }
 				}
 				desc = fp3_yearly.8018.desc_eunuch
 			}
