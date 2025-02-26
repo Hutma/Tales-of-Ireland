@@ -1,0 +1,24 @@
+290007 = { #Dall Riata (Starts nothern Ulster, wants to invade Scotland)
+    name = "Fergus"
+    dynasty =  000 
+    religion = the_old_gods
+    culture = dal_riata
+
+    diplomacy = 10
+    martial = 7
+    stewardship = 10
+    intrigue = 6
+    learning = 4
+    prowess = 9
+
+    trait = education_stewardship_3
+    trait = generous
+    trait = ambitious
+    trait = gregarious
+    trait = celtic_human
+
+    disallow_random_traits = yes
+    4774.1.1 = {
+        birth = yes
+    }
+}
